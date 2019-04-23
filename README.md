@@ -27,6 +27,14 @@ git checkout -b gh-pages origin/gh-pages
 
 **config yxrgithub in `~/.ssh/config`**
 
+```config
+Host yxrgithub
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa.yexiaorain
+    IdentitiesOnly yes
+```
+
 ## USE
 
 > local server
