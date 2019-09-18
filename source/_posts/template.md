@@ -1,10 +1,10 @@
 ---
 title: TEMPLATE
-mathjax: true
 date: 2000-01-01 01:01:01
 updated: 2000-01-01 01:01:01
 categories: post
 tags: [post]
+mathjax: true
 ---
 
 > markdown here
