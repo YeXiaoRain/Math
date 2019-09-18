@@ -25,6 +25,8 @@ ISBN:9787301065501
 
 (2) 求$$lim_{n->\infty}x_n$$
 
+<!-- more -->
+
 ### 题解
 
 (1) 显然 $$x_n \geq \sqrt A (n\geq2)$$
