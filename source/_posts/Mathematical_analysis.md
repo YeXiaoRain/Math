@@ -7,12 +7,6 @@ tags: [使用的方法]
 mathjax: true
 ---
 
-# Book
-
-[<数学分析解题指南>](https://book.douban.com/subject/1239173/)
-
-ISBN:9787301065501
-
 # 分析基础 1
 
 ## 序列极限 1.3
@@ -346,13 +340,43 @@ f(x)可积分,F(x)连续 有限个点外 F'(x) = f(x)
 
 ### 题目 3.5.5
 
-
-
 # 级数 4
+
+## 级数敛散判别法与性质、上极限与下极限
+
+## 函数级数
+
+## 幂级数
+
+## 傅式级数的收敛性、平均收敛与一致收敛
 
 # 多元函数微分学 5
 
+## 欧式空间、多元函数的极限与连续
+
+## 偏导数与微分
+
+## 反函数与隐函数
+
+## 切空间与极值
+
+## 含参变量的定积分
+
+## 含参变量的广义积分
+
 # 多元函数积分学 6
+
+## 重积分的概念与性质、重积分化累次积分
+
+## 重积分变换
+
+## 曲线积分与格林公式
+
+## 曲面积分
+
+## 奥氏公式、斯托克斯公式、线积分与路径无关
+
+## 场论
 
 # 典型综合题分析 7
 
@@ -402,6 +426,12 @@ int sin(x)^n dx x=0..pi/2 = int cos(x)^n dx x=0..pi/2 = (n-1)!!/n!! * 1 (n奇数
 # 参考 辅助
 
 [latex math symbols cheat sheet](https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index)
+
+# Book
+
+[<数学分析解题指南>](https://book.douban.com/subject/1239173/)
+
+ISBN:9787301065501
 
 # TODO
 
