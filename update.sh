@@ -8,5 +8,5 @@
 # @description : 
 ######################################################################
 
-git add . && git commit -m "update" && git push origin gh-pages-dev
+git add . && git commit -m "update by script" && git push origin master
 # hexo g && cd public && git add . && git commit -m "update" && git push origin gh-pages && cd ../
