@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Math/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/Math/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/Math/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Math/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="函数三角横等式 $\tan^2x+1=\sec^2x$ $\sinh x = \frac{e^x}{2} - \frac{e^{-x}}{2}$ $\cosh x = \frac{e^x}{2} + \frac{e^{-x}}{2} = \sqrt{1+\sinh^2x}$ $sech(x) = \frac{2}{e^x + e^{-x}}$ $sin(x)cos(y) = \frac{sin(x">
+<meta name="keywords" content="CheatSheet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学分析CheatSheet">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/2022-07-02-Mathematical_analysis-cheatsheet/index.html">
+<meta property="og:site_name" content="Math">
+<meta property="og:description" content="函数三角横等式 $\tan^2x+1=\sec^2x$ $\sinh x = \frac{e^x}{2} - \frac{e^{-x}}{2}$ $\cosh x = \frac{e^x}{2} + \frac{e^{-x}}{2} = \sqrt{1+\sinh^2x}$ $sech(x) = \frac{2}{e^x + e^{-x}}$ $sin(x)cos(y) = \frac{sin(x">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2022-07-02T02:16:08.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学分析CheatSheet">
+<meta name="twitter:description" content="函数三角横等式 $\tan^2x+1=\sec^2x$ $\sinh x = \frac{e^x}{2} - \frac{e^{-x}}{2}$ $\cosh x = \frac{e^x}{2} + \frac{e^{-x}}{2} = \sqrt{1+\sinh^2x}$ $sech(x) = \frac{2}{e^x + e^{-x}}$ $sin(x)cos(y) = \frac{sin(x">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://yexiaorain.github.io/Math/2022-07-02-Mathematical_analysis-cheatsheet/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数学分析CheatSheet | Math</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Math/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Math</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/2022-07-02-Mathematical_analysis-cheatsheet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学分析CheatSheet
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2022-07-02 01:01:07 / 修改時間：10:16:08" itemprop="dateCreated datePublished" datetime="2022-07-02T01:01:07+08:00">2022-07-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/2022-07-02-Mathematical_analysis-cheatsheet/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022-07-02-Mathematical_analysis-cheatsheet/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F" target="_blank" rel="noopener">三角横等式</a></p>
+<p>$\tan^2x+1=\sec^2x$</p>
+<p>$\sinh x = \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x = \frac{e^x}{2} + \frac{e^{-x}}{2} = \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) = \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) = \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) = \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) = \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) = 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) = 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) = -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x = \cos x$</p>
+<p>$\cos’x = - \sin x$</p>
+<p>$\tan’x = \sec^2x$</p>
+<p>$\cot’x = - \csc^2x$</p>
+<p>$\sec’x = \tan x \cdot \sec x$</p>
+<p>$\csc’x = - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x = \sinh x$</p>
+<p>$\sinh’ x = \cosh x$</p>
+<p>$\tanh’ x = sech^2 x$</p>
+<p>$arctanh(x)’ = \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ = \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ = \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x = \arctan x$</p>
+<p>$\arctan’x = \frac{1}{1+x^2}$</p>
+<p>$arccot’x = -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x = \frac{1}{\sqrt{1-x^2}}$</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Math/tags/CheatSheet/" rel="tag"># CheatSheet</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/210521-Wilson_s_theorem/" rel="next" title="(p-1)!+1 = 0 (mod p)">
+                <i class="fa fa-chevron-left"></i> (p-1)!+1 = 0 (mod p)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Math/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分類</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">標籤</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分"><span class="nav-number">2.</span> <span class="nav-text">微分</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Math/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Math/js/utils.js?v=7.1.0"></script>
+
+  <script src="/Math/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/Math/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/Math/js/scrollspy.js?v=7.1.0"></script>
+<script src="/Math/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/Math/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://yexiaorain.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://yexiaorain.github.io/Math/2022-07-02-Mathematical_analysis-cheatsheet/";
+    this.page.identifier = "2022-07-02-Mathematical_analysis-cheatsheet/";
+    this.page.title = '数学分析CheatSheet';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yexiaorain.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

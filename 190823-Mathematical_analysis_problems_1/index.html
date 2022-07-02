@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Math/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/Math/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/Math/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Math/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="分析基础 1序列极限 1.3题目 1.3.4设 A&amp;gt;0,x_1&amp;gt;0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots) (1) 求证: x_n单调下降且有下界 (2) 求lim_{n-&amp;gt;\infty}x_n">
+<meta name="keywords" content="题目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学分析 章节一 分析基础">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_1/index.html">
+<meta property="og:site_name" content="Math">
+<meta property="og:description" content="分析基础 1序列极限 1.3题目 1.3.4设 A&amp;gt;0,x_1&amp;gt;0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots) (1) 求证: x_n单调下降且有下界 (2) 求lim_{n-&amp;gt;\infty}x_n">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2022-07-02T02:16:08.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学分析 章节一 分析基础">
+<meta name="twitter:description" content="分析基础 1序列极限 1.3题目 1.3.4设 A&amp;gt;0,x_1&amp;gt;0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots) (1) 求证: x_n单调下降且有下界 (2) 求lim_{n-&amp;gt;\infty}x_n">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_1/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数学分析 章节一 分析基础 | Math</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Math/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Math</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学分析 章节一 分析基础
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:01" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:01+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 <script type="math/tex">A>0,x_1>0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots)</script></p>
+<p>(1) 求证: <script type="math/tex">x_n</script>单调下降且有下界</p>
+<p>(2) 求<script type="math/tex">lim_{n->\infty}x_n</script></p>
+<a id="more"></a>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>(1) 显然 <script type="math/tex">x_n \geq \sqrt A (n\geq2)</script></p>
+<p>有 <script type="math/tex">x_{n+1}-x_n = \frac12(\frac A{x_n}-x_n) = \frac12 \cdot \frac {(\sqrt A - x_n)(\sqrt A + x_n)}{x_n} \leq 0 (n\geq2)</script></p>
+<p>(2) 设极限为<code>a</code>,带入原式子,则 推出<script type="math/tex">a=\sqrt A</script></p>
+<h3 id="题目-1-3-9"><a href="#题目-1-3-9" class="headerlink" title="题目 1.3.9"></a>题目 1.3.9</h3><p>求证 <script type="math/tex">lim_{n->\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}</script>极限存在</p>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><script type="math/tex; mode=display">a_n = lim_{n->\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}  > 0</script><script type="math/tex; mode=display">\frac{a_{n+1}}{a_n} = \frac{(2n+1)^3}{(2n+2)^2\cdot (2n+3)} < 1</script><p>单调递减 有下界限</p>
+<p>从 <script type="math/tex">ln a_{n+1} - ln a_n</script> 上看 说明 <script type="math/tex">ln a_{n}</script> 趋于 <script type="math/tex">-\infty</script> , <script type="math/tex">a_n</script>极限为<script type="math/tex">0</script></p>
+<p>总感觉有地方没有说清楚</p>
+<h2 id="函数极限与连续概念-1-4"><a href="#函数极限与连续概念-1-4" class="headerlink" title="函数极限与连续概念 1.4"></a>函数极限与连续概念 1.4</h2><h3 id="题目-1-4-3"><a href="#题目-1-4-3" class="headerlink" title="题目 1.4.3"></a>题目 1.4.3</h3><p>设 <script type="math/tex">0<x_n<+\infty</script>,且满足 <script type="math/tex">x_n+\frac 4 {x_{n+1}^2} < 3</script>, 求出此极限值。</p>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>由题目显然有 <script type="math/tex">\frac{2\sqrt3}3 < x_n  < 3</script></p>
+<script type="math/tex; mode=display">x_{n+1}-x_n > \frac {x_{n+1}^3-3_{n+1}^2+4}{x_{n+1}^2} = \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} \ge 0</script><p>单调递增 有上界</p>
+<p>如果 $x_n &gt; 2$ 令 $x_n = 2+y_n,1 &gt; y_n &gt; 0$ , $y_n$单调递增</p>
+<p>如果 <script type="math/tex">x_n = 2</script> 有 $x_{n+1} &gt; 2$ 取 $ n = n+1$</p>
+<script type="math/tex; mode=display">x_{n+1}-x_n > \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} > \frac {(2+1)y_{n+1}^2}{3^2}</script><p>$m-n &gt; \frac{3}{y_{n+1}^2}$时, 存在 $y_m &gt; 3$</p>
+<script type="math/tex; mode=display">\therefore \frac{2\sqrt3}3 < x_n  < 2</script><p>如果 $x_n &lt; 2$ 令 $x_n = 2-y_n,2-\frac{2\sqrt3}3 &gt; y_n &gt; 0$ , $y_n$也单调递减</p>
+<script type="math/tex; mode=display">(-y_{n+1}) - (-y_{n}) > x_{n+1}-x_n > \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} > \frac {2 y_{n+1}^2}{2^2}</script><script type="math/tex; mode=display">y_n > y_{n+1} + \frac{y_{n+1}^2}{2}</script><script type="math/tex; mode=display">y_{n+1} < \sqrt{2y_n+1} -1 = \frac {2y_n}{\sqrt{2y_n+1}+1} <</script><p>然后呢????</p>
+<p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
+<hr>
+<p>数列有极限</p>
+<p>所以 不等式也有极限 <script type="math/tex">lim_</script></p>
+<h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列<script type="math/tex">{x_n}</script>由如下迭代产生:</p>
+<script type="math/tex; mode=display">x_1=\frac12,x_{n+1} = x_n^2 + x_n (n=1,2,\dots)</script><p>求证 <script type="math/tex">lim_{n->\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})=2</script></p>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解 ???"></a>题解 ???</h3><h2 id="比区间上连续函数的性质-1-5"><a href="#比区间上连续函数的性质-1-5" class="headerlink" title="比区间上连续函数的性质 1.5"></a>比区间上连续函数的性质 1.5</h2><h3 id="题目-1-5-3"><a href="#题目-1-5-3" class="headerlink" title="题目 1.5.3"></a>题目 1.5.3</h3><p>设 <script type="math/tex">f_n(x)=x^n+x</script></p>
+<p>求证</p>
+<p>(1) 对任意自然数 <script type="math/tex">n>1</script>,方程 <script type="math/tex">f_n(x) = 1</script>在<script type="math/tex">(\frac12,1)</script>内有且仅有一个根</p>
+<p>(2) 若<script type="math/tex">c_n \in (\frac12,1)</script>是<script type="math/tex">f_n(x)=1</script>的根,则<script type="math/tex">lim_{n->infty}c_n</script>存在，并求此极限</p>
+<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解 ???"></a>题解 ???</h3><p>(1)</p>
+<p>求导<script type="math/tex">nx^{n-1}+1>0</script>,严格单调</p>
+<p>所以 <script type="math/tex">(f_n(\frac12)-1) \cdot (f_n(1)-1) < 0, x \in (\frac12,1)</script> 有根,得证</p>
+<p>(2) ???</p>
+<p>2.6 例22?</p>
+<h3 id="题目-1-5-4"><a href="#题目-1-5-4" class="headerlink" title="题目 1.5.4"></a>题目 1.5.4</h3><p>设置<script type="math/tex">f(x)</script>在 $[a,b]$ 上无界,求证: <script type="math/tex">\exists c \in [a,b]</script>,使得 <script type="math/tex">\forall \delta > 0</script> 函数 <script type="math/tex">f(x)</script>在 <script type="math/tex">[c-\delta,c+\delta]\bigcap [a,b]</script>上无界</p>
+<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-5"><a href="#题目-1-5-5" class="headerlink" title="题目 1.5.5"></a>题目 1.5.5</h3><p>设 <script type="math/tex">\{x_n\}</script> 为有界序列。求证: $x_n$ 以 $a$为极限的充分必要条件是: ${x_n}$的任一收敛子序列都有相同的极限值$a$.</p>
+<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-7"><a href="#题目-1-5-7" class="headerlink" title="题目 1.5.7"></a>题目 1.5.7</h3><p>设 $f(x) \in \mathbb{C}[a,b]$ 且有唯一的取到$f(x)$最大值的点$x^ * $ 又设 $x_n \in [a,b] (n=1,2,\dots)$</p>
+<p>使得<script type="math/tex">lim_{n->\infty} f(x_n) = f(x^*), 求证 lim_{n->\infty} x_n = x^*</script></p>
+<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-8"><a href="#题目-1-5-8" class="headerlink" title="题目 1.5.8"></a>题目 1.5.8</h3><p>设<script type="math/tex">f(x) \in \mathbb{C}[0,+\infty)</script>又设对 <script type="math/tex">\forall l \in \mathbb{R}</script> 方程 <script type="math/tex">f(x) = l</script>在 <script type="math/tex">[0,+\infty)</script> 上只有有限个解或无解,求证:</p>
+<p>(1) 如果 $f(x)$ 在 <script type="math/tex">[0,+\infty)</script> 上有界,则极限 <script type="math/tex">lim_{x->+\infty}f(x)</script>存在;</p>
+<p>(2) 如果 $f(x)$ 在 <script type="math/tex">[0,+\infty)</script> 上无上界,则 <script type="math/tex">lim_{x->+\infty}f(x) = + \infty</script></p>
+<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-10"><a href="#题目-1-5-10" class="headerlink" title="题目 1.5.10"></a>题目 1.5.10</h3><p>设$f(x)$在$[a,b]$上定义,$x_0\in [a,b]$如果对 $\forall \epsilon &gt; 0,\exists \delta &gt; 0$ 当 $|x-x_0|&lt;\delta$时, 有 $f(x) &lt; f(x_0)+\epsilon$, 那么称$f(x)$在点$x_0$处<strong>上半连续</strong>,如果$f(x)$在$[a,b]$上的没一点都上半连续,则称$f(x)$为$[a,b]$上的一个<strong>上半连续函数</strong>.求证: $[a,b]$上的<strong>上半连续函数</strong>一定有上界.</p>
+<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解 ???"></a>题解 ???</h3>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Math/tags/题目/" rel="tag"># 题目</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/190823-Mathematical_analysis_problems_2/" rel="prev" title="数学分析 章节二 一元函数微分学">
+                数学分析 章节二 一元函数微分学 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Math/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分類</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">標籤</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分析基础-1"><span class="nav-number">1.</span> <span class="nav-text">分析基础 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#序列极限-1-3"><span class="nav-number">1.1.</span> <span class="nav-text">序列极限 1.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-3-4"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目 1.3.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">1.1.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-3-9"><span class="nav-number">1.1.3.</span> <span class="nav-text">题目 1.3.9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-1"><span class="nav-number">1.1.4.</span> <span class="nav-text">题解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数极限与连续概念-1-4"><span class="nav-number">1.2.</span> <span class="nav-text">函数极限与连续概念 1.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-4-3"><span class="nav-number">1.2.1.</span> <span class="nav-text">题目 1.4.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">题解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-4-12"><span class="nav-number">1.2.3.</span> <span class="nav-text">题目 1.4.12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-3"><span class="nav-number">1.2.4.</span> <span class="nav-text">题解 ???</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比区间上连续函数的性质-1-5"><span class="nav-number">1.3.</span> <span class="nav-text">比区间上连续函数的性质 1.5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-3"><span class="nav-number">1.3.1.</span> <span class="nav-text">题目 1.5.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-4"><span class="nav-number">1.3.2.</span> <span class="nav-text">题解 ???</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-4"><span class="nav-number">1.3.3.</span> <span class="nav-text">题目 1.5.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-5"><span class="nav-number">1.3.4.</span> <span class="nav-text">题解 ???</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-5"><span class="nav-number">1.3.5.</span> <span class="nav-text">题目 1.5.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-6"><span class="nav-number">1.3.6.</span> <span class="nav-text">题解 ???</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-7"><span class="nav-number">1.3.7.</span> <span class="nav-text">题目 1.5.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-7"><span class="nav-number">1.3.8.</span> <span class="nav-text">题解 ???</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-8"><span class="nav-number">1.3.9.</span> <span class="nav-text">题目 1.5.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-8"><span class="nav-number">1.3.10.</span> <span class="nav-text">题解 ???</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-1-5-10"><span class="nav-number">1.3.11.</span> <span class="nav-text">题目 1.5.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-9"><span class="nav-number">1.3.12.</span> <span class="nav-text">题解 ???</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Math/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Math/js/utils.js?v=7.1.0"></script>
+
+  <script src="/Math/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/Math/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/Math/js/scrollspy.js?v=7.1.0"></script>
+<script src="/Math/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/Math/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://yexiaorain.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_1/";
+    this.page.identifier = "190823-Mathematical_analysis_problems_1/";
+    this.page.title = '数学分析 章节一 分析基础';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yexiaorain.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

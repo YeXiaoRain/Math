@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Math/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/Math/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/Math/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Math/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="典型综合题分析 7定理康托定理若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。 采用反证法。 假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &amp;gt; 0$及两点列\{x&apos;_n\}和\{x&apos;&apos;_n\}，x&apos;_n,x&apos;&apos;_n\in[a,b]，满足 $$$$">
+<meta name="keywords" content="题目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学分析 章节七 典型例题 及 参考资料 速查表">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_7/index.html">
+<meta property="og:site_name" content="Math">
+<meta property="og:description" content="典型综合题分析 7定理康托定理若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。 采用反证法。 假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &amp;gt; 0$及两点列\{x&apos;_n\}和\{x&apos;&apos;_n\}，x&apos;_n,x&apos;&apos;_n\in[a,b]，满足 $$$$">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2022-07-02T02:16:08.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学分析 章节七 典型例题 及 参考资料 速查表">
+<meta name="twitter:description" content="典型综合题分析 7定理康托定理若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。 采用反证法。 假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &amp;gt; 0$及两点列\{x&apos;_n\}和\{x&apos;&apos;_n\}，x&apos;_n,x&apos;&apos;_n\in[a,b]，满足 $$$$">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_7/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数学分析 章节七 典型例题 及 参考资料 速查表 | Math</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Math/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Math</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学分析 章节七 典型例题 及 参考资料 速查表
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:07" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:07+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_7/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="典型综合题分析-7"><a href="#典型综合题分析-7" class="headerlink" title="典型综合题分析 7"></a>典型综合题分析 7</h1><h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><h2 id="康托定理"><a href="#康托定理" class="headerlink" title="康托定理"></a>康托定理</h2><p>若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。</p>
+<p>采用反证法。</p>
+<p>假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &gt; 0$及两点列<script type="math/tex">\{x'_n\}</script>和<script type="math/tex">\{x''_n\}</script>，<script type="math/tex">x'_n,x''_n\in[a,b]</script>，满足</p>
+<p>$$$$</p>
+<a id="more"></a>
+<p>，且 。</p>
+<p>因为有界，由Bolzano-Weierstrass定理(波尔查诺-维尔斯特拉斯定理是指有界数列必有收敛子列。从极限点的角度来叙述致密性定理，就是：有界数列必有极限点。)，存在收敛子列：</p>
+<p>在点列中取子列，其下标与下标相同，则由，又得到</p>
+<p>由于函数在点连续，因而有</p>
+<p>于是得到：</p>
+<p>但这与假设产生矛盾，从而推翻假设，得到在上的一致连续的结论。</p>
+<h2 id="和差化积"><a href="#和差化积" class="headerlink" title="和差化积"></a>和差化积</h2><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>积分表/等价无穷小 背不全</p>
+<p>重要公式</p>
+<p>int sin(x)^n dx x=0..pi/2 = int cos(x)^n dx x=0..pi/2 = (n-1)!!/n!! <em> 1 (n奇数时) </em> pi/2(偶数)</p>
+<h1 id="参考-辅助"><a href="#参考-辅助" class="headerlink" title="参考 辅助"></a>参考 辅助</h1><p><a href="https://kapeli.com/cheat_sheets/LaTeX_Math_Symbols.docset/Contents/Resources/Documents/index" target="_blank" rel="noopener">latex math symbols cheat sheet</a></p>
+<h1 id="Book"><a href="#Book" class="headerlink" title="Book"></a>Book</h1><p><a href="https://book.douban.com/subject/1239173/" target="_blank" rel="noopener">&lt;数学分析解题指南&gt;</a></p>
+<p>ISBN:9787301065501</p>
+<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><p>matlab学习</p>
+<p>一个或多个 公式cheatsheet</p>
+<p>瓦里斯公式</p>
+<p>贝塞尔函数相关</p>
+<p>幂级数展开</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Math/tags/题目/" rel="tag"># 题目</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/190823-Mathematical_analysis_problems_6/" rel="next" title="数学分析 章节六 多元函数积分学">
+                <i class="fa fa-chevron-left"></i> 数学分析 章节六 多元函数积分学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/210314-Mathematical_Analysis_notes/" rel="prev" title="数学分析 笔记">
+                数学分析 笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Math/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分類</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">標籤</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#典型综合题分析-7"><span class="nav-number">1.</span> <span class="nav-text">典型综合题分析 7</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定理"><span class="nav-number">2.</span> <span class="nav-text">定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#康托定理"><span class="nav-number">2.1.</span> <span class="nav-text">康托定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和差化积"><span class="nav-number">2.2.</span> <span class="nav-text">和差化积</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考-辅助"><span class="nav-number">4.</span> <span class="nav-text">参考 辅助</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Book"><span class="nav-number">5.</span> <span class="nav-text">Book</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TODO"><span class="nav-number">6.</span> <span class="nav-text">TODO</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Math/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Math/js/utils.js?v=7.1.0"></script>
+
+  <script src="/Math/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/Math/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/Math/js/scrollspy.js?v=7.1.0"></script>
+<script src="/Math/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/Math/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://yexiaorain.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_7/";
+    this.page.identifier = "190823-Mathematical_analysis_problems_7/";
+    this.page.title = '数学分析 章节七 典型例题 及 参考资料 速查表';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yexiaorain.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

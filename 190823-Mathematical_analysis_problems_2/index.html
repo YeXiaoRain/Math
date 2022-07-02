@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/Math/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/Math/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/Math/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/Math/',
+    scheme: 'Muse',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一元函数微分学 2导数与微分 2.1题目 2.1.3设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证: $\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} = f’(x_0)$">
+<meta name="keywords" content="题目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数学分析 章节二 一元函数微分学">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_2/index.html">
+<meta property="og:site_name" content="Math">
+<meta property="og:description" content="一元函数微分学 2导数与微分 2.1题目 2.1.3设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证: $\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} = f’(x_0)$">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2022-07-02T02:16:08.604Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数学分析 章节二 一元函数微分学">
+<meta name="twitter:description" content="一元函数微分学 2导数与微分 2.1题目 2.1.3设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证: $\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} = f’(x_0)$">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_2/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>数学分析 章节二 一元函数微分学 | Math</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/Math/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Math</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首頁</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/Math/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>歸檔</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数学分析 章节二 一元函数微分学
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:02" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:02+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
+<p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} = f’(x_0)$</p>
+<a id="more"></a>
+<h3 id="题目-2-1-7"><a href="#题目-2-1-7" class="headerlink" title="题目 2.1.7"></a>题目 2.1.7</h3><p>设曲线由隐式方程 $\sqrt[3]{x^2}+\sqrt[3]{y^2}=\sqrt[3]{a^2} (a&gt;0)$给出</p>
+<p>(1) 求证: 曲线的切线被坐标轴所截的长度为一常数</p>
+<p>(2)写出曲线的参数形式，利用参数式求导给出上一小提的另一证法</p>
+<h3 id="题目-2-1-8"><a href="#题目-2-1-8" class="headerlink" title="题目 2.1.8"></a>题目 2.1.8</h3><p>已知 参数方程 $x=a[ln(tan\frac{t}{2})+cos(t)],y=a\cdot sin(t) (a&gt;0,0 &lt; t &lt;\pi)$</p>
+<p>求证，任意切线上，自切点至该切线与x轴交点之间的切线段为定长</p>
+<h3 id="题目-2-1-13"><a href="#题目-2-1-13" class="headerlink" title="题目 2.1.13"></a>题目 2.1.13</h3><p>设 $y=x^{n-1}ln(x)$ 求证$y^{(n)}=\frac{(n-1)!}{x}$</p>
+<h3 id="题目-2-1-14"><a href="#题目-2-1-14" class="headerlink" title="题目 2.1.14"></a>题目 2.1.14</h3><p>求证：双纽线$r^2=a^2 cos 2\theta$的向径与切线的夹角等于极角的两倍加$\frac{\pi}{2}$</p>
+<h2 id="微分中值定理-2-2"><a href="#微分中值定理-2-2" class="headerlink" title="微分中值定理 2.2"></a>微分中值定理 2.2</h2><h3 id="题目-2-2-5"><a href="#题目-2-2-5" class="headerlink" title="题目 2.2.5"></a>题目 2.2.5</h3><p>设f(x)在(a,b)内二阶可导，且$x_0 \in (a,b)$使得$f’’(x_0)\neq 0$求证:</p>
+<p>(1) 如果$f’(x_0)=0$，则存在$x_1,x_2\in(a,b)$使得$f(x_1)-f(x_2)=0$</p>
+<p>(2) 如果$f’(x_0)\neq0$，则存在$x_1,x_2\in(a,b)$，使得$\frac{f(x_1)-f(x_2)}{x_1-x_2}=f’(x_0)$</p>
+<h3 id="题目-2-2-9"><a href="#题目-2-2-9" class="headerlink" title="题目 2.2.9"></a>题目 2.2.9</h3><p>设函数f(x)在[a,b]上可导，且$f’(a)=f’(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)=(c-a)f’(c)$</p>
+<p>和例12比，把<code>=0</code>去掉</p>
+<h3 id="题目-2-2-10"><a href="#题目-2-2-10" class="headerlink" title="题目 2.2.10"></a>题目 2.2.10</h3><p>设f(x)在(0,1]上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf’(x)$,求证f(x)在(0,1]上一致连续</p>
+<h3 id="例17"><a href="#例17" class="headerlink" title="例17"></a>例17</h3><p>设f(x)在[-2,2]上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f’(0) &gt; 1$,求证:存在 $\epsilon \in (-2,2)$使得$f’’(\epsilon) = 0$</p>
+<h2 id="函数的升降、极值、最值问题-2-3"><a href="#函数的升降、极值、最值问题-2-3" class="headerlink" title="函数的升降、极值、最值问题 2.3"></a>函数的升降、极值、最值问题 2.3</h2><h3 id="题目-2-3-3"><a href="#题目-2-3-3" class="headerlink" title="题目 2.3.3"></a>题目 2.3.3</h3><h3 id="题目-2-3-6"><a href="#题目-2-3-6" class="headerlink" title="题目 2.3.6"></a>题目 2.3.6</h3><h3 id="题目-2-3-9"><a href="#题目-2-3-9" class="headerlink" title="题目 2.3.9"></a>题目 2.3.9</h3><h2 id="函数的图形、拐点及函数作图-2-4"><a href="#函数的图形、拐点及函数作图-2-4" class="headerlink" title="函数的图形、拐点及函数作图 2.4"></a>函数的图形、拐点及函数作图 2.4</h2><h3 id="题目-2-4-4"><a href="#题目-2-4-4" class="headerlink" title="题目 2.4.4"></a>题目 2.4.4</h3><h2 id="洛必达法则与泰勒公式-2-5"><a href="#洛必达法则与泰勒公式-2-5" class="headerlink" title="洛必达法则与泰勒公式 2.5"></a>洛必达法则与泰勒公式 2.5</h2><h3 id="题目-2-5-4"><a href="#题目-2-5-4" class="headerlink" title="题目 2.5.4"></a>题目 2.5.4</h3><h3 id="题目-2-5-7"><a href="#题目-2-5-7" class="headerlink" title="题目 2.5.7"></a>题目 2.5.7</h3><h3 id="题目-2-5-10"><a href="#题目-2-5-10" class="headerlink" title="题目 2.5.10"></a>题目 2.5.10</h3><h2 id="一元函数微分学的综合应用-2-6"><a href="#一元函数微分学的综合应用-2-6" class="headerlink" title="一元函数微分学的综合应用 2.6"></a>一元函数微分学的综合应用 2.6</h2><p>P121 132/473</p>
+<h3 id="题目-2-6-5"><a href="#题目-2-6-5" class="headerlink" title="题目 2.6.5"></a>题目 2.6.5</h3><p>ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) &gt; 1</p>
+<p>‘ = 1/(2n+1) - 1/(2n) + ln(n+1)-ln(n) - 1/(n+1)</p>
+<p>‘’ &gt; 0</p>
+<p>‘ 单增</p>
+<p>1/3 - 1/2 + ln2 - 1/2 = ln2 - 2/3 &lt; 0</p>
+<p>???????????????????????????</p>
+<h3 id="题目-2-6-7"><a href="#题目-2-6-7" class="headerlink" title="题目 2.6.7"></a>题目 2.6.7</h3><p>‘’ = 2a - e^x 单减</p>
+<p>x= ln(2a)时 为 0</p>
+<p>‘ = 2ax-e^x</p>
+<p>(0,ln(2a)) 单增 , (ln(2a),+\infty) 单减</p>
+<p>极大值 2aln(2a) - 2a = 2a(ln(2a/e))</p>
+<p>ax^2-e^x = 0</p>
+<p>x-&gt; -\infty , +\infty</p>
+<p>x-&gt; +\infty , -\infty</p>
+<p>a &lt; e/2 ，单减 1根</p>
+<p>a &gt;= e/2, 减 增 减???????????/</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/Math/tags/题目/" rel="tag"># 题目</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Math/190823-Mathematical_analysis_problems_1/" rel="next" title="数学分析 章节一 分析基础">
+                <i class="fa fa-chevron-left"></i> 数学分析 章节一 分析基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Math/190823-Mathematical_analysis_problems_3/" rel="prev" title="数学分析 章节三 一元函数积分学">
+                数学分析 章节三 一元函数积分学 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/Math/archives/">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">分類</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">標籤</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一元函数微分学-2"><span class="nav-number">1.</span> <span class="nav-text">一元函数微分学 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导数与微分-2-1"><span class="nav-number">1.1.</span> <span class="nav-text">导数与微分 2.1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-1-3"><span class="nav-number">1.1.1.</span> <span class="nav-text">题目 2.1.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-1-7"><span class="nav-number">1.1.2.</span> <span class="nav-text">题目 2.1.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-1-8"><span class="nav-number">1.1.3.</span> <span class="nav-text">题目 2.1.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-1-13"><span class="nav-number">1.1.4.</span> <span class="nav-text">题目 2.1.13</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-1-14"><span class="nav-number">1.1.5.</span> <span class="nav-text">题目 2.1.14</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微分中值定理-2-2"><span class="nav-number">1.2.</span> <span class="nav-text">微分中值定理 2.2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-2-5"><span class="nav-number">1.2.1.</span> <span class="nav-text">题目 2.2.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-2-9"><span class="nav-number">1.2.2.</span> <span class="nav-text">题目 2.2.9</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-2-10"><span class="nav-number">1.2.3.</span> <span class="nav-text">题目 2.2.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例17"><span class="nav-number">1.2.4.</span> <span class="nav-text">例17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的升降、极值、最值问题-2-3"><span class="nav-number">1.3.</span> <span class="nav-text">函数的升降、极值、最值问题 2.3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-3-3"><span class="nav-number">1.3.1.</span> <span class="nav-text">题目 2.3.3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-3-6"><span class="nav-number">1.3.2.</span> <span class="nav-text">题目 2.3.6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-3-9"><span class="nav-number">1.3.3.</span> <span class="nav-text">题目 2.3.9</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的图形、拐点及函数作图-2-4"><span class="nav-number">1.4.</span> <span class="nav-text">函数的图形、拐点及函数作图 2.4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-4-4"><span class="nav-number">1.4.1.</span> <span class="nav-text">题目 2.4.4</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#洛必达法则与泰勒公式-2-5"><span class="nav-number">1.5.</span> <span class="nav-text">洛必达法则与泰勒公式 2.5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-5-4"><span class="nav-number">1.5.1.</span> <span class="nav-text">题目 2.5.4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-5-7"><span class="nav-number">1.5.2.</span> <span class="nav-text">题目 2.5.7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-5-10"><span class="nav-number">1.5.3.</span> <span class="nav-text">题目 2.5.10</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一元函数微分学的综合应用-2-6"><span class="nav-number">1.6.</span> <span class="nav-text">一元函数微分学的综合应用 2.6</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-6-5"><span class="nav-number">1.6.1.</span> <span class="nav-text">题目 2.6.5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题目-2-6-7"><span class="nav-number">1.6.2.</span> <span class="nav-text">题目 2.6.7</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/Math/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/Math/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/Math/js/utils.js?v=7.1.0"></script>
+
+  <script src="/Math/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/Math/js/schemes/muse.js?v=7.1.0"></script>
+
+
+
+  
+  <script src="/Math/js/scrollspy.js?v=7.1.0"></script>
+<script src="/Math/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/Math/js/next-boot.js?v=7.1.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+  <script id="dsq-count-scr" src="https://yexiaorain.disqus.com/count.js" async></script>
+
+
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://yexiaorain.github.io/Math/190823-Mathematical_analysis_problems_2/";
+    this.page.identifier = "190823-Mathematical_analysis_problems_2/";
+    this.page.title = '数学分析 章节二 一元函数微分学';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://yexiaorain.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
+</script>
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next muse use-motion" lang="zh-TW">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/Mathematical_analysis/">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/2022-07-02-Mathematical_analysis-cheatsheet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YeXiaoRain">
@@ -306,7 +306,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Math/Mathematical_analysis/" class="post-title-link" itemprop="url">Mathematical_analysis</a>
+                <a href="/Math/2022-07-02-Mathematical_analysis-cheatsheet/" class="post-title-link" itemprop="url">数学分析CheatSheet</a>
               
             
           </h1>
@@ -331,9 +331,13 @@
                 
               
 
-              <time title="創建時間：2019-08-23 01:01:01" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:01+08:00">2019-08-23</time>
+              <time title="創建時間：2022-07-02 01:01:07 / 修改時間：10:16:08" itemprop="dateCreated datePublished" datetime="2022-07-02T01:01:07+08:00">2022-07-02</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -368,8 +372,8 @@
                 </span>
             
                 <span class="post-meta-item-text">評論數：</span>
-                <a href="/Math/Mathematical_analysis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Mathematical_analysis/" itemprop="commentCount"></span>
+                <a href="/Math/2022-07-02-Mathematical_analysis-cheatsheet/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022-07-02-Mathematical_analysis-cheatsheet/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -398,13 +402,611 @@
 
       
         
-          <h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 <script type="math/tex">A>0,x_1>0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots)</script></p>
-<p>(1) 求证: <script type="math/tex">x_n</script>单调下降且有下界</p>
-<p>(2) 求<script type="math/tex">lim_{n->\infty}x_n</script></p>
+          
+            <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F" target="_blank" rel="noopener">三角横等式</a></p>
+<p>$\tan^2x+1=\sec^2x$</p>
+<p>$\sinh x = \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x = \frac{e^x}{2} + \frac{e^{-x}}{2} = \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) = \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) = \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) = \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) = \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) = 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) = 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) = -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x = \cos x$</p>
+<p>$\cos’x = - \sin x$</p>
+<p>$\tan’x = \sec^2x$</p>
+<p>$\cot’x = - \csc^2x$</p>
+<p>$\sec’x = \tan x \cdot \sec x$</p>
+<p>$\csc’x = - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x = \sinh x$</p>
+<p>$\sinh’ x = \cosh x$</p>
+<p>$\tanh’ x = sech^2 x$</p>
+<p>$arctanh(x)’ = \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ = \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ = \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x = \arctan x$</p>
+<p>$\arctan’x = \frac{1}{1+x^2}$</p>
+<p>$arccot’x = -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x = \frac{1}{\sqrt{1-x^2}}$</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/210521-Wilson_s_theorem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/210521-Wilson_s_theorem/" class="post-title-link" itemprop="url">(p-1)!+1 = 0 (mod p)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2021-05-21 01:01:01" itemprop="dateCreated datePublished" datetime="2021-05-21T01:01:01+08:00">2021-05-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数论/" itemprop="url" rel="index"><span itemprop="name">数论</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/210521-Wilson_s_theorem/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="210521-Wilson_s_theorem/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
+<h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
+<p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
+<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><p>首先 1..p-1 是 模p的所有余项</p>
+<p>集合$A = {1,2,\cdots,p-1}$</p>
+<p>任意$ i \in A $ 存在唯一$j \in A, i \cdot j = 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
+<p>令 $x = (p-1)! $</p>
+<p>那么 $x^2 = 1(\bmod p)$</p>
+<p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
+<p>可得$x = 1(\bmod p)$或 $x=p-1 (\bmod p)$ , 可以假设 $x = p - a$ 然后 $(p-a-1)(p-a+1) = 0 (\bmod p)$ 得到</p>
+<p>我们也能得到只有 $1^2 = 1 (\bmod p), (p-1)^2 = 1 (\bmod p)$</p>
+<p>$(p-1)! = 1\cdot 1 \cdot (p-1) = p-1  = -1 (mod p) $, 因为除了p-1, 其它的两两配对</p>
+<p>得证</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/210314-Mathematical_Analysis_notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/210314-Mathematical_Analysis_notes/" class="post-title-link" itemprop="url">数学分析 笔记</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2021-03-14 01:01:01" itemprop="dateCreated datePublished" datetime="2021-03-14T01:01:01+08:00">2021-03-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/210314-Mathematical_Analysis_notes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="210314-Mathematical_Analysis_notes/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>bilibli华师大公开课</p>
+<p>《 数学分析解题指南（林源渠、方企勤）》</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/190823-Mathematical_analysis_problems_7/" class="post-title-link" itemprop="url">数学分析 章节七 典型例题 及 参考资料 速查表</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:07" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:07+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_7/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_7/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="典型综合题分析-7"><a href="#典型综合题分析-7" class="headerlink" title="典型综合题分析 7"></a>典型综合题分析 7</h1><h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><h2 id="康托定理"><a href="#康托定理" class="headerlink" title="康托定理"></a>康托定理</h2><p>若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。</p>
+<p>采用反证法。</p>
+<p>假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &gt; 0$及两点列<script type="math/tex">\{x'_n\}</script>和<script type="math/tex">\{x''_n\}</script>，<script type="math/tex">x'_n,x''_n\in[a,b]</script>，满足</p>
+<p>$$$$</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/Math/Mathematical_analysis/#more" rel="contents">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_7/#more" rel="contents">
                 閱讀全文 &raquo;
               </a>
             </div>
@@ -464,7 +1066,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190423-PLUS/">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YeXiaoRain">
@@ -484,7 +1086,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Math/190423-PLUS/" class="post-title-link" itemprop="url">PLUS</a>
+                <a href="/Math/190823-Mathematical_analysis_problems_6/" class="post-title-link" itemprop="url">数学分析 章节六 多元函数积分学</a>
               
             
           </h1>
@@ -509,12 +1111,24 @@
                 
               
 
-              <time title="創建時間：2017-10-31 20:38:17 / 修改時間：21:58:03" itemprop="dateCreated datePublished" datetime="2017-10-31T20:38:17+08:00">2017-10-31</time>
+              <time title="創建時間：2019-08-23 01:01:06" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:06+08:00">2019-08-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
               
             
           </span>
@@ -531,7 +1145,7 @@
                 <span class="post-meta-item-text">分類於</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/Life/" itemprop="url" rel="index"><span itemprop="name">Life</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
 
                 
                 
@@ -550,8 +1164,8 @@
                 </span>
             
                 <span class="post-meta-item-text">評論數：</span>
-                <a href="/Math/190423-PLUS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190423-PLUS/" itemprop="commentCount"></span>
+                <a href="/Math/190823-Mathematical_analysis_problems_6/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_6/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -580,9 +1194,16 @@
 
       
         
+          <h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2>
+          <!--noindex-->
           
-            <h1 id="PLUS"><a href="#PLUS" class="headerlink" title="PLUS"></a>PLUS</h1>
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_6/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -637,7 +1258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/template/">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YeXiaoRain">
@@ -657,7 +1278,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/Math/template/" class="post-title-link" itemprop="url">TEMPLATE</a>
+                <a href="/Math/190823-Mathematical_analysis_problems_5/" class="post-title-link" itemprop="url">数学分析 章节五 多元函数微分学</a>
               
             
           </h1>
@@ -682,9 +1303,25 @@
                 
               
 
-              <time title="創建時間：2000-01-01 01:01:01" itemprop="dateCreated datePublished" datetime="2000-01-01T01:01:01+08:00">2000-01-01</time>
+              <time title="創建時間：2019-08-23 01:01:05" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:05+08:00">2019-08-23</time>
             
 
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
             
           </span>
 
@@ -700,7 +1337,7 @@
                 <span class="post-meta-item-text">分類於</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/post/" itemprop="url" rel="index"><span itemprop="name">post</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
 
                 
                 
@@ -719,8 +1356,8 @@
                 </span>
             
                 <span class="post-meta-item-text">評論數：</span>
-                <a href="/Math/template/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="template/" itemprop="commentCount"></span>
+                <a href="/Math/190823-Mathematical_analysis_problems_5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_5/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -749,14 +1386,814 @@
 
       
         
+          <h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} = ((E^c)^o)^c$</p>
+<p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
+<p>二重极限存在,对应的累次极限不一定存在</p>
+<p>例如lim(x,y)→(0,0)(xsin(1/y)+ysin(1/x))=0</p>
+<p>对应的两个累次极限limx→0(limy→0(xsin(1/y)+ysin(1/x)))和limy→0(limx→0(xsin(1/y)+ysin(1/x)))都不存在</p>
+          <!--noindex-->
           
-            <blockquote>
-<p>markdown here</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"code here!\n"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>$ latex_{here} $</p>
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/190823-Mathematical_analysis_problems_4/" class="post-title-link" itemprop="url">数学分析 章节四 级数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:04" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:04+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_4/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="级数-4"><a href="#级数-4" class="headerlink" title="级数 4"></a>级数 4</h1><h2 id="级数敛散判别法与性质、上极限与下极限"><a href="#级数敛散判别法与性质、上极限与下极限" class="headerlink" title="级数敛散判别法与性质、上极限与下极限"></a>级数敛散判别法与性质、上极限与下极限</h2><p>-P224</p>
+<p>数列和</p>
+<p>绝对收敛 条件收敛</p>
+<p>柯西收敛准则</p>
+<p>定理3 (柯西判别法)</p>
+<p>若 $lim_{n\to\infty} \sqrt[n]{a_n} = r $, $r<1$级数收敛,$r>1$级数发散</1$级数收敛,$r></p>
+<p>定理4 (达朗贝尔判别法) ,比值极限和1的关系</p>
+<p>级数 为单调递减(x&gt;=1)函数上的取值点 ，与广义积分同时收敛发散</p>
+<p>莱布尼茨判别法, 正负奇偶项,an单调下降趋近0 收敛</p>
+<p>狄利克雷判别法 , $sum_{n=1}^{\infty} {a_n*b_n}$ , $b_n$的级数 有界(不要求收敛) ,$a_n$单调下降收敛于0,则 乘积级数收敛</p>
+<p>阿贝尔判别法, $sum_{n=1}^{\infty} {a_n*b_n}$ , $b_n$的级数收敛, $a_n$单调有界,则乘积级数收敛</p>
+<p>// 这两个和上一章(广义积分)的判别中很像</p>
+<p>柯西乘积:在数学上，以法国数学家奥古斯丁·路易·柯西命名的柯西乘积，是指两组数列{\displaystyle a<em>{n},b</em>{n}}的离散卷积</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_4/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/190823-Mathematical_analysis_problems_3/" class="post-title-link" itemprop="url">数学分析 章节三 一元函数积分学</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:03" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:03+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_3/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="一元函数积分学-3"><a href="#一元函数积分学-3" class="headerlink" title="一元函数积分学 3"></a>一元函数积分学 3</h1><h2 id="不定积分和可积函数类-3-1"><a href="#不定积分和可积函数类-3-1" class="headerlink" title="不定积分和可积函数类 3.1"></a>不定积分和可积函数类 3.1</h2><p>5.可积函数类 P124</p>
+<p>(1) 有理函数可分解成多项式和若干项最简真分式之和，因此有理函数一定可积分</p>
+<p>(2) 三角函数 总可用<code>t=tan(pi/2)</code>将其化为有理函数积分</p>
+<p>(3) 积分 <code>R[x, ((ax+b)/(cx+d))^(1/m)]</code>,其中 (ad-bc!=0,m正整数)，令右侧为t可以代换化为有理函数积分</p>
+<p>(4) 若 积分 <code>x^m (a+bx^n)^p</code>,只有<code>p,(m+1)/n,(m+1)/n+p</code>中有一个为整数时才可积分否则不可</p>
+<p>(5) <code>R[x,sqrt(ax^2+bx+c)]</code>的代换</p>
+<p><code>a&gt;0 -&gt; 右侧 = +-x+t</code></p>
+<p><code>c&gt;0 -&gt; 右侧 = xt+-sqrt(c)</code></p>
+<p><code>b^2-4ac&gt;0 -&gt; 右侧 = t(x-根)</code></p>
+<p>例22</p>
+<p><a href="https://www.wolframalpha.com/input/?i=int+sqrt%28x%2B1%2Fx%29+dx" target="_blank" rel="noopener">https://www.wolframalpha.com/input/?i=int+sqrt%28x%2B1%2Fx%29+dx</a></p>
+<p>常见方法和知识点 三角函数变形吃常数字，看特征，根据上面的方法进行替换，三角函数有<code>tan(x/2)</code>可以替换</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_3/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/190823-Mathematical_analysis_problems_2/" class="post-title-link" itemprop="url">数学分析 章节二 一元函数微分学</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:02" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:02+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
+<p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} = f’(x_0)$</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_2/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Math/190823-Mathematical_analysis_problems_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YeXiaoRain">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/Math/190823-Mathematical_analysis_problems_1/" class="post-title-link" itemprop="url">数学分析 章节一 分析基础</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-23 01:01:01" itemprop="dateCreated datePublished" datetime="2019-08-23T01:01:01+08:00">2019-08-23</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2022-07-02 10:16:08" itemprop="dateModified" datetime="2022-07-02T10:16:08+08:00">2022-07-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/Math/categories/数学分析/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">評論數：</span>
+                <a href="/Math/190823-Mathematical_analysis_problems_1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="190823-Mathematical_analysis_problems_1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 <script type="math/tex">A>0,x_1>0,x_{n+1}=\frac12(x_n+\frac A{x_n}) (n=1,2,\dots)</script></p>
+<p>(1) 求证: <script type="math/tex">x_n</script>单调下降且有下界</p>
+<p>(2) 求<script type="math/tex">lim_{n->\infty}x_n</script></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/Math/190823-Mathematical_analysis_problems_1/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -838,7 +2275,7 @@
                 
                   <a href="/Math/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -855,9 +2292,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分類</span>
                   
                 </div>
@@ -878,7 +2313,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">標籤</span>
                   
                 </div>
@@ -920,7 +2357,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -932,7 +2369,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 強力驅動 v3.8.0</div>
 
 
 
@@ -1073,6 +2510,20 @@
     
       
         
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
       
     
       
