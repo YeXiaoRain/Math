@@ -9,4 +9,4 @@
 ######################################################################
 
 git add . && git commit -m "update" && git push origin gh-pages-dev
-hexo g && cd public && git add . && git commit -m "update" && git push origin gh-pages && cd ../
+# hexo g && cd public && git add . && git commit -m "update" && git push origin gh-pages && cd ../
