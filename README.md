@@ -1,22 +1,19 @@
 Math
 ====
 
-## Init
-
-```sh
-git clone https://github.com/YeXiaoRain/Math.git
+```bash
+yarn global add hexo-cli
 yarn
 ```
-## Usage
 
-> local server
+## local server
 
-`hexo s`
+```bash
+hexo s
+```
 
-> generate
+## generate static pages
 
-`hexo g`
-
-> update code & generate
-
-`./update.sh`
+```bash
+hexo build
+```
