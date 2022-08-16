@@ -100,7 +100,7 @@ menu:
   rss: /atom.xml || fa fa-rss
   categories: /categories/ || fa fa-th
   tags: /tags/ || fa fa-tags
-  about: /20-07-13-rsa/#contact || fa fa-user
+  # about: /about/ || fa fa-user
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
