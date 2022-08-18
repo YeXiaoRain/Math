@@ -1,9 +1,8 @@
 ---
 title: 数学分析 章节四 级数
-date: 2019-08-23 01:01:04
+date: 2019-08-24
 categories: 数学分析
-tags: [题目]
-mathjax: true
+tags: [题目, 数学分析]
 ---
 
 # 级数 4

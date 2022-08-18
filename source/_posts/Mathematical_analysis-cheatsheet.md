@@ -2,8 +2,7 @@
 title: 数学分析CheatSheet
 date: 2022-07-02 01:01:07
 categories: 数学分析
-tags: [CheatSheet]
-mathjax: true
+tags: [CheatSheet, 数学分析]
 ---
 
 # 函数

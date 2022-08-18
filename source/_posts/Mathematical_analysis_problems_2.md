@@ -1,9 +1,8 @@
 ---
 title: 数学分析 章节二 一元函数微分学
-date: 2019-08-23 01:01:02
+date: 2019-08-22
 categories: 数学分析
-tags: [题目]
-mathjax: true
+tags: [题目, 数学分析]
 ---
 
 # 一元函数微分学 2
@@ -52,17 +51,17 @@ $\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_
 
 ### 题目 2.2.9
 
-设函数f(x)在[a,b]上可导，且$f'(a)=f'(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)=(c-a)f'(c)$
+设函数f(x)在$[a,b]$上可导，且$f'(a)=f'(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)=(c-a)f'(c)$
 
-和例12比，把`=0`去掉
+和例12比，把$=0$去掉
 
 ### 题目 2.2.10
 
-设f(x)在(0,1]上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf'(x)$,求证f(x)在(0,1]上一致连续
+设$f(x)$在$(0,1]$上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf'(x)$,求证f(x)在(0,1]上一致连续
 
 ### 例17
 
-设f(x)在[-2,2]上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f'(0) > 1$,求证:存在 $\epsilon \in (-2,2)$使得$f''(\epsilon) = 0$
+设f(x)在$[-2,2]$上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f'(0) > 1$,求证:存在 $\epsilon \in (-2,2)$使得$f''(\epsilon) = 0$
 
 ## 函数的升降、极值、最值问题 2.3
 
@@ -90,37 +89,35 @@ P121 132/473
 
 ### 题目 2.6.5
 
-ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) > 1
+$ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) > 1$
 
-' = 1/(2n+1) - 1/(2n) + ln(n+1)-ln(n) - 1/(n+1)
+$= 1/(2n+1) - 1/(2n) + ln(n+1)-ln(n) - 1/(n+1) > 0$
 
-'' > 0
+单增
 
-' 单增
+$1/3 - 1/2 + ln2 - 1/2 = ln2 - 2/3 < 0$
 
-1/3 - 1/2 + ln2 - 1/2 = ln2 - 2/3 < 0
-
-???????????????????????????
+??
 
 ### 题目 2.6.7
 
-'' = 2a - e^x 单减
+$= 2a - e^x$ 单减
 
-x= ln(2a)时 为 0
+$x= ln(2a)$ 时 为 0
 
-' = 2ax-e^x
+$= 2ax-e^x$
 
-(0,ln(2a)) 单增 , (ln(2a),+\infty) 单减
+$(0,ln(2a)) $单增 , $(ln(2a),+\infty)$ 单减
 
-极大值 2aln(2a) - 2a = 2a(ln(2a/e))
+极大值 $2aln(2a) - 2a = 2a(ln(2a/e))$
 
-ax^2-e^x = 0
+$ax^2-e^x = 0$
 
-x-> -\infty , +\infty
+$x \to -\infty , +\infty$
 
-x-> +\infty , -\infty
+$x \to +\infty , -\infty$
 
-a < e/2 ，单减 1根
+$a < e/2$ ，单减 1根
 
-a >= e/2, 减 增 减???????????/
+$a \ge e/2$, 减 增 减??
 

@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "1b92f1ac50d86692",
+    "type": "split",
+    "children": [
+      {
+        "id": "f151806f46c6aeda",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Advanced_algebra_2.md.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "04a4879cbc1ea166",
+    "type": "split",
+    "children": [
+      {
+        "id": "449a1213e690c98c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "94e188be527bda94",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "ff3d9310c8c7be5c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7870e9b272f44bac",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 305.5
+  },
+  "right": {
+    "id": "2c0e904bd604cdfb",
+    "type": "split",
+    "children": [
+      {
+        "id": "62ec36e0fc5b0fc0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bde51473c524858",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Advanced_algebra_2.md.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "343be5ec42834d49",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Advanced_algebra_2.md.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dd4562d384ef025a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "168b9dc6495c329f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Advanced_algebra_2.md.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f151806f46c6aeda",
+  "lastOpenFiles": [
+    "Mathematical_analysis_problems_1.md",
+    "Advanced_algebra_1.md.md",
+    "Mathematical_analysis_problems_7.md",
+    "Mathematical_analysis-cheatsheet.md",
+    "Mathematical_analysis_problems_6.md",
+    "Mathematical_analysis_problems_5.md",
+    "Mathematical_analysis_problems_4.md",
+    "Mathematical_analysis_problems_3.md",
+    "Mathematical_analysis_problems_2.md",
+    "Advanced_algebra_2.md.md"
+  ]
+}

@@ -3,7 +3,6 @@ title: (p-1)!+1 = 0 (mod p)
 date: 2021-05-21 01:01:01
 categories: 数论
 tags: [数论]
-mathjax: true
 ---
 
 
