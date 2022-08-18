@@ -20,23 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="YeXiaoRain&#39;s Math">
-<meta property="og:url" content="https://yexiaorain.github.io/Math/tags/CheatSheet/index.html">
+    <meta name="description" content="第1章 线性方程组的解法什么是线性代数 数 代数 方程 方程组 系数矩阵  如何解方程组在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化) 未知量的系数列向量均不为0, 否则意味着该变量不存在 解的组数转换成阶梯矩阵后  无解: 转换时出现 $0 &#x3D; d(&gt;0)$ (左侧系数矩阵0,右侧非零) 有且只有一个解: 非零行的数目r &amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高等代数 一 线性方程组的解法">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Advanced_algebra_1.md/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="第1章 线性方程组的解法什么是线性代数 数 代数 方程 方程组 系数矩阵  如何解方程组在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化) 未知量的系数列向量均不为0, 否则意味着该变量不存在 解的组数转换成阶梯矩阵后  无解: 转换时出现 $0 &#x3D; d(&gt;0)$ (左侧系数矩阵0,右侧非零) 有且只有一个解: 非零行的数目r &amp;#">
 <meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-08-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-18T08:51:03.969Z">
 <meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="高等代数">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://yexiaorain.github.io/Math/tags/CheatSheet/">
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Advanced_algebra_1.md/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"tags/CheatSheet/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Advanced_algebra_1.md/","path":"Advanced_algebra_1.md/","title":"高等代数 一 线性方程组的解法"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>標籤: CheatSheet | YeXiaoRain's Math</title>
+<title>高等代数 一 线性方程组的解法 | YeXiaoRain's Math</title>
   
 
 
@@ -126,7 +131,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目錄
@@ -139,6 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84%E7%9A%84%E8%A7%A3%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">第1章 线性方程组的解法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">什么是线性代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-number">1.2.</span> <span class="nav-text">如何解方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E7%9A%84%E7%BB%84%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">解的组数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%9F%9F"><span class="nav-number">1.4.</span> <span class="nav-text">数域</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,50 +221,166 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">CheatSheet
-          <small>標籤</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Advanced_algebra_1.md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="高等代数 一 线性方程组的解法 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高等代数 一 线性方程组的解法
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-08-11 00:00:00" itemprop="dateCreated datePublished" datetime="2022-08-11T00:00:00+08:00">2022-08-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-08-18 16:51:03" itemprop="dateModified" datetime="2022-08-18T16:51:03+08:00">2022-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">高等代数</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>337</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
+<li>数</li>
+<li>代数</li>
+<li>方程</li>
+<li>方程组</li>
+<li>系数矩阵</li>
+</ol>
+<h2 id="如何解方程组"><a href="#如何解方程组" class="headerlink" title="如何解方程组"></a>如何解方程组</h2><p>在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化)</p>
+<p>未知量的系数列向量均不为0, 否则意味着该变量不存在</p>
+<h2 id="解的组数"><a href="#解的组数" class="headerlink" title="解的组数"></a>解的组数</h2><p>转换成阶梯矩阵后</p>
+<ol start="0">
+<li>无解: 转换时出现 $0 &#x3D; d(&gt;0)$ (左侧系数矩阵0,右侧非零)</li>
+<li>有且只有一个解: 非零行的数目r &#x3D; 未知数的数目n </li>
+<li>有无穷多解: 非零行的数目r &lt; 未知数的数目n</li>
+</ol>
+<h2 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h2><p>定义: 复数集的一个非空子集$K$如果满足</p>
+<ol>
+<li>$0,1\in K$</li>
+<li>$a,b\in K \to a \pm b , ab\in K$</li>
+<li>$a,b \in K, b\ne 0 \to \frac{a}{b} \in K$</li>
+</ol>
+<p>$K$ 是一个<a href="#%E6%95%B0%E5%9F%9F">数域</a></p>
+<p>常见: 有理数域(最小的数域),实数域,复数域(最大的数域)</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-07-02T01:01:07+08:00"
-              content="2022-07-02">
-          07-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/Math/Mathematical_analysis-cheatsheet/" itemprop="url">
-            <span itemprop="name">数学分析CheatSheet</span>
-          </a>
-      </div>
-
+    
+    
+    
       
-    </header>
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/Advanced_algebra_1.md/" title="高等代数 一 线性方程组的解法">https://yexiaorain.github.io/Math/Advanced_algebra_1.md/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/" rel="tag"><i class="fa fa-tag"></i> 高等代数</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Mathematical_analysis-cheatsheet/" rel="prev" title="数学分析CheatSheet">
+                  <i class="fa fa-chevron-left"></i> 数学分析CheatSheet
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/Advanced_algebra_2.md/" rel="next" title="高等代数 二 行列式">
+                  高等代数 二 行列式 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
+
 
 </div>
   </main>
@@ -321,7 +443,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/tags/CheatSheet/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/Advanced_algebra_1.md/"}</script>
   <script src="/Math/js/third-party/quicklink.js"></script>
 
 </body>

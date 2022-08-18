@@ -1,8 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>高等代数 一 线性方程组的解法</title>
+    <url>/Math/Advanced_algebra_1.md/</url>
+    <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
+<li>数</li>
+<li>代数</li>
+<li>方程</li>
+<li>方程组</li>
+<li>系数矩阵</li>
+</ol>
+<h2 id="如何解方程组"><a href="#如何解方程组" class="headerlink" title="如何解方程组"></a>如何解方程组</h2><p>在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化)</p>
+<p>未知量的系数列向量均不为0, 否则意味着该变量不存在</p>
+<h2 id="解的组数"><a href="#解的组数" class="headerlink" title="解的组数"></a>解的组数</h2><p>转换成阶梯矩阵后</p>
+<ol start="0">
+<li>无解: 转换时出现 $0 &#x3D; d(&gt;0)$ (左侧系数矩阵0,右侧非零)</li>
+<li>有且只有一个解: 非零行的数目r &#x3D; 未知数的数目n </li>
+<li>有无穷多解: 非零行的数目r &lt; 未知数的数目n</li>
+</ol>
+<h2 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h2><p>定义: 复数集的一个非空子集$K$如果满足</p>
+<ol>
+<li>$0,1\in K$</li>
+<li>$a,b\in K \to a \pm b , ab\in K$</li>
+<li>$a,b \in K, b\ne 0 \to \frac{a}{b} \in K$</li>
+</ol>
+<p>$K$ 是一个<a href="#%E6%95%B0%E5%9F%9F">数域</a></p>
+<p>常见: 有理数域(最小的数域),实数域,复数域(最大的数域)</p>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 二 行列式</title>
+    <url>/Math/Advanced_algebra_2.md/</url>
+    <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
+<h2 id="n-元排列"><a href="#n-元排列" class="headerlink" title="n 元排列"></a>n 元排列</h2><p>$n$的排列有$n!$个</p>
+<p>性质1: 交换相邻元素得到新排列, 会改变<code>逆序对个数</code> 奇偶性</p>
+<p>性质2: 交换i和j得到新排列,会改变<code>逆序对个数</code>奇偶性,(相当于多次相邻交换)</p>
+<p>显然一个数列<code>逆序对个数</code> 的奇偶性只与它内容有关,与交换的具体过程无关</p>
+<h2 id="二阶行列式"><a href="#二阶行列式" class="headerlink" title="二阶行列式"></a>二阶行列式</h2><p>考虑$2\cdot 2$矩阵的解的个数</p>
+<p>$a_{11}a_{22}-a_{21}a_{12} \ne 0$ 唯一解</p>
+<p>$a_{11}a_{22}-a_{21}a_{12} &#x3D; 0$ 无穷多</p>
+<p>定义符号</p>
+<p>$$\left |\begin{array}{hls} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right| &#x3D; a_{11}a_{22}-a_{21}a_{12} $$<br>二阶行列式$|A| \ne 0 \Leftrightarrow$   有唯一解</p>
+<h2 id="n-阶行列式"><a href="#n-阶行列式" class="headerlink" title="n 阶行列式"></a>n 阶行列式</h2><p>从二阶出发进行思考, 类似的定义n阶, 符号类似用系数表示</p>
+<p>对于值的定义: </p>
+<ol>
+<li>求和的每一项是, 不同行,不同列的元素的乘积</li>
+<li>行下标按照顺序, 列下标为全排列</li>
+<li>符号为 $-1的<code>列下标逆序对个数</code>的<code>幂次</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析CheatSheet</title>
+    <url>/Math/Mathematical_analysis-cheatsheet/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
+<p>$\tan^2x+1&#x3D;\sec^2x$</p>
+<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
+<p>$\cos’x &#x3D; - \sin x$</p>
+<p>$\tan’x &#x3D; \sec^2x$</p>
+<p>$\cot’x &#x3D; - \csc^2x$</p>
+<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
+<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x &#x3D; \sinh x$</p>
+<p>$\sinh’ x &#x3D; \cosh x$</p>
+<p>$\tanh’ x &#x3D; sech^2 x$</p>
+<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
+<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
+<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>CheatSheet</tag>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析 章节一 分析基础</title>
-    <url>/Math/190823-Mathematical_analysis_problems_1/</url>
+    <url>/Math/Mathematical_analysis_problems_1/</url>
     <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
 <p>(1) 求证: $$x_n$$单调下降且有下界</p>
 <p>(2) 求$$lim_{n-&gt;\infty}x_n$$</p>
@@ -34,7 +135,7 @@
 <p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
 <hr>
 <p>数列有极限</p>
-<p>所以 不等式也有极限 $$lim_$$</p>
+<p>所以 不等式也有极限 $$lim$$</p>
 <h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列$${x_n}$$由如下迭代产生:</p>
 <p>$$x_1&#x3D;\frac12,x_{n+1} &#x3D; x_n^2 + x_n (n&#x3D;1,2,\dots)$$</p>
 <p>求证 $$lim_{n-&gt;\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})&#x3D;2$$</p>
@@ -60,12 +161,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节二 一元函数微分学</title>
-    <url>/Math/190823-Mathematical_analysis_problems_2/</url>
+    <url>/Math/Mathematical_analysis_problems_2/</url>
     <content><![CDATA[<h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
 <p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} &#x3D; f’(x_0)$</p>
 <span id="more"></span>
@@ -80,38 +182,38 @@
 <h2 id="微分中值定理-2-2"><a href="#微分中值定理-2-2" class="headerlink" title="微分中值定理 2.2"></a>微分中值定理 2.2</h2><h3 id="题目-2-2-5"><a href="#题目-2-2-5" class="headerlink" title="题目 2.2.5"></a>题目 2.2.5</h3><p>设f(x)在(a,b)内二阶可导，且$x_0 \in (a,b)$使得$f’’(x_0)\neq 0$求证:</p>
 <p>(1) 如果$f’(x_0)&#x3D;0$，则存在$x_1,x_2\in(a,b)$使得$f(x_1)-f(x_2)&#x3D;0$</p>
 <p>(2) 如果$f’(x_0)\neq0$，则存在$x_1,x_2\in(a,b)$，使得$\frac{f(x_1)-f(x_2)}{x_1-x_2}&#x3D;f’(x_0)$</p>
-<h3 id="题目-2-2-9"><a href="#题目-2-2-9" class="headerlink" title="题目 2.2.9"></a>题目 2.2.9</h3><p>设函数f(x)在[a,b]上可导，且$f’(a)&#x3D;f’(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)&#x3D;(c-a)f’(c)$</p>
-<p>和例12比，把<code>=0</code>去掉</p>
-<h3 id="题目-2-2-10"><a href="#题目-2-2-10" class="headerlink" title="题目 2.2.10"></a>题目 2.2.10</h3><p>设f(x)在(0,1]上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf’(x)$,求证f(x)在(0,1]上一致连续</p>
-<h3 id="例17"><a href="#例17" class="headerlink" title="例17"></a>例17</h3><p>设f(x)在[-2,2]上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f’(0) &gt; 1$,求证:存在 $\epsilon \in (-2,2)$使得$f’’(\epsilon) &#x3D; 0$</p>
+<h3 id="题目-2-2-9"><a href="#题目-2-2-9" class="headerlink" title="题目 2.2.9"></a>题目 2.2.9</h3><p>设函数f(x)在$[a,b]$上可导，且$f’(a)&#x3D;f’(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)&#x3D;(c-a)f’(c)$</p>
+<p>和例12比，把$&#x3D;0$去掉</p>
+<h3 id="题目-2-2-10"><a href="#题目-2-2-10" class="headerlink" title="题目 2.2.10"></a>题目 2.2.10</h3><p>设$f(x)$在$(0,1]$上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf’(x)$,求证f(x)在(0,1]上一致连续</p>
+<h3 id="例17"><a href="#例17" class="headerlink" title="例17"></a>例17</h3><p>设f(x)在$[-2,2]$上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f’(0) &gt; 1$,求证:存在 $\epsilon \in (-2,2)$使得$f’’(\epsilon) &#x3D; 0$</p>
 <h2 id="函数的升降、极值、最值问题-2-3"><a href="#函数的升降、极值、最值问题-2-3" class="headerlink" title="函数的升降、极值、最值问题 2.3"></a>函数的升降、极值、最值问题 2.3</h2><h3 id="题目-2-3-3"><a href="#题目-2-3-3" class="headerlink" title="题目 2.3.3"></a>题目 2.3.3</h3><h3 id="题目-2-3-6"><a href="#题目-2-3-6" class="headerlink" title="题目 2.3.6"></a>题目 2.3.6</h3><h3 id="题目-2-3-9"><a href="#题目-2-3-9" class="headerlink" title="题目 2.3.9"></a>题目 2.3.9</h3><h2 id="函数的图形、拐点及函数作图-2-4"><a href="#函数的图形、拐点及函数作图-2-4" class="headerlink" title="函数的图形、拐点及函数作图 2.4"></a>函数的图形、拐点及函数作图 2.4</h2><h3 id="题目-2-4-4"><a href="#题目-2-4-4" class="headerlink" title="题目 2.4.4"></a>题目 2.4.4</h3><h2 id="洛必达法则与泰勒公式-2-5"><a href="#洛必达法则与泰勒公式-2-5" class="headerlink" title="洛必达法则与泰勒公式 2.5"></a>洛必达法则与泰勒公式 2.5</h2><h3 id="题目-2-5-4"><a href="#题目-2-5-4" class="headerlink" title="题目 2.5.4"></a>题目 2.5.4</h3><h3 id="题目-2-5-7"><a href="#题目-2-5-7" class="headerlink" title="题目 2.5.7"></a>题目 2.5.7</h3><h3 id="题目-2-5-10"><a href="#题目-2-5-10" class="headerlink" title="题目 2.5.10"></a>题目 2.5.10</h3><h2 id="一元函数微分学的综合应用-2-6"><a href="#一元函数微分学的综合应用-2-6" class="headerlink" title="一元函数微分学的综合应用 2.6"></a>一元函数微分学的综合应用 2.6</h2><p>P121 132&#x2F;473</p>
-<h3 id="题目-2-6-5"><a href="#题目-2-6-5" class="headerlink" title="题目 2.6.5"></a>题目 2.6.5</h3><p>ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) &gt; 1</p>
-<p>‘ &#x3D; 1&#x2F;(2n+1) - 1&#x2F;(2n) + ln(n+1)-ln(n) - 1&#x2F;(n+1)</p>
-<p>‘’ &gt; 0</p>
-<p>‘ 单增</p>
-<p>1&#x2F;3 - 1&#x2F;2 + ln2 - 1&#x2F;2 &#x3D; ln2 - 2&#x2F;3 &lt; 0</p>
-<p>???????????????????????????</p>
-<h3 id="题目-2-6-7"><a href="#题目-2-6-7" class="headerlink" title="题目 2.6.7"></a>题目 2.6.7</h3><p>‘’ &#x3D; 2a - e^x 单减</p>
-<p>x&#x3D; ln(2a)时 为 0</p>
-<p>‘ &#x3D; 2ax-e^x</p>
-<p>(0,ln(2a)) 单增 , (ln(2a),+\infty) 单减</p>
-<p>极大值 2aln(2a) - 2a &#x3D; 2a(ln(2a&#x2F;e))</p>
-<p>ax^2-e^x &#x3D; 0</p>
-<p>x-&gt; -\infty , +\infty</p>
-<p>x-&gt; +\infty , -\infty</p>
-<p>a &lt; e&#x2F;2 ，单减 1根</p>
-<p>a &gt;&#x3D; e&#x2F;2, 减 增 减???????????&#x2F;</p>
+<h3 id="题目-2-6-5"><a href="#题目-2-6-5" class="headerlink" title="题目 2.6.5"></a>题目 2.6.5</h3><p>$ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) &gt; 1$</p>
+<p>$&#x3D; 1&#x2F;(2n+1) - 1&#x2F;(2n) + ln(n+1)-ln(n) - 1&#x2F;(n+1) &gt; 0$</p>
+<p>单增</p>
+<p>$1&#x2F;3 - 1&#x2F;2 + ln2 - 1&#x2F;2 &#x3D; ln2 - 2&#x2F;3 &lt; 0$</p>
+<p>??</p>
+<h3 id="题目-2-6-7"><a href="#题目-2-6-7" class="headerlink" title="题目 2.6.7"></a>题目 2.6.7</h3><p>$&#x3D; 2a - e^x$ 单减</p>
+<p>$x&#x3D; ln(2a)$ 时 为 0</p>
+<p>$&#x3D; 2ax-e^x$</p>
+<p>$(0,ln(2a)) $单增 , $(ln(2a),+\infty)$ 单减</p>
+<p>极大值 $2aln(2a) - 2a &#x3D; 2a(ln(2a&#x2F;e))$</p>
+<p>$ax^2-e^x &#x3D; 0$</p>
+<p>$x \to -\infty , +\infty$</p>
+<p>$x \to +\infty , -\infty$</p>
+<p>$a &lt; e&#x2F;2$ ，单减 1根</p>
+<p>$a \ge e&#x2F;2$, 减 增 减??</p>
 ]]></content>
       <categories>
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节三 一元函数积分学</title>
-    <url>/Math/190823-Mathematical_analysis_problems_3/</url>
+    <url>/Math/Mathematical_analysis_problems_3/</url>
     <content><![CDATA[<h1 id="一元函数积分学-3"><a href="#一元函数积分学-3" class="headerlink" title="一元函数积分学 3"></a>一元函数积分学 3</h1><h2 id="不定积分和可积函数类-3-1"><a href="#不定积分和可积函数类-3-1" class="headerlink" title="不定积分和可积函数类 3.1"></a>不定积分和可积函数类 3.1</h2><p>5.可积函数类 P124</p>
 <p>(1) 有理函数可分解成多项式和若干项最简真分式之和，因此有理函数一定可积分</p>
 <p>(2) 三角函数 总可用<code>t=tan(pi/2)</code>将其化为有理函数积分</p>
@@ -157,12 +259,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节四 级数</title>
-    <url>/Math/190823-Mathematical_analysis_problems_4/</url>
+    <url>/Math/Mathematical_analysis_problems_4/</url>
     <content><![CDATA[<h1 id="级数-4"><a href="#级数-4" class="headerlink" title="级数 4"></a>级数 4</h1><h2 id="级数敛散判别法与性质、上极限与下极限"><a href="#级数敛散判别法与性质、上极限与下极限" class="headerlink" title="级数敛散判别法与性质、上极限与下极限"></a>级数敛散判别法与性质、上极限与下极限</h2><p>-P224</p>
 <p>数列和</p>
 <p>绝对收敛 条件收敛</p>
@@ -207,12 +310,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节五 多元函数微分学</title>
-    <url>/Math/190823-Mathematical_analysis_problems_5/</url>
+    <url>/Math/Mathematical_analysis_problems_5/</url>
     <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
 <p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
 <p>二重极限存在,对应的累次极限不一定存在</p>
@@ -236,12 +340,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节六 多元函数积分学</title>
-    <url>/Math/190823-Mathematical_analysis_problems_6/</url>
+    <url>/Math/Mathematical_analysis_problems_6/</url>
     <content><![CDATA[<h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2><span id="more"></span>
 
 <h2 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h2><h2 id="曲线积分与格林公式"><a href="#曲线积分与格林公式" class="headerlink" title="曲线积分与格林公式"></a>曲线积分与格林公式</h2><h2 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h2><h2 id="奥氏公式、斯托克斯公式、线积分与路径无关"><a href="#奥氏公式、斯托克斯公式、线积分与路径无关" class="headerlink" title="奥氏公式、斯托克斯公式、线积分与路径无关"></a>奥氏公式、斯托克斯公式、线积分与路径无关</h2><h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2>]]></content>
@@ -249,12 +354,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
     <title>数学分析 章节七 典型例题 及 参考资料 速查表</title>
-    <url>/Math/190823-Mathematical_analysis_problems_7/</url>
+    <url>/Math/Mathematical_analysis_problems_7/</url>
     <content><![CDATA[<h1 id="典型综合题分析-7"><a href="#典型综合题分析-7" class="headerlink" title="典型综合题分析 7"></a>典型综合题分析 7</h1><h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><h2 id="康托定理"><a href="#康托定理" class="headerlink" title="康托定理"></a>康托定理</h2><p>若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。</p>
 <p>采用反证法。</p>
 <p>假设$f(x)$在$[a,b]$上非一致连续，由非一致连续定义可知存在$\epsilon_0 &gt; 0$及两点列$${x’_n}$$和$${x’’_n}$$，$$x’_n,x’’_n\in[a,b]$$，满足</p>
@@ -283,64 +389,13 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
       </tags>
   </entry>
   <entry>
-    <title>数学分析CheatSheet</title>
-    <url>/Math/2022-07-02-Mathematical_analysis-cheatsheet/</url>
-    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
-<p>$\tan^2x+1&#x3D;\sec^2x$</p>
-<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
-<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
-<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
-<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
-<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
-<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
-<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
-<p>$\cos’x &#x3D; - \sin x$</p>
-<p>$\tan’x &#x3D; \sec^2x$</p>
-<p>$\cot’x &#x3D; - \csc^2x$</p>
-<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
-<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
-<p>$\cosh’ x &#x3D; \sinh x$</p>
-<p>$\sinh’ x &#x3D; \cosh x$</p>
-<p>$\tanh’ x &#x3D; sech^2 x$</p>
-<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
-<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
-<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
-<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
-<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
-<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
-<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>CheatSheet</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 笔记</title>
-    <url>/Math/210314-Mathematical_Analysis_notes/</url>
-    <content><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>bilibli华师大公开课</p>
-<p>《 数学分析解题指南（林源渠、方企勤）》</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>xmind</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>(p-1)!+1 = 0 (mod p)</title>
-    <url>/Math/210521-Wilson_s_theorem/</url>
+    <url>/Math/Wilson_s_theorem/</url>
     <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
 <h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
 <p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
