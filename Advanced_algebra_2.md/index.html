@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="第2章 行列式为什么要行列式在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质 n 元排列$n$的排列有$n!$个 性质1: 交换相邻元素得到新排列, 会改变逆序对个数 奇偶性 性质2: 交换i和j得到新排列,会改变逆序对个数奇偶性,(相当于多次相邻交换) 显然一个数列逆序对个数 的奇偶性只与它内容有关,与交换的具体过程无关 二阶行列式考虑$2">
+    <meta name="description" content="第2章 行列式 希望不做消元探索矩阵性质 考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法 从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质) 相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)  为什么要行列式在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质 n 元排列$n$的排列有$n!$个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等代数 二 行列式">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Advanced_algebra_2.md/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="第2章 行列式为什么要行列式在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质 n 元排列$n$的排列有$n!$个 性质1: 交换相邻元素得到新排列, 会改变逆序对个数 奇偶性 性质2: 交换i和j得到新排列,会改变逆序对个数奇偶性,(相当于多次相邻交换) 显然一个数列逆序对个数 的奇偶性只与它内容有关,与交换的具体过程无关 二阶行列式考虑$2">
+<meta property="og:description" content="第2章 行列式 希望不做消元探索矩阵性质 考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法 从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质) 相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)  为什么要行列式在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质 n 元排列$n$的排列有$n!$个">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-08-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-18T08:51:03.969Z">
+<meta property="article:modified_time" content="2022-08-19T04:04:00.127Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="高等代数">
 <meta name="twitter:card" content="summary">
@@ -87,7 +87,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">11</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">3</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">5</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">12</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">3</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">5</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -144,7 +144,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">第2章 行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-%E5%85%83%E6%8E%92%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">n 元排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">二阶行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">n 阶行列式</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC2%E7%AB%A0-%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">第2章 行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">为什么要行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-%E5%85%83%E6%8E%92%E5%88%97"><span class="nav-number">1.2.</span> <span class="nav-text">n 元排列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">二阶行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#n-%E9%98%B6%E8%A1%8C%E5%88%97%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">n 阶行列式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E6%80%A7%E8%B4%A8"><span class="nav-number">1.5.</span> <span class="nav-text">行列式性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8B%E8%8E%B1%E5%A7%86%E6%B3%95%E5%88%99"><span class="nav-number">1.6.</span> <span class="nav-text">克莱姆法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#laplace%E5%AE%9A%E7%90%86-%E6%8C%87%E5%AE%9Ak%E8%A1%8C%E7%9A%84%E5%B1%95%E5%BC%80"><span class="nav-number">1.7.</span> <span class="nav-text">laplace定理(指定k行的展开)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">1.7.1.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%88%97%E5%BC%8F%E5%9C%A8%E5%85%B6%E5%AE%83%E5%9C%B0%E6%96%B9%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.8.</span> <span class="nav-text">行列式在其它地方的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E5%AD%90"><span class="nav-number">1.9.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF%E6%80%BB%E7%BB%93"><span class="nav-number">1.10.</span> <span class="nav-text">思路总结</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -159,7 +159,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/Math/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -268,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-08-18 16:51:03" itemprop="dateModified" datetime="2022-08-18T16:51:03+08:00">2022-08-18</time>
+      <time title="修改時間：2022-08-19 12:04:00" itemprop="dateModified" datetime="2022-08-19T12:04:00+08:00">2022-08-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,14 +287,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>514</span>
+      <span>3.6k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
+      <span>3 分鐘</span>
     </span>
 </div>
 
@@ -305,16 +305,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
+        <h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><ol>
+<li>希望不做消元探索矩阵性质</li>
+<li>考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法</li>
+<li>从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质)</li>
+<li>相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)</li>
+</ol>
+<h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
 <h2 id="n-元排列"><a href="#n-元排列" class="headerlink" title="n 元排列"></a>n 元排列</h2><p>$n$的排列有$n!$个</p>
 <p>性质1: 交换相邻元素得到新排列, 会改变<code>逆序对个数</code> 奇偶性</p>
 <p>性质2: 交换i和j得到新排列,会改变<code>逆序对个数</code>奇偶性,(相当于多次相邻交换)</p>
+<p>性质3: 保持下标和值的对应关系,让值有序而下标不一定有序,那么下标的<code>逆序对个数</code>的奇偶性和变化前的<code>逆序对</code>奇偶性一致S</p>
 <p>显然一个数列<code>逆序对个数</code> 的奇偶性只与它内容有关,与交换的具体过程无关</p>
 <h2 id="二阶行列式"><a href="#二阶行列式" class="headerlink" title="二阶行列式"></a>二阶行列式</h2><p>考虑$2\cdot 2$矩阵的解的个数</p>
 <p>$a_{11}a_{22}-a_{21}a_{12} \ne 0$ 唯一解</p>
 <p>$a_{11}a_{22}-a_{21}a_{12} &#x3D; 0$ 无穷多</p>
-<p>定义符号</p>
-<p>$$\left |\begin{array}{hls} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right| &#x3D; a_{11}a_{22}-a_{21}a_{12} $$<br>二阶行列式$|A| \ne 0 \Leftrightarrow$   有唯一解</p>
+<p>定义符号$\left |\begin{array}{hls} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right| &#x3D; a_{11}a_{22}-a_{21}a_{12}$</p>
+<p>二阶行列式$|A| \ne 0 \Leftrightarrow$   有唯一解</p>
 <h2 id="n-阶行列式"><a href="#n-阶行列式" class="headerlink" title="n 阶行列式"></a>n 阶行列式</h2><p>从二阶出发进行思考, 类似的定义n阶, 符号类似用系数表示</p>
 <p>对于值的定义: </p>
 <ol>
@@ -322,6 +329,59 @@
 <li>行下标按照顺序, 列下标为全排列</li>
 <li>符号为 $-1的<code>列下标逆序对个数</code>的<code>幂次</code></li>
 </ol>
+<p>即是 $\sum_{j_1j_2\cdots j_n} (-1)^{\tau(j_1j_2\cdots j_n)}\prod_{i&#x3D;1}^n{a_{ij_i}}$ 这才是行列式的定义, 写成 $n\cdot n$的形状只是为了方便书写</p>
+<p>$n$阶行列式 称作$n$阶矩阵的行列式</p>
+<p>上三角形行列式: 主对角线下方全为$0$ 其值$&#x3D;\prod_{i&#x3D;1}^n a_{ii}$ </p>
+<hr>
+<p>这里有个后面(克莱姆法则)会解决的问题, 虽然二阶说明了与有唯一解的充要关系, 而这里虽然定义了n阶行列式, 却没有说明和原矩阵之间唯一解的充要关系</p>
+<h2 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h2><ol>
+<li><p>行列式交换两行, 等于所有被加的元素中的列下标中的两个交换, 因此行列式的两行交换&#x3D;值$\cdot -1$</p>
+</li>
+<li><p>可以得到$\sum_{i_1i_2\cdots i_n} (-1)^{\tau(i_1i_2\cdots i_n)}\prod_{j&#x3D;1}^na_{i_jj}$</p>
+</li>
+<li><p>转置:行列互换, 常见的3种写法$A’,A^T,A^t$, 显然行列式值相等$|A|&#x3D;|A^T|$</p>
+</li>
+<li><p>一行的$k$倍: 考虑代数表达式所有被加的元素都乘了k, 所以显然值也是k倍</p>
+</li>
+<li><p>一行加另一行上: 考虑代数表达式可以把所有加的括号拆开, 变成两个符号记法之和</p>
+</li>
+</ol>
+<p>$\left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ (b_1+c_1) &amp; \cdots &amp; (b_n+c_n) \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| &#x3D; \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ b_1 &amp; \cdots &amp; b_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| + \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ c_1 &amp; \cdots &amp; c_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right|$</p>
+<ol start="6">
+<li><p>两行成倍数, 考虑分别为$i_0,i_1$ 两行, 那么它的表达式中加法的项 不含符号部分一定有 $\cdots a_{i_0j_{i_0}} a_{i_1j_{i_1}}$ 和 $\cdots a_{i_1j_{i_0}} a_{i_0j_{i_1}}$ , 它们其它项一样,而仅有下标交换, 又有行成倍数, 因此它们绝对值相等而符号相反, 所以行列式的值为$0$, (另一个角度是, 它们可以互换互为相反数则只能是0</p>
+</li>
+<li><p>一行倍数加到另一行, 根据上面加法和倍数性质, 显然值不变</p>
+</li>
+<li><p>按一行(列)展开</p>
+</li>
+</ol>
+<p>$&#x3D; a_{11}M_{11}-a_{12}M_{12}+a_{13}M_{13} + \cdots$</p>
+<p>去掉行列剩下按照顺序拼接出的叫做<code>余子式</code>$M_{ij}$,带上<code>-1</code>幂次的叫做<code>代数余子式</code>$A_{ij}&#x3D; (-1)^{i+j}M_{ij}$</p>
+<p>$&#x3D; a_{11}A_{11}+a_{12}A_{12}+a_{13}M_{13} + \cdots$</p>
+<p>证明相等: 显然考虑表达式本来有$-1$的逆序对的幂次, 而移除了$a_{ij}$剩下按原来排列, 那么其内部和之间的逆序对未变化, 都是关于$a_{ij}$相关的, 那么分别是$a_{&lt;i,&gt;j}$和$a_{&gt;i,&lt;j}$ 的个数之和, 设$k &#x3D; a_{&lt;i,&gt;j}$, 那么有$a_{&lt;i,&lt;j} &#x3D; i-1-k$, $a_{&gt;i,&lt;j} &#x3D; j-1-(i-1-k) &#x3D; j-i+k$个, 所以一共$j-i+2k$个, 只考虑奇偶性的话$i+j$的奇偶性,也就有上面的等式, (另一个角度,考虑使用相邻交换把i行和j列分别交换到1行,1列,这样交换了(i-1+j-1)次, 再只需要考虑$a_{11}$的情况即可</p>
+<ol start="9">
+<li>反过来$i_0\ne i_1$ 时,考虑从代数表达式变成符号记法,带回去会让两行相等, $\sum_{j&#x3D;1}^n a_{i_0j}A_{i_1j} &#x3D;0$</li>
+</ol>
+<h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>n元线性方程组有唯一解的条件</p>
+<p>增广矩阵$\to$初等行变换阶梯形, 无解有非零行$(0,\cdots,0,d \ne 0)$, 无穷解非零行数$r &lt; n$,唯一解$r &#x3D; n$</p>
+<p>系数矩阵$\to$初等行变换阶梯形</p>
+<p>也就对应系数矩阵$\to$初等行变换阶梯形 上三角 有唯一解 (初等变换过程中行列式值不变), 行列式$\ne 0$</p>
+<p>同样上面的无解和无穷解都对应行列式$&#x3D; 0$</p>
+<p>至此得到了行列式的值与n元线性方程组有唯一解之间的关系</p>
+<hr>
+<p>推论1: 对于没有常数项的n元齐次n个方程组, 只有0解 $\Leftrightarrow |A|\ne 0$, 有非零解 $|A| &#x3D; 0$</p>
+<hr>
+<p>取$A$中$k$行$k$列的交叉点按原顺序排,称作$k$阶子式, 对应剩下的是余子式, 根据上面提出$a_{ij}$ 类似的思路,可以考虑先把选定的$k$行$k$列通过相邻交换,换到开头的$k$行$k$列,这样操作次数是, $(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k)$, 剩下的就是选定的$k$阶子式子和它的<code>余子式</code>相乘,其<code>余子式</code>乘上$(-1)^(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k) &#x3D; (-1)^{\sum_{p&#x3D;1}^k (i_p+j_p)}$则称作代数余子式</p>
+<h2 id="laplace定理-指定k行的展开"><a href="#laplace定理-指定k行的展开" class="headerlink" title="laplace定理(指定k行的展开)"></a>laplace定理(指定k行的展开)</h2><p>$|A|&#x3D;$ 任意的指定$k$行后, 所有$k$阶子式和它的代数余子式的乘积之和</p>
+<p>上面证明了每一项会怎么变化, 下面证明原行列式的每一项存在且唯一存在于一个乘积之中</p>
+<p>其实和一行展开类似, 任何一项对于指定的$k$行来说其列是确定的,则唯一确定了所在的$k$阶子式,证明了每一个都唯一存在于一个</p>
+<p>任意两个不同的k阶子式和它的代数余子式的乘积,都是行列式的项,且不会产生相同的加和项</p>
+<p>得证</p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>$\left|\begin{array}{d2} A &amp; O \\ C &amp; B \end{array}\right| &#x3D; |A||B|$</p>
+<h2 id="行列式在其它地方的应用"><a href="#行列式在其它地方的应用" class="headerlink" title="行列式在其它地方的应用"></a>行列式在其它地方的应用</h2><p>二阶行列式$\left|\begin{array}{d2} a_1 &amp; b_1 \\ a_2 &amp; b_2 \end{array}\right|$ 表示向量$(a_1,a_2)$和$(b_1,b_2)$所构成平行四边形,从$a$到$b$定向面积</p>
+<p>三阶行列式, 表示向量$(a_1,a_2,a_3)$,$(b_1,b_2,b_3)$,$(c_1,c_2,c_3)$所构成的平行六面体的定向体积,$a\to b$,c大拇指右手系</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>范德蒙行列式 $&#x3D;\prod_{i&lt;j} (a_j-a_i)$</p>
+<h2 id="思路总结"><a href="#思路总结" class="headerlink" title="思路总结"></a>思路总结</h2><p>有不少是先看看二阶三阶怎么设计,再推广</p>
 
     </div>
 
@@ -362,6 +422,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/Math/Advanced_algebra_3.md/" rel="next" title="高等代数 三 n维向量空间$K^n$">
+                  高等代数 三 n维向量空间$K^n$ <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -393,13 +456,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">11k</span>
+    <span title="總字數">14k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">10 分鐘</span>
+    <span title="所需總閱讀時間">13 分鐘</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
