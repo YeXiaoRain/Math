@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Advanced_algebra_3.md.md",
+            "file": "Advanced_algebra_3.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Advanced_algebra_3.md.md",
+                "file": "Advanced_algebra_3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Advanced_algebra_3.md.md",
+                "file": "Advanced_algebra_3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Advanced_algebra_3.md.md"
+                "file": "Advanced_algebra_3.md"
               }
             }
           }
@@ -130,9 +130,9 @@
   },
   "active": "f151806f46c6aeda",
   "lastOpenFiles": [
-    "Advanced_algebra_2.md.md",
-    "Advanced_algebra_3.md.md",
-    "Advanced_algebra_1.md.md",
+    "Advanced_algebra_1.md",
+    "Advanced_algebra_2.md",
+    "Advanced_algebra_3.md",
     "Mathematical_analysis_problems_1.md",
     "Mathematical_analysis_problems_7.md",
     "Mathematical_analysis-cheatsheet.md",
