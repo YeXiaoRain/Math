@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>高等代数 一 线性方程组的解法</title>
-    <url>/Math/Advanced_algebra_1.md/</url>
+    <url>/Math/Advanced_algebra_1/</url>
     <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
 <li>数</li>
 <li>代数</li>
@@ -36,7 +36,7 @@
   </entry>
   <entry>
     <title>高等代数 二 行列式</title>
-    <url>/Math/Advanced_algebra_2.md/</url>
+    <url>/Math/Advanced_algebra_2/</url>
     <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><ol>
 <li>希望不做消元探索矩阵性质</li>
 <li>考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法</li>
@@ -124,7 +124,7 @@
   </entry>
   <entry>
     <title>高等代数 三 n维向量空间$K^n$</title>
-    <url>/Math/Advanced_algebra_3.md/</url>
+    <url>/Math/Advanced_algebra_3/</url>
     <content><![CDATA[<h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
 <p>其中$K$是数域</p>
 ]]></content>

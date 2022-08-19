@@ -6,7 +6,7 @@
   <link href="https://yexiaorain.github.io/Math/atom.xml" rel="self"/>
   
   <link href="https://yexiaorain.github.io/Math/"/>
-  <updated>2022-08-19T04:04:00.127Z</updated>
+  <updated>2022-08-19T04:04:11.655Z</updated>
   <id>https://yexiaorain.github.io/Math/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>高等代数 三 n维向量空间$K^n$</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_3.md/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_3.md/</id>
+    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_3/"/>
+    <id>https://yexiaorain.github.io/Math/Advanced_algebra_3/</id>
     <published>2022-08-12T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
       
@@ -43,10 +43,10 @@
   
   <entry>
     <title>高等代数 二 行列式</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_2.md/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_2.md/</id>
+    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_2/"/>
+    <id>https://yexiaorain.github.io/Math/Advanced_algebra_2/</id>
     <published>2022-08-11T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
       
@@ -70,10 +70,10 @@
   
   <entry>
     <title>高等代数 一 线性方程组的解法</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_1.md/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_1.md/</id>
+    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_1/"/>
+    <id>https://yexiaorain.github.io/Math/Advanced_algebra_1/</id>
     <published>2022-08-10T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
       
@@ -98,7 +98,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis-cheatsheet/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis-cheatsheet/</id>
     <published>2022-07-01T17:01:07.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
       
@@ -125,7 +125,7 @@
     <link href="https://yexiaorain.github.io/Math/Wilson_s_theorem/"/>
     <id>https://yexiaorain.github.io/Math/Wilson_s_theorem/</id>
     <published>2021-05-20T17:01:01.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
       
@@ -151,7 +151,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_7/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_7/</id>
     <published>2019-08-26T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;典型综合题分析-7&quot;&gt;&lt;a href=&quot;#典型综合题分析-7&quot; class=&quot;headerlink&quot; title=&quot;典型综合题分析 7&quot;&gt;&lt;/a&gt;典型综合题分析 7&lt;/h1&gt;&lt;h1 id=&quot;定理&quot;&gt;&lt;a href=&quot;#定理&quot; class=&quot;headerlink&quot; title=&quot;定理&quot;&gt;&lt;/a&gt;定理&lt;/h1&gt;&lt;h2 id=&quot;康托定理&quot;&gt;&lt;a href=&quot;#康托定理&quot; class=&quot;headerlink&quot; title=&quot;康托定理&quot;&gt;&lt;/a&gt;康托定理&lt;/h2&gt;&lt;p&gt;若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。&lt;/p&gt;
@@ -175,7 +175,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_6/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_6/</id>
     <published>2019-08-25T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;多元函数积分学-6&quot;&gt;&lt;a href=&quot;#多元函数积分学-6&quot; class=&quot;headerlink&quot; title=&quot;多元函数积分学 6&quot;&gt;&lt;/a&gt;多元函数积分学 6&lt;/h1&gt;&lt;h2 id=&quot;重积分的概念与性质、重积分化累次积分&quot;&gt;&lt;a href=&quot;#重积分的概念与性质、重积分化累次积分&quot; class=&quot;headerlink&quot; title=&quot;重积分的概念与性质、重积分化累次积分&quot;&gt;&lt;/a&gt;重积分的概念与性质、重积分化累次积分&lt;/h2&gt;</summary>
@@ -196,7 +196,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_5/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_5/</id>
     <published>2019-08-24T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;多元函数微分学-5&quot;&gt;&lt;a href=&quot;#多元函数微分学-5&quot; class=&quot;headerlink&quot; title=&quot;多元函数微分学 5&quot;&gt;&lt;/a&gt;多元函数微分学 5&lt;/h1&gt;&lt;h2 id=&quot;欧式空间、多元函数的极限与连续&quot;&gt;&lt;a href=&quot;#欧式空间、多元函数的极限与连续&quot; class=&quot;headerlink&quot; title=&quot;欧式空间、多元函数的极限与连续&quot;&gt;&lt;/a&gt;欧式空间、多元函数的极限与连续&lt;/h2&gt;&lt;p&gt;$\bar{E} &amp;#x3D; ((E^c)^o)^c$&lt;/p&gt;
@@ -221,7 +221,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_4/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_4/</id>
     <published>2019-08-23T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;级数-4&quot;&gt;&lt;a href=&quot;#级数-4&quot; class=&quot;headerlink&quot; title=&quot;级数 4&quot;&gt;&lt;/a&gt;级数 4&lt;/h1&gt;&lt;h2 id=&quot;级数敛散判别法与性质、上极限与下极限&quot;&gt;&lt;a href=&quot;#级数敛散判别法与性质、上极限与下极限&quot; class=&quot;headerlink&quot; title=&quot;级数敛散判别法与性质、上极限与下极限&quot;&gt;&lt;/a&gt;级数敛散判别法与性质、上极限与下极限&lt;/h2&gt;&lt;p&gt;-P224&lt;/p&gt;
@@ -254,7 +254,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_3/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_3/</id>
     <published>2019-08-22T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一元函数积分学-3&quot;&gt;&lt;a href=&quot;#一元函数积分学-3&quot; class=&quot;headerlink&quot; title=&quot;一元函数积分学 3&quot;&gt;&lt;/a&gt;一元函数积分学 3&lt;/h1&gt;&lt;h2 id=&quot;不定积分和可积函数类-3-1&quot;&gt;&lt;a href=&quot;#不定积分和可积函数类-3-1&quot; class=&quot;headerlink&quot; title=&quot;不定积分和可积函数类 3.1&quot;&gt;&lt;/a&gt;不定积分和可积函数类 3.1&lt;/h2&gt;&lt;p&gt;5.可积函数类 P124&lt;/p&gt;
@@ -286,7 +286,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_2/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_2/</id>
     <published>2019-08-21T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一元函数微分学-2&quot;&gt;&lt;a href=&quot;#一元函数微分学-2&quot; class=&quot;headerlink&quot; title=&quot;一元函数微分学 2&quot;&gt;&lt;/a&gt;一元函数微分学 2&lt;/h1&gt;&lt;h2 id=&quot;导数与微分-2-1&quot;&gt;&lt;a href=&quot;#导数与微分-2-1&quot; class=&quot;headerlink&quot; title=&quot;导数与微分 2.1&quot;&gt;&lt;/a&gt;导数与微分 2.1&lt;/h2&gt;&lt;h3 id=&quot;题目-2-1-3&quot;&gt;&lt;a href=&quot;#题目-2-1-3&quot; class=&quot;headerlink&quot; title=&quot;题目 2.1.3&quot;&gt;&lt;/a&gt;题目 2.1.3&lt;/h3&gt;&lt;p&gt;设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:&lt;/p&gt;
@@ -308,7 +308,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_1/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_1/</id>
     <published>2019-08-20T16:00:00.000Z</published>
-    <updated>2022-08-19T04:04:00.127Z</updated>
+    <updated>2022-08-19T04:04:11.655Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;分析基础-1&quot;&gt;&lt;a href=&quot;#分析基础-1&quot; class=&quot;headerlink&quot; title=&quot;分析基础 1&quot;&gt;&lt;/a&gt;分析基础 1&lt;/h1&gt;&lt;h2 id=&quot;序列极限-1-3&quot;&gt;&lt;a href=&quot;#序列极限-1-3&quot; class=&quot;headerlink&quot; title=&quot;序列极限 1.3&quot;&gt;&lt;/a&gt;序列极限 1.3&lt;/h2&gt;&lt;h3 id=&quot;题目-1-3-4&quot;&gt;&lt;a href=&quot;#题目-1-3-4&quot; class=&quot;headerlink&quot; title=&quot;题目 1.3.4&quot;&gt;&lt;/a&gt;题目 1.3.4&lt;/h3&gt;&lt;p&gt;设 $$A&amp;gt;0,x_1&amp;gt;0,x_{n+1}&amp;#x3D;\frac12(x_n+\frac A{x_n}) (n&amp;#x3D;1,2,\dots)$$&lt;/p&gt;
