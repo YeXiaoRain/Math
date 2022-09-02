@@ -1,5 +1,5 @@
 ---
-title: 数学分析CheatSheet
+title: 数学分析 CheatSheet
 date: 2022-07-02 01:01:07
 categories: 数学分析
 tags: [CheatSheet, 数学分析]
@@ -28,6 +28,8 @@ $sin(x) + sin(y) = 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$
 $cos(x) + cos(y) = 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$
 
 $cos(x) - cos(y) = -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$
+
+<!--more-->
 
 # 微分
 

@@ -1,5 +1,5 @@
 ---
-title: (p-1)!+1 = 0 (mod p)
+title: (p-1)!+1 = 0 (mod p) Wilson's theorem 威尔逊定理
 date: 2021-05-21 01:01:01
 categories: 数论
 tags: [数论]
@@ -17,6 +17,8 @@ Wilson's theorem
 (x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数
 
 # 下证 如果是质数 则成立
+
+<!--more-->
 
 首先 1..p-1 是 模p的所有余项
 

@@ -1,5 +1,5 @@
 ---
-title: 数学分析 章节四 级数
+title: 数学分析 四 级数
 date: 2019-08-24
 categories: 数学分析
 tags: [题目, 数学分析]
