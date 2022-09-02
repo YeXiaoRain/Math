@@ -16,19 +16,18 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域">
+    <meta name="description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等代数 三 n维向量空间$K^n$">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Advanced_algebra_3/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域">
+<meta property="og:description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$,">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-08-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T04:04:11.655Z">
+<meta property="article:modified_time" content="2022-09-02T03:56:05.608Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="高等代数">
 <meta name="twitter:card" content="summary">
@@ -54,7 +53,7 @@
 <link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="headband"></div>
 
   <main class="main">
@@ -87,7 +86,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">12</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">3</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">5</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">14</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">4</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">7</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -144,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-K-n"><span class="nav-number">1.</span> <span class="nav-text">n维向量空间$K^n$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-K-n"><span class="nav-number">1.</span> <span class="nav-text">n维向量空间$K^n$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="nav-number">1.2.</span> <span class="nav-text">线性空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E6%80%A7%E8%B4%A8"><span class="nav-number">1.3.</span> <span class="nav-text">线性空间性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-number">1.4.</span> <span class="nav-text">线性子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3%E7%9A%84%E5%90%91%E9%87%8F%E7%BB%84"><span class="nav-number">1.5.</span> <span class="nav-text">线性相关与线性无关的向量组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-number">1.5.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">1.5.2.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%AE%B0"><span class="nav-number">1.6.</span> <span class="nav-text">注记</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -159,18 +158,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/Math/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/Math/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/Math/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -268,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-08-19 12:04:11" itemprop="dateModified" datetime="2022-08-19T12:04:11+08:00">2022-08-19</time>
+      <time title="修改時間：2022-09-02 11:56:05" itemprop="dateModified" datetime="2022-09-02T11:56:05+08:00">2022-09-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,14 +286,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>95</span>
+      <span>3.3k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
+      <span>3 分鐘</span>
     </span>
 </div>
 
@@ -307,6 +306,101 @@
     <div class="post-body" itemprop="articleBody">
         <h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
 <p>其中$K$是数域</p>
+<p>规定: </p>
+<ol>
+<li>向量相等:对应位置元素相等</li>
+<li>向量相加:对应位置元素相加</li>
+<li>数量乘法:所有元素乘上k倍</li>
+<li>零向量:所有元素都为0</li>
+</ol>
+<p>对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像</p>
+<p>满射:$f(A) &#x3D; B$ </p>
+<p>单射:不同$a$,的$f(a)$不同</p>
+<p>双射(一一对应): 单射+满射</p>
+<p>笛卡尔积: $A\times B &#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长</p>
+<h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><p>线性空间 &#x3D; 4条加法法则+4条数乘法则</p>
+<span id="more"></span>
+
+<p>加法</p>
+<ol>
+<li>加法交换 $\alpha + \beta &#x3D; \beta + \alpha$</li>
+<li>加法结合交换 $(\alpha + \beta ) + \gamma &#x3D; \alpha + (\beta + \gamma)$</li>
+<li>零元$\alpha + 0 &#x3D; \alpha$</li>
+<li>负元$\alpha + \beta &#x3D; 0$, 互为负元</li>
+</ol>
+<p>数乘</p>
+<ol start="5">
+<li>$1\alpha &#x3D; \alpha$</li>
+<li>$(kl)\alpha &#x3D; k(l\alpha)$</li>
+<li>$(k+l)\alpha &#x3D; k\alpha + l\alpha$</li>
+<li>$k(\alpha+\beta) &#x3D; k\alpha + k\beta$</li>
+</ol>
+<hr>
+<p>线性空间例子</p>
+<ol>
+<li>几何空间, 以O为起点的所有向量</li>
+<li>向量空间 是 数域$K$的一个线性空间</li>
+<li>$f(\mathbb{R})\to \mathbb{R}$, 数域$X$上的函数$\mathbb{R}^X$, $(f+g)(\mathbb{R}) &#x3D; f(\mathbb{R})+g(\mathbb{R})$, (3对应零函数,4对应负函数)</li>
+</ol>
+<h2 id="线性空间性质"><a href="#线性空间性质" class="headerlink" title="线性空间性质"></a>线性空间性质</h2><ol>
+<li>唯一$0$元(反证法+交换律+加法性质3)</li>
+<li>每个元素唯一负元(反证法)</li>
+<li>$0\alpha &#x3D; 0$ (数乘+结合率+负元) $0\alpha &#x3D; 0\alpha + 0 &#x3D; 0\alpha + (0\alpha + (-0\alpha)) &#x3D; (0\alpha + 0\alpha) + (-0\alpha) &#x3D; 0\alpha + (-0\alpha) &#x3D; 0$</li>
+<li>$k0 &#x3D; 0$</li>
+<li>$k\alpha &#x3D; 0$, 则$k &#x3D;0$或$\alpha &#x3D; 0$, ($k\ne 0$时,数乘上$k^{-1}$)</li>
+<li>$(-1)\alpha &#x3D; -\alpha$, (结合律+负元定义)</li>
+</ol>
+<h2 id="线性子空间"><a href="#线性子空间" class="headerlink" title="线性子空间"></a>线性子空间</h2><p>$V$是数域$K$上的一个线性空间,$U$是$V$一个非空子集, 也满足线性空间八条法则,则$U$是$V$的子空间, (注意元素的定义要一致</p>
+<p>生成的子空间 $W &#x3D; &lt;\alpha_1,\alpha_2,\cdots,\alpha_s&gt;$ , W的元素都是$\sum k_i \alpha_i$ 得到的, 其中$k_i \in K$, 对于可以被表示的, 称作可以被这些向量线性表出</p>
+<p>所以原本的n元线性方程组的问题有解变成: 系数的列向量能否线性表出值的列向量? $\beta \in &lt;\alpha_1,\alpha_2,\cdots,\alpha_s&gt;$?</p>
+<h2 id="线性相关与线性无关的向量组"><a href="#线性相关与线性无关的向量组" class="headerlink" title="线性相关与线性无关的向量组"></a>线性相关与线性无关的向量组</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>2个向量: 共线(线性相关): $\exists k_1,k_2$不全为零,让$k_1\alpha + k_2\beta &#x3D; 0$, 否则不共线(线性无关)</p>
+<p>线性相关: $\exists k_1,k_2,\cdots,k_s$不全为零,让$\sum_{i&#x3D;1}^s k_i\alpha_i &#x3D; 0$, 否则线性无关</p>
+<p>线性<strong>相</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组有非零解 $\Leftrightarrow$ 行列式$&#x3D;0$</p>
+<p>线性<strong>无</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组只有零解 $\Leftrightarrow$ 行列式$\ne 0$</p>
+<p>对于单个向量, 定义0向量是线性相关, 非零则线性无关</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>线性相关 本身不含0向量的话, 至少有一个向量可以由其它向量线性表出</p>
+<p>线性无关: 每一个都不能由其它向量线性表出</p>
+<p>命题一: $\beta$可以由线性无关的向量组 $&lt;\alpha_1,\cdots,\alpha_s&gt;$线性表出, 则表出方式唯一(充要)</p>
+<p>命题二: 线性无关,添加向量后线性相关, 则添加的向量可被线性表出</p>
+<p>极大线性无关组: 当前无关任意添加都会线性相关, 换句话说任意都可以被线性表出</p>
+<p><code>基</code>: 线性无关,任何向量可以由它线性表出,和极大线性无关组的关系 (见下面注记)</p>
+<p>如果两个向量组可以互相线性表出,则称它们等价</p>
+<p>m的大小唯一: 因为如果两个个数不同(m&gt;n)的极大线性无关组,因为可以互相表出, 反过来就是考虑一个m元齐次n个的方程组 是否有非零解? 因为m&gt;n则必有非零解,所以大的个数的不可能是极大线性无关组, 所以所有极大线性无关组的个数两两相等</p>
+<p>$&lt;\alpha_1,\cdots,\alpha_s&gt;$ 的任意一个极大线性无关组的个数唯一决定,称作向量组的秩(<code>rank</code>, r只含0的规定为0)</p>
+<p>等价 的两个向量组 <code>rank</code>相等: 因为分别取它们的极大线性无关组+线性表出传递性</p>
+<p>等价 线性无关的两个向量组 <code>rank</code>相等</p>
+<p>空间(集合)与向量组的关系</p>
+<p>有限子集线性相关 定义为 其向量组 线性相关</p>
+<p>无限子集线性相关 定义为 有一个有限子集 线性相关</p>
+<p>空集定义是 线性无关</p>
+<p>存在性: 一定存在(教材)</p>
+<p>V有一个基是有限子集,则V是有限维的, <code>基</code>的个数叫做<code>维数</code> $dimV$, 只含$0$的线性空间维数为0</p>
+<p>V有一个基是无限子集,则V是无限维的</p>
+<p>坐标: 列向量 在基中的唯一表出的系数</p>
+<p>例子: 三维空间中三个不共面的向量是一个基, 平面是二维的(过定点O的平面), 直线是1维的 (过定点O的直线)</p>
+<p>$K^n$ 的标准基$(1,0,\cdots)^T,(0,1,\cdots)^T,\cdots,(0,0,\cdots,1)^T$</p>
+<p>$K^n$的$n$个线性无关的向量组都是它的基,(因为任加一个,从个数上一定线性相关,则任加的可以被线性表出)</p>
+<p>A线性表出B: $rank(B) \le rank(A)$</p>
+<hr>
+<p>矩阵&#x3D;&gt; 列向量组 &#x3D;&gt; 列秩 &#x3D; dim(列空间) </p>
+<p>矩阵&#x3D;&gt; 行向量组 &#x3D;&gt; 行秩 &#x3D; dim(行空间) &#x3D;&gt; 转化阶梯矩阵</p>
+<p>线性无关的向量组做延伸组依然线性无关, 先考虑阶梯形矩阵(取主元所在列 得到 线性无关) rank(列向量) &#x3D; 主元个数 &#x3D; rank(行向量)</p>
+<p>定理2 初等行变换不改变矩阵行rank</p>
+<ol>
+<li>交换显然</li>
+<li>行倍加到另一行, 变后的可以用原来的行线性表出, 原的也可以用现在的线性表出, 所以两个等价, rank 相等</li>
+<li>某行乘倍数, 同样 也是变前后相互可以表出, 所以等价,所以rank相等</li>
+</ol>
+<p>定理3 矩阵的初等行变换不改变列rank</p>
+<p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank</p>
+<p>综上 对于一般矩阵 初等行变换 行列rank 不变 成为阶梯形矩阵, 行rank &#x3D; 列 rank</p>
+<p>因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
+<p>A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
+<h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$</p>
+<p>向量组是有序有限的, 而空间是由基础的一系列向量做加法和数乘构成的集合</p>
+<p>这里的特殊条件就是 只含$0$向量的时候有些需要特殊定义(规定),</p>
+<p>例如 $\emptyset$是只含0向量的一个极大线性无关集, 规定为它是{0}的基</p>
+<p>这里过程也是很多从2个到多个, 从特殊的阶梯形到一般矩阵</p>
 
     </div>
 
@@ -378,13 +472,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">14k</span>
+    <span title="總字數">33k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">13 分鐘</span>
+    <span title="所需總閱讀時間">30 分鐘</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
@@ -397,7 +491,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
 
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>

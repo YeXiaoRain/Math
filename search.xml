@@ -1,6 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>一个积分</title>
+    <url>/Math/2020-08-29-a-integral/</url>
+    <content><![CDATA[<h1 id="题目-amp-解答"><a href="#题目-amp-解答" class="headerlink" title="题目 &amp; 解答"></a>题目 &amp; 解答</h1><p>$ \int_0^1 (x-x^2)^n dx$ (换元$t&#x3D;x-\frac{1}{2}$</p>
+<p>$&#x3D; \int_{-\frac{1}{2}}^{\frac{1}{2}} (\frac{1}{4} - x^2)^n dx$ (偶函数</p>
+<p>$&#x3D; 2 \int_{0}^{\frac{1}{2}} (\frac{1}{4} - x^2)^n dx $(换元$t&#x3D;2x$</p>
+<p>$&#x3D; \frac{1}{4^n}\int_0^1 (1 - x^2)^n dx$(换元$t&#x3D;sin(x)$</p>
+<p>$&#x3D; \frac{1}{4^n} \int_0^{\frac{\pi}{2}} (1 - sin(x)^2)^n d(sin(x))$</p>
+<p>$&#x3D; \frac{1}{4^n} \int_0^{\frac{\pi}{2}} cos(x)^{2n+1} d x$ (<code>Wallis&#39;_integrals</code></p>
+<p>$&#x3D; \frac{1}{4^n} \cdot \frac{2n(2n-2)\cdots 2}{(2n+1)(2n-1)3}$</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>\integral</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>甜甜圈数学 from 2006</title>
+    <url>/Math/2021-12-31-donut/</url>
+    <content><![CDATA[<h1 id="本文尽量逐句翻译"><a href="#本文尽量逐句翻译" class="headerlink" title="本文尽量逐句翻译"></a>本文尽量逐句翻译</h1><h2 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h2><p><code>donut.c</code>:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">             k;<span class="type">double</span> <span class="title function_">sin</span><span class="params">()</span></span><br><span class="line">         ,<span class="title function_">cos</span><span class="params">()</span>;main()&#123;<span class="type">float</span> A=</span><br><span class="line">       <span class="number">0</span>,B=<span class="number">0</span>,i,j,z[<span class="number">1760</span>];<span class="type">char</span> b[</span><br><span class="line">     <span class="number">1760</span>];<span class="built_in">printf</span>(<span class="string">&quot;\x1b[2J&quot;</span>);<span class="keyword">for</span>(;;</span><br><span class="line">  )&#123;<span class="built_in">memset</span>(b,<span class="number">32</span>,<span class="number">1760</span>);<span class="built_in">memset</span>(z,<span class="number">0</span>,<span class="number">7040</span>)</span><br><span class="line">  ;<span class="keyword">for</span>(j=<span class="number">0</span>;<span class="number">6.28</span>&gt;j;j+=<span class="number">0.07</span>)<span class="keyword">for</span>(i=<span class="number">0</span>;<span class="number">6.28</span></span><br><span class="line"> &gt;i;i+=<span class="number">0.02</span>)&#123;<span class="type">float</span> c=<span class="built_in">sin</span>(i),d=<span class="built_in">cos</span>(j),e=</span><br><span class="line"> <span class="built_in">sin</span>(A),f=<span class="built_in">sin</span>(j),g=<span class="built_in">cos</span>(A),h=d+<span class="number">2</span>,D=<span class="number">1</span>/(c*</span><br><span class="line"> h*e+f*g+<span class="number">5</span>),l=<span class="built_in">cos</span>      (i),m=<span class="built_in">cos</span>(B),n=s\</span><br><span class="line">in(B),t=c*h*g-f*        e;<span class="type">int</span> x=<span class="number">40</span>+<span class="number">30</span>*D*</span><br><span class="line">(l*h*m-t*n),y=            <span class="number">12</span>+<span class="number">15</span>*D*(l*h*n</span><br><span class="line">+t*m),o=x+<span class="number">80</span>*y,          N=<span class="number">8</span>*((f*e-c*d*g</span><br><span class="line"> )*m-c*d*e-f*g-l        *d*n);<span class="keyword">if</span>(<span class="number">22</span>&gt;y&amp;&amp;</span><br><span class="line"> y&gt;<span class="number">0</span>&amp;&amp;x&gt;<span class="number">0</span>&amp;&amp;<span class="number">80</span>&gt;x&amp;&amp;D&gt;z[o])&#123;z[o]=D;;;b[o]=</span><br><span class="line"> <span class="string">&quot;.,-~:;=!*#$@&quot;</span>[N&gt;<span class="number">0</span>?N:<span class="number">0</span>];&#125;&#125;<span class="comment">/*#****!!-*/</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\x1b[H&quot;</span>);<span class="keyword">for</span>(k=<span class="number">0</span>;<span class="number">1761</span>&gt;k;k++)</span><br><span class="line">   <span class="built_in">putchar</span>(k%<span class="number">80</span>?b[k]:<span class="number">10</span>);A+=<span class="number">0.04</span>;B+=</span><br><span class="line">     <span class="number">0.02</span>;&#125;&#125;<span class="comment">/*****####*******!!=;:~</span></span><br><span class="line"><span class="comment">       ~::==!!!**********!!!==::-</span></span><br><span class="line"><span class="comment">         .,~~;;;========;;;:~-.</span></span><br><span class="line"><span class="comment">             ..,--------,*/</span></span><br></pre></td></tr></table></figure>
+
+<p><code>gcc -o donut donut.c -lm &amp;&amp; ./donut</code></p>
+<p>这是作者第一次尝试混淆C代码, 这个版本是相对简单优雅的</p>
+<h2 id="代码2"><a href="#代码2" class="headerlink" title="代码2"></a>代码2</h2><p><strong>注意</strong> 下面13行,因为我本地的hexo相关工具不能正确工作,为了尽可能展示代码,我在<code>&lt;</code>和<code>.</code>之间加了一个空格,实际上是没有空格的,所以如果从这里拷贝代码,记得去掉多出的空格</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">_,x,y,o       ,N;<span class="type">char</span>       b[<span class="number">1840</span>]       ;p(n,c)</span><br><span class="line">&#123;<span class="keyword">for</span>(;n       --;x++)       c==<span class="number">10</span>?y       +=<span class="number">80</span>,x=</span><br><span class="line">o<span class="number">-1</span>:x&gt;=       <span class="number">0</span>?<span class="number">80</span>&gt;x?       c!=<span class="string">&#x27;~&#x27;</span>?       b[y+x]=</span><br><span class="line">c:<span class="number">0</span>:<span class="number">0</span>:<span class="number">0</span>       ;&#125;c(q,l       ,r,o,v)       <span class="type">char</span>*l,</span><br><span class="line">       *r;&#123;<span class="keyword">for</span>       (;q&gt;=<span class="number">0</span>;       )q=(<span class="string">&quot;A&quot;</span>       <span class="string">&quot;YLrZ^&quot;</span></span><br><span class="line">       <span class="string">&quot;w^?EX&quot;</span>           <span class="string">&quot;novne&quot;</span>     <span class="string">&quot;bYV&quot;</span>       <span class="string">&quot;dO&#125;LE&quot;</span></span><br><span class="line">       <span class="string">&quot;&#123;yWlw&quot;</span>      <span class="string">&quot;Jl_Ja|[ur]zovpu&quot;</span>   <span class="string">&quot;&quot;</span>       <span class="string">&quot;i]e|y&quot;</span></span><br><span class="line">       <span class="string">&quot;ao_Be&quot;</span>   <span class="string">&quot;osmIg&#125;r]]r]m|wkZU&#125;&#123;O&#125;&quot;</span>         <span class="string">&quot;xys]]\</span></span><br><span class="line"><span class="string">x|ya|y&quot;</span>        <span class="string">&quot;sm||&#123;uel&#125;|r&#123;yIcsm||ya[&#123;uE&quot;</span>  <span class="string">&quot;&#123;qY\</span></span><br><span class="line"><span class="string">w|gGor&quot;</span>      <span class="string">&quot;VrVWioriI&#125;Qac&#123;&#123;BIY[sXjjsVW]aM&quot;</span>  <span class="string">&quot;T\</span></span><br><span class="line"><span class="string">tXjjss&quot;</span>     <span class="string">&quot;sV_OUkRUlSiorVXp_qOM&gt;E&#123;BadB&quot;</span>[_/<span class="number">6</span>  ]-</span><br><span class="line"><span class="number">62</span>&gt;&gt;_++    %<span class="number">6</span>&amp;<span class="number">1</span>?r[q]:l[q])-o;<span class="keyword">return</span> q;&#125;E(a)&#123;<span class="keyword">for</span> (</span><br><span class="line">       o= x=a,y=<span class="number">0</span>,_=<span class="number">0</span>;<span class="number">1095</span>&gt;_;)a= <span class="string">&quot; &lt; .,`&#x27;/)(\n-&quot;</span>  <span class="string">&quot;\\_~&quot;</span>[</span><br><span class="line">       c  (<span class="number">12</span>,<span class="string">&quot;!%*/&#x27;)#3&quot;</span>  <span class="string">&quot;&quot;</span>     <span class="string">&quot;+-6,8&quot;</span>,<span class="string">&quot;\&quot;(.$&quot;</span> <span class="string">&quot;01245&quot;</span></span><br><span class="line">       <span class="string">&quot; &amp;79&quot;</span>,<span class="number">46</span>)+<span class="number">14</span>],  p(<span class="string">&quot;&quot;</span>       <span class="string">&quot;#$%&amp;&#x27;()0:439 &quot;</span>[ c(<span class="number">10</span></span><br><span class="line">       , <span class="string">&quot;&amp;(*#,./1345&quot;</span> ,<span class="string">&quot;&#x27;)&quot;</span>       <span class="string">&quot;+%-$02\&quot;! &quot;</span>, <span class="number">44</span>)+<span class="number">12</span>]</span><br><span class="line"><span class="number">-34</span>,a);  &#125;main(k)&#123;<span class="type">float</span>     A=<span class="number">0</span>,B= <span class="number">0</span>,i,j,z[<span class="number">1840</span>];</span><br><span class="line"><span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>  <span class="string">&quot;\x1b[2J&quot;</span>);;;      <span class="keyword">for</span>(;; )&#123;<span class="type">float</span> e=<span class="built_in">sin</span></span><br><span class="line">(A), n=  <span class="built_in">sin</span>(B),g=<span class="built_in">cos</span>(      A),m=  <span class="built_in">cos</span>(B);<span class="keyword">for</span>(k=</span><br><span class="line"><span class="number">0</span>;<span class="number">1840</span>&gt;   k;k++)y=<span class="number">-10</span>-k/    <span class="number">80</span>   ,o=<span class="number">41</span>+(k%<span class="number">80</span><span class="number">-40</span></span><br><span class="line">       )* <span class="number">1.3</span>/y+n,N=A<span class="number">-100.0</span>/y,b[k]=<span class="string">&quot;.#&quot;</span>[o+N&amp;<span class="number">1</span>],  z[k]=<span class="number">0</span>;</span><br><span class="line">       E(  <span class="number">80</span>-(<span class="type">int</span>)(<span class="number">9</span>*B)%<span class="number">250</span>);<span class="keyword">for</span>(j=<span class="number">0</span>;<span class="number">6.28</span>&gt;j;j   +=<span class="number">0.07</span>)</span><br><span class="line">       <span class="keyword">for</span>  (i=<span class="number">0</span>;<span class="number">6.28</span>&gt;i;i+=<span class="number">0.02</span>)&#123;<span class="type">float</span> c=<span class="built_in">sin</span>(    i),  d=</span><br><span class="line">       <span class="built_in">cos</span>(  j),f=<span class="built_in">sin</span>(j),h=d+<span class="number">2</span>,D=<span class="number">15</span>/(c*h*e+f     *g+<span class="number">5</span>),l</span><br><span class="line">=<span class="built_in">cos</span>(i)        ,t=c*h*g-f*e;x=<span class="number">40</span>+<span class="number">2</span>*D*(l*h*  m-t*n</span><br><span class="line">),y=<span class="number">12</span>+       D  *(l*h*n+t*m),o=x+<span class="number">80</span>*y,N  =<span class="number">8</span>*((f*</span><br><span class="line">e-c*d*g       )*m   -c*d*e-f*g-l*d*n)     ;<span class="keyword">if</span>(D&gt;z</span><br><span class="line">[o])z[o       ]=D,b[     o]=<span class="string">&quot; .&quot;</span>          <span class="string">&quot;.,,-+&quot;</span></span><br><span class="line">       <span class="string">&quot;+=#$@&quot;</span>       [N&gt;<span class="number">0</span>?N:       <span class="number">0</span>];;;;&#125;       <span class="built_in">printf</span>(</span><br><span class="line">       <span class="string">&quot;%c[H&quot;</span>,       <span class="number">27</span>);<span class="keyword">for</span>       (k=<span class="number">1</span>;<span class="number">18</span>       *<span class="number">100</span>+<span class="number">41</span></span><br><span class="line">       &gt;k;k++)       <span class="built_in">putchar</span>       (k%<span class="number">80</span>?b       [k]:<span class="number">10</span>)</span><br><span class="line">       ;;;;A+=       <span class="number">0.053</span>;;       B+=<span class="number">0.03</span>       ;;;;;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同样的编译和运行命令, 这次是有背景, 有弹幕的版本</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>2011 年,有人提起了作者的2006年的作品,有很多请求作者讲解原理的,但过去了5年,作者并不能清晰记得,所以作者打算从零开始,非常详尽的细节,希望能得到相近的结果</p>
+<p>这个内容的核心是利用 帧buffer 和 Z-buffer 来渲染像素(通过ascii渲染低分辨率的图像)</p>
+<p>通过固定的角度增量的,来绘制对应的环面(torus), 亮度是从暗到亮对应的<code>ASCII</code>是<code>.,-~:;=!*#$@</code>.(不需要射线追踪</p>
+<h3 id="3D物体-到-2D屏幕"><a href="#3D物体-到-2D屏幕" class="headerlink" title="3D物体 到 2D屏幕"></a>3D物体 到 2D屏幕</h3><p><img data-src="https://www.a1k0n.net/img/perspective.png" alt="3D和2D映射"></p>
+<p>如图, 当一个人看一个3D 物体时,眼睛和物体连线与屏幕的交点, 就是我们要的投影</p>
+<p>把3D物品渲染到2D屏幕上</p>
+<p>$(x,y,z)$实际的点投影到 距离眼睛为$z’$的屏幕的$(x’,y’)$上</p>
+<p>显然相似三角形</p>
+<p>$\frac{y’}{y}&#x3D;\frac{x’}{x}&#x3D;\frac{z’}{z}$</p>
+<p>换句话说$(x’,y’) &#x3D; (z’\frac{x}{z},z’\frac{y}{z})$, 左边是要求的,右边是三维空间中已知</p>
+<p>其中呢,人到屏幕距离$z’$是常量, 这个常量变化相当于把屏幕推远或拉近,取决于你希望展示多少内容</p>
+<hr>
+<p>因为物体有深度,所以可能多个点对应到2D屏幕上同一个点,那我们需要一个记录每个我们绘制的点的z坐标,这样可以保证后面的点不会覆盖前面的点</p>
+<p>在记录<code>z-buffer</code>同时,我们可以同时增加<code>1/z-buffer</code>.</p>
+<ol>
+<li><code>1/z</code> 表示无穷远</li>
+<li>计算$x’,y’$时,可以直接乘<code>1/z</code>,比除两次代价小(?</li>
+</ol>
+<p>现在可以开始绘制 甜甜圈了(torus)</p>
+<hr>
+<p>torus 是一个旋转体, 一个方法是把2D的圆,绕着一个圆外的轴旋转, 下图是个示意的切面</p>
+<p><img data-src="https://www.a1k0n.net/img/torusxsec.png" alt="圆绕轴旋转"></p>
+<p>先谈圆, 一个半径$R_1$的圆,其圆心在$(R_2,0,0)$</p>
+<p>那么圆上的点$(x,y,z) &#x3D; (R_2,0,0) + (R_1 \cos \theta,R_1 \sin \theta,0)$</p>
+<p>如果绕y轴旋转, 其y轴不变, 根据旋转矩阵为</p>
+<p>$\left( \begin{matrix} R_2 + R_1 \cos \theta, &amp; R_1 \sin \theta, &amp; 0 \end{matrix} \right)<br>\cdot \left( \begin{matrix} \cos \phi &amp; 0 &amp; \sin \phi \\ 0 &amp; 1 &amp; 0 \\ -\sin \phi &amp; 0 &amp; \cos \phi \end{matrix} \right)$</p>
+<p>$&#x3D; \left( \begin{matrix} (R_2 + R_1 \cos \theta)\cos \phi, &amp; R_1 \sin \theta, &amp; -(R_2 + R_1 \cos \theta)\sin \phi \end{matrix} \right)$</p>
+<p>如果你希望也绕 x轴转$A$,或者 z轴旋转$B$, 只需要多乘上对应的旋转矩阵就完了</p>
+<p>$\left( \begin{matrix}<br>1 &amp; 0 &amp; 0 \\<br>0 &amp; \cos A &amp; \sin A \\<br>0 &amp; -\sin A &amp; \cos A \end{matrix} \right)<br>\cdot<br>\left( \begin{matrix}<br>\cos B &amp; \sin B &amp; 0 \\<br>-\sin B &amp; \cos B &amp; 0 \\<br>0 &amp; 0 &amp; 1 \end{matrix} \right)$</p>
+<hr>
+<p>但对于上面来说, 会发现它其实整个的旋转中心都是原点,而我们上面给出的3D到2D的投影,过原点的是屏幕而不是物品, 不过幸运的是,我们仅需要把物体沿着z轴平移,就可以让它不再在原点上</p>
+<p>对此,我们 令$K_1 &#x3D; z’$控制人屏之间的距离,$K_2 &#x3D; $ 人到物体旋转中心的距离,</p>
+<p>$(x’,y’) &#x3D; (z’\frac{x}{z},z’\frac{y}{z}) &#x3D; (\frac{K_1 x}{K_2+z},\frac{K_1 y}{K_2+z})$</p>
+<p>其中,第二第三个式子中的z并不相同,第二个是描述的距离人的z,而第三个是距离旋转中心的z</p>
+<hr>
+<p>把上述的矩阵展开</p>
+<p>$\left( \begin{matrix} x \\ y \\ z \end{matrix} \right) &#x3D; \left( \begin{matrix} (R_2 + R_1 \cos \theta) (\cos B \cos \phi + \sin A \sin B \sin \phi) - R_1 \cos A \sin B \sin \theta \\ (R_2 + R_1 \cos \theta) (\cos \phi \sin B - \cos B \sin A \sin \phi) + R_1 \cos A \cos B \sin \theta \\  \cos A (R_2 + R_1 \cos \theta) \sin \phi + R_1 \sin A \sin \theta \end{matrix} \right) &#x3D; \left( \begin{matrix} C_x(\cos B \cos \phi + \sin A \sin B \sin \phi) - C_y \cos A \sin B  \\ C_x(\cos \phi \sin B - \cos B \sin A \sin \phi) + C_y \cos A \cos B \\  C_x \cos A \sin \phi + C_y \sin A \end{matrix} \right)$</p>
+<p>其中$C_x,C_y$ 表示绕轴旋转前,圆上的点</p>
+<p>实际上和最开始代码中的乘法因子完全不同(留给读者展开,原来的代码也交换了A的sin和cos, 高效的旋转90度,所以估计原来推导有些不同,但都能用)</p>
+<hr>
+<p>现在呢,知道了像素放在哪里,但是还没有阴影的概念, (也有意义,如果把投影全部同色绘制,就可以当影子看</p>
+<p>要计算照明, 我们需要知道平面上每一点的法向量</p>
+<p>如果知道了法向量,再和光的方向点积,其中光的方向自定义, </p>
+<p>接下来就是向量点级的绝对值越大,亮度越大,正负选一面为看不见(根据法向量方向不同)</p>
+<p>如何求法向量呢, 首先注意到法向量和平面同时一起旋转的, 那么对于圆上的点的法向量</p>
+<p>是 $(\cos \theta,\sin \theta, 0)$</p>
+<p>剩下的无非是乘上旋转矩阵了</p>
+<p>$\left( \begin{matrix} N_x, &amp; N_y, &amp; N_z \end{matrix} \right) &#x3D; \left( \begin{matrix} \cos \theta, &amp;<br>\sin \theta, &amp; 0 \end{matrix} \right) \cdot \left( \begin{matrix} \cos \phi &amp; 0 &amp; \sin \phi \\ 0 &amp; 1 &amp; 0 \\ -\sin \phi &amp; 0 &amp; \cos \phi \end{matrix} \right) \cdot \left( \begin{matrix} 1 &amp; 0 &amp; 0 \\<br>0 &amp; \cos A &amp; \sin A \\ 0 &amp; -\sin A &amp; \cos A \end{matrix} \right) \cdot \left( \begin{matrix} \cos B &amp; \sin B &amp; 0 \\ -\sin B &amp; \cos B &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{matrix} \right)$</p>
+<p>光的方向,这里选择45度夹角的光$(0,1,-1)$ (这里不是单位向量,长度根号2)</p>
+<p>$\begin{aligned} L &amp;&#x3D; \left( \begin{matrix} N_x, &amp; N_y, &amp; N_z \end{matrix} \right) \cdot \left( \begin{matrix} 0, &amp; 1, &amp;  -1 \end{matrix} \right) \\  &amp;&#x3D; \cos \phi \cos \theta \sin B - \cos A \cos \theta \sin \phi - \sin A \sin \theta +  \cos B ( \cos A \sin \theta - \cos \theta \sin A \sin \phi) \end{aligned}$</p>
+<p>这样我们有了亮度</p>
+<p>剩下的就是选择你希望的 $K_1$(眼睛屏幕距离, 缩放大小),$K_2$(眼睛物体距离),$R_1$ 切面圆形半径,$R_2$ 圆形中心到旋转轴距离</p>
+<p>对于代码中,选取的是$R_1&#x3D;1,R_2&#x3D;2$</p>
+<hr>
+<p>综上</p>
+<p>$(x,y,z)$ 由 两个半径,枚举旋转体角度,和绕x轴,z轴旋转 得到</p>
+<p>$(x,y,z)$ 投影到$(\frac{K_1 x}{K_2+z},\frac{K_1 y}{K_2+z})$</p>
+<p>亮度为$L$</p>
+<p>我们有了伪代码</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">float</span> theta_spacing = <span class="number">0.07</span>; <span class="comment">// 旋转体切面的圆上的点弧度旋转</span></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> phi_spacing   = <span class="number">0.02</span>; <span class="comment">// 旋转体绕轴每份旋转弧度</span></span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> R1 = <span class="number">1</span>; <span class="comment">// 旋转体切面圆半径</span></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> R2 = <span class="number">2</span>; <span class="comment">// 旋转体切面圆心和旋转轴距离</span></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> K2 = <span class="number">5</span>; <span class="comment">// 人和旋转体旋转中心的距离</span></span><br><span class="line"><span class="comment">// 基于屏幕大小计算 K1 </span></span><br><span class="line"><span class="comment">// 对于torus的边缘, 也就是距离旋转中心$R1+R2$</span></span><br><span class="line"><span class="comment">// 我们希望它能被展示到屏幕的 3/8,也就是整个展示到屏幕的6/8,上下左右留白1/8</span></span><br><span class="line"><span class="comment">// 根据3D和2D转换关系</span></span><br><span class="line"><span class="comment">// 屏幕宽度*3/8 = K1*(R1+R2)/(K2+0)</span></span><br><span class="line"><span class="type">const</span> <span class="type">float</span> K1 = screen_width*K2*<span class="number">3</span>/(<span class="number">8</span>*(R1+R2));</span><br><span class="line"></span><br><span class="line"><span class="built_in">render_frame</span>(<span class="type">float</span> A, <span class="type">float</span> B) &#123; <span class="comment">// A,B就是上面的旋转角度</span></span><br><span class="line">  <span class="comment">// 预计算 A,B的sin和cos</span></span><br><span class="line">  <span class="type">float</span> cosA = <span class="built_in">cos</span>(A), sinA = <span class="built_in">sin</span>(A);</span><br><span class="line">  <span class="type">float</span> cosB = <span class="built_in">cos</span>(B), sinB = <span class="built_in">sin</span>(B);</span><br><span class="line">  <span class="comment">// 输出字符</span></span><br><span class="line">  <span class="type">char</span> output[<span class="number">0.</span>.screen_width, <span class="number">0.</span>.screen_height] = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">  <span class="comment">// 2D屏幕上的点原来在3D物体上的z坐标记录</span></span><br><span class="line">  <span class="type">float</span> zbuffer[<span class="number">0.</span>.screen_width, <span class="number">0.</span>.screen_height] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 且面圆上的点</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="type">float</span> theta=<span class="number">0</span>; theta &lt; <span class="number">2</span>*pi; theta += theta_spacing) &#123;</span><br><span class="line">    <span class="comment">// 预先计算 theta 的sin和cos</span></span><br><span class="line">    <span class="type">float</span> costheta = <span class="built_in">cos</span>(theta), sintheta = <span class="built_in">sin</span>(theta);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 旋转体 ,上面的圆绕旋转轴旋转phi</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">float</span> phi=<span class="number">0</span>; phi &lt; <span class="number">2</span>*pi; phi += phi_spacing) &#123;</span><br><span class="line">      <span class="comment">// 同样预先计算 phi 的 sin和cos</span></span><br><span class="line">      <span class="type">float</span> cosphi = <span class="built_in">cos</span>(phi), sinphi = <span class="built_in">sin</span>(phi);</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 绕y轴旋转前 圆上的点 的 x,y</span></span><br><span class="line">      <span class="type">float</span> circlex = R2 + R1*costheta;</span><br><span class="line">      <span class="type">float</span> circley = R1*sintheta;</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 计算出最终的 3D (x,y,z) 坐标, 上面公式是想对于旋转中心,这里z加上K2 表示相对于人的眼睛的</span></span><br><span class="line">      <span class="type">float</span> x = circlex*(cosB*cosphi + sinA*sinB*sinphi)</span><br><span class="line">        - circley*cosA*sinB; </span><br><span class="line">      <span class="type">float</span> y = circlex*(sinB*cosphi - sinA*cosB*sinphi)</span><br><span class="line">        + circley*cosA*cosB;</span><br><span class="line">      <span class="type">float</span> z = K2 + cosA*circlex*sinphi + circley*sinA;</span><br><span class="line">      <span class="type">float</span> ooz = <span class="number">1</span>/z;  <span class="comment">// &quot;one over z&quot;</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 计算在屏幕上的x和y,因为是屏幕上原点要移动到 屏幕中心, 至此有了2D上的位置</span></span><br><span class="line">      <span class="type">int</span> xp = (<span class="type">int</span>) (screen_width/<span class="number">2</span> + K1*ooz*x);</span><br><span class="line">      <span class="type">int</span> yp = (<span class="type">int</span>) (screen_height/<span class="number">2</span> - K1*ooz*y);</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// 计算光照</span></span><br><span class="line">      <span class="type">float</span> L = cosphi*costheta*sinB - cosA*costheta*sinphi -</span><br><span class="line">        sinA*sintheta + cosB*(cosA*sintheta - costheta*sinA*sinphi);</span><br><span class="line">      <span class="comment">// 因为选取的光的模长度sqrt2, 所以光强度[-sqrt2,sqrt2]之间, 小于零的视作在背面直接看不见</span></span><br><span class="line">      <span class="keyword">if</span> (L &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 检查z级别, z越小ooz越大,离人越近,覆盖优先级更高</span></span><br><span class="line">        <span class="keyword">if</span>(ooz &gt; zbuffer[xp,yp]) &#123;</span><br><span class="line">          zbuffer[xp, yp] = ooz;</span><br><span class="line">          <span class="type">int</span> luminance_index = L*<span class="number">8</span>;</span><br><span class="line">          <span class="comment">// luminance_index 现在范围是 0..11 (8*sqrt(2) = 11.3)</span></span><br><span class="line">          <span class="comment">// 因此字符映射如下</span></span><br><span class="line">          output[xp, yp] = <span class="string">&quot;.,-~:;=!*#$@&quot;</span>[luminance_index];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 最后输出output到屏幕即可</span></span><br><span class="line">  <span class="comment">// 在终端里 控制光标到终端的起始,可以重用屏幕输出</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\x1b[H&quot;</span>);</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; screen_height; j++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; screen_width; i++) &#123;</span><br><span class="line">      <span class="built_in">putchar</span>(output[i,j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(<span class="string">&#x27;\n&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p><code>index.html</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>donut.js<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">async</span>=<span class="string">&quot;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;anim1();&quot;</span>&gt;</span>toggle animation<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">pre</span> <span class="attr">id</span>=<span class="string">&quot;d&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color:#000; color:#ccc; font-size: 10pt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;anim2();&quot;</span>&gt;</span>toggle animation<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvasdonut&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;240&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">        	<span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;anim3();&quot;</span>&gt;</span>toggle animation<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">&quot;canvascube&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;240&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>index.js</code>:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="keyword">let</span> <span class="title function_">_onload</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> pretag = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;d&#x27;</span>);</span><br><span class="line">  <span class="keyword">let</span> canvastag = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvasdonut&#x27;</span>);</span><br><span class="line">  <span class="keyword">let</span> canvascube = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;canvascube&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> tmr1 = <span class="literal">undefined</span>;</span><br><span class="line">  <span class="keyword">let</span> tmr2 = <span class="literal">undefined</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// This is copied, pasted, reformatted, and ported directly from my original</span></span><br><span class="line">  <span class="comment">// donut.c code</span></span><br><span class="line">  <span class="keyword">let</span> asciiframe= (<span class="function">(<span class="params">A,B</span>) =&gt;</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> b=[];</span><br><span class="line">    <span class="keyword">let</span> z=[];</span><br><span class="line">    A += <span class="number">0.07</span>;</span><br><span class="line">    B += <span class="number">0.03</span>;</span><br><span class="line">    <span class="keyword">let</span> cA=<span class="title class_">Math</span>.<span class="title function_">cos</span>(A), sA=<span class="title class_">Math</span>.<span class="title function_">sin</span>(A),</span><br><span class="line">        cB=<span class="title class_">Math</span>.<span class="title function_">cos</span>(B), sB=<span class="title class_">Math</span>.<span class="title function_">sin</span>(B);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> k=<span class="number">0</span>;k&lt;<span class="number">1760</span>;k++) &#123;</span><br><span class="line">      b[k]= k%<span class="number">80</span> == <span class="number">79</span> ? <span class="string">&quot;\n&quot;</span> : <span class="string">&quot; &quot;</span>;</span><br><span class="line">      z[k]= <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;<span class="number">6.28</span>;j+=<span class="number">0.07</span>) &#123; <span class="comment">// j &lt;=&gt; theta</span></span><br><span class="line">      <span class="keyword">let</span> ct=<span class="title class_">Math</span>.<span class="title function_">cos</span>(j),st=<span class="title class_">Math</span>.<span class="title function_">sin</span>(j);</span><br><span class="line">      <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">6.28</span>;i+=<span class="number">0.02</span>) &#123;   <span class="comment">// i &lt;=&gt; phi</span></span><br><span class="line">        <span class="keyword">let</span> sp=<span class="title class_">Math</span>.<span class="title function_">sin</span>(i),cp=<span class="title class_">Math</span>.<span class="title function_">cos</span>(i),</span><br><span class="line">            h=ct+<span class="number">2</span>, <span class="comment">// R1 + R2*cos(theta)</span></span><br><span class="line">            D=<span class="number">1</span>/(sp*h*sA+st*cA+<span class="number">5</span>), <span class="comment">// this is 1/z</span></span><br><span class="line">            t=sp*h*cA-st*sA; <span class="comment">// this is a clever factoring of some of the terms in x&#x27; and y&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> x=<span class="number">0</span>|(<span class="number">40</span>+<span class="number">30</span>*D*(cp*h*cB-t*sB)),</span><br><span class="line">            y=<span class="number">0</span>|(<span class="number">12</span>+<span class="number">15</span>*D*(cp*h*sB+t*cB)),</span><br><span class="line">            o=x+<span class="number">80</span>*y,</span><br><span class="line">            N=<span class="number">0</span>|(<span class="number">8</span>*((st*sA-sp*ct*cA)*cB-sp*ct*sA-st*cA-cp*ct*sB));</span><br><span class="line">        <span class="keyword">if</span>(y&lt;<span class="number">22</span> &amp;&amp; y&gt;=<span class="number">0</span> &amp;&amp; x&gt;=<span class="number">0</span> &amp;&amp; x&lt;<span class="number">79</span> &amp;&amp; D&gt;z[o]) &#123;</span><br><span class="line">          z[o]=D;</span><br><span class="line">          b[o]=<span class="string">&quot;.,-~:;=!*#$@&quot;</span>[N&gt;<span class="number">0</span>?<span class="attr">N</span>:<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    pretag.<span class="property">innerHTML</span> = b.<span class="title function_">join</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">  &#125;)(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>,<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>);</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">anim1</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(tmr1 === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      tmr1 = <span class="built_in">setInterval</span>(asciiframe, <span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(tmr1);</span><br><span class="line">      tmr1 = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// This is a reimplementation according to my math derivation on the page</span></span><br><span class="line">  <span class="keyword">let</span> canvasframe = (<span class="function">(<span class="params">A,B</span>) =&gt;</span> <span class="function">(<span class="params">R1,R2,K1,K2,rA,rB</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> ctx = canvastag.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">    ctx.<span class="property">fillStyle</span>=<span class="string">&#x27;#000&#x27;</span>;</span><br><span class="line">    ctx.<span class="title function_">fillRect</span>(<span class="number">0</span>, <span class="number">0</span>, ctx.<span class="property">canvas</span>.<span class="property">width</span>, ctx.<span class="property">canvas</span>.<span class="property">height</span>);</span><br><span class="line"></span><br><span class="line">    A += rA*(<span class="title class_">Math</span>.<span class="title function_">random</span>()+<span class="number">0.5</span>);</span><br><span class="line">    B += rB*(<span class="title class_">Math</span>.<span class="title function_">random</span>()+<span class="number">0.5</span>);</span><br><span class="line">    <span class="comment">// precompute cosines and sines of A, B, theta, phi, same as before</span></span><br><span class="line">    <span class="keyword">let</span> cA=<span class="title class_">Math</span>.<span class="title function_">cos</span>(A), sA=<span class="title class_">Math</span>.<span class="title function_">sin</span>(A),</span><br><span class="line">        cB=<span class="title class_">Math</span>.<span class="title function_">cos</span>(B), sB=<span class="title class_">Math</span>.<span class="title function_">sin</span>(B);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j=<span class="number">0</span>;j&lt;<span class="number">6.28</span>;j+=<span class="number">0.3</span>) &#123; <span class="comment">// j &lt;=&gt; theta</span></span><br><span class="line">      <span class="keyword">let</span> ct=<span class="title class_">Math</span>.<span class="title function_">cos</span>(j),st=<span class="title class_">Math</span>.<span class="title function_">sin</span>(j); <span class="comment">// cosine theta, sine theta</span></span><br><span class="line">      <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">6.28</span>;i+=<span class="number">0.1</span>) &#123;   <span class="comment">// i &lt;=&gt; phi</span></span><br><span class="line">        <span class="keyword">let</span> sp=<span class="title class_">Math</span>.<span class="title function_">sin</span>(i),cp=<span class="title class_">Math</span>.<span class="title function_">cos</span>(i); <span class="comment">// cosine phi, sine phi</span></span><br><span class="line">        <span class="keyword">let</span> ox = <span class="variable constant_">R2</span> + <span class="variable constant_">R1</span>*ct, <span class="comment">// object x, y = (R2,0,0) + (R1 cos theta, R1 sin theta, 0)</span></span><br><span class="line">            oy = <span class="variable constant_">R1</span>*st;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> x = ox*(cB*cp + sA*sB*sp) - oy*cA*sB; <span class="comment">// final 3D x coordinate</span></span><br><span class="line">        <span class="keyword">let</span> y = ox*(sB*cp - sA*cB*sp) + oy*cA*cB; <span class="comment">// final 3D y</span></span><br><span class="line">        <span class="keyword">let</span> ooz = <span class="number">1</span>/(<span class="variable constant_">K2</span> + cA*ox*sp + sA*oy); <span class="comment">// one over z</span></span><br><span class="line">        <span class="keyword">let</span> xp=(<span class="number">150</span>+<span class="variable constant_">K1</span>*ooz*x); <span class="comment">// x&#x27; = screen space coordinate, translated and scaled to fit our 320x240 canvas element</span></span><br><span class="line">        <span class="keyword">let</span> yp=(<span class="number">120</span>-<span class="variable constant_">K1</span>*ooz*y); <span class="comment">// y&#x27; (it&#x27;s negative here because in our output, positive y goes down but in our 3D space, positive y goes up)</span></span><br><span class="line">        <span class="comment">// luminance, scaled back to 0 to 1</span></span><br><span class="line">        <span class="keyword">let</span> L=<span class="number">0.7</span>*(cp*ct*sB - cA*ct*sp - sA*st + cB*(cA*st - ct*sA*sp));</span><br><span class="line">        <span class="keyword">if</span>(L &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          ctx.<span class="property">fillStyle</span> = <span class="string">`rgba(255,255,255,<span class="subst">$&#123;L&#125;</span>`</span>;</span><br><span class="line">          ctx.<span class="title function_">fillRect</span>(xp, yp, <span class="number">10</span>*L, <span class="number">10</span>*L);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>,<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">anim2</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(tmr2 === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      tmr2 = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="title function_">canvasframe</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">150</span>,<span class="number">5</span>,<span class="number">0.07</span>,<span class="number">0.03</span>), <span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(tmr2);</span><br><span class="line">      tmr2 = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// Cube</span></span><br><span class="line">  <span class="keyword">let</span> canvasframe2 = (<span class="function">(<span class="params">A,B</span>) =&gt;</span> <span class="function">(<span class="params">W,K1,K2,rA,rB,sX,sY</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> ctx = canvascube.<span class="title function_">getContext</span>(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">    ctx.<span class="property">fillStyle</span>=<span class="string">&#x27;#000&#x27;</span>;</span><br><span class="line">    ctx.<span class="title function_">fillRect</span>(<span class="number">0</span>, <span class="number">0</span>, ctx.<span class="property">canvas</span>.<span class="property">width</span>, ctx.<span class="property">canvas</span>.<span class="property">height</span>);</span><br><span class="line"></span><br><span class="line">    A += rA*(<span class="title class_">Math</span>.<span class="title function_">random</span>()+<span class="number">0.5</span>);</span><br><span class="line">    B += rB*(<span class="title class_">Math</span>.<span class="title function_">random</span>()+<span class="number">0.5</span>);</span><br><span class="line">    <span class="comment">// precompute cosines and sines of A, B, theta, phi, same as before</span></span><br><span class="line">    <span class="keyword">let</span> cA=<span class="title class_">Math</span>.<span class="title function_">cos</span>(A), sA=<span class="title class_">Math</span>.<span class="title function_">sin</span>(A),</span><br><span class="line">        cB=<span class="title class_">Math</span>.<span class="title function_">cos</span>(B), sB=<span class="title class_">Math</span>.<span class="title function_">sin</span>(B);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> j=-W/<span class="number">2</span>;j&lt;W/<span class="number">2</span>;j+=<span class="number">0.2</span>) &#123; <span class="comment">// j &lt;=&gt; theta</span></span><br><span class="line">      <span class="keyword">for</span>(i=-W/<span class="number">2</span>;i&lt;W/<span class="number">2</span>;i+=<span class="number">0.2</span>) &#123;   <span class="comment">// i &lt;=&gt; phi</span></span><br><span class="line">        <span class="keyword">for</span>(z=-W/<span class="number">2</span>;z&lt;W/<span class="number">2</span>;z+=<span class="number">0.2</span>)&#123; <span class="comment">// (j,i,z)</span></span><br><span class="line">          <span class="keyword">let</span> x = j*cB - z*sA*sB - i*cA*sB; <span class="comment">// final 3D x coordinate</span></span><br><span class="line">          <span class="keyword">let</span> y = j*sB + z*cB*sA + i*cA*cB; <span class="comment">// final 3D y</span></span><br><span class="line">          <span class="keyword">let</span> ooz = <span class="variable constant_">K1</span>/(<span class="variable constant_">K2</span> - z*cA + i*sA); <span class="comment">// one over z</span></span><br><span class="line">          <span class="keyword">let</span> xp=(sX/<span class="number">2</span>+ooz*x); <span class="comment">// x&#x27; = screen space coordinate, translated and scaled to fit our 320x240 canvas element</span></span><br><span class="line">          <span class="keyword">let</span> yp=(sY/<span class="number">2</span>-ooz*y); <span class="comment">// y&#x27; (it&#x27;s negative here because in our output, positive y goes down but in our 3D space, positive y goes up)</span></span><br><span class="line">          <span class="comment">// luminance, scaled back to 0 to 1</span></span><br><span class="line">          <span class="keyword">let</span> L=(y + W/<span class="number">2</span> + (z*cA - i*sA)+W/<span class="number">2</span>)/(<span class="number">2</span>*W);</span><br><span class="line">          <span class="keyword">if</span>(L &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            ctx.<span class="property">fillStyle</span> = <span class="string">`rgba(255,255,255,<span class="subst">$&#123;L&#125;</span>`</span>;</span><br><span class="line">            ctx.<span class="title function_">fillRect</span>(xp, yp, <span class="number">10</span>*L, <span class="number">10</span>*L);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>,<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="title class_">Math</span>.<span class="property">PI</span>);</span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="property">anim3</span> = (<span class="function">(<span class="params">tmr</span>)=&gt;</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(tmr === <span class="literal">undefined</span>) &#123;</span><br><span class="line">      tmr = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> <span class="title function_">canvasframe2</span>(<span class="number">1</span>,<span class="number">300</span>,<span class="number">5</span>,<span class="number">0.07</span>,<span class="number">0.03</span>,<span class="number">300</span>,<span class="number">240</span>), <span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(tmr);</span><br><span class="line">      tmr = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">anim1</span>();</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">anim2</span>();</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">anim3</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="variable language_">document</span>.<span class="property">all</span>)</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">attachEvent</span>(<span class="string">&#x27;onload&#x27;</span>,_onload);</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;load&quot;</span>,_onload,<span class="literal">false</span>);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h2 id="去掉数学库"><a href="#去掉数学库" class="headerlink" title="去掉数学库"></a>去掉数学库</h2><p><a href="https://www.youtube.com/watch?v=DEqXNfs_HhY">Lex Fridman Youtube</a></p>
+<p><a href="https://www.youtube.com/watch?v=sW9npZVpiMI">Joma Tech</a></p>
+<p>早知道会受到这么多关注,我就会在它上面花更多时间</p>
+<p>对于程序中来说,<code>sin</code>,<code>cos</code>这两个函数消耗最大,并且需要<code>-lm</code></p>
+<p>既然有旋转公式,那么</p>
+<p>$\begin{bmatrix} c’ \\ s’ \end{bmatrix} &#x3D; \begin{bmatrix} \cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos \theta \end{bmatrix} \begin{bmatrix} c \\ s \end{bmatrix}$</p>
+<p>可以每次旋转一度,来完成转换,而不是计算<code>sin/cos</code>, 我们只需要硬编码<code>sin(2pi/314),cos(2pi/314)</code> 即可</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">float</span> c=<span class="number">1</span>, s=<span class="number">0</span>;  <span class="comment">// c for cos, s for sin</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">314</span>; i++) &#123;  <span class="comment">// 314 * .02 ~= 2π</span></span><br><span class="line">  <span class="comment">// (use c, s in code)</span></span><br><span class="line">  <span class="type">float</span> newc = <span class="number">0.9998</span>*c - <span class="number">0.019998666</span>*s;</span><br><span class="line">  s = <span class="number">0.019998666</span>*c + <span class="number">0.9998</span>*s;</span><br><span class="line">  c = newc;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然而如果如此做下去,会出现误差累积(不论多少精度),最终导致不是个圆形</p>
+<p><img data-src="https://www.a1k0n.net/img/sincos-mag.png" alt="误差累积后"></p>
+<p>一个思路是每次单位化结果.但如果直接去根号,那还是需要数学库,这一块可以用牛顿切线,不论是直接处理根号,还是根号分之1, 即使没有牛顿切的知识,二分也是类似的思路,就是手动实现开根</p>
+<p>不过这里 作者说只做一步牛顿切,觉得它足够接近1</p>
+<h2 id="CORDIC"><a href="#CORDIC" class="headerlink" title="CORDIC"></a>CORDIC</h2><ol>
+<li>提取cos</li>
+</ol>
+<p>$\begin{bmatrix} c’ \\ s’ \end{bmatrix} &#x3D; \frac{1}{\cos \theta}\begin{bmatrix} 1 &amp; -\tan \theta \\ \tan \theta &amp; 1 \end{bmatrix} \begin{bmatrix} c \\ s \end{bmatrix}$</p>
+<ol start="2">
+<li>cos足够接近1, 我们甚至可以省略它,直接只用tan的部分加上牛顿切</li>
+</ol>
+<p>其中t 是 tan, 宏编程</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> R(t,x,y) \</span></span><br><span class="line"><span class="meta">  f = x; \</span></span><br><span class="line"><span class="meta">  x -= t*y; \</span></span><br><span class="line"><span class="meta">  y += t*f; \</span></span><br><span class="line"><span class="meta">  f = (3-x*x-y*y)/2; \</span></span><br><span class="line"><span class="meta">  x *= f; \</span></span><br><span class="line"><span class="meta">  y *= f;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="去掉float"><a href="#去掉float" class="headerlink" title="去掉float"></a>去掉float</h2><p>We can use exactly the same ideas with integer fixed-point arithmetic, and not use any float math whatsoever. I’ve redone all the math with 10-bit precision and produced the following C code which runs well on embedded devices which can do 32-bit multiplications and have ~4k of available RAM:</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ol>
+<li>本身上数学难度算不高,但是涉及了不少现有技术的基础,如3D到2D,光照计算,3D物体旋转,ASCII亮度表现法</li>
+<li>混乱后的代码看上去更”有趣”,不过博主没有介绍混淆,只介绍了实现,实际上混淆方法多,用就是了.</li>
+<li>基于每一步的详细解读,修改内容可以实现正方体,不同光源,的渲染,如上面代码中就有正方体的渲染</li>
+</ol>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p><a href="https://www.a1k0n.net/2006/09/15/obfuscated-c-donut.html">原文0 2006</a></p>
+<p><a href="https://www.a1k0n.net/2006/09/20/obfuscated-c-donut-2.html">原文1 2006</a></p>
+<p><a href="https://www.a1k0n.net/2011/07/20/donut-math.html">原文2 2011</a></p>
+<p><a href="https://www.a1k0n.net/2021/01/13/optimizing-donut.html">原文3 2021</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Z-buffering">Z-buffering</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Torus">环面 torus</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Solid_of_revolution">旋转体 solid of revolution</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Rotation_matrix">旋转矩阵 rotation matrix</a></p>
+<p><a href="http://en.wikipedia.org/wiki/Surface_normal">平面法线 surface normal</a></p>
+<p><a href="https://en.wikipedia.org/wiki/CORDIC">CORDIC</a></p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高等代数 一 线性方程组的解法</title>
     <url>/Math/Advanced_algebra_1/</url>
     <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
@@ -10,6 +154,8 @@
 <li>方程组</li>
 <li>系数矩阵</li>
 </ol>
+<span id="more"></span>
+
 <h2 id="如何解方程组"><a href="#如何解方程组" class="headerlink" title="如何解方程组"></a>如何解方程组</h2><p>在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化)</p>
 <p>未知量的系数列向量均不为0, 否则意味着该变量不存在</p>
 <h2 id="解的组数"><a href="#解的组数" class="headerlink" title="解的组数"></a>解的组数</h2><p>转换成阶梯矩阵后</p>
@@ -44,6 +190,8 @@
 <li>相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)</li>
 </ol>
 <h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
+<span id="more"></span>
+
 <h2 id="n-元排列"><a href="#n-元排列" class="headerlink" title="n 元排列"></a>n 元排列</h2><p>$n$的排列有$n!$个</p>
 <p>性质1: 交换相邻元素得到新排列, 会改变<code>逆序对个数</code> 奇偶性</p>
 <p>性质2: 交换i和j得到新排列,会改变<code>逆序对个数</code>奇偶性,(相当于多次相邻交换)</p>
@@ -127,6 +275,101 @@
     <url>/Math/Advanced_algebra_3/</url>
     <content><![CDATA[<h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
 <p>其中$K$是数域</p>
+<p>规定: </p>
+<ol>
+<li>向量相等:对应位置元素相等</li>
+<li>向量相加:对应位置元素相加</li>
+<li>数量乘法:所有元素乘上k倍</li>
+<li>零向量:所有元素都为0</li>
+</ol>
+<p>对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像</p>
+<p>满射:$f(A) &#x3D; B$ </p>
+<p>单射:不同$a$,的$f(a)$不同</p>
+<p>双射(一一对应): 单射+满射</p>
+<p>笛卡尔积: $A\times B &#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长</p>
+<h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><p>线性空间 &#x3D; 4条加法法则+4条数乘法则</p>
+<span id="more"></span>
+
+<p>加法</p>
+<ol>
+<li>加法交换 $\alpha + \beta &#x3D; \beta + \alpha$</li>
+<li>加法结合交换 $(\alpha + \beta ) + \gamma &#x3D; \alpha + (\beta + \gamma)$</li>
+<li>零元$\alpha + 0 &#x3D; \alpha$</li>
+<li>负元$\alpha + \beta &#x3D; 0$, 互为负元</li>
+</ol>
+<p>数乘</p>
+<ol start="5">
+<li>$1\alpha &#x3D; \alpha$</li>
+<li>$(kl)\alpha &#x3D; k(l\alpha)$</li>
+<li>$(k+l)\alpha &#x3D; k\alpha + l\alpha$</li>
+<li>$k(\alpha+\beta) &#x3D; k\alpha + k\beta$</li>
+</ol>
+<hr>
+<p>线性空间例子</p>
+<ol>
+<li>几何空间, 以O为起点的所有向量</li>
+<li>向量空间 是 数域$K$的一个线性空间</li>
+<li>$f(\mathbb{R})\to \mathbb{R}$, 数域$X$上的函数$\mathbb{R}^X$, $(f+g)(\mathbb{R}) &#x3D; f(\mathbb{R})+g(\mathbb{R})$, (3对应零函数,4对应负函数)</li>
+</ol>
+<h2 id="线性空间性质"><a href="#线性空间性质" class="headerlink" title="线性空间性质"></a>线性空间性质</h2><ol>
+<li>唯一$0$元(反证法+交换律+加法性质3)</li>
+<li>每个元素唯一负元(反证法)</li>
+<li>$0\alpha &#x3D; 0$ (数乘+结合率+负元) $0\alpha &#x3D; 0\alpha + 0 &#x3D; 0\alpha + (0\alpha + (-0\alpha)) &#x3D; (0\alpha + 0\alpha) + (-0\alpha) &#x3D; 0\alpha + (-0\alpha) &#x3D; 0$</li>
+<li>$k0 &#x3D; 0$</li>
+<li>$k\alpha &#x3D; 0$, 则$k &#x3D;0$或$\alpha &#x3D; 0$, ($k\ne 0$时,数乘上$k^{-1}$)</li>
+<li>$(-1)\alpha &#x3D; -\alpha$, (结合律+负元定义)</li>
+</ol>
+<h2 id="线性子空间"><a href="#线性子空间" class="headerlink" title="线性子空间"></a>线性子空间</h2><p>$V$是数域$K$上的一个线性空间,$U$是$V$一个非空子集, 也满足线性空间八条法则,则$U$是$V$的子空间, (注意元素的定义要一致</p>
+<p>生成的子空间 $W &#x3D; &lt;\alpha_1,\alpha_2,\cdots,\alpha_s&gt;$ , W的元素都是$\sum k_i \alpha_i$ 得到的, 其中$k_i \in K$, 对于可以被表示的, 称作可以被这些向量线性表出</p>
+<p>所以原本的n元线性方程组的问题有解变成: 系数的列向量能否线性表出值的列向量? $\beta \in &lt;\alpha_1,\alpha_2,\cdots,\alpha_s&gt;$?</p>
+<h2 id="线性相关与线性无关的向量组"><a href="#线性相关与线性无关的向量组" class="headerlink" title="线性相关与线性无关的向量组"></a>线性相关与线性无关的向量组</h2><h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>2个向量: 共线(线性相关): $\exists k_1,k_2$不全为零,让$k_1\alpha + k_2\beta &#x3D; 0$, 否则不共线(线性无关)</p>
+<p>线性相关: $\exists k_1,k_2,\cdots,k_s$不全为零,让$\sum_{i&#x3D;1}^s k_i\alpha_i &#x3D; 0$, 否则线性无关</p>
+<p>线性<strong>相</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组有非零解 $\Leftrightarrow$ 行列式$&#x3D;0$</p>
+<p>线性<strong>无</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组只有零解 $\Leftrightarrow$ 行列式$\ne 0$</p>
+<p>对于单个向量, 定义0向量是线性相关, 非零则线性无关</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>线性相关 本身不含0向量的话, 至少有一个向量可以由其它向量线性表出</p>
+<p>线性无关: 每一个都不能由其它向量线性表出</p>
+<p>命题一: $\beta$可以由线性无关的向量组 $&lt;\alpha_1,\cdots,\alpha_s&gt;$线性表出, 则表出方式唯一(充要)</p>
+<p>命题二: 线性无关,添加向量后线性相关, 则添加的向量可被线性表出</p>
+<p>极大线性无关组: 当前无关任意添加都会线性相关, 换句话说任意都可以被线性表出</p>
+<p><code>基</code>: 线性无关,任何向量可以由它线性表出,和极大线性无关组的关系 (见下面注记)</p>
+<p>如果两个向量组可以互相线性表出,则称它们等价</p>
+<p>m的大小唯一: 因为如果两个个数不同(m&gt;n)的极大线性无关组,因为可以互相表出, 反过来就是考虑一个m元齐次n个的方程组 是否有非零解? 因为m&gt;n则必有非零解,所以大的个数的不可能是极大线性无关组, 所以所有极大线性无关组的个数两两相等</p>
+<p>$&lt;\alpha_1,\cdots,\alpha_s&gt;$ 的任意一个极大线性无关组的个数唯一决定,称作向量组的秩(<code>rank</code>, r只含0的规定为0)</p>
+<p>等价 的两个向量组 <code>rank</code>相等: 因为分别取它们的极大线性无关组+线性表出传递性</p>
+<p>等价 线性无关的两个向量组 <code>rank</code>相等</p>
+<p>空间(集合)与向量组的关系</p>
+<p>有限子集线性相关 定义为 其向量组 线性相关</p>
+<p>无限子集线性相关 定义为 有一个有限子集 线性相关</p>
+<p>空集定义是 线性无关</p>
+<p>存在性: 一定存在(教材)</p>
+<p>V有一个基是有限子集,则V是有限维的, <code>基</code>的个数叫做<code>维数</code> $dimV$, 只含$0$的线性空间维数为0</p>
+<p>V有一个基是无限子集,则V是无限维的</p>
+<p>坐标: 列向量 在基中的唯一表出的系数</p>
+<p>例子: 三维空间中三个不共面的向量是一个基, 平面是二维的(过定点O的平面), 直线是1维的 (过定点O的直线)</p>
+<p>$K^n$ 的标准基$(1,0,\cdots)^T,(0,1,\cdots)^T,\cdots,(0,0,\cdots,1)^T$</p>
+<p>$K^n$的$n$个线性无关的向量组都是它的基,(因为任加一个,从个数上一定线性相关,则任加的可以被线性表出)</p>
+<p>A线性表出B: $rank(B) \le rank(A)$</p>
+<hr>
+<p>矩阵&#x3D;&gt; 列向量组 &#x3D;&gt; 列秩 &#x3D; dim(列空间) </p>
+<p>矩阵&#x3D;&gt; 行向量组 &#x3D;&gt; 行秩 &#x3D; dim(行空间) &#x3D;&gt; 转化阶梯矩阵</p>
+<p>线性无关的向量组做延伸组依然线性无关, 先考虑阶梯形矩阵(取主元所在列 得到 线性无关) rank(列向量) &#x3D; 主元个数 &#x3D; rank(行向量)</p>
+<p>定理2 初等行变换不改变矩阵行rank</p>
+<ol>
+<li>交换显然</li>
+<li>行倍加到另一行, 变后的可以用原来的行线性表出, 原的也可以用现在的线性表出, 所以两个等价, rank 相等</li>
+<li>某行乘倍数, 同样 也是变前后相互可以表出, 所以等价,所以rank相等</li>
+</ol>
+<p>定理3 矩阵的初等行变换不改变列rank</p>
+<p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank</p>
+<p>综上 对于一般矩阵 初等行变换 行列rank 不变 成为阶梯形矩阵, 行rank &#x3D; 列 rank</p>
+<p>因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
+<p>A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
+<h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$</p>
+<p>向量组是有序有限的, 而空间是由基础的一系列向量做加法和数乘构成的集合</p>
+<p>这里的特殊条件就是 只含$0$向量的时候有些需要特殊定义(规定),</p>
+<p>例如 $\emptyset$是只含0向量的一个极大线性无关集, 规定为它是{0}的基</p>
+<p>这里过程也是很多从2个到多个, 从特殊的阶梯形到一般矩阵</p>
 ]]></content>
       <categories>
         <category>高等代数</category>
@@ -136,7 +379,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析CheatSheet</title>
+    <title>数学分析 CheatSheet</title>
     <url>/Math/Mathematical_analysis-cheatsheet/</url>
     <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
 <p>$\tan^2x+1&#x3D;\sec^2x$</p>
@@ -149,6 +392,8 @@
 <p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
 <p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
 <p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<span id="more"></span>
+
 <h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
 <p>$\cos’x &#x3D; - \sin x$</p>
 <p>$\tan’x &#x3D; \sec^2x$</p>
@@ -175,7 +420,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节一 分析基础</title>
+    <title>数学分析 一 分析基础</title>
     <url>/Math/Mathematical_analysis_problems_1/</url>
     <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
 <p>(1) 求证: $$x_n$$单调下降且有下界</p>
@@ -239,7 +484,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节二 一元函数微分学</title>
+    <title>数学分析 二 一元函数微分学</title>
     <url>/Math/Mathematical_analysis_problems_2/</url>
     <content><![CDATA[<h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
 <p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} &#x3D; f’(x_0)$</p>
@@ -285,7 +530,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节三 一元函数积分学</title>
+    <title>数学分析 三 一元函数积分学</title>
     <url>/Math/Mathematical_analysis_problems_3/</url>
     <content><![CDATA[<h1 id="一元函数积分学-3"><a href="#一元函数积分学-3" class="headerlink" title="一元函数积分学 3"></a>一元函数积分学 3</h1><h2 id="不定积分和可积函数类-3-1"><a href="#不定积分和可积函数类-3-1" class="headerlink" title="不定积分和可积函数类 3.1"></a>不定积分和可积函数类 3.1</h2><p>5.可积函数类 P124</p>
 <p>(1) 有理函数可分解成多项式和若干项最简真分式之和，因此有理函数一定可积分</p>
@@ -337,7 +582,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节四 级数</title>
+    <title>数学分析 四 级数</title>
     <url>/Math/Mathematical_analysis_problems_4/</url>
     <content><![CDATA[<h1 id="级数-4"><a href="#级数-4" class="headerlink" title="级数 4"></a>级数 4</h1><h2 id="级数敛散判别法与性质、上极限与下极限"><a href="#级数敛散判别法与性质、上极限与下极限" class="headerlink" title="级数敛散判别法与性质、上极限与下极限"></a>级数敛散判别法与性质、上极限与下极限</h2><p>-P224</p>
 <p>数列和</p>
@@ -388,7 +633,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节五 多元函数微分学</title>
+    <title>数学分析 五 多元函数微分学</title>
     <url>/Math/Mathematical_analysis_problems_5/</url>
     <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
 <p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
@@ -418,7 +663,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节六 多元函数积分学</title>
+    <title>数学分析 六 多元函数积分学</title>
     <url>/Math/Mathematical_analysis_problems_6/</url>
     <content><![CDATA[<h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2><span id="more"></span>
 
@@ -432,7 +677,7 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 章节七 典型例题 及 参考资料 速查表</title>
+    <title>数学分析 七 典型例题 及 参考资料 速查表</title>
     <url>/Math/Mathematical_analysis_problems_7/</url>
     <content><![CDATA[<h1 id="典型综合题分析-7"><a href="#典型综合题分析-7" class="headerlink" title="典型综合题分析 7"></a>典型综合题分析 7</h1><h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><h2 id="康托定理"><a href="#康托定理" class="headerlink" title="康托定理"></a>康托定理</h2><p>若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。</p>
 <p>采用反证法。</p>
@@ -467,12 +712,14 @@
       </tags>
   </entry>
   <entry>
-    <title>(p-1)!+1 = 0 (mod p)</title>
+    <title>(p-1)!+1 = 0 (mod p) Wilson&#39;s theorem 威尔逊定理</title>
     <url>/Math/Wilson_s_theorem/</url>
     <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
 <h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
 <p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
-<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><p>首先 1..p-1 是 模p的所有余项</p>
+<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><span id="more"></span>
+
+<p>首先 1..p-1 是 模p的所有余项</p>
 <p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
 <p>任意$ i \in A $ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
 <p>令 $x &#x3D; (p-1)! $</p>
