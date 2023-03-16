@@ -31,6 +31,8 @@
 
 <p>同样的编译和运行命令, 这次是有背景, 有弹幕的版本</p>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>2011 年,有人提起了作者的2006年的作品,有很多请求作者讲解原理的,但过去了5年,作者并不能清晰记得,所以作者打算从零开始,非常详尽的细节,希望能得到相近的结果</p>
+<span id="more"></span>
+
 <p>这个内容的核心是利用 帧buffer 和 Z-buffer 来渲染像素(通过ascii渲染低分辨率的图像)</p>
 <p>通过固定的角度增量的,来绘制对应的环面(torus), 亮度是从暗到亮对应的<code>ASCII</code>是<code>.,-~:;=!*#$@</code>.(不需要射线追踪</p>
 <h3 id="3D物体-到-2D屏幕"><a href="#3D物体-到-2D屏幕" class="headerlink" title="3D物体 到 2D屏幕"></a>3D物体 到 2D屏幕</h3><p><img data-src="https://www.a1k0n.net/img/perspective.png" alt="3D和2D映射"></p>
@@ -284,7 +286,7 @@
 </ol>
 <p>对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像</p>
 <p>满射:$f(A) &#x3D; B$ </p>
-<p>单射:不同$a$,的$f(a)$不同</p>
+<p>单射:不同$a$的$f(a)$不同</p>
 <p>双射(一一对应): 单射+满射</p>
 <p>笛卡尔积: $A\times B &#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长</p>
 <h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><p>线性空间 &#x3D; 4条加法法则+4条数乘法则</p>
@@ -293,7 +295,7 @@
 <p>加法</p>
 <ol>
 <li>加法交换 $\alpha + \beta &#x3D; \beta + \alpha$</li>
-<li>加法结合交换 $(\alpha + \beta ) + \gamma &#x3D; \alpha + (\beta + \gamma)$</li>
+<li>加法结合 $(\alpha + \beta ) + \gamma &#x3D; \alpha + (\beta + \gamma)$</li>
 <li>零元$\alpha + 0 &#x3D; \alpha$</li>
 <li>负元$\alpha + \beta &#x3D; 0$, 互为负元</li>
 </ol>
@@ -312,8 +314,8 @@
 <li>$f(\mathbb{R})\to \mathbb{R}$, 数域$X$上的函数$\mathbb{R}^X$, $(f+g)(\mathbb{R}) &#x3D; f(\mathbb{R})+g(\mathbb{R})$, (3对应零函数,4对应负函数)</li>
 </ol>
 <h2 id="线性空间性质"><a href="#线性空间性质" class="headerlink" title="线性空间性质"></a>线性空间性质</h2><ol>
-<li>唯一$0$元(反证法+交换律+加法性质3)</li>
-<li>每个元素唯一负元(反证法)</li>
+<li>唯一$0$元(反证法+交换律+加法性质3) 0a &#x3D; 0a+0b &#x3D; 0b + 0a&#x3D; 0b</li>
+<li>每个元素唯一负元(反证法) $\beta_0 &#x3D; \beta_0 + \alpha +\beta_1 &#x3D; \beta_1$</li>
 <li>$0\alpha &#x3D; 0$ (数乘+结合率+负元) $0\alpha &#x3D; 0\alpha + 0 &#x3D; 0\alpha + (0\alpha + (-0\alpha)) &#x3D; (0\alpha + 0\alpha) + (-0\alpha) &#x3D; 0\alpha + (-0\alpha) &#x3D; 0$</li>
 <li>$k0 &#x3D; 0$</li>
 <li>$k\alpha &#x3D; 0$, 则$k &#x3D;0$或$\alpha &#x3D; 0$, ($k\ne 0$时,数乘上$k^{-1}$)</li>
@@ -326,14 +328,15 @@
 <p>线性相关: $\exists k_1,k_2,\cdots,k_s$不全为零,让$\sum_{i&#x3D;1}^s k_i\alpha_i &#x3D; 0$, 否则线性无关</p>
 <p>线性<strong>相</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组有非零解 $\Leftrightarrow$ 行列式$&#x3D;0$</p>
 <p>线性<strong>无</strong>关 $\Leftrightarrow$ 相应n元齐次线性方程组只有零解 $\Leftrightarrow$ 行列式$\ne 0$</p>
-<p>对于单个向量, 定义0向量是线性相关, 非零则线性无关</p>
+<p>对于单个向量, 定义$0$向量是线性相关, 非零则线性无关</p>
 <h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>线性相关 本身不含0向量的话, 至少有一个向量可以由其它向量线性表出</p>
 <p>线性无关: 每一个都不能由其它向量线性表出</p>
 <p>命题一: $\beta$可以由线性无关的向量组 $&lt;\alpha_1,\cdots,\alpha_s&gt;$线性表出, 则表出方式唯一(充要)</p>
 <p>命题二: 线性无关,添加向量后线性相关, 则添加的向量可被线性表出</p>
 <p>极大线性无关组: 当前无关任意添加都会线性相关, 换句话说任意都可以被线性表出</p>
 <p><code>基</code>: 线性无关,任何向量可以由它线性表出,和极大线性无关组的关系 (见下面注记)</p>
-<p>如果两个向量组可以互相线性表出,则称它们等价</p>
+<p>如果两个向量组可以互相线性表出,则称它们等价, 可以相互线性表出的两个向量组 定义为 “等价”关系, “等价”关系有 自反性, 对称性, 传递性(拆开证)</p>
+<p>向量组(r个)能由向量组(s个)线性表出(r&gt;s), 则前面一定线性相关, 相当于带入去解r未知数,s个等式的方程组 一定有非零解</p>
 <p>m的大小唯一: 因为如果两个个数不同(m&gt;n)的极大线性无关组,因为可以互相表出, 反过来就是考虑一个m元齐次n个的方程组 是否有非零解? 因为m&gt;n则必有非零解,所以大的个数的不可能是极大线性无关组, 所以所有极大线性无关组的个数两两相等</p>
 <p>$&lt;\alpha_1,\cdots,\alpha_s&gt;$ 的任意一个极大线性无关组的个数唯一决定,称作向量组的秩(<code>rank</code>, r只含0的规定为0)</p>
 <p>等价 的两个向量组 <code>rank</code>相等: 因为分别取它们的极大线性无关组+线性表出传递性</p>
@@ -349,6 +352,7 @@
 <p>例子: 三维空间中三个不共面的向量是一个基, 平面是二维的(过定点O的平面), 直线是1维的 (过定点O的直线)</p>
 <p>$K^n$ 的标准基$(1,0,\cdots)^T,(0,1,\cdots)^T,\cdots,(0,0,\cdots,1)^T$</p>
 <p>$K^n$的$n$个线性无关的向量组都是它的基,(因为任加一个,从个数上一定线性相关,则任加的可以被线性表出)</p>
+<p>$dim(V)&#x3D;n$ 则空间$V$中任意$n$个线性无关的一定是基(任意增加,n+1个显然线性相关)</p>
 <p>A线性表出B: $rank(B) \le rank(A)$</p>
 <hr>
 <p>矩阵&#x3D;&gt; 列向量组 &#x3D;&gt; 列秩 &#x3D; dim(列空间) </p>
@@ -361,11 +365,12 @@
 <li>某行乘倍数, 同样 也是变前后相互可以表出, 所以等价,所以rank相等</li>
 </ol>
 <p>定理3 矩阵的初等行变换不改变列rank</p>
-<p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank</p>
+<p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank(既然rank与极大线性无关组有关,而极大线性无关组与运算得到0元有关, 同解保证了 原来能得到表达式, 在新的里才能得到0元, (因为非0元不能通过初等行变化变为0元))</p>
 <p>综上 对于一般矩阵 初等行变换 行列rank 不变 成为阶梯形矩阵, 行rank &#x3D; 列 rank</p>
 <p>因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
 <p>A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
-<h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$</p>
+<p>矩阵的初等行&#x2F;列变换 不改变矩阵的秩</p>
+<h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维数dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$, 都是研究极大线性无关组(内线性无关,未被选的若加入都可表示(线性相关)), 注意的是并不是按照V的个数, 比如 (x,x,y) 看起来3维, 但基(对于空间无序)只有2个,所以是2维</p>
 <p>向量组是有序有限的, 而空间是由基础的一系列向量做加法和数乘构成的集合</p>
 <p>这里的特殊条件就是 只含$0$向量的时候有些需要特殊定义(规定),</p>
 <p>例如 $\emptyset$是只含0向量的一个极大线性无关集, 规定为它是{0}的基</p>
@@ -376,6 +381,193 @@
       </categories>
       <tags>
         <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fermat&#39;s two square theorem</title>
+    <url>/Math/Fermat_s_two_square_theorem/</url>
+    <content><![CDATA[<h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><p>对于奇素数$p$有能被表示成$p &#x3D; a^2+b^2$和$p &#x3D; 4k+1$为充要条件</p>
+<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="一定不是-4k-3"><a href="#一定不是-4k-3" class="headerlink" title="一定不是$4k+3$"></a>一定不是$4k+3$</h2><p>众所周知</p>
+<p>$(4k+0)^2 \equiv 0 \pmod 4$</p>
+<p>$(4k+1)^2 \equiv 1 \pmod 4$</p>
+<p>$(4k+2)^2 \equiv 0 \pmod 4$</p>
+<p>$(4k+3)^2 \equiv 1 \pmod 4$</p>
+<p>所以</p>
+<p>$a^2 + b^2 \not\equiv 3 \pmod 4$</p>
+<p>那么有了充分, 如果$p &#x3D; a^2+b^2$则一定$p &#x3D; 4k+1$</p>
+<h2 id="p-x3D-4k-1-to-p-x3D-a-2-b-2"><a href="#p-x3D-4k-1-to-p-x3D-a-2-b-2" class="headerlink" title="$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$"></a>$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$</h2><p>现在问题剩下就是如果 奇素数$p &#x3D; 4k+1$, 如何证明它可以被表示成$a^2+b^2$</p>
+<h2 id="Euler’s-proof-by-infinite-descent"><a href="#Euler’s-proof-by-infinite-descent" class="headerlink" title="Euler’s proof by infinite descent"></a>Euler’s proof by infinite descent</h2><h3 id="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"><a href="#如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和" class="headerlink" title="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"></a>如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和</h3><p><code>Brahmagupta-Fibonacci Identity</code></p>
+<p>$(a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2 + (ad-bc)^2$</p>
+<blockquote>
+<p>只有$ad&#x3D;bc$ 时右侧有0的平方 , 也就是两个整数成$c^2&#x2F;a^2$的倍数</p>
+</blockquote>
+<h3 id="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"><a href="#如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"></a>如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; k (c^2+d^2)$,$(c^2+d^2) &#x3D; p$为素数</p>
+<p>$(cb-ad)(cb+ad) &#x3D; c^2(a^2+b^2)-a^2(c^2+d^2) &#x3D; (c^2k-a^2)p$</p>
+<p>若$cb-ad$ 是 p 的倍数(另一半假设,对称同理)</p>
+<p>$kp^2 &#x3D; (a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2+(ad-bc)^2$</p>
+<p>得到 $ap+bq$ 也是 p的倍数</p>
+<p>$k &#x3D; (\frac{ac+bd}{p})^2+(\frac{ad-bc}{p})^2$ 能表示成整数的平方和</p>
+<h3 id="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"><a href="#如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"></a>如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n$ x不能表示为两个数的平方和, 则 $p_i$ 中至少有一个不能表示为两个平方数之和的因子</p>
+<p>如果$p_i$ 都能表示成，那么根据上面的结论，必定能表示成平方和，矛盾</p>
+<h3 id="如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和"><a href="#如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和" class="headerlink" title="如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和"></a>如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n $</p>
+<p>$a &#x3D; mx \pm c, b &#x3D; nx \pm d$, 其中 $ 2|c| \leq x,2|d| \leq x$</p>
+<p>有 $a^2+b^2 &#x3D; m^2x^2 \pm 2mxc + c^2 + n^2x^2 \pm 2nxd + d^2 &#x3D; Ax+(c^2+d^2)$</p>
+<p>$c^2+d^2 &#x3D; kx$</p>
+<p>令$g &#x3D; gcd(c,d)$</p>
+<p>因为$\gcd(a,b)&#x3D;1 \Rightarrow \gcd(a,x)&#x3D;1 \Rightarrow \gcd(c,x)&#x3D;1$, 同理 $\gcd(d,x)&#x3D;1$, 所以$\gcd(g,x)&#x3D;1$</p>
+<p>$g^2((\frac{c}{g})^2+(\frac{d}{g})^2) &#x3D; kx$, 说明中间的部分也是$x$的倍数</p>
+<p>能得到 $e^2+f^2&#x3D;k_1x$ 且$e,f$互素</p>
+<p>$k_1x &#x3D; e^2+f^2 \leq c^2+d^2 \leq (\frac{x}{2})^2 + (\frac{x}{2})^2 &#x3D; \frac{x^2}{2}$</p>
+<p>有 $k_1 \leq \frac{x}{2}$</p>
+<p>由上一个定理，若x非平方和，那么k包含非平方和因子,令这个因子为$x’$</p>
+<p>$x’ \leq k_1 \leq \frac{x}{2} &lt; x $</p>
+<p>综上 如果$a,b$互质,$x$是 $a^2+b^2$ 的因子，且$x$不能被表示成两个数的平方和，那么存在一个小于$x$的数$x’$，也满足是$e^2+f^2$的因子($\gcd(e,f)&#x3D;1,e\le a,f\le b$),且$x’ &lt; x$小，同时也是不能表示成两个数的平方和。</p>
+<p>然而整数无法无限下降，所以所有因子都能表示成两个数的平方和</p>
+<p>即若$\gcd(a,b)&#x3D;1$,那么$a^2+b^2$的质因子只有$2$和$4k+1$形式的</p>
+<h3 id="4n-1-形式的素数是平方分解数"><a href="#4n-1-形式的素数是平方分解数" class="headerlink" title="$4n+1$形式的素数是平方分解数"></a>$4n+1$形式的素数是平方分解数</h3><p>$p &#x3D; 4n + 1$</p>
+<p>$1,2^{4n},3^{4n},…,(4n)^{4n}$ 模$p$余1 (费马小定理)</p>
+<p>$2^{4n}-1,3^{4n}-2^{4n},…,(4n)^{4n}-(4n-1)^{4n}$ 均是$p$的倍数</p>
+<p>$a^{4n} - b^{4n} &#x3D; (a^{2n}+b^{2n})(a^{2n}-b^{2n})$</p>
+<ol>
+<li>若 $p$ 是任意一个 $a^{2n}+b^{2n}$ 的因子，注意到 $a,p$ 互质, $b,p$互质,$a,b$ 互质（a&#x3D;b+1）</li>
+</ol>
+<p>由上一条引理，$p$ 是互素平方和的因子，所以$p$可以拆解成两个数的平方和</p>
+<ol start="2">
+<li>否则 $p$ 是所有 $a^{2n}-b^{2n}$ 的因子</li>
+</ol>
+<p>$(x+1)^{2n} - x^{2n} &#x3D; ((x+1)^n + x^n) ((x+1)^n - x^n)$</p>
+<h4 id="差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n"><a href="#差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n" class="headerlink" title="差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$"></a>差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$</h4><p><img data-src="http://nonagon.org/ExLibris/sites/default/files/images/Differences-Cubes.jpg" alt="差分"></p>
+<p>$ f(x) &#x3D; a_0 + a_1x $</p>
+<p>$ f(x+1) - f(x) &#x3D; a_1 $ 一次多项式得证</p>
+<p>若 $n-1$次多项式成立</p>
+<p>设 $f$ 是$n$次多项式 $ f(x) &#x3D; a_0 + a_1x+ \cdots + a_nx^n $</p>
+<p>$ g(x) &#x3D; f(x+1) - f(x) &#x3D; k_0 + k_1x+ \cdots + a_n \cdot n x^{n-1} $</p>
+<p>$g$是 $n-1$次多项式，且其最高项的系数为 $a_n \cdot n $</p>
+<p>因为 $g(x)$ 的$n-1$阶差分为 $(n-1)!(a_n \cdot n)  &#x3D; n! a_n$，归纳法递推得证</p>
+<p>回到上面 我们因为p是所有减法式子的因子，因此$f(x) &#x3D; x^{2n}$的$2n$阶差分为$(2n)!$, 差分过程中始终是$p$的倍数</p>
+<p>而$(2n)!$不是$p$的倍数，所以矛盾。必然$p$是上面某个加法的因子</p>
+<blockquote>
+<p>综上，$4n+1$ 形式的素数是平方分解数</p>
+</blockquote>
+<p>$4n+3$ 根据模4的余数，显然不是</p>
+<blockquote>
+<p>综上充要得证: 一个奇素数是平方分解数，那么它是$4n+1$, 一个素数是$4n+1$形式，那么它是平方分解数</p>
+</blockquote>
+<h3 id="补充性质"><a href="#补充性质" class="headerlink" title="补充性质"></a>补充性质</h3><p>$p &#x3D; x^2+y^2$ 质数唯一表示</p>
+<p>$p &#x3D; a^2+b^2&#x3D;c^2+d^2$</p>
+<p>轮换性质，不妨设$a&gt;c&gt;d&gt;b$</p>
+<p>$(ac+bd)(ad+bc) &#x3D; (a^2+b^2)cd +(c^2+d^2)ab &#x3D; p(cd+ab)$</p>
+<p>至少一个是p的倍数, 若 $(ac+bd) &#x3D; Kp$ ,</p>
+<p>$0 &lt; (a-c)^2+(b-d)^2 &#x3D; a^2+b^2+c^2+d^2-2ac-2bd &#x3D; 2p-2Kp &lt; 2p $，</p>
+<p>同时除2,$0 &lt; p-Kp &lt; p $ 矛盾</p>
+<p>因此$p$ 唯一表示成两个</p>
+<h2 id="Lagrange’s-proof-through-quadratic-forms"><a href="#Lagrange’s-proof-through-quadratic-forms" class="headerlink" title="Lagrange’s proof through quadratic forms"></a>Lagrange’s proof through quadratic forms</h2><p>TODO</p>
+<h2 id="Dedekind’s-two-proofs-using-Gaussian-integers"><a href="#Dedekind’s-two-proofs-using-Gaussian-integers" class="headerlink" title="Dedekind’s two proofs using Gaussian integers"></a>Dedekind’s two proofs using Gaussian integers</h2><p>TODO</p>
+<h2 id="Proof-by-Minkowski’s-Theorem"><a href="#Proof-by-Minkowski’s-Theorem" class="headerlink" title="Proof by Minkowski’s Theorem"></a>Proof by Minkowski’s Theorem</h2><p>TODO</p>
+<h2 id="Zagier’s-“one-sentence-proof”"><a href="#Zagier’s-“one-sentence-proof”" class="headerlink" title="Zagier’s “one-sentence proof”"></a>Zagier’s “one-sentence proof”</h2><p><a href="https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf">https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf</a></p>
+<h2 id="Roger-Heath-Brown-in-1971"><a href="#Roger-Heath-Brown-in-1971" class="headerlink" title="Roger Heath-Brown in 1971"></a>Roger Heath-Brown in 1971</h2><p>$p &#x3D; 1 + 4k$</p>
+<p>如果可以拆分，显然一奇一偶</p>
+<p>$p &#x3D; x^2+ (2y)^2 &#x3D; x^2+4y^2$</p>
+<p>考虑</p>
+<p>$p &#x3D; x^2+4yz$</p>
+<p>有解$(x,y,z) &#x3D; (1,1,k)$, 注意到如果 $y\neq z$,那么$(x,y,z)$如果是一组解,则有$(x,z,y)$,形成配对</p>
+<p>那么如果能证明$p&#x3D;x^2+4yz$的所有解的个数是奇数个，那么必定有不能配对的就是$y&#x3D;z$的, 就是一个解了(这种方法不会直接给到如何计算，但是从存在性上完成证明)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   b</span><br><span class="line">cccb</span><br><span class="line"> dob</span><br><span class="line"> daaa</span><br><span class="line"> d</span><br><span class="line"></span><br><span class="line">   b</span><br><span class="line">cooo</span><br><span class="line"> ooo</span><br><span class="line"> oooa</span><br><span class="line"> d</span><br></pre></td></tr></table></figure>
+
+<p>以$x^2$拼<code>o</code>,然后以类似上面形式拼4个$yz$</p>
+<p>那么 只有</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">dddobbb</span><br><span class="line">   a</span><br><span class="line">   a</span><br><span class="line">   a</span><br></pre></td></tr></table></figure>
+
+<p>唯一对应$(y,z)$ (因为 相当于$y&#x3D;x$的情况,即$p&#x3D;x^2+4xz&#x3D;x(x+4z)$只有$x&#x3D;1$)</p>
+<p>而其它的都对应两个不同的$(y,z)$的解</p>
+<p>得证</p>
+<h1 id="x-2-ny-2"><a href="#x-2-ny-2" class="headerlink" title="$x^2+ny^2$"></a>$x^2+ny^2$</h1><p>原文见Cox的书</p>
+<p>有几个性质(稍后证明):</p>
+<p>$p&#x3D;x^2+y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \pmod 4$</p>
+<p>$p&#x3D;x^2+2y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \mathrm{or} 3 \pmod 8$</p>
+<p>$p&#x3D;x^2+3y^2, x,y \in \mathbb{Z} \Leftrightarrow p&#x3D;3 \mathrm{or} p \equiv 1 \pmod 3$</p>
+<hr>
+<p>$(x^2+ny^2)(z^2+nw^2) &#x3D; (zx\pm nyw)^2+n(xw\mp yz)^2$</p>
+<hr>
+<p>若$N &#x3D; x^2+ny^2, p | N,p&#x3D;a^2+nb^2,\gcd(a,b) &#x3D; 1$, $p$是质数</p>
+<p>参考$n&#x3D;1$时</p>
+<p>$(ax-nby)(ax+nby) &#x3D; a^2x^2-n^2b^2y^2 &#x3D; a^2(x^2+ny^2) - ny^2(a^2+nb^2) &#x3D; a^2N - ny^2p$</p>
+<p>因此前面至少一个是p的倍数, 不妨设$c&#x3D;\frac{ax-nby}{p}$,则$d&#x3D;\frac{bx+ay}{p}$,均为整数</p>
+<p>因此如果$N&#x3D;x^2+ny^2$且有质因子也能表示成$p&#x3D;a^2+ny^2$,那么$\frac{N}{p}$也可以表示成$c^2+nd^2$</p>
+<hr>
+<p>若$N&#x3D;x^2+ny^2, N &#x3D; zz’$,而$z$无法被表示成$a^2+nb^2$,则$z’$中有无法被表示成$a^2+nb^2$形式的质因子</p>
+<p>反证法, 若$z’$的的所有质数因子都能被表示,根据上面的$\frac{N}{p_1}$能被表示$\frac{N}{p_1p_2}$,这样逐个除$z’$中的质因子,最终$z$也可以被表示矛盾</p>
+<hr>
+<p>对于$p | x^2+ny^2,\gcd(x,y)&#x3D;1$, 因为知道$t^2 \equiv (p-t)^2\pmod p$, 所以可以取$x &#x3D; min(|x| \bmod p, p - |x| \bmod p) \le \frac{p}{2}$, 对于$y$同理</p>
+<p>注意的是，在调整到$\le \frac{p}{2}$的过程中 $\gcd(x,y)&#x3D;1$可能会不满足,但是注意到$gcd(x,p)&#x3D;1,gcd(y,p)&#x3D;1$,即$\gcd(\gcd(x,y),p) &#x3D; 1$,因此即使过程$\gcd(x,y)\neq 1$,只需要$x,y$同时除以$gcd(x,y)$即可</p>
+<p>因此可以取$|x|,|y|\le \frac{p}{2}$ 因为$\gcd(x,y)&#x3D;1$，只有$x&#x3D;y&#x3D;\frac{p}{2} &#x3D; 1$时才会有同时小于等于取等,也就是$p&#x3D;2$的特殊q情况</p>
+<p>对于一般$p&gt;3$的情况, 则当$n\le 3$时, $x^2+ny^2 &lt; (\frac{p}{2})^2 + n(\frac{p}{2})^2 &#x3D;\frac{1+n}{4}p^2 \le p^2$时</p>
+<p>这就是Fermat的当$p &gt; 3$是$x^2+ny^2$的因子时,可以通过调整$x,y$让$x^2+ny^2 &lt; p^2$</p>
+<p>那么有如果$p$不可被表示,则$1 &lt; \frac{x^2+ny^2}{p} &lt; p$且不可被表示,无法无穷下降</p>
+<p>综上$x^2+ny^2,n\le 3,\gcd(x,y)&#x3D;1$时, 它的质因子形式都是$a^2+nb^2$</p>
+<p>特殊的</p>
+<p>对于$n&#x3D;2$时，如果$2|x$则考虑$y^2+2(\frac{x}{2})^2$, 最后会递降到3</p>
+<p>其中对于$n&#x3D;3$ 时,如果$3|x$则考虑$y^2+3(\frac{x}{3})^2$,可能有$4$也是因子, 即$4p | x^2+3y^2,gcd(x,y)&#x3D;1$</p>
+<p>但是注意到$x-3y,x+3y$ 至少一个是4的倍数,因此同上面拆的部分可得到$p|x’^2+3y’^2$, 也就是当$x,y$同时为奇数的时候，可以除以$1^2+3\cdot 1^2$来完成下降,直到$p$可以表示或者$x,y$一个奇一个偶数</p>
+<hr>
+<p>$p&#x3D;x^2+ny^2$ and Quadratic Reciprocity</p>
+<p>($n&#x3D;5$时Euler和Fermat都知道这个结论不一定 $21&#x3D;1^2+5\cdot 2^2, 3|21$,但是$3$不能被表示)</p>
+<p>Legendre symbol (a是整数,p是奇质数)</p>
+<p>${\displaystyle \left({\frac {a}{p}}\right)&#x3D;{\begin{cases}1&amp;{\text{if }}a{\text{ is a quadratic residue modulo }}p{\text{ and }}a\not \equiv 0{\pmod {p}},\\ -1&amp;{\text{if }}a{\text{ is a quadratic nonresidue modulo }}p,\\ 0&amp;{\text{if }}a\equiv 0{\pmod {p}}.\end{cases}}}$</p>
+<p>或者$(\frac{a}{p}) &#x3D; a^{\frac{p-1}{2}} \pmod p$</p>
+<p>对于$1,-1$也就是是否存在$x^2 \equiv a \pmod p$,因为存在时显然$a^{\frac{p-1}{2}} \equiv x^{p-1} \equiv 1 \pmod p$</p>
+<p>设$g$为模$p$的一个原根,则存在$k$使$g^k\equiv n \pmod p$,所以$(g^k)^{\frac{p-1}{2}} \equiv 1 \pmod p$, 因为$g$是原根,所以$p-1 | k\cdot \frac{p-1}{2}$, 因此$\frac{k}{2}$是整数,所以$n \equiv (g^{\frac{k}{2}})^2$</p>
+<p>综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) &#x3D; -1$ </p>
+<hr>
+<p>定理1.7: $n$是非零整数, $p$是奇质数且$p\nmid n$, 则 $p \mid x^2+ny^2,\gcd(x,y)&#x3D;1 \Leftrightarrow (\frac{-n}{p})&#x3D;1$</p>
+<p>因为$x^2+ny^2\equiv 0 \pmod p, gcd(x,y)&#x3D;1$ 则$gcd(y,p) &#x3D; 1$</p>
+<p>$x^2 \equiv -ny^2 \pmod p$</p>
+<p>$(x^2)^{\frac{p-1}{2}} \equiv (-ny^2)^{\frac{p-1}{2}} \pmod p$</p>
+<p>$x^{p-1} \equiv (-n)^{\frac{p-1}{2}}y^{p-1} \pmod p$</p>
+<p>$1 \equiv (-n)^{\frac{p-1}{2}}\cdot 1 \pmod p$</p>
+<p>正向得证</p>
+<p>即存在$z^2 \equiv -n \pmod p$</p>
+<p>即$z^2 + n\cdot 1^2 \equiv -n+n \equiv 0 \pmod p, gcd(z,1)&#x3D;1$</p>
+<p>反向得证，充要得证</p>
+<hr>
+<p>然后欧拉发现了一些</p>
+<p>$(\frac{-3}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,7 \mod 12$</p>
+<p>$(\frac{-5}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,3,7,9 \mod 20$</p>
+<p>$(\frac{-7}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,9,11,15,23,25 \mod 28$</p>
+<p>$(\frac{3}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1 \mod 12$</p>
+<p>$(\frac{5}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9 \mod 20$, (注这里$\pm 9$也可以写成$\pm 11$,但是$\pm 9$会让人发现都是奇数平方)</p>
+<p>$(\frac{7}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9,\pm 25 \mod 28$</p>
+<hr>
+<p>但不是所有都能变成平方，比如</p>
+<p>$(\frac{6}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 5 \mod 24$</p>
+<p>但6不是质数</p>
+<hr>
+<p>若$p$是奇质数,</p>
+<p>若$p\equiv 1 \pmod 4, (\frac{-1}{p}) &#x3D; 1$</p>
+<p>若$p\equiv 3 \pmod 4, (\frac{-1}{p}) &#x3D; -1$</p>
+<p>证明 $(\frac{-1}{p}) \equiv (-1)^{\frac{p-1}{2}} \pmod p$, 显然得证</p>
+<hr>
+<p>猜想1.9, 如果$p,q$是不同的质数,则$(\frac{q}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm \beta^2 \bmod 4q$对于一些奇数$\beta$, (待证明)</p>
+<p>命题1.10(重要,也就是而二次互反率quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) &#x3D; (-1)^{\frac{(p-1)(q-1)}{4}}$</p>
+<p>证明: 显然$(\frac{-1}{p}) &#x3D; (-1)^{\frac{p-1}{2}}$,$(\frac{ab}{p}) &#x3D; (\frac{a}{p})(\frac{b}{p})$</p>
+<p>????????</p>
+<p>Page 27&#x2F;363</p>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p><a href="https://yexiaorain.github.io/Blog/pe/233">https://yexiaorain.github.io/Blog/pe/233</a></p>
+<p><a href="https://mathoverflow.net/a/299696/500903">https://mathoverflow.net/a/299696/500903</a></p>
+<p><a href="http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf">http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf</a></p>
+<p><a href="https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares">https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Legendre_symbol">https://en.wikipedia.org/wiki/Legendre_symbol</a></p>
+<p><a href="https://www.youtube.com/watch?v=VBPrP4nChbo">https://www.youtube.com/watch?v=VBPrP4nChbo</a></p>
+<p><a href="http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf">http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf</a></p>
+<p><a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd">https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd</a></p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>Fermat</tag>
+        <tag>平方和定理</tag>
+        <tag>x^2+ny^2</tag>
       </tags>
   </entry>
   <entry>
@@ -735,6 +927,147 @@
       </categories>
       <tags>
         <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论基础 一 整数的可除性</title>
+    <url>/Math/number_theory_1/</url>
+    <content><![CDATA[<p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+<p>性质:</p>
+<ul>
+<li>$b\ne 0$,$c$唯一</li>
+<li>$b|a,a|e \Rightarrow b|e$</li>
+<li>$b\ne 0$,所有的倍数为$0,\pm b,\pm 2b,\pm 3b,\cdots$</li>
+<li>$a\ne 0,b|a \Rightarrow |b| \le |a|$</li>
+<li>$b|a_1,b|a_2 \Rightarrow b|m_1a_1+m_2a_2, (\forall m_1,m_2)$</li>
+</ul>
+<p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+<p>定理1: $p | d \Rightarrow p\le \sqrt{|d|}$</p>
+<p>定理2: 素数无穷多个(反正法假设有最大,构造$\prod p_i +1$)</p>
+<p>定理3: $a&gt;1$则$a$可以被表示成多个素数之积 每次最小因子必定素数，递降法</p>
+<p>定理4(带余数除法): $a,b &gt;0$存在唯一一对$(q,r),r\in[0,b)$使得$a&#x3D;qb+r$, 通过对数轴$[kb,(k+1)b)$的切割</p>
+<p>定理5(算术基本定理): $p|ab,p \nmid a \Rightarrow p | b$,其中$p$是质数</p>
+<p>定理5.1(算术基本定理): $p|a_1a_2\cdots$其中$p$是质数,则存在某个$i$让$p | a_i$</p>
+<p>定理6(算术基本定理): $n&gt;1$ $n$有素数的唯一分解(同定理3), 推论$n$的因子的对应质数的幂次不大于$n$中对应质数的幂次</p>
+<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
+<p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+<p>定理7: $b_1,\cdots,b_k$的任意公倍数,都是最小公倍数的倍数,(反证法 $l’&#x3D;kl+r,r\in[1,l)$ 则$r$小于$l$也是公倍数 矛盾)</p>
+<p>推论3: $\mathrm{lcm}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{lcm}(\mathrm{lcm}(a_1,\cdots,a_n),\mathrm{lcm}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
+<p>定理8: $a_1,\cdots,a_k$的任意公共因数一定是它们最大公因数的因数,(反证$d &lt; \mathrm{lcm}(d_1,d) | a_i$)</p>
+<p>推论4: $\mathrm{gcd}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{gcd}(\mathrm{gcd}(a_1,\cdots,a_n),\mathrm{gcd}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
+<p>定理9: $m &gt; 0, \mathrm{lcm}(mb_1,mb_2)&#x3D; m \cdot \mathrm{lcm}(b_1,b_2)$, 同样是左右互为倍数来证明</p>
+<p>推论5: $d|b_1,d|b_2,\mathrm{lcm}(\frac{b_1}{d},\frac{b_2}{d})&#x3D;\frac{1}{d}\mathrm{lcm}(b_1,b_2)$</p>
+<p>定理10: $m&gt;0,\mathrm{gcd}(mb_1,mb_2)&#x3D; m \cdot \mathrm{gcd}(b_1,b_2)$</p>
+<p>推论6: $d|b_1,d|b_2,\mathrm{gcd}(\frac{b_1}{d},\frac{b_2}{d})&#x3D;\frac{1}{d}\mathrm{gcd}(b_1,b_2)$</p>
+<p>定理11: $\mathrm{gcd}(a,b)\mathrm{lcm}(a,b)&#x3D;ab$, 直接拆成质数表示最好证明</p>
+<p>定理12(辗转相除法的基础): $a,b,r$不全为$0$,则$a&#x3D;qb+r,r\in[0,b)$则$\mathrm{gcd}(a,b)&#x3D;\mathrm{gcd}(b,r)$, (通过任取因数左右互推证明), 推论$\mathrm{gcd}(a,b) | (ax+by)$</p>
+<p>定理13: $a,b$不全为$0$, $(x_0,y_0)$让$ax+by$取到最小正整数, 则$\mathrm{gcd}(a,b) &#x3D; ax_0+by_0$, 又是两侧互为倍数的证明, </p>
+<p>推论7: 上面证明了总存在$x_0,y_0$让$ax+by$取到$\mathrm{gcd}(a,b)$</p>
+<p>定理14: $\mathrm{gcd}(a,c)&#x3D;1$则$\mathrm{gcd}(ab,c)&#x3D;\mathrm{gcd}(b,c)$ 把右侧最大公约数拆出来证明</p>
+<p>推论8: $\mathrm{gcd}(a,b)&#x3D;1 \Rightarrow \mathrm{gcd}(ab,d)&#x3D;\mathrm{gcd}(a,d)\mathrm{gcd}(b,d)$，把右侧最大公约数拆出来证明</p>
+<p>定理15: $\mathrm{gcd}(a,c)&#x3D;1,c|ab \Rightarrow c|b$, 用定理14</p>
+<h1 id="辗转相除法-Euclid-算法"><a href="#辗转相除法-Euclid-算法" class="headerlink" title="辗转相除法, Euclid 算法"></a>辗转相除法, Euclid 算法</h1><p>就是基于定理12不断下降</p>
+<p>$(P_1,Q_1)&#x3D;(1,q_1), P_1a-Q_1b&#x3D;(-1)^{1-1}r_1$, 已知$r_i &#x3D; q_{i+2}r_{i+1}+r_{i+2}$</p>
+<p>希望有 $P_ia-Q_ib&#x3D;(-1)^{i-1}r_i$</p>
+<p>直接展开</p>
+<p>$P_ia-Q_ib&#x3D;(-1)^{i-1}r_i &#x3D; (-1)^{i-1} (q_{i+2}r_{i+1}+r_{i+2})$</p>
+<p>$&#x3D; (-1)^{i-1} (q_{i+2}(P_{i+1}a-Q_{i+1}b)(-1)^i+(P_{i+2}a-Q_{i+2}b)(-1)^{i+1})$</p>
+<p>$&#x3D; (P_{i+2}-q_{i+2}P_{i+1})a-(Q_{i+2}-q_{i+1}Q_{i+1})b$</p>
+<p>所以对应相等</p>
+<p>$P_i &#x3D; q_iP_{i-1}+P_{i-2}$</p>
+<p>$Q_i &#x3D; q_iQ_{i-1}+Q_{i-2}$</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回的 [x,y,z] 满足 a*x+b*y=z=gcd(a,b)</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function">array&lt;T,3&gt; <span class="title">exgcd</span><span class="params">(T a,T b)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> &#123;<span class="number">1</span>,<span class="number">0</span>,a&#125;;</span><br><span class="line">  <span class="keyword">auto</span> [x,y,z] = <span class="built_in">exgcd</span>(b,a%b);</span><br><span class="line">  <span class="keyword">return</span> &#123;y,x-(a/b)*y,z&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">int</span> a=<span class="number">31</span>,b=<span class="number">7</span>;</span><br><span class="line">  <span class="keyword">auto</span> [x,y,z] = <span class="built_in">exgcd</span>(a,b);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%d*%d+%d*%d=%d\n&quot;</span>,a,x,b,y,z);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注: 这里的$(x,y)$不是唯一的,因为每当$x$增加$\frac{b}{\mathrm{gcd}(a,b)}$,对应$y$同时减少$\frac{a}{\mathrm{gcd}(a,b)}$即可,等式依然成立</p>
+<h1 id="一次不定方程-ax-by-x3D-c"><a href="#一次不定方程-ax-by-x3D-c" class="headerlink" title="一次不定方程 $ax+by&#x3D;c$"></a>一次不定方程 $ax+by&#x3D;c$</h1><p>定理17 $\gcd(a,b) &#x3D; c$则有解,$(x_0,y_0)$是一组解则$(x_0+\frac{b}{\mathrm{gcd}(a,b)}t,y_0-\frac{a}{\mathrm{gcd}(a,b)}t)$是所有解</p>
+<p>推论9: 和$\frac{a}{\mathrm{gcd}(a,b)}x+\frac{b}{\mathrm{gcd}(a,b)}y&#x3D;\frac{c}{\mathrm{gcd}(a,b)}$ 同解</p>
+<h1 id="函数-x-x"><a href="#函数-x-x" class="headerlink" title="函数[x],{x}"></a>函数<code>[x]</code>,<code>&#123;x&#125;</code></h1><p>设$x$为任意实数, $[x] \le x$表示不超过$x$的最大整数,$\lbrace x\rbrace &#x3D; x-[x]$</p>
+<p>性质</p>
+<ul>
+<li>$x\ge y \Rightarrow [x]\ge [y]$</li>
+<li>$x-1&lt;[x]\le x, 0\le \lbrace x \rbrace &lt; 1$</li>
+<li>$n$为整数,$[n+x]&#x3D;n+[x],\lbrace n+x \rbrace &#x3D; \lbrace x \rbrace$</li>
+</ul>
+<p>引理1: 实数$x &gt; 0$,$a$正整数,$[\frac{x}{a}]$个不超过$x$且是$a$的倍数的整数, (找a的最大整数倍)</p>
+<p>定理18: 在$n!$的标准分解式中,素数$p\le n$的指数$\displaystyle  &#x3D; [\frac{n}{p}]+[\frac{n}{p^2}]+\cdots&#x3D;\sum_{r&#x3D;1}^{\infty} [\frac{n}{p^r}]$</p>
+<p>推论10(Legendre’s formula): $\displaystyle n!&#x3D;\prod_{p\le n} p^{\sum_{r&#x3D;1}^{\infty} [\frac{n}{p^r}]}$</p>
+<p>定理19: $\prod_{i&#x3D;1}^{k} \frac{a+i}{i}$ 必定是整数, (一个是这就是$\binom{a+k}{k}$,用上面相关的就是直接讨论$\le k$质因子的幂次,$[\frac{a+k}{p^r}]\ge [\frac{a}{p^r}]+[\frac{k}{p^r}]$)</p>
+<p>推论11: $n&#x3D;s_1+s_2+\cdots+s_k, \frac{n!}{s_1!s_2!\cdots s_k!}$是整数, (一样)</p>
+<p>定理20: $p$为素数,则任意$x$有$p|x^p-x$, (归纳$x$,$x&#x3D;0$时成立,$(x+1)^p-(x+1) &#x3D; x^p-x + \binom{p}{\cdots}(\cdots)$</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
+<p>4m+3,讨论末尾是+3还是+1,如果是+3,则再+4,如果是+1,则再+2</p>
+<p>6m+5,讨论末尾是+5还是+1,如果是+5,则再+6,如果是+1,则再+4</p>
+<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
+<p>$2^m\equiv 1 \pmod d$</p>
+<p>$2^n \equiv -1 \pmod d$</p>
+<p>$2^{\mathrm{gcd}(m,n)} &#x3D; 2^{\mathrm{gcd}(m,2n)} &#x3D; 2^{xm+2ny} &#x3D; (2^{m})^{x}(2^{2n})^y \equiv 1^x1^y \equiv 1 \pmod d$</p>
+<p>$2^n &#x3D; (2^{\mathrm{gcd}(m,n)})^{\frac{n}{\mathrm{gcd}(m,n)}} \equiv 1^{\frac{n}{\mathrm{gcd}(m,n)}}\equiv 1 \pmod d$</p>
+<p>对于$d&#x3D;2k+1$矛盾</p>
+<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
+<p>也就是要证明 $[2x]+[2y] \ge [x]+[y]+[x+y]$</p>
+<p>$[2([x]+\lbrace x\rbrace)]+[2([y]+\lbrace y\rbrace)] \ge [[x]+\lbrace x\rbrace]+[[y]+\lbrace y\rbrace]+[[x]+\lbrace x\rbrace+[y]+\lbrace y\rbrace]$</p>
+<p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace]+[\lbrace y\rbrace]+[\lbrace x\rbrace+\lbrace y\rbrace]$</p>
+<p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace+\lbrace y\rbrace]$, 右侧取$0$则左侧始终成立,右侧取$1$,至少一个$\ge \frac{1}{2}$, 同样成立</p>
+<h2 id="28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子"><a href="#28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子" class="headerlink" title="28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子"></a>28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子</h2><p>$p$的幂次$w$唯一表示 $w &#x3D; qk+r$</p>
+<p>28.2 实数$A &gt; 0$则$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; [A]$, 其中$\sum’$表示无$k$次方因子的$z$求和</p>
+<p>首先$A&#x3D;zm^k$ 才会让左侧内部 $\displaystyle \sqrt[k]{\frac{A}{z}}$为正整数, 因此$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{[A]}{z}}]$ (A与它的整部之间不会有其它的值让整个为正整数, 或者说对于给定$k$, 它的整部不变时对应的A的区间的端点都是整数,且除了最初的$z$,后续的都是)</p>
+<p>$A&#x3D;0$时显然, 所以只需要证明对于 任意正整数$A$, 有$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; A$</p>
+<p>对$A$进行归纳,</p>
+<p>当$A &#x3D; 1$时, 左侧$&#x3D;1&#x3D;$右侧, 成立</p>
+<p>若$A+1$ 的质数最高幂次 $&lt; k$, 对于$z \le A$时有$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{A+1}{z}}]$, (和上面把有理数变整数一样的原理)</p>
+<p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A+1}{A+1}}] &#x3D; \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{A+1}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
+<p>若$A+1$ 的质数最高幂次 $\ge k$, 则$A+1 &#x3D; z_0m^k$(唯一表示),且$z_0 &lt; A$</p>
+<p>对于$z_0$有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]+1&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$<br>对于其它$z \ne z_0, z \le A$,有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$</p>
+<p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A}{z_0}}]+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{z_0}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
+<h2 id="30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1"><a href="#30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><p><a href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
+<p>$\Leftarrow :$</p>
+<p>反正法: 若存在$k&#x3D;[\alpha x]&#x3D;[\beta y]$</p>
+<p>即$k &lt; \alpha x &lt; k+1,k &lt; \beta y &lt; k+1$</p>
+<p>$k&#x3D;\frac{k}{\alpha} + \frac{k}{\beta} &lt; x+y &lt; \frac{k+1}{\alpha} + \frac{k+1}{\beta} &#x3D; k+1$</p>
+<p>矛盾.</p>
+<p>若有$k$同时无法被表示, 找$[\alpha (x-1)] &lt; k &lt; [\alpha x]$</p>
+<p>即 $\alpha x &gt; k+1,\alpha (x-1) &lt; k$</p>
+<p>$\alpha (x-1) &lt; k &lt; \alpha x-1$</p>
+<p>同理 $\beta (y-1) &lt; k &lt; \beta y-1$</p>
+<p>$x+y-2&#x3D;x-1+y-1 &lt; k &lt; x-\frac{1}{\alpha} + y-\frac{1}{\beta} &#x3D; x+y-1$</p>
+<p>矛盾.</p>
+<p>证必</p>
+<p>$\Rightarrow :$</p>
+<p>设$\alpha &lt; \frac{p}{q}$则,$[\alpha] &lt; [2\alpha] &lt; \cdots &lt; [q\alpha] &lt; p$ 因为要两两不等所以$[1,p-1]$ 中至少(小于关系并没有描绘精确程度)出现$q$个</p>
+<p>所以$[1,p-1]$中至多有$p-1-q$个在是$[\beta y]$中,$(p-q)\beta$ 一定在$[1,p-1]$外</p>
+<p>那么$(p-q)\beta \ge [(p-q)\beta] \ge p$ 即$\beta \ge \frac{p}{p-q}$</p>
+<p>那么极限保号$\displaystyle \beta \ge \lim_{\frac{p}{q}\to \alpha} \frac{p}{p-q}&#x3D;\lim_{\frac{p}{q}\to \alpha} \frac{\frac{p}{q}}{\frac{p}{q}-1} &#x3D; \frac{\alpha}{\alpha-1}$<br>从另一侧$\alpha &gt; \frac{p}{q}$, 极限也会得到$\beta \le \frac{\alpha}{\alpha-1}$, 于是有$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</p>
+<p>证无理数: $[q\frac{p}{q}]&#x3D;p&#x3D;[(p-q)\frac{p}{p-q}]$</p>
+]]></content>
+      <categories>
+        <category>数论基础</category>
+      </categories>
+      <tags>
+        <tag>数论基础</tag>
+        <tag>辗转相除</tag>
+        <tag>gcd</tag>
+        <tag>lcm</tag>
+        <tag>归纳法</tag>
+        <tag>exgcd</tag>
+        <tag>Beatty’s theorem</tag>
+        <tag>Legendre’s formula</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论基础 二 数论函数</title>
+    <url>/Math/number_theory_2/</url>
+    <content><![CDATA[<p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="数论函数举例"><a href="#数论函数举例" class="headerlink" title="数论函数举例"></a>数论函数举例</h1><h1 id="Dirichlet-乘积"><a href="#Dirichlet-乘积" class="headerlink" title="Dirichlet 乘积"></a>Dirichlet 乘积</h1><h1 id="可乘函数"><a href="#可乘函数" class="headerlink" title="可乘函数"></a>可乘函数</h1><h1 id="阶的估计"><a href="#阶的估计" class="headerlink" title="阶的估计"></a>阶的估计</h1><h1 id="广义Dirichlet乘积"><a href="#广义Dirichlet乘积" class="headerlink" title="广义Dirichlet乘积"></a>广义Dirichlet乘积</h1>]]></content>
+      <categories>
+        <category>数论基础</category>
+      </categories>
+      <tags>
+        <tag>数论基础</tag>
       </tags>
   </entry>
 </search>

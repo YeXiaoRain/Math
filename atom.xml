@@ -6,7 +6,7 @@
   <link href="https://yexiaorain.github.io/Math/atom.xml" rel="self"/>
   
   <link href="https://yexiaorain.github.io/Math/"/>
-  <updated>2022-10-08T17:06:30.752Z</updated>
+  <updated>2023-03-16T21:18:02.657Z</updated>
   <id>https://yexiaorain.github.io/Math/</id>
   
   <author>
@@ -17,11 +17,86 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数论基础 二 数论函数</title>
+    <link href="https://yexiaorain.github.io/Math/number_theory_2/"/>
+    <id>https://yexiaorain.github.io/Math/number_theory_2/</id>
+    <published>2023-03-15T16:00:00.000Z</published>
+    <updated>2023-03-16T21:18:02.657Z</updated>
+    
+    
+    <summary type="html">1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积</summary>
+    
+    
+    
+    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数论基础 一 整数的可除性</title>
+    <link href="https://yexiaorain.github.io/Math/number_theory_1/"/>
+    <id>https://yexiaorain.github.io/Math/number_theory_1/</id>
+    <published>2023-03-14T16:00:00.000Z</published>
+    <updated>2023-03-16T21:18:02.657Z</updated>
+    
+    
+    <summary type="html">1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}</summary>
+    
+    
+    
+    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="辗转相除" scheme="https://yexiaorain.github.io/Math/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4/"/>
+    
+    <category term="gcd" scheme="https://yexiaorain.github.io/Math/tags/gcd/"/>
+    
+    <category term="lcm" scheme="https://yexiaorain.github.io/Math/tags/lcm/"/>
+    
+    <category term="归纳法" scheme="https://yexiaorain.github.io/Math/tags/%E5%BD%92%E7%BA%B3%E6%B3%95/"/>
+    
+    <category term="exgcd" scheme="https://yexiaorain.github.io/Math/tags/exgcd/"/>
+    
+    <category term="Beatty’s theorem" scheme="https://yexiaorain.github.io/Math/tags/Beatty%E2%80%99s-theorem/"/>
+    
+    <category term="Legendre’s formula" scheme="https://yexiaorain.github.io/Math/tags/Legendre%E2%80%99s-formula/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fermat&#39;s two square theorem</title>
+    <link href="https://yexiaorain.github.io/Math/Fermat_s_two_square_theorem/"/>
+    <id>https://yexiaorain.github.io/Math/Fermat_s_two_square_theorem/</id>
+    <published>2023-03-12T16:00:00.000Z</published>
+    <updated>2023-03-16T21:18:02.657Z</updated>
+    
+    
+    <summary type="html">Fermat&#39;s 两平方数定理:能被表示成平方和的奇素数是所有形如4k+1的奇素数</summary>
+    
+    
+    
+    <category term="math" scheme="https://yexiaorain.github.io/Math/categories/math/"/>
+    
+    
+    <category term="Fermat" scheme="https://yexiaorain.github.io/Math/tags/Fermat/"/>
+    
+    <category term="平方和定理" scheme="https://yexiaorain.github.io/Math/tags/%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86/"/>
+    
+    <category term="x^2+ny^2" scheme="https://yexiaorain.github.io/Math/tags/x-2-ny-2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>高等代数 三 n维向量空间$K^n$</title>
     <link href="https://yexiaorain.github.io/Math/Advanced_algebra_3/"/>
     <id>https://yexiaorain.github.io/Math/Advanced_algebra_3/</id>
     <published>2022-08-12T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;n维向量空间-K-n&quot;&gt;&lt;a href=&quot;#n维向量空间-K-n&quot; class=&quot;headerlink&quot; title=&quot;n维向量空间$K^n$&quot;&gt;&lt;/a&gt;n维向量空间$K^n$&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt; $K^n:&amp;#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&amp;#x3D;1,2,\cdots,n \rbrace$&lt;/p&gt;
@@ -35,7 +110,7 @@
 &lt;/ol&gt;
 &lt;p&gt;对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像&lt;/p&gt;
 &lt;p&gt;满射:$f(A) &amp;#x3D; B$ &lt;/p&gt;
-&lt;p&gt;单射:不同$a$,的$f(a)$不同&lt;/p&gt;
+&lt;p&gt;单射:不同$a$的$f(a)$不同&lt;/p&gt;
 &lt;p&gt;双射(一一对应): 单射+满射&lt;/p&gt;
 &lt;p&gt;笛卡尔积: $A\times B &amp;#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长&lt;/p&gt;
 &lt;h2 id=&quot;线性空间&quot;&gt;&lt;a href=&quot;#线性空间&quot; class=&quot;headerlink&quot; title=&quot;线性空间&quot;&gt;&lt;/a&gt;线性空间&lt;/h2&gt;&lt;p&gt;线性空间 &amp;#x3D; 4条加法法则+4条数乘法则&lt;/p&gt;</summary>
@@ -54,7 +129,7 @@
     <link href="https://yexiaorain.github.io/Math/Advanced_algebra_2/"/>
     <id>https://yexiaorain.github.io/Math/Advanced_algebra_2/</id>
     <published>2022-08-11T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;第2章-行列式&quot;&gt;&lt;a href=&quot;#第2章-行列式&quot; class=&quot;headerlink&quot; title=&quot;第2章 行列式&quot;&gt;&lt;/a&gt;第2章 行列式&lt;/h1&gt;&lt;ol&gt;
@@ -79,7 +154,7 @@
     <link href="https://yexiaorain.github.io/Math/Advanced_algebra_1/"/>
     <id>https://yexiaorain.github.io/Math/Advanced_algebra_1/</id>
     <published>2022-08-10T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;第1章-线性方程组的解法&quot;&gt;&lt;a href=&quot;#第1章-线性方程组的解法&quot; class=&quot;headerlink&quot; title=&quot;第1章 线性方程组的解法&quot;&gt;&lt;/a&gt;第1章 线性方程组的解法&lt;/h1&gt;&lt;h2 id=&quot;什么是线性代数&quot;&gt;&lt;a href=&quot;#什么是线性代数&quot; class=&quot;headerlink&quot; title=&quot;什么是线性代数&quot;&gt;&lt;/a&gt;什么是线性代数&lt;/h2&gt;&lt;ol&gt;
@@ -104,7 +179,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis-cheatsheet/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis-cheatsheet/</id>
     <published>2022-07-01T17:01:07.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F&quot;&gt;三角横等式&lt;/a&gt;&lt;/p&gt;
@@ -135,16 +210,19 @@
     <link href="https://yexiaorain.github.io/Math/2021-12-31-donut/"/>
     <id>https://yexiaorain.github.io/Math/2021-12-31-donut/</id>
     <published>2021-12-31T02:37:14.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;本文尽量逐句翻译&quot;&gt;&lt;a href=&quot;#本文尽量逐句翻译&quot; class=&quot;headerlink&quot; title=&quot;本文尽量逐句翻译&quot;&gt;&lt;/a&gt;本文尽量逐句翻译&lt;/h1&gt;&lt;h2 id=&quot;代码1&quot;&gt;&lt;a href=&quot;#代码1&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;本文尽量逐句翻译&quot;&gt;&lt;a href=&quot;#本文尽量逐句翻译&quot; class=&quot;headerlink&quot; title=&quot;本文尽量逐句翻译&quot;&gt;&lt;/a&gt;本文尽量逐句翻译&lt;/h1&gt;&lt;h2 id=&quot;代码1&quot;&gt;&lt;a href=&quot;#代码1&quot; class=&quot;headerlink&quot; title=&quot;代码1&quot;&gt;&lt;/a&gt;代码1&lt;/h2&gt;&lt;p&gt;&lt;code&gt;donut.c&lt;/code&gt;:&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;             k;&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;title function_&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;         ,&lt;span class=&quot;title function_&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;;main()&amp;#123;&lt;span class=&quot;type&quot;&gt;float&lt;/span&gt; A=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,B=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,i,j,z[&lt;span class=&quot;number&quot;&gt;1760&lt;/span&gt;];&lt;span class=&quot;type&quot;&gt;char&lt;/span&gt; b[&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;number&quot;&gt;1760&lt;/span&gt;];&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;\x1b[2J&amp;quot;&lt;/span&gt;);&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  )&amp;#123;&lt;span class=&quot;built_in&quot;&gt;memset&lt;/span&gt;(b,&lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;1760&lt;/span&gt;);&lt;span class=&quot;built_in&quot;&gt;memset&lt;/span&gt;(z,&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;7040&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(j=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;6.28&lt;/span&gt;&amp;gt;j;j+=&lt;span class=&quot;number&quot;&gt;0.07&lt;/span&gt;)&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;6.28&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;gt;i;i+=&lt;span class=&quot;number&quot;&gt;0.02&lt;/span&gt;)&amp;#123;&lt;span class=&quot;type&quot;&gt;float&lt;/span&gt; c=&lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(i),d=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(j),e=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(A),f=&lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(j),g=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(A),h=d+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,D=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;/(c*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; h*e+f*g+&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;),l=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;      (i),m=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(B),n=s\&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;in(B),t=c*h*g-f*        e;&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt; x=&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;30&lt;/span&gt;*D*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(l*h*m-t*n),y=            &lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;*D*(l*h*n&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+t*m),o=x+&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;*y,          N=&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;*((f*e-c*d*g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; )*m-c*d*e-f*g-l        *d*n);&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;22&lt;/span&gt;&amp;gt;y&amp;amp;&amp;amp;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; y&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&amp;amp;&amp;amp;x&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&amp;amp;&amp;amp;&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;&amp;gt;x&amp;amp;&amp;amp;D&amp;gt;z[o])&amp;#123;z[o]=D;;;b[o]=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;.,-~:;=!*#$@&amp;quot;&lt;/span&gt;[N&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;?N:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];&amp;#125;&amp;#125;&lt;span class=&quot;comment&quot;&gt;/*#****!!-*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;\x1b[H&amp;quot;&lt;/span&gt;);&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(k=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;1761&lt;/span&gt;&amp;gt;k;k++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;span class=&quot;built_in&quot;&gt;putchar&lt;/span&gt;(k%&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;?b[k]:&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;);A+=&lt;span class=&quot;number&quot;&gt;0.04&lt;/span&gt;;B+=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;number&quot;&gt;0.02&lt;/span&gt;;&amp;#125;&amp;#125;&lt;span class=&quot;comment&quot;&gt;/*****####*******!!=;:~&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;       ~::==!!!**********!!!==::-&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;         .,~~;;;========;;;:~-.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;             ..,--------,*/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;gcc -o donut donut.c -lm &amp;amp;&amp;amp; ./donut&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这是作者第一次尝试混淆C代码, 这个版本是相对简单优雅的&lt;/p&gt;
+&lt;h2 id=&quot;代码2&quot;&gt;&lt;a href=&quot;#代码2&quot; class=&quot;headerlink&quot; title=&quot;代码2&quot;&gt;&lt;/a&gt;代码2&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt; 下面13行,因为我本地的hexo相关工具不能正确工作,为了尽可能展示代码,我在&lt;code&gt;&amp;lt;&lt;/code&gt;和&lt;code&gt;.&lt;/code&gt;之间加了一个空格,实际上是没有空格的,所以如果从这里拷贝代码,记得去掉多出的空格&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;_,x,y,o       ,N;&lt;span class=&quot;type&quot;&gt;char&lt;/span&gt;       b[&lt;span class=&quot;number&quot;&gt;1840&lt;/span&gt;]       ;p(n,c)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(;n       --;x++)       c==&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;?y       +=&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;,x=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;o&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;:x&amp;gt;=       &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;?&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;&amp;gt;x?       c!=&lt;span class=&quot;string&quot;&gt;&amp;#x27;~&amp;#x27;&lt;/span&gt;?       b[y+x]=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;c:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;       ;&amp;#125;c(q,l       ,r,o,v)       &lt;span class=&quot;type&quot;&gt;char&lt;/span&gt;*l,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       *r;&amp;#123;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;       (;q&amp;gt;=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;       )q=(&lt;span class=&quot;string&quot;&gt;&amp;quot;A&amp;quot;&lt;/span&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;YLrZ^&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;w^?EX&amp;quot;&lt;/span&gt;           &lt;span class=&quot;string&quot;&gt;&amp;quot;novne&amp;quot;&lt;/span&gt;     &lt;span class=&quot;string&quot;&gt;&amp;quot;bYV&amp;quot;&lt;/span&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;dO&amp;#125;LE&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#123;yWlw&amp;quot;&lt;/span&gt;      &lt;span class=&quot;string&quot;&gt;&amp;quot;Jl_Ja|[ur]zovpu&amp;quot;&lt;/span&gt;   &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;i]e|y&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;ao_Be&amp;quot;&lt;/span&gt;   &lt;span class=&quot;string&quot;&gt;&amp;quot;osmIg&amp;#125;r]]r]m|wkZU&amp;#125;&amp;#123;O&amp;#125;&amp;quot;&lt;/span&gt;         &lt;span class=&quot;string&quot;&gt;&amp;quot;xys]]\&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;x|ya|y&amp;quot;&lt;/span&gt;        &lt;span class=&quot;string&quot;&gt;&amp;quot;sm||&amp;#123;uel&amp;#125;|r&amp;#123;yIcsm||ya[&amp;#123;uE&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#123;qY\&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;w|gGor&amp;quot;&lt;/span&gt;      &lt;span class=&quot;string&quot;&gt;&amp;quot;VrVWioriI&amp;#125;Qac&amp;#123;&amp;#123;BIY[sXjjsVW]aM&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;T\&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;string&quot;&gt;tXjjss&amp;quot;&lt;/span&gt;     &lt;span class=&quot;string&quot;&gt;&amp;quot;sV_OUkRUlSiorVXp_qOM&amp;gt;E&amp;#123;BadB&amp;quot;&lt;/span&gt;[_/&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;  ]-&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;62&lt;/span&gt;&amp;gt;&amp;gt;_++    %&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&amp;amp;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;?r[q]:l[q])-o;&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; q;&amp;#125;E(a)&amp;#123;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       o= x=a,y=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,_=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;1095&lt;/span&gt;&amp;gt;_;)a= &lt;span class=&quot;string&quot;&gt;&amp;quot; &amp;lt; .,`&amp;#x27;/)(\n-&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;\\_~&amp;quot;&lt;/span&gt;[&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       c  (&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;!%*/&amp;#x27;)#3&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;     &lt;span class=&quot;string&quot;&gt;&amp;quot;+-6,8&amp;quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&amp;quot;\&amp;quot;(.$&amp;quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&amp;quot;01245&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot; &amp;amp;79&amp;quot;&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;46&lt;/span&gt;)+&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;],  p(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;#$%&amp;amp;&amp;#x27;()0:439 &amp;quot;&lt;/span&gt;[ c(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       , &lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;amp;(*#,./1345&amp;quot;&lt;/span&gt; ,&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;#x27;)&amp;quot;&lt;/span&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;+%-$02\&amp;quot;! &amp;quot;&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;44&lt;/span&gt;)+&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;-34&lt;/span&gt;,a);  &amp;#125;main(k)&amp;#123;&lt;span class=&quot;type&quot;&gt;float&lt;/span&gt;     A=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,B= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,i,j,z[&lt;span class=&quot;number&quot;&gt;1840&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;puts&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;  &lt;span class=&quot;string&quot;&gt;&amp;quot;\x1b[2J&amp;quot;&lt;/span&gt;);;;      &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(;; )&amp;#123;&lt;span class=&quot;type&quot;&gt;float&lt;/span&gt; e=&lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(A), n=  &lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(B),g=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(      A),m=  &lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(B);&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(k=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;1840&lt;/span&gt;&amp;gt;   k;k++)y=&lt;span class=&quot;number&quot;&gt;-10&lt;/span&gt;-k/    &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;   ,o=&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;+(k%&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;-40&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       )* &lt;span class=&quot;number&quot;&gt;1.3&lt;/span&gt;/y+n,N=A&lt;span class=&quot;number&quot;&gt;-100.0&lt;/span&gt;/y,b[k]=&lt;span class=&quot;string&quot;&gt;&amp;quot;.#&amp;quot;&lt;/span&gt;[o+N&amp;amp;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;],  z[k]=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       E(  &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;-(&lt;span class=&quot;type&quot;&gt;int&lt;/span&gt;)(&lt;span class=&quot;number&quot;&gt;9&lt;/span&gt;*B)%&lt;span class=&quot;number&quot;&gt;250&lt;/span&gt;);&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(j=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;6.28&lt;/span&gt;&amp;gt;j;j   +=&lt;span class=&quot;number&quot;&gt;0.07&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;  (i=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;6.28&lt;/span&gt;&amp;gt;i;i+=&lt;span class=&quot;number&quot;&gt;0.02&lt;/span&gt;)&amp;#123;&lt;span class=&quot;type&quot;&gt;float&lt;/span&gt; c=&lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(    i),  d=&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(  j),f=&lt;span class=&quot;built_in&quot;&gt;sin&lt;/span&gt;(j),h=d+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,D=&lt;span class=&quot;number&quot;&gt;15&lt;/span&gt;/(c*h*e+f     *g+&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;),l&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=&lt;span class=&quot;built_in&quot;&gt;cos&lt;/span&gt;(i)        ,t=c*h*g-f*e;x=&lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;*D*(l*h*  m-t*n&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;),y=&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;+       D  *(l*h*n+t*m),o=x+&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;*y,N  =&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;*((f*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;e-c*d*g       )*m   -c*d*e-f*g-l*d*n)     ;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(D&amp;gt;z&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[o])z[o       ]=D,b[     o]=&lt;span class=&quot;string&quot;&gt;&amp;quot; .&amp;quot;&lt;/span&gt;          &lt;span class=&quot;string&quot;&gt;&amp;quot;.,,-+&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;+=#$@&amp;quot;&lt;/span&gt;       [N&amp;gt;&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;?N:       &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];;;;&amp;#125;       &lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt;(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;span class=&quot;string&quot;&gt;&amp;quot;%c[H&amp;quot;&lt;/span&gt;,       &lt;span class=&quot;number&quot;&gt;27&lt;/span&gt;);&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;       (k=&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;       *&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;+&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &amp;gt;k;k++)       &lt;span class=&quot;built_in&quot;&gt;putchar&lt;/span&gt;       (k%&lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;?b       [k]:&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       ;;;;A+=       &lt;span class=&quot;number&quot;&gt;0.053&lt;/span&gt;;;       B+=&lt;span class=&quot;number&quot;&gt;0.03&lt;/span&gt;       ;;;;;&amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;同样的编译和运行命令, 这次是有背景, 有弹幕的版本&lt;/p&gt;
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;2011 年,有人提起了作者的2006年的作品,有很多请求作者讲解原理的,但过去了5年,作者并不能清晰记得,所以作者打算从零开始,非常详尽的细节,希望能得到相近的结果&lt;/p&gt;</summary>
     
     
     
@@ -160,7 +238,7 @@
     <link href="https://yexiaorain.github.io/Math/Wilson_s_theorem/"/>
     <id>https://yexiaorain.github.io/Math/Wilson_s_theorem/</id>
     <published>2021-05-20T17:01:01.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;威尔逊定理&quot;&gt;&lt;a href=&quot;#威尔逊定理&quot; class=&quot;headerlink&quot; title=&quot;威尔逊定理&quot;&gt;&lt;/a&gt;威尔逊定理&lt;/h1&gt;&lt;p&gt;Wilson’s theorem&lt;/p&gt;
@@ -182,7 +260,7 @@
     <link href="https://yexiaorain.github.io/Math/2020-08-29-a-integral/"/>
     <id>https://yexiaorain.github.io/Math/2020-08-29-a-integral/</id>
     <published>2020-08-28T17:28:19.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
       
@@ -207,7 +285,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_7/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_7/</id>
     <published>2019-08-26T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;典型综合题分析-7&quot;&gt;&lt;a href=&quot;#典型综合题分析-7&quot; class=&quot;headerlink&quot; title=&quot;典型综合题分析 7&quot;&gt;&lt;/a&gt;典型综合题分析 7&lt;/h1&gt;&lt;h1 id=&quot;定理&quot;&gt;&lt;a href=&quot;#定理&quot; class=&quot;headerlink&quot; title=&quot;定理&quot;&gt;&lt;/a&gt;定理&lt;/h1&gt;&lt;h2 id=&quot;康托定理&quot;&gt;&lt;a href=&quot;#康托定理&quot; class=&quot;headerlink&quot; title=&quot;康托定理&quot;&gt;&lt;/a&gt;康托定理&lt;/h2&gt;&lt;p&gt;若函数f(x)在闭区间[a,b]上连续，则它在[a,b]上一致连续。换言之，在闭区间上连续的函数在该闭区间一致连续。&lt;/p&gt;
@@ -231,7 +309,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_6/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_6/</id>
     <published>2019-08-25T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;多元函数积分学-6&quot;&gt;&lt;a href=&quot;#多元函数积分学-6&quot; class=&quot;headerlink&quot; title=&quot;多元函数积分学 6&quot;&gt;&lt;/a&gt;多元函数积分学 6&lt;/h1&gt;&lt;h2 id=&quot;重积分的概念与性质、重积分化累次积分&quot;&gt;&lt;a href=&quot;#重积分的概念与性质、重积分化累次积分&quot; class=&quot;headerlink&quot; title=&quot;重积分的概念与性质、重积分化累次积分&quot;&gt;&lt;/a&gt;重积分的概念与性质、重积分化累次积分&lt;/h2&gt;</summary>
@@ -252,7 +330,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_5/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_5/</id>
     <published>2019-08-24T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;多元函数微分学-5&quot;&gt;&lt;a href=&quot;#多元函数微分学-5&quot; class=&quot;headerlink&quot; title=&quot;多元函数微分学 5&quot;&gt;&lt;/a&gt;多元函数微分学 5&lt;/h1&gt;&lt;h2 id=&quot;欧式空间、多元函数的极限与连续&quot;&gt;&lt;a href=&quot;#欧式空间、多元函数的极限与连续&quot; class=&quot;headerlink&quot; title=&quot;欧式空间、多元函数的极限与连续&quot;&gt;&lt;/a&gt;欧式空间、多元函数的极限与连续&lt;/h2&gt;&lt;p&gt;$\bar{E} &amp;#x3D; ((E^c)^o)^c$&lt;/p&gt;
@@ -277,7 +355,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_4/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_4/</id>
     <published>2019-08-23T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;级数-4&quot;&gt;&lt;a href=&quot;#级数-4&quot; class=&quot;headerlink&quot; title=&quot;级数 4&quot;&gt;&lt;/a&gt;级数 4&lt;/h1&gt;&lt;h2 id=&quot;级数敛散判别法与性质、上极限与下极限&quot;&gt;&lt;a href=&quot;#级数敛散判别法与性质、上极限与下极限&quot; class=&quot;headerlink&quot; title=&quot;级数敛散判别法与性质、上极限与下极限&quot;&gt;&lt;/a&gt;级数敛散判别法与性质、上极限与下极限&lt;/h2&gt;&lt;p&gt;-P224&lt;/p&gt;
@@ -310,7 +388,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_3/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_3/</id>
     <published>2019-08-22T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一元函数积分学-3&quot;&gt;&lt;a href=&quot;#一元函数积分学-3&quot; class=&quot;headerlink&quot; title=&quot;一元函数积分学 3&quot;&gt;&lt;/a&gt;一元函数积分学 3&lt;/h1&gt;&lt;h2 id=&quot;不定积分和可积函数类-3-1&quot;&gt;&lt;a href=&quot;#不定积分和可积函数类-3-1&quot; class=&quot;headerlink&quot; title=&quot;不定积分和可积函数类 3.1&quot;&gt;&lt;/a&gt;不定积分和可积函数类 3.1&lt;/h2&gt;&lt;p&gt;5.可积函数类 P124&lt;/p&gt;
@@ -342,7 +420,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_2/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_2/</id>
     <published>2019-08-21T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;一元函数微分学-2&quot;&gt;&lt;a href=&quot;#一元函数微分学-2&quot; class=&quot;headerlink&quot; title=&quot;一元函数微分学 2&quot;&gt;&lt;/a&gt;一元函数微分学 2&lt;/h1&gt;&lt;h2 id=&quot;导数与微分-2-1&quot;&gt;&lt;a href=&quot;#导数与微分-2-1&quot; class=&quot;headerlink&quot; title=&quot;导数与微分 2.1&quot;&gt;&lt;/a&gt;导数与微分 2.1&lt;/h2&gt;&lt;h3 id=&quot;题目-2-1-3&quot;&gt;&lt;a href=&quot;#题目-2-1-3&quot; class=&quot;headerlink&quot; title=&quot;题目 2.1.3&quot;&gt;&lt;/a&gt;题目 2.1.3&lt;/h3&gt;&lt;p&gt;设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:&lt;/p&gt;
@@ -364,7 +442,7 @@
     <link href="https://yexiaorain.github.io/Math/Mathematical_analysis_problems_1/"/>
     <id>https://yexiaorain.github.io/Math/Mathematical_analysis_problems_1/</id>
     <published>2019-08-20T16:00:00.000Z</published>
-    <updated>2022-10-08T17:06:30.752Z</updated>
+    <updated>2023-03-16T21:18:02.657Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;分析基础-1&quot;&gt;&lt;a href=&quot;#分析基础-1&quot; class=&quot;headerlink&quot; title=&quot;分析基础 1&quot;&gt;&lt;/a&gt;分析基础 1&lt;/h1&gt;&lt;h2 id=&quot;序列极限-1-3&quot;&gt;&lt;a href=&quot;#序列极限-1-3&quot; class=&quot;headerlink&quot; title=&quot;序列极限 1.3&quot;&gt;&lt;/a&gt;序列极限 1.3&lt;/h2&gt;&lt;h3 id=&quot;题目-1-3-4&quot;&gt;&lt;a href=&quot;#题目-1-3-4&quot; class=&quot;headerlink&quot; title=&quot;题目 1.3.4&quot;&gt;&lt;/a&gt;题目 1.3.4&lt;/h3&gt;&lt;p&gt;设 $$A&amp;gt;0,x_1&amp;gt;0,x_{n+1}&amp;#x3D;\frac12(x_n+\frac A{x_n}) (n&amp;#x3D;1,2,\dots)$$&lt;/p&gt;
