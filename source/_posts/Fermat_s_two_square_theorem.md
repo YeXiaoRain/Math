@@ -2,7 +2,7 @@
 title: Fermat's two square theorem
 date: 2023-03-13
 tags: [Fermat,平方和定理,x^2+ny^2]
-category: [math]
+category: [数论]
 description: Fermat's 两平方数定理:能被表示成平方和的奇素数是所有形如4k+1的奇素数
 ---
 

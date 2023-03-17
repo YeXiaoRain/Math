@@ -2,8 +2,7 @@
 title: 一个积分
 date: 2020-08-29 01:28:19
 tags: [\integral]
-category: [math]
-mathjax: true
+category: [数学分析]
 ---
 
 # 题目 & 解答

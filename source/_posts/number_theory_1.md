@@ -1,7 +1,7 @@
 ---
 title: 数论基础 一 整数的可除性
 date: 2023-03-15
-categories: 数论基础
+categories: [数论,数论基础]
 tags: [数论基础,辗转相除,gcd,lcm,归纳法,exgcd,Beatty’s theorem,Legendre’s formula]
 description: 1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}
 ---
@@ -12,7 +12,9 @@ ISBN 9787040364729
 
 # 整除，带余数除法 
 
+{% note no-icon success %}
 定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a=bc$,则$b|a$,否则$b \nmid a$
+{% endnote %}
 
 性质:
 
@@ -22,7 +24,9 @@ ISBN 9787040364729
 - $a\ne 0,b|a \Rightarrow |b| \le |a|$
 - $b|a_1,b|a_2 \Rightarrow b|m_1a_1+m_2a_2, (\forall m_1,m_2)$
 
+{% note no-icon success %}
 定义2: $p > 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数
+{% endnote %}
 
 定理1: $p | d \Rightarrow p\le \sqrt{|d|}$
 
@@ -40,9 +44,13 @@ ISBN 9787040364729
 
 # 最大公约数,最小公倍数 
 
+{% note no-icon success %}
 定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) = d$,当$d=1$时称作互素
+{% endnote %}
 
+{% note no-icon success %}
 定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) = l$
+{% endnote %}
 
 定理7: $b_1,\cdots,b_k$的任意公倍数,都是最小公倍数的倍数,(反证法 $l'=kl+r,r\in[1,l)$ 则$r$小于$l$也是公倍数 矛盾)
 
@@ -150,13 +158,19 @@ int main(){
 
 ## 8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数
 
+{% note info no-icon Proof %}
+
 和证明素数无限多一样的想法，如果有限个则全部乘起来，
 
 4m+3,讨论末尾是+3还是+1,如果是+3,则再+4,如果是+1,则再+2
 
 6m+5,讨论末尾是+5还是+1,如果是+5,则再+6,如果是+1,则再+4
 
+{% endnote %}
+
 ## 19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)=1$
+
+{% note info no-icon Proof %}
 
 令$d = gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d = 2k+1$
 
@@ -170,7 +184,11 @@ $2^n = (2^{\mathrm{gcd}(m,n)})^{\frac{n}{\mathrm{gcd}(m,n)}} \equiv 1^{\frac{n}{
 
 对于$d=2k+1$矛盾
 
+{% endnote %}
+
 ## 27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数
+
+{% note info no-icon Proof %}
 
 还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, 
 
@@ -182,12 +200,15 @@ $[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace]+[\lbrace y\rbrac
 
 $[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace+\lbrace y\rbrace]$, 右侧取$0$则左侧始终成立,右侧取$1$,至少一个$\ge \frac{1}{2}$, 同样成立
 
+{% endnote %}
 
 ## 28. $k$为正整数,$n$可以唯一表示成$n=lm^k$,其中$l$没有任何$k$次方因子
 
 $p$的幂次$w$唯一表示 $w = qk+r$
 
 28.2 实数$A > 0$则$\displaystyle \sum_{1\le z \le A}' [ \sqrt[k]{\frac{A}{z}}] = [A]$, 其中$\sum'$表示无$k$次方因子的$z$求和
+
+{% note info no-icon Proof %}
 
 首先$A=zm^k$ 才会让左侧内部 $\displaystyle \sqrt[k]{\frac{A}{z}}$为正整数, 因此$\displaystyle [\sqrt[k]{\frac{A}{z}}]=[\sqrt[k]{\frac{[A]}{z}}]$ (A与它的整部之间不会有其它的值让整个为正整数, 或者说对于给定$k$, 它的整部不变时对应的A的区间的端点都是整数,且除了最初的$z$,后续的都是)
 
@@ -208,8 +229,11 @@ $\displaystyle A+1 = \sum_{1\le z \le A}' [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{
 
 $\displaystyle A+1 = \sum_{1\le z \le A, z\ne z_0}' [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A}{z_0}}]+1 = \sum_{1\le z \le A, z\ne z_0}' [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{z_0}}] = \sum_{1\le z \le A+1}' [ \sqrt[k]{\frac{A+1}{z}}]$
 
+{% endnote %}
 
 ## 30(Beatty定理，1926). $\alpha,\beta > 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}=1$
+
+{% note info no-icon Proof %}
 
 https://proofwiki.org/wiki/Beatty%27s_Theorem
 
@@ -249,3 +273,5 @@ $\Rightarrow :$
 从另一侧$\alpha > \frac{p}{q}$, 极限也会得到$\beta \le \frac{\alpha}{\alpha-1}$, 于是有$\frac{1}{\alpha}+\frac{1}{\beta}=1$
 
 证无理数: $[q\frac{p}{q}]=p=[(p-q)\frac{p}{p-q}]$
+
+{% endnote %}

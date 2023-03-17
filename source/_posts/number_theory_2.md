@@ -1,7 +1,7 @@
 ---
 title: 数论基础 二 数论函数
 date: 2023-03-16
-categories: 数论基础
+categories: [数论,数论基础]
 tags: [数论基础,Dirichlet乘积,Dirichlet逆,可乘函数,完全可乘函数,Mobius变换,Mobius反演]
 description: 1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积
 ---
@@ -12,7 +12,9 @@ ISBN 9787040364729
 
 # 数论函数举例 
 
+{% note no-icon success %}
 定义1: 在全体正整数上定义的函数是数论函数
+{% endnote %}
 
 $u(n)=1 , n\ge 1$
 
@@ -37,20 +39,34 @@ $\mathrm{Liouville}$函数$\lambda(n) = (-1)^{\Omega(n)}$
 
 # Dirichlet 乘积 /卷积
 
-定义2: $f(n),g(n)$是两个数论函数 $h=f * g$称作Dirichlet 乘积/卷积
+{% note no-icon success %}
+
+定义2: $f(n),g(n)$是两个数论函数,$h=f * g$称作Dirichlet 乘积/卷积
 
 $\displaystyle h(n) = \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x相乘为n的对应y的乘积的和, 所以也可以写成$(f * g)(n) =\sum_{ab = n}f(a)g(b)$
+  
+{% endnote %}
 
 定理1: Dirichlet乘积满足 交换率$f * g = g * f$和结合率$(f * g)* h = f * (g * h)$
 
 一个重要的公式(算法竞赛里拆$\gcd(a,b)=1$会使用) $I = \mu * u = \mu * 1 = \sum_{d|n} \mu(d) = \left\lbrace \begin{array}{lc} 1,&n=1\\\\ 0, & n>1 \end{array}\right.$
+证明$\sum_{d|n} \mu(d) = \mu(1)+\mu(p_1)+\cdots+\mu(p_s)+\cdots+\mu(p_1p_2)+\cdots+\mu(p_1p_2\cdots p_s)$ 
 
-证明$\sum_{d|n} \mu(d) = \mu(1)+\mu(p_1)+\cdots+\mu(p_s)+\cdots+\mu(p_1p_2)+\cdots+\mu(p_1p_2\cdots p_s) = 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
+$= 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
+
+{% note no-icon success %}
+
 定义3: 若 $I = f * g$ 则$f$和$g$互为Dirichlet的逆
+
+{% endnote %}
 
 定理2: $f * I = I * f = f$
 
+{% note no-icon success %}
+
 定义4: $F=f*u$ 则$F$称作$f$的$\mathrm{M\ddot{o}bius}$变换, $F(n) = \sum_{d|n} f(d)$, 如$d=u * u, I = \mu * u$
+
+{% endnote %}
 
 定理3(这也就是算法里常见的Mobius反演): $F=f * u \Rightarrow f=F * \mu$, $F(n) = \sum_{d|n} f(d) \Rightarrow f(n)=\sum_{d|n} F(d)\mu(\frac{n}{d})$, 反向一样的推法
 
@@ -60,12 +76,17 @@ $\displaystyle h(n) = \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x
 
 例2: 证明$\log n = \Lambda * u$, 即要证明$\log n=\sum_{d|n}\Lambda(d)$, 展开$d$即可,这样得到另一种表达方式$\Lambda(n)=\sum_{d|n}\mu(d)\log{\frac{n}{d}}$
 
+
 # 可乘函数 
 
 > 可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来
 > 完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)=\mu(n)f(n)$
 
+{% note no-icon success %}
+
 定义5: 定义在全体自然数上，且不恒等于零的数论函数,若$f(mn)=f(m)f(n), \gcd(m,n)=1$,则称它为可乘/积性函数,若没有$\gcd$的限制，全部满足$f(mn)=f(m)f(n)$则称作完全/绝对 可乘函数
+
+{% endnote %}
 
 例3: $\mu(n),d(n)$为可乘函数与,$\mathrm{Liouville}$函数,$e^\lambda(n)=n^{\lambda},I(n)$ 为完全可乘函数
 
@@ -193,7 +214,7 @@ $\displaystyle = x\log x+O(x)$ (这里的估计还是很粗糙,见定理18)
 
 # 广义Dirichlet乘积
 
-> 看起来这里用例不少是为了简化估计
+> 看起来这里用例不少是为了简化阶的估计
 
 研究$\sum f(n)H(\frac{x}{n})$, 有什么不同,一个例子是上面的$f(2)$不会对$(f * g)(3)$贡献,而这里会,并且非整数的地方也有值, 记作$f \circ H$
 
@@ -309,3 +330,4 @@ $\displaystyle =\frac{6}{\pi^2}x+O(\sqrt{x})$
 
 
 # 习题
+
