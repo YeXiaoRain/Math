@@ -12,7 +12,7 @@
 <p>$&#x3D; \frac{1}{4^n} \cdot \frac{2n(2n-2)\cdots 2}{(2n+1)(2n-1)3}$</p>
 ]]></content>
       <categories>
-        <category>math</category>
+        <category>数学分析</category>
       </categories>
       <tags>
         <tag>\integral</tag>
@@ -140,10 +140,11 @@
 <p><a href="https://en.wikipedia.org/wiki/CORDIC">CORDIC</a></p>
 ]]></content>
       <categories>
-        <category>math</category>
+        <category>解析几何</category>
       </categories>
       <tags>
         <tag>math</tag>
+        <tag>甜甜圈</tag>
       </tags>
   </entry>
   <entry>
@@ -564,7 +565,7 @@
 <p><a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd">https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd</a></p>
 ]]></content>
       <categories>
-        <category>math</category>
+        <category>数论</category>
       </categories>
       <tags>
         <tag>Fermat</tag>
@@ -937,7 +938,9 @@
     <content><![CDATA[<p>ISBN 9787040364729</p>
 <span id="more"></span>
 
-<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><div class="note no-icon success"><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+</div>
+
 <p>性质:</p>
 <ul>
 <li>$b\ne 0$,$c$唯一</li>
@@ -946,7 +949,9 @@
 <li>$a\ne 0,b|a \Rightarrow |b| \le |a|$</li>
 <li>$b|a_1,b|a_2 \Rightarrow b|m_1a_1+m_2a_2, (\forall m_1,m_2)$</li>
 </ul>
-<p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+<div class="note no-icon success"><p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+</div>
+
 <p>定理1: $p | d \Rightarrow p\le \sqrt{|d|}$</p>
 <p>定理2: 素数无穷多个(反正法假设有最大,构造$\prod p_i +1$)</p>
 <p>定理3: $a&gt;1$则$a$可以被表示成多个素数之积 每次最小因子必定素数，递降法</p>
@@ -954,8 +959,12 @@
 <p>定理5(算术基本定理): $p|ab,p \nmid a \Rightarrow p | b$,其中$p$是质数</p>
 <p>定理5.1(算术基本定理): $p|a_1a_2\cdots$其中$p$是质数,则存在某个$i$让$p | a_i$</p>
 <p>定理6(算术基本定理): $n&gt;1$ $n$有素数的唯一分解(同定理3), 推论$n$的因子的对应质数的幂次不大于$n$中对应质数的幂次</p>
-<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
-<p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><div class="note no-icon success"><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
+</div>
+
+<div class="note no-icon success"><p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+</div>
+
 <p>定理7: $b_1,\cdots,b_k$的任意公倍数,都是最小公倍数的倍数,(反证法 $l’&#x3D;kl+r,r\in[1,l)$ 则$r$小于$l$也是公倍数 矛盾)</p>
 <p>推论3: $\mathrm{lcm}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{lcm}(\mathrm{lcm}(a_1,\cdots,a_n),\mathrm{lcm}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
 <p>定理8: $a_1,\cdots,a_k$的任意公共因数一定是它们最大公因数的因数,(反证$d &lt; \mathrm{lcm}(d_1,d) | a_i$)</p>
@@ -999,22 +1008,39 @@
 <p>定理19: $\prod_{i&#x3D;1}^{k} \frac{a+i}{i}$ 必定是整数, (一个是这就是$\binom{a+k}{k}$,用上面相关的就是直接讨论$\le k$质因子的幂次,$[\frac{a+k}{p^r}]\ge [\frac{a}{p^r}]+[\frac{k}{p^r}]$)</p>
 <p>推论11: $n&#x3D;s_1+s_2+\cdots+s_k, \frac{n!}{s_1!s_2!\cdots s_k!}$是整数, (一样)</p>
 <p>定理20: $p$为素数,则任意$x$有$p|x^p-x$, (归纳$x$,$x&#x3D;0$时成立,$(x+1)^p-(x+1) &#x3D; x^p-x + \binom{p}{\cdots}(\cdots)$</p>
-<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
 <p>4m+3,讨论末尾是+3还是+1,如果是+3,则再+4,如果是+1,则再+2</p>
 <p>6m+5,讨论末尾是+5还是+1,如果是+5,则再+6,如果是+1,则再+4</p>
-<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
+
+</details>
+
+<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
 <p>$2^m\equiv 1 \pmod d$</p>
 <p>$2^n \equiv -1 \pmod d$</p>
 <p>$2^{\mathrm{gcd}(m,n)} &#x3D; 2^{\mathrm{gcd}(m,2n)} &#x3D; 2^{xm+2ny} &#x3D; (2^{m})^{x}(2^{2n})^y \equiv 1^x1^y \equiv 1 \pmod d$</p>
 <p>$2^n &#x3D; (2^{\mathrm{gcd}(m,n)})^{\frac{n}{\mathrm{gcd}(m,n)}} \equiv 1^{\frac{n}{\mathrm{gcd}(m,n)}}\equiv 1 \pmod d$</p>
 <p>对于$d&#x3D;2k+1$矛盾</p>
-<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
+
+</details>
+
+<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
 <p>也就是要证明 $[2x]+[2y] \ge [x]+[y]+[x+y]$</p>
 <p>$[2([x]+\lbrace x\rbrace)]+[2([y]+\lbrace y\rbrace)] \ge [[x]+\lbrace x\rbrace]+[[y]+\lbrace y\rbrace]+[[x]+\lbrace x\rbrace+[y]+\lbrace y\rbrace]$</p>
 <p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace]+[\lbrace y\rbrace]+[\lbrace x\rbrace+\lbrace y\rbrace]$</p>
 <p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace+\lbrace y\rbrace]$, 右侧取$0$则左侧始终成立,右侧取$1$,至少一个$\ge \frac{1}{2}$, 同样成立</p>
+
+</details>
+
 <h2 id="28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子"><a href="#28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子" class="headerlink" title="28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子"></a>28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子</h2><p>$p$的幂次$w$唯一表示 $w &#x3D; qk+r$</p>
 <p>28.2 实数$A &gt; 0$则$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; [A]$, 其中$\sum’$表示无$k$次方因子的$z$求和</p>
+<details class="note info no-icon"><summary><p>Proof</p>
+</summary>
 <p>首先$A&#x3D;zm^k$ 才会让左侧内部 $\displaystyle \sqrt[k]{\frac{A}{z}}$为正整数, 因此$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{[A]}{z}}]$ (A与它的整部之间不会有其它的值让整个为正整数, 或者说对于给定$k$, 它的整部不变时对应的A的区间的端点都是整数,且除了最初的$z$,后续的都是)</p>
 <p>$A&#x3D;0$时显然, 所以只需要证明对于 任意正整数$A$, 有$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; A$</p>
 <p>对$A$进行归纳,</p>
@@ -1024,7 +1050,12 @@
 <p>若$A+1$ 的质数最高幂次 $\ge k$, 则$A+1 &#x3D; z_0m^k$(唯一表示),且$z_0 &lt; A$</p>
 <p>对于$z_0$有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]+1&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$<br>对于其它$z \ne z_0, z \le A$,有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$</p>
 <p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A}{z_0}}]+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{z_0}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
-<h2 id="30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1"><a href="#30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><p><a href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
+
+</details>
+
+<h2 id="30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1"><a href="#30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p><a href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
 <p>$\Leftarrow :$</p>
 <p>反正法: 若存在$k&#x3D;[\alpha x]&#x3D;[\beta y]$</p>
 <p>即$k &lt; \alpha x &lt; k+1,k &lt; \beta y &lt; k+1$</p>
@@ -1043,8 +1074,10 @@
 <p>那么$(p-q)\beta \ge [(p-q)\beta] \ge p$ 即$\beta \ge \frac{p}{p-q}$</p>
 <p>那么极限保号$\displaystyle \beta \ge \lim_{\frac{p}{q}\to \alpha} \frac{p}{p-q}&#x3D;\lim_{\frac{p}{q}\to \alpha} \frac{\frac{p}{q}}{\frac{p}{q}-1} &#x3D; \frac{\alpha}{\alpha-1}$<br>从另一侧$\alpha &gt; \frac{p}{q}$, 极限也会得到$\beta \le \frac{\alpha}{\alpha-1}$, 于是有$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</p>
 <p>证无理数: $[q\frac{p}{q}]&#x3D;p&#x3D;[(p-q)\frac{p}{p-q}]$</p>
-]]></content>
+
+</details>]]></content>
       <categories>
+        <category>数论</category>
         <category>数论基础</category>
       </categories>
       <tags>
@@ -1064,12 +1097,179 @@
     <content><![CDATA[<p>ISBN 9787040364729</p>
 <span id="more"></span>
 
-<h1 id="数论函数举例"><a href="#数论函数举例" class="headerlink" title="数论函数举例"></a>数论函数举例</h1><h1 id="Dirichlet-乘积"><a href="#Dirichlet-乘积" class="headerlink" title="Dirichlet 乘积"></a>Dirichlet 乘积</h1><h1 id="可乘函数"><a href="#可乘函数" class="headerlink" title="可乘函数"></a>可乘函数</h1><h1 id="阶的估计"><a href="#阶的估计" class="headerlink" title="阶的估计"></a>阶的估计</h1><h1 id="广义Dirichlet乘积"><a href="#广义Dirichlet乘积" class="headerlink" title="广义Dirichlet乘积"></a>广义Dirichlet乘积</h1>]]></content>
+<h1 id="数论函数举例"><a href="#数论函数举例" class="headerlink" title="数论函数举例"></a>数论函数举例</h1><div class="note no-icon success"><p>定义1: 在全体正整数上定义的函数是数论函数</p>
+</div>
+
+<p>$u(n)&#x3D;1 , n\ge 1$</p>
+<p>$e(n)&#x3D;n , n\ge 1$</p>
+<p>$\displaystyle I(n)&#x3D;\left\lbrace \begin{array}{lc} 1, n &#x3D; 1\\ 0,n&gt;1 \end{array}\right.$,$I&#x3D;\mu * u$</p>
+<p>$\displaystyle d(n)&#x3D;\sum_{d|n} 1 &#x3D;n$的质数因子的幂次+1的乘积(因子个数函数), $d&#x3D;u * u$<br>$\Omega(n) &#x3D;$质数因子幂次和(重复的统计质因子个数)</p>
+<p>$\omega(n) &#x3D;$不同质数因子个数</p>
+<p>$\displaystyle \sigma_\lambda(n)&#x3D;\sum_{d|n} d^\lambda$ 正除数的幂和函数$\sigma &#x3D; e * u$</p>
+<p>$\displaystyle \phi(n)&#x3D;\sum_{1\le d \le n,\gcd(d,n)&#x3D;1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi&#x3D;\mu * e$</p>
+<p>$\mathrm{M\ddot{o}bius}$函数 $\mu(n) &#x3D;\left\lbrace \begin{array}{lc}1,&amp; n&#x3D;1 \\ (-1)^s, &amp; n&#x3D;p_1p_2\cdots p_s, p_i&lt;p_{i+1} \\ 0,&amp; \text{others}\end{array}\right.$</p>
+<p>$\mathrm{Mangoldt}$函数$\Lambda(n)&#x3D;\left\lbrace\begin{array}{lc} \log p,&amp;n&#x3D;p^k,k\ge 1 \\ 0, &amp;others\end{array}\right.$</p>
+<p>$\mathrm{Liouville}$函数$\lambda(n) &#x3D; (-1)^{\Omega(n)}$</p>
+<h1 id="Dirichlet-乘积-x2F-卷积"><a href="#Dirichlet-乘积-x2F-卷积" class="headerlink" title="Dirichlet 乘积 &#x2F;卷积"></a>Dirichlet 乘积 &#x2F;卷积</h1><div class="note no-icon success"><p>定义2: $f(n),g(n)$是两个数论函数,$h&#x3D;f * g$称作Dirichlet 乘积&#x2F;卷积</p>
+<p>$\displaystyle h(n) &#x3D; \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x相乘为n的对应y的乘积的和, 所以也可以写成$(f * g)(n) &#x3D;\sum_{ab &#x3D; n}f(a)g(b)$
+  </p>
+</div>
+
+<p>定理1: Dirichlet乘积满足 交换率$f * g &#x3D; g * f$和结合率$(f * g)* h &#x3D; f * (g * h)$</p>
+<p>一个重要的公式(算法竞赛里拆$\gcd(a,b)&#x3D;1$会使用) $I &#x3D; \mu * u &#x3D; \mu * 1 &#x3D; \sum_{d|n} \mu(d) &#x3D; \left\lbrace \begin{array}{lc} 1,&amp;n&#x3D;1\\ 0, &amp; n&gt;1 \end{array}\right.$<br>证明$\sum_{d|n} \mu(d) &#x3D; \mu(1)+\mu(p_1)+\cdots+\mu(p_s)+\cdots+\mu(p_1p_2)+\cdots+\mu(p_1p_2\cdots p_s)$ </p>
+<p>$&#x3D; 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} &#x3D; (1-1)^s$</p>
+<div class="note no-icon success"><p>定义3: 若 $I &#x3D; f * g$ 则$f$和$g$互为Dirichlet的逆</p>
+</div>
+
+<p>定理2: $f * I &#x3D; I * f &#x3D; f$</p>
+<div class="note no-icon success"><p>定义4: $F&#x3D;f*u$ 则$F$称作$f$的$\mathrm{M\ddot{o}bius}$变换, $F(n) &#x3D; \sum_{d|n} f(d)$, 如$d&#x3D;u * u, I &#x3D; \mu * u$</p>
+</div>
+
+<p>定理3(这也就是算法里常见的Mobius反演): $F&#x3D;f * u \Rightarrow f&#x3D;F * \mu$, $F(n) &#x3D; \sum_{d|n} f(d) \Rightarrow f(n)&#x3D;\sum_{d|n} F(d)\mu(\frac{n}{d})$, 反向一样的推法</p>
+<p>证明$F * \mu &#x3D; (f * u) * \mu &#x3D; f * (u * \mu) &#x3D; f * I &#x3D; f$</p>
+<p>例1: 证明$e &#x3D; \phi * u$, 即要证明$n&#x3D;\sum_{d|n}\phi(d)$, 因为根据定义$\phi(n)&#x3D;\sum_{d|n} \mu(d)\frac{n}{d}$即$\phi &#x3D; \mu * e$</p>
+<p>例2: 证明$\log n &#x3D; \Lambda * u$, 即要证明$\log n&#x3D;\sum_{d|n}\Lambda(d)$, 展开$d$即可,这样得到另一种表达方式$\Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log{\frac{n}{d}}$</p>
+<h1 id="可乘函数"><a href="#可乘函数" class="headerlink" title="可乘函数"></a>可乘函数</h1><blockquote>
+<p>可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来<br>完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
+</blockquote>
+<div class="note no-icon success"><p>定义5: 定义在全体自然数上，且不恒等于零的数论函数,若$f(mn)&#x3D;f(m)f(n), \gcd(m,n)&#x3D;1$,则称它为可乘&#x2F;积性函数,若没有$\gcd$的限制，全部满足$f(mn)&#x3D;f(m)f(n)$则称作完全&#x2F;绝对 可乘函数</p>
+</div>
+
+<p>例3: $\mu(n),d(n)$为可乘函数与,$\mathrm{Liouville}$函数,$e^\lambda(n)&#x3D;n^{\lambda},I(n)$ 为完全可乘函数</p>
+<p>定理4: 可乘函数$f(n)$有如下性质</p>
+<ul>
+<li>$f(1)&#x3D;1$</li>
+<li>$f(n)&#x3D;f(p_1^{\alpha_1})f(p_2^{\alpha_2})\cdots f(p_s^{\alpha_s})$</li>
+<li>$f(n)$完全可乘充要条件$\forall p,k\ge 1, f(p^k)&#x3D;f^k(p)$, 相当于解除了gcd限制</li>
+<li>$f * u$($f$的Mobius变换)依然是可乘函数</li>
+</ul>
+<p>推论1: $f(n)$可乘, $F(n)&#x3D;\sum_{d|n} f(d) &#x3D; \prod_{p_i|n} (1+f(p_i)+\cdots+f(p_i^{\alpha_i}))$</p>
+<p>又此$\sum_{d|n}\mu(d)f(d) &#x3D; \prod_{p_i|n} (1+\mu(p_i)f(p_i)+\cdots+\mu(p_i^{\alpha_i})f(p_i^{\alpha_i})) &#x3D; \prod_{p_i|n} (1-f(p_i))$</p>
+<p>因此$\phi$另一个表达$\displaystyle \phi(n)&#x3D;\sum_{d|n}\mu(d)\frac{n}{d}&#x3D;n\prod_{d|n}(1-\frac{1}{p})$</p>
+<p>类似的 $f(n)$完全可乘, $F(n)&#x3D;\sum_{d|n} f(d) &#x3D; \prod_{p_i|n} (1+f(p_i)+\cdots+f^{\alpha_i}(p_i))$</p>
+<p>例4: $\sigma(n)&#x3D;\sum_{d|n} d&#x3D;\frac{p_1^{a_1+1}-1}{p_1-1}\frac{p_2^{a_2+1}-1}{p_2-1}\cdots \frac{p_s^{a_s+1}-1}{p_s-1}$, 也就是$\sigma &#x3D; e * u$</p>
+<p>定理5: $f(n)$为可乘函数,则$f(\gcd(m,n))f(\mathrm{lcm}(m,n))&#x3D;f(m)f(n)$, 也就是不同p之间互不影响，相同p相当于min和max了</p>
+<p>定理6: 若$f,g$可乘,则$f * g$可乘,若$f,f * g$可乘,则$g$可乘</p>
+<p>正向的，相当于上面Mobius保持可乘性只是$g &#x3D; u$的特例， 即证明$(f * g)(mn)&#x3D;(f * g)(m)(f * g)(n), \gcd(m,n) &#x3D; 1$, 同样拆$d&#x3D;d_1d_2$即可</p>
+<p>对于后面的,用反证法, 若$f$不可乘 &#x3D;&gt; 存在$f(mn)\ne f(n)f(m),\gcd(m,n)&#x3D;1$, 选最小mn, 即$&lt;mn$时还是可乘，这样同样做拆解，会唯一多出$f(mn)-f(n)f(m)$导致而不等</p>
+<p>推论2: $F&#x3D;f * \mu$, 根据上面$F$可乘,则$f$也可乘</p>
+<p>定理7: $f$为$f(1)\ne 0$的数论函数, 一定存在唯一的DIrichlet逆$f^{-1}$</p>
+<p>并且由$f^{-1}(1) &#x3D; \frac{1}{f(1)},f^{-1}(n) &#x3D; \frac{-1}{f(1)}\sum_{d|n,d&lt;n} f(\frac{n}{d})f^{-1}(d),n &gt; 1$得出</p>
+<p>也就是要证明$f * f^{-1} &#x3D; I$只有唯一解, 直接归纳从n&#x3D;1向上($1&#x3D;I(1)&#x3D;f(1)f^{-1}(1)&#x3D;1,0&#x3D;I(n)&#x3D;\sum_{d|n}f(\frac{n}{d})f^{-1}(d),n&gt;1$)</p>
+<p>推论3: 可乘函数必定有Dirichlet逆存在,且也是可乘函数</p>
+<p>定理8: $f(1) \ne 0,g(1)\ne 0$, $(f * g)^{-1} &#x3D; f^{-1} * g^{-1}$</p>
+<p>$h &#x3D; f*g$可乘</p>
+<p>$h * h^{-1} &#x3D; I$</p>
+<p>$g^{-1} * f^{-1} &#x3D; h^{-1} * h * f^{-1} * g^{-1} &#x3D; h^{-1} * (g * f) * f^{-1} * g^{-1} &#x3D; h^{-1}$</p>
+<p>定理9: $f$可乘, 若$f$完全可乘的充要条件是$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
+<p>因为$f$可乘$f(1)&#x3D;1$</p>
+<p>必要性: 若$f$完全可乘,令$g(n)&#x3D;\mu(n)f(n)$,有$(g * f)(n)&#x3D;\sum_{d|n}\mu(d)f(d)f(\frac{n}{d})&#x3D;f(n) \sum_{d|n}\mu(d)&#x3D;f(n)I(n)&#x3D;I(n)$, 即$g&#x3D;f^{-1}$ </p>
+<p>充分性:若$f^{-1}(n)&#x3D;\mu(n)f(n)$, 那么要证明的就是$\forall p,\alpha, f(p^\alpha)&#x3D;f^\alpha(p)$</p>
+<p>$I&#x3D;\sum_{d|n}\mu(d)f(d)f(\frac{n}{d})$</p>
+<p>任取$n&#x3D;p^\alpha, \alpha &gt; 0$</p>
+<p>$0&#x3D;\mu(1)f(1)f(p^\alpha)+\mu(p)f(p)f(p^{\alpha-1})$</p>
+<p>即 $f(p^\alpha)&#x3D;f(p)f(p^{\alpha-1})$</p>
+<p>例5: $\sigma_\lambda^{-1} &#x3D; (e^{\lambda})^{-1} * u^{-1} &#x3D; \mu e^{\lambda} * \mu$, </p>
+<p>$\phi^{-1}&#x3D;\mu^{-1} * e^{-1}&#x3D;u * \mu e$</p>
+<p>$d^{-1} &#x3D; u^{-1} * u^{-1} &#x3D; \mu * \mu$</p>
+<p>例6: $g&#x3D;\lambda * u &#x3D;\left\lbrace \begin{array}{lc}1,&amp;n&#x3D;k^2\\ 0,&amp; others\end{array}\right.$<br>$g^{-1}&#x3D;\sum_{d|n}\mu(d)\lambda(d)\mu(\frac{n}{d})$</p>
+<p>可乘函数对于每个质数因子处理后再乘起来, 可以证明1</p>
+<h1 id="阶的估计"><a href="#阶的估计" class="headerlink" title="阶的估计"></a>阶的估计</h1><p>$f$任意函数,$g$正值函数,若存在与$x$无关的常数$A$,使$|f(x)|\le Ag(x)$对于充分大$x$都成立,则$f(x)&#x3D;O(g(x))$或$f(x) \ll g(x)$</p>
+<p>如$\sin(x)\ll 1,x\cos x\ll x^2,\sqrt{3x^2+7}\ll x$</p>
+<p>定理, 对任意正整数$n$有$x^n &#x3D; O(e^x)$, 因为$x^n \le n! e^x$</p>
+<p>若$\lim_{x\to +\infty} \frac{f(x)}{g(x)} &#x3D; 1$, 则称作当$x\to +\infty$时$f(x)\sim g(x)$</p>
+<p>定理11: 对于任何正数$\alpha$不可能有$d(n) &#x3D; O(\log ^\alpha n)$</p>
+<p>核心思想就是构建 $A\log^\alpha n &gt; d(n) &gt; c_{\alpha}\log^{&gt;\alpha} n$, 因为构建出来的话意味着右边幂次更大，随着n无限增长总会超过左边, 所以就是考虑如何造出 $d(n) &gt; c_{\alpha}\log^{&gt;\alpha} n$， 取$n&#x3D;(p_1p_2\cdots p_l)^m$</p>
+<p>定理12: 对于任意$\epsilon &gt; 0$一定有$d(n) &#x3D; O(n^\epsilon)$</p>
+<p>$\displaystyle \frac{d(n)}{n^{\epsilon}}&#x3D;\prod \frac{\alpha_i+1}{p^{\alpha_i\epsilon}} \le (\frac{2}{\epsilon \log 2})^{2^{\frac{1}{\epsilon}}}$, (讨论$p^\alpha$与2的关系，和个数，</p>
+<p>由于数论函数数值的不规则性，我们经常去研究它的算术平均值$\displaystyle \bar{f}(n)&#x3D;\frac{\sum_{m\le n}f(m)}{n}$</p>
+<p>$\bar{d}(n) &#x3D;\frac{1}{n}\sum_{m\le n} d(m) \sim \log n$, 称作$d$的平均阶为$\log n$ (稍后证明)</p>
+<p>引理1: 当$x$充分大时 $\sum_{n\le x}\frac{1}{n} &#x3D; \log x + \gamma + O(\frac{1}{x})$, 其中$\gamma$是Euler常数</p>
+<p>$\displaystyle \sum_{n\le x}\frac{1}{n}&#x3D;\sum_{n\le x}\frac{\int_{n}^{n+1}dt}{n}$</p>
+<p>$&#x3D;(\sum_{n\le x}\int_{n}^{n+1}(\frac{1}{n}-\frac{1}{t})dt)+\int_{1}^{[x]+1}(\frac{1}{t})dt$</p>
+<p>$&#x3D;(\sum_{n\le x}\int_{n}^{n+1}(\frac{1}{n}-\frac{1}{t})dt)+\log([x]+1)$</p>
+<p>$&#x3D;\gamma+O(\frac{1}{x})+\log([x]+1)$</p>
+<p>当$x$充分大时</p>
+<p>$\displaystyle \sum_{n\le x} d(n) &#x3D; \sum_{n\le x}\sum_{d|n} 1$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}\sum_{d|n,n\le x} 1$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}[\frac{x}{d}]$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}\frac{x}{d} - \lbrace\sum_{d \le x}\frac{x}{d}\rbrace$</p>
+<p>$\displaystyle &#x3D; x\sum_{d \le x}\frac{1}{d} +O(x)$</p>
+<p>$\displaystyle &#x3D; x(\log x+\gamma +O(\frac{1}{x}))+O(x)$</p>
+<p>$\displaystyle &#x3D; x\log x+\gamma x+O(1)+O(x)$</p>
+<p>$\displaystyle &#x3D; x\log x+O(x)$ (这里的估计还是很粗糙,见定理18)</p>
+<p>因此$\bar{d}(n) \sim \log n$得证</p>
+<h1 id="广义Dirichlet乘积"><a href="#广义Dirichlet乘积" class="headerlink" title="广义Dirichlet乘积"></a>广义Dirichlet乘积</h1><blockquote>
+<p>看起来这里用例不少是为了简化阶的估计</p>
+</blockquote>
+<p>研究$\sum f(n)H(\frac{x}{n})$, 有什么不同,一个例子是上面的$f(2)$不会对$(f * g)(3)$贡献,而这里会,并且非整数的地方也有值, 记作$f \circ H$</p>
+<p>$f$为数论函数,$H$为定义在$(0,+\infty)$上的函数,$H(x)&#x3D;0,x\in(0,1)$</p>
+<p>$G(x) &#x3D; (f\circ H)(x) &#x3D; \sum_{n\le x} f(n)H(\frac{x}{n})$</p>
+<p>若$H(x) &#x3D; 0,x$不是整数时,则</p>
+<p>$(f\circ H)(x) &#x3D; \left\lbrace \begin{array}{lc}0,&amp;x\not\in \mathbb{Z}\\ (f * H)(x),&amp; x\in \mathbb{Z} \end{array}\right.$</p>
+<p>$I\circ H &#x3D; H$</p>
+<p>定理14: $f \circ (g\circ H) &#x3D; (f * g)\circ H$</p>
+<p>取$f&#x3D;g&#x3D;u,H(x)&#x3D;U(x)&#x3D;\left\lbrace \begin{array}{lc}0,&amp; 0&lt;x&lt;1\\ 1,&amp;x\ge 1\end{array}\right.$</p>
+<p>有$g \circ H &#x3D; \sum_{n\le x}1 &#x3D; [x]$</p>
+<p>$f\circ(g \circ H) &#x3D; \sum_{n\le x} [\frac{x}{n}]$</p>
+<p>因为$d&#x3D;u * u$, $d\circ H &#x3D; \sum_{n\le x}d(n)$</p>
+<p>即$\sum_{n\le x}d(n) &#x3D; \sum_{n\le x} [\frac{x}{n}]$</p>
+<p>定理15, 设f有Dirichlet逆$f^{-1}$， $G&#x3D;f\circ H$, 则$H&#x3D;f^{-1}\circ G$</p>
+<p>推论4: 若$f$完全可乘,$G&#x3D;f\circ H,H&#x3D;(\mu(n)f(n))\circ G$</p>
+<p>定理16: $h&#x3D;f * g, H&#x3D;h\circ U,F&#x3D;f\circ U,G&#x3D;g\circ U$, 则$H(x)&#x3D;f \circ G &#x3D; g \circ F$</p>
+<p>推论5: $F&#x3D;f\circ U$,则$\displaystyle \sum_{n\le x}\sum_{d|n} f(d) &#x3D; \sum_{n\le x}F(\frac{x}{n})$, 就是$(u * f) \circ U&#x3D;u \circ ( f \circ U)$<br>例7: $\sum_{n\le x}\mu(n)[\frac{x}{n}]&#x3D;1$,即$\mu \circ(u\circ U) &#x3D; I \circ U &#x3D; U$</p>
+<p>定理17: 设$h&#x3D;f * g,F&#x3D;f\circ U,G&#x3D;g\circ U,H&#x3D;h\circ U$, 对任意$ab&#x3D;x$的正数$a,b$恒有</p>
+<p>$H(x)&#x3D;\sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>$\displaystyle H(x)&#x3D;\sum_{n\le x}(\sum_{d_1d_2&#x3D;n}f(d_1)g(d_2))$</p>
+<p>$\displaystyle &#x3D;\sum_{d_1d_2\le x} f(d_1)g(d_2)$</p>
+<p>$\displaystyle &#x3D;\sum_{d_1\le a} (\sum_{d_2\le\frac{x}{d_1}} f(d_1)g(d_2)) + \sum_{d_2\le b} (\sum_{d_1\le\frac{x}{d_2}} f(d_1)g(d_2)) -\sum_{d_1\le a,d_2\le b} f(d_1)g(d_2)$, 容斥原理</p>
+<p>$&#x3D;\sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>定理18: 我们可以用这个对$d(n)$重新估计</p>
+<p>$f&#x3D;g&#x3D;u$因此$h&#x3D;f * g &#x3D;u * u&#x3D;d$,取$a&#x3D;b&#x3D;\sqrt{x}$</p>
+<p>$\sum_{n\le x}d(n) &#x3D; H(x) &#x3D; \sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>$&#x3D;2\sum_{n\le \sqrt{x}}[\frac{x}{n}] - [\sqrt{x}]^2$</p>
+<p>$&#x3D;2\sum_{n\le \sqrt{x}}(\frac{x}{n} - \lbrace \frac{x}{n} \rbrace) - (\sqrt{x}-\lbrace\sqrt{x}\rbrace)^2$</p>
+<p>$&#x3D;x\log x+(2\gamma -1)x + O(\sqrt{x})$</p>
+<p>定理19: $\sum_{n\le x} \sigma(n) &#x3D; \frac{\pi^2}{12} x^2 + O(x\log x)$</p>
+<p>$\sigma &#x3D; e * u$</p>
+<p>$\displaystyle \sigma \circ U &#x3D; u\circ(e\circ U) &#x3D;\sum_{n\le x}\sum_{m\le \frac{x}{n}} m&#x3D;\sum_{n\le x} \frac{1}{2}<a href="%5B%5Cfrac%7Bx%7D%7Bn%7D%5D+1">\frac{x}{n}</a>$</p>
+<p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}(\frac{x}{n}+O(1))(\frac{x}{n}+O(1))$</p>
+<p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}\frac{x^2}{n^2}+O(\sum_{n\le x}\frac{x}{n})+O(x)$</p>
+<p>$\displaystyle &#x3D;\frac{x^2}{2}\sum_{n}\frac{x^2}{n^2}-\frac{x^2}{2}\sum_{n &gt; x}\frac{x^2}{n^2}+O(x\log x)$</p>
+<p>$&#x3D; \frac{\pi^2}{12} x^2+O(\frac{1}{[x]})+O(x\log x)$</p>
+<p>$&#x3D; \frac{\pi^2}{12} x^2+O(x\log x)$</p>
+<p>定理20: $\sum_{n\le x}\phi(x)&#x3D;\frac{3}{\pi^2}x^2+O(x\log x)$</p>
+<p>$\phi &#x3D; \mu * e$</p>
+<p>$\displaystyle \sum_{n\le x}\phi(x)&#x3D;\sum_{n\le x}\mu(n)\sum_{m\le \frac{x}{n}} m$</p>
+<p>$\displaystyle &#x3D;\sum_{n\le x}\mu(n)\frac{1}{2}<a href="%5B%5Cfrac%7Bx%7D%7Bn%7D%5D+1">\frac{x}{n}</a>$</p>
+<p>$\displaystyle&#x3D;\frac{1}{2}\sum_{n\le x}\mu(n)(\frac{x}{n}+O(1))^2$</p>
+<p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n\le x}\frac{\mu(n)}{n^2}+O(x\log x)$</p>
+<p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n&#x3D;1}^\infty \frac{\mu(n)}{n^2}+O(x\log x)$</p>
+<p>$\frac{\pi^2}{6}\sum_{d&#x3D;1}^\infty \frac{\mu(d)}{d^2}&#x3D;\sum_{a&#x3D;1}^\infty \frac{1}{a^2} \sum_{d&#x3D;1}^\infty \frac{\mu(d)}{d^2}&#x3D;\sum_{n&#x3D;1}^{\infty} \frac{\sum_{d|n} \mu(d)}{n^2} &#x3D;\sum_{n&#x3D;1}^{\infty} \frac{I(n)}{n^2} &#x3D; 1$, 考虑$n&#x3D;ad$</p>
+<p>原式 $\displaystyle&#x3D;\frac{3}{\pi^2}x^2+O(x\log x)$</p>
+<p>定理21: $Q(x)&#x3D;$不超过$x$的无平方因子的正整数的个数, $\sum_{Q(x)}&#x3D;\frac{6}{\pi^2}x+O(\sqrt x)$</p>
+<p>不大于$x$且最大平方因子为$k^2$的数个数为$Q(\frac{x}{k^2})$,相当于$v &#x3D; mk^2 \le x,m$中没有平方因子,所以和求$\le \frac{x}{k^2}$的无平方因子的正整数是一样的子问题</p>
+<p>$\sum_{k\le \sqrt{x}}Q(\frac{x}{k^2}) &#x3D; [x]$</p>
+<p>$\displaystyle Q(x)&#x3D;\sum_{n\le \sqrt{x}}Q(\frac{x}{d^2})I(d)&#x3D;\sum_{n\le \sqrt{x}}Q(\frac{x}{d^2})\sum_{d|n}\mu(d)$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) \sum_{d|n,n\le \sqrt{x}} Q(\frac{x}{d^2})$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) \sum_{k\le \sqrt{\frac{x}{d^2}}} Q(\frac{x}{d^2k^2})$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) [\frac{x}{d^2}]$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) (\frac{x}{d^2}+O(1))$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\frac{x\mu(d)}{d^2}+O(\sqrt{x})$</p>
+<p>$\displaystyle &#x3D;\frac{6}{\pi^2}x+O(\sqrt{x})$</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1>]]></content>
       <categories>
+        <category>数论</category>
         <category>数论基础</category>
       </categories>
       <tags>
         <tag>数论基础</tag>
+        <tag>Dirichlet乘积</tag>
+        <tag>Dirichlet逆</tag>
+        <tag>可乘函数</tag>
+        <tag>完全可乘函数</tag>
+        <tag>Mobius变换</tag>
+        <tag>Mobius反演</tag>
       </tags>
   </entry>
 </search>

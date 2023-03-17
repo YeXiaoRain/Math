@@ -27,7 +27,7 @@
 <meta property="og:description" content="1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-03-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-16T21:20:11.090Z">
+<meta property="article:modified_time" content="2023-03-17T04:01:03.994Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="数论基础">
 <meta property="article:tag" content="辗转相除">
@@ -93,7 +93,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">5</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">18</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">17</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">5</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">25</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -176,7 +176,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/Math/tags/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -274,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-03-17 05:20:11" itemprop="dateModified" datetime="2023-03-17T05:20:11+08:00">2023-03-17</time>
+      <time title="修改時間：2023-03-17 12:01:03" itemprop="dateModified" datetime="2023-03-17T12:01:03+08:00">2023-03-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,7 +282,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/Math/categories/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数论基础</span></a>
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数论基础</span></a>
         </span>
     </span>
 
@@ -329,7 +333,9 @@
         <p>ISBN 9787040364729</p>
 <span id="more"></span>
 
-<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><div class="note no-icon success"><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+</div>
+
 <p>性质:</p>
 <ul>
 <li>$b\ne 0$,$c$唯一</li>
@@ -338,7 +344,9 @@
 <li>$a\ne 0,b|a \Rightarrow |b| \le |a|$</li>
 <li>$b|a_1,b|a_2 \Rightarrow b|m_1a_1+m_2a_2, (\forall m_1,m_2)$</li>
 </ul>
-<p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+<div class="note no-icon success"><p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+</div>
+
 <p>定理1: $p | d \Rightarrow p\le \sqrt{|d|}$</p>
 <p>定理2: 素数无穷多个(反正法假设有最大,构造$\prod p_i +1$)</p>
 <p>定理3: $a&gt;1$则$a$可以被表示成多个素数之积 每次最小因子必定素数，递降法</p>
@@ -346,8 +354,12 @@
 <p>定理5(算术基本定理): $p|ab,p \nmid a \Rightarrow p | b$,其中$p$是质数</p>
 <p>定理5.1(算术基本定理): $p|a_1a_2\cdots$其中$p$是质数,则存在某个$i$让$p | a_i$</p>
 <p>定理6(算术基本定理): $n&gt;1$ $n$有素数的唯一分解(同定理3), 推论$n$的因子的对应质数的幂次不大于$n$中对应质数的幂次</p>
-<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
-<p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><div class="note no-icon success"><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
+</div>
+
+<div class="note no-icon success"><p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+</div>
+
 <p>定理7: $b_1,\cdots,b_k$的任意公倍数,都是最小公倍数的倍数,(反证法 $l’&#x3D;kl+r,r\in[1,l)$ 则$r$小于$l$也是公倍数 矛盾)</p>
 <p>推论3: $\mathrm{lcm}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{lcm}(\mathrm{lcm}(a_1,\cdots,a_n),\mathrm{lcm}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
 <p>定理8: $a_1,\cdots,a_k$的任意公共因数一定是它们最大公因数的因数,(反证$d &lt; \mathrm{lcm}(d_1,d) | a_i$)</p>
@@ -391,22 +403,39 @@
 <p>定理19: $\prod_{i&#x3D;1}^{k} \frac{a+i}{i}$ 必定是整数, (一个是这就是$\binom{a+k}{k}$,用上面相关的就是直接讨论$\le k$质因子的幂次,$[\frac{a+k}{p^r}]\ge [\frac{a}{p^r}]+[\frac{k}{p^r}]$)</p>
 <p>推论11: $n&#x3D;s_1+s_2+\cdots+s_k, \frac{n!}{s_1!s_2!\cdots s_k!}$是整数, (一样)</p>
 <p>定理20: $p$为素数,则任意$x$有$p|x^p-x$, (归纳$x$,$x&#x3D;0$时成立,$(x+1)^p-(x+1) &#x3D; x^p-x + \binom{p}{\cdots}(\cdots)$</p>
-<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
 <p>4m+3,讨论末尾是+3还是+1,如果是+3,则再+4,如果是+1,则再+2</p>
 <p>6m+5,讨论末尾是+5还是+1,如果是+5,则再+6,如果是+1,则再+4</p>
-<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
+
+</details>
+
+<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-x3D-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
 <p>$2^m\equiv 1 \pmod d$</p>
 <p>$2^n \equiv -1 \pmod d$</p>
 <p>$2^{\mathrm{gcd}(m,n)} &#x3D; 2^{\mathrm{gcd}(m,2n)} &#x3D; 2^{xm+2ny} &#x3D; (2^{m})^{x}(2^{2n})^y \equiv 1^x1^y \equiv 1 \pmod d$</p>
 <p>$2^n &#x3D; (2^{\mathrm{gcd}(m,n)})^{\frac{n}{\mathrm{gcd}(m,n)}} \equiv 1^{\frac{n}{\mathrm{gcd}(m,n)}}\equiv 1 \pmod d$</p>
 <p>对于$d&#x3D;2k+1$矛盾</p>
-<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
+
+</details>
+
+<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
 <p>也就是要证明 $[2x]+[2y] \ge [x]+[y]+[x+y]$</p>
 <p>$[2([x]+\lbrace x\rbrace)]+[2([y]+\lbrace y\rbrace)] \ge [[x]+\lbrace x\rbrace]+[[y]+\lbrace y\rbrace]+[[x]+\lbrace x\rbrace+[y]+\lbrace y\rbrace]$</p>
 <p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace]+[\lbrace y\rbrace]+[\lbrace x\rbrace+\lbrace y\rbrace]$</p>
 <p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace+\lbrace y\rbrace]$, 右侧取$0$则左侧始终成立,右侧取$1$,至少一个$\ge \frac{1}{2}$, 同样成立</p>
+
+</details>
+
 <h2 id="28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子"><a href="#28-k-为正整数-n-可以唯一表示成-n-x3D-lm-k-其中-l-没有任何-k-次方因子" class="headerlink" title="28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子"></a>28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子</h2><p>$p$的幂次$w$唯一表示 $w &#x3D; qk+r$</p>
 <p>28.2 实数$A &gt; 0$则$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; [A]$, 其中$\sum’$表示无$k$次方因子的$z$求和</p>
+<details class="note info no-icon"><summary><p>Proof</p>
+</summary>
 <p>首先$A&#x3D;zm^k$ 才会让左侧内部 $\displaystyle \sqrt[k]{\frac{A}{z}}$为正整数, 因此$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{[A]}{z}}]$ (A与它的整部之间不会有其它的值让整个为正整数, 或者说对于给定$k$, 它的整部不变时对应的A的区间的端点都是整数,且除了最初的$z$,后续的都是)</p>
 <p>$A&#x3D;0$时显然, 所以只需要证明对于 任意正整数$A$, 有$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; A$</p>
 <p>对$A$进行归纳,</p>
@@ -416,7 +445,12 @@
 <p>若$A+1$ 的质数最高幂次 $\ge k$, 则$A+1 &#x3D; z_0m^k$(唯一表示),且$z_0 &lt; A$</p>
 <p>对于$z_0$有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]+1&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$<br>对于其它$z \ne z_0, z \le A$,有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$</p>
 <p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A}{z_0}}]+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{z_0}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
-<h2 id="30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1"><a href="#30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><p><a target="_blank" rel="noopener" href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
+
+</details>
+
+<h2 id="30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1"><a href="#30-Beatty定理，1926-alpha-beta-gt-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-x3D-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p><a target="_blank" rel="noopener" href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
 <p>$\Leftarrow :$</p>
 <p>反正法: 若存在$k&#x3D;[\alpha x]&#x3D;[\beta y]$</p>
 <p>即$k &lt; \alpha x &lt; k+1,k &lt; \beta y &lt; k+1$</p>
@@ -436,6 +470,7 @@
 <p>那么极限保号$\displaystyle \beta \ge \lim_{\frac{p}{q}\to \alpha} \frac{p}{p-q}&#x3D;\lim_{\frac{p}{q}\to \alpha} \frac{\frac{p}{q}}{\frac{p}{q}-1} &#x3D; \frac{\alpha}{\alpha-1}$<br>从另一侧$\alpha &gt; \frac{p}{q}$, 极限也会得到$\beta \le \frac{\alpha}{\alpha-1}$, 于是有$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</p>
 <p>证无理数: $[q\frac{p}{q}]&#x3D;p&#x3D;[(p-q)\frac{p}{p-q}]$</p>
 
+</details>
     </div>
 
     
@@ -521,13 +556,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">49k</span>
+    <span title="總字數">60k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">45 分鐘</span>
+    <span title="所需總閱讀時間">55 分鐘</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
