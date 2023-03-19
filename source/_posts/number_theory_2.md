@@ -16,7 +16,7 @@ ISBN 9787040364729
 定义1: 在全体正整数上定义的函数是数论函数
 {% endnote %}
 
-$u(n)=1 , n\ge 1$
+$u(n)=1 , n\ge 1$, $u\circ U = [x]$
 
 $e(n)=n , n\ge 1$
 
@@ -29,11 +29,13 @@ $\omega(n) =$不同质数因子个数
 
 $\displaystyle \sigma_\lambda(n)=\sum_{d|n} d^\lambda$ 正除数的幂和函数$\sigma = e * u$
 
-$\displaystyle \phi(n)=\sum_{1\le d \le n,\gcd(d,n)=1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi=\mu * e$
+$\displaystyle \phi(n)=\sum_{1\le d \le n,\gcd(d,n)=1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi=\mu * e=n\prod_{d|n}(1-\frac{1}{p})$
 
 $\mathrm{M\ddot{o}bius}$函数 $\mu(n) =\left\lbrace \begin{array}{lc}1,& n=1 \\\\ (-1)^s, & n=p_1p_2\cdots p_s, p_i<p_{i+1} \\\\ 0,& \text{others}\end{array}\right.$
 
 $\mathrm{Mangoldt}$函数$\Lambda(n)=\left\lbrace\begin{array}{lc} \log p,&n=p^k,k\ge 1 \\\\ 0, &others\end{array}\right.$
+
+$\displaystyle \log n=\sum_{d|n}\Lambda(d)$, 这样得到另一种表达方式$\displaystyle \Lambda(n)=\sum_{d|n}\mu(d)\log{\frac{n}{d}}$
 
 $\mathrm{Liouville}$函数$\lambda(n) = (-1)^{\Omega(n)}$
 
@@ -79,7 +81,7 @@ $= 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
 
 # 可乘函数 
 
-> 可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来
+> 可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来,证明时对于可乘函数也只需要证明质数幂次的情况
 > 完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)=\mu(n)f(n)$
 
 {% note no-icon success %}
@@ -277,7 +279,7 @@ $=x\log x+(2\gamma -1)x + O(\sqrt{x})$
 
 $\sigma = e * u$
 
-$\displaystyle \sigma \circ U = u\circ(e\circ U) =\sum_{n\le x}\sum_{m\le \frac{x}{n}} m=\sum_{n\le x} \frac{1}{2}[\frac{x}{n}]([\frac{x}{n}]+1)$
+$\displaystyle \sigma \circ U = u\circ(e\circ U) =\sum_{n\le x}\sum_{m\le \frac{x}{n}} m=\sum_{n\le x} \frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$
 
 $\displaystyle =\frac{1}{2}\sum_{n\le x}(\frac{x}{n}+O(1))(\frac{x}{n}+O(1))$
 
@@ -295,7 +297,7 @@ $\phi = \mu * e$
 
 $\displaystyle \sum_{n\le x}\phi(x)=\sum_{n\le x}\mu(n)\sum_{m\le \frac{x}{n}} m$
 
-$\displaystyle =\sum_{n\le x}\mu(n)\frac{1}{2}[\frac{x}{n}]([\frac{x}{n}]+1)$
+$\displaystyle =\sum_{n\le x}\mu(n)\frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$
 
 
 $\displaystyle=\frac{1}{2}\sum_{n\le x}\mu(n)(\frac{x}{n}+O(1))^2$
@@ -331,3 +333,124 @@ $\displaystyle =\frac{6}{\pi^2}x+O(\sqrt{x})$
 
 # 习题
 
+## 9. $\lambda(n)=(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k=1}^{[x]}\lambda(k)[\frac{x}{k}]=[\sqrt{x}]$
+
+
+{% note info no-icon Proof %}
+
+$\sum_{d|n}\lambda(d)d^s = \sum_{d|n,d=\prod p_i^{\beta_i}} (-1)^{\sum \beta_i}(\prod {p_i}^{\beta_i})^s$
+
+$= \sum_{n=\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \prod (-p_i^s)^{\beta_i }$
+
+$= \prod_{i,n=\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \sum_{j=0}^{\alpha_i} (-p_i^s)^{j}$
+
+$= \prod_{i,n=\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \frac{1-(-p_i^s)^{\alpha_i+1}}{1+p_i^s}$
+
+$\sum_{k=1}^{[x]}\lambda(k)[\frac{x}{k}]=\sum_{k=1}^{[x]}\lambda(k)[\frac{[x]}{k}] = (\lambda \circ (u\circ U))([x])$
+
+$=((\lambda * u)\circ U)([x])$
+
+$(\lambda * u)(n) = \left\lbrace\begin{array}{lc} 1,& n=k^2 \\\\ 0,& \text{others}\end{array}\right.$
+
+{% endnote %}
+
+## 14. 设$\displaystyle s(n)=\sum_{j\in[1,n],\gcd(j,n)=1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}=\frac{1}{n^2}\sum_{j=1}^n j^2$,$s(n)=n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$
+
+{% note info no-icon Proof %}
+
+通过和n的gcd来分类
+
+$\frac{1}{n^2}\sum_{j=1}^nj^2$
+
+$=\frac{1}{n^2}\sum_{d|n}\sum_{j\in[1,n],\gcd(j,n)=d} j^2$
+
+$=\frac{1}{n^2}\sum_{d|n}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})=1} (id)^2$
+
+$=\sum_{d|n}\frac{d^2}{n^2}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})=1} i^2$
+
+$=\sum_{d|n}\frac{s(\frac{n}{d})}{(\frac{n}{d})^2}$
+
+$=\sum_{d|n}\frac{s(d)}{d^2}$
+
+$s * e_2 = \sum_{j=1}^n j^2 = \frac{n(n+1)(2n+1)}{6}=\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}$
+
+$e_2$完全可乘
+
+$e_2^{-1} = \mu e_2$
+
+$s = s * e_2 * e_2^{-1} = (\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}) * (\mu e_2)$
+
+$=\sum_{d|n} (\frac{n^3}{3d^3}\mu(d)d^2+\frac{n^2}{2d^2}\mu(d)d^2+\frac{n}{6d}\mu(d)d^2)$
+
+$=\frac{n^2}{3} (\mu * e) +\frac{n^2}{2}(\sum_{d|n}\mu(d))+\frac{n}{6}\sum_{d|n}\mu(d)d$
+
+{% endnote %}
+
+## 16. 求所有使得$\phi(n)= 24$
+
+{% note info no-icon Proof %}
+
+$\phi(n)=n\prod_{p|n}\frac{p-1}{p}$
+
+所以考察所有$24$的因数+1的质因子$2,3,5,7,13$的组合情况
+
+又注意到$\phi$是可乘函数$24=2^33$
+
+$\phi(2)=1,\phi(2^2)=2,\phi(2^3)=4,\phi(2^4)=8$
+
+$\phi(3)=2,\phi(3^2)=6,\phi(3^3)=4$
+
+$\phi(5)=4$
+
+$\phi(7)=6$
+
+$\phi(13)=12$
+
+所以有$13\cdot 3,13\cdot 3\cdot 2,13\cdot 2^2\cdots$
+
+{% endnote %}
+
+## 17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$ 
+
+{% note info no-icon Proof %}
+
+$\phi(n)=n\prod_{p|n}(1-\frac{1}{p}) \le n(1-\frac{1}{p}) \le n(1-\frac{1}{\sqrt{n}}) = n-\sqrt{n}$
+
+{% endnote %}
+
+## 25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)=1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$
+
+
+{% note info no-icon Proof %}
+
+定义函数$f(n) = \prod_{p|n} p$相当于$n$中所有质因子的乘积
+
+$\displaystyle \sum_{m\le x,\gcd(m,d)=1} \frac{\mu^2(m)}{\phi(m)}$
+
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \frac{1}{p-1}$, $m$中所有质数幂次不大于1
+
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \frac{\frac{1}{p}}{1-\frac{1}{p}}$, 变成等比数列和的形式
+
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \sum_{k\ge 1}\frac{1}{p^k}$, 等比数列
+
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \sum_{f(n)=m}\frac{1}{n}$, 后面的乘法展开
+
+$\displaystyle \ge \sum_{m\le x,\gcd(m,d)=1,f(m)=m} \sum_{f(n)=m,n\le y}\frac{1}{n}$, 控制范围, 暂时不知道$y$取多少合适
+
+$\displaystyle = \sum_{n \le y,\gcd(n,d)=1} \frac{1}{n} \sum_{m=f(m)=f(n),m\le x} 1$, 交换顺序
+
+$\displaystyle = \sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 右侧只有唯一$m$,这里看出需要保证$y\le x$才能保证右侧都是1
+
+$\displaystyle = \frac{\phi(d)}{d}\prod_{p|d}\frac{1}{1-\frac{1}{p}}\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 向要证明的靠拢,拆1
+
+$\displaystyle = \frac{\phi(d)}{d}(\prod_{p|d}\sum_{k\ge 0} \frac{1}{p^k})\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 同样等比数列求和
+
+$\displaystyle = \frac{\phi(d)}{d}(\sum_{f(q) | f(d) } \frac{1}{q})\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 同样等比数列求和
+
+$\displaystyle = \frac{\phi(d)}{d} \sum_{f(q) | f(d) } \sum_{n \le y,\gcd(n,d)=1} \frac{1}{nq}$, 乘开
+
+$\displaystyle \ge \frac{\phi(d)}{d} \sum_{t\le x}\frac{1}{t}$, 这里看出,任何一个$\le x$的有且只有唯一的拆解,拆解成是$d$的质因子的幂次的乘积(q贡献) 和 其余部分(n贡献), 而大于$x$的直接舍去, 所以取$y=x$, 而上面其实需要$y\le x$所以范围还算很紧
+
+$\displaystyle \ge \frac{\phi(d)}{d} \log([x]+1)$
+
+{% endnote %}
