@@ -1100,15 +1100,16 @@
 <h1 id="数论函数举例"><a href="#数论函数举例" class="headerlink" title="数论函数举例"></a>数论函数举例</h1><div class="note no-icon success"><p>定义1: 在全体正整数上定义的函数是数论函数</p>
 </div>
 
-<p>$u(n)&#x3D;1 , n\ge 1$</p>
+<p>$u(n)&#x3D;1 , n\ge 1$, $u\circ U &#x3D; [x]$</p>
 <p>$e(n)&#x3D;n , n\ge 1$</p>
 <p>$\displaystyle I(n)&#x3D;\left\lbrace \begin{array}{lc} 1, n &#x3D; 1\\ 0,n&gt;1 \end{array}\right.$,$I&#x3D;\mu * u$</p>
 <p>$\displaystyle d(n)&#x3D;\sum_{d|n} 1 &#x3D;n$的质数因子的幂次+1的乘积(因子个数函数), $d&#x3D;u * u$<br>$\Omega(n) &#x3D;$质数因子幂次和(重复的统计质因子个数)</p>
 <p>$\omega(n) &#x3D;$不同质数因子个数</p>
 <p>$\displaystyle \sigma_\lambda(n)&#x3D;\sum_{d|n} d^\lambda$ 正除数的幂和函数$\sigma &#x3D; e * u$</p>
-<p>$\displaystyle \phi(n)&#x3D;\sum_{1\le d \le n,\gcd(d,n)&#x3D;1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi&#x3D;\mu * e$</p>
+<p>$\displaystyle \phi(n)&#x3D;\sum_{1\le d \le n,\gcd(d,n)&#x3D;1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi&#x3D;\mu * e&#x3D;n\prod_{d|n}(1-\frac{1}{p})$</p>
 <p>$\mathrm{M\ddot{o}bius}$函数 $\mu(n) &#x3D;\left\lbrace \begin{array}{lc}1,&amp; n&#x3D;1 \\ (-1)^s, &amp; n&#x3D;p_1p_2\cdots p_s, p_i&lt;p_{i+1} \\ 0,&amp; \text{others}\end{array}\right.$</p>
 <p>$\mathrm{Mangoldt}$函数$\Lambda(n)&#x3D;\left\lbrace\begin{array}{lc} \log p,&amp;n&#x3D;p^k,k\ge 1 \\ 0, &amp;others\end{array}\right.$</p>
+<p>$\displaystyle \log n&#x3D;\sum_{d|n}\Lambda(d)$, 这样得到另一种表达方式$\displaystyle \Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log{\frac{n}{d}}$</p>
 <p>$\mathrm{Liouville}$函数$\lambda(n) &#x3D; (-1)^{\Omega(n)}$</p>
 <h1 id="Dirichlet-乘积-x2F-卷积"><a href="#Dirichlet-乘积-x2F-卷积" class="headerlink" title="Dirichlet 乘积 &#x2F;卷积"></a>Dirichlet 乘积 &#x2F;卷积</h1><div class="note no-icon success"><p>定义2: $f(n),g(n)$是两个数论函数,$h&#x3D;f * g$称作Dirichlet 乘积&#x2F;卷积</p>
 <p>$\displaystyle h(n) &#x3D; \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x相乘为n的对应y的乘积的和, 所以也可以写成$(f * g)(n) &#x3D;\sum_{ab &#x3D; n}f(a)g(b)$
@@ -1130,7 +1131,7 @@
 <p>例1: 证明$e &#x3D; \phi * u$, 即要证明$n&#x3D;\sum_{d|n}\phi(d)$, 因为根据定义$\phi(n)&#x3D;\sum_{d|n} \mu(d)\frac{n}{d}$即$\phi &#x3D; \mu * e$</p>
 <p>例2: 证明$\log n &#x3D; \Lambda * u$, 即要证明$\log n&#x3D;\sum_{d|n}\Lambda(d)$, 展开$d$即可,这样得到另一种表达方式$\Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log{\frac{n}{d}}$</p>
 <h1 id="可乘函数"><a href="#可乘函数" class="headerlink" title="可乘函数"></a>可乘函数</h1><blockquote>
-<p>可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来<br>完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
+<p>可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来,证明时对于可乘函数也只需要证明质数幂次的情况<br>完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
 </blockquote>
 <div class="note no-icon success"><p>定义5: 定义在全体自然数上，且不恒等于零的数论函数,若$f(mn)&#x3D;f(m)f(n), \gcd(m,n)&#x3D;1$,则称它为可乘&#x2F;积性函数,若没有$\gcd$的限制，全部满足$f(mn)&#x3D;f(m)f(n)$则称作完全&#x2F;绝对 可乘函数</p>
 </div>
@@ -1232,7 +1233,7 @@
 <p>$&#x3D;x\log x+(2\gamma -1)x + O(\sqrt{x})$</p>
 <p>定理19: $\sum_{n\le x} \sigma(n) &#x3D; \frac{\pi^2}{12} x^2 + O(x\log x)$</p>
 <p>$\sigma &#x3D; e * u$</p>
-<p>$\displaystyle \sigma \circ U &#x3D; u\circ(e\circ U) &#x3D;\sum_{n\le x}\sum_{m\le \frac{x}{n}} m&#x3D;\sum_{n\le x} \frac{1}{2}<a href="%5B%5Cfrac%7Bx%7D%7Bn%7D%5D+1">\frac{x}{n}</a>$</p>
+<p>$\displaystyle \sigma \circ U &#x3D; u\circ(e\circ U) &#x3D;\sum_{n\le x}\sum_{m\le \frac{x}{n}} m&#x3D;\sum_{n\le x} \frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$</p>
 <p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}(\frac{x}{n}+O(1))(\frac{x}{n}+O(1))$</p>
 <p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}\frac{x^2}{n^2}+O(\sum_{n\le x}\frac{x}{n})+O(x)$</p>
 <p>$\displaystyle &#x3D;\frac{x^2}{2}\sum_{n}\frac{x^2}{n^2}-\frac{x^2}{2}\sum_{n &gt; x}\frac{x^2}{n^2}+O(x\log x)$</p>
@@ -1241,7 +1242,7 @@
 <p>定理20: $\sum_{n\le x}\phi(x)&#x3D;\frac{3}{\pi^2}x^2+O(x\log x)$</p>
 <p>$\phi &#x3D; \mu * e$</p>
 <p>$\displaystyle \sum_{n\le x}\phi(x)&#x3D;\sum_{n\le x}\mu(n)\sum_{m\le \frac{x}{n}} m$</p>
-<p>$\displaystyle &#x3D;\sum_{n\le x}\mu(n)\frac{1}{2}<a href="%5B%5Cfrac%7Bx%7D%7Bn%7D%5D+1">\frac{x}{n}</a>$</p>
+<p>$\displaystyle &#x3D;\sum_{n\le x}\mu(n)\frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$</p>
 <p>$\displaystyle&#x3D;\frac{1}{2}\sum_{n\le x}\mu(n)(\frac{x}{n}+O(1))^2$</p>
 <p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n\le x}\frac{\mu(n)}{n^2}+O(x\log x)$</p>
 <p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n&#x3D;1}^\infty \frac{\mu(n)}{n^2}+O(x\log x)$</p>
@@ -1257,7 +1258,75 @@
 <p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) (\frac{x}{d^2}+O(1))$</p>
 <p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\frac{x\mu(d)}{d^2}+O(\sqrt{x})$</p>
 <p>$\displaystyle &#x3D;\frac{6}{\pi^2}x+O(\sqrt{x})$</p>
-<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1>]]></content>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="9-lambda-n-x3D-1-Omega-n-求-sum-d-n-lambda-d-d-s-的表达式-证明-sum-k-x3D-1-x-lambda-k-frac-x-k-x3D-sqrt-x"><a href="#9-lambda-n-x3D-1-Omega-n-求-sum-d-n-lambda-d-d-s-的表达式-证明-sum-k-x3D-1-x-lambda-k-frac-x-k-x3D-sqrt-x" class="headerlink" title="9. $\lambda(n)&#x3D;(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;[\sqrt{x}]$"></a>9. $\lambda(n)&#x3D;(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;[\sqrt{x}]$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>$\sum_{d|n}\lambda(d)d^s &#x3D; \sum_{d|n,d&#x3D;\prod p_i^{\beta_i}} (-1)^{\sum \beta_i}(\prod {p_i}^{\beta_i})^s$</p>
+<p>$&#x3D; \sum_{n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \prod (-p_i^s)^{\beta_i }$</p>
+<p>$&#x3D; \prod_{i,n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \sum_{j&#x3D;0}^{\alpha_i} (-p_i^s)^{j}$</p>
+<p>$&#x3D; \prod_{i,n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \frac{1-(-p_i^s)^{\alpha_i+1}}{1+p_i^s}$</p>
+<p>$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{[x]}{k}] &#x3D; (\lambda \circ (u\circ U))([x])$</p>
+<p>$&#x3D;((\lambda * u)\circ U)([x])$</p>
+<p>$(\lambda * u)(n) &#x3D; \left\lbrace\begin{array}{lc} 1,&amp; n&#x3D;k^2 \\ 0,&amp; \text{others}\end{array}\right.$</p>
+
+</details>
+
+<h2 id="14-设-displaystyle-s-n-x3D-sum-j-in-1-n-gcd-j-n-x3D-1-j-2-证明-displaystyle-sum-d-n-frac-s-d-d-2-x3D-frac-1-n-2-sum-j-x3D-1-n-j-2-s-n-x3D-n-2-frac-1-3-phi-n-frac-1-2-sum-d-n-mu-d-frac-1-6n-prod-p-n-1-p"><a href="#14-设-displaystyle-s-n-x3D-sum-j-in-1-n-gcd-j-n-x3D-1-j-2-证明-displaystyle-sum-d-n-frac-s-d-d-2-x3D-frac-1-n-2-sum-j-x3D-1-n-j-2-s-n-x3D-n-2-frac-1-3-phi-n-frac-1-2-sum-d-n-mu-d-frac-1-6n-prod-p-n-1-p" class="headerlink" title="14. 设$\displaystyle s(n)&#x3D;\sum_{j\in[1,n],\gcd(j,n)&#x3D;1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}&#x3D;\frac{1}{n^2}\sum_{j&#x3D;1}^n j^2$,$s(n)&#x3D;n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$"></a>14. 设$\displaystyle s(n)&#x3D;\sum_{j\in[1,n],\gcd(j,n)&#x3D;1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}&#x3D;\frac{1}{n^2}\sum_{j&#x3D;1}^n j^2$,$s(n)&#x3D;n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>通过和n的gcd来分类</p>
+<p>$\frac{1}{n^2}\sum_{j&#x3D;1}^nj^2$</p>
+<p>$&#x3D;\frac{1}{n^2}\sum_{d|n}\sum_{j\in[1,n],\gcd(j,n)&#x3D;d} j^2$</p>
+<p>$&#x3D;\frac{1}{n^2}\sum_{d|n}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})&#x3D;1} (id)^2$</p>
+<p>$&#x3D;\sum_{d|n}\frac{d^2}{n^2}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})&#x3D;1} i^2$</p>
+<p>$&#x3D;\sum_{d|n}\frac{s(\frac{n}{d})}{(\frac{n}{d})^2}$</p>
+<p>$&#x3D;\sum_{d|n}\frac{s(d)}{d^2}$</p>
+<p>$s * e_2 &#x3D; \sum_{j&#x3D;1}^n j^2 &#x3D; \frac{n(n+1)(2n+1)}{6}&#x3D;\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}$</p>
+<p>$e_2$完全可乘</p>
+<p>$e_2^{-1} &#x3D; \mu e_2$</p>
+<p>$s &#x3D; s * e_2 * e_2^{-1} &#x3D; (\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}) * (\mu e_2)$</p>
+<p>$&#x3D;\sum_{d|n} (\frac{n^3}{3d^3}\mu(d)d^2+\frac{n^2}{2d^2}\mu(d)d^2+\frac{n}{6d}\mu(d)d^2)$</p>
+<p>$&#x3D;\frac{n^2}{3} (\mu * e) +\frac{n^2}{2}(\sum_{d|n}\mu(d))+\frac{n}{6}\sum_{d|n}\mu(d)d$</p>
+
+</details>
+
+<h2 id="16-求所有使得-phi-n-x3D-24"><a href="#16-求所有使得-phi-n-x3D-24" class="headerlink" title="16. 求所有使得$\phi(n)&#x3D; 24$"></a>16. 求所有使得$\phi(n)&#x3D; 24$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>$\phi(n)&#x3D;n\prod_{p|n}\frac{p-1}{p}$</p>
+<p>所以考察所有$24$的因数+1的质因子$2,3,5,7,13$的组合情况</p>
+<p>又注意到$\phi$是可乘函数$24&#x3D;2^33$</p>
+<p>$\phi(2)&#x3D;1,\phi(2^2)&#x3D;2,\phi(2^3)&#x3D;4,\phi(2^4)&#x3D;8$</p>
+<p>$\phi(3)&#x3D;2,\phi(3^2)&#x3D;6,\phi(3^3)&#x3D;4$</p>
+<p>$\phi(5)&#x3D;4$</p>
+<p>$\phi(7)&#x3D;6$</p>
+<p>$\phi(13)&#x3D;12$</p>
+<p>所以有$13\cdot 3,13\cdot 3\cdot 2,13\cdot 2^2\cdots$</p>
+
+</details>
+
+<h2 id="17-证明-n-为合数时-phi-n-le-n-sqrt-n"><a href="#17-证明-n-为合数时-phi-n-le-n-sqrt-n" class="headerlink" title="17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$"></a>17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>$\phi(n)&#x3D;n\prod_{p|n}(1-\frac{1}{p}) \le n(1-\frac{1}{p}) \le n(1-\frac{1}{\sqrt{n}}) &#x3D; n-\sqrt{n}$</p>
+
+</details>
+
+<h2 id="25-d-为自然数-x-ge-1-则-displaystyle-sum-m-le-x-gcd-m-d-x3D-1-frac-mu-2-m-phi-m-ge-frac-phi-d-d-log-x-1"><a href="#25-d-为自然数-x-ge-1-则-displaystyle-sum-m-le-x-gcd-m-d-x3D-1-frac-mu-2-m-phi-m-ge-frac-phi-d-d-log-x-1" class="headerlink" title="25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$"></a>25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+<p>定义函数$f(n) &#x3D; \prod_{p|n} p$相当于$n$中所有质因子的乘积</p>
+<p>$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}$</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,f(m)&#x3D;m} \prod_{p|m} \frac{1}{p-1}$, $m$中所有质数幂次不大于1</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,f(m)&#x3D;m} \prod_{p|m} \frac{\frac{1}{p}}{1-\frac{1}{p}}$, 变成等比数列和的形式</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,f(m)&#x3D;m} \prod_{p|m} \sum_{k\ge 1}\frac{1}{p^k}$, 等比数列</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,f(m)&#x3D;m} \sum_{f(n)&#x3D;m}\frac{1}{n}$, 后面的乘法展开</p>
+<p>$\displaystyle \ge \sum_{m\le x,\gcd(m,d)&#x3D;1,f(m)&#x3D;m} \sum_{f(n)&#x3D;m,n\le y}\frac{1}{n}$, 控制范围, 暂时不知道$y$取多少合适</p>
+<p>$\displaystyle &#x3D; \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n} \sum_{m&#x3D;f(m)&#x3D;f(n),m\le x} 1$, 交换顺序</p>
+<p>$\displaystyle &#x3D; \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 右侧只有唯一$m$,这里看出需要保证$y\le x$才能保证右侧都是1</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}\prod_{p|d}\frac{1}{1-\frac{1}{p}}\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 向要证明的靠拢,拆1</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}(\prod_{p|d}\sum_{k\ge 0} \frac{1}{p^k})\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 同样等比数列求和</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}(\sum_{f(q) | f(d) } \frac{1}{q})\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 同样等比数列求和</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d} \sum_{f(q) | f(d) } \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{nq}$, 乘开</p>
+<p>$\displaystyle \ge \frac{\phi(d)}{d} \sum_{t\le x}\frac{1}{t}$, 这里看出,任何一个$\le x$的有且只有唯一的拆解,拆解成是$d$的质因子的幂次的乘积(q贡献) 和 其余部分(n贡献), 而大于$x$的直接舍去, 所以取$y&#x3D;x$, 而上面其实需要$y\le x$所以范围还算很紧</p>
+<p>$\displaystyle \ge \frac{\phi(d)}{d} \log([x]+1)$</p>
+
+</details>]]></content>
       <categories>
         <category>数论</category>
         <category>数论基础</category>
