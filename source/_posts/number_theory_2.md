@@ -35,9 +35,9 @@ $\mathrm{M\ddot{o}bius}$函数 $\mu(n) =\left\lbrace \begin{array}{lc}1,& n=1 \\
 
 $\mathrm{Mangoldt}$函数$\Lambda(n)=\left\lbrace\begin{array}{lc} \log p,&n=p^k,k\ge 1 \\\\ 0, &others\end{array}\right.$
 
-$\displaystyle \log n=\sum_{d|n}\Lambda(d)$, 这样得到另一种表达方式$\displaystyle \Lambda(n)=\sum_{d|n}\mu(d)\log{\frac{n}{d}}$
+$\displaystyle \log n=\sum_{d|n}\Lambda(d)$, 这样得到另一种表达方式$\displaystyle \Lambda(n)=\sum_{d|n}\mu(d)\log{\frac{n}{d}}=\mu * \log=-\sum_{d|n}\mu(d)\log d$
 
-$\mathrm{Liouville}$函数$\lambda(n) = (-1)^{\Omega(n)}$
+$\mathrm{Liouville}$函数$\lambda(n) = (-1)^{\Omega(n)}= [n\text{ is square}] * \mu$
 
 # Dirichlet 乘积 /卷积
 
@@ -164,6 +164,8 @@ $g^{-1}=\sum_{d|n}\mu(d)\lambda(d)\mu(\frac{n}{d})$
 
 # 阶的估计 
 
+> 有了阶的估计，可以方便于一些函数分布的研究
+
 $f$任意函数,$g$正值函数,若存在与$x$无关的常数$A$,使$|f(x)|\le Ag(x)$对于充分大$x$都成立,则$f(x)=O(g(x))$或$f(x) \ll g(x)$
 
 如$\sin(x)\ll 1,x\cos x\ll x^2,\sqrt{3x^2+7}\ll x$
@@ -185,6 +187,8 @@ $\displaystyle \frac{d(n)}{n^{\epsilon}}=\prod \frac{\alpha_i+1}{p^{\alpha_i\eps
 $\bar{d}(n) =\frac{1}{n}\sum_{m\le n} d(m) \sim \log n$, 称作$d$的平均阶为$\log n$ (稍后证明)
 
 引理1: 当$x$充分大时 $\sum_{n\le x}\frac{1}{n} = \log x + \gamma + O(\frac{1}{x})$, 其中$\gamma$是Euler常数
+
+> 这里的想法就是2次方的和是收敛的所以拆出二次方就好了
 
 $\displaystyle \sum_{n\le x}\frac{1}{n}=\sum_{n\le x}\frac{\int_{n}^{n+1}dt}{n}$
 
@@ -251,7 +255,7 @@ $f\circ(g \circ H) = \sum_{n\le x} [\frac{x}{n}]$
 推论5: $F=f\circ U$,则$\displaystyle \sum_{n\le x}\sum_{d|n} f(d) = \sum_{n\le x}F(\frac{x}{n})$, 就是$(u * f) \circ U=u \circ ( f \circ U)$
 例7: $\sum_{n\le x}\mu(n)[\frac{x}{n}]=1$,即$\mu \circ(u\circ U) = I \circ U = U$
 
-定理17: 设$h=f * g,F=f\circ U,G=g\circ U,H=h\circ U$, 对任意$ab=x$的正数$a,b$恒有
+定理17(在用于估计时做区间切割很有用): 设$h=f * g,F=f\circ U,G=g\circ U,H=h\circ U$, 对任意$ab=x$的正数$a,b$恒有
 
 $H(x)=\sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$
 
