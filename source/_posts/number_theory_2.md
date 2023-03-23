@@ -22,7 +22,8 @@ $e(n)=n , n\ge 1$
 
 $\displaystyle I(n)=\left\lbrace \begin{array}{lc} 1, n = 1\\\\ 0,n>1 \end{array}\right.$,$I=\mu * u$
 
-$\displaystyle d(n)=\sum_{d|n} 1 =n$的质数因子的幂次+1的乘积(因子个数函数), $d=u * u$
+$\displaystyle d(n)=\sum_{d|n} 1 =n$的质数因子的幂次+1的乘积(因子个数函数), $d=u * u$, 也就有了$u=d * \mu$
+
 $\Omega(n) =$质数因子幂次和(重复的统计质因子个数)
 
 $\omega(n) =$不同质数因子个数
@@ -103,7 +104,7 @@ $= 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
 
 又此$\sum_{d|n}\mu(d)f(d) = \prod_{p_i|n} (1+\mu(p_i)f(p_i)+\cdots+\mu(p_i^{\alpha_i})f(p_i^{\alpha_i})) = \prod_{p_i|n} (1-f(p_i))$
 
-因此$\phi$另一个表达$\displaystyle \phi(n)=\sum_{d|n}\mu(d)\frac{n}{d}=n\prod_{d|n}(1-\frac{1}{p})$
+因此$\phi$另一个表达$\displaystyle \phi(n)=\sum_{d|n}\mu(d)\frac{n}{d}=n\prod_{p|n}(1-\frac{1}{p})$
 
 类似的 $f(n)$完全可乘, $F(n)=\sum_{d|n} f(d) = \prod_{p_i|n} (1+f(p_i)+\cdots+f^{\alpha_i}(p_i))$
 
@@ -427,21 +428,21 @@ $\phi(n)=n\prod_{p|n}(1-\frac{1}{p}) \le n(1-\frac{1}{p}) \le n(1-\frac{1}{\sqrt
 
 {% note info no-icon Proof %}
 
-定义函数$f(n) = \prod_{p|n} p$相当于$n$中所有质因子的乘积
+定义函数$\mathrm{rad}(n) = \prod_{p|n} p$相当于$n$中所有质因子的乘积
 
 $\displaystyle \sum_{m\le x,\gcd(m,d)=1} \frac{\mu^2(m)}{\phi(m)}$
 
-$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \frac{1}{p-1}$, $m$中所有质数幂次不大于1
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,\mathrm{rad}(m)=m} \prod_{p|m} \frac{1}{p-1}$, $m$中所有质数幂次不大于1
 
-$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \frac{\frac{1}{p}}{1-\frac{1}{p}}$, 变成等比数列和的形式
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,\mathrm{rad}(m)=m} \prod_{p|m} \frac{\frac{1}{p}}{1-\frac{1}{p}}$, 变成等比数列和的形式
 
-$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \prod_{p|m} \sum_{k\ge 1}\frac{1}{p^k}$, 等比数列
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,\mathrm{rad}(m)=m} \prod_{p|m} \sum_{k\ge 1}\frac{1}{p^k}$, 等比数列
 
-$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,f(m)=m} \sum_{f(n)=m}\frac{1}{n}$, 后面的乘法展开
+$\displaystyle =\sum_{m\le x,\gcd(m,d)=1,\mathrm{rad}(m)=m} \sum_{\mathrm{rad}(n)=m}\frac{1}{n}$, 后面的乘法展开
 
-$\displaystyle \ge \sum_{m\le x,\gcd(m,d)=1,f(m)=m} \sum_{f(n)=m,n\le y}\frac{1}{n}$, 控制范围, 暂时不知道$y$取多少合适
+$\displaystyle \ge \sum_{m\le x,\gcd(m,d)=1,\mathrm{rad}(m)=m} \sum_{\mathrm{rad}(n)=m,n\le y}\frac{1}{n}$, 控制范围, 暂时不知道$y$取多少合适
 
-$\displaystyle = \sum_{n \le y,\gcd(n,d)=1} \frac{1}{n} \sum_{m=f(m)=f(n),m\le x} 1$, 交换顺序
+$\displaystyle = \sum_{n \le y,\gcd(n,d)=1} \frac{1}{n} \sum_{m=\mathrm{rad}(m)=\mathrm{rad}(n),m\le x} 1$, 交换顺序
 
 $\displaystyle = \sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 右侧只有唯一$m$,这里看出需要保证$y\le x$才能保证右侧都是1
 
@@ -449,9 +450,9 @@ $\displaystyle = \frac{\phi(d)}{d}\prod_{p|d}\frac{1}{1-\frac{1}{p}}\sum_{n \le 
 
 $\displaystyle = \frac{\phi(d)}{d}(\prod_{p|d}\sum_{k\ge 0} \frac{1}{p^k})\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 同样等比数列求和
 
-$\displaystyle = \frac{\phi(d)}{d}(\sum_{f(q) | f(d) } \frac{1}{q})\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 同样等比数列求和
+$\displaystyle = \frac{\phi(d)}{d}(\sum_{\mathrm{rad}(q) | \mathrm{rad}(d) } \frac{1}{q})\sum_{n \le y,\gcd(n,d)=1} \frac{1}{n}$, 同样等比数列求和
 
-$\displaystyle = \frac{\phi(d)}{d} \sum_{f(q) | f(d) } \sum_{n \le y,\gcd(n,d)=1} \frac{1}{nq}$, 乘开
+$\displaystyle = \frac{\phi(d)}{d} \sum_{\mathrm{rad}(q) | \mathrm{rad}(d) } \sum_{n \le y,\gcd(n,d)=1} \frac{1}{nq}$, 乘开
 
 $\displaystyle \ge \frac{\phi(d)}{d} \sum_{t\le x}\frac{1}{t}$, 这里看出,任何一个$\le x$的有且只有唯一的拆解,拆解成是$d$的质因子的幂次的乘积(q贡献) 和 其余部分(n贡献), 而大于$x$的直接舍去, 所以取$y=x$, 而上面其实需要$y\le x$所以范围还算很紧
 

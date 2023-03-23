@@ -46,7 +46,7 @@ $\displaystyle 0 < \lim_{x\to \infty} \frac{\pi(x)}{x} < \lim_{x\to \infty} \pro
 
 Chebyshev 1850证明了存在两个正常数使得$C_1\frac{x}{\log x}< \pi(x) < C_2\frac{x}{\log x}$ 
 
-引理4: 设$x > 1$,$f(t)\in C'[1,x],S(x)=\sum_{n\le x}C_n$ 则
+引理4(重要,这个公式用于$C_n$去转换做阶的估计很有用): 设$x > 1$,$f(t)\in C'[1,x],S(x)=\sum_{n\le x}C_n$ 则
 
 $\sum_{n\le x}C_nf(n)=S(x)f(x)-\int_1^xS(t)f'(t)dt$
 
@@ -94,7 +94,7 @@ Chebyshev在研究素数定理时,引入了两个新函数
 
 $\theta(x)=\sum_{p\le x} \log p\le x\log x$
 
-$\displaystyle \psi(x) = \Lambda \circ U=\sum_{n\le x} \Lambda (n)$
+$\displaystyle \psi(x) = \Lambda \circ U=\sum_{n\le x} \Lambda (n)$, (单调递增)
 
 $=\sum_{m=1}^{\infty} \sum_{p,{p^m}\le x} \Lambda(p^m)$
 
@@ -144,11 +144,11 @@ $\frac{\theta(n)}{x}=\frac{\pi(x)}{\frac{x}{\log x}}+o(1)$
 
 $x \log 2+O(\log x)$
 
-$=\sum_{n\le x}\log n - 2\sum_{n\le \frac{x}{2}}\log n$
+$=\sum_{n\le x}\log n - 2\sum_{n\le \frac{x}{2}}\log n$,引理5
 
-$=\sum_{n\le x}\psi(\frac{x}{n}) - 2\sum_{n\le \frac{x}{2}} \psi(\frac{x}{2n})$
+$=\sum_{n\le x}\psi(\frac{x}{n}) - 2\sum_{n\le \frac{x}{2}} \psi(\frac{x}{2n})$,定理4
 
-$=\sum_{n\le x}(-1)^{n-1}\psi(\frac{x}{n}) < \psi(x)$
+$=\sum_{n\le x}(-1)^{n-1}\psi(\frac{x}{n}) < \psi(x)$, 这里用到了$\psi$单调递增
 
 即存在$A_1 x < \psi(x)$
 
@@ -324,7 +324,7 @@ $n\ge 128$时$\sqrt{2n} \ge 16$, 所以有$\pi(\sqrt{2n}) <$ 奇数个数-(9和1
 
 # 函数$M(x)=\mu \circ U$ 
 
-$M(x)=\sum_{n\le x}\mu(n)$
+$M(x)=\sum_{n\le x}\mu(n)$, Mertens function
 
 本节主要证明的是$\lim_{x\to\infty}\frac{M(x)}{x}=0$ 与$\lim_{x\to \infty}\frac{\pi(x)}{\frac{x}{\log x}}=1$ 等价
 
@@ -422,10 +422,209 @@ $\displaystyle =\sum_{d\le x^{\frac{1}{3}}}\mu(d)\sum_{k\le \frac{x}{d^2}}\lambd
 
 # 习题
 
-## x. xxxx
+## 2. $\sum_{p} \frac{1}{p}$发散
 
 {% note info no-icon Proof %}
 
-xxxx
+我想的通过足够大$x$,$C_1\frac{x}{\log x}<\pi(x)<C_2\frac{x}{\log x}$
+
+去考虑足够大$M$对应$\displaystyle \sum_{t=1}^{\infty} \sum_{x\in[M(\frac{4C_2}{C_1})^t,M(\frac{4C_2}{C_1})^{t+1}],x\text{ is prime}} \frac{1}{x} \ge$ 分母等差数列求和
+
+---
+
+另一个方法: Cauchy准则 尾段和$s=\sum_{p_i,i\ge t}\le \frac{1}{2}$
+
+与前面互质的等差和$\displaystyle \sum_{t=1}^{\infty} \frac{1}{1+\prod_{p_i,i<t}} \le$乘法表示$\sum_{t=1}^{\infty}s^t\le\sum_{t=1}^{\infty} (\frac{1}{2})^t=1$ 矛盾
+
+{% endnote %}
+
+## 4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子
+
+
+{% note info no-icon Proof %}
+
+若$a_0=0,p|f(p)$
+
+若$a_0\ne 0$,反证法,若有限$f(a_0\prod_{p_i})=a_0(k\prod_{p_i}+1)$, 右侧会出现新质因子
+
+{% endnote %}
+
+## 8. $x\ge 2$证$\sum_{d\le x} d^2(n)=O(x\log^3 x)$
+
+{% note info no-icon Proof %}
+
+因为$\alpha_1+\alpha_2+1 \le (\alpha_1+1)(\alpha_2+1)$,所以$d(a)d(b) \ge d(ab)$
+
+$\displaystyle \sum_{d\le x}d^2(n)=\sum_{d\le x}d(n)\sum_{u|d}1$
+
+$\displaystyle =\sum_{u\le x}\sum_{l\le\frac{x}{u}}d(ul)$
+
+$\displaystyle \le \sum_{u\le x}\sum_{l\le\frac{x}{u}}d(u)d(l)$
+
+$\displaystyle = \sum_{u\le x}d(u)\sum_{l\le\frac{x}{u}}d(l)$
+
+$\displaystyle = O(\sum_{u\le x}d(u)\frac{x}{u}\log \frac{x}{u})$
+
+$\displaystyle = O(x\log x)O(\sum_{u\le x}\frac{d(u)}{u})$,习题7证明了后面一半是$O(\frac{1}{2}\log^2 x)$
+
+{% endnote %}
+
+## 9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}=\frac{6}{\pi^2}x+O(\log x)$
+
+{% note info no-icon Proof %}
+
+直接上引理4,但是得到的是$\frac{6}{\pi^2}x+O((\log x)^2)$,大了 也就是$\phi(n)$的估计到这里还不够紧凑
+
+$\sum_{n\le x}\frac{\phi(n)}{n}=\sum_{n\le x}\frac{1}{n}\sum_{d|n}\mu(d)\frac{n}{d}$, 因为$\phi =\mu * e$
+
+$=\sum_{n\le x}\sum_{d|n}\frac{\mu(d)}{d}$
+
+$=\sum_{d\le x}\frac{\mu(d)}{d} [\frac{x}{d}]$
+
+$=\sum_{d\le x}\frac{\mu(d)}{d} \frac{x}{d}-\sum_{d\le x}\frac{\mu(d)}{d}\lbrace \frac{x}{d}\rbrace$
+
+$=x\sum_{d\le x}\frac{\mu(d)}{d^2}+O(\sum_{d\le x}\frac{1}{d})$
+
+$=\frac{6}{\pi^2}x+O(\log x)$
+
+{% endnote %}
+
+## 10. 使用$\frac{n}{\phi(n)}=\prod_{p|n}(1-\frac{1}{p})^{-1}=(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}=O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}=O(\log x)$
+
+{% note info no-icon Proof %}
+
+$\displaystyle \frac{n}{\phi(n)}=\prod_{p|n}(1-\frac{1}{p})^{-1}=\prod_{p|n}(\frac{p}{p-1})=\prod_{p|n}(\frac{p^{\alpha_p+1}-1}{p-1}\frac{p^{\alpha_p+1}}{p^{\alpha_p+1}-1}\frac{1}{p^{\alpha_p}})$
+
+$\displaystyle =\sigma(n) (\prod_{p|n}\frac{1}{1-\frac{1}{p^{\alpha_p+1}}}) \frac{1}{n}$
+
+$\displaystyle \le \frac{\sigma(n)}{n} (\prod_{p|n}\sum_{i=0}^{\infty} \frac{1}{p^{2i}})$
+
+$\displaystyle \le \frac{\sigma(n)}{n} (\sum_{j=1}^{\infty}  \frac{1}{p^{2j}}) = \frac{\pi^2}{6}\frac{\sigma(n)}{n}$
+
+$\displaystyle \sum_{n\le x}\frac{n}{\phi(n)}\le \frac{\pi^2}{6} \sum_{n\le x}\frac{\sigma(n)}{n}$
+
+$\displaystyle \sum_{n\le x}\frac{\sigma(n)}{n}=\frac{1}{x}(\frac{\pi^2}{12} x^2 + O(x\log x))+\int_{1}^{x}\frac{\frac{\pi^2}{12} t^2 + O(t\log t)}{t^2}dt$, (第二章定理19)
+
+$=O(x)$
+
+后面直接同样 引理4就好了
+
+{% endnote %}
+
+## 15. $\sum_{p|x}\frac{\log p}{p}=O(\log \log x)$
+
+> 教材这里写错了,同时用了n和x
+
+{% note info no-icon Proof %}
+
+$\sum_{p|x}\frac{\log p}{p} = \sum_{p|x,p \le \log x}\frac{\log p}{p} + \sum_{p|x,p > \log x}\frac{\log p}{p}$
+
+$\le \sum_{p \le \log x}\frac{\log p}{p} + \sum_{p|x,p > \log x}\frac{\log \log x}{\log x}$, 用到$\frac{\log x}{x}$的增减区间,上面也是根据增减区间切割的
+
+$\le (\log \log x+O(1))+\log_{\log x} x\cdot \frac{\log \log x}{\log x}$,定理6
+
+$=O(\log \log x)$
+
+{% endnote %}
+
+## 16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}=O(\log \log n)$
+
+{% note info no-icon Proof %}
+
+$\displaystyle \sum_{d|n}\frac{\mu(d)\log d}{d}=\sum_{d|n}\frac{\mu(d)}{d}\sum_{p|d}\log p$
+
+$\displaystyle =\sum_{p|n} \log p \sum_{p|d,d|n}\frac{\mu(d)}{d}$
+
+$\displaystyle =\sum_{p|n} \frac{\log p}{p} (-\sum_{t|\frac{n}{p^{\alpha_p}}}\frac{\mu(t)}{t})$
+
+$\displaystyle =O(\sum_{p|n} \frac{\log p}{p})$, 因为$\displaystyle \sum_{t|n}\frac{\mu(t)}{t} = \frac{1}{n}\sum_{t|n}\mu(t)\frac{n}{t}=\frac{(\mu * e)(n)}{n}=\frac{\phi(n)}{n} \le 1$
+
+由题目15可证
+
+> 还是觉得好怪啊, 这样看的话，当给定了$p$的集合以后 左边因为$\mu(d)$ 只有一次方以内的组合才不是$0$,就是一个定值了,而$\log \log n$是无限增长的,不过一个无限增长的当然是可以框住有限的,但实际上是从n的增长来看的,那么左侧就会忽大忽小
+
+{% endnote %}
+
+## 17. 试证存在常数$C$,$n\ge 3$时$\phi(n)>C\frac{n}{\log \log n}$
+
+{% note info no-icon Proof %}
+
+取$q=A\omega(n)\log(3\omega(n))$
+$\pi(q)\ge C_1\frac{q}{\log q}=C_1\frac{A\omega(n)\log(3\omega(n))}{\log (A\omega(n)\log(3\omega(n)))}=\omega(n) \frac{AC_1}{\frac{\log (A\omega(n))}{\log(3\omega(n))}+\frac{\log\log(3\omega(n))}{\log(3\omega(n))}}$
+分母大于 1+0, 所以A取足够大时, 右边有正的下界
+
+$\pi(q) \ge \omega(n)$
+
+$q=A\omega(n)\log 3\omega(n)\le A\log_2n\log(3\log_2n)\le C_2\log n\log \log n$
+
+$\frac{\phi(n)}{n}=\prod_{p|n}(1-\frac{1}{p})\ge\prod_{p\le q}(1-\frac{1}{p})$
+
+$=\frac{C_4}{\log q}+O(\frac{1}{\log^2 q})$, 根据定理8
+
+$\ge \frac{C_5}{\log q}$
+
+$\ge \frac{C_6}{\log(C_2\log n\log \log n)}$
+
+$\ge \frac{C_7}{\log\log n}$
+
+{% endnote %}
+
+## 18.  $\displaystyle \sum_{n=1}^{\infty}\frac{\mu(n)}{n^s}=\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n=1}^{\infty}\frac{d(n)}{n^s}=\zeta^2(s)$, $\displaystyle \sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^s}=-\frac{\zeta ' (s)}{\zeta(s)}$
+
+$\zeta(s)=\sum_{n=1}^{\infty} \frac{1}{x^s}$ Riemann函数
+
+{% note info no-icon Proof %}
+
+(1) $\displaystyle =\frac{1}{\prod_{p}\sum_{j=0}^{\infty} \frac{1}{p^{sj}}}=$
+
+(2) $\displaystyle =\prod_{p}\sum_{i=0}^{\infty}\frac{i+1}{(p^s)^i}=$
+
+(3) $\displaystyle =\sum_{p}\log p\sum_{i=1}^{\infty}\frac{1}{(p^s)^i}=\sum_{p}\log p\frac{\frac{1}{p^s}}{1-\frac{1}{p^s}}$
+
+$=(\int_{0}^s \sum_{p}\log p\frac{\frac{1}{p^t}}{1-\frac{1}{p^t}} dt)'$
+
+$=(\sum_{p} \int_{0}^s \frac{d(1-\frac{1}{p^t})}{1-\frac{1}{p^t}})'$
+
+$=(\sum_{p} \log (1-\frac{1}{p^s}))'$
+
+$=(-\sum_{p} \log \frac{1}{1-\frac{1}{p^s}})'$
+
+$=(-\zeta(s))'$
+
+得证
+
+{% endnote %}
+
+## 19. $\sum_{n=1}^{\infty} \frac{\mu(n)}{n}=0$ 与$M(x)=o(x)$等价 
+
+{% note info no-icon Proof %}
+
+$\Rightarrow$:
+
+$M(x)=\sum_{n\le x}\mu(n)$
+
+$=\sum_{n\le x}\frac{\mu(n)}{n}n$
+
+$=x o(1)-\int_{1}^{x} o(1) dt =o(x)$
+
+$\Leftarrow$ :
+
+> $\sum_{n=1}^{\infty}\mu(n)\frac{1}{n}=\frac{1}{x} o(x)+\int_{1}^{x}\frac{o(t)}{t^2}dt$ 太大不行
+
+直接和引理6一样的方法，需要第二章例7
+
+TODO
+
+{% endnote %}
+
+## 20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}=2\gamma +o(1)$和素数定理等价
+
+{% note info no-icon Proof %}
+
+$\Rightarrow$: $\sum_{n\le x}\frac{1}{n}=\log x+\gamma+O(\frac{1}{x})$ 和 定理4 有$\psi(x)=x+o(x)$
+
+$\Leftarrow$:
+
+TODO
 
 {% endnote %}
