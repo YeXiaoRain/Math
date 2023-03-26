@@ -92,9 +92,9 @@ $=[b]f(b)-[a]f(a)-\int_{a}^b [t]f'(t)dt-(\int_a^b(t-\frac{1}{2})f'(t)dt-(b-\frac
 
 Chebyshev在研究素数定理时,引入了两个新函数
 
-$\theta(x)=\sum_{p\le x} \log p\le x\log x$
+first Chebyshev function $\theta(x)=\sum_{p\le x} \log p\le x\log x$
 
-$\displaystyle \psi(x) = \Lambda \circ U=\sum_{n\le x} \Lambda (n)$, (单调递增)
+second Chebyshev function $\displaystyle \psi(x) = \Lambda \circ U=\sum_{n\le x} \Lambda (n)$, (单调递增)
 
 $=\sum_{m=1}^{\infty} \sum_{p,{p^m}\le x} \Lambda(p^m)$
 
@@ -569,7 +569,7 @@ $\ge \frac{C_7}{\log\log n}$
 
 {% endnote %}
 
-## 18.  $\displaystyle \sum_{n=1}^{\infty}\frac{\mu(n)}{n^s}=\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n=1}^{\infty}\frac{d(n)}{n^s}=\zeta^2(s)$, $\displaystyle \sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^s}=-\frac{\zeta ' (s)}{\zeta(s)}$
+## 18.  $\displaystyle \sum_{n=1}^{\infty}\frac{\mu(n)}{n^s}=\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n=1}^{\infty}\frac{d(n)}{n^s}=\zeta^2(s)$, $\displaystyle \sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^s}=-\frac{\zeta' (s)}{\zeta(s)}$
 
 $\zeta(s)=\sum_{n=1}^{\infty} \frac{1}{x^s}$ Riemann函数
 
@@ -610,8 +610,6 @@ $=x o(1)-\int_{1}^{x} o(1) dt =o(x)$
 $\Leftarrow$ :
 
 > $\sum_{n=1}^{\infty}\mu(n)\frac{1}{n}=\frac{1}{x} o(x)+\int_{1}^{x}\frac{o(t)}{t^2}dt$ 太大不行
-
-直接和引理6一样的方法，需要第二章例7
 
 TODO
 
