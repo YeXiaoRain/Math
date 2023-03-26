@@ -19,42 +19,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高等代数 一 线性方程组的解法</title>
-    <url>/Math/Advanced_algebra_1/</url>
-    <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
-<li>数</li>
-<li>代数</li>
-<li>方程</li>
-<li>方程组</li>
-<li>系数矩阵</li>
-</ol>
-<span id="more"></span>
-
-<h2 id="如何解方程组"><a href="#如何解方程组" class="headerlink" title="如何解方程组"></a>如何解方程组</h2><p>在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化)</p>
-<p>未知量的系数列向量均不为0, 否则意味着该变量不存在</p>
-<h2 id="解的组数"><a href="#解的组数" class="headerlink" title="解的组数"></a>解的组数</h2><p>转换成阶梯矩阵后</p>
-<ol start="0">
-<li>无解: 转换时出现 $0 &#x3D; d(\ne 0)$ (左侧系数矩阵0,右侧非零)</li>
-<li>有且只有一个解: 非零行的数目r &#x3D; 未知数的数目n </li>
-<li>有无穷多解: 非零行的数目r &lt; 未知数的数目n</li>
-</ol>
-<h2 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h2><p>定义: 复数集的一个非空子集$K$如果满足</p>
-<ol>
-<li>$0,1\in K$</li>
-<li>$a,b\in K \to a \pm b , ab\in K$</li>
-<li>$a,b \in K, b\ne 0 \to \frac{a}{b} \in K$</li>
-</ol>
-<p>$K$ 是一个<a href="#%E6%95%B0%E5%9F%9F">数域</a></p>
-<p>常见: 有理数域(最小的数域),实数域,复数域(最大的数域)</p>
-]]></content>
-      <categories>
-        <category>高等代数</category>
-      </categories>
-      <tags>
-        <tag>高等代数</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>甜甜圈数学 from 2006</title>
     <url>/Math/2021-12-31-donut/</url>
     <content><![CDATA[<h1 id="本文尽量逐句翻译"><a href="#本文尽量逐句翻译" class="headerlink" title="本文尽量逐句翻译"></a>本文尽量逐句翻译</h1><h2 id="代码1"><a href="#代码1" class="headerlink" title="代码1"></a>代码1</h2><p><code>donut.c</code>:</p>
@@ -181,6 +145,42 @@
       <tags>
         <tag>math</tag>
         <tag>甜甜圈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 一 线性方程组的解法</title>
+    <url>/Math/Advanced_algebra_1/</url>
+    <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
+<li>数</li>
+<li>代数</li>
+<li>方程</li>
+<li>方程组</li>
+<li>系数矩阵</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="如何解方程组"><a href="#如何解方程组" class="headerlink" title="如何解方程组"></a>如何解方程组</h2><p>在数域中(有理数集,实数集,复数集)系数矩阵, 一行的倍数加减到另一行, 消元成阶梯矩阵(初等变化)</p>
+<p>未知量的系数列向量均不为0, 否则意味着该变量不存在</p>
+<h2 id="解的组数"><a href="#解的组数" class="headerlink" title="解的组数"></a>解的组数</h2><p>转换成阶梯矩阵后</p>
+<ol start="0">
+<li>无解: 转换时出现 $0 &#x3D; d(\ne 0)$ (左侧系数矩阵0,右侧非零)</li>
+<li>有且只有一个解: 非零行的数目r &#x3D; 未知数的数目n </li>
+<li>有无穷多解: 非零行的数目r &lt; 未知数的数目n</li>
+</ol>
+<h2 id="数域"><a href="#数域" class="headerlink" title="数域"></a>数域</h2><p>定义: 复数集的一个非空子集$K$如果满足</p>
+<ol>
+<li>$0,1\in K$</li>
+<li>$a,b\in K \to a \pm b , ab\in K$</li>
+<li>$a,b \in K, b\ne 0 \to \frac{a}{b} \in K$</li>
+</ol>
+<p>$K$ 是一个<a href="#%E6%95%B0%E5%9F%9F">数域</a></p>
+<p>常见: 有理数域(最小的数域),实数域,复数域(最大的数域)</p>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
       </tags>
   </entry>
   <entry>
@@ -1395,8 +1395,8 @@
 <p>证明: $\sum_{n\le x} \log n&#x3D;\int_{1}^x \log t dt+\int_{1}^x \psi_1(t)\frac{1}{t} dt -\psi_1(x)\log x \le (x\log x - x)+\frac{1}{2}O(\log x)+\frac{1}{2}O(\log x)$</p>
 <hr>
 <p>Chebyshev在研究素数定理时,引入了两个新函数</p>
-<p>$\theta(x)&#x3D;\sum_{p\le x} \log p\le x\log x$</p>
-<p>$\displaystyle \psi(x) &#x3D; \Lambda \circ U&#x3D;\sum_{n\le x} \Lambda (n)$, (单调递增)</p>
+<p>first Chebyshev function $\theta(x)&#x3D;\sum_{p\le x} \log p\le x\log x$</p>
+<p>second Chebyshev function $\displaystyle \psi(x) &#x3D; \Lambda \circ U&#x3D;\sum_{n\le x} \Lambda (n)$, (单调递增)</p>
 <p>$&#x3D;\sum_{m&#x3D;1}^{\infty} \sum_{p,{p^m}\le x} \Lambda(p^m)$</p>
 <p>$&#x3D;\sum_{m\le \log_2 x}\sum_{p\le x^{\frac{1}{m}}}\log p$</p>
 <p>$&#x3D;\sum_{m\le \log_2 x}\theta(x^{\frac{1}{m}})$</p>
@@ -1649,7 +1649,7 @@
 
 </details>
 
-<h2 id="18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta-‘-s-zeta-s"><a href="#18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta-‘-s-zeta-s" class="headerlink" title="18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta ‘ (s)}{\zeta(s)}$"></a>18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta ‘ (s)}{\zeta(s)}$</h2><p>$\zeta(s)&#x3D;\sum_{n&#x3D;1}^{\infty} \frac{1}{x^s}$ Riemann函数</p>
+<h2 id="18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta’-s-zeta-s"><a href="#18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta’-s-zeta-s" class="headerlink" title="18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$"></a>18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$</h2><p>$\zeta(s)&#x3D;\sum_{n&#x3D;1}^{\infty} \frac{1}{x^s}$ Riemann函数</p>
 <details class="note info no-icon"><summary><p>Proof</p>
 </summary>
 <p>(1) $\displaystyle &#x3D;\frac{1}{\prod_{p}\sum_{j&#x3D;0}^{\infty} \frac{1}{p^{sj}}}&#x3D;$</p>
@@ -1674,7 +1674,6 @@
 <blockquote>
 <p>$\sum_{n&#x3D;1}^{\infty}\mu(n)\frac{1}{n}&#x3D;\frac{1}{x} o(x)+\int_{1}^{x}\frac{o(t)}{t^2}dt$ 太大不行</p>
 </blockquote>
-<p>直接和引理6一样的方法，需要第二章例7</p>
 <p>TODO</p>
 
 </details>
@@ -1699,6 +1698,69 @@
         <tag>Bertrand 假设</tag>
         <tag>M(x)</tag>
         <tag>L(x)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论基础 四 同余</title>
+    <url>/Math/number_theory_4/</url>
+    <content><![CDATA[<p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="1-概念及基本性质"><a href="#1-概念及基本性质" class="headerlink" title="1.概念及基本性质"></a>1.概念及基本性质</h1><p>定义1: 正整数$m$称为模,$a,b$为任意两个整数, 若它们被$m$除后所得余数相同,则称作同余,记作$a\equiv b\pmod m$,否则$a\not \equiv b\pmod p$</p>
+<p>定理1: 上式等价于$m|(a-b)$, 根据第一章除法性质唯一余数</p>
+<p>基本性质:</p>
+<ul>
+<li>$a\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m \Leftrightarrow b\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m,b\equiv c\pmod m\Rightarrow a\equiv c\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \sum {a_i}\equiv \sum b_i\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \prod {a_i}\equiv \prod b_i\pmod m$</li>
+<li>$ab\equiv bd\pmod m,c\equiv d\pmod m,\gcd(c,m)&#x3D;1 \Rightarrow a\equiv b\pmod m$</li>
+</ul>
+<p>定理2: $A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\pmod m,x_i\equiv y_i\pmod m\Rightarrow \sum A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod x_i^{\alpha_i}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod y_i^{\alpha_i}\pmod m$<br>例1: $K$为正整数, 试着求为9的整除判别法</p>
+<p>$K&#x3D;\sum_{i\in[0,l]}10^i a_i,10^i\equiv 1 \pmod 9$</p>
+<p>由定理2: $K &#x3D; \sum_{i\in [0,l]}a_i\pmod 9$</p>
+<p>定理3: $K\ne 0$, $a\equiv b\pmod m \Leftrightarrow aK\equiv bK \pmod {Km}$</p>
+<p>定理4: 社$aC\equiv bC \pmod m, d&#x3D;\gcd(m,C)$则 $a\equiv b \pmod{\frac{m}{d}}$ </p>
+<p>$m|C(a-b) \Rightarrow \frac{m}{d} | \frac{C}{d}(a-b) \Rightarrow \frac{m}{d}|(a-b)$</p>
+<p>定理5: $d\ne 0, d|m , a\equiv b\pmod m \Rightarrow a\equiv b \pmod d$</p>
+<p>定理6: $a\equiv b\pmod {m_1},a\equiv b\pmod {m_2} \Leftrightarrow a\equiv b \pmod{\mathrm{lcm}(m_1,m_2)}$</p>
+<p>定理7: $a\equiv b\pmod m \Rightarrow \gcd(a,m)&#x3D;\gcd(b,m)$</p>
+<h1 id="2-剩余类及剩余系"><a href="#2-剩余类及剩余系" class="headerlink" title="2.剩余类及剩余系"></a>2.剩余类及剩余系</h1><p>定义2: 对$m$同余的整数的集合 剩余类（同余类）,（如果和$m$互素,则互素剩余类）, 可以分成$m$个剩余类</p>
+<p>定义3: 每个剩余类中任取一个数,组成的叫做模$m$的完全剩余系, (在每个和$m$互素的剩余类中任取一个,叫做简化(互素)剩余系)</p>
+<p>$0,1,\cdots,m-1$称作模$m$的最小非负完全剩余系</p>
+<p>把大于$\frac{m}{2}$的变成负的，则称作模$m$的绝对最小完全系</p>
+<p>素数的常用简化系$1,2,\cdots,p-1$</p>
+<p>定理8: $m$个整数组成模$m$的一个完全系的充要条件是这$m$个数两两对模$m$不同余</p>
+<p>定理9: $\phi(m)$个整数组成模$m$的一个简化系的充要条件是,这些数与$m$互素,且它们对模$m$两两不同余</p>
+<p>定理10: $m$自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的完全系时,$Kx+l$也通过$m$的完全系, (通过$x$不同余得到$Kx+l$不同余可证明</p>
+<p>定理11: $m$为自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的简化系时,$Kx+lm$也通过$m$的简化系,(同样，多证明一个和$m$的$\gcd$即可)</p>
+<p>定理12: $m_1,m_2$为自然数$(m_1,m_2)&#x3D;1$,当$x,y$分别通过模$m_1,m_2$的完全(简化)系时,$m_2x+m_1y$通过模$m&#x3D;m_1m_2$的完全(简化)系</p>
+<p>定理13(Euler): 设$m &gt; 1,\gcd(a,m)&#x3D;1$则$a^{\phi(m)}\equiv 1\pmod m$</p>
+<p>证明:</p>
+<p>$x_1,x_2,\cdots,x_{\phi(m)}$为一个简化系, </p>
+<p>$ax_1,ax_2,\cdots,ax_{\phi(m)}$为一个简化系, 定理11</p>
+<p>$\prod x_i\equiv \prod ax_i \pmod m$</p>
+<p>$\prod x_i\equiv a^{\phi(m)}\prod x_i \pmod m$</p>
+<p>$1 \equiv a^{\phi(m)} \pmod m$</p>
+<p>定理14(Fermat): 若$m&#x3D;p$为素数,则$a^{p-1}\equiv 1 \pmod p$</p>
+<p>重要应用, $f(n)$为模$m$为周期的数论函数</p>
+<p>$\displaystyle F(m)&#x3D;\sum_{x\pmod m} f(x)$ 表示对模$m$的一个完全系求和</p>
+<p>$\displaystyle G(m)&#x3D;\sum_{x\pmod m}’ f(x)$ 表示对模$m$的一个简化系求和</p>
+<p>定理15: $\displaystyle \sum_{x\pmod m} f(x)&#x3D;\sum_{x\pmod m} f(Kx+l),\gcd(K,m)&#x3D;1$,$\displaystyle \sum_{x\pmod m}’ f(x)&#x3D;\sum_{x\pmod m}’ f(Kx+l),\gcd(K,m)&#x3D;1$</p>
+<p>定理16: 设$f(n)&#x3D;e^{2\pi i\frac{n}{m}}$,则$F(m),G(m)$均为可乘函数</p>
+<h1 id="3-同余方程的一般概念，一次同余方程"><a href="#3-同余方程的一般概念，一次同余方程" class="headerlink" title="3. 同余方程的一般概念，一次同余方程"></a>3. 同余方程的一般概念，一次同余方程</h1><h1 id="4-孙子定理"><a href="#4-孙子定理" class="headerlink" title="4. 孙子定理"></a>4. 孙子定理</h1><h1 id="5-多项式的恒等同余"><a href="#5-多项式的恒等同余" class="headerlink" title="5. 多项式的恒等同余"></a>5. 多项式的恒等同余</h1><h1 id="6-模p的高次同余方程"><a href="#6-模p的高次同余方程" class="headerlink" title="6. 模p的高次同余方程"></a>6. 模p的高次同余方程</h1><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-xxxx"><a href="#2-xxxx" class="headerlink" title="2. xxxx"></a>2. xxxx</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+
+</details>]]></content>
+      <categories>
+        <category>数论</category>
+        <category>数论基础</category>
+      </categories>
+      <tags>
+        <tag>数论基础</tag>
+        <tag>欧拉定理</tag>
+        <tag>费马小定理</tag>
       </tags>
   </entry>
 </search>
