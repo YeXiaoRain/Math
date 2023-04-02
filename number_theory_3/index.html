@@ -27,7 +27,7 @@
 <meta property="og:description" content="1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2023-03-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-26T16:51:48.658Z">
+<meta property="article:modified_time" content="2023-04-02T21:13:34.133Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="数论基础">
 <meta property="article:tag" content="$\pi(x)$">
@@ -150,7 +150,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-pi-x"><span class="nav-text">函数$\pi(x)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chebyshev%E5%AE%9A%E7%90%86"><span class="nav-text">Chebyshev定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-omega-n-%E4%B8%8E-Omega-n"><span class="nav-text">函数$\omega(n)$与$\Omega(n)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bertrand-%E5%81%87%E8%AE%BE-1845%E6%8F%90%E5%87%BA"><span class="nav-text">Bertrand 假设 (1845提出)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-M-x-x3D-mu-circ-U"><span class="nav-text">函数$M(x)&#x3D;\mu \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-L-x-x3D-lambda-circ-U"><span class="nav-text">函数$L(x)&#x3D;\lambda \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-sum-p-frac-1-p-%E5%8F%91%E6%95%A3"><span class="nav-text">2. $\sum_{p} \frac{1}{p}$发散</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-f-x-%E4%B8%BA%E6%95%B4%E7%B3%BB%E6%95%B0%E5%A4%9A%E9%A1%B9%E5%BC%8F-lbrace-f-n-rbrace-%E6%9C%89%E6%97%A0%E9%99%90%E4%B8%AA%E7%B4%A0%E5%9B%A0%E5%AD%90"><span class="nav-text">4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-x-ge-2-%E8%AF%81-sum-d-le-x-d-2-n-x3D-O-x-log-3-x"><span class="nav-text">8. $x\ge 2$证$\sum_{d\le x} d^2(n)&#x3D;O(x\log^3 x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-x-ge-1-%E5%88%99-sum-n-le-x-frac-phi-n-n-x3D-frac-6-pi-2-x-O-log-x"><span class="nav-text">9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\frac{6}{\pi^2}x+O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8-frac-n-phi-n-x3D-prod-p-n-1-frac-1-p-1-x3D-sum-d-n-frac-mu-2-d-phi-d-1-%E8%AF%81%E6%98%8E-sum-n-le-x-frac-n-phi-n-x3D-O-x-sum-n-le-x-frac-1-phi-n-x3D-O-log-x"><span class="nav-text">10. 使用$\frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}&#x3D;O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}&#x3D;O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-sum-p-x-frac-log-p-p-x3D-O-log-log-x"><span class="nav-text">15. $\sum_{p|x}\frac{\log p}{p}&#x3D;O(\log \log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-n-ge-3-sum-d-n-frac-mu-d-log-d-d-x3D-O-log-log-n"><span class="nav-text">16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;O(\log \log n)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E8%AF%95%E8%AF%81%E5%AD%98%E5%9C%A8%E5%B8%B8%E6%95%B0-C-n-ge-3-%E6%97%B6-phi-n-gt-C-frac-n-log-log-n"><span class="nav-text">17. 试证存在常数$C$,$n\ge 3$时$\phi(n)&gt;C\frac{n}{\log \log n}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta%E2%80%99-s-zeta-s"><span class="nav-text">18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-sum-n-x3D-1-infty-frac-mu-n-n-x3D-0-%E4%B8%8E-M-x-x3D-o-x-%E7%AD%89%E4%BB%B7"><span class="nav-text">19. $\sum_{n&#x3D;1}^{\infty} \frac{\mu(n)}{n}&#x3D;0$ 与$M(x)&#x3D;o(x)$等价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-sum-n-le-x-frac-1-Lambda-n-n-x3D-2-gamma-o-1-%E5%92%8C%E7%B4%A0%E6%95%B0%E5%AE%9A%E7%90%86%E7%AD%89%E4%BB%B7"><span class="nav-text">20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}&#x3D;2\gamma +o(1)$和素数定理等价</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-pi-x"><span class="nav-text">函数$\pi(x)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chebyshev%E5%AE%9A%E7%90%86"><span class="nav-text">Chebyshev定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-omega-n-%E4%B8%8E-Omega-n"><span class="nav-text">函数$\omega(n)$与$\Omega(n)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bertrand-%E5%81%87%E8%AE%BE-1845%E6%8F%90%E5%87%BA"><span class="nav-text">Bertrand 假设 (1845提出)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-M-x-x3D-mu-circ-U"><span class="nav-text">函数$M(x)&#x3D;\mu \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-L-x-x3D-lambda-circ-U"><span class="nav-text">函数$L(x)&#x3D;\lambda \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-sum-p-frac-1-p-%E5%8F%91%E6%95%A3"><span class="nav-text">2. $\sum_{p} \frac{1}{p}$发散</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-f-x-%E4%B8%BA%E6%95%B4%E7%B3%BB%E6%95%B0%E5%A4%9A%E9%A1%B9%E5%BC%8F-lbrace-f-n-rbrace-%E6%9C%89%E6%97%A0%E9%99%90%E4%B8%AA%E7%B4%A0%E5%9B%A0%E5%AD%90"><span class="nav-text">4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-x-ge-2-%E8%AF%81-sum-d-le-x-d-2-n-x3D-O-x-log-3-x"><span class="nav-text">8. $x\ge 2$证$\sum_{d\le x} d^2(n)&#x3D;O(x\log^3 x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-x-ge-1-%E5%88%99-sum-n-le-x-frac-phi-n-n-x3D-frac-6-pi-2-x-O-log-x"><span class="nav-text">9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\frac{6}{\pi^2}x+O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8-frac-n-phi-n-x3D-prod-p-n-1-frac-1-p-1-x3D-sum-d-n-frac-mu-2-d-phi-d-1-%E8%AF%81%E6%98%8E-sum-n-le-x-frac-n-phi-n-x3D-O-x-sum-n-le-x-frac-1-phi-n-x3D-O-log-x"><span class="nav-text">10. 使用$\frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}&#x3D;O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}&#x3D;O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-sum-p-x-frac-log-p-p-x3D-O-log-log-x"><span class="nav-text">15. $\sum_{p|x}\frac{\log p}{p}&#x3D;O(\log \log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-n-ge-3-sum-d-n-frac-mu-d-log-d-d-x3D-O-log-log-n"><span class="nav-text">16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;O(\log \log n)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E8%AF%95%E8%AF%81%E5%AD%98%E5%9C%A8%E5%B8%B8%E6%95%B0-C-n-ge-3-%E6%97%B6-phi-n-gt-C-frac-n-log-log-n"><span class="nav-text">17. 试证存在常数$C$,$n\ge 3$时$\phi(n)&gt;C\frac{n}{\log \log n}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-displaystyle-sum-n-x3D-1-infty-frac-mu-n-n-s-x3D-frac-1-zeta-s-displaystyle-sum-n-x3D-1-infty-frac-d-n-n-s-x3D-zeta-2-s-displaystyle-sum-n-x3D-1-infty-frac-Lambda-n-n-s-x3D-frac-zeta%E2%80%99-s-zeta-s"><span class="nav-text">18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-sum-n-x3D-1-infty-frac-mu-n-n-x3D-0-%E4%B8%8E-M-x-x3D-o-x-%E7%AD%89%E4%BB%B7"><span class="nav-text">19. $\sum_{n&#x3D;1}^{\infty} \frac{\mu(n)}{n}&#x3D;0$ 与$M(x)&#x3D;o(x)$等价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-sum-n-le-x-frac-1-Lambda-n-n-x3D-2-gamma-o-1-%E5%92%8C%E7%B4%A0%E6%95%B0%E5%AE%9A%E7%90%86%E7%AD%89%E4%BB%B7"><span class="nav-text">20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}&#x3D;2\gamma +o(1)$和素数定理等价</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -274,7 +274,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-03-27 00:51:48" itemprop="dateModified" datetime="2023-03-27T00:51:48+08:00">2023-03-27</time>
+      <time title="修改時間：2023-04-03 05:13:34" itemprop="dateModified" datetime="2023-04-03T05:13:34+08:00">2023-04-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -347,7 +347,13 @@
 <p>取$s+1&#x3D;[\frac{\log_2 x}{2}]$</p>
 <p>$\displaystyle 0 &lt; \lim_{x\to \infty} \frac{\pi(x)}{x} &lt; \lim_{x\to \infty} \prod_{i&#x3D;1}^{[\frac{\log_2 x}{2}]-1} (1-\frac{1}{p_i}) + \frac{2^{[\frac{\log_2 x}{2}]}}{x}$</p>
 <p>得证， 即$\pi(x) &#x3D; o(x), x\to \infty$</p>
-<h1 id="Chebyshev定理"><a href="#Chebyshev定理" class="headerlink" title="Chebyshev定理"></a>Chebyshev定理</h1><p>大量的尝试,Legendre和Gauss都猜测(素数定理)$\pi(x)\sim \frac{x}{\log x}$</p>
+<h1 id="Chebyshev定理"><a href="#Chebyshev定理" class="headerlink" title="Chebyshev定理"></a>Chebyshev定理</h1><p>大量的尝试,Legendre和Gauss都猜测(素数定理)$\pi(x)\sim \frac{x}{\log x}$ (第三章没有证明到系数在极限下是1，只证明了下面这个更弱的形式)</p>
+<blockquote>
+<p>1896年，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%BF%E8%BE%BE%E9%A9%AC/400373?fromModule=lemma_inlink">阿达马</a>（即雅克·所罗门·阿达马，Jacques Solomon Hadamard，1865年－1963年）和德·拉·瓦莱布桑（Charles-Jean de la Vallée Poussin）按照<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B3%A2%E6%81%A9%E5%93%88%E5%BE%B7%C2%B7%E9%BB%8E%E6%9B%BC/1693983?fromModule=lemma_inlink">波恩哈德·黎曼</a>（B. Riemann）的思路，各自独立地利用高深的整函数理论证明了素数定理。</p>
+</blockquote>
+<blockquote>
+<p>1949年，塞尔伯格（即<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%BF%E7%89%B9%E5%8B%92%C2%B7%E5%A1%9E%E5%B0%94%E4%BC%AF%E6%A0%BC/9243382?fromModule=lemma_inlink">阿特勒·塞尔伯格</a>，Atle Selberg）和埃尔德什（即<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BF%9D%E7%BD%97%C2%B7%E5%9F%83%E5%B0%94%E5%BE%B7%E4%BB%80/6265074?fromModule=lemma_inlink">保罗·埃尔德什</a>，Paul Erdős）分别独立地证明了素数定理。塞尔伯格由于这项成就及其他工作而获得了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8F%B2%E5%B0%94%E5%85%B9%E5%A5%96/186887?fromModule=lemma_inlink">菲尔兹奖</a>，埃尔德什则与陈省身一起获得了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B2%83%E5%B0%94%E5%A4%AB%E6%95%B0%E5%AD%A6%E5%A5%96?fromModule=lemma_inlink">沃尔夫数学奖</a>。</p>
+</blockquote>
 <p>Chebyshev 1850证明了存在两个正常数使得$C_1\frac{x}{\log x}&lt; \pi(x) &lt; C_2\frac{x}{\log x}$ </p>
 <p>引理4(重要,这个公式用于$C_n$去转换做阶的估计很有用): 设$x &gt; 1$,$f(t)\in C’[1,x],S(x)&#x3D;\sum_{n\le x}C_n$ 则</p>
 <p>$\sum_{n\le x}C_nf(n)&#x3D;S(x)f(x)-\int_1^xS(t)f’(t)dt$</p>
@@ -506,7 +512,7 @@
 <p>得证</p>
 <p>定理15: $M(x)&#x3D;o(x),x\to \infty$ 包含$\psi(x)\sim x,x\to \infty$, </p>
 <blockquote>
-<p>这里后面的是已经证明过的正确性了，这里要证明的是两者之间的包含关系? 没有很懂,又不像条件,这两者相互影响吗? 看过程大概意思是用前面表示后面然后证明</p>
+<p>这里后面的是上面我们和素数定理等价的定理，上面并没有证明其正确性（上面只有等价关系），这里要证明的是$M(x)&#x3D;o(x)$和素数定理之间的等价关系，所以就要证明互相可以推</p>
 </blockquote>
 <p>先证明 $\psi(x)&#x3D;x-\sum_{lk\le x}\mu(l)f(k)+O(1)$, 其中$f(n)&#x3D;d(n)-\log n-2\gamma$</p>
 <p>首先 $[x]&#x3D;u\circ U,\psi&#x3D;\Lambda \circ U,1&#x3D;I\circ U$,$d(n)&#x3D;\sum_{l|n}1&#x3D;1 * u$,$1&#x3D;\mu * d$,$\Lambda &#x3D; \mu * \log$,$I&#x3D;\mu * u$</p>
@@ -664,6 +670,16 @@
 <p>TODO</p>
 
 </details>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本章的核心是 Cheybyshev定理 存在两个正常数使得$C_1\frac{x}{\log x}&lt; \pi(x) &lt; C_2\frac{x}{\log x}$  , 以及围绕着 素数定理 $\pi(x) \sim \frac{x}{\log x} ,x \to \infty$ 有关的几个等价的定理 </p>
+<p>first Chebyshev function: $\theta(x) &#x3D;\sum_{p\le x} \log p\sim x,x \to \infty$ </p>
+<p>second Chebyshev function: $\displaystyle \psi(x) &#x3D; \Lambda \circ U \sim x,x\to \infty$,</p>
+<p>Mertens function:$M(x)&#x3D; \mu \circ U&#x3D;o(x),x\to \infty$ </p>
+<p>$L(x)&#x3D;\lambda \circ U&#x3D;o(x),x\to \infty$</p>
+<p>以及</p>
+<p>定理9: $\displaystyle \sum_{n\le x}\omega(n)&#x3D;x\log \log x+C_7 x+O(\frac{x}{\log x})$,$\sum_{n\le x}\Omega(n)&#x3D;x\log \log x+C_8 x+O(\frac{x}{\log x})$</p>
+<p>Bertrand假设: 主要内容是$[x,2x]$之间必有素数</p>
+
     </div>
 
     
@@ -749,13 +765,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">90k</span>
+    <span title="總字數">91k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">1:22</span>
+    <span title="所需總閱讀時間">1:23</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
