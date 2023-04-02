@@ -42,7 +42,11 @@ $\displaystyle 0 < \lim_{x\to \infty} \frac{\pi(x)}{x} < \lim_{x\to \infty} \pro
 
 # Chebyshev定理 
 
-大量的尝试,Legendre和Gauss都猜测(素数定理)$\pi(x)\sim \frac{x}{\log x}$
+大量的尝试,Legendre和Gauss都猜测(素数定理)$\pi(x)\sim \frac{x}{\log x}$ (第三章没有证明到系数在极限下是1，只证明了下面这个更弱的形式)
+
+> 1896年，[阿达马](https://baike.baidu.com/item/%E9%98%BF%E8%BE%BE%E9%A9%AC/400373?fromModule=lemma_inlink)（即雅克·所罗门·阿达马，Jacques Solomon Hadamard，1865年－1963年）和德·拉·瓦莱布桑（Charles-Jean de la Vallée Poussin）按照[波恩哈德·黎曼](https://baike.baidu.com/item/%E6%B3%A2%E6%81%A9%E5%93%88%E5%BE%B7%C2%B7%E9%BB%8E%E6%9B%BC/1693983?fromModule=lemma_inlink)（B. Riemann）的思路，各自独立地利用高深的整函数理论证明了素数定理。
+
+> 1949年，塞尔伯格（即[阿特勒·塞尔伯格](https://baike.baidu.com/item/%E9%98%BF%E7%89%B9%E5%8B%92%C2%B7%E5%A1%9E%E5%B0%94%E4%BC%AF%E6%A0%BC/9243382?fromModule=lemma_inlink)，Atle Selberg）和埃尔德什（即[保罗·埃尔德什](https://baike.baidu.com/item/%E4%BF%9D%E7%BD%97%C2%B7%E5%9F%83%E5%B0%94%E5%BE%B7%E4%BB%80/6265074?fromModule=lemma_inlink)，Paul Erdős）分别独立地证明了素数定理。塞尔伯格由于这项成就及其他工作而获得了[菲尔兹奖](https://baike.baidu.com/item/%E8%8F%B2%E5%B0%94%E5%85%B9%E5%A5%96/186887?fromModule=lemma_inlink)，埃尔德什则与陈省身一起获得了[沃尔夫数学奖](https://baike.baidu.com/item/%E6%B2%83%E5%B0%94%E5%A4%AB%E6%95%B0%E5%AD%A6%E5%A5%96?fromModule=lemma_inlink)。
 
 Chebyshev 1850证明了存在两个正常数使得$C_1\frac{x}{\log x}< \pi(x) < C_2\frac{x}{\log x}$ 
 
@@ -358,7 +362,7 @@ $M(a)\psi(b)=O(a)O(b)=O(ab)=O(x)=o(x\log x)$
 
 定理15: $M(x)=o(x),x\to \infty$ 包含$\psi(x)\sim x,x\to \infty$, 
 
-> 这里后面的是已经证明过的正确性了，这里要证明的是两者之间的包含关系? 没有很懂,又不像条件,这两者相互影响吗? 看过程大概意思是用前面表示后面然后证明
+> 这里后面的是上面我们和素数定理等价的定理，上面并没有证明其正确性（上面只有等价关系），这里要证明的是$M(x)=o(x)$和素数定理之间的等价关系，所以就要证明互相可以推
 
 先证明 $\psi(x)=x-\sum_{lk\le x}\mu(l)f(k)+O(1)$, 其中$f(n)=d(n)-\log n-2\gamma$
 
@@ -626,3 +630,21 @@ $\Leftarrow$:
 TODO
 
 {% endnote %}
+
+# 总结
+
+本章的核心是 Cheybyshev定理 存在两个正常数使得$C_1\frac{x}{\log x}< \pi(x) < C_2\frac{x}{\log x}$  , 以及围绕着 素数定理 $\pi(x) \sim \frac{x}{\log x} ,x \to \infty$ 有关的几个等价的定理 
+
+first Chebyshev function: $\theta(x) =\sum_{p\le x} \log p\sim x,x \to \infty$ 
+
+second Chebyshev function: $\displaystyle \psi(x) = \Lambda \circ U \sim x,x\to \infty$,
+
+Mertens function:$M(x)= \mu \circ U=o(x),x\to \infty$ 
+
+$L(x)=\lambda \circ U=o(x),x\to \infty$
+
+以及
+
+定理9: $\displaystyle \sum_{n\le x}\omega(n)=x\log \log x+C_7 x+O(\frac{x}{\log x})$,$\sum_{n\le x}\Omega(n)=x\log \log x+C_8 x+O(\frac{x}{\log x})$
+
+Bertrand假设: 主要内容是$[x,2x]$之间必有素数
