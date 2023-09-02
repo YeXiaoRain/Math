@@ -2072,10 +2072,10 @@
   </entry>
   <entry>
     <title>魔方</title>
-    <url>/Math/rubick_cube/</url>
+    <url>/Math/rubicks_cube/</url>
     <content><![CDATA[<h1 id="魔方"><a href="#魔方" class="headerlink" title="魔方"></a>魔方</h1><p>不知道魔方公式的情况下,用数学解决魔方</p>
 <span id="more"></span>
-<h2 id="3阶"><a href="#3阶" class="headerlink" title="3阶"></a>3阶</h2><p>建模, 颜色映射成1-6</p>
+<h2 id="3阶"><a href="#3阶" class="headerlink" title="3阶"></a>3阶</h2><p>建模, 颜色映射成0-5</p>
 <p>方法1: 6 * 9&#x3D;54个面 一维向量, 对于每个操作建立一个54x54转移矩阵</p>
 <p>方法2: 直接54个面的中心的三维坐标, 用旋转矩阵</p>
 <p>方法3: 直接9个块,每次操作是对给定块的旋转变化</p>
@@ -2141,7 +2141,7 @@
 <li>要把 左侧(0,1)移动到(1,2): 右手: 左上右下 + 背后90度 + 右上左下</li>
 <li>要把 右侧(0,1)移动到(1,0): 左手: 右上左下 + 背后90度 + 左上右下</li>
 </ul>
-<p>顶面十字: </p>
+<p>顶面十字:</p>
 <ul>
 <li>前顺时针+左上右下+前逆时针</li>
 </ul>
