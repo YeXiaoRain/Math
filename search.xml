@@ -148,27 +148,6 @@
       </tags>
   </entry>
   <entry>
-    <title>&lt;大老李聊数学&gt; 笔记</title>
-    <url>/Math/2023-07-20-dalaoli/</url>
-    <content><![CDATA[<p>感觉其实有些讨论到的问题, 作为已经了解过的人来回看 还是不错的总结, 但对于没了解过的,感觉总有点不那么适合新手的科普</p>
-<span id="more"></span>
-
-<p>姚氏百万富翁问题: 如何设计方法比较两人财富大小(多&#x2F;等&#x2F;少),而不泄漏具体财富信息(甚至财富的数量级)</p>
-<p>大数: 葛立恒数: 拉姆齐理论（Ramsey theory）中一个极其异乎寻常问题的上限解，是一个难以想象的巨型数。这个问题表述为：连接n维超立方体的每对几何顶点，获得一个有着$2^n$个顶点的完全图（每对顶点之间都恰连有一条边($\binom{2^n}{2}$条线段)的简单图）。将该图每条边的颜色填上红色或蓝色。那么，使所有填法在四个共面顶点上包含至少一个单色完全子图的最小$n$值为多少(希望不论怎么上色,总能找到一个四点面的8条边同色)？葛立恒数是它的上界,(高德纳箭头)</p>
-<p>tree(3): TODO</p>
-<p>&lt;数学的天空&gt;-张跃辉，李吉有，朱佳俊, <a href="https://www.global-sci.org/intro/article_detail/mc/13059.html">https://www.global-sci.org/intro/article_detail/mc/13059.html</a></p>
-<p>椭圆曲线: TODO 单独一篇文章</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>喜马拉雅频道: 大老李聊数学</p>
-]]></content>
-      <categories>
-        <category>播客</category>
-        <category>大老李聊数学</category>
-      </categories>
-      <tags>
-        <tag>数学</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>立直麻将 麻雀（マージャン）</title>
     <url>/Math/2023-07-23-Japanese_Mahjong/</url>
     <content><![CDATA[<p>有很多细则这里不一定提及(比如十三幺可以抢按杠,比如宝牌), 主要还是常见普适一点的内容</p>
