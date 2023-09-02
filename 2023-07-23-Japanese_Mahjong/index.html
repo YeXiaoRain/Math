@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="1.基本概念 2.初级进阶 3.概率分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="立直麻将 麻雀（マージャン）">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="1.基本概念 2.初级进阶 3.概率分析">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i0.hdslb.com/bfs/article/8caca65d808c161412902cf4577dd0786d8af369.jpg@!web-article-pic.avif">
+<meta property="og:image" content="https://tiebapic.baidu.com/forum/pic/item/b65ad6c4b74543a9cc5fe6fc58178a82b9011478.jpg?tbpicau=2023-07-29-05_482fb31942430e387069bf586419990a">
+<meta property="article:published_time" content="2023-07-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-02T00:22:49.054Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="立直麻将">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i0.hdslb.com/bfs/article/8caca65d808c161412902cf4577dd0786d8af369.jpg@!web-article-pic.avif">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/","path":"2023-07-23-Japanese_Mahjong/","title":"立直麻将 麻雀（マージャン）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>立直麻将 麻雀（マージャン） | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">22</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">10</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">38</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A0%81"><span class="nav-text">编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%A1%E7%89%8C-x2F-%E5%92%8C"><span class="nav-text">胡牌&#x2F;和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E7%82%B9"><span class="nav-text">打点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%B2-x2F-%E5%AD%90"><span class="nav-text">亲&#x2F;子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%95%AA"><span class="nav-text">番</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%A6"><span class="nav-text">符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%88%E7%8E%87"><span class="nav-text">效率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#x%E5%90%91%E5%90%AC"><span class="nav-text">x向听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E7%89%8C-x2F-%E8%A1%A5%E5%BC%BA%E7%89%8C"><span class="nav-text">有效牌&#x2F;补强牌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%97%E4%B8%A4%E5%BC%A0"><span class="nav-text">数字两张</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E5%BC%A0"><span class="nav-text">单张</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%BC%A0"><span class="nav-text">三张</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E5%BC%A0"><span class="nav-text">四张</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E7%BB%84%E7%90%86%E8%AE%BA-%E6%99%AE%E9%80%9A%E5%9E%8B"><span class="nav-text">五组理论(普通型)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E6%95%88%E7%89%8C%E9%87%8D%E5%A4%8D"><span class="nav-text">有效牌重复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-text">实战</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-text">工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YeXiaoRain"
+      src="https://avatars.githubusercontent.com/u/7298239?v=4">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">22</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">38</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yexiaorain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yexiaorain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yexiaorain@gmail.com" title="E-Mail → mailto:yexiaorain@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://atcoder.jp/users/cromarmot" title="https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;cromarmot" rel="noopener" target="_blank">AtCoder</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://codeforces.com/profile/YeXiaoRain" title="https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;YeXiaoRain" rel="noopener" target="_blank">Codeforces</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="立直麻将 麻雀（マージャン） | YeXiaoRain's Math">
+      <meta itemprop="description" content="1.基本概念 2.初级进阶 3.概率分析">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          立直麻将 麻雀（マージャン）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-07-23 00:00:00" itemprop="dateCreated datePublished" datetime="2023-07-23T00:00:00+08:00">2023-07-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-09-02 08:22:49" itemprop="dateModified" datetime="2023-09-02T08:22:49+08:00">2023-09-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%B8%B8%E6%88%8F/" itemprop="url" rel="index"><span itemprop="name">游戏</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%B8%B8%E6%88%8F/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/" itemprop="url" rel="index"><span itemprop="name">立直麻将</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/Math/2023-07-23-Japanese_Mahjong/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023-07-23-Japanese_Mahjong/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>4 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">1.基本概念 2.初级进阶 3.概率分析</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>有很多细则这里不一定提及(比如十三幺可以抢按杠,比如宝牌), 主要还是常见普适一点的内容</p>
+<h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><p><del>他立任他立,我当他没立</del></p>
+<span id="more"></span>
+
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>数字牌: 1-9</p>
+<p>风牌: 东南西北,其中(当场的风为场风,自家的风为自风(可以重叠计算),非自风的是客风)</p>
+<p>三元牌: 白发中</p>
+<p>役牌: 三元牌+场风+自风</p>
+<p>幺九牌: 1&#x2F;9+风牌+三元牌</p>
+<p>总张数$4 * (3 * 9+4+3) &#x3D; 108$</p>
+<hr>
+<p>对子: X,X</p>
+<p>刻子: X,X,X</p>
+<p>杠子(杠子要杠出来发挥”刻子的作用”,下面所有刻子包含杠子的意义): X,X,X,X</p>
+<p>顺子,(A为数牌,且三张同色): A,A+1,A+2</p>
+<p>面子: 刻子(杠子) or 顺子</p>
+<p>雀头: 对子</p>
+<h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>m万p筒s条</p>
+<p>黑数字1-9直接1-9, 红5用数字0表示</p>
+<p>字牌<strong>没有</strong>统一表示方式,有的地方用下面对应方式</p>
+<table>
+<thead>
+<tr>
+<th>东</th>
+<th>南</th>
+<th>西</th>
+<th>北</th>
+<th>白</th>
+<th>发</th>
+<th>中</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody></table>
+<h2 id="胡牌-x2F-和"><a href="#胡牌-x2F-和" class="headerlink" title="胡牌&#x2F;和"></a>胡牌&#x2F;和</h2><p>极端情况: 十三幺: 19m19p19s1234567z + 前面任意一张</p>
+<p>偶尔可用: 7个对子</p>
+<p>最常见: 4面子+1雀头</p>
+<p>其中 至少一番才能胡牌</p>
+<p>分为自摸(自己抓起胡牌),荣和(其它家弃掉不要的牌正好可以胡牌)</p>
+<p><del>振听: 多玩两把就知道了, 主要就是打了的不能作为荣和牌(但是可以自摸)</del></p>
+<hr>
+<p>那么听牌(再来一张就胡牌了)时:</p>
+<p>两对: 3面子+XX,YY</p>
+<p>单骑: 4面子+X</p>
+<p>边张: 3面子+1雀头+ (12 or 89)</p>
+<p>两面: 3面子+1雀头+ (A,A+1) 且不是(12 or 89)</p>
+<p>坎张: 3面子+1雀头+ (A,A+2)</p>
+<h3 id="打点"><a href="#打点" class="headerlink" title="打点"></a>打点</h3><h3 id="亲-x2F-子"><a href="#亲-x2F-子" class="headerlink" title="亲&#x2F;子"></a>亲&#x2F;子</h3><p>同样牌情况下自己亲家(庄家(东家))时赚得更多(大约是1.5倍)</p>
+<p>自己亲家,子家自摸时,自己大约被扣$\frac{1}{2}$的打点</p>
+<hr>
+<h4 id="番"><a href="#番" class="headerlink" title="番"></a>番</h4><p>一般来讲 番越大赚越多, 基本分为(子), 30符为例</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4~5</th>
+<th>6~7</th>
+<th>8~10</th>
+<th>11~12</th>
+<th>13+</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1000</td>
+<td>2000</td>
+<td>3900</td>
+<td>7700</td>
+<td>12000</td>
+<td>16000</td>
+<td>24000</td>
+<td>32000</td>
+</tr>
+</tbody></table>
+<p>基本上可以看作 1,2,4,8,8,12,12,16,16,16,24,24,32..</p>
+<p><del>牌型带来的番 基本游戏内会列出</del></p>
+<p>同时多个牌型(两杯口 or 七对子) 按番大的算</p>
+<h4 id="符"><a href="#符" class="headerlink" title="符"></a>符</h4><blockquote>
+<p>平和: 两面 且 雀头不是役牌</p>
+</blockquote>
+<p>主要体现在 1-4番(低番)时 增加打点,</p>
+<p>&#x3D;固定符(七对子25(降为80%), 平和自摸20(降为65%), 副露且20则变为30(基准))</p>
+<p>&#x3D;20(符底)+听牌+雀头+刻&#x2F;杠, 向上整十取值</p>
+<ul>
+<li>听牌(门清荣和+10, 自摸+2, 边张&#x2F;单骑&#x2F;坎张+2(也就是”唯一”听一张时(实际可能同时听多张 例如1234听1,4)))</li>
+<li>雀头: 自风&#x2F;场风&#x2F;三元+2 (也就是本来做三张可以带来役&#x2F;一番的牌)</li>
+<li>刻&#x2F;杠: 简单说基础是+2, 幺九是非幺九的2倍, 暗是明的2倍, 杠是刻的4倍, 所以从最小 非幺九明刻+2,到最大 幺九暗杠+32</li>
+</ul>
+<p>对点数影响(子30%基础(30符的点数) &#x2F;每10符)</p>
+<ul>
+<li>1番时 大约是450庄&#x2F;350子 每10符</li>
+<li>2番时 大约是950庄&#x2F;650子 每10符</li>
+<li>3番时 大约是1950庄&#x2F;1250子 每10符</li>
+<li>4番时 直接和满贯(40符)很接近</li>
+</ul>
+<p>而常见的</p>
+<ul>
+<li>25符 7对子(大约是正常的30符的80%)</li>
+<li>平和自摸 20符(大约是正常30符的65%)</li>
+<li>平和荣和 30符</li>
+<li>30符 副露, $\le 1$刻子</li>
+<li>$\ge 40符$ 门清荣和(无平和), (因为首先有+10, 然后如果 +2 都不满足 则一定是荣和,所以至少一个+2满足)</li>
+</ul>
+<p>子家, 括号里是(其他子家,庄家)的陪点数</p>
+<p><img data-src="https://i0.hdslb.com/bfs/article/8caca65d808c161412902cf4577dd0786d8af369.jpg@!web-article-pic.avif" alt="图例"></p>
+<p>注意到常见的</p>
+<ul>
+<li>平和+其它2番 的 荣和 &#x3D;3番 只有3900</li>
+<li>平和+自摸+其它2番&#x3D;4番 只有5200</li>
+<li>立直+平和+自摸+其它2番 的五番 8000</li>
+<li>立直+平和+其它2番 的 荣和, 4番30符 7700</li>
+</ul>
+<p>而且立直还有可能里宝牌加番</p>
+<hr>
+<p>综上,在不考虑 其他玩家看到立直可能采取防守&#x2F;可能点炮 的情况下, 把番做大(番高了是阶梯函数)赢得越多</p>
+<h2 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h2><p>在不考虑其它情况下, 如何尽快做胡</p>
+<h3 id="x向听"><a href="#x向听" class="headerlink" title="x向听"></a>x向听</h3><p>胡牌</p>
+<p>最少差1张胡牌 &#x3D; 听牌</p>
+<p>最少差x张胡牌 &#x3D; x向听</p>
+<p>最多6向听: 因为任意牌, 如果摸存在的6张, 则听七对</p>
+<p>显然 每次摸牌x至多减1</p>
+<h3 id="有效牌-x2F-补强牌"><a href="#有效牌-x2F-补强牌" class="headerlink" title="有效牌&#x2F;补强牌"></a>有效牌&#x2F;补强牌</h3><p>有效牌: 摸一张后, x变为x-1</p>
+<p>补强牌: 摸一张后, x还是x, 但是有效牌数量变多</p>
+<h3 id="数字两张"><a href="#数字两张" class="headerlink" title="数字两张"></a>数字两张</h3><p>$23 &gt; 13 &gt; 12$</p>
+<p><del>数学上显然</del></p>
+<p>不妨设 顺子分数为$x$, 显然概率频次下 $8x &gt; 4x$</p>
+<p>而$13 \to (1)34,123$, 这$12 \to 123$</p>
+<hr>
+<p>$14\to 4$, 都是等23,56, 所以不看作2张,是筋</p>
+<hr>
+<p>对子</p>
+<p>0个对子, $3 * 13&#x2F;108&#x3D;0.36111~&#x3D;\frac{1}{3}$ 概率摸成对子,所以做顺子优先级大于对子(??????)</p>
+<p>1个对子, 不提供 有效牌张数</p>
+<p>2个对子, 提供4张有效牌(相对高的效率)</p>
+<p>3个对子, 提供6张有效牌</p>
+<p>4+个对子, 考虑七对子&#x2F;对对和路线</p>
+<h3 id="单张"><a href="#单张" class="headerlink" title="单张"></a>单张</h3><p>中数字 &gt; 2,8 &gt; 1,9 &gt; 客风</p>
+<p>役牌 虽然也是只能刻子, 但是 本身能带来役的作用, 有时为了胡牌,它的役意义会大于好摸的意义, 特别是有很多坎张和幺九时</p>
+<p>当然 如果是 混一色的情况, 客风的优点更高</p>
+<hr>
+<p>不妨设 两连为$x$, 两坎为$y$, $x&gt;y$</p>
+<p>那么概率频次下:</p>
+<ul>
+<li>中间的数字 &#x3D; 8x+8y</li>
+<li>2,8 &#x3D; 8x+4y</li>
+<li>1,9 &#x3D; 4x+4y</li>
+</ul>
+<hr>
+<p>听牌时,</p>
+<p>单骑听牌: 自由度高, 多个A,A+1,A+2时换单骑有 4+3+3+4 种变成复合形</p>
+<h2 id="三张"><a href="#三张" class="headerlink" title="三张"></a>三张</h2><p>两面对 344</p>
+<p>坎对 244</p>
+<p>边对 112&#x2F;122</p>
+<p>两坎 A,A+2,A+4</p>
+<hr>
+<p>XX, 233, 577</p>
+<p>三对降二对, 建议 拆3, 损失的是 两个3的听, 其实就是考虑 打3和打7 对方无法达到的状态, 两个都能达到的状态就个数相等不考虑了</p>
+<p>拆3频次: 8(XX, 23, 777)+8(XXX, 23, 77)</p>
+<p>拆7频次: 4(XX, 333, 5 7)+4(XXX, 33, 5 7)</p>
+<p>延伸, 334567m,677p,12388s, 3m比7p还要强,3对降2对,拆3m</p>
+<hr>
+<p>A,A+1, 233, 577</p>
+<p>两对,维持两对, 打5, 也是同理对比对方不能达到的状态</p>
+<hr>
+<p>简单总结: 降对拆强对, 2对拆弱搭</p>
+<hr>
+<p>两坎, A,A+2,A+4</p>
+<p>一定程度浪费了一张, 但是因为和1坎比多了4张有效牌,所以价值还是高于1坎, 也高于边两张</p>
+<p>注意的是,很可能有 镶嵌式的两坎, 356778 &#x3D; 357(两坎)+678 &#x3D; 3+567+78</p>
+<h2 id="四张"><a href="#四张" class="headerlink" title="四张"></a>四张</h2><p>A,A+1,A+2,A+3</p>
+<p>3-6,4-7 最强(进张多)!, 例如3-6来说1~8 都是进张</p>
+<p>但是 1234~&#x3D;4</p>
+<hr>
+<p>中膨形 A-1,A,A,A+1</p>
+<p>强度也不错, 比上面4连弱一点, 把原来单牌的坎进牌变成两面进牌了</p>
+<p>同样 1223~&#x3D;2 甚至比单张还差</p>
+<hr>
+<p>亚两面 A,A,A+1,A+2, (注意1233不算亚两面)</p>
+<p>对子越多, a,a,a,a+1,a+2 (暗刻符合形) 价值越低</p>
+<p>对子为0,或1 价值稍微高</p>
+<p>原理同上面 3对需要降2对</p>
+<p>约等于 单张</p>
+<p>好处是,一杯口机会&#x2F;平和机会&#x2F;吃上家的A+1改良为A,A+1</p>
+<hr>
+<p><strong>注意 上面主要在牌的初期阶段, 在接近听牌时拆掉4张成3连 更有利于进张</strong></p>
+<p>所以核心还是  缺搭子 缺好搭子时 很有用,而 区块基本都形成后,还有的话就可以拆了</p>
+<hr>
+<p>螺丝形</p>
+<p>3444</p>
+<p>6888</p>
+<p>1112</p>
+<p>从听牌的角度很好, 4+3+4张</p>
+<p>缺少对子时很好用,而不缺对子时 甚至比单张数牌还差, 看作 刻子 + 单张</p>
+<p>但例子: 88,6777,白白, 如果白被打出来, 则会碰掉(未来会完成的刻子), 从而可以看成只有一个对子88</p>
+<p>一向听的时候一般拆掉,</p>
+<hr>
+<p>跳张形</p>
+<p>1345 &gt; 13 </p>
+<p>当可以吃上家时更强, 1在一定程度上加强了, (1)345 &gt; 13, (1)345 &gt; 2</p>
+<p>而类似的 3 &gt;(2)456 &gt; 2</p>
+<p>最强 3567</p>
+<p>(4)678 就相对弱 还是比单张4强一点</p>
+<p>(5)789&#x3D;5</p>
+<p>核心的分析方式还是 枚举所有有效进张带来变化,</p>
+<h2 id="五组理论-普通型"><a href="#五组理论-普通型" class="headerlink" title="五组理论(普通型)"></a>五组理论(普通型)</h2><p>23356m889p279s444z, <code>[23356m][889p]2[79s][444z]</code>, 2组1组1组1组, 打2s</p>
+<p>133m5579p12367s33z, 对于5579是1组还是两组从其它组反推,</p>
+<p>1278m3458p367s367z, 最多找到4组,搭子不足, 单张数牌 重要性提升</p>
+<p>33567m34799p126s3z,<code>[33][567m][34][799p][12]6s3z</code>, 虽然有5组,但是799p和12s都是愚形搭子,而且6是中张,这时候6更需要保留,期待摸到45678中的一张,打3z</p>
+<p>当牌型好的时候 单张中间也可以放弃</p>
+<p>当牌型差的时候,可以考虑保留中间张,为未来换搭子做准备</p>
+<p>甚至6组时,去拆弱搭子</p>
+<p>45999m677p3478s44z, <code>[45][999m][677p][34][78s][44z]</code>, 只看进张是打7p,但是始终有6组变5组的问题, 而这样的话到1向听的进张反而更少,所以更建议拆78s</p>
+<p>拆12的时候,建议先打2</p>
+<hr>
+<p>例子</p>
+<p>3899m123345p2558s, <code>3[899m][123][345p]2[55]8s</code>, 所以考虑2,8s, 而不是9m, 所以9m当前最大进张,但是等到1向听会变少</p>
+<p>46999m677p2479s44z, 很多愚形搭子, 不如打7p更多见机行事机会</p>
+<hr>
+<p>一向听集中理论, 很多时候 一向听到听牌 比 听牌到胡牌更难, 而且如果有 副露高打点,或者立直, 还有施加压力效果(当前 低分段很多头铁哥 ,他立任他立,我当他没立,和他大任他大)</p>
+<hr>
+<p>当前进张期望 &#x3D; 可进张牌 &#x2F; 未出现的牌(包括对手未知的手牌)</p>
+<p>巡数期望 &#x3D; 1&#x2F;进张期望</p>
+<hr>
+<p>再谈<code>45999m677p3478s44z</code></p>
+<p>4z vs 拆78s</p>
+<p>难比较, 可以量化麻将, 下面pystyle</p>
+<p>这里999m换成123p,从总期望上打7p更大</p>
+<p>而且北风是一种安全牌(是一种续航力)</p>
+<p>最长立直在7~10巡左右, 早巡立直其实也倾向完全弃和</p>
+<p>先制两面立直,平均有60%的胡牌率</p>
+<h2 id="有效牌重复"><a href="#有效牌重复" class="headerlink" title="有效牌重复"></a>有效牌重复</h2><p>1,4</p>
+<p>(2)5 还是比1&#x2F;9好</p>
+<p>(3)6 就还是比 2&#x2F;8好</p>
+<hr>
+<p>1245, 拆1不会损失, 甚至 先于 单张数牌先拆</p>
+<p>1224&#x2F;1334 都推荐弃1</p>
+<p>中张会相对好一些例如3556</p>
+<hr>
+<p>2356m,34p,建议拆23m, 只有4才有相对好的效果过</p>
+<p>2356m,24p,建议拆24p</p>
+<p>67m5566p, 建议拆6p</p>
+<p>68m5566p, 建议拆8m</p>
+<p>68m5577p, 建议拆7p</p>
+<p>356的3差,而3567的3好</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><img data-src="https://tiebapic.baidu.com/forum/pic/item/b65ad6c4b74543a9cc5fe6fc58178a82b9011478.jpg?tbpicau=2023-07-29-05_482fb31942430e387069bf586419990a"></p>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p><a target="_blank" rel="noopener" href="https://tenhou.net/">天凤</a></p>
+<p><a target="_blank" rel="noopener" href="https://pystyle.info/apps/mahjong-nanikiru-simulator/">https://pystyle.info/apps/mahjong-nanikiru-simulator/</a></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>bilibili: 星野Poteto 日麻牌效率 合集</p>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/" title="立直麻将 麻雀（マージャン）">https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%B8%B8%E6%88%8F/" rel="tag"><i class="fa fa-tag"></i> 游戏</a>
+              <a href="/Math/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/" rel="tag"><i class="fa fa-tag"></i> 立直麻将</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/2023-07-20-dalaoli/" rel="prev" title="<大老李聊数学> 笔记">
+                  <i class="fa fa-chevron-left"></i> <大老李聊数学> 笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/rubick_cube/" rel="next" title="魔方">
+                  魔方 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">155k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">2:21</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/Math/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/Math/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/"}</script>
+  <script src="/Math/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yexiaorain","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/Math/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
