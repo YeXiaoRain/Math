@@ -2138,11 +2138,19 @@
 </ul>
 <h2 id="4-阶"><a href="#4-阶" class="headerlink" title="4+阶"></a>4+阶</h2><p>从3阶提取, 逻辑意义</p>
 <p>TODO</p>
+<h3 id="Korf’s-algorithm"><a href="#Korf’s-algorithm" class="headerlink" title="Korf’s algorithm"></a>Korf’s algorithm</h3><p>TODO</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>当然, 上面的问题在于 实际上还是借鉴了现有公式(7步还原魔方)的”过程”, 因为在无知识的情况下, 其实无法知道去做阶段性是否是可行的</p>
 <p>另外,作为程序搜索,如果有办法提出更好的渐进的方案而不是上面的渐进方案,过着在搜索中能有优先级,就更好了(<a href="https://zhuanlan.zhihu.com/p/57816260">https://zhuanlan.zhihu.com/p/57816260</a> 里讲到了多个步骤)</p>
 <p>既然上面最多单次步数是7步, 有没有办法是,从两头向中间搜索(meet-in-middle),这样先把不关心的颜色 全部置为第7种颜色,这样最大步数是4步, $18 * 15^3 &#x3D; 60750$ 非常小, 稍微的问题是目前实现是靠估价函数实现的, 所以其实并不能准确的知道目标状态, 所以其实有可能$2^4$种左右的目标状态,但这也不大</p>
 <p>然而上面的 7步还原魔方, 所用的公式,有不少在7,8步, 最后的还是9步</p>
 <p>而作为速拧用的cfop(Fridrich Method), 则是相当于暴力分情况(119 条公式)讨论, 而单次的步数都更长, 对于暴力搜索更不可取了</p>
+<h2 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h2><p><a href="https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf&#39;s_algorithm">https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf&#39;s_algorithm</a></p>
+<p><a href="https://www.youtube.com/watch?v=ZtlMkzix7Bw">https://www.youtube.com/watch?v=ZtlMkzix7Bw</a></p>
+<p><a href="https://stackoverflow.com/questions/58860280/how-to-create-a-pattern-database-for-solving-rubiks-cube">https://stackoverflow.com/questions/58860280/how-to-create-a-pattern-database-for-solving-rubiks-cube</a></p>
+<p><a href="https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf">https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf&#39;s_algorithm">https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf&#39;s_algorithm</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/41464087">https://zhuanlan.zhihu.com/p/41464087</a></p>
+<p><a href="https://arxiv.org/pdf/1805.07470.pdf">https://arxiv.org/pdf/1805.07470.pdf</a></p>
 ]]></content>
       <categories>
         <category>魔方</category>
