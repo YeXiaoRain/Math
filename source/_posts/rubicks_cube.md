@@ -2719,6 +2719,11 @@ solve([[[0, 0, 4], [0, 0, 0], [2, 0, 1]], [[4, 1, 3], [1, 1, 1], [1, 1, 1]], [[0
 从3阶提取, 逻辑意义
 
 TODO
+
+### Korf's algorithm
+
+TODO
+
 ## 总结
 
 当然, 上面的问题在于 实际上还是借鉴了现有公式(7步还原魔方)的"过程", 因为在无知识的情况下, 其实无法知道去做阶段性是否是可行的
@@ -2730,3 +2735,19 @@ TODO
 然而上面的 7步还原魔方, 所用的公式,有不少在7,8步, 最后的还是9步
 
 而作为速拧用的cfop(Fridrich Method), 则是相当于暴力分情况(119 条公式)讨论, 而单次的步数都更长, 对于暴力搜索更不可取了
+
+## Ref
+
+https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf's_algorithm
+
+https://www.youtube.com/watch?v=ZtlMkzix7Bw
+
+https://stackoverflow.com/questions/58860280/how-to-create-a-pattern-database-for-solving-rubiks-cube
+
+https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf
+
+https://en.wikipedia.org/wiki/Optimal_solutions_for_the_Rubik%27s_Cube#Korf's_algorithm
+
+https://zhuanlan.zhihu.com/p/41464087
+
+https://arxiv.org/pdf/1805.07470.pdf
