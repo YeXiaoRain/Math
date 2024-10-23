@@ -418,9 +418,78 @@
       </tags>
   </entry>
   <entry>
+    <title>求手算出x^3+101=y^2的正整数解</title>
+    <url>/Math/2024-08-14-Mordell_equation/</url>
+    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$x^3+101&#x3D;y^2$ 求手算一组正整数解</p>
+<p>这道题目来自2009年初中数学竞赛的一道题</p>
+<p><a href="https://zhidao.baidu.com/question/123254978.html">https://zhidao.baidu.com/question/123254978.html</a></p>
+<p><a href="https://zhidao.baidu.com/question/114242326.html">https://zhidao.baidu.com/question/114242326.html</a></p>
+<hr>
+<p><a href="https://www.zhihu.com/question/664003966">https://www.zhihu.com/question/664003966</a></p>
+<p><a href="https://math.stackexchange.com/questions/4957099">https://math.stackexchange.com/questions/4957099</a></p>
+<h2 id="一些不算成功的尝试"><a href="#一些不算成功的尝试" class="headerlink" title="一些不算成功的尝试"></a>一些不算成功的尝试</h2><p>在场上 有尝试做一些mod,但没有很多，然后以为不会太大，就开始了暴力计算，当然当场是没有做出这个题目</p>
+<hr>
+<p>当时赛后 问了汀舅，汀舅给的方案是</p>
+<p>做了更多的mod,进一步缩小枚举范围，但没有特别如意</p>
+<hr>
+<p>最近在整理一些东西，突然又看到了这个，自己尝试了一下</p>
+<p>通过 $x^3+1 &#x3D; (x+1)(x^2-x+1)&#x3D;(y-10)(y+10)$ 的变形，让我对于2相关的 幂次很感兴趣</p>
+<p>比较容易的得到了 $x\equiv 3\pmod{16}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{16}, y\equiv 2 \pmod{4}$</p>
+<p>这对于知道答案的来说，的确已经可以暴力手动计算了，但对于不知道答案的来说，其实不知道自己会需要枚举多少个</p>
+<h2 id="来自math-stackexchange的提速方案"><a href="#来自math-stackexchange的提速方案" class="headerlink" title="来自math.stackexchange的提速方案"></a>来自math.stackexchange的提速方案</h2><p>$x^3+101&#x3D;y^2\pmod 9$</p>
+<p>容易得到 $x\equiv 2 \pmod{3}$,  计算量也不大，因为$x$侧只用关心 $\mod 3$, $y$侧考虑$0\to8$</p>
+<hr>
+<p>然后 考察</p>
+<p>$x^3+101&#x3D;y^2\pmod 8$</p>
+<p>可以得到 $x\equiv 3\pmod{8}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{8}, y\equiv 2 \pmod{4}$</p>
+<hr>
+<p>两者结合可以得到 </p>
+<p>$x\equiv -1 \pmod{24}, y \equiv 2 \pmod{4}$</p>
+<p>$x\equiv 11 \pmod{24}, y \equiv 0 \pmod{4}$</p>
+<hr>
+<p>$x&#x3D;24a-1,y&#x3D;4b+2$ 通过测试$\pmod{16}$可以得到$a$是偶数,$x&#x3D;48c-1$, 再尝试$\pmod{32}$可以得到$x&#x3D;96d-1$</p>
+<p>$x&#x3D;24a+11,y&#x3D;4b$ 通过测试$\pmod{16}$可以得到$a$是奇数$x&#x3D;48c+35$ ??TODO</p>
+<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p><a href="https://zhuanlan.zhihu.com/p/27159180">知乎 椭圆曲线的一些基础性质 陆zz</a></p>
+<p><a href="https://www.zhihu.com/question/491035924">知乎 </a></p>
+<p><a href="https://hr.userweb.mwn.de/numb/mordell.html">https://hr.userweb.mwn.de/numb/mordell.html</a></p>
+<p><a href="https://math.stackexchange.com/a/4957401/728591">Travis Willse</a> 大佬说  The following routine in Sage 的结果 看来只有 x&#x3D;-1,和x&#x3D;95两个解</p>
+<p><a href="https://math.stackexchange.com/a/4958295/728591">Sayan Dutta</a>  大佬说 这是 Mordell’s equation</p>
+<p><a href="http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf">http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf</a></p>
+<p><a href="https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf">https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf</a></p>
+<p><a href="https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf">https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf</a></p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>Mordell_s_equation</tag>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 零 汇总以及其它</title>
+    <url>/Math/Advanced_algebra_0/</url>
+    <content><![CDATA[<p>ISBN 978-7-302-22518-8</p>
+<p>b站: <a href="https://www.bilibili.com/video/BV1jR4y1M78W">https://www.bilibili.com/video/BV1jR4y1M78W</a></p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>II 页的总览图</li>
+<li>序 其实就是整个脉络，学完后可以保留序</li>
+</ul>
+<h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><p>视频 相对于书的优点是push和动态清晰</p>
+<p>书相对于视频的优点是，自我节奏和多页快速来回翻看</p>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高等代数 一 线性方程组的解法</title>
     <url>/Math/Advanced_algebra_1/</url>
-    <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
+    <content><![CDATA[<h1 id="第1章-线性方程组的解法"><a href="#第1章-线性方程组的解法" class="headerlink" title="第1章 线性方程组的解法"></a>第1章 线性方程组的解法</h1><p>视频 p3~p7</p>
+<h2 id="什么是线性代数"><a href="#什么是线性代数" class="headerlink" title="什么是线性代数"></a>什么是线性代数</h2><ol>
 <li>数</li>
 <li>代数</li>
 <li>方程</li>
@@ -445,6 +514,43 @@
 </ol>
 <p>$K$ 是一个<a href="#%E6%95%B0%E5%9F%9F">数域</a></p>
 <p>常见: 有理数域(最小的数域),实数域,复数域(最大的数域)</p>
+<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><ul>
+<li>矩阵: 解线性方程组提出的 m行n列的 系数<ul>
+<li>增广矩阵，包含解的部分</li>
+<li>方阵: n&#x3D;m</li>
+<li>解法: rref(可以用matlabn), 阶梯型 高斯消元法<ul>
+<li>性质：同解</li>
+<li>初等行变换<ul>
+<li>交换两行位置</li>
+<li>一行加到另一行上</li>
+<li>一行乘上一个非零数</li>
+</ul>
+</li>
+<li>rref 特点<ul>
+<li>是阶梯型</li>
+<li>主元全1</li>
+<li>左下全0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>解的情况<ul>
+<li>无解</li>
+<li>一个解</li>
+<li>多个解<ul>
+<li>这里的r用的是rref非零行的数目 与 列作比较</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数域<ul>
+<li>这个感觉 拆分得不够细粒度啊</li>
+<li>感觉按后面对域的讲解 应该分成元素 和 运算符</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>高等代数</category>
@@ -456,7 +562,8 @@
   <entry>
     <title>高等代数 二 行列式</title>
     <url>/Math/Advanced_algebra_2/</url>
-    <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><ol>
+    <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><p>视频 p8~p18</p>
+<ol>
 <li>希望不做消元探索矩阵性质</li>
 <li>考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法</li>
 <li>从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质)</li>
@@ -534,7 +641,68 @@
 <h2 id="行列式在其它地方的应用"><a href="#行列式在其它地方的应用" class="headerlink" title="行列式在其它地方的应用"></a>行列式在其它地方的应用</h2><p>二阶行列式$\left|\begin{array}{d2} a_1 &amp; b_1 \\ a_2 &amp; b_2 \end{array}\right|$ 表示向量$(a_1,a_2)$和$(b_1,b_2)$所构成平行四边形,从$a$到$b$定向面积</p>
 <p>三阶行列式, 表示向量$(a_1,a_2,a_3)$,$(b_1,b_2,b_3)$,$(c_1,c_2,c_3)$所构成的平行六面体的定向体积,$a\to b$,c大拇指右手系</p>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>范德蒙行列式 $&#x3D;\prod_{i&lt;j} (a_j-a_i)$</p>
+<hr>
+<p>找 f(x,y,z)&#x3D;x3+y3+z3-3xyz 的一次因式?</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">x y z</span><br><span class="line">z x y</span><br><span class="line">y z x</span><br><span class="line">感觉还是很妙的</span><br></pre></td></tr></table></figure>
+
+<p>这里有三对角行列式的一般情况的 公式推导</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a b</span><br><span class="line">c a b</span><br><span class="line">  c a b</span><br><span class="line">    c a ...</span><br></pre></td></tr></table></figure>
+
+<p>&#96;</p>
 <h2 id="思路总结"><a href="#思路总结" class="headerlink" title="思路总结"></a>思路总结</h2><p>有不少是先看看二阶三阶怎么设计,再推广</p>
+<p>但看了18.06我认为这么早上行列式并不好啊，感觉第二第三章顺序可以交换</p>
+<ul>
+<li>排列<ul>
+<li>逆序数 &#x3D; 交换次数奇偶性<ul>
+<li>归纳法易证，对于n-1成立，那么对于n个数，考虑n 相邻交换一直到最后 的 操作次数 &#x3D; 额外逆序数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>定义：<ul>
+<li>这上这个公式，虽然 从2阶，3阶 有端倪，但的确不如18.06的三个基础性质得到公式</li>
+</ul>
+</li>
+<li>性质：<ul>
+<li>能代数化前置的一个优点是 证明“更暴力，更不直观，更容易”</li>
+<li>图2-1</li>
+</ul>
+</li>
+<li>按一列&#x2F;一行展开<ul>
+<li>代数余子式： 也就是 展开时看作 aij的系数的部分，</li>
+<li>规律化的推导</li>
+<li>特殊Vandermonde 范德蒙行列式<ul>
+<li>用处:<ul>
+<li>f(x)是n-1次多项式,那么 拟合n个不同的输入 和 n个输出，只有唯一解<ul>
+<li>找规律与 f(x)&#x3D;a0+a1x+a2x2+a3x3的线性代数</li>
+<li>对于 圆的公式相关 也可以转换成线性方程组</li>
+</ul>
+<p>				</p>
+</li>
+<li>因为 输入对应了一个范德蒙矩阵det非零，而 f(x)的系数是要求的 向量，输出 是目标向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cramer法则<ul>
+<li>解的公式表达形式（虽然实际对于大矩阵，还是高斯消元靠谱）</li>
+<li>这里Carmer法则又是先给公式再证明，没有推导，从天而来<ul>
+<li>18.06是，展开&#x3D;&gt;代数余子式的逆矩阵&#x3D;&gt; 解&#x3D;逆 * 目标 &#x3D;&gt; 逆展开</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Laplace定理<ul>
+<li>这个18.06倒是没有，相当于行列式计算的分块切割的性质，而分块的每块还可以不连续</li>
+</ul>
+</li>
+<li>应用小天地<ul>
+<li>这里也是fib递推 和  解微分方程，但这里连 特征值都还没讲</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>高等代数</category>
@@ -546,7 +714,8 @@
   <entry>
     <title>高等代数 三 n维向量空间$K^n$</title>
     <url>/Math/Advanced_algebra_3/</url>
-    <content><![CDATA[<h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
+    <content><![CDATA[<h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><p>P19-P55</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
 <p>其中$K$是数域</p>
 <p>规定: </p>
 <ol>
@@ -638,14 +807,166 @@
 <p>定理3 矩阵的初等行变换不改变列rank</p>
 <p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank(既然rank与极大线性无关组有关,而极大线性无关组与运算得到0元有关, 同解保证了 原来能得到表达式, 在新的里才能得到0元, (因为非0元不能通过初等行变化变为0元))</p>
 <p>综上 对于一般矩阵 初等行变换 行列rank 不变 成为阶梯形矩阵, 行rank &#x3D; 列 rank</p>
-<p>因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
-<p>A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
+<p>定理4 因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
+<p>定理5 A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
 <p>矩阵的初等行&#x2F;列变换 不改变矩阵的秩</p>
+<hr>
+<p>空间 的 交并 与 空间基的集合的交并 并不等价</p>
+<h2 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h2><p>直和 : V的子空间$V_1,V_2$ 如果$V_1+V_2$中的每个向量$\alpha&#x3D;\alpha_1+\alpha_2,\alpha_1\in V_1,\alpha_2\in V_2$ 表法唯一，那么称作直和, 充要条件$V_1 交 V_2 &#x3D; 0向量$</p>
+<ul>
+<li>0的表法也唯一, 说明 两个空间之间无线性相关的向量</li>
+<li>所以 两个的基的 代数和为0的解 只有零解,  所以所有基线性无关，所以 dim(V1+V2)&#x3D;dim(V1)+dim(V2)-dim(V1 交 V2)</li>
+</ul>
+<h2 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h2><p>对应书的4.7</p>
+<p>穿插了一点 集合知识</p>
+<ul>
+<li>定义域</li>
+<li>陪域 (值域包含于陪域，值域中的元素是 定义域元素经过变化得到所有值的集合，陪域并不保证元素都有定义域的来源)</li>
+<li>值域 $\mathrm{Im} f$</li>
+<li>满射：值域&#x3D;陪域</li>
+<li>单射 不同元素的象不同</li>
+<li>双射 （一一对应<ul>
+<li>可逆映射</li>
+</ul>
+</li>
+<li>核 Ker sigma: $\alpha \in K^n | \sigma(\alpha)&#x3D;0$</li>
+<li>同构映射$\sigma: V\to V’$ 那么$V$与$V’$同构, 这里也感觉不够精确，括号里的运算是$V$中的,而外部的运算是$V’$中的，应该区分这个加和乘?<ul>
+<li>$\sigma(x+y)&#x3D;\sigma(x)+\sigma(y)$ 保持加法</li>
+<li>$\sigma(kx)&#x3D;k\sigma(x)$ 保持乘法</li>
+<li>性质 $V$的基 通过$\sigma$ 映射到$V’$也是基</li>
+<li>两个有限维的线性空间同构，则 dim相等，也就是极大线性无关组个数相同，也就是唯一表出相同</li>
+</ul>
+</li>
+</ul>
+<p>映射结合律</p>
+<ul>
+<li>fgh(x)&#x3D;f(gh(x))&#x3D;fg(h(x))</li>
+</ul>
+<p>TODO 三十一 ~ 三十六</p>
 <h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维数dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$, 都是研究极大线性无关组(内线性无关,未被选的若加入都可表示(线性相关)), 注意的是并不是按照V的个数, 比如 (x,x,y) 看起来3维, 但基(对于空间无序)只有2个,所以是2维</p>
 <p>向量组是有序有限的, 而空间是由基础的一系列向量做加法和数乘构成的集合</p>
 <p>这里的特殊条件就是 只含$0$向量的时候有些需要特殊定义(规定),</p>
 <p>例如 $\emptyset$是只含0向量的一个极大线性无关集, 规定为它是{0}的基</p>
 <p>这里过程也是很多从2个到多个, 从特殊的阶梯形到一般矩阵</p>
+<h3 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h3><p>先4条加法，4条乘法 定义线性空间</p>
+<ul>
+<li>然后 矩阵的列向量 运算 与 n维度空间基 做一一对应，把研究 列向量组合 变为研究n维空间的基，把求解与属于空间 唯一表示做关联</li>
+</ul>
+<p>线性相关</p>
+<ul>
+<li>线性组合&#x2F;可表示 &lt;-&gt; 属于生成空间</li>
+</ul>
+<p>秩</p>
+<ul>
+<li>极大线性无关组<ul>
+<li>向量组 &#x3D;等价&#x3D; 极大无关线性组</li>
+<li>个数称为秩</li>
+</ul>
+</li>
+<li>表出的性质 </li>
+<li>向量空间，子空间的基与维数</li>
+<li>向量组的rank &#x3D; 生成空间的最大线性无关组<ul>
+<li>初等变换<ul>
+<li>可表示原理 不改变行rank</li>
+<li>同解原理 不改变列rank</li>
+<li>所以初等变化成阶梯形 行rank 列rank未改变，又都是主元个数</li>
+</ul>
+</li>
+<li>满秩 &lt;&#x3D;&gt; det \neq 0</li>
+<li>有解 解空间和解，这里 丘老师 是通过秩 与 增广矩阵秩 来研究解的存在性 个数，而mit18.06 是通过 先nullspace,再所有解&#x3D; 特解+nullspace来完成的</li>
+</ul>
+</li>
+<li>视频比 书多了很多章的 子空间相关的</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 四 矩阵的运算</title>
+    <url>/Math/Advanced_algebra_4/</url>
+    <content><![CDATA[<h1 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h1><p>P55-65</p>
+<span id="more"></span>
+
+<p>矩阵和 $C&#x3D;A+B, C_{ij}&#x3D;A_{ij}+B_{ij}$</p>
+<p>矩阵乘 $C&#x3D;AB, C_{ij}&#x3D;\sum_{k} A_{ik}B_{kj}$</p>
+<p>特殊矩阵</p>
+<ul>
+<li>对角矩阵</li>
+<li>基本矩阵: 只有一个元素是1,其它全是0</li>
+<li>上&#x2F;下 三角矩阵</li>
+<li>初等矩阵：初等变换操作的“操作矩阵”</li>
+<li>对称矩阵 $A^T &#x3D; A$</li>
+<li>反对称&#x2F;斜对称矩阵 $A^T&#x3D;-A$</li>
+</ul>
+<p>矩阵乘积</p>
+<p>用旋转的矩阵表达 来讲矩阵乘法 同时有了自然的 和差化积 积化和差</p>
+<ul>
+<li><p><code>[cos,-sin;sin,cos]</code></p>
+</li>
+<li><p>秩 rank(AB) &lt;&#x3D; min(rank(A),rank(B)), 从表出容易证明，小于存在的例子 [0,1;0,0]</p>
+</li>
+<li><p>行列式 |AB|&#x3D;|A||B| </p>
+<ul>
+<li>证明 分块矩阵技术<code>|[A,0;-I,B]|=|A||B|</code></li>
+</ul>
+</li>
+<li><p>Binet-Cauthy</p>
+<ul>
+<li>$|A_{mn}B_{nm}| &#x3D; 0, m &gt; n$</li>
+<li>$|A_{mn}B_{nm}| &#x3D; \sum |A’<em>{m}B’</em>{m}|, m \le n$ 算法比赛用到过，右边是 $A,B$的所有$m$阶子式子相乘（其中 A选的列序号 和 B选的行序号相等）<ul>
+<li>依然是分块矩阵技术 $[A,0;-I,B]$ 需要注意和上面不同的是，这里A,B不是方阵</li>
+</ul>
+</li>
+<li>cauchy恒等式, $n\ge 2$时 $\displaystyle (\sum_{i&#x3D;1}^n a_ic_i)(\sum_{i&#x3D;1}^n b_id_i)-(\sum_{i&#x3D;1}^n a_id_i)(\sum_{i&#x3D;1}^n b_ic_i)&#x3D;\sum_{1\le j&lt;k\le n} (a_jb_k-a_kb_j)(c_jd_k-c_kd_j)$</li>
+<li>Cauchy-Bunyakovsky 不等式 $\displaystyle (\sum_{i&#x3D;1}^n {a_i^2})(\sum_{i&#x3D;1}^n {b_i^2}) \ge (\sum_{i&#x3D;1}^n {a_ib_i})^2$ , 等号成立当且仅当 a和b线性相关</li>
+</ul>
+</li>
+</ul>
+<p>$AA’&#x3D;I,|A|&#x3D;-1$ 证明$|I+A|&#x3D;0$</p>
+<p>$|I+A|&#x3D;|AA’+AI|&#x3D;|A(A’+I)|&#x3D;|A||A’+I|&#x3D;(-1)|(A+I)’|&#x3D;(-1)|A+I|$ 得证</p>
+<p>例6~例8 全部用的 矩阵的元素是$\sum$, 然后通过拆解成两个矩阵相乘来解</p>
+<p>A和B都是n阶矩阵 AB和BA的r阶的所有主子式和相等：（n阶矩阵乘法的非交换性中提取的可交换的量）</p>
+<p>例题 4.3.16 对于$A$,如果 存在$m$使得$rank(A^m)&#x3D;rank(A^{m+1})$那么$rank(A^m)&#x3D;rank(A^{m+k})$</p>
+<ul>
+<li>y属于$A^{m+1}$列空间存在$x$,使得$y&#x3D;A^{m+1}x&#x3D;A(A^{m}x)$, 注意到右侧是$A^m$的列空间中的向量，而$A^{m+1}$的列空间是$A^m$的列空间的子空间，却维度相等，所以两个列空间相等，所以$A^mx$ 也可以用$A^{m+1}z$ 表示, 所以$y&#x3D;A(A^{m+1}z)$, 说明 任何$A^m$的列空间向量都可以在$A^{m+2}$中表出，而$A^{m+2}$的列空间又是它的子空间，所以两个列空间相等，得证</li>
+<li>再配上容斥原理 可得 4.4.例12 对于n阶矩阵 $rank(A^n)&#x3D;rank(A^{n+k})$</li>
+</ul>
+<p>4.4 例13 A&#x3D;LU</p>
+<h2 id="可逆矩阵"><a href="#可逆矩阵" class="headerlink" title="可逆矩阵"></a>可逆矩阵</h2><ul>
+<li>$A^{-1}A&#x3D;I$</li>
+<li>伴随矩阵 $A^{*}A&#x3D;|A|I$</li>
+<li>$|A^{-1}|&#x3D;\frac{1}{|A|}A^{*}$</li>
+<li>高斯消元法 初等变化 + 增广矩阵 求 逆矩阵</li>
+</ul>
+<h2 id="4-5-矩阵的分块"><a href="#4-5-矩阵的分块" class="headerlink" title="4.5 矩阵的分块"></a>4.5 矩阵的分块</h2><ul>
+<li>分块情况下的运算，这感觉很偏应用吧，能加快运算</li>
+<li>另一个用处就是这里很多 秩相关的，行列式相关的，可以用分块来证明</li>
+</ul>
+<p>Sylvester秩不等式  $A_{sn},B_{nm}$: 有$rank(AB)\ge rank(A)+rank(B)-n$</p>
+<ul>
+<li>$(I_n,0;0,AB)&#x3D;(B,I_n;0,A)$</li>
+</ul>
+<p>幂等矩阵 充要: $rank(A)+rank(I-A)&#x3D;n$</p>
+<ul>
+<li>$A^2&#x3D;A$ 即$A-A^2&#x3D;0$ 即 $(A,0;0,I-A)&#x3D;(A-A^2,0;0,I)$</li>
+</ul>
+<h2 id="4-6-正交矩阵-欧几里得空间-R-n"><a href="#4-6-正交矩阵-欧几里得空间-R-n" class="headerlink" title="4.6 正交矩阵 欧几里得空间$R^n$"></a>4.6 正交矩阵 欧几里得空间$R^n$</h2><p>这个 视频上没有？我看视频课，矩阵运算p65结束，p66就开始多项式了，而多项式是高代的第七章</p>
+<p>实数域上 正交$AA^T&#x3D;I$</p>
+<ul>
+<li>$A^{-1}&#x3D;A^T$ 也是正交</li>
+<li>可逆</li>
+<li>$A,B$是正交则$AB$也是正交</li>
+<li>$\det A&#x3D; 1,-1$<ul>
+<li>$|A|^2&#x3D;|A^TA|&#x3D;|I|$</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-7-K-n-到-K-s-的线性映射"><a href="#4-7-K-n-到-K-s-的线性映射" class="headerlink" title="4.7 $K^n$到$K^s$的线性映射"></a>4.7 $K^n$到$K^s$的线性映射</h2><p>这部分在视频课里是第三章中间p45-p54</p>
 ]]></content>
       <categories>
         <category>高等代数</category>
@@ -790,7 +1111,7 @@
 <p>或者$(\frac{a}{p}) &#x3D; a^{\frac{p-1}{2}} \pmod p$</p>
 <p>对于$1,-1$也就是是否存在$x^2 \equiv a \pmod p$,因为存在时显然$a^{\frac{p-1}{2}} \equiv x^{p-1} \equiv 1 \pmod p$</p>
 <p>设$g$为模$p$的一个原根,则存在$k$使$g^k\equiv n \pmod p$,所以$(g^k)^{\frac{p-1}{2}} \equiv 1 \pmod p$, 因为$g$是原根,所以$p-1 | k\cdot \frac{p-1}{2}$, 因此$\frac{k}{2}$是整数,所以$n \equiv (g^{\frac{k}{2}})^2$</p>
-<p>综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) &#x3D; -1$ </p>
+<p>综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) &#x3D; -1$</p>
 <hr>
 <p>定理1.7: $n$是非零整数, $p$是奇质数且$p\nmid n$, 则 $p \mid x^2+ny^2,\gcd(x,y)&#x3D;1 \Leftrightarrow (\frac{-n}{p})&#x3D;1$</p>
 <p>因为$x^2+ny^2\equiv 0 \pmod p, gcd(x,y)&#x3D;1$ 则$gcd(y,p) &#x3D; 1$</p>
@@ -821,7 +1142,7 @@
 <p>证明 $(\frac{-1}{p}) \equiv (-1)^{\frac{p-1}{2}} \pmod p$, 显然得证</p>
 <hr>
 <p>猜想1.9, 如果$p,q$是不同的质数,则$(\frac{q}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm \beta^2 \bmod 4q$对于一些奇数$\beta$, (待证明)</p>
-<p>命题1.10(重要,也就是而二次互反率quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) &#x3D; (-1)^{\frac{(p-1)(q-1)}{4}}$</p>
+<p>命题1.10(重要,也就是而二次互反律quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) &#x3D; (-1)^{\frac{(p-1)(q-1)}{4}}$</p>
 <p>证明: 显然$(\frac{-1}{p}) &#x3D; (-1)^{\frac{p-1}{2}}$,$(\frac{ab}{p}) &#x3D; (\frac{a}{p})(\frac{b}{p})$</p>
 <p>????????</p>
 <p>Page 27&#x2F;363</p>
@@ -840,7 +1161,1438 @@
       <tags>
         <tag>Fermat</tag>
         <tag>平方和定理</tag>
-        <tag>x^2+ny^2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 五 矩阵的相抵与相似</title>
+    <url>/Math/Advanced_algebra_5/</url>
+    <content><![CDATA[<h1 id="矩阵的相抵与相似"><a href="#矩阵的相抵与相似" class="headerlink" title="矩阵的相抵与相似"></a>矩阵的相抵与相似</h1><p>没有视频课？？？</p>
+<hr>
+<p>希望把矩阵分类</p>
+<p>定义1, S非空集合, $W$是$S\times S$的一个子集,叫做二元关系, $(a,b)\in W$,那么称它们有该二元关系$aWb,a\sim b$</p>
+<p>定义2, 等价关系</p>
+<ul>
+<li>$a\sim a$ 反身性</li>
+<li>$a\sim b\rightarrow b\sim a$ 对成性</li>
+<li>$a\sim b,b\sim c\rightarrow a\sim c$ 传递性</li>
+</ul>
+<p>定义3, $\sim$是等价关系$\bar{a}$表示等价类</p>
+<p>$a,b\in S$</p>
+<ul>
+<li>$\bar{a}&#x3D;\bar{b}$或$\bar{a}\cap\bar{b}&#x3D;\emptyset$</li>
+</ul>
+<p>定义4, $S&#x3D;\cup S_i,S_i\cap S_j&#x3D; \emptyset$ 则是$S$ 的一个划分$\pi(S)$</p>
+<p>所有等价类组成划分</p>
+<p>定义5, $\sim$是$S$ 上的一个等价关系, 有所有等价类组成的集合称为$S$对于关系$\sim$的商集, 记作$S&#x2F;\sim$</p>
+<p>例子,</p>
+<ul>
+<li>实数集R,二元关系 $a\sim b, a-b\in Z$, 再附加 $\sigma : R&#x2F;Z \to [0,1)$</li>
+<li>实数集R, 二元关系$a\sim b,\lfloor a\rfloor &#x3D; \lfloor b \rfloor$</li>
+<li>平面点集$\pi$, $p_1\sim p_2, x_1-x_2\in Z 且 y_1-y_2\in Z$</li>
+</ul>
+<h2 id="矩阵的相抵"><a href="#矩阵的相抵" class="headerlink" title="矩阵的相抵"></a>矩阵的相抵</h2><p>数域K上$A_{sn},B_{sn}$</p>
+<p>如果A经过一系列初等变化 变成 矩阵B,那么A与B相抵</p>
+<ul>
+<li>存在可逆矩阵P,Q, 使得$PAQ&#x3D;B$</li>
+</ul>
+<p>定理1 设r&#x3D;rank(A),则A相抵于 $[I_r,0;0,0]$ 相抵标准形</p>
+<p>定理2 A,B形状相同，那么rank(A)&#x3D;rank(B) &lt;-&gt; 相抵</p>
+<h2 id="5-3-广义逆矩阵"><a href="#5-3-广义逆矩阵" class="headerlink" title="5.3 广义逆矩阵"></a>5.3 广义逆矩阵</h2><p>Ax&#x3D;b</p>
+<ul>
+<li>如果A可逆，唯一解</li>
+<li>如果不可逆，且有解 如何找到这个“表达”<ul>
+<li>希望找到 $AXA&#x3D;A$ 说实在的还是 神奇中有些自然，自然中有些神奇</li>
+<li>$A_{sn}&#x3D;P_s[I_r,0;0,0]Q_n$, 其中$P,Q$是可逆的</li>
+<li>$X&#x3D;Q^{-1}[I_r,B;C,D]P^{-1}$, 其中B,C,D是 任意的 （这里B,C,D的观感的确没有SVD好，但是从这个角度上给出了 多个广义的逆</li>
+</ul>
+</li>
+<li>记作$A^{-}$</li>
+</ul>
+<p>$Ax&#x3D;b$ 有解的充要条件是$b&#x3D;AA^{-}b$</p>
+<p>通解为$A^{-}\beta$: 说人话就是i任意一个解$x$可以找到对应$A^{-}$使得 $x&#x3D;A^{-}\beta$</p>
+<ul>
+<li>同样按照上面 拆A,的方式去凑</li>
+<li>这样看来又比SVD的好，因为SVD的视角是唯一的</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 0 1</span><br><span class="line">0 1 1</span><br><span class="line">0 0 0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A=[1,0,1;0,1,1;0,0,0];</span><br><span class="line">[U,S,V]=svd(A);</span><br><span class="line">W=[1/sqrt(3),0,0;0,1,0;0,0,0];</span><br><span class="line">RA=V*W*U&#x27;; </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">U:</span><br><span class="line">1/sqrt(2)  -1/sqrt(2)</span><br><span class="line">1/sqrt(2)   1/sqrt(2)</span><br><span class="line">                      1</span><br><span class="line">  </span><br><span class="line">S:</span><br><span class="line">sqrt(3)</span><br><span class="line">        1</span><br><span class="line">           0</span><br><span class="line">           </span><br><span class="line">V:</span><br><span class="line">1/sqrt(6)  -1/sqrt(2) -1/sqrt(3)</span><br><span class="line">1/sqrt(6)   1/sqrt(2) -1/sqrt(3)</span><br><span class="line">2/sqrt(6)   0          1/sqrt(2)</span><br><span class="line"></span><br><span class="line">这里 A= U*S*V&#x27;</span><br><span class="line"></span><br><span class="line">发现 A*RA = [1,0,0;0,1,0;0,0,0] 但是RA*A并不如此好看， 不过这样 是满足了这里的 A*RA*A = A (容易证明)</span><br></pre></td></tr></table></figure>
+
+<p>这里的P,Q没有个一个具体的实践方案，主要讨论其存在性和可表示性，而svd切实的提出了 通过$AA^T$和$A^TA$的特征向量组成的单位正交基矩阵</p>
+<hr>
+<p>$Ax&#x3D;0$的通解为 $x&#x3D;(I_n-A^{-}A)Z$, Z是$K^n$中任意向量 (可证明充要性)</p>
+<p>因此$Ax&#x3D;b$的通解还可以写做 $x&#x3D;A^{-}b+(I_n-A^{-}A)Z$</p>
+<h3 id="Penrose-方程组"><a href="#Penrose-方程组" class="headerlink" title="Penrose 方程组"></a>Penrose 方程组</h3><p>定义 Morre-Penrose 广义逆 满足</p>
+<ul>
+<li>$AXA&#x3D;A$</li>
+<li>$XAX&#x3D;X$</li>
+<li>$(AX)^H&#x3D;AX$</li>
+<li>$(XA)^H&#x3D;XA$</li>
+</ul>
+<p>定理5: 复数域上 非零矩阵，Penrose方程组总是有唯一解（这就是SVD的那个解吧）？</p>
+<p>$A&#x3D;BC$,其中B和C分别是 列满秩和行满秩的矩阵</p>
+<p>则唯一解是 $X&#x3D;C^H(CC^H)^{-1}(B^HB)^{-1}B^H$, 不是这然后就带入证明了？？？这突兀感觉太强了。TODO 如何drop from sky的</p>
+<p>你看SVD的理论基础 矩阵Ax如果x属于行向量空间那么输出和列向量空间一一对应且满足线性关系，所以才有了 (A * (行向量空间的基+nullspace的基))&#x3D;(列空间基+nullspace(A^T)的基) * 对角Sigma的想法，就感觉上更自然，这里直接甩我一个表达式，然后证明 是解又唯一真的怪</p>
+<h2 id="5-4-矩阵的相似"><a href="#5-4-矩阵的相似" class="headerlink" title="5.4 矩阵的相似"></a>5.4 矩阵的相似</h2><p>好好好，先讲相似后讲特征值是吧！？！？</p>
+<p>定义还是 $A&#x3D;QBQ^{-1}$</p>
+<ul>
+<li>行列式相等</li>
+<li>同时可逆或不可逆（由上）</li>
+<li>相等的rank</li>
+</ul>
+<p>trace(AB)&#x3D;trace(BA) ： 证明：展开对角项 （这里其实 需要保证A和B^T的形状相同）</p>
+<ul>
+<li>相似有 trace相等, trace(A)&#x3D;trace(QBQ^{-1})&#x3D;trace(Q^{-1}QB)&#x3D;trace(B)</li>
+</ul>
+<p>可对角化: n个线性无关的列向量, $Q^{-1}AQ&#x3D;\Lambda$，写了特征值形式，但没提到特征值</p>
+<h3 id="5-5-特征值与特征向量"><a href="#5-5-特征值与特征向量" class="headerlink" title="5.5 特征值与特征向量"></a>5.5 特征值与特征向量</h3><ul>
+<li>定义与等价命题</li>
+<li>特征多项式的根 对应特征值(注意不是充要 比如 <code>[1,1;0,1]</code>和<code>[1,0;0,1]</code>)&#96;<ul>
+<li>相似矩阵特征多项式相同 $|A-xI|&#x3D;|QBQ^{-1}-xQQ^{-1}|&#x3D;|Q||B-xI||Q^{-1}|$</li>
+</ul>
+</li>
+<li>对于“重复特征值”<ul>
+<li>对应的特征向量 维度 叫做 几何重数</li>
+<li>对于 特征多项式根的重数 叫做 代数重数<ul>
+<li>几何重数 &lt;&#x3D; 代数重数:  证明: 维数选基 &#x3D;&gt; 类似对角化 &#x3D;&gt; 特征多项式 &#x3D;&gt; 幂次不少于</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-6-可对角化条件"><a href="#5-6-可对角化条件" class="headerlink" title="5.6 可对角化条件"></a>5.6 可对角化条件</h2><ul>
+<li>n个线性无关的特征向量<ul>
+<li>不同特征值对应的 特征子空间维数 和为n</li>
+</ul>
+</li>
+<li>不同特征值 的特征向量 两两线性无关<ul>
+<li>不同特征值 的特征向量 任意个线性无关</li>
+<li>n个不同特征值 一定可以对角化</li>
+</ul>
+</li>
+<li>定理5： 全部复根属于数域K,且每个特征值的几何重数&#x3D;代数重数</li>
+</ul>
+<p>幂等矩阵</p>
+<ul>
+<li>一定可以对角化:<ul>
+<li>特征值0和1 : $(\lambda-\lambda^2)b&#x3D;0$</li>
+<li>0特征值 对应解空间 rank(A)&#x3D;n-r</li>
+<li>根据4.5章节通过分块证明了 幂等矩阵充要 rank(A)+rank(I-A)&#x3D;n<ul>
+<li>所以1的特征值 对应 n-rank(I-A)&#x3D;r个特征向量</li>
+</ul>
+</li>
+<li>相似trace不变 ，所以trace &#x3D; trace(对角化后) &#x3D; 特征向量1的个数 &#x3D; rank(A)</li>
+</ul>
+</li>
+</ul>
+<p>例3. $\sum_i^s A_i&#x3D;I$, 且$A_i$全为幂等矩阵，那么$\sum_{i&#x3D;1}^s rank(A_i)&#x3D;n$</p>
+<ul>
+<li>n&#x3D;trace(I)&#x3D;trace(sum ai)&#x3D;sum trace(ai) &#x3D; sum rank(ai)</li>
+</ul>
+<p>例4, 不为零矩阵的幂零矩阵不能对角化</p>
+<ul>
+<li>幂零矩阵特征值 只有0<ul>
+<li>0 &#x3D; det 0 &#x3D; det A^l &#x3D; (det a)^l<ul>
+<li>det a &#x3D; 0, 所以0是特征值</li>
+<li>$\lambda^lb&#x3D;A^lb&#x3D;0b&#x3D;0$ 只有0</li>
+</ul>
+</li>
+<li>0对应特征空间维数 &lt; n</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-7-实对称矩阵的对角化"><a href="#5-7-实对称矩阵的对角化" class="headerlink" title="5.7 实对称矩阵的对角化"></a>5.7 实对称矩阵的对角化</h2><p>$x^2+4y^2+z^2-4xy-8xz-4yz&#x3D;1$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(x,y,z) (1  -2 -4) (x)</span><br><span class="line">        (-2  4 -2) (y)</span><br><span class="line">        (-4 -2  1) (z)                  </span><br></pre></td></tr></table></figure>
+
+<p>$a^TAa$的形式</p>
+<p>希望把$A$对角化 $a^TQ^{-1}\Lambda Qa$ 这样反过去$Qa$对应新的$x,y,z$ 变来只有平方项的表达</p>
+<p>实对称矩阵</p>
+<ul>
+<li>每个特征值都是实数</li>
+<li>不同特征值 的特征向量正交</li>
+<li>一定 正交相似于 对角矩阵<ul>
+<li>归纳法+分块</li>
+</ul>
+</li>
+</ul>
+<p>正交相似于对角矩阵一定是对称矩阵</p>
+<ul>
+<li>$A^T&#x3D;(Q\Lambda Q^{-1})^T&#x3D;(Q^{-1})^TB^TQ^{T}&#x3D;QBQ^{-1}&#x3D;A$</li>
+</ul>
+<p>两个实对称 正交相似 充要条件 它们相似, 从而有了传递性</p>
+<ul>
+<li>额外的 两个矩阵正交相似 则有相同的 特征方程，这两个矩阵可以不是实对称</li>
+</ul>
+<p>实对称矩阵+幂零矩阵&#x3D;&gt; A&#x3D;0, 证明: 因为可以相似对角化</p>
+<p>$A^TA$ 的特征值都是非负实数</p>
+<p>实矩阵A正交相似于 上三角矩阵 充要条件 A的特征多项式在复数域中的根都是实数</p>
+<ul>
+<li>必要性：正交相似 于B 所以A,B特征多项式相同，所以特征值为B的对角线的值</li>
+<li>充分性：归纳法+分块</li>
+</ul>
+<p>A的特征多项式在复数域中的根都是实数，且$AA’&#x3D;A’A$那么A是对称矩阵</p>
+<ul>
+<li>因为都是实数， 所以A正交相似于一个上三角矩阵 <ul>
+<li>带入得$Q^{-1}UQ (Q^{-1}UQ)^T&#x3D;(Q^{-1}UQ)^TQ^{-1}UQ$, 其中$U$是上三角实(?)矩阵</li>
+<li>即 $Q^{-1}UU^TQ&#x3D;Q^{-1}U^TUQ$</li>
+<li>即 $UU^T&#x3D;U^TU$<ul>
+<li>考虑 结果的对角线上的两边相等，可推出$U$是对角矩阵<ul>
+<li>所以$A$是 对称矩阵</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>任意复矩阵一定相似于一个上三角矩阵</p>
+<ul>
+<li>类似的： 归纳法+分块</li>
+</ul>
+<p>$A&#x3D;-A^T$ 则 特征多项式在复数域的根为 0 或 纯虚数</p>
+<ul>
+<li>特征值+共轭 &#x3D;&gt; $(\lambda+\bar{\lambda})\alpha^T\bar{\alpha}&#x3D;0$</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MIT18.06线性代数</title>
+    <url>/Math/MIT_18.06_linear_algebra/</url>
+    <content><![CDATA[<h1 id="MIT-线性代数公开课"><a href="#MIT-线性代数公开课" class="headerlink" title="MIT 线性代数公开课"></a>MIT 线性代数公开课</h1><p><a href="http://web.mit.edu/18.06">http://web.mit.edu/18.06</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8">https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8</a></p>
+<p><a href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/download/">https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/download/</a></p>
+<span id="more"></span>
+
+<h2 id="1-方程组的几种解释"><a href="#1-方程组的几种解释" class="headerlink" title="1 方程组的几种解释"></a>1 方程组的几种解释</h2><p>问题：当我们小学学到鸡兔同笼时会用方程组，如果未知量更多变量更多的方程组有什么解决方案？</p>
+<p>从2个未知量，2个方程开始</p>
+<p>$1x+1y&#x3D;2$ 头</p>
+<p>$2x+4y&#x3D;6$ 脚</p>
+<p>此时为了简化书写,定义了矩阵</p>
+<p>$\pmatrix{1 &amp; 1 \\ 2 &amp; 4 }\pmatrix{x \\ y}&#x3D;\pmatrix{2 \\ 6}$</p>
+<p>这里 在矩阵定义上扩充一下行列都$\ge 1$，定义多行多列的矩阵乘法运算为</p>
+<p>$A_{m\times n}\cdot B_{n\times s}&#x3D;C_{m\times s}$</p>
+<p>其中$C_{i,j}&#x3D;\sum_{k&#x3D;1}^{n} A_{i,k}\cdot B_{k,j}$</p>
+<p>原问题变成$Ax&#x3D;b$</p>
+<hr>
+<p>由这个定义可以 容易的得到</p>
+<ul>
+<li>矩阵乘法有结合率</li>
+<li>矩阵乘法<strong>没有</strong>交换</li>
+<li>矩阵乘法可以块状乘法</li>
+</ul>
+<hr>
+<ul>
+<li>把一<code>行</code>拿出来看 对应的函数图像是 线的交点求解</li>
+<li>把一<code>列</code>拿出来看，对应的函数图像是 多个向量的线性组合方案求解</li>
+</ul>
+<p>考虑 维度增加，那么</p>
+<ul>
+<li><code>行</code>就是高维平面的交</li>
+<li><code>列</code>就是高维向量的组合方案</li>
+</ul>
+<h2 id="2-矩阵消元（高斯消元）"><a href="#2-矩阵消元（高斯消元）" class="headerlink" title="2 矩阵消元（高斯消元）"></a>2 矩阵消元（高斯消元）</h2><p>初中解答鸡兔同笼，有的时候用的是用y表示x,再带入x</p>
+<p>而还有一种方法，就是 整行做减法</p>
+<p>把第二个方程变为 $(2x+4y)-2(x+y)&#x3D;6-2\cdot2$</p>
+<p>这里有性质：</p>
+<ul>
+<li>原方程组的解一定是新方程组的解（假设先带入满足原方程则后续方程左右都是同样的操作）</li>
+<li>新方程的解一定是原方程的解（当我们把方程i+&#x3D;k倍方程j时，只需要逆向操作是 -&#x3D;k倍 方程j 就可以还原）</li>
+</ul>
+<p>所以 把方程的行变换（i行+&#x3D;k倍j行，或交换行）操作对应到矩阵的上来看，这些操作最终不会影响结果</p>
+<hr>
+<p>类似的 如果 做类似的列操作 相当于定义新的变量 <code>y_new=(y_old+kx)</code></p>
+<p>综上</p>
+<ul>
+<li>基础行变化 是 在对方程之间加减</li>
+<li>基础列变化 是 在对未知数之间加减</li>
+</ul>
+<hr>
+<p>然后如果我们希望不要用文字描述操作而是矩阵描述的话，会发现 左乘是行操作，</p>
+<p>当我们进行阶梯型变换时，全是左乘上下三角</p>
+<h2 id="3-乘法和逆矩阵"><a href="#3-乘法和逆矩阵" class="headerlink" title="3 乘法和逆矩阵"></a>3 乘法和逆矩阵</h2><p>首先单位矩阵 $AI&#x3D;A&#x3D;IA$, 显然存在(对角是1)且唯一$I_1&#x3D;I_1I_2&#x3D;I_2$</p>
+<p>那么考虑如果存在逆矩阵 $A^{-1}A&#x3D;I$</p>
+<p>注意矩阵乘法不满足交换率，所以还需要证明一下 左侧逆&#x3D;右侧逆，</p>
+<ul>
+<li>若左右逆存在 $A^{-1}_l&#x3D;A^{-1}_l(AA^{-1}_r)&#x3D;(A^{-1}_lA)A^{-1}_r&#x3D;A^{-1}_r$ 根据结合率</li>
+<li>若一侧逆存在，另一侧逆不存在  ??????????????????</li>
+</ul>
+<hr>
+<p>用 gauss-jordan的 行变换 把$Ax&#x3D;b$写成$A|b$的增广矩阵，然后把A通过多次行变换尽量变成单位矩阵</p>
+<p>因此有 $x&#x3D;A^{-1}b$</p>
+<h2 id="4-LU分解"><a href="#4-LU分解" class="headerlink" title="4 LU分解"></a>4 LU分解</h2><p>$(AB)^{-1}&#x3D;B^{-1}A^{-1}$</p>
+<p>对于$Ax&#x3D;b$对A进行向阶梯形变换时，左侧乘上的一直是 下(Lower)三角矩阵（长宽相等）</p>
+<p>而 多个下三角矩阵的乘积显然还是 下三角矩阵(根据矩阵乘法定义易证)</p>
+<p>所以 $A&#x3D;LU$ 可以变成 下（Lower）三角矩阵 乘上 上（Upper）三角矩阵</p>
+<p>注意到的是 $A$在向阶梯矩阵变换时，还可能因为行的主元位置是0,需要进行行交换</p>
+<p>所以另$P$为预先完成目标行交换的 行交换矩阵，所以上面的变成</p>
+<p>先完成行交换$PA&#x3D;LU$再进行阶梯矩阵的行变换操作</p>
+<h2 id="5-转置"><a href="#5-转置" class="headerlink" title="5 转置"></a>5 转置</h2><p>$A_{i,j}&#x3D;A^T_{j,i}$</p>
+<p>对称矩阵: $A&#x3D;A^T$</p>
+<p>显然$RR^T$ 是对称矩阵</p>
+<p>行交换矩阵 的逆等于它的转置 $P^{-1}&#x3D;P^T$,显然</p>
+<hr>
+<h2 id="6-列空间，nullspace"><a href="#6-列空间，nullspace" class="headerlink" title="6 列空间，nullspace"></a>6 列空间，nullspace</h2><p>$A_{m\times n}$列向量是$n$条在$R^{m}$中的向量，它们的生成空间是$C(A)$, 是$R^{m}$的子空间</p>
+<p>向量空间：需要加法，数乘封闭（所有线性组合还在空间中）</p>
+<p>$Ax&#x3D;0$ 对应的$x$的解叫做解的0空间 null space</p>
+<h2 id="7-Ax-x3D-0-主变量，特解"><a href="#7-Ax-x3D-0-主变量，特解" class="headerlink" title="7 Ax&#x3D;0,主变量，特解"></a>7 Ax&#x3D;0,主变量，特解</h2><p>echelon form（阶梯形式）</p>
+<p>计算$Ax&#x3D;0$ 还是对A阶梯型，$A_{m\times n}$对于变换后</p>
+<ul>
+<li>列数n</li>
+<li>主元数,pivot variables: r， rank（秩）&#x3D;行变换主元的个数</li>
+<li>自由变量(free variables): n-r</li>
+</ul>
+<p>对于主元不止后面行变换成零，前面行也边，主元再变为1, 就是 matlab 的<code>rref(A)</code>,(reduced row echelon form)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 2 2 2        1 2 2 2       1 2 0 -2</span><br><span class="line">2 4 6 8    =&gt;  0 0 2 4  =&gt;   0 0 1  2 (reduced)</span><br><span class="line">3 6 8 10       0 0 0 0       0 0 0  0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">主元列， 自由列</span><br><span class="line">1 0    2 -2</span><br><span class="line">0 1    1  2</span><br><span class="line">0 0    0  0</span><br><span class="line"></span><br><span class="line">是</span><br><span class="line">I F</span><br><span class="line">0 0</span><br><span class="line">的形式</span><br><span class="line"></span><br><span class="line">[I F]*[x_p,x_f]^T=0</span><br></pre></td></tr></table></figure>
+
+<p>那么 <code>nullspace维数=n-r</code></p>
+<p>$x_{pivot} &#x3D; -Fx_{free}$</p>
+<p>$x&#x3D;c\pmatrix{-F \\ I}$</p>
+<h2 id="8-Ax-x3D-b，可解性和可解结构"><a href="#8-Ax-x3D-b，可解性和可解结构" class="headerlink" title="8 Ax&#x3D;b，可解性和可解结构"></a>8 Ax&#x3D;b，可解性和可解结构</h2><p>类似的 阶梯化到reduced形，然后对于自由的设为0, 非自由的计算对应值 得到特解</p>
+<p>然后加上 上面nullspace，也就是经过特定点（一个特解） 指定偏移形状（nullspace）的 子空间</p>
+<hr>
+<p>$A_{m\times n}$</p>
+<p>显然 $r\le m, r \le n$ 不会超过行列数</p>
+<p>满列 $r&#x3D;n \le m$时 无自由变量 nullspace为单点,$N(A)&#x3D;\lbrace 0\rbrace$ 只有0向量，所以0个或1个解</p>
+<p>满行$r&#x3D;m \le n$时 有1个或多个解</p>
+<p>$r&#x3D;m&#x3D;n$时1个解</p>
+<p>这里结论: </p>
+<ul>
+<li>解 &#x3D; 特解+nullspace</li>
+<li>而 矩阵的rank决定了 特解存在性 与 nullspace的形状，也就决定了解的数目</li>
+</ul>
+<h2 id="9-线性相关性，基，维"><a href="#9-线性相关性，基，维" class="headerlink" title="9 线性相关性，基，维"></a>9 线性相关性，基，维</h2><ul>
+<li>线性相关&#x2F;线性无关</li>
+<li>生成（张成）空间spanning a space</li>
+<li>BASIS and dimension</li>
+</ul>
+<p>$\sum_{a_i} a_i \alpha_i &#x3D;0$ 只存在 全$0$的$a_i$解 则线性相关，否则线性无关</p>
+<p>所以 矩阵A 的 nullspace 只有零解 当且仅当 A的列向量 线性无关（因为 线性相关 对应 $a_i$ 就对应到了 nullspace 的非零解），rank &#x3D; n(列数)</p>
+<hr>
+<p>span（生成，长成）：由向量组 线性组合得到的所有向量的集合， 向量组 生成 空间（space)</p>
+<p>引出 “基”（Basis) 的概念：</p>
+<ul>
+<li>基basis for a space is a sequence of vectors v1,v2,…,vd, with 2 性质:<ul>
+<li>它们 线性无关（限制多了不行，多了些不必要的）</li>
+<li>它们 能生成span the 空间space, (限制少了不行，会无法完全表示)</li>
+</ul>
+</li>
+</ul>
+<p>给定一个空间，every basis for the space has the same number of vectors, 这个 个数 称作 空间的维数（dimension）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A =</span><br><span class="line">1 2 3 1</span><br><span class="line">1 1 2 1</span><br><span class="line">1 2 3 1</span><br><span class="line"></span><br><span class="line">列向量 能生成 space C(A)</span><br><span class="line">列向量不是基，因为线性相关</span><br><span class="line">nullspace 例如 N(A) = [-1,-1,1,0]^T，[1,0,0,-1]^T</span><br><span class="line"></span><br><span class="line">&#123;列1+列2&#125; 可以作为基</span><br></pre></td></tr></table></figure>
+
+<p>rank(A) &#x3D; 主元的列数 &#x3D; C(A)的维数dim</p>
+<p>dim(N(A)) &#x3D; 自由变量个数 &#x3D; n - rank(A)</p>
+<h2 id="10-四个基本子空间"><a href="#10-四个基本子空间" class="headerlink" title="10 四个基本子空间"></a>10 四个基本子空间</h2><p>对于$A_{m\times n}$ 是$m$行$n$列的矩阵</p>
+<p>C(A): 列空间 column , in $R^m$</p>
+<p>N(A): nullspace, in $R^n$</p>
+<p>row space: 行的所有组合 &#x3D;&gt; $C(A^T)$, in $R^n$</p>
+<p>null space of $A^T$ &#x3D;&gt; $N(A^T)$, 常用名字 left nullspace, in $R^m$</p>
+<p>![[mit_la_10.png]]</p>
+<hr>
+<p>$R^n$ 空间中： nullspace(n-r) 和 row space (r)正交，且维度和为n</p>
+<p>$R^m$ 空间中： N(A^T) 和 C(A) 正交，且维度和为m</p>
+<hr>
+<p>因为 basis for rowspace is first <code>r</code> row of <code>rref(A)</code>, 注意行变换后 C(A) 不一定等于 C(rref(A)), 但是行还是，</p>
+<p>因为逆操作保证了rref(A)的行能表示原始A的行，所以$C(A^T)&#x3D;C(\mathrm{rref}(A)^T)$</p>
+<p>rref的过程 是行变换 相当于乘上 操作组合的矩阵E,而乘了以后，A变为rref(A)，它的倒数m-r全为0,正好说明了 E的后m-r行对应的 正是 left nullspace 的基，而且 因为E是单位矩阵  和 A相同的基础行变换得到，的所有E的行之间是线性无关的。</p>
+<p>$R^n$ 延伸到 $R^{n\times n}$, 把矩阵看成向量</p>
+<p>例如 $R^3$的所有对角矩阵的 集合（space），的基可以是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 0 0</span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line"></span><br><span class="line">1 0 0</span><br><span class="line">0 3 0</span><br><span class="line">0 0 0</span><br><span class="line"></span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line">0 0 7</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-矩阵空间，rank-x3D-1矩阵，小世界图"><a href="#11-矩阵空间，rank-x3D-1矩阵，小世界图" class="headerlink" title="11 矩阵空间，rank&#x3D;1矩阵，小世界图"></a>11 矩阵空间，rank&#x3D;1矩阵，小世界图</h2><ul>
+<li>Base of new vector spaces</li>
+<li>rank one matrices</li>
+<li>small world graphs</li>
+</ul>
+<p>因为矩阵，可以数乘，相加（线性要求的基础）</p>
+<p>$R^3$ 的所有矩阵的 基，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 0 0</span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line"></span><br><span class="line">0 1 0</span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line"></span><br><span class="line">0 0 1</span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">0 0 0</span><br><span class="line">0 0 0</span><br><span class="line">0 0 1</span><br></pre></td></tr></table></figure>
+
+<p>类似的，对称矩阵(symm) 的基的个数是6个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">100</span><br><span class="line">000</span><br><span class="line">000</span><br><span class="line"></span><br><span class="line">010</span><br><span class="line">100</span><br><span class="line">000</span><br><span class="line"></span><br><span class="line">001</span><br><span class="line">000</span><br><span class="line">100</span><br><span class="line"></span><br><span class="line">000</span><br><span class="line">010</span><br><span class="line">000</span><br><span class="line"></span><br><span class="line">000</span><br><span class="line">001</span><br><span class="line">010</span><br><span class="line"></span><br><span class="line">000</span><br><span class="line">000</span><br><span class="line">001</span><br></pre></td></tr></table></figure>
+
+<p>S(对称矩阵) and U(上三角矩阵) &#x3D; diag(对角矩阵)</p>
+<p>dim(S交U) &#x3D; 3</p>
+<p>S并U &#x3D;&gt; 不是一个空间，运算不封闭</p>
+<p>S+U &#x3D;&gt; 组合 而不是并，也就是 “不是两个空间之和，而是空间S中任意元素+U中任意元素“ &#x3D; ”两者基的集合之和 再 span生成的空间”</p>
+<p>dim(S+U) &#x3D; 9</p>
+<p>dim(S并U)+dim(S+U)&#x3D;dim(S)+dim(U)</p>
+<hr>
+<p>$y’’+y&#x3D;0$</p>
+<p>$y&#x3D;\cos x, \sin x, e^{ix}$ 找所有解, 也是解空间的基的线性组合</p>
+<p>$y&#x3D;c_1\cos x+c_2\sin x$</p>
+<p>dim(解空间)&#x3D;2</p>
+<hr>
+<p>秩为1的矩阵 总可以表示成 $A&#x3D;uv^T$, 一列乘上1行</p>
+<p>这一章，主要就是用 更特殊的例子（把矩阵看作向量，来构成矩阵空间，用例子来再度回顾，什么是space,什么是基，什么是线性组合 ）</p>
+<hr>
+<p>图论 和 线性代数 的关系，人与人之间的6步认识理论</p>
+<h2 id="12-图和网络"><a href="#12-图和网络" class="headerlink" title="12 图和网络"></a>12 图和网络</h2><ul>
+<li>graphs &amp; networks</li>
+<li>incidence matrices （关联矩阵）</li>
+<li>kirchnoff’s laws</li>
+</ul>
+<p>与实际应用相关的</p>
+<p>Graphs: 点 和 边, 也可以表示电路系统，液压系统，桥系统</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A = </span><br><span class="line">         列对应点</span><br><span class="line">行对应 边 [        ], -1表示出，1表示入点</span><br></pre></td></tr></table></figure>
+
+<p>$Ax&#x3D; [x入-x出…]^T&#x3D;0$</p>
+<hr>
+<p>对于“连通图”</p>
+<p>零空间是 <code>[1,1,1,1,1,1]</code> </p>
+<p>看成电势能，可以选一个点接地（xi&#x3D;0）</p>
+<p>$N(A^T) &#x3D; m-r$</p>
+<p>$A^Ty&#x3D;0$, Kirchoff’s 基尔霍夫电流定律 KCL, 每一行 说明 节点上不累计电子</p>
+<p>nullspace(A^T) &#x3D; 那么 线性无关的 A^T 的列 对应的图中的边 不含环loop</p>
+<p>连通图的不含回边含有所有点的图是树</p>
+<p>dim N(A^T) &#x3D; m - r &#x3D; 独立loops个数 &#x3D; edges - (点数-1) </p>
+<p>点数-边数+独立环数&#x3D;1</p>
+<p>Euler‘s 公式 视角：空间里 面对应这里的点，边对应这里的边，而点对应这里的 独立loops</p>
+<p>$A^TCAx&#x3D;f$ 稳定电流问题，</p>
+<hr>
+<p>延伸：图论里还有生成树个数计算</p>
+<h2 id="13-复习1"><a href="#13-复习1" class="headerlink" title="13 复习1"></a>13 复习1</h2><ul>
+<li>review for exam 1</li>
+<li>emphasites chapter 3</li>
+</ul>
+<p>练习1. 是非题  $A^2&#x3D;0 \to A&#x3D;0$ ?, False, 我觉得这个很“反例，因为在线代之前都是单个的数，就算到了复数,只要结果是0,那么乘数一定有零，而这里的反例反过来再次强调了乘法规则的变化”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0 1</span><br><span class="line">0 0</span><br></pre></td></tr></table></figure>
+
+<p>练习2. if C 是 可逆的， N(CD)&#x3D;N(D), 左乘可逆不会改变nullspace</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rref(A) =</span><br><span class="line">  I   F  的形状</span><br><span class="line">    O</span><br><span class="line">解形状 = </span><br><span class="line">  -F</span><br><span class="line">   O</span><br></pre></td></tr></table></figure>
+
+
+<p>解</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1 1 0][1 0  1 2]     1</span><br><span class="line">[0 1 0][0 1 -1 1] x = 0</span><br><span class="line">[1 0 1][0 0  0 0]     1</span><br></pre></td></tr></table></figure>
+
+<p>这里 nullspace用上面的N(CD)&#x3D;N(D)来算</p>
+<p>而<code>特解</code> 注意到 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1 1 0] [1]   1</span><br><span class="line">[0 1 0] [0] = 0</span><br><span class="line">[1 0 1] [0]   1</span><br><span class="line">只需要再解</span><br><span class="line">[1 0  1 2]     1</span><br><span class="line">[0 1 -1 1] x = 0</span><br><span class="line">[0 0  0 0]     0</span><br><span class="line">就好了，这样就很easy!?</span><br></pre></td></tr></table></figure>
+
+<p>练习3. 如果m&#x3D;n,那么 行空间&#x3D;列空间，错，相等的只是维数而生成空间不一定相等, <code>[0 1 ; 0 0]</code></p>
+<p>练习4. A和-A是否拥有相同的四个空间, True</p>
+<p>练习5. 如果A和B的四个子空间相同,那么A是B的倍数? 错 反例<code>[1 0;0 1]</code>和 <code>[0 1;1 0]</code></p>
+<p>练习5. 为什么 一个向量 不能同时 是行向量 且 在 nullspace里？</p>
+<p>想说 多个平方和吗？这样想的花 i,1 就可以</p>
+<p>这里要引入零空间和行空间正交</p>
+<h2 id="14-正交向量与子空间"><a href="#14-正交向量与子空间" class="headerlink" title="14 正交向量与子空间"></a>14 正交向量与子空间</h2><ul>
+<li>orthogonal vectors &amp; subspaces</li>
+<li>nullspace 正交 row space 和 column space 正交$N(A^T)$</li>
+<li>$N(A^TA)&#x3D;N(A)$</li>
+</ul>
+<p>毕达哥拉斯pythagoras, 勾股定理与正交: $x^Ty&#x3D;0$</p>
+<p>高维空间中</p>
+<p>$||x||^2+||y||^2&#x3D;||x+y||^2$</p>
+<p>$x^Tx+y^Ty&#x3D;(x+y)^T(x+y)&#x3D;x^Tx+y^Ty+x^Ty+y^Tx$, 最后两项 点乘是一样的</p>
+<hr>
+<p>向量正交 推广到 空间正交：A空间中的任意向量 和 B空间中的任意向量正交</p>
+<p>&#x2F;&#x2F; 这时候会发现3维不是一个很好的高维示例，因为当想拆两个子空间时，如果拆成 1维和2维，总有一个维度会显得不够灵活</p>
+<hr>
+<p>row space和 nullspace 正交:</p>
+<p>nullspace: $Ax &#x3D; 0$, $x$所属的space</p>
+<p>只需要展开A就能 看到 A的原始的row 乘上x 的到的 数值为0</p>
+<p>所以A的行全部和x正交，所以行的生成空间（原始行的任意线性组合）</p>
+<p>这里不止正交，而且一个r维,一个n-r维,所以一个是$R^n$中另一个的剩下所有垂直向量生成的空间</p>
+<hr>
+<p>研究 $A^TA$ ，因为很多情况下$A$并不一定是方阵，而是长方形</p>
+<ul>
+<li>n阶方阵</li>
+<li>角对称</li>
+</ul>
+<p>$Ax&#x3D;b$ 可变成 $A^TA\hat{x}&#x3D;A^Tb$, 特别当$m &gt; n$时</p>
+<p>$x$的解一定是 $\hat{x}$的解, 而如果$A^TA$又可逆，那么一定有解</p>
+<p>于是要用到 rank(A^TA) &#x3D; rank(A), 第15章证明</p>
+<p>hat $\hat{x}$表示最优,而不是准确</p>
+<h2 id="15-子空间投影"><a href="#15-子空间投影" class="headerlink" title="15 子空间投影"></a>15 子空间投影</h2><ul>
+<li>projections， 从投影到1维，延伸到 投影到空间</li>
+<li>least squares and best straight line</li>
+</ul>
+<p>从二维 向量a,b投影 谈起</p>
+<p>也就是 a方向上的向量p&#x3D;ka, 与 b-p垂直, 其中$k$是某个<code>数</code>,a,b是向量</p>
+<p>$(k\vec{a})^T(\vec{b}-k\vec{a}) &#x3D; 0$</p>
+<p>即 $a^T(b-ka) &#x3D; 0$</p>
+<p>即 $a^Tb &#x3D; ka^Ta$, 注意到这里 $a^Tb$和$a^Ta$都是数</p>
+<p>即 $k &#x3D; \frac{a^Tb}{a^Ta}$</p>
+<p>$p&#x3D;a\frac{a^Tb}{a^Ta}$</p>
+<p>$P(b) &#x3D; \frac{aa^T}{a^Ta} b$, 注意分子是矩阵 而分母是数 , 这里是”投影矩阵”，rank&#x3D;1</p>
+<p>两个好的性质</p>
+<ul>
+<li>$P^T&#x3D; P$ 根据表达式显然</li>
+<li>$P^2 &#x3D; P$ 幂等, 意义证明也就是投影的投影是不变的，代数证明根据结合律也显然</li>
+</ul>
+<hr>
+<p>why project? 为什么做投影?</p>
+<p>因为 $Ax&#x3D;b$ 可能无解</p>
+<p>变成找$Ax&#x3D;p$, 其中$p$是$b$在$A$的列空间的投影</p>
+<p>那么$b$ 关于$A$的每个列向量的投影都可以用类似上面的过程</p>
+<p>$(A)^T(b-A\hat{x})&#x3D;[0,\cdots,0]^T$, 左边是列向量的转置，右边是 $e&#x3D;b-(p&#x3D;A\hat{x})$, 这样说明$e$和$A$的所有列向量正交，也就和列空间正交</p>
+<p>注 这里根据前面 子空间正交性和充满空间 有$e$在$N(A^T)$中</p>
+<p>注 这里不能单独的和每个列向量正交再加起来，因为和一个列向量正交的同时可能和另一个列向量不正交，这里需要同时和所有列向量正交</p>
+<p>$A^Tb &#x3D; A^TA\hat{x}$</p>
+<p>$\hat{x}&#x3D;(A^TA)^{-1}A^Tb$ ?? 不需要保证 可逆性吗?????</p>
+<p>$p &#x3D; A\hat{x} &#x3D; A(A^TA)^{-1}A^T b$</p>
+<p>$P(b) &#x3D; A(A^TA)^{-1}A^T b$, 这里的一个结论是，如果$A$是方阵且可逆，则 $P(b)&#x3D;b$</p>
+<p>性质 </p>
+<ul>
+<li>$P^T&#x3D; P$, 这里要用到 对称矩阵的逆 是对称矩阵？啊？？？？？？</li>
+<li>$P^2 &#x3D; P$，这个同样从意义上 投影的投影幂等，从表达式上结合律</li>
+</ul>
+<hr>
+<p>应用: 最小二乘法 拟合直线 Least squares fitting by a line</p>
+<p>3个点: (1,1),(2,2),(3,2)</p>
+<p>直线$y&#x3D;b+kx$</p>
+<p>那么对应</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">b+k=1</span><br><span class="line">b+2k=2</span><br><span class="line">b+3k=2</span><br></pre></td></tr></table></figure>
+
+<p>显然是无解的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1 1]       [1]</span><br><span class="line">[1 2] [b] = [2]</span><br><span class="line">[1 3] [k]   [2]</span><br></pre></td></tr></table></figure>
+
+<p>下节课</p>
+<h2 id="16-投影矩阵-最小二乘法"><a href="#16-投影矩阵-最小二乘法" class="headerlink" title="16. 投影矩阵,最小二乘法"></a>16. 投影矩阵,最小二乘法</h2><ul>
+<li>projections</li>
+<li>least squares and best straight line</li>
+</ul>
+<p>$P&#x3D;A(A^TA)^{-1}A^T$ 投影矩阵</p>
+<p>如果 b 在 列空间中,那么 Pb &#x3D; b 投影是自己</p>
+<p>如果 b 垂直于 列空间,那么 Pb &#x3D; b 投影是0， $b \in N(A^T)$</p>
+<p>其它情况 b,即不在列空间，也不垂直列空间</p>
+<p>对于b</p>
+<ul>
+<li>把b投影到 列空间 的部分称作p</li>
+<li>投影到N(A^T)的部分叫做e</li>
+<li>b &#x3D; p+e (因为 列空间 和 N(A^T)正交！ 不正交的话投影和就不一定等)</li>
+<li>p&#x3D;Pb</li>
+<li>e&#x3D;(I-P)b</li>
+<li>这里小p是投影，大P是投影矩阵</li>
+</ul>
+<hr>
+<p>回到best line fitting, 那么要评价best line需要指标？</p>
+<p>指标 $\min ||Ax-b||$ 这里描绘的是 y方向的差的平方最小，并不是点到直线的投影，（线性回归 linear regreation)</p>
+<p>$&#x3D;\min (b+k-1)^2 +(b+2k-2)^2 +(b+3k-2)^2$</p>
+<p>微积分视角 偏导数，也会得到下面的方程</p>
+<figure class="highlight m"><figcaption><span>matlab</span></figcaption><table><tr><td class="code"><pre><span class="line">A <span class="built_in">=</span> [<span class="number">1</span> <span class="number">1</span>; <span class="number">1</span> <span class="number">2</span>;<span class="number">1</span> <span class="number">3</span>];</span><br><span class="line">A <span class="built_in">=</span> [<span class="number">1</span>;<span class="number">2</span>;<span class="number">2</span>];</span><br><span class="line">ata <span class="built_in">=</span> A<span class="string">&#x27; * A;</span></span><br><span class="line"><span class="string">atb = A&#x27;</span> * b;</span><br><span class="line">x <span class="built_in">=</span> ata\atb; // [<span class="number">2</span>/<span class="number">3</span>;<span class="number">1</span>/<span class="number">2</span>] <span class="built_in">=&gt;</span> 最优 直线 y <span class="built_in">=</span> <span class="number">2</span>/<span class="number">3</span> + <span class="number">1</span>/<span class="number">2</span> x</span><br><span class="line">p <span class="built_in">=</span> A * x;</span><br><span class="line">// <span class="number">3</span>  <span class="number">6</span>  | <span class="number">5</span></span><br><span class="line">// <span class="number">6</span> <span class="number">14</span>  | <span class="number">11</span></span><br><span class="line">// normal eqn</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    [1]             [7 /6]       [-1/6]</span><br><span class="line">b = [2] = (p = Ax = [5 /3]) + (e=[ 2/6])</span><br><span class="line">    [2]             [13/6]       [-1/6]</span><br><span class="line"></span><br><span class="line">p 垂直 e</span><br><span class="line">e 垂直 原来列向量 [1;1;1],[1;2;3]</span><br></pre></td></tr></table></figure>
+
+<p>这里核心要导出的结论是: 如果A的列 线性无关, 那么$A^TA$是可逆的</p>
+<p>也就是要证明 $A^TAx&#x3D;0$ 只有零解</p>
+<p>那么 $x^TA^TAx&#x3D;0$</p>
+<p>那么 $(Ax)^TAx&#x3D;0$ 这里是  $列向量^T列向量 &#x3D;0$, 所以</p>
+<p>即是 $Ax&#x3D;0$， 列向量线性无关所以只有零解，所以$A^TA$可逆</p>
+<hr>
+<p>columns definitely independent if they are (perp.unit vectors&#x2F;orthogornal vectors) , 列如果恰好单位向量&#x2F;相互垂直，那么它们线性无关</p>
+<p><code>[-sin cos]</code>和 <code>[cos sin]</code></p>
+<h2 id="17-正交矩阵-Gram-Schmidt-正交化"><a href="#17-正交矩阵-Gram-Schmidt-正交化" class="headerlink" title="17. 正交矩阵,Gram-Schmidt 正交化"></a>17. 正交矩阵,Gram-Schmidt 正交化</h2><ul>
+<li>orthogornal basis, q1,…,qn, n条正交基</li>
+<li>orthogornal matrix Q</li>
+<li>Gram-Schmidt A-&gt;Q</li>
+</ul>
+<p>orthog-normal vectors: 基两两正交，且每个基长度为1</p>
+<p>$Q&#x3D;[q_1,\cdots,q_n]$ </p>
+<p>正交矩阵:</p>
+<ul>
+<li>$Q^TQ &#x3D; I$, 注意 虽然名字里没有 normal,只有orthog,但正交矩阵是要求normal的</li>
+</ul>
+<p>如果$Q$是 方阵, 那么$Q^T&#x3D;Q^{-1}$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">例子</span><br><span class="line">[0 0 1]</span><br><span class="line">[1 0 0]</span><br><span class="line">[0 1 0]</span><br><span class="line"></span><br><span class="line">[cos -sin]</span><br><span class="line">[sin  cos]</span><br><span class="line"></span><br><span class="line">adhermar matrix, 全是1,-1组成的，还有系数的</span><br><span class="line"></span><br><span class="line">    [1 -2  2] </span><br><span class="line">1/3 [2 -1 -2]</span><br><span class="line">    [2  2  1]</span><br></pre></td></tr></table></figure>
+
+<p>如果$Q$的列是 标准(normal 单位长度)正交的</p>
+<p>$P&#x3D;Q(Q^TQ)^{-1}Q^T &#x3D; QQ^T$</p>
+<ul>
+<li>再次,如果Q是方阵,那么$P&#x3D;I$</li>
+<li>再次 对称</li>
+<li>再次 幂等</li>
+</ul>
+<p>这种情况下 $\hat{x_i} &#x3D; q_i^T b$ </p>
+<hr>
+<p>Gram-Schmidt 正交化</p>
+<ul>
+<li>把一般的矩阵的线性无关的列向量 转化为正交列向量</li>
+</ul>
+<p>从两个向量开始 $(a,b) \to (a_1&#x3D;a,b_1&#x3D;b-\frac{aa^T}{a^Ta}b)$, 上面学的投影，完成后，再进行单位化$(q_1&#x3D;\frac{a}{||a||},q_2&#x3D;\frac{b}{||b||})$， </p>
+<ul>
+<li>这里视频上是$\frac{a^Tb}{a^Ta}a$的形式，这表现出是向量$a$的某个倍数，而且更容易计算</li>
+<li>因为“数”可以交换位置 $\frac{aa^T}{a^Ta}b &#x3D; \frac{a^Tb}{a^Ta} a$</li>
+</ul>
+<p>三个向量 $(a,b,c) \to (a_1&#x3D;a,b_1&#x3D;b-\frac{aa^T}{a^Ta}b,c)$, </p>
+<p>$\to (a_1&#x3D;a,b_1&#x3D;b-\frac{aa^T}{a^Ta}b,c_1&#x3D;c-\frac{a_1a_1^T}{a_1^Ta_1}c-\frac{b_1b_1^T}{b_1^Tb_1}c)$, 这里因为前两项已经完成了正交，所以后面的减法才能合并成立</p>
+<p>整个操作 列空间没有变化，也就是保持列空间不变的情况下，选了一组normal 正交基</p>
+<p>回过头来看</p>
+<ul>
+<li>$A&#x3D;LU$ 描述 之前的 rref阶梯化</li>
+<li>$A&#x3D;QR$ 描述了这里 ,A$列变化提出normal正交列向量, R是上三角矩阵</li>
+</ul>
+<h2 id="18-行列式-及其性质"><a href="#18-行列式-及其性质" class="headerlink" title="18 行列式 及其性质"></a>18 行列式 及其性质</h2><ul>
+<li>Determinants det A &#x3D; |A|, 而 determinate的英文是确定的</li>
+<li>properties</li>
+</ul>
+<p>eigen values(固有值， 特征值)</p>
+<p>本章 重要结论之一 可逆 &lt;-&gt; 行列式非零</p>
+<p>由3条性质基础得到行列式，而不是先行列式有什么性质</p>
+<ul>
+<li>性质1. det I &#x3D; 1</li>
+<li>性质2. 交换行，影响行列式的 符号<ul>
+<li>任意的 置换矩阵 det P &#x3D; 1 or -1</li>
+</ul>
+</li>
+<li>性质3. 每行都是可以独立考虑线性性质的，也就是固定其它行 有数乘和加法<ul>
+<li>3.1. 单行乘上t, 结果乘上t<ul>
+<li>$\det kA &#x3D; k^n \det A$</li>
+</ul>
+</li>
+<li>3.2. 两个矩阵n-1行相同, 那么它们的行列式相加 &#x3D; 这相同的n-1行以及 对应的对位相加 的 矩阵的行列式.</li>
+</ul>
+</li>
+</ul>
+<p>虽然直接上代数式更代数，但这里3个性质更 直观，但这样的性质有一些潜在的风险，例如 性质2<br>    - 这里 数学一点 需要证明如果行两两不同，那么奇数次交换 和 偶数次交换 无法得到同样的矩阵， 而隐藏在里面的 正是排列数的内容，</p>
+<hr>
+<p>根据基础性质有</p>
+<ul>
+<li>性质4. 相等的两行 det &#x3D; 0, （根据性质2)</li>
+<li>性质5. 行i -&#x3D; k * 行j $(j\neq i)$, 行列式不变，根据性质4和性质3</li>
+<li>性质6. 有全零行, 则 det A &#x3D; 0, 根据性质3 乘上 0</li>
+<li>性质7. U(上三角矩阵)行列式 &#x3D;对角线上的乘积, 根据1,5,3,以得到</li>
+<li>性质8. 当A is singular(奇异 不可逆), det A &#x3D; 0<ul>
+<li>前面 可逆 &lt;-&gt; rref后每行有主元 &lt;-&gt; U , det U!&#x3D; 0</li>
+<li>对于2维 |[a,b;c,d]| &#x3D; ad-bc, 根据上面推出的而不是定义的！</li>
+<li>对于n维的同样 推出 代数式 ！！！！（不过同样的在下一章）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>性质9: det (AB) &#x3D; det(A) det(B)<ul>
+<li>若不可逆，和0的关系易证</li>
+<li>那么对于 A,B 均可逆，证明？？？？？？？？？？？？<ul>
+<li>代数式倒是易证，然而是第19章</li>
+<li>首先特别的 对于简单的行变化 R, det (RA) &#x3D;  det(R)det(A)</li>
+<li>这里是 只看B的行向量，而通过对A进行变换（是左，那么左右同步同样变化，直到A完全变成 对角矩阵，得证</li>
+</ul>
+</li>
+<li>推论 det $A^{-1}$ &#x3D; 1&#x2F;det A</li>
+</ul>
+</li>
+<li>性质10: $\det A^T &#x3D; \det A$<ul>
+<li>证明: $|U^T||L^T| &#x3D; |A^T| &#x3D; |A| &#x3D; |L||U|$, 用上面性质</li>
+<li>推论 零列 &#x3D;&gt; det 0</li>
+<li>推论 det Q &#x3D; 1 or -1, 因为$Q^TQ&#x3D;I$</li>
+</ul>
+</li>
+</ul>
+<p>&#x2F;&#x2F; 这样看来3x4的行列式，主要是性质1难以满足，而且本身长矩阵 无可逆一说，这样的值没有用处，后续9,10也不行，而想满足其它有些性质还真可以</p>
+<h2 id="19-行列式公式-cofactors代数余子式"><a href="#19-行列式公式-cofactors代数余子式" class="headerlink" title="19 行列式公式, cofactors代数余子式"></a>19 行列式公式, cofactors代数余子式</h2><p><code>[a,b;c,d] = [a,0;c,d]+[0,b;c,d] = [a,0;c,0]+[a,0;0,d]+[0,b;c,0]+[0,b;0,d]</code> 简单的利用性质3，一直拆就行了</p>
+<p>amazing比 先走表达式，漂亮多了，从我们需要的性质去导出一个满足的</p>
+<p>$\det A &#x3D; \sum_{(t_i,\cdots)排列} \pm \prod_{i&#x3D;1}^n a_{i{t_i}}$</p>
+<p>下个问题 是这里$\pm$的具体取值能否 通过排列判断出</p>
+<p>上面的性质 是 列号 &#x3D; 经过多少次 交换能变成 (1,…,n) 那就决定了-1的奇偶</p>
+<hr>
+<p>cofactors 代数余子式, 啊这因为字面意思是 co-(共，伴随) factors因子， 有的时候这种 中文就太别扭不精确</p>
+<p>把第一行 的每个数拆出来</p>
+<p>$&#x3D; a_{11}(a_{22}a_{33}-a_{23}a_{32})+a_{12}(-(a_{21}a_{33}-a_{23}a_{31}))+a_{13}(a_{})$, 括号里的就是代数余子式</p>
+<p>$\det A &#x3D;a_{11}C_{11}+a_{12}C_{12}+\cdots+a_{1n}C_{1n}$</p>
+<p>回到上面的问题, cofactor of $a_{ij}$的 符号问题，容易猜出 再证明$(-1)^{i+j}$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+ - + - +</span><br><span class="line">- + - + -</span><br><span class="line">+ - + - +</span><br><span class="line">- + - + -</span><br><span class="line">+ - + - +</span><br></pre></td></tr></table></figure>
+
+<p>代数余子式的想法的拆解，能对于一些有规律的大矩阵得到递推公式</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 1 </span><br><span class="line">1 1 1 </span><br><span class="line">  1 1 1</span><br><span class="line">    1 1 1</span><br><span class="line">      1 1 ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="20-Cramers-Rules-克拉默法则"><a href="#20-Cramers-Rules-克拉默法则" class="headerlink" title="20 Cramers Rules 克拉默法则"></a>20 Cramers Rules 克拉默法则</h2><ol>
+<li>Formula for $A^{-1}$</li>
+<li>Cramers Rules for x&#x3D;$A^{-1}b$</li>
+<li>行列式应用 |Det A| &#x3D; volume of box</li>
+</ol>
+<p>对于2阶矩阵 $[a,b;c,d]^{-1} &#x3D; \frac{1}{|[a,b;c,d]|} [d,-b;-c,a]$</p>
+<p>本章 重要结论$A^{-1}&#x3D;\frac{1}{\det A} C^T$, 其中$C$是上一章的 代数余子式</p>
+<p>证明:</p>
+<p>就是 乘法展开，会发现$AC^T$的对角 是$\det A$, 而 非对角$i,j$，相当于把$A$的$j$行 换成$i$行 再去求$\det$,而我们知道 有两个相同行的$\det$为0, 所以得证</p>
+<p>这个公式也帮助理解 原矩阵变化 对 逆矩阵的影响</p>
+<hr>
+<p>Cramers Rules: $x&#x3D;A^{-1}b&#x3D;\frac{1}{\det A}C^T b$</p>
+<p>看向量$x$的每个 分量</p>
+<p>$x_{i}&#x3D;\frac{\det B_i}{\det A}$, 其中 $B_i &#x3D;$ 把$A$的第i列换成$b$, 这也是 从 余子式 和 行列式 的关系 得到的</p>
+<p>感觉算法竞赛里 常见的还是高斯消元，但那偏应用，而这里是数学性质的推导</p>
+<p>这个的主要价值 是 提供了一个表达式，但不易于计算</p>
+<hr>
+<p>行列式应用： 求体积</p>
+<p>命题：行列式的值 &#x3D; 箱子的体积</p>
+<p>箱子的三条边，三个行向量，（行列式的值可能为负（告诉我们手性），则取绝对值）</p>
+<p>直觉的证明 如果能证明上面18章的3个基础性质 和体积变化同步，那么就可以证明</p>
+<ul>
+<li>性质1. det I &#x3D; 1 对应 单位标准立方体</li>
+<li>性质2. 行交换 乘上-1, 对应空间的维度交换</li>
+<li>性质3. 固定其它维度，单行的加和乘满足线性关系。 对应箱子单边的伸缩！！</li>
+</ul>
+<p>延伸，2维的det 求面积</p>
+<p>延伸，三角形面积 非原点 用三维det, 因为 做两次 行相减，就能让非1的部分回到原点。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1/2 * det(</span><br><span class="line">x1 y1 1</span><br><span class="line">x2 y2 1</span><br><span class="line">x3 y3 1</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-eigenvalues特征值-与-eigenvectors特征向量"><a href="#21-eigenvalues特征值-与-eigenvectors特征向量" class="headerlink" title="21 eigenvalues特征值 与 eigenvectors特征向量"></a>21 eigenvalues特征值 与 eigenvectors特征向量</h2><ul>
+<li>eigen values , eigen vectors</li>
+<li>$\det (A-\lambda I) &#x3D; 0$</li>
+<li>trace &#x3D; $\lambda_1+\lambda_2+\cdots+\lambda_n$</li>
+</ul>
+<p>还是对于方阵</p>
+<p>eigen(自身的)</p>
+<p>看成函数 $f(x)&#x3D;Ax$</p>
+<p>那么希望研究其中, 运算后和x平行的, parallel to x (eigen vectors)</p>
+<p>$Ax&#x3D; \lambda x$, 其中$\lambda$ 是数值，eigen values</p>
+<p>if A is Singular, 存在非零x, $A x &#x3D; 0 x$, 也就是0是它的特征值,</p>
+<p>这里要研究所有特征值.</p>
+<hr>
+<p>what are the x’s and \lambda ‘s for project matrix? 投影矩阵的 特征值 和 特征向量 是什么？</p>
+<p>根据之前的内容，不在空间外的 到子空间的投影 一定不是平行的(parallel)</p>
+<p>而在空间中的向量到空间的投影，就是它本身$Px&#x3D;x$, 这里$\lambda &#x3D; 1$</p>
+<p>正交于空间的，投影都是0, 所以$Px &#x3D; 0$, 这里$\lambda &#x3D; 0$</p>
+<p>所以只有1 和 0</p>
+<hr>
+<p>置换矩阵 <code>[0,1;1,0]</code>, 因为交换顺序， 所以只有交换前 平行</p>
+<ul>
+<li>$x&#x3D;[1;1],\lambda &#x3D; 1$</li>
+<li>$x&#x3D;[1;-1],\lambda &#x3D; -1$</li>
+</ul>
+<p>而且 两个$x$是正交的</p>
+<hr>
+<p>性质:</p>
+<ul>
+<li>n个 特征值, 因为 上面会变成n次方程</li>
+<li>trace $&#x3D; \sum_i \lambda_i &#x3D; A_{ii}$<ul>
+<li>证明 注意 特征方程 的$n-1$次方只能来源于对角线, 而$\prod_i (\lambda - \lambda_i)$的$n-1$ 次系数 对应$\sum_i$, 因此得证</li>
+</ul>
+</li>
+<li>$\det &#x3D; \prod_i {\lambda_i}$<ul>
+<li>其实 右边是$\prod_i (\lambda - \lambda_i)$的零次系数，那么直接把$\lambda &#x3D;0$带入就是左边</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>how to solve $Ax&#x3D;\lambda x$?</p>
+<p>$(A-\lambda I)x &#x3D;0$ 如果存在非零向量$x$,那么左侧一定是奇异的，所以$\det (A-\lambda I) &#x3D; 0$, 所以变成关于$\lambda$的$n$次方程 (特征方程)</p>
+<p>可能相同，也可能不同</p>
+<p>如果有$\lambda$, 那么只需要带回去 高斯消元 求nullspace就能有x</p>
+<p>简单例子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3 1</span><br><span class="line">1 3</span><br><span class="line">显然有2,4</span><br><span class="line">而上面例子</span><br><span class="line">0 1</span><br><span class="line">1 0</span><br><span class="line">的特征值-1,1， 对矩阵的对角同时增加k，那么特征值同时增加k，而特征向量不变</span><br></pre></td></tr></table></figure>
+
+<p>$Q&#x3D;[0,-1;1,0]$， 90度旋转矩阵，会遇到$\lambda^2 &#x3D; -1$, 会出现 复数</p>
+<p>上三角矩阵的特征值 就在 对角线上 显然</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">3 1</span><br><span class="line">0 3</span><br><span class="line">特征值3, (lambda -3)(lambda - 3) =0</span><br><span class="line"></span><br><span class="line">(A-3I)x = [0 1] = [0]</span><br><span class="line">          [0 0]   [0]</span><br><span class="line"></span><br><span class="line">degenerate matrix(退化矩阵，重复的特征值 可能造成 特征向量短缺，只有[1;0]）</span><br></pre></td></tr></table></figure>
+
+<h2 id="22-对角化-A的幂"><a href="#22-对角化-A的幂" class="headerlink" title="22 对角化, A的幂"></a>22 对角化, A的幂</h2><ul>
+<li>Diagonaliging a matrix $S^{-1}AS&#x3D;\Lambda$</li>
+<li>Powers of A &#x2F; equation $u_{k+1}&#x3D;A u_{k}$</li>
+</ul>
+<p>假设A有n个线性无关 特征向量</p>
+<p>S是特征向量 组成的矩阵（必定可逆）</p>
+<p>$AS&#x3D;A[特征向量列]&#x3D;A[\lambda_i x_i…]&#x3D;S [\lambda_i 特征值对角矩阵] &#x3D; S\Lambda$</p>
+<p>$S^{-1}AS &#x3D; \Lambda$</p>
+<p>$A&#x3D;S\Lambda S^{-1}$， 这里也可以得到 如果 $\forall |\lambda_i| &lt; 1$那么 $k\to \infty, A^k\to O$</p>
+<p>$A^n&#x3D;S\Lambda^n S^{-1}$ 这就很amazing了，，，我还是隐约觉得fft 转化过程 有这种类似的感觉，转化成一个高效计算的，然后转化回来</p>
+<p>不走这一步的话 也能得到 $A^n$的特征值有$\lambda^n$, 通过最开始的特征值定义</p>
+<hr>
+<p>A is Sure to have n indep evectors (and be diagonaligable) if all the $\lambda$ are different (no repeated \lambda’s) 如果A有n个不同的特征值，那么它有n个线性无关特征向量(对角化), 这里是充分不是充要，prove：</p>
+<ul>
+<li>搜了不少内容，很多都在说 两个不同特征值对应的特征向量线性无关<ul>
+<li>两个很好证，因为 第一个对应的 组合 成$\alpha_1$,第二个组合成$\beta_1$,那么有 $\alpha_1 &#x3D; \beta_1$, $\lambda_1\alpha_1 &#x3D; A\alpha_1 &#x3D;A\beta_1&#x3D; \lambda_2 \beta_1$ 矛盾</li>
+<li>但这里我需要的是 要组成$A&#x3D;S\Lambda S^{-1}$,也就是$S$的部分，需要证明的是所有个，而不是其中两个，如果三个特征值对应的三个特征向量是<code>[1;0;0],[1;1;0],[0;1;0]</code>,它们的确两两无关，但是3个是相关的</li>
+<li>一个是归纳法 对于s-1成立 若 $\sum_{i&#x3D;1}^s k_i\alpha_i&#x3D;0$ 有非零解<ul>
+<li>$\times (A-\lambda_s)$ 有$0&#x3D;\sum_{i&#x3D;1}^s k_i(A-\lambda_s)\alpha_i&#x3D;\sum_{i&#x3D;1}^s k_i(\lambda_i-\lambda_s)\alpha_i$</li>
+<li>则有 找到一个s-1有非零解，矛盾</li>
+</ul>
+</li>
+<li>另一个是空间意义的反证法<ul>
+<li>如果 特征向量 和前面的特征向量集合线性相关，那么就是在前面向量的生成空间中，而前面的可以看作生成空间的基（不一定正交）的放缩，容易证明在基的生成空间中，每个基的放缩不同时，对于非平行于基的点的变化一定带有旋转，</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当有重复特征值时</p>
+<ul>
+<li>不满足的例子 <code>[1,1;0 1]</code></li>
+<li>满足的例子 <code>[1,0;0,1]</code></li>
+</ul>
+<hr>
+<p>给定初始向量和地推式$u_0$, $u_{k+1}&#x3D;Au_{k}&#x3D;A^{k+1}u_0$</p>
+<p>把$u_0&#x3D;\sum_{i} c_ix_i$ 拆分成 $A$的特征向量的组合。 (一定可拆分吗？？？？？？？</p>
+<p>那么有$u_{k} &#x3D; A^k (\sum_i c_ix_i)&#x3D; \sum_{i} c_i \lambda_i^k x_i &#x3D; \Lambda^k S C$, 注意 最后的 Lambda,S(特征向量组成的矩阵),C(拆分的系数向量)， 三者的i的顺序要对应一致</p>
+<hr>
+<p>例子 Fibonacci</p>
+<p>$F_{k+2}&#x3D;F_{k+1}+F_k$</p>
+<p>$u_k&#x3D;[F_{k+1};F_k]$</p>
+<p>$A&#x3D;[1 ,1;1 ,0]$</p>
+<p>也就是 经常用到的线性递推转幂次 $\lambda &#x3D;\frac{1\pm \sqrt{5}}{2}$</p>
+<p>$\lambda^2-\lambda-1&#x3D;0$ 和原始递推式非常像，TODO ??? 应该可以延伸吧</p>
+<p>另一方面 $F_{100} \sim c_1 (\frac{1+\sqrt{5}}{2})^{100}$, 较大的特征值描述了区域无限时的增长趋势</p>
+<p>这里 注意到$[1-\lambda,1;1,-\lambda] [\lambda;1]&#x3D; [0;0]$ 所以两个特征向量 $[\lambda_1;1],[\lambda_2;1]$</p>
+<h2 id="23-微分方程-Exp-At"><a href="#23-微分方程-Exp-At" class="headerlink" title="23 微分方程, Exp(At)"></a>23 微分方程, Exp(At)</h2><ul>
+<li>Differential Eqns $\frac{du}{dt} &#x3D; Au$</li>
+<li>Exponential $e^{At}$ of Matrix</li>
+</ul>
+<p>$u(0)&#x3D;[1;0]$</p>
+<p>$\frac{du_1}{dt}&#x3D;-u_1+2u_2$</p>
+<p>$\frac{du_2}{dt}&#x3D;u_1-2u_2$</p>
+<p>$A[-1,2;1,-2]$</p>
+<p>$\lambda &#x3D;0,-3$</p>
+<p>$\lambda_1&#x3D;0, x_1&#x3D;[2;1]$</p>
+<p>$\lambda_2&#x3D;3, x_1&#x3D;[1;-1]$</p>
+<p>solution: $u(t)&#x3D;c_1e^{\lambda_1 t}x_1+c_2e^{\lambda_2 t}x_2$, drop from sky</p>
+<p>check:  $\frac{du}{dt}&#x3D;c_1\lambda_1 e^{\lambda_1 t}x_1+c_2\lambda_2 e^{\lambda_2 t}x_2 &#x3D; \lambda_1 x_1 c_1 e^{\lambda_1 t}x_1+\lambda_2 x_2 c_2e^{\lambda_2 t} &#x3D; A(c_1e^{\lambda_1 t}x_1+c_2e^{\lambda_2 t}x_2 )&#x3D;Au$<br>带入得 $u(t)&#x3D;c_1\cdot 1 [2;1]+c_2e^{-3t}[1;-1]$</p>
+<p>利用$u(0)&#x3D;[2;1]$</p>
+<p>解得$c_1&#x3D;\frac{1}{3},c_2&#x3D;\frac{1}{3}$</p>
+<p>$u(t)&#x3D;\frac{1}{3}[2;1]+\frac{1}{3}e^{-3t}[1;-1]$</p>
+<p>$u(\infty)&#x3D;\frac{1}{3}[2;1]$</p>
+<p>这也能描绘 系统是否趋于稳定性</p>
+<ul>
+<li>如果$\lambda&#x3D;-3+6i$, 而$i$的部分虚数意义是旋转 不影响大小， 实部 &lt; 0</li>
+<li>稳态: $\lambda_1 &#x3D;0$ 其它$\lambda$实部&lt;0</li>
+</ul>
+<p>2阶 稳定性，两个特征值 都 &lt; 0, 那么 trace &lt; 0, det &gt; 0</p>
+<p><code>[a,b;c,d]</code> 即 a+d &lt; 0, ad-bc &gt; 0</p>
+<hr>
+<p>$\frac{du}{dt}&#x3D;Au$</p>
+<p>令$u&#x3D;Sv$, S是 e vectors</p>
+<p>$S\frac{dv}{dt} &#x3D; ASv$， 带入</p>
+<p>$\frac{dv}{dt} &#x3D; S^{-1}ASv&#x3D;\Lambda v$</p>
+<p>$v(t)&#x3D;e^{\Lambda t}v(0)$， 等下解释幂次的矩阵， drop from sky</p>
+<p>$u(t)&#x3D;Se^{\Lambda t}S^{-1}u(0)$</p>
+<p>$e^{At}&#x3D;Se^{\Lambda t}S^{-1}$, 根据下面的展开 也能得到， 这里处理的也是能够对角化的</p>
+<p>解释:</p>
+<p>$e^{At}&#x3D;I+At+\cdots+\frac{(At)^i}{i!}+\cdots$ 泰勒级数展开</p>
+<p>类似的$(I-At)^{-1}&#x3D;I+At+\cdots+(At)^i+\cdots$</p>
+<p>$e^{\Lambda t}&#x3D;$对角矩阵，对角线上$e^{\lambda_it}$</p>
+<hr>
+<p>例子: y’’+by’+ky&#x3D;0</p>
+<p>如何把二阶微分方程 转化成 方程组</p>
+<p>$u &#x3D; [y’;y]$</p>
+<p>$u’&#x3D;[y’’;y’]$</p>
+<p>$\frac{du}{dx} &#x3D; u’ &#x3D; [-b,-k;1,0] u$</p>
+<h2 id="24-特征值应用，马尔可夫矩阵，傅里叶级数投影"><a href="#24-特征值应用，马尔可夫矩阵，傅里叶级数投影" class="headerlink" title="24 特征值应用，马尔可夫矩阵，傅里叶级数投影"></a>24 特征值应用，马尔可夫矩阵，傅里叶级数投影</h2><ul>
+<li>Fouries series projections</li>
+<li>steady state<ul>
+<li>lambda &#x3D; 1</li>
+<li>lambda &#x3D; 0, 得到 $e^{0t}$</li>
+</ul>
+</li>
+<li>Markov matrix</li>
+</ul>
+<p>马尔可夫矩阵(与概率论有关)</p>
+<ul>
+<li>例子<code>A = [.1,.01,.3;.2,.99,.3;.7,0,.4]</code></li>
+<li>所有元素非负</li>
+<li>所有列的和 &#x3D; 1<ul>
+<li>保证了 1是它的一个特征值，因为$A-I$进行行变换 n行相加 是0<ul>
+<li>这里视频似乎还没有使用 行秩 &#x3D; 列秩一类的，用的行线性相关 &#x3D;&gt; det((A-I)^T) &#x3D; 0, 又有 det((A-I)^T)&#x3D;det(A-I)</li>
+</ul>
+</li>
+<li>所有 其它特征值 $|\lambda_i| &lt; 1$, prove???</li>
+<li>$u_k&#x3D;A^ku_0 &#x3D; c_1\lambda_1^kx_1+\cdots$, 这样一个特征1,其它无限迭代趋于0， 是一个 steady state 稳态</li>
+</ul>
+</li>
+<li>用途一般用来表示 多个状态变化迁移（所以总和是1）<ul>
+<li>因为特征值是1,和绝对值小于1的，那么再无穷多步以后有“趋于的稳态”的性质</li>
+</ul>
+</li>
+</ul>
+<p>例子</p>
+<p>$u_{k+1}&#x3D;Au_k$</p>
+<p>$[c;m]_{k+1}&#x3D;[.9,.2;.1,.8][c;m]_k$</p>
+<p>$u_0&#x3D;[c;m]_0&#x3D;[0;1000]$</p>
+<p>特征值特征向量 $1,[2;1],.7,[1;-1]$</p>
+<p>$u_{k}&#x3D;c_1 1^k[2;1]+c_2(.7)^k[-1;1]$</p>
+<p>通过$u_0$可得到$c_1 &#x3D; \frac{1000}{3},c_2&#x3D;\frac{2000}{3}$</p>
+<hr>
+<p>projections with orthonormal basis, $q_1,\cdots,q_n$</p>
+<p>要拆解 $v &#x3D; x_1q_1+\cdots+x_nq_n$</p>
+<p>如何得到$x_1$, 利用q的正交性</p>
+<p>$x_1 &#x3D; q_1^Tv$</p>
+<p>也就是$Qx&#x3D;v$的解是$Q^Tv&#x3D;x&#x3D;Q^{-1}v$</p>
+<hr>
+<p>fourier series 函数 $f(x) &#x3D; a_0+a_1\cos(x)+b_1\sin(x)+a_2\cos(2x)+b_2\sin(2x)+\cdots$</p>
+<p>这里是无穷多个正交的函数，而函数正交的定义类似向量</p>
+<ul>
+<li>向量 内积 $u^Tv&#x3D;\sum_{i} u_iv_i$</li>
+<li>函数$f^Tg &#x3D; \int_0^{2\pi}f(x)g(x)dx$, 因为上面研究的周期是$2\pi$<ul>
+<li>例如 $\int_{0}^{2\pi}\sin(x)\cos(x) dx &#x3D; \frac{1}{2} (\sin(x))^2 |_0^{2\pi} &#x3D; 0$</li>
+</ul>
+</li>
+<li>那么类似上面分解$v$到$q_i$计算系数$x_i$, 同样的想法，这里要做的 乘上对应正交基，$\int_0^{2\pi} f(x)\cos(x) dx$<ul>
+<li>那么注意到 $\int_0^{2\pi}(cos(kx))^2 dx&#x3D;\pi$, 所以上面系数再乘上$\frac{1}{\pi}$, 其中 $\int_{0}^{2\pi} dx &#x3D; 2\pi$ 所以$a_0$的系数是$\frac{1}{2\pi}$</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight m"><table><tr><td class="code"><pre><span class="line">f <span class="built_in">=</span> @(x) (cos(x)).^<span class="number">2</span>;</span><br><span class="line">q <span class="built_in">=</span> integral(f,<span class="number">0</span>,<span class="number">2</span>*pi);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>？？？ 感觉这两章有些公式 drop from sky, 例如 $e^{\lambda t}$, 例如</p>
+<h2 id="25-复习-2"><a href="#25-复习-2" class="headerlink" title="25 复习 2"></a>25 复习 2</h2><p>总览</p>
+<p>标准正交矩阵 $Q&#x3D;[q_1,\cdots,q_n]$, $Q^TQ&#x3D;I$</p>
+<ul>
+<li>Projections-Least Squares, 无解的投影解，以及最小二次<ul>
+<li>投影矩阵的对称性和幂等性</li>
+</ul>
+</li>
+<li>Gram-Schmidt, 一个向量减去它投影到另一个向量的部分来逐渐建立正交系<ul>
+<li>当 另一组 向量内部是两两正交的，那么就可以互不影响的相减了</li>
+<li>$\displaystyle a_{i_{new}}&#x3D;a_i-\sum_{j&lt;i} \frac{a_{j_{new}}^Ta_i}{a_{j_{new}}^Ta_{j_{new}}}a_{j_{new}}$</li>
+</ul>
+</li>
+</ul>
+<p>行列式， 3个基础性质，导出</p>
+<ul>
+<li>延伸性质</li>
+<li>公式</li>
+<li>定义代数余子式<ul>
+<li>导出 逆矩阵公式</li>
+<li>利用代数余子式求一些有规律的大矩阵的递推式</li>
+</ul>
+</li>
+</ul>
+<p>特征值，特征向量</p>
+<ul>
+<li>特征向量</li>
+<li>sum &#x3D; trace, prod &#x3D; det</li>
+<li>对角化<ul>
+<li>幂次</li>
+</ul>
+</li>
+<li>差分&#x2F;递推 方程<ul>
+<li>fib</li>
+<li>周期的递推，在特征值视角上 也是 复平面的单位圆</li>
+<li>微分方程</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例题：</p>
+<p><code>a = [2;1;2]</code>, 任意向量到a的投影矩阵P $&#x3D;\frac{aa^T}{a^Ta}$, 空间是$A(A^TA)^{-1}A^T$</p>
+<p> $P &#x3D; 1&#x2F;9 [4,2,4;2,1,2;4,2,4]$, </p>
+<p> 特征值: 维度是1,所以现有有两个是0, 另一个 &#x3D; $trace - 0-0&#x3D;1$</p>
+<p>特征值 对应的特征向量是a,因为$Pa&#x3D;a$</p>
+<p>$u_{k+1}&#x3D;Pu_k$, $u_0&#x3D;[9;9;0]$</p>
+<p>$u_{k+1}&#x3D;u_1&#x3D;Pu_0&#x3D;[6;3;6]$, 幂等性质</p>
+<p>$u_0&#x3D;c_1x_1+c_2x_2+c_3x_3$的展开</p>
+<p>$u_k&#x3D;A^ku_0&#x3D;c_1\lambda_1^kx_1+c_2\lambda_2^kx_2+c_3\lambda_3^ku_3$</p>
+<hr>
+<p>例题： 拟合最好y&#x3D;kx直线 (1,4),(2,5),(3,8)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1       4</span><br><span class="line">2 [k] = 5</span><br><span class="line">3       9   </span><br></pre></td></tr></table></figure>
+
+<p>$a^Ta \hat{k}&#x3D;a^Tb$</p>
+<p>$14\hat{k}&#x3D;38$</p>
+<p>$\hat{k} &#x3D; \frac{38}{14}$</p>
+<p>最小二乘法，看作 把 目标向量 投影到 列向量空间的结果是“最好”</p>
+<hr>
+<p>4x4 矩阵 $\lambda_{1,2,3,4}$</p>
+<ul>
+<li>$\forall \lambda_i \neq 0$&lt;&#x3D;&gt; 可逆</li>
+<li>$det(A^{-1}) &#x3D; \prod \frac{1}{\lambda_i}$<ul>
+<li>$x&#x3D;Ix&#x3D;A^{-1}Ax&#x3D;A^{-1}\lambda x$<ul>
+<li>$A^{-1}x&#x3D;\frac{1}{\lambda}x$, 总感觉之前和现在一直没证明 有重复存在时的一些对应关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$trace(A+I) &#x3D; \sum_i (\lambda_i+1)$</li>
+</ul>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A4 = [</span><br><span class="line">0,1,0,0;</span><br><span class="line">1,0,2,0;</span><br><span class="line">0,2,0,3;</span><br><span class="line">0,0,3,0</span><br><span class="line">]</span><br><span class="line">det A4=9</span><br></pre></td></tr></table></figure>
+
+<p>P&#x3D;? $A(A^TA)^{-1}A^T$ 可逆矩阵的投影矩阵都是$I$,因为占满了$R^n$</p>
+<p>哈哈 “not difficult”</p>
+<h2 id="26-对称矩阵，-正定性"><a href="#26-对称矩阵，-正定性" class="headerlink" title="26 对称矩阵， 正定性"></a>26 对称矩阵， 正定性</h2><ul>
+<li>symmetric matrices 对称矩阵</li>
+<li>positive definite matrices</li>
+<li>特征值，和特征向量有何特殊之处</li>
+</ul>
+<p>$A&#x3D;A^T$ 性质</p>
+<ul>
+<li>特征值 是 实数 （下面证明）<ul>
+<li>稍后证明</li>
+</ul>
+</li>
+<li>特征向量， <strong>是</strong> 垂直的（perpendicular(老师写墙上了黑板不够长)<ul>
+<li>证明<ul>
+<li>$x_1^TAx_2&#x3D;x_1^T\lambda_2x_2&#x3D;\lambda_2x_1^Tx_2$</li>
+<li>$x_1^TAx_2&#x3D;x_2^TA^Tx_1&#x3D;x_2^TAx_1 &#x3D; x_2^T\lambda_1 x_1$</li>
+<li>那么有 $\lambda_1 x_1^Tx_2&#x3D;\lambda_2 x_2^Tx_1$, 要么正交，要么 相等<ul>
+<li>这里还说明 $A$和$A^T$ 的不同特征值的特征向量 正交</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>来自复习3 特征向量正交+特征值实数 &#x3D;&gt; 是对称矩阵 prove ???？？？</p>
+<p>通常$A&#x3D;S\Lambda S^{-1}$</p>
+<p>那么 对于 对称矩阵，根据上面垂直的性质, $A&#x3D;Q\Lambda Q^{-1}&#x3D;Q\Lambda Q^T$, spectral theorem , 力学上 主轴定理</p>
+<hr>
+<p>why real eigenvalues? 为什么 对称矩阵的特征值一定是实数</p>
+<p>$Ax&#x3D;\lambda x$ 对两边取共轭，有$\bar{A}\bar{x}&#x3D;\bar{\lambda}\bar{x}$</p>
+<p>这里$A\bar{x}&#x3D;\bar{\lambda}\bar{x}$说明实矩阵 的特征值共轭是成对出现的</p>
+<p>转置 $\bar{x}^TA&#x3D;\bar{\lambda} \bar{x}^T$</p>
+<p>$\bar{x}^TAx&#x3D;\bar{\lambda} \bar{x}^Tx$</p>
+<p>$\bar{x}^T \lambda x&#x3D;\bar{\lambda} \bar{x}^Tx$, 注意到 向量点积是数, 那么取决于$\bar{x}^Tx$的值非0, 只要$x$非全零 显然</p>
+<ul>
+<li>同时这里知道$\bar{x}^Tx$表示 有复数的向量的长度</li>
+<li>$(\lambda-\bar{\lambda})\bar{x}^T x&#x3D;0$<ul>
+<li>得证</li>
+</ul>
+</li>
+<li>根据同样的过程也知道如果是复矩阵，只要$A&#x3D;\bar{A}^T$ 有一样的性质</li>
+</ul>
+<p>$A&#x3D;Q\Lambda Q^T$展开看</p>
+<p>$&#x3D;\sum \lambda_i q_i q_i^T$, 注意每个后面是 投影矩阵，所以 实对称矩阵是 投影矩阵的组合</p>
+<hr>
+<p>正主元(???)的个数 &#x3D; 正 lambda的个数 sign of pivot same as sign’s of lambda’s ????</p>
+<hr>
+<p>positive definite symmetric matrix 正定对称矩阵</p>
+<ul>
+<li>所有 特征值 是正的</li>
+<li>所有 pivots 是 positive<ul>
+<li>$\det &#x3D; \prod pivots &gt; 0$</li>
+</ul>
+</li>
+<li>all subdeterminants are positive, 所有 余子式非负</li>
+<li>上面 这三条 是相互可推的？prove？？？？？？</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">5 2 </span><br><span class="line">2 3</span><br><span class="line">主元, 5, 11/5</span><br><span class="line">特征值, 4\pm sqrt(5)</span><br></pre></td></tr></table></figure>
+
+<h2 id="27-复数矩阵，FFT-傅里叶矩阵"><a href="#27-复数矩阵，FFT-傅里叶矩阵" class="headerlink" title="27 复数矩阵，FFT 傅里叶矩阵"></a>27 复数矩阵，FFT 傅里叶矩阵</h2><p>相当于一个插入的分支章节</p>
+<ul>
+<li>complex vectors matrices</li>
+<li>inner products</li>
+<li>DISCRETE Fourier FAST Transform<ul>
+<li>Fourier matrix F_n</li>
+<li>算法竞赛里 现在NTT更多（数域变为mod 998244353)</li>
+</ul>
+</li>
+</ul>
+<p>$z&#x3D;[z_1;z_2,\cdots;z_n] \in C^n$ 复数域里的向量 如何算长度</p>
+<p>上面有提到$z^Tz$ 不再好 not good</p>
+<p>而是 $\bar{z}^Tz$</p>
+<p>Hermition写法$z^Hz$ 表示 <code>共轭</code>+<code>转置</code>, inner product</p>
+<p>symmetric $A^T&#x3D;A$ no good if A complex</p>
+<p>$\bar{A}^T&#x3D;A$或者$A^H&#x3D;A$ 例如 $[2,3+i;3-i,5]$ </p>
+<p>同时 重新 定义 正交, 也重新定义 $Q$</p>
+<ul>
+<li>$q_i^Hq_j&#x3D;0,i\neq j$</li>
+<li>$q_i^Hq_j&#x3D;1,i &#x3D;j$</li>
+</ul>
+<p>unitary matrix酉矩阵, 幺正举证，厄米(Hermitian)共轭， 其中unitary是归一或单位的意思</p>
+<ul>
+<li>“酉”是Unitary的音译，据说是华罗庚的建议_。中英文都有“一”和“元”的意思。同样，后来对“Simplectic”的翻译也遵循了同样的做法，音译为“辛”</li>
+</ul>
+<hr>
+<p>傅里叶矩阵</p>
+<p>It’s just math starts counting with one, and electrical engineers start counting at zero. Actually they’re probably right So anyway, we’ll give them – humor them</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0-index Fn = []</span><br><span class="line">1 1       1          ... 1</span><br><span class="line">1 w       w2         ... w^&#123;(n-1)&#125;</span><br><span class="line">1 w^2     w4         </span><br><span class="line">...</span><br><span class="line">1 w^&#123;n-1&#125; w^&#123;2(n-1)&#125; ... w^&#123;(n-1)(n-1)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>$(F_n)_{ij}&#x3D;w^{ij}$</p>
+<p>want $w^n&#x3D;1$, so $w&#x3D;e^{\frac{i2\pi}{n}}$</p>
+<p>对于 n &#x3D; 4, $w&#x3D;e^{\frac{2\pi i}{4}}&#x3D;i$</p>
+<p>$F_4&#x3D;$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1  1  1  1      1  1  1  1</span><br><span class="line">1  i  i2 i3  =  1  i -1 -i</span><br><span class="line">1  i2 i4 i6     1 -i  1 -1</span><br><span class="line">1  i3 i6 i9     1 -i -1  i</span><br></pre></td></tr></table></figure>
+
+<p>这个矩阵 各列正交，因此 $Q_4 &#x3D;\frac{1}{\sqrt{4}} F_4, Q_4^HQ_4&#x3D;I$</p>
+<p>$F_4^{-1}&#x3D;\frac{1}{\sqrt{4}} Q_4^{H}&#x3D;\frac{1}{\sqrt{4}}Q_4^{-1}&#x3D;\frac{1}{\sqrt{4}}Q_4^{T}&#x3D;\frac{1}{\sqrt{4}}Q_4&#x3D;\frac{1}{4}F_4$, 所以逆举运算和正运算核心一样</p>
+<p>这只是离散的傅里叶变换</p>
+<p>那么问题是如何快速，也就是降低计算量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[F8] = [I  D][F4  O][P  ]</span><br><span class="line">       [I -D][O  F4][   ]</span><br><span class="line"></span><br><span class="line">P 的形状: (奇偶穿插矩阵)</span><br><span class="line"></span><br><span class="line">1</span><br><span class="line">  1</span><br><span class="line">    1</span><br><span class="line">      1</span><br><span class="line"> 1      </span><br><span class="line">   1</span><br><span class="line">     1</span><br><span class="line">       1</span><br><span class="line">D 的形状</span><br><span class="line">1</span><br><span class="line">  w</span><br><span class="line">    w2</span><br><span class="line">       w3</span><br><span class="line">         ...</span><br><span class="line">例子</span><br><span class="line">1  1  1  1  [1    1   ][1 1    ][1    ]</span><br><span class="line">1  i -1 -i =[  1     i][1 i    ][   1 ]</span><br><span class="line">1 -1  1 -1  [1   -1   ][    1 1][ 1   ]</span><br><span class="line">1 -i -1  i  [  1    -i][    1 i][    1]</span><br></pre></td></tr></table></figure>
+
+<p>matlab</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I=[1,0;0,1];</span><br><span class="line"></span><br><span class="line">D=[1,0;0,i];</span><br><span class="line"></span><br><span class="line">O=[0,0;0,0];</span><br><span class="line"></span><br><span class="line">F2=[1,1;1,i];</span><br><span class="line"></span><br><span class="line">P=[1,0,0,0;0,0,1,0;0,1,0,0;0,0,0,1];</span><br><span class="line"></span><br><span class="line">F4=[I,D;I,-D]*[F2,O;O,F2]*P;</span><br></pre></td></tr></table></figure>
+
+<p>伪代码+复杂度</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">f_8(x): F_8 * x</span><br><span class="line">	最右侧矩阵</span><br><span class="line">	px = p_8 * x, n次计算（换奇偶</span><br><span class="line">	px_0,px_1 = px, 分成前一半和后一半</span><br><span class="line">	中间矩阵</span><br><span class="line">	tmp_x_0 = f_4(px_0)</span><br><span class="line">	tmp_x_1 = f_4(px_1)</span><br><span class="line">	最左矩阵</span><br><span class="line">	res_x_0 = tmp_x_0 + D * tmp_x_1, n次计算</span><br><span class="line">	res_x_1 = tmp_x_0 - D * tmp_x_1, n次计算</span><br><span class="line">	return concat(res_x_0,res_x_1)</span><br><span class="line"></span><br><span class="line">f_n(x) 的运算量 = 3n + 2*f_&#123;n/2&#125;(x) 所以总运算量是n log n</span><br></pre></td></tr></table></figure>
+
+<p>算法竞赛中，因为浮点数准确问题，采用了NTT,其核心原理就是</p>
+<ul>
+<li>fft的数域是复数域，用的F_n中的w 是满足 $w^n&#x3D;1,w^{&lt;n} \neq 1$的也就是$e^{\frac{i2\pi}{n}}$</li>
+<li>NTT的数域是mod p(p是质数，最常见的是$998244353$ 因为p-1含有p原根的较高次幂的因数),用的F_n中的w也是满足 $w^n\equiv 1 \pmod{p},w^{&lt; n}\equiv 1 \pmod{p}$ 所以两个是“一致逻辑”的，而NTT全是整数运算，不用担心精度，作为算法正确性校验更友好</li>
+</ul>
+<h2 id="28-正定矩阵"><a href="#28-正定矩阵" class="headerlink" title="28 正定矩阵"></a>28 正定矩阵</h2><ul>
+<li><p>正定 首先是对称矩阵 $A&#x3D;Q\Lambda Q^T$</p>
+</li>
+<li><p>Positive Definite matrix(Tests) 如何判断正定矩阵</p>
+</li>
+<li><p>Tests for Minumum (x^TAx &gt;0) Ellipsoids in $R^n$， 找极小值</p>
+</li>
+</ul>
+<p>why什么对正定性感兴趣，椭圆&#x2F;双曲线</p>
+<p>从2x2矩阵开始<code>[a,b;b,c]</code></p>
+<p>判定方式</p>
+<ul>
+<li>特征值均正 $\lambda_1 &gt;0, \lambda_2 &gt;0$, 有等于零 则 是semi半正定</li>
+<li>从左上角的子det均正 $a &gt;0,ac-b^2&gt;0$ </li>
+<li>rref以后的主元为正，pivots $a &gt; 0, \frac{ac-b^2}{a} &gt; 0$</li>
+<li>$x^TAx &gt; 0$</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2 6</span><br><span class="line">6 (那么这里要 大于 6^2/2 = 18)</span><br></pre></td></tr></table></figure>
+
+<p>如果18,那么 半正定 pos semidefinite,</p>
+<ul>
+<li>有特征值0</li>
+<li>only 1 pivots</li>
+<li>$x^TAx&#x3D;2x_1^2+12x_1x_2+18x_2^2$</li>
+</ul>
+<p>matlab </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">f=@(x,y) 2*x.^2+12*x.*y+1*y.^2;</span><br><span class="line"></span><br><span class="line">fsurf(f,[-10,10,-10,10]);</span><br></pre></td></tr></table></figure>
+
+<p>非正定：二维向量$x&#x3D;[x_1;x_2]$那么$y(x_1,x_2)$马鞍面：某个点 一个方向的极大值，另一个方向的极小值</p>
+<p>正定 $x^TAx$除了$0,0$处处为正</p>
+<ul>
+<li>微积分： 最小值 二阶导数为正</li>
+<li>18.06： matrix 是 pos def(正定)</li>
+</ul>
+<p>$2x^2+12xy+24y^2$ 在 &gt;0的横截面 还是椭圆</p>
+<p>$&#x3D;2(x+3y)^2+4y^2&#x3D;1$是个椭圆， 这里(2,4)是主元，而3是消元时的倍数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[2 6]</span><br><span class="line">[6 24]</span><br><span class="line"></span><br><span class="line">= LU</span><br><span class="line">= [1  ][2 6]</span><br><span class="line">  [3 1][  4]</span><br><span class="line"></span><br><span class="line">2阶导矩阵 一定程度上是，这里还有额外的幂次2</span><br><span class="line">[fxx  fxy]</span><br><span class="line">[fyx  fyy]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>例子3x3</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 2 -1  0</span><br><span class="line">-1  2 -1</span><br><span class="line"> 0 -1  2</span><br><span class="line"></span><br><span class="line">dets: A_1 = 2, A_2 = 3, A_3 = 4</span><br><span class="line"></span><br><span class="line">pivots 2,3/2,4/3 (因为 prod pivots = det, 所以pivot_i = det_i/det_&#123;i-1&#125;)</span><br><span class="line"></span><br><span class="line">eigenvalues: 2-sqrt(2),2,2+sqrt(2)</span><br></pre></td></tr></table></figure>
+
+<p>关联函数 $x^TAx &#x3D; 2x_1^2+2x_2^2+2x_3^2-2x_1x_2-2x_2x_3 &gt; 0$</p>
+<p>在大于 0 的位置切割，得到椭圆体（3个主要方向（3个特征值不同））</p>
+<h2 id="29-相似矩阵，Jordan-form-若尔当形"><a href="#29-相似矩阵，Jordan-form-若尔当形" class="headerlink" title="29 相似矩阵，Jordan form 若尔当形"></a>29 相似矩阵，Jordan form 若尔当形</h2><ul>
+<li>$A^TA$ is positive definite</li>
+<li>similar matrices A,B， $B&#x3D;M^{-1}AM$, Jordan form</li>
+</ul>
+<p>正定矩阵:</p>
+<ul>
+<li>与最小二乘法有关</li>
+<li>$x^TAx &gt;0,x \neq 0$</li>
+</ul>
+<p>A是正定矩阵,A的逆是什么？</p>
+<ul>
+<li>特征值 &#x3D; 1&#x2F;原矩阵的特征值，所以$A^{-1}$也是正定的</li>
+</ul>
+<p>A,B是 正定的</p>
+<ul>
+<li>A+B: $x^T(A+B)x &gt; 0$ 所以也是正定的</li>
+</ul>
+<p>A是长方形 $A^TA$ 是正定的吗？</p>
+<ul>
+<li>$x^TA^TAx &#x3D; (Ax)^T(Ax)$ 非负，半正定的<ul>
+<li>如果 A的列线性无关，则是正定的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>A,B相似，意味着,存在$M$</p>
+<p>$B&#x3D;M^{-1}AM$</p>
+<ul>
+<li>性质： 相似矩阵有相同的特征值，因为她们都能变化为 特征值的对角矩阵, 但这个性质不充分，见下</li>
+<li></li>
+<li>$Ax&#x3D;\lambda x$<ul>
+<li>$(M^{-1}AM)(M^{-1}x)&#x3D;\lambda(M^{-1}x)$</li>
+</ul>
+</li>
+</ul>
+<p>核心依然是 $S^{-1}AS&#x3D;\Lambda$, $S$是特征向量矩阵</p>
+<p>$A&#x3D;[2,1;1,2], B&#x3D;[-2,-15,1,6]$</p>
+<p>它们有相同“特征值”</p>
+<hr>
+<p>bad case, 如果有重复的特征值，可能无法对角化</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4 0</span><br><span class="line">0 4</span><br><span class="line">和</span><br><span class="line">4 1</span><br><span class="line">0 4</span><br><span class="line">不属于同一类 （不相似）</span><br></pre></td></tr></table></figure>
+
+<p>注意到第一个 $M^{-1}AM&#x3D;A$ 相似的 只有它自己</p>
+<p>第二个是，jordan form 最接近标准型 但是又不相似于标准型</p>
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 5  1</span><br><span class="line">-1  3</span><br><span class="line">相似于</span><br><span class="line">4  0</span><br><span class="line">17 4</span><br></pre></td></tr></table></figure>
+
+<p>Jordan block(每个block有一个 evector)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0100</span><br><span class="line">0010</span><br><span class="line">0000</span><br><span class="line">0000</span><br><span class="line">和</span><br><span class="line">0100</span><br><span class="line">0000</span><br><span class="line">0001</span><br><span class="line">0000</span><br><span class="line">不相似</span><br></pre></td></tr></table></figure>
+
+<p>Jordan定理： 每个方阵A 相似于 Jordan matrix J</p>
+<ul>
+<li>也就是解决 特征值重复的问题</li>
+<li>现在 主要关注还是上面的可分解型，没有关注这种形式</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">J1</span><br><span class="line">   J2</span><br><span class="line">      J3</span><br><span class="line">         ...</span><br><span class="line">J的数量 = evector的数量</span><br></pre></td></tr></table></figure>
+
+<h2 id="30-奇异值分解"><a href="#30-奇异值分解" class="headerlink" title="30 奇异值分解"></a>30 奇异值分解</h2><ul>
+<li>Singular Value Decomposition (SVD)</li>
+<li>$A&#x3D;U\Sigma V^T&#x3D;U\Sigma V^{-1}$, 两边是 正交矩阵，中间是对角矩阵<ul>
+<li>A&#x3D;(orthog)(diag)(orthog) every A</li>
+<li>对角一定非负（视频33）<ul>
+<li>下面计算过程表示了Lambda一定是正的，这里开根 不能取负号吗？？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>回顾之前</p>
+<ul>
+<li>对于一般可逆矩阵有$A&#x3D;S\Lambda S^{-1}$ 这个的缺点就是$S$的列不是正交的，</li>
+<li>对于实对称矩阵（包含 正交矩阵），有$A&#x3D;Q\Lambda Q^T$</li>
+</ul>
+<p>希望 $AV&#x3D;U\Sigma$</p>
+<ul>
+<li>A乘上 来自行空间的基列向量V, &#x3D; 来自列空间的基列向量U * 对角乘数因子Sigma</li>
+<li>因此 $Av_i &#x3D; u_i\sigma_i$</li>
+<li>目标： to find an orthogonal basis in the orthonormal, even basis in the row space and an orthonormal basis in the column space</li>
+</ul>
+<p>例子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> 4 4</span><br><span class="line">-3 3</span><br><span class="line">找 v1,v2 in row space R^2， v1,v2 标准+正交</span><br><span class="line">找 u1,u2 in col space R^2， u1,u2 标准+正交</span><br><span class="line">以及 sigma_1,sigma_2 &gt; 0</span><br></pre></td></tr></table></figure>
+
+
+<p>$A&#x3D;U\Sigma V^{-1}&#x3D;U\Sigma V^{T}$</p>
+<p>$A^TA&#x3D;V\Sigma^TU^TU\Sigma V^{T}&#x3D;V\Sigma^2V^T$</p>
+<p>$AA^T&#x3D;U\Sigma V^{T}V\Sigma^TU^T&#x3D;U\Sigma^2U^T$</p>
+<ul>
+<li>它们 特征值相同, AB和BA特征值相同</li>
+</ul>
+<p>因此 $V,U$分别为$A^TA,AA^T$的 正交化的特征向量组成的矩阵, 注意两边的Sigma中的特征值顺序要一致, 另外的 注意上面的 U,V的正负号 因为平方的原因 没有影响， 所以需要“指定”夷夏政府 再回到 $Av_i&#x3D;u_i \sigma_i$ 确定符号</p>
+<p>$\Sigma$为 $A^TA,AA^T$的特征值开根</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">A=[<span class="number">4</span>,<span class="number">4</span>;<span class="number">-3</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">ATA=A&#x27;*A;</span><br><span class="line"></span><br><span class="line">[V,D1]=eig(ATA); <span class="comment">% D1是特征值对角矩阵, V是norm 特征向量矩阵</span></span><br><span class="line"></span><br><span class="line">AAT=A*A&#x27;;</span><br><span class="line"></span><br><span class="line">[U,D2]=eig(AAT); <span class="comment">% D2 == D1</span></span><br><span class="line"></span><br><span class="line">S=sqrtm(D2); <span class="comment">% Sigma = sqrt(</span></span><br><span class="line"></span><br><span class="line">U*S*V&#x27;; <span class="comment">% = A</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>例子2, rank&#x3D;1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A=</span><br><span class="line">4 3</span><br><span class="line">8 6</span><br></pre></td></tr></table></figure>
+
+<p>row space: k[4;3]</p>
+<p>col space: [4;8]</p>
+<p><code>v_1 = 1/5[4;3]= [.8;.6]</code></p>
+<p><code>u_1 = [1/sqrt(5);2/sqrt(5)]</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4 3          [1  2][sqrt(125)  ][.8  .6]</span><br><span class="line">8 6 =(1/sqrt5[2 -1][          0][.6 -.8]</span><br><span class="line">A     U            Sigma         V^T</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="31-线性变换-及-对应矩阵"><a href="#31-线性变换-及-对应矩阵" class="headerlink" title="31 线性变换 及 对应矩阵"></a>31 线性变换 及 对应矩阵</h2><p>Linear transformations</p>
+<ul>
+<li>without coordinates: no matrix</li>
+<li>with coordinates -&gt; matrix</li>
+</ul>
+<p>线性变换</p>
+<ul>
+<li>T(v+w)&#x3D;T(v)+T(w)</li>
+<li>T(cv) &#x3D; cT(v)</li>
+</ul>
+<p>例1: projection 投影</p>
+<p>T: $R^2\to R^2$</p>
+<p>例2: shift whole plane, 平移整个面点。不是线性变换</p>
+<p>例3: T(v)&#x3D;||v||^2不是线性变换</p>
+<p>例4: 旋转45度,是线性变换</p>
+<p>例5: T(v)&#x3D;Av,是线性变换</p>
+<p>例6: $T(v)&#x3D;A_{2\times 3}v$ 这里$T:R^3\to R^2$,是线性变换,</p>
+<p>那么对于一个线性变换T的“关键要素有什么”</p>
+<ul>
+<li>其实是 对输入进行基的拆解，然后T只关心对 基的变换，变换后再组合（而这可以拆分与组合 正式因为T是线性变换）</li>
+<li>那么 coordinates是 所选定基的拆分结果而已</li>
+</ul>
+<p>那么目标，对于给定的 $T:R^{n}\to R^m$,希望找一个$A_{m\times n}$来描述</p>
+<p>所以 A的第i列表示输入的第i个基 变为的新的基的 坐标</p>
+<hr>
+<p>例子 求导， $T&#x3D;\frac{d}{dx}$</p>
+<p>输入 $c_0+c_1x+c_2x^3$, 基$1,x,x^2$</p>
+<p>输出 $c_1+2c_2x$, 基$1,x$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  c0</span><br><span class="line">A c1 =   c1</span><br><span class="line">  c2    2c2 </span><br><span class="line"></span><br><span class="line">A= 0 1 0</span><br><span class="line">   0 0 2</span><br></pre></td></tr></table></figure>
+
+<h2 id="32-基变换-图像压缩"><a href="#32-基变换-图像压缩" class="headerlink" title="32  基变换 图像压缩"></a>32  基变换 图像压缩</h2><p>应用</p>
+<ul>
+<li>change of basis</li>
+<li>compression of Images</li>
+<li>Transformation &lt;-&gt; matrix</li>
+</ul>
+<p>lossy compression: 有损压缩</p>
+<p>图像存储 &#x3D; 像素个数 * 颜色 大小的长向量</p>
+<p>JPEG &#x3D; Joint Photograpihc Experts Group</p>
+<p>标准基 &#x3D; $I_n \in R^n$的列向量</p>
+<p>better basis</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1  1      1 </span><br><span class="line">1  1     -1</span><br><span class="line">1 -1      1</span><br><span class="line">1 -1 ... -1</span><br></pre></td></tr></table></figure>
+
+<p>JPEG用了 Fourier basis,  $w&#x3D;e^{\frac{i2\pi}{n}}$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">signal x</span><br><span class="line">    无损 change basis</span><br><span class="line">coeffs c  &lt;-  线性代数能帮助 系数的计算</span><br><span class="line">    lossy compression</span><br><span class="line">    丢掉肉眼看不见的帧</span><br><span class="line">hat&#123;c&#125;</span><br><span class="line">    复原</span><br><span class="line">hat&#123;x&#125; = sum hat&#123;ci&#125; vi, 不再是64个基向量</span><br></pre></td></tr></table></figure>
+
+<p>视频， sequence images, 期望上 连续的图像高度相关，</p>
+<hr>
+<p>傅里叶基的竞争对手， 小波基 wavelets, FWT, 全是0,-1， 正交的， 也和 傅里叶那样可以快速计算</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1  1  1  0</span><br><span class="line">1  1 -1  0</span><br><span class="line">1 -1  0  1</span><br><span class="line">1 -1  0 -1</span><br></pre></td></tr></table></figure>
+
+<p>change of basis</p>
+<p>标准基中坐标x&#x3D; P新基 c新基中的坐标</p>
+<p>$c&#x3D;P^{-1}x$</p>
+<p>然后$P^{-1}$的具体计算要足够快，比如 之前学过FFT的 快速计算 方法</p>
+<p>总结：不论是 fft还是fwt</p>
+<ul>
+<li>能扔掉维度 对视觉影响小</li>
+<li>快速运算</li>
+</ul>
+<hr>
+<p>对于一个变换， 如果用 （A和基v…）能表示，用(B和基础w…)能表示，</p>
+<p>那么 A和B相似，坐标+相似 乘上M得到另一个里的坐标，同一个东西，那么一定存在可逆$M$$ ????</p>
+<hr>
+<p>如果 我们的选的 正好是 eigenvector basis, 特征向量基</p>
+<p>那么 就会发现 原来的向量就是 各个角度的 特征值倍数的放缩</p>
+<p>再换句话说 ，这是 A就是 $\Lambda$</p>
+<h2 id="33-复习3"><a href="#33-复习3" class="headerlink" title="33 复习3"></a>33 复习3</h2><p>大纲</p>
+<ul>
+<li>lambda ,x 特征值和特征向量<ul>
+<li>解 det lambda-AI</li>
+<li>例如 投影矩阵因为幂等性，特征值 只能是0或1</li>
+<li>用du&#x2F;dt&#x3D;Au解微分方程, e^{At}</li>
+<li>A&#x3D;A^T 对称矩阵<ul>
+<li>特征值 实数</li>
+<li>总是存在足够的特征向量 prove?????</li>
+<li>特征向量可以构成正交矩阵<ul>
+<li>一定可以对角化 成 A&#x3D;Q Lambda Q^T, Q是norm特征向量列</li>
+</ul>
+</li>
+<li>正定矩阵<ul>
+<li>多种判别法<ul>
+<li>所有 特征值正</li>
+<li>rref主元全正</li>
+<li>$x^TAx &gt;0$</li>
+<li>最常用： 主(左上角开始的i * i)子行列式 全正</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>相似矩阵<ul>
+<li>特征值一致（必要不充分），且可以转化</li>
+<li>$A^n 相似于 B^n$</li>
+<li>意义 通过不同的基表示同样的东西</li>
+</ul>
+</li>
+<li>SVD: $A&#x3D;U Sigma V^T$ 对于非对称矩阵的 正交矩阵 对角矩阵 正交矩阵 的分解</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>题目1: $du&#x2F;dt&#x3D;Au&#x3D;[0,-1,0;1,0,-1;0,1,0]u$</p>
+<p>$u(t)&#x3D;c_1e^{\lambda_1t}x_1+c_2e^{\lambda_2t}x_2+c_3e^{\lambda_3t}x_3$</p>
+<p>找特征值: $0, \pm \sqrt{2}i$</p>
+<p>$u(t)&#x3D;c_1x_1+c_2e^{\sqrt{2}it}x_2+c_3e^{-\sqrt{2}it}x_3$</p>
+<hr>
+<p>orthogonal evectors什么时候 特征向量正交</p>
+<p>如果 满足$AA^T&#x3D;A^TA$，则特征向量正交</p>
+<ul>
+<li>例如 $A^T&#x3D;A$，A&#x3D;Q, $A^T&#x3D;-A$</li>
+</ul>
+<hr>
+<p>解的形状 $u(t)&#x3D;e^{At}u(0)$</p>
+<p>if $A&#x3D;S \Lambda S^{-1}$</p>
+<ul>
+<li>$e^{At}&#x3D;Se^{\Lambda t}S^{-1}$, 中间 看成 $e^{\lambda_i t}$的对角矩阵</li>
+</ul>
+<hr>
+<p>A 对称 且 正交矩阵</p>
+<ul>
+<li>特征值？<ul>
+<li>$|\lambda|&#x3D;1$<ul>
+<li>$Qx&#x3D;\lambda x$两边同时求长度$a^Ta$ 可得</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>证明 1&#x2F;2 (A+I) 是一个投影矩阵<ul>
+<li>特征值 只有0,1</li>
+<li>对称:显然</li>
+<li>幂等: 1&#x2F;4(A^2+2A+I) &#x3D; 1&#x2F;2(A+I)? <ul>
+<li>因为$A&#x3D;A^T&#x3D;A^{-1}$ 得证</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="34-左逆，右逆，伪逆"><a href="#34-左逆，右逆，伪逆" class="headerlink" title="34 左逆，右逆，伪逆"></a>34 左逆，右逆，伪逆</h2><ul>
+<li>Left-inverses</li>
+<li>Right-inverses</li>
+<li>Pseudo-inverses</li>
+</ul>
+<p>2-sided inverse</p>
+<p>$AA^{-1}&#x3D;I&#x3D;A^{-1}A$</p>
+<ul>
+<li>当 $r&#x3D;m&#x3D;n$时 有 这个完美的逆矩阵</li>
+</ul>
+<p>列向量线性无关，0&#x2F;1个解，</p>
+<p>$(A^TA)^{-1}A^TA&#x3D;I$</p>
+<p>$A_{\mathrm{left}}^{-1} &#x3D; (A^TA)^{-1}A^T$ 称作 $A$的左逆矩阵，A可以不是方阵</p>
+<p>类似的 ，行向量线性无关</p>
+<p>$AA^T(AA^T)^{-1}&#x3D;I$</p>
+<p>$A_{\mathrm{right}}^{-1}&#x3D;A^T(AA^T)^{-1}$</p>
+<p>但是 $AA_{\mathrm{left}^{-1}} &#x3D;A(A^TA)^{-1}A^T$ 是 投影矩阵！！ 向列向量投影</p>
+<p>$A_{\mathrm{right}}^{-1} A$是 向行向量空间的投影矩阵</p>
+<p>所以对于可逆矩阵 $Ax$可以看成把一个行空间中的 向量x 投射到列空间中</p>
+<ul>
+<li>左逆的意思是(列线性无关时） 列空间向量到行空间（更大），再到列空间不变</li>
+<li>右逆的意思是(行线性无关时） 行空间向量到列空间（更大），再到行空间不变</li>
+</ul>
+<hr>
+<p>所以理解Ax实际是行空间 到列空间一一对应的转化，只是 不属于行空间的，例如nullspace, 属于大$R^n$的 也会 被映射到列空间罢了</p>
+<ul>
+<li>也就是，只看定义域（行空间）和值域（列空间））那么A就是一一映射</li>
+<li>而如果定义域$R^n$,值域$R^m$ 那么就不是一一映射了</li>
+<li>而这个视角看，那么在缩小定义域和值域的时候，那么映射逆就是 一个很优雅的逆</li>
+<li>从而 这样去看 转置的意义就哇哦了</li>
+</ul>
+<p>既然都是rank(row)&#x3D;rank(col) 那么有期望 是 row space和col space 中向量一一对应</p>
+<ul>
+<li>x,y 在行空间中，且不同，那么 列空间中$Ax\neq Ay$<ul>
+<li>理解</li>
+<li>如果 Ax &#x3D; Ay, 有 A(x-y)&#x3D;0, 说明x,y在nullspace不在行空间，说明 了 不同行空间向量映射到不同列空间向量</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>find the pseudoinverse $A^{+}$</p>
+<p>然而是从SVD思考</p>
+<p>$A&#x3D;U\Sigma V^T$</p>
+<p>$A^{+}&#x3D;V\Sigma^{+}U^{T}$ ,其中  所有$\sigma_i$变成$1&#x2F;\sigma_i$</p>
+<p>$\Sigma \Sigma^{+}$  是个对角矩阵，11110000</p>
+<h2 id="35-期末复习"><a href="#35-期末复习" class="headerlink" title="35 期末复习"></a>35 期末复习</h2><p>举例 有正交向量组，但是非实对称的矩阵</p>
+<ul>
+<li>skew-symmetric 反对称: <code>[0,-1;1,0]</code><ul>
+<li>一般性吗?<ul>
+<li>同样的方法能得到 当 $\lambda_1 + \lambda_2\neq 0$时特征向量是正交的</li>
+<li>那么根据 $x^2-9&#x3D;x^2-25+16$<ul>
+<li>容易构造矩阵$[5,4;-4,-5]$ 特征值是$3,-3$			- 而特征向量是<code>[-2;1];[1;-2]</code> 果然不正交</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>正交矩阵: <code>[sin,-cos;cos,sin]</code><ul>
+<li>特征值是1,-1对应两个特征空间，两个特征空间里取分别的正交系</li>
+<li>不同特征值 通过 $x_2^Tx_1&#x3D;x_2^TQ^TQx_1&#x3D;(Qx_2)^T(Qx_1)&#x3D;-(x_2)^T(x_1)$ 可以证明只能正交</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">A=[[1;1;1]/sqrt(3),[1;-1;0]/sqrt(2),[1;1;-2]/sqrt(6)]</span><br><span class="line">[V,D]=eig(A)</span><br><span class="line">V&#x27;*V;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="想法随记"><a href="#想法随记" class="headerlink" title="想法随记"></a>想法随记</h2><p><a href="https://matlab.mathworks.com/">matlab</a> 比py的numpy更香，现在还有网页版了, 还有<a href="https://ww2.mathworks.cn/help/matlab/index.html?s_tid=hc_panel">官方中文入门文档</a></p>
+<p>有些内容用代码 或者 matlab代码可以更好的表述</p>
+<p>从多元一次方程组开始，逐个拆分，从小到大，从特例到一般</p>
+<p>每次都是例子先行！！相比于定义先行，更intuition！！</p>
+<p>习题 的检验反馈环很重要，虽然这个笔记没记录什么习题。</p>
+<p>3维作为高维空间，进行子空间关系讲解，拆分的1维空间缺少灵活感</p>
+<p>大小写字母在“表现值，向量，矩阵”也有“局限感”, 要是有小，中，大 写就好了</p>
+<p>所以“有限的练习题”会误以为掌握，所以应该设计无限的练习题，不要依赖于数量来认为是否掌握</p>
+<p>矩阵的一些证明，有一种反除法习惯的感觉。</p>
+<p>全部学完以后，感觉 中间的4个子空间 非常关键</p>
+<p>当一个新的“定理理论”出现时，可以举一个满足的和一个不满足的双向加深理解</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>TODO 相关的???  ？？？prove补充</p>
+<p>TODO 自己整理一个速通关键记要</p>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>线性代数</tag>
+        <tag>MIT</tag>
       </tags>
   </entry>
   <entry>
@@ -1047,6 +2799,36 @@
       </tags>
   </entry>
   <entry>
+    <title>数学分析 五 多元函数微分学</title>
+    <url>/Math/Mathematical_analysis_problems_5/</url>
+    <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
+<p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
+<p>二重极限存在,对应的累次极限不一定存在</p>
+<p>例如lim(x,y)→(0,0)(xsin(1&#x2F;y)+ysin(1&#x2F;x))&#x3D;0</p>
+<p>对应的两个累次极限limx→0(limy→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))和limy→0(limx→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))都不存在</p>
+<span id="more"></span>
+
+<h3 id="题目5-1-8"><a href="#题目5-1-8" class="headerlink" title="题目5.1.8"></a>题目5.1.8</h3><p>闭包?</p>
+<h3 id="题目5-1-14"><a href="#题目5-1-14" class="headerlink" title="题目5.1.14"></a>题目5.1.14</h3><p>(2)</p>
+<h3 id="题目5-1-23"><a href="#题目5-1-23" class="headerlink" title="题目5.1.23"></a>题目5.1.23</h3><h3 id="题目5-1-24"><a href="#题目5-1-24" class="headerlink" title="题目5.1.24"></a>题目5.1.24</h3><h3 id="题目5-1-25"><a href="#题目5-1-25" class="headerlink" title="题目5.1.25"></a>题目5.1.25</h3><h2 id="偏导数与微分"><a href="#偏导数与微分" class="headerlink" title="偏导数与微分"></a>偏导数与微分</h2><p>多元函数泰勒公式</p>
+<p>例10,例11</p>
+<p>可微<code>(f(x,y)-f(x0,y0) - fx&#39; * (x-x0) - fy&#39; * (y-y0) )/sqrt&#123;(x-x0)^2+(y-y0)^2&#125; = 0</code></p>
+<p>第一，偏导x&#x2F;偏导s的倒数写法要求s是x，y的函数，否则就是全导数ds&#x2F;dx。</p>
+<p>第二，倒数写法存在当且仅当x（s，t），y（s，t）的反函数存在。</p>
+<p>第三，反函数存在除了要求一系列的偏导数连续，还要求雅可比行列式不为0。(重要?)</p>
+<p>综上，必须通过一个一般的y&#x3D;g（s，t）且满足反函数存在定理，才可以讨论 偏x&#x2F;偏s !&#x3D; 1&#x2F;(偏s&#x2F;偏x)</p>
+<p><a href="https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function">https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function</a></p>
+<p>1 &#x3D; dx&#x2F;dx &#x3D; 偏x&#x2F;偏x &#x3D; 偏f(s(x),t(x))&#x2F;偏x &#x3D; 偏f&#x2F;偏s \cdot ds&#x2F;dx + 偏f&#x2F;偏t \cdot dt&#x2F;dx &#x3D; 偏f&#x2F;偏s \cdot 偏s&#x2F;偏x + 偏f&#x2F;偏t \cdot 偏t&#x2F;偏x</p>
+<h3 id="题目-5-2-9"><a href="#题目-5-2-9" class="headerlink" title="题目 5.2.9"></a>题目 5.2.9</h3><h3 id="题目-5-2-14-系数why"><a href="#题目-5-2-14-系数why" class="headerlink" title="题目 5.2.14 系数why"></a>题目 5.2.14 系数why</h3><h3 id="题目-5-2-15"><a href="#题目-5-2-15" class="headerlink" title="题目 5.2.15"></a>题目 5.2.15</h3><h3 id="题目-5-2-16"><a href="#题目-5-2-16" class="headerlink" title="题目 5.2.16"></a>题目 5.2.16</h3><h3 id="题目-5-2-25"><a href="#题目-5-2-25" class="headerlink" title="题目 5.2.25"></a>题目 5.2.25</h3><h3 id="题目-5-2-27"><a href="#题目-5-2-27" class="headerlink" title="题目 5.2.27"></a>题目 5.2.27</h3><h3 id="题目-5-2-28"><a href="#题目-5-2-28" class="headerlink" title="题目 5.2.28"></a>题目 5.2.28</h3><h3 id="题目-5-2-29"><a href="#题目-5-2-29" class="headerlink" title="题目 5.2.29"></a>题目 5.2.29</h3><h3 id="题目-5-2-30"><a href="#题目-5-2-30" class="headerlink" title="题目 5.2.30"></a>题目 5.2.30</h3><h3 id="题目-5-2-31"><a href="#题目-5-2-31" class="headerlink" title="题目 5.2.31"></a>题目 5.2.31</h3><h3 id="题目-5-2-32"><a href="#题目-5-2-32" class="headerlink" title="题目 5.2.32"></a>题目 5.2.32</h3><h2 id="反函数与隐函数"><a href="#反函数与隐函数" class="headerlink" title="反函数与隐函数"></a>反函数与隐函数</h2><h3 id="练习题-5-3"><a href="#练习题-5-3" class="headerlink" title="练习题 5.3"></a>练习题 5.3</h3><h2 id="切空间与极值"><a href="#切空间与极值" class="headerlink" title="切空间与极值"></a>切空间与极值</h2><h2 id="含参变量的定积分"><a href="#含参变量的定积分" class="headerlink" title="含参变量的定积分"></a>含参变量的定积分</h2><h2 id="含参变量的广义积分"><a href="#含参变量的广义积分" class="headerlink" title="含参变量的广义积分"></a>含参变量的广义积分</h2>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析 四 级数</title>
     <url>/Math/Mathematical_analysis_problems_4/</url>
     <content><![CDATA[<h1 id="级数-4"><a href="#级数-4" class="headerlink" title="级数 4"></a>级数 4</h1><h2 id="级数敛散判别法与性质、上极限与下极限"><a href="#级数敛散判别法与性质、上极限与下极限" class="headerlink" title="级数敛散判别法与性质、上极限与下极限"></a>级数敛散判别法与性质、上极限与下极限</h2><p>-P224</p>
@@ -1089,36 +2871,6 @@
 <h3 id="例11"><a href="#例11" class="headerlink" title="例11"></a>例11</h3><h3 id="题目4-2-2"><a href="#题目4-2-2" class="headerlink" title="题目4.2.2"></a>题目4.2.2</h3><h3 id="题目4-2-4"><a href="#题目4-2-4" class="headerlink" title="题目4.2.4"></a>题目4.2.4</h3><h3 id="题目4-2-5"><a href="#题目4-2-5" class="headerlink" title="题目4.2.5"></a>题目4.2.5</h3><p>连续 拆分点?</p>
 <h3 id="题目4-2-16"><a href="#题目4-2-16" class="headerlink" title="题目4.2.16"></a>题目4.2.16</h3><h3 id="题目4-2-17"><a href="#题目4-2-17" class="headerlink" title="题目4.2.17"></a>题目4.2.17</h3><h2 id="幂级数"><a href="#幂级数" class="headerlink" title="幂级数"></a>幂级数</h2><p>阿贝尔引理</p>
 <h3 id="题目4-3-1-3"><a href="#题目4-3-1-3" class="headerlink" title="题目4.3.1(3)"></a>题目4.3.1(3)</h3><h3 id="题目4-3-7"><a href="#题目4-3-7" class="headerlink" title="题目4.3.7"></a>题目4.3.7</h3><h3 id="题目4-3-8"><a href="#题目4-3-8" class="headerlink" title="题目4.3.8"></a>题目4.3.8</h3><h3 id="题目4-3-13-3"><a href="#题目4-3-13-3" class="headerlink" title="题目4.3.13(3)"></a>题目4.3.13(3)</h3><h3 id="题目4-3-14"><a href="#题目4-3-14" class="headerlink" title="题目4.3.14"></a>题目4.3.14</h3><h3 id="题目4-3-15"><a href="#题目4-3-15" class="headerlink" title="题目4.3.15"></a>题目4.3.15</h3><h3 id="题目4-3-16"><a href="#题目4-3-16" class="headerlink" title="题目4.3.16"></a>题目4.3.16</h3><h3 id="题目4-3-17"><a href="#题目4-3-17" class="headerlink" title="题目4.3.17"></a>题目4.3.17</h3><h3 id="题目4-3-18"><a href="#题目4-3-18" class="headerlink" title="题目4.3.18"></a>题目4.3.18</h3><h2 id="傅式级数的收敛性、平均收敛与一致收敛"><a href="#傅式级数的收敛性、平均收敛与一致收敛" class="headerlink" title="傅式级数的收敛性、平均收敛与一致收敛"></a>傅式级数的收敛性、平均收敛与一致收敛</h2><h3 id="题目4-4-8-4-4-19"><a href="#题目4-4-8-4-4-19" class="headerlink" title="题目4.4.8~4.4.19"></a>题目4.4.8~4.4.19</h3>]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 五 多元函数微分学</title>
-    <url>/Math/Mathematical_analysis_problems_5/</url>
-    <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
-<p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
-<p>二重极限存在,对应的累次极限不一定存在</p>
-<p>例如lim(x,y)→(0,0)(xsin(1&#x2F;y)+ysin(1&#x2F;x))&#x3D;0</p>
-<p>对应的两个累次极限limx→0(limy→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))和limy→0(limx→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))都不存在</p>
-<span id="more"></span>
-
-<h3 id="题目5-1-8"><a href="#题目5-1-8" class="headerlink" title="题目5.1.8"></a>题目5.1.8</h3><p>闭包?</p>
-<h3 id="题目5-1-14"><a href="#题目5-1-14" class="headerlink" title="题目5.1.14"></a>题目5.1.14</h3><p>(2)</p>
-<h3 id="题目5-1-23"><a href="#题目5-1-23" class="headerlink" title="题目5.1.23"></a>题目5.1.23</h3><h3 id="题目5-1-24"><a href="#题目5-1-24" class="headerlink" title="题目5.1.24"></a>题目5.1.24</h3><h3 id="题目5-1-25"><a href="#题目5-1-25" class="headerlink" title="题目5.1.25"></a>题目5.1.25</h3><h2 id="偏导数与微分"><a href="#偏导数与微分" class="headerlink" title="偏导数与微分"></a>偏导数与微分</h2><p>多元函数泰勒公式</p>
-<p>例10,例11</p>
-<p>可微<code>(f(x,y)-f(x0,y0) - fx&#39; * (x-x0) - fy&#39; * (y-y0) )/sqrt&#123;(x-x0)^2+(y-y0)^2&#125; = 0</code></p>
-<p>第一，偏导x&#x2F;偏导s的倒数写法要求s是x，y的函数，否则就是全导数ds&#x2F;dx。</p>
-<p>第二，倒数写法存在当且仅当x（s，t），y（s，t）的反函数存在。</p>
-<p>第三，反函数存在除了要求一系列的偏导数连续，还要求雅可比行列式不为0。(重要?)</p>
-<p>综上，必须通过一个一般的y&#x3D;g（s，t）且满足反函数存在定理，才可以讨论 偏x&#x2F;偏s !&#x3D; 1&#x2F;(偏s&#x2F;偏x)</p>
-<p><a href="https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function">https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function</a></p>
-<p>1 &#x3D; dx&#x2F;dx &#x3D; 偏x&#x2F;偏x &#x3D; 偏f(s(x),t(x))&#x2F;偏x &#x3D; 偏f&#x2F;偏s \cdot ds&#x2F;dx + 偏f&#x2F;偏t \cdot dt&#x2F;dx &#x3D; 偏f&#x2F;偏s \cdot 偏s&#x2F;偏x + 偏f&#x2F;偏t \cdot 偏t&#x2F;偏x</p>
-<h3 id="题目-5-2-9"><a href="#题目-5-2-9" class="headerlink" title="题目 5.2.9"></a>题目 5.2.9</h3><h3 id="题目-5-2-14-系数why"><a href="#题目-5-2-14-系数why" class="headerlink" title="题目 5.2.14 系数why"></a>题目 5.2.14 系数why</h3><h3 id="题目-5-2-15"><a href="#题目-5-2-15" class="headerlink" title="题目 5.2.15"></a>题目 5.2.15</h3><h3 id="题目-5-2-16"><a href="#题目-5-2-16" class="headerlink" title="题目 5.2.16"></a>题目 5.2.16</h3><h3 id="题目-5-2-25"><a href="#题目-5-2-25" class="headerlink" title="题目 5.2.25"></a>题目 5.2.25</h3><h3 id="题目-5-2-27"><a href="#题目-5-2-27" class="headerlink" title="题目 5.2.27"></a>题目 5.2.27</h3><h3 id="题目-5-2-28"><a href="#题目-5-2-28" class="headerlink" title="题目 5.2.28"></a>题目 5.2.28</h3><h3 id="题目-5-2-29"><a href="#题目-5-2-29" class="headerlink" title="题目 5.2.29"></a>题目 5.2.29</h3><h3 id="题目-5-2-30"><a href="#题目-5-2-30" class="headerlink" title="题目 5.2.30"></a>题目 5.2.30</h3><h3 id="题目-5-2-31"><a href="#题目-5-2-31" class="headerlink" title="题目 5.2.31"></a>题目 5.2.31</h3><h3 id="题目-5-2-32"><a href="#题目-5-2-32" class="headerlink" title="题目 5.2.32"></a>题目 5.2.32</h3><h2 id="反函数与隐函数"><a href="#反函数与隐函数" class="headerlink" title="反函数与隐函数"></a>反函数与隐函数</h2><h3 id="练习题-5-3"><a href="#练习题-5-3" class="headerlink" title="练习题 5.3"></a>练习题 5.3</h3><h2 id="切空间与极值"><a href="#切空间与极值" class="headerlink" title="切空间与极值"></a>切空间与极值</h2><h2 id="含参变量的定积分"><a href="#含参变量的定积分" class="headerlink" title="含参变量的定积分"></a>含参变量的定积分</h2><h2 id="含参变量的广义积分"><a href="#含参变量的广义积分" class="headerlink" title="含参变量的广义积分"></a>含参变量的广义积分</h2>]]></content>
       <categories>
         <category>数学分析</category>
       </categories>
@@ -1186,13 +2938,13 @@
 
 <p>首先 1..p-1 是 模p的所有余项</p>
 <p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
-<p>任意$ i \in A $ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
-<p>令 $x &#x3D; (p-1)! $</p>
+<p>任意$i \in A$ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
+<p>令 $x &#x3D; (p-1)!$</p>
 <p>那么 $x^2 &#x3D; 1(\bmod p)$</p>
 <p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
 <p>可得$x &#x3D; 1(\bmod p)$或 $x&#x3D;p-1 (\bmod p)$ , 可以假设 $x &#x3D; p - a$ 然后 $(p-a-1)(p-a+1) &#x3D; 0 (\bmod p)$ 得到</p>
 <p>我们也能得到只有 $1^2 &#x3D; 1 (\bmod p), (p-1)^2 &#x3D; 1 (\bmod p)$</p>
-<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p) $, 因为除了p-1, 其它的两两配对</p>
+<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p)$, 因为除了p-1, 其它的两两配对</p>
 <p>得证</p>
 ]]></content>
       <categories>
@@ -1200,6 +2952,104 @@
       </categories>
       <tags>
         <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>牛顿恒等式</title>
+    <url>/Math/newton_identities/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>$x&#x3D;1$</p>
+<p>$x^2&#x3D;?$</p>
+<p>$x^m&#x3D;?, m \ge 1, m \in \mathbb{Z}$</p>
+<h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>$x+y&#x3D;1$</p>
+<p>$x^2+y^2&#x3D;2$</p>
+<p>$x^3+y^3&#x3D;?$</p>
+<p>$x^m+y^m&#x3D;?, m \ge 2, m \in \mathbb{Z}$</p>
+<h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>$x+y+z&#x3D;1$</p>
+<p>$x^2+y^2+z^2&#x3D;2$</p>
+<p>$x^3+y^3+z^3&#x3D;3$</p>
+<p>$x^4+y^4+z^4&#x3D;?$</p>
+<p>$x^m+y^m+z^m&#x3D;?, m \ge 3, m \in \mathbb{Z}$</p>
+<h2 id="问题n"><a href="#问题n" class="headerlink" title="问题n"></a>问题n</h2><p>$\sum_{i&#x3D;0}^n x_i&#x3D;1$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^2&#x3D;2$</p>
+<p>$\cdots$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^n&#x3D;n$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^{n+1}&#x3D;?$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^{m}&#x3D;?, m \ge n, m \in \mathbb{Z}$</p>
+<hr>
+<p>TLDR</p>
+<p>例如3阶 已知</p>
+<p>$S_i&#x3D;x^i+y^i+z^i$</p>
+<p>$c_0&#x3D;n$</p>
+<p>$\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$</p>
+<p>例如 3阶 $X&#x3D;[-\frac{c_1}{c_0},-\frac{c_2}{c_0},-\frac{c_3}{c_0};1,0,0;0,1,0]$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[V,D]=eig(X) % D是对角特征值矩阵，V是特征向量对应位置组成的矩阵</span><br></pre></td></tr></table></figure>
+
+<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
+<span id="more"></span>
+
+<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><p><a href="https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642">https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642</a></p>
+<p>$F(x)&#x3D;0$的$n$个根$x_1,\cdots,x_n$</p>
+<p>$S_k&#x3D;\sum_{i&#x3D;1}^n x_i^k$</p>
+<p>对于 $k &gt; n$, $\sum_{i&#x3D;0}^n C_iS_{k-n}&#x3D;0$ 也就是 按照幂次逐步上升的系数 是常系数</p>
+<p>对于 $k\in[1,n], (\sum_{i&#x3D;0}^{k-1}C_iS_{k-i})+kC_k&#x3D;0$ 表明和上面系数对应，且如果知道所有$C_{&lt;i}$可以这样求得$C_i$</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>以上面的问题为例, 我们可以求得 $x+y+z,xy+yz+zx,xyz$的值</p>
+<p>也就意味着$0&#x3D;(x-a)(x-b)(x-c)&#x3D;x^3-(a+b+c)x^2+(ab+bc+ca)x-abc$ 这样对应到3次方程的3个根</p>
+<p>不妨写作 $C_0x^3+C_1x^2+C_2x+C_3&#x3D;0$</p>
+<p>那么同时乘上$x^k$ 有 $C_0x^{3+k}+C_1x^{2+k}+C_2x^{1+k}+C_3x^k&#x3D;0$</p>
+<p>$S_k&#x3D;x_0^k+x_1^k+x_2^k$ 是加和关系，所以 $S$也满足这个式子</p>
+<hr>
+<p>$f(x)&#x3D;\prod_{i}^n (x-a_i)&#x3D;\sum_{i&#x3D;0}^n c_ix^{n-i}$</p>
+<p>$f’(x)&#x3D;\sum_i^n \frac{f(x)}{x-a_i}$ 不展开求导</p>
+<p>分解 $x^{k+1}f’(x)&#x3D;(\sum_{i&#x3D;0}^k s_ix^{k-i})f(x)+g(x)$ , 这里是按 多项式除法，左边是被除，<code>f(x)</code>是除，f左边是商(系数), g(x)是余数,所以g(x)的最高幂次小于n</p>
+<p>$x^{k+1}f’(x)&#x3D;x^{k+1}\sum_{i&#x3D;0}^n \frac{f(x)}{x-a_i}$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}f(x)}{x-a_i}$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}+a_i^{k+1}}{x-a_i}f(x)$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i}f(x)+\sum_{i&#x3D;0}^n \frac{a_i^{k+1}}{x-a_i}f(x)$  这里对应了上面的多项式除法表达式</p>
+<p>对于商 $\displaystyle \sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i} &#x3D; \sum_{i&#x3D;0}^n \sum_{j&#x3D;0}^k a_i^jx^{k-j}$</p>
+<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k \sum_{i&#x3D;0}^n  a_i^jx^{k-j}$ 交换积分顺序</p>
+<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k S_j x^{k-j}$ </p>
+<p>综上 $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
+<hr>
+<p>根据  $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
+<p>研究$x^n$的系数</p>
+<p>对于 $k\le n-1$, </p>
+<p>左边 $x^{k+1}(c_{k}x^{n-k})’ &#x3D; (n-k)c_kx^{n}$</p>
+<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;0}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
+<p> $\displaystyle &#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}x^{n}$</p>
+<p> $\displaystyle (n-k)c_k&#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}$</p>
+<p>注意到 $S_0&#x3D;\sum x_i^0 &#x3D; \sum 1&#x3D;n$,所以右侧$\displaystyle &#x3D; (\sum_{i&#x3D;1}^k S_i c_{k-i}) + nc_k$</p>
+<p>综上 $\displaystyle -kc_k&#x3D;\sum_{i&#x3D;1}^k S_i c_{k-i}$</p>
+<p>综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n-1$</p>
+<hr>
+<p>类似的$k\ge n$ 同样研究$x^n$的系数</p>
+<p>左边&#x3D;0</p>
+<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;k-n}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
+<p> $\displaystyle &#x3D;\sum_{i&#x3D;k-n}^k S_i c_{k-i}x^{n}$, 也就是上面的不变的结论</p>
+<p>取$k&#x3D;n$有</p>
+<p> $\displaystyle \sum_{i&#x3D;0}^n S_i c_{n-i}&#x3D;0$, </p>
+<p>注意到$S_0&#x3D;n$,同样满足上面的公式，综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$ 可以算出所有$c_{0\to n}$, (注$(c_{n-0}x^0)’&#x3D;0$ 所以也很自然)</p>
+<hr>
+<p>回到题目</p>
+<p>$c_0&#x3D;n&#x3D;3$</p>
+<p>$\displaystyle c_1&#x3D;-\frac{\sum_{i&#x3D;1}^1S_1c_{1-i}}{1}&#x3D;-\frac{1*3}{1}&#x3D;-3$</p>
+<p>$\displaystyle c_2&#x3D;-\frac{\sum_{i&#x3D;1}^2S_1c_{2-i}}{2}&#x3D;-\frac{1*(-3)+2*3}{2}&#x3D;-\frac{3}{2}$</p>
+<p>$\displaystyle c_3&#x3D;-\frac{\sum_{i&#x3D;1}^3S_1c_{3-i}}{3}&#x3D;-\frac{1*(-3&#x2F;2)+2*(-3)+3*3}{3}&#x3D;-\frac{1}{2}$</p>
+<p>$c_0S_k+c_1S_{k-1}+c_2S_{k-2}+c_3S_{k-3}&#x3D;0$</p>
+<p>$S_k&#x3D;S_{k-1}+\frac{1}{2}S_{k-2}+\frac{1}{6}S_{k-3}$</p>
+<p>$x^4+y^4+z^4&#x3D;1 * 3+ \frac{1}{2} * 2 +\frac{1}{6} * 1 &#x3D; \frac{25}{6}$</p>
+<p>$x^5+y^5+z^5&#x3D;1 * \frac{25}{6}+ \frac{1}{2} * 3 +\frac{1}{6} * 2 &#x3D; 6$</p>
+<p>$[S_k;S_{k-1};S_{k-2}] &#x3D; [1,1&#x2F;2,1&#x2F;6;1,0,0;0,1,0] * [S_{k-1};S_{k-2};S_{k-3}]$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">X=[1,1/2,1/6;1,0,0;0,1,0];</span><br><span class="line">[V,D] = eig(X)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">D =</span><br><span class="line"></span><br><span class="line">   1.4308 + 0.0000i   0.0000 + 0.0000i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i  -0.2154 + 0.2647i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i   0.0000 + 0.0000i  -0.2154 - 0.2647i</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">V = 这里V不是正交矩阵，但是 是特征向量矩阵</span><br><span class="line"></span><br><span class="line">   0.7609 + 0.0000i   0.0223 + 0.1073i   0.0223 - 0.1073i</span><br><span class="line">   0.5318 + 0.0000i   0.2027 - 0.2490i   0.2027 + 0.2490i</span><br><span class="line">   0.3717 + 0.0000i  -0.9407 + 0.0000i  -0.9407 + 0.0000i</span><br><span class="line"></span><br><span class="line">[S_k;S_&#123;k-1&#125;;S_&#123;k-2&#125;]  = V * D^&#123;k-3&#125; * V^&#123;-1&#125; * [3;2;1]</span><br></pre></td></tr></table></figure>
+
+
+<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
+]]></content>
+      <categories>
+        <category>代数</category>
+      </categories>
+      <tags>
+        <tag>线性代数</tag>
+        <tag>newton_identities</tag>
       </tags>
   </entry>
   <entry>

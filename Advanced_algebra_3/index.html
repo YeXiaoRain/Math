@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$,">
+    <meta name="description" content="n维向量空间$K^n$P19-P55 定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高等代数 三 n维向量空间$K^n$">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Advanced_algebra_3/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="n维向量空间$K^n$定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$,">
+<meta property="og:description" content="n维向量空间$K^n$P19-P55 定义 $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$ 其中$K$是数域 规定:   向量相等:对应位置元素相等 向量相加:对应位置元素相加 数量乘法:所有元素乘上k倍 零向量:所有元素都为0  对应映射$f: A\to B$ , $a$ 在$f$下的">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-08-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-19T06:31:56.200Z">
+<meta property="article:modified_time" content="2024-10-23T09:56:10.947Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="高等代数">
 <meta name="twitter:card" content="summary">
@@ -86,7 +86,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">21</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">8</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">37</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">27</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">10</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">40</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-K-n"><span class="nav-text">n维向量空间$K^n$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="nav-text">线性空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E6%80%A7%E8%B4%A8"><span class="nav-text">线性空间性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-text">线性子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3%E7%9A%84%E5%90%91%E9%87%8F%E7%BB%84"><span class="nav-text">线性相关与线性无关的向量组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%AE%B0"><span class="nav-text">注记</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#n%E7%BB%B4%E5%90%91%E9%87%8F%E7%A9%BA%E9%97%B4-K-n"><span class="nav-text">n维向量空间$K^n$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4"><span class="nav-text">线性空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E6%80%A7%E8%B4%A8"><span class="nav-text">线性空间性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-text">线性子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BA%BF%E6%80%A7%E6%97%A0%E5%85%B3%E7%9A%84%E5%90%91%E9%87%8F%E7%BB%84"><span class="nav-text">线性相关与线性无关的向量组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89-1"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E7%A9%BA%E9%97%B4"><span class="nav-text">子空间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%98%A0%E5%B0%84"><span class="nav-text">线性映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E8%AE%B0"><span class="nav-text">注记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TLDR"><span class="nav-text">TLDR</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -158,18 +158,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/Math/archives/">
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/Math/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/Math/tags/">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">40</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -267,7 +267,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-09-19 14:31:56" itemprop="dateModified" datetime="2023-09-19T14:31:56+08:00">2023-09-19</time>
+      <time title="修改時間：2024-10-23 17:56:10" itemprop="dateModified" datetime="2024-10-23T17:56:10+08:00">2024-10-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -300,14 +300,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>3.8k</span>
+      <span>4.8k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>3 分鐘</span>
+      <span>4 分鐘</span>
     </span>
 </div>
 
@@ -318,7 +318,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
+        <h1 id="n维向量空间-K-n"><a href="#n维向量空间-K-n" class="headerlink" title="n维向量空间$K^n$"></a>n维向量空间$K^n$</h1><p>P19-P55</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p> $K^n:&#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&#x3D;1,2,\cdots,n \rbrace$</p>
 <p>其中$K$是数域</p>
 <p>规定: </p>
 <ol>
@@ -410,14 +411,77 @@
 <p>定理3 矩阵的初等行变换不改变列rank</p>
 <p>考虑 方程组 随着初等行变换, 和原方程组同解, 因此 变化前后 的有非零解和无非零解 和 变化后一致 所以 不改变列rank(既然rank与极大线性无关组有关,而极大线性无关组与运算得到0元有关, 同解保证了 原来能得到表达式, 在新的里才能得到0元, (因为非0元不能通过初等行变化变为0元))</p>
 <p>综上 对于一般矩阵 初等行变换 行列rank 不变 成为阶梯形矩阵, 行rank &#x3D; 列 rank</p>
-<p>因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
-<p>A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
+<p>定理4 因此也有矩阵的rank &#x3D; 矩阵的转置的rank</p>
+<p>定理5 A的rank &#x3D; A的不为0的子式的最高阶数(找线性无关rank行得到子矩阵,再找线性无关rank列 构成的rank x rank 的线性无关, 那么变化阶梯形 行列式不变 最终不为0,说明存在,不为0的rank乘rank的A的子式)</p>
 <p>矩阵的初等行&#x2F;列变换 不改变矩阵的秩</p>
+<hr>
+<p>空间 的 交并 与 空间基的集合的交并 并不等价</p>
+<h2 id="子空间"><a href="#子空间" class="headerlink" title="子空间"></a>子空间</h2><p>直和 : V的子空间$V_1,V_2$ 如果$V_1+V_2$中的每个向量$\alpha&#x3D;\alpha_1+\alpha_2,\alpha_1\in V_1,\alpha_2\in V_2$ 表法唯一，那么称作直和, 充要条件$V_1 交 V_2 &#x3D; 0向量$</p>
+<ul>
+<li>0的表法也唯一, 说明 两个空间之间无线性相关的向量</li>
+<li>所以 两个的基的 代数和为0的解 只有零解,  所以所有基线性无关，所以 dim(V1+V2)&#x3D;dim(V1)+dim(V2)-dim(V1 交 V2)</li>
+</ul>
+<h2 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h2><p>对应书的4.7</p>
+<p>穿插了一点 集合知识</p>
+<ul>
+<li>定义域</li>
+<li>陪域 (值域包含于陪域，值域中的元素是 定义域元素经过变化得到所有值的集合，陪域并不保证元素都有定义域的来源)</li>
+<li>值域 $\mathrm{Im} f$</li>
+<li>满射：值域&#x3D;陪域</li>
+<li>单射 不同元素的象不同</li>
+<li>双射 （一一对应<ul>
+<li>可逆映射</li>
+</ul>
+</li>
+<li>核 Ker sigma: $\alpha \in K^n | \sigma(\alpha)&#x3D;0$</li>
+<li>同构映射$\sigma: V\to V’$ 那么$V$与$V’$同构, 这里也感觉不够精确，括号里的运算是$V$中的,而外部的运算是$V’$中的，应该区分这个加和乘?<ul>
+<li>$\sigma(x+y)&#x3D;\sigma(x)+\sigma(y)$ 保持加法</li>
+<li>$\sigma(kx)&#x3D;k\sigma(x)$ 保持乘法</li>
+<li>性质 $V$的基 通过$\sigma$ 映射到$V’$也是基</li>
+<li>两个有限维的线性空间同构，则 dim相等，也就是极大线性无关组个数相同，也就是唯一表出相同</li>
+</ul>
+</li>
+</ul>
+<p>映射结合律</p>
+<ul>
+<li>fgh(x)&#x3D;f(gh(x))&#x3D;fg(h(x))</li>
+</ul>
+<p>TODO 三十一 ~ 三十六</p>
 <h2 id="注记"><a href="#注记" class="headerlink" title="注记"></a>注记</h2><p>向量组里是秩rank, 空间集合集合里是维数dim, $dim&lt;\alpha_1,\cdots,\alpha_s&gt; &#x3D; rank\lbrace \alpha_1,\cdots,\alpha_s \rbrace$, 都是研究极大线性无关组(内线性无关,未被选的若加入都可表示(线性相关)), 注意的是并不是按照V的个数, 比如 (x,x,y) 看起来3维, 但基(对于空间无序)只有2个,所以是2维</p>
 <p>向量组是有序有限的, 而空间是由基础的一系列向量做加法和数乘构成的集合</p>
 <p>这里的特殊条件就是 只含$0$向量的时候有些需要特殊定义(规定),</p>
 <p>例如 $\emptyset$是只含0向量的一个极大线性无关集, 规定为它是{0}的基</p>
 <p>这里过程也是很多从2个到多个, 从特殊的阶梯形到一般矩阵</p>
+<h3 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h3><p>先4条加法，4条乘法 定义线性空间</p>
+<ul>
+<li>然后 矩阵的列向量 运算 与 n维度空间基 做一一对应，把研究 列向量组合 变为研究n维空间的基，把求解与属于空间 唯一表示做关联</li>
+</ul>
+<p>线性相关</p>
+<ul>
+<li>线性组合&#x2F;可表示 &lt;-&gt; 属于生成空间</li>
+</ul>
+<p>秩</p>
+<ul>
+<li>极大线性无关组<ul>
+<li>向量组 &#x3D;等价&#x3D; 极大无关线性组</li>
+<li>个数称为秩</li>
+</ul>
+</li>
+<li>表出的性质 </li>
+<li>向量空间，子空间的基与维数</li>
+<li>向量组的rank &#x3D; 生成空间的最大线性无关组<ul>
+<li>初等变换<ul>
+<li>可表示原理 不改变行rank</li>
+<li>同解原理 不改变列rank</li>
+<li>所以初等变化成阶梯形 行rank 列rank未改变，又都是主元个数</li>
+</ul>
+</li>
+<li>满秩 &lt;&#x3D;&gt; det \neq 0</li>
+<li>有解 解空间和解，这里 丘老师 是通过秩 与 增广矩阵秩 来研究解的存在性 个数，而mit18.06 是通过 先nullspace,再所有解&#x3D; 特解+nullspace来完成的</li>
+</ul>
+</li>
+<li>视频比 书多了很多章的 子空间相关的</li>
+</ul>
 
     </div>
 
@@ -458,8 +522,8 @@
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/Math/Fermat_s_two_square_theorem/" rel="next" title="Fermat's two square theorem">
-                  Fermat's two square theorem <i class="fa fa-chevron-right"></i>
+                <a href="/Math/Advanced_algebra_4/" rel="next" title="高等代数 四 矩阵的运算">
+                  高等代数 四 矩阵的运算 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -486,7 +550,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -497,13 +561,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="總字數">155k</span>
+    <span title="總字數">198k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="所需總閱讀時間">2:21</span>
+    <span title="所需總閱讀時間">3:01</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
