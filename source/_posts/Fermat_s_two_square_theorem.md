@@ -1,8 +1,11 @@
 ---
 title: Fermat's two square theorem
 date: 2023-03-13
-tags: [Fermat,平方和定理,x^2+ny^2]
-category: [数论]
+tags:
+  - Fermat
+  - 平方和定理
+category:
+  - 数论
 description: Fermat's 两平方数定理:能被表示成平方和的奇素数是所有形如4k+1的奇素数
 ---
 
@@ -302,7 +305,7 @@ ${\displaystyle \left({\frac {a}{p}}\right)={\begin{cases}1&{\text{if }}a{\text{
 
 设$g$为模$p$的一个原根,则存在$k$使$g^k\equiv n \pmod p$,所以$(g^k)^{\frac{p-1}{2}} \equiv 1 \pmod p$, 因为$g$是原根,所以$p-1 | k\cdot \frac{p-1}{2}$, 因此$\frac{k}{2}$是整数,所以$n \equiv (g^{\frac{k}{2}})^2$
 
-综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) = -1$ 
+综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) = -1$
 
 ---
 
@@ -364,7 +367,7 @@ $(\frac{6}{p}) = 1 \Leftrightarrow p\equiv \pm 1,\pm 5 \mod 24$
 
 猜想1.9, 如果$p,q$是不同的质数,则$(\frac{q}{p}) = 1 \Leftrightarrow p\equiv \pm \beta^2 \bmod 4q$对于一些奇数$\beta$, (待证明)
 
-命题1.10(重要,也就是而二次互反率quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) = (-1)^{\frac{(p-1)(q-1)}{4}}$
+命题1.10(重要,也就是而二次互反律quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) = (-1)^{\frac{(p-1)(q-1)}{4}}$
 
 证明: 显然$(\frac{-1}{p}) = (-1)^{\frac{p-1}{2}}$,$(\frac{ab}{p}) = (\frac{a}{p})(\frac{b}{p})$
 

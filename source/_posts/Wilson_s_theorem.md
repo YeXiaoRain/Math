@@ -24,9 +24,9 @@ Wilson's theorem
 
 集合$A = {1,2,\cdots,p-1}$
 
-任意$ i \in A $ 存在唯一$j \in A, i \cdot j = 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)
+任意$i \in A$ 存在唯一$j \in A, i \cdot j = 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)
 
-令 $x = (p-1)! $
+令 $x = (p-1)!$
 
 那么 $x^2 = 1(\bmod p)$
 
@@ -37,7 +37,7 @@ Wilson's theorem
 
 我们也能得到只有 $1^2 = 1 (\bmod p), (p-1)^2 = 1 (\bmod p)$
 
-$(p-1)! = 1\cdot 1 \cdot (p-1) = p-1  = -1 (mod p) $, 因为除了p-1, 其它的两两配对
+$(p-1)! = 1\cdot 1 \cdot (p-1) = p-1  = -1 (mod p)$, 因为除了p-1, 其它的两两配对
 
 得证
 
