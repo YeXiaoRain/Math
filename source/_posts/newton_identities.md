@@ -6,9 +6,12 @@ categories:
 tags:
   - 线性代数
   - newton_identities
+  - 高等代数
 ---
 
 # 问题
+
+TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式
 
 ## 问题1
 
