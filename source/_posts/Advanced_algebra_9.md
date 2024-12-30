@@ -5,6 +5,10 @@ categories:
   - 高等代数
 tags:
   - 高等代数
+  - 线性映射
+  - 不变子空间
+  - Hamiton-Cayley定理
+  - Jordan标准型
 ---
 
 视频 86-120

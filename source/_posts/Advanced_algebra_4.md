@@ -5,6 +5,10 @@ categories:
   - 高等代数
 tags:
   - 高等代数
+  - 矩阵乘法
+  - 可逆矩阵
+  - BInet-Cauthy
+  - 分块矩阵
 ---
 
 # 矩阵的运算

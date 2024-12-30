@@ -1,8 +1,11 @@
 ---
 title: 高等代数 一 线性方程组的解法
 date: 2022-08-11
-categories: 高等代数
-tags: [高等代数]
+categories:
+  - 高等代数
+tags:
+  - 高等代数
+  - rref
 ---
 
 # 第1章 线性方程组的解法
