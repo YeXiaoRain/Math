@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="isbn 978711543559 据说有视频课 calclifesaver.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="普林斯顿 微积分读本">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/the_calculus_lifesaver/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="isbn 978711543559 据说有视频课 calclifesaver.com">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-12-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-30T01:53:15.578Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/the_calculus_lifesaver/","path":"the_calculus_lifesaver/","title":"普林斯顿 微积分读本"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>普林斯顿 微积分读本 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">34</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">10</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">41</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%87%BD%E6%95%B0%EF%BC%8C%E5%9B%BE%E5%83%8F%EF%BC%8C%E7%9B%B4%E7%BA%BF"><span class="nav-text">1 函数，图像，直线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%89%E8%A7%92%E5%AD%A6%E5%9B%9E%E9%A1%BE"><span class="nav-text">2 三角学回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9E%81%E9%99%90%E5%AF%BC%E8%AE%BA"><span class="nav-text">3 极限导论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%B1%82%E5%A4%9A%E9%A1%B9%E5%BC%8F%E7%9A%84%E6%9E%81%E9%99%90%E9%97%AE%E9%A2%98"><span class="nav-text">4 求多项式的极限问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%BF%9E%E7%BB%AD%E6%80%A7%E5%92%8C%E5%8F%AF%E5%AF%BC%E6%80%A7"><span class="nav-text">5. 连续性和可导性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%B1%82%E8%A7%A3%E5%BE%AE%E5%88%86%E9%97%AE%E9%A2%98"><span class="nav-text">6. 求解微分问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%90%E5%92%8C%E5%AF%BC%E6%95%B0"><span class="nav-text">7. 三角函数的极限和导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E9%9A%90%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC%E5%92%8C%E7%9B%B8%E5%85%B3%E5%8F%98%E5%8C%96%E7%8E%87"><span class="nav-text">8. 隐函数求导和相关变化率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0%E5%92%8C%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0"><span class="nav-text">9. 指数函数和对数函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%8F%8D%E5%87%BD%E6%95%B0%E5%92%8C%E5%8F%8D%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0"><span class="nav-text">10. 反函数和反三角函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E5%AF%BC%E6%95%B0%E5%92%8C%E5%9B%BE%E5%83%8F"><span class="nav-text">11. 导数和图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E7%BB%98%E5%88%B6%E5%87%BD%E6%95%B0%E5%9B%BE%E5%83%8F"><span class="nav-text">12. 绘制函数图像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E6%9C%80%E4%BC%98%E5%8C%96%E5%92%8C%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="nav-text">13.最优化和线性化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E6%B4%9B%E5%BF%85%E8%BE%BE%E6%B3%95%E5%88%99%E5%8F%8A%E6%9E%81%E9%99%90%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93"><span class="nav-text">14. 洛必达法则及极限问题总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E7%A7%AF%E5%88%86"><span class="nav-text">15. 积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E5%AE%9A%E7%A7%AF%E5%88%86"><span class="nav-text">16. 定积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E5%BE%AE%E7%A7%AF%E5%88%86%E5%9F%BA%E6%9C%AC%E5%AE%9A%E7%90%86"><span class="nav-text">17. 微积分基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E7%A7%AF%E5%88%86%E7%9A%84%E6%96%B9%E6%B3%95I%EF%BC%88%E6%8D%A2%E5%85%83%EF%BC%8C%E5%88%86%E9%83%A8%EF%BC%8C%E5%88%86%E5%BC%8F%EF%BC%89"><span class="nav-text">18. 积分的方法I（换元，分部，分式）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E7%A7%AF%E5%88%86%E7%9A%84%E6%96%B9%E6%B3%95II%EF%BC%88%E4%B8%89%E8%A7%92%EF%BC%89"><span class="nav-text">19. 积分的方法II（三角）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86%EF%BC%9A%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">20. 反常积分：基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86%EF%BC%9A%E5%A6%82%E4%BD%95%E8%A7%A3%E9%A2%98"><span class="nav-text">21. 反常积分：如何解题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-%E6%95%B0%E5%88%97%E5%92%8C%E7%BA%A7%E6%95%B0%EF%BC%9A%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">22.数列和级数：基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-%E6%B1%82%E8%A7%A3%E7%BA%A7%E6%95%B0%E9%97%AE%E9%A2%98"><span class="nav-text">23.求解级数问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-%E6%B3%B0%E5%8B%92%E5%A4%9A%E9%A1%B9%E5%BC%8F%E3%80%81%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0%E5%92%8C%E5%B9%82%E7%BA%A7%E6%95%B0%E5%AF%BC%E8%AE%BA"><span class="nav-text">24. 泰勒多项式、泰勒级数和幂级数导论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-%E6%B1%82%E8%A7%A3%E4%BC%B0%E7%AE%97%E9%97%AE%E9%A2%98"><span class="nav-text">25. 求解估算问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0%E5%92%8C%E5%B9%82%E7%BA%A7%E6%95%B0%EF%BC%9A%E5%A6%82%E4%BD%95%E8%A7%A3%E9%A2%98"><span class="nav-text">26. 泰勒级数和幂级数：如何解题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E5%92%8C%E6%9E%81%E5%9D%90%E6%A0%87"><span class="nav-text">27. 参数方程和极坐标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-%E5%A4%8D%E6%95%B0"><span class="nav-text">28. 复数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-%E4%BD%93%E7%A7%AF%E3%80%81%E5%BC%A7%E9%95%BF%E5%92%8C%E8%A1%A8%E9%9D%A2%E7%A7%AF"><span class="nav-text">29. 体积、弧长和表面积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="nav-text">30. 微分方程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YeXiaoRain"
+      src="https://avatars.githubusercontent.com/u/7298239?v=4">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yexiaorain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yexiaorain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yexiaorain@gmail.com" title="E-Mail → mailto:yexiaorain@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://atcoder.jp/users/cromarmot" title="https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;cromarmot" rel="noopener" target="_blank">AtCoder</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://codeforces.com/profile/YeXiaoRain" title="https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;YeXiaoRain" rel="noopener" target="_blank">Codeforces</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="普林斯顿 微积分读本 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          普林斯顿 微积分读本
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-12-20 00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-20T00:00:00+08:00">2024-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-12-30 09:53:15" itemprop="dateModified" datetime="2024-12-30T09:53:15+08:00">2024-12-30</time>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/Math/the_calculus_lifesaver/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="the_calculus_lifesaver/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>12k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>11 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>isbn 978711543559</p>
+<p>据说有视频课 calclifesaver.com</p>
+<span id="more"></span>
+
+<h2 id="1-函数，图像，直线"><a href="#1-函数，图像，直线" class="headerlink" title="1 函数，图像，直线"></a>1 函数，图像，直线</h2><p>挺细的，高中可读</p>
+<h2 id="2-三角学回顾"><a href="#2-三角学回顾" class="headerlink" title="2 三角学回顾"></a>2 三角学回顾</h2><p>是真的细，从角度到弧度</p>
+<p>$sin^2+cos^2&#x3D;1$</p>
+<p>$1+tan^2&#x3D;sec^2$</p>
+<p>$cot^2+1&#x3D;csc^2$</p>
+<p>$sin(a+b)&#x3D;sin(A)cos(B)+cos(A)sin(B)$</p>
+<p>$cos(a+b)&#x3D;cos(A)cos(B)-sin(A)sin(B)$</p>
+<p>$sin(2x)&#x3D;2sin(x)cos(x)$</p>
+<p>$cos(2x)&#x3D;2cos^2(x)-1&#x3D;1-2sin^2(x)$</p>
+<h2 id="3-极限导论"><a href="#3-极限导论" class="headerlink" title="3 极限导论"></a>3 极限导论</h2><p>一个对比的例子 f(x)&#x3D;x+1,那么</p>
+<ul>
+<li>x趋于1时 f(x)的极限是2</li>
+</ul>
+<p>g(x)&#x3D;x+1,x !&#x3D; 1时</p>
+<p>g(x)&#x3D;3,x &#x3D;1时</p>
+<p>同样有: x趋于1时 g(x)的极限是2</p>
+<p>函数的点极限是在聊没（不一定）取到的趋近值</p>
+<hr>
+<p>垂直极限， x在左右趋于a时，有一侧的值趋于正无穷或负无穷</p>
+<p>点附近不趋于任何数 sin(1&#x2F;x), x 趋于0时</p>
+<p>x趋于正无穷时，的极限，意味着有水平渐近线</p>
+<hr>
+<p>夹逼定理（三明治定理）g&lt;&#x3D;f&lt;&#x3D;h 在x的范围附近，那么g和h极限相同，则f也是</p>
+<h2 id="4-求多项式的极限问题"><a href="#4-求多项式的极限问题" class="headerlink" title="4 求多项式的极限问题"></a>4 求多项式的极限问题</h2><p>f(x)&#x3D;(x-1)(x+1)&#x2F;(x-1) 在点1的极限</p>
+<p>里面主要是一些做题的例子，例如什么分子有理化</p>
+<p>四则运算保持部分，主要注意的是在加减过程中 可能导致低次等价无穷小 无穷大的消失</p>
+<p>(x^2+x)&#x2F;x, (x^2-x)&#x2F;x 在 无穷大 极值都是 无穷大，但是差在无穷大的差是 趋于2</p>
+<p>这里 主要列的都是 x多项式的 p(x)&#x2F;q(x) 在无穷的极限</p>
+<h2 id="5-连续性和可导性"><a href="#5-连续性和可导性" class="headerlink" title="5. 连续性和可导性"></a>5. 连续性和可导性</h2><p>直觉上是一笔画，但对于数学这并不对。</p>
+<p>f(x)&#x3D;x当x有理数，0当x无理数，能在0点有极限，（这就是点连续的感觉反例）</p>
+<p>这点连续，但区间不连续</p>
+<p>或者 f(x)&#x3D;1&#x2F;x在0以外处处连续（但是不一致连续）</p>
+<hr>
+<p>这块内容核心是，</p>
+<ul>
+<li>点连续：该点的值&#x3D;该点的极限</li>
+<li>区间上连续：区间上所有点连续<ul>
+<li>这两个都是数学抽象的定义，图像上最好的描述可能还是 y 包裹距离lambda的线，和x包裹 delta的线</li>
+</ul>
+</li>
+</ul>
+<p>有些函数 点没有定义，但是对应位置有极限，可以考虑补充定义 f(x)&#x3D;xsin(1&#x2F;x)</p>
+<hr>
+<p>介值定理：闭区间，左右端点异号，然后函数连续，那么 区间中存在一点f(x)&#x3D;0</p>
+<ul>
+<li>这个定理通过平移可以有 左右端点(f(l)-a)(f(r)-a) 异号，中存在点 f(m)&#x3D;a</li>
+</ul>
+<p>最大值最小值存在定理： 闭区间+连续，区间有最大值，最小值</p>
+<ul>
+<li>这个理解其要素，要考虑如果开区间，如果不连续 不存在的例子就能更深刻</li>
+</ul>
+<hr>
+<p>可导性：</p>
+<p>从时间，速度，距离出发，引出距离时间图像中 速度与导数的关系</p>
+<p>单点的导数也就是：</p>
+<ul>
+<li>f(a)’ &#x3D; (f(x)-f(a))&#x2F;(x-a), 当x趋于a的极限<ul>
+<li>这里 我们也就用了前面学的极限</li>
+<li>另一个代换就是 (f(a+h)-f(a))&#x2F;h</li>
+<li>那么 同样极限可能存在，可能不存在。 如果极限存在，定义在 此点 可导</li>
+<li>分母是 delta x, 分子是 delta y</li>
+<li>记作 dy&#x2F;dx <ul>
+<li>注意不是分数，而是表示 delta y &#x2F; delta x的极限</li>
+<li>更具体的应该是 d&#x2F;dx(y(x)), 也就是y是关于x的函数，对其自变量x求导的</li>
+<li>更进阶的有可微概念（说白了是 关于自变量的线性表出，不过好像微积分不学，在数学分析里）</li>
+</ul>
+</li>
+<li>不存在例子 |x|&#x2F;x<ul>
+<li>这里说明 连续不一定可导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>常见的导数表</p>
+<ul>
+<li>$ax^b &#x3D; abx^{b-1},b\neq 0$</li>
+</ul>
+<p>可导 &#x3D;&gt; 连续</p>
+<ul>
+<li>考虑 f(x)&#x3D;x+1, 特别的x&#x3D;0时f(x)&#x3D;2, 其实会发现，分母趋于0时，如果不连续，会导致分子不趋于0（甚至没有极限）</li>
+</ul>
+<h2 id="6-求解微分问题"><a href="#6-求解微分问题" class="headerlink" title="6. 求解微分问题"></a>6. 求解微分问题</h2><p>用定义求导</p>
+<p>常用公式</p>
+<ul>
+<li>$d&#x2F;dx (x^a)&#x3D;ax^{a-1}$</li>
+<li>$d&#x2F;dx(C)&#x3D;0$</li>
+</ul>
+<p>推论</p>
+<ul>
+<li>乘积法则<ul>
+<li>h(x)&#x3D;f(x)g(x), h’(x)&#x3D;f’(x)g(x)+f(x)g’(x)</li>
+<li>或者写成 y&#x3D;uv, d&#x2F;dx(y)&#x3D;v d&#x2F;dx(u)+u d&#x2F;dx (v)</li>
+<li>还可以扩展更多的y&#x3D;uvw</li>
+</ul>
+</li>
+<li>商:<ul>
+<li>h&#x3D;f&#x2F;g, $h’&#x3D;(f’g-fg’)&#x2F;(g^2)$</li>
+</ul>
+</li>
+<li>说白了 希望能用四则运算的思路对这个进行分解<ul>
+<li>那么加减其实也有h&#x3D;f+-g,h’&#x3D;f’+-g’</li>
+<li>而需要注意的是，这里需要每一部分的导数是存在的</li>
+</ul>
+</li>
+<li>特别的，4则运算以外有函数复合 h&#x3D;f(g(x))  称作链式求导，可以更多的复合<ul>
+<li>就是导数定义展开就能得到</li>
+<li>h’&#x3D;f’(g(x))g’(x)</li>
+<li>y(u),u(x), d&#x2F;dx(y)&#x3D;d&#x2F;dx(y) * d&#x2F;dx(u)</li>
+<li>例子 $y&#x3D;u^{100}, u&#x3D;x^2+1$<ul>
+<li>$d&#x2F;dx(y) &#x3D; 100u^{99} 2x&#x3D;200x(x^2+1)^{99}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>这里 乘积法的解释用的 长方形边长分别f,g, 面积的变化的概念</p>
+<p>这里 链式法的理解用的 在 放大镜后面拉伸口香糖，那么是倍率相乘</p>
+<p>加速度引出二阶导数</p>
+<p>做题：导数伪装的极限（那些可以看成导数表达的极限）</p>
+<p>导函数图像绘制：</p>
+<ul>
+<li>找导数为零的点，为切割点（不一定切割 例如f(x)&#x3D;x^3</li>
+<li>找二阶导数 为0的点，为函数 凸 凹的切割点</li>
+</ul>
+<h2 id="7-三角函数的极限和导数"><a href="#7-三角函数的极限和导数" class="headerlink" title="7. 三角函数的极限和导数"></a>7. 三角函数的极限和导数</h2><p>重要极限： x趋于0, sin(x)&#x2F;x&#x3D;1</p>
+<p>其他常用</p>
+<ul>
+<li>cos(x-&gt;0)-&gt;1</li>
+<li>x-&gt;0, tan x &#x2F; x &#x3D; 1</li>
+<li>sin’ &#x3D; cos</li>
+<li>cos’&#x3D;-sin</li>
+<li>$tan’&#x3D;sec^2$</li>
+<li>$sec’&#x3D;sec\cdot tan$ </li>
+<li>$cot’&#x3D;-csc^2$</li>
+<li>反正背了无数年也背诵不到</li>
+</ul>
+<p>其它方法，把分母想办法化作0的形式，变量替换，</p>
+<p>一个本身可导导函数 不连续 的函数：</p>
+<p>$f(x)&#x3D;x^2sin(1&#x2F;x)$ 补充定义x&#x3D;0, </p>
+<h2 id="8-隐函数求导和相关变化率"><a href="#8-隐函数求导和相关变化率" class="headerlink" title="8. 隐函数求导和相关变化率"></a>8. 隐函数求导和相关变化率</h2><p>隐函数：给的表达式不是y(x)&#x3D;…的形式，但从自变量因变量上，依然x是自变量，y(x)的因变量</p>
+<p>$x^2+y^2&#x3D;4$</p>
+<p>方法：在两边加上 d&#x2F;dx ，因为f(x,y)&#x3D;g(x,y), 那么我们认为这两个函数在要求的一段区间上的 映射是一致的，</p>
+<ul>
+<li>那么 如果导数存在，左右导数相等</li>
+</ul>
+<p>求二阶导：</p>
+<ul>
+<li>一样的步骤</li>
+<li>注意的是 d^2&#x2F;dx^2(y)&#x3D;d&#x2F;dx(d&#x2F;dx(y))<ul>
+<li>和 $(d&#x2F;dx(y))^2$ 这两个意义是不同的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子</p>
+<ul>
+<li>A上方5m,3m&#x2F;s向上</li>
+<li>B右侧12m, 4m&#x2F;s向 左</li>
+<li>求A&#x2F;B之间距离变化速度<ul>
+<li>$a^2+b^2&#x3D;c^2$</li>
+<li>$2a d&#x2F;dt(a)+2b d&#x2F;dt(b)&#x3D;2c d&#x2F;dt(c)$, </li>
+<li>$5 \cdot 3+12\cdot (-4)&#x3D;13 d&#x2F;dt(c)$<ul>
+<li>可计算要求的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-指数函数和对数函数"><a href="#9-指数函数和对数函数" class="headerlink" title="9. 指数函数和对数函数"></a>9. 指数函数和对数函数</h2><p>书上这么细致，都快要初中生可看了，从对数 指数 反函数开始讲</p>
+<p>重要极限 e&#x3D;(1+1&#x2F;x)^x, x趋于无穷大时的极限，</p>
+<p>重要函数 d&#x2F;dx(ln(x)) &#x3D; 1&#x2F;x</p>
+<ul>
+<li>$d&#x2F;dx (a^x) &#x3D; a^x ln(a)$</li>
+<li>$x\to 0$, $\frac{e^x-1}{x}&#x3D;1$</li>
+<li>$x\to 0$, $\frac{ln(1+x)}{x}&#x3D;1$</li>
+<li>注，这些东西，到后面等价无穷小会 更不特例化,或者洛必达</li>
+</ul>
+<p>指数增长迅速$x\to \infty \frac{x^n}{e^x}&#x3D;0$, 也就是  多项式&#x2F;指数型 -&gt; 0</p>
+<p>对数增长缓慢 $a&gt;0,x\to \infty \frac{ln(x)}{x^a}&#x3D;0$, 不管a多小</p>
+<p>对数函数在0附近“增长”缓慢：不管a多小, 如果$a&gt;0, x\to 0^+ x^aln(x)&#x3D;0$</p>
+<hr>
+<p>指数增长：复利，动物种群数</p>
+<p>指数衰变： 放射性衰变</p>
+<p>若 $y&#x3D;e^{kx}$,那么 dy&#x2F;dx &#x3D; ke^{kx},也就是 dy&#x2F;dx&#x3D;ky</p>
+<ul>
+<li>这是一个微分方程例子，第30章会有更多例子</li>
+<li>这里 如果dy&#x2F;dx&#x3D;ky,那么$y&#x3D;Ae^{kx}$,在30.2节中说为什么会这样</li>
+<li>而这里对应到 兔子繁殖，说明了，增长速度和现有量保持常熟倍数关系</li>
+<li>dP&#x2F;dt&#x3D;kP, &#x3D;&gt; P(t)&#x3D;P_0e^{kt}</li>
+</ul>
+<p>类似的 dP&#x2F;dt&#x3D;-kP 指数衰变，$P(t)&#x3D;P_0e^{-kt}$</p>
+<hr>
+<p>双曲函数:</p>
+<ul>
+<li>$cosh(x)&#x3D;\frac{e^x+e^{-x}}{2}$</li>
+<li>$sinh(x)&#x3D;\frac{e^x-e^{-x}}{2}$</li>
+<li>作者的评价： 伪装的指数函数又和三角函数相似<ul>
+<li>$cosh^2-sinh^2&#x3D;1$ 双曲方程</li>
+<li>sinh’&#x3D;cosh</li>
+<li>cosh’&#x3D;sinh</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-反函数和反三角函数"><a href="#10-反函数和反三角函数" class="headerlink" title="10. 反函数和反三角函数"></a>10. 反函数和反三角函数</h2><p>充分,非必要，严格单调递增函数 f(x) 有反函数，那么如果函数可导，导函数符号不变，那么也可以得到有反函数</p>
+<p>如果存在，那么当 f(y)&#x3D;x时，我们就能求f的反函数了，因为这时的 y(x)输入得到x,</p>
+<p>1&#x3D;d&#x2F;dx (x)&#x3D;d&#x2F;dx(f(y))&#x3D;f’ * d&#x2F;dx(y)</p>
+<p>f’&#x3D;1&#x2F;(d&#x2F;dx(y))</p>
+<p>这个东西，对于 一元的，去看函数图像的对称更好看，更直观</p>
+<hr>
+<p>具体的 反三角函数</p>
+<p>$d&#x2F;dx \sin^{-1}(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \cos^{-1}(x)&#x3D;-\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \tan^{-1}(x)&#x3D;-\frac{1}{\sqrt{1+x^2}}$</p>
+<p>… 这里还有其它反三角函数的导数，然后也有反双曲函数的导数</p>
+<p>$x&gt;1,d&#x2F;dx \cosh^{-1}(x)&#x3D;\frac{1}{x^2-1}$</p>
+<p>$d&#x2F;dx \sinh^{-1}(x)&#x3D;\frac{1}{x^2+1}$</p>
+<h2 id="11-导数和图像"><a href="#11-导数和图像" class="headerlink" title="11. 导数和图像"></a>11. 导数和图像</h2><p>局部最大值，称作局部极大值</p>
+<p>极值定理：开区间(a,b)内的局部极值，一定是导数为0,或者导数不存在</p>
+<p>罗尔定理：f在<code>[a,b]</code>连续,在(a,b)可导，f(a)&#x3D;f(b),存在一点 f’(c)&#x3D;0</p>
+<p>在罗尔定理上，增加一个线性函数就有了中值定理：</p>
+<ul>
+<li><code>[a,b]</code>内连续,(a,b)内可导，(a,b)中存在c, f’(c)&#x3D;(f(b)-f(a))&#x2F;(b-a)</li>
+<li>需要注意的是这是 增加线性函数不是旋转，因为旋转可能让函数变得不是函数，而线性偏移，保证y的输出还是一个</li>
+</ul>
+<p>注意的是，罗尔定理和中值定理，都是存在性定理</p>
+<ul>
+<li>用途</li>
+<li>例如 导数为0 证明 常函数<ul>
+<li>任取两点，因为可导，存在f’(c)&#x3D;两点值差&#x2F;坐标差，那么只能值相等</li>
+</ul>
+</li>
+<li>上面这个结论可以推得，两个导数相同的函数 的差是常数</li>
+</ul>
+<p>二阶导数 图像：凹凸，拐点（’’&#x3D;0)</p>
+<p>一阶导数零点：</p>
+<ul>
+<li>局部最大：一阶 +-&gt;-， 二阶 &lt;0</li>
+<li>局部最小：一阶  - -&gt; +, 二阶 &gt;0</li>
+<li>水平拐点，单调递增： 一阶 +, 二阶&#x3D;0</li>
+<li>水平拐点，单调递减： 一阶 -，二阶&#x3D;0</li>
+<li>注意的是， 二阶&#x3D;0只是必要，但不充分，也就是无法从二阶&#x3D;0判断什么，<ul>
+<li>例子 $x^3,x^4$ 在0点的时候 二阶都&#x3D;0</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-绘制函数图像"><a href="#12-绘制函数图像" class="headerlink" title="12. 绘制函数图像"></a>12. 绘制函数图像</h2><p>利用上面性质找关键点绘制，然后研究凹凸性绘制</p>
+<h2 id="13-最优化和线性化"><a href="#13-最优化和线性化" class="headerlink" title="13.最优化和线性化"></a>13.最优化和线性化</h2><p>实际应用：</p>
+<p>最优化的核心思想是，找到所有变量，和优化目标，然后利用等式化简成单变量函数 f(x)，然后确定范围和极值点</p>
+<p>线性化求近似值，这里例子是f(x)&#x3D;sqrt(x),然后算 sqrt(11),用的x&#x3D;3的一阶展开，思想核心有泰勒展开也有牛顿切线，完成估算</p>
+<p>L(x)&#x3D;f(a)+f’(x)(x-a) 称作在x&#x3D;a点处的线性化</p>
+<p>微分: <code>df=f&#39;(a) delta x</code>, 误差: rf&#x3D;f(x)-L(x)&#x3D;delta f-df&#x3D;1&#x2F;2 f’’(c) (x-a)^2 (根据中值定理) &lt;&#x3D; 1&#x2F;2 (x-a)^2 max(f’’)</p>
+<p>牛顿法： a是方程 f(x)&#x3D;0的解的一个近似，如果b&#x3D;a-f(a)&#x2F;f’(a), 很多情况b是更好的近似，这个图像上 很“显然”</p>
+<ul>
+<li>一个明显的优点是，对于高次函数难以有直接求根公式时，这个方法很多时候能有效的求得一个数值根</li>
+<li>同时从图像上也能知道，这个方法无法始终有效，当选取的初始点和范围无法完成对应的下降的话</li>
+</ul>
+<h2 id="14-洛必达法则及极限问题总结"><a href="#14-洛必达法则及极限问题总结" class="headerlink" title="14. 洛必达法则及极限问题总结"></a>14. 洛必达法则及极限问题总结</h2><p>结论： f(a)&#x3D;g(a)&#x3D;0,  lim x-&gt; a, f(x)&#x2F;g(x) &#x3D; f’(x)&#x2F;g’(x)</p>
+<p>这个的核心想法是，f(x)&#x2F;g(x)在a附近 &#x3D; (f(a)+delta f)&#x2F;(g(a)+delta g) &#x3D; delta f &#x2F; delta g &#x3D; (df+rf)&#x2F;(dg+rg), 微分+误差</p>
+<ul>
+<li>如果df,dg不同时为0, 那么就有结果了，rf,rg是高阶无穷小，可以忽略的部分</li>
+<li>如果df,dg 同时为0,那么 rf&#x2F;rg 再次展开，可以再次洛必达</li>
+<li>这里 的另一个解释是，希望导函数在附近是一致收敛的，这样 f’(c)(x-a)&#x2F;g’(c)(x-a)来表示</li>
+</ul>
+<p>对于0&#x2F;0有了，那么 无穷&#x2F;无穷，可以看成 倒数</p>
+<hr>
+<p>这里延伸了一点，不过感觉要在等价无穷小那里讲，</p>
+<ul>
+<li>x趋于0, 1&#x2F;x-1&#x2F;sin(x)， 注意的是 无穷-无穷，（没有减法的对应运算），但是可以通分，</li>
+<li>0 乘上 无穷， x-&gt;0, xln(x), 化成 无穷&#x2F;无穷</li>
+</ul>
+<h2 id="15-积分"><a href="#15-积分" class="headerlink" title="15. 积分"></a>15. 积分</h2><p>这里先讲 求和符号，以及高斯计算1+…+100</p>
+<p>这里用的 汽车 速度 时间 路程 的 坐标轴图像来引入，导出了 积分就是“希望”求和坐标轴围起来的“有向”面积</p>
+<ul>
+<li>这里讲“有向”就是向上是正，向下是复<ul>
+<li>可以无向吗，显然你可以这样定义，但是这显然不符合期望<ul>
+<li>例子就是 车的速度变化，的变化函数的围成面积，引入方向是更自然的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这里的“希望”是说，目前阶段的积分定义 解决不了一些 以后学实分析时 f(x)&#x3D;1(当x是无理数时),0(x是有理数时)的这种积分</li>
+</ul>
+<p>积分的想法，就是通过“均匀”（非必要，只是常用的方法）纵向切割，切割面积成很多纵条</p>
+<ul>
+<li>每个纵条在原函数下方，且最大，则称为小和</li>
+<li>每个纵条在原函数上方，且最小，则称为大和</li>
+</ul>
+<p>书上写的 上和 下和，应该更直观一些</p>
+<p>然后极限的是 切割的数量 趋于无穷</p>
+<ul>
+<li>这时候，大和小和要趋于同样的值，那么根据三明治夹击定理，得到了函数的“积分”</li>
+<li>这里 趋于同样值，意味着大和小和的差趋于0</li>
+</ul>
+<h2 id="16-定积分"><a href="#16-定积分" class="headerlink" title="16. 定积分"></a>16. 定积分</h2><p>上面这个东西，我们称它为定积分$\int_{a}^b f(x)$, 表达式 f(x)在取值<code>[a,b]</code> 范围时，和坐标轴 围成有向面积</p>
+<p>这里注意的是，我们会发现 一条线 的面积是0,（概率论中的 0 概率不表示不可能）</p>
+<p>$\int_{a}^b f(x)&#x3D;\lim_{mesh -&gt; 0}\sum f(c_j)(x_j-x_{j-1})$</p>
+<ul>
+<li>也就是切割最大间隔趋于0</li>
+<li>c_j 是$[x_{j-1},x_j]$之间的某个值，那么f(cj)就是之间最大最小值之间</li>
+<li>称作 黎曼和，黎曼积分</li>
+</ul>
+<p>常用技巧就是 以1&#x2F;n,然后完成求和表达式，当n趋于无穷时，计算这个极限</p>
+<p>为了计算一些分段的函数，并且和连续函数契合，定义了 <code>int[a,b]+int[b,c] = int[a,c]</code></p>
+<ul>
+<li>为了使它合理，定义了 a &gt;&#x3D; b的值</li>
+<li>这里我们可以发现，虽然 划分也好，拆分int也好，<code>[a,b]+[b,c]</code> 看起来计算了两次，而对于有限值的点来说，面积就是0,</li>
+<li>以及列了一些 和四则运算相关的性质，常数倍数提出，int 加减拆分</li>
+</ul>
+<p>然后类似的，在积分上有 三明治夹击定理，中值定理</p>
+<p>不可积函数：举例了上面实分析的例子：下和&#x3D;0,上和&#x3D;1</p>
+<h2 id="17-微积分基本定理"><a href="#17-微积分基本定理" class="headerlink" title="17. 微积分基本定理"></a>17. 微积分基本定理</h2><p>中文的 积分 微分 都带一个分，而且名字都叫微积分，有一种关联的感觉</p>
+<p>但这里 才是“一个厉害的结论”</p>
+<p>从 定积分 在点a的 增量是面积，微分是f(x) deltax, 导数是f(x), 引出：积分 和 微分 是（一种逆运算的感觉）</p>
+<ul>
+<li>这个意义在于，微分看起来更好求，那么如果有了微分，那么不再需要 黎曼切割去算积分，而直接有积分</li>
+<li>第二是，中文叫做不定积分，和定积分<ul>
+<li>写法上差别是 范围，与+C,看起来很像</li>
+<li>但从 关系上说，定积分,不定积分 的微分得到 f, f的积分是不定积分，</li>
+<li>图像上，两个函数可以通过沿y移动重叠，那么它们必然微分相同，差值是C, 它们微分的不定积分 涵盖了他两，而这两个函数在[a,b]上，从a到b的变化是一样的，这个变化是想求的微分的定积分的值</li>
+<li>F(x)&#x3D;x^2,f(x)&#x3D;F’(x)&#x3D;2x, int f(x) &#x3D; x^2+C  得到了一系列函数, int_1^2 f(x) &#x3D; 3, 表示 这一系列函数从点x&#x3D;1到x&#x3D;2的增量都是3</li>
+</ul>
+</li>
+</ul>
+<p>微积分的第一基本定理：f在[a,b]上连续,F(x) 在(a,b)可导，且F(x)&#x3D;f(x)</p>
+<ul>
+<li>那么 $F(x)&#x3D;\int_{a}^x f(t)dt,x\in[a,b]$</li>
+<li>函数的导函数围成的面积 &#x3D; 原函数的增量</li>
+</ul>
+<p>微积分第二基本定理, f在[a,b]连续，F是f的任意一个反导数，那么</p>
+<ul>
+<li>$\int_{a}^b f(x)dx&#x3D;F(b)-F(a)$</li>
+<li>反导数 也就是 不定积分中任意一个</li>
+<li>$\frac{d}{dx}F(x)&#x3D;f(x)$那么$\int f(x)dx&#x3D;F(x)+C$</li>
+</ul>
+<p>这里同样 塞一下四则运算</p>
+<p>很多例题，包括各种上下限是变量的，</p>
+<p>而定积分时还有一个可用的东西，叫做奇偶性，这得益于它是有向的面积</p>
+<p>P338有个积分表</p>
+<p>这个证明核心 又是“中值定理&#x2F;介值定理”</p>
+<h2 id="18-积分的方法I（换元，分部，分式）"><a href="#18-积分的方法I（换元，分部，分式）" class="headerlink" title="18. 积分的方法I（换元，分部，分式）"></a>18. 积分的方法I（换元，分部，分式）</h2><p>这一块没有新的数学原理，而是实际应用中，怎么求积分，</p>
+<p>换元法： 核心思想是 int f(x) dx 中，如果能把其中一个x的表达式g(x),全部都表示g(x)的表达式，那么就能完成换元</p>
+<ul>
+<li>$\int 2xe^{x^2} dx&#x3D;\int e^{x^2} d x^2$,  这里 $x^2$可以看成整体$t&#x3D;x^2$</li>
+<li>$\int \frac{f’(x)}{f(x)}dx &#x3D; \ln|f(x)|+C$</li>
+<li>$\int x(3x+2)^{1&#x2F;5} dx$,这里 把$t&#x3D;(3x+2)^{1&#x2F;5}$,那么原式&#x3D;$\int \frac{1}{3}(t^5-2)(t)\frac{5}{3}t^4 dt$</li>
+</ul>
+<p>这里理论解释是 复合函数链式求导，的反向积分过程</p>
+<hr>
+<p>分部积分法, 同样是来自于微分过程中的逆向操作而已</p>
+<p>$\frac{d}{dx}(uv)&#x3D;v\frac{d}{dx}(u)+u\frac{d}{dx}v$</p>
+<ul>
+<li>$\int u\frac{d}{dx}(v)dx&#x3D;uv-\int v\frac{d}{dx}(u) dx$</li>
+<li>$\int u dv &#x3D; uv - \int v du$</li>
+</ul>
+<hr>
+<p>部分分式$\int \frac{p(x)}{q(x)}dx$</p>
+<ul>
+<li>这里的方法还是 多项式 求余法</li>
+<li>然后 再待定系数法，最终希望是<code>int 整式子 + 多个\frac&#123;常数&#125;&#123;(x+a)^t&#125;</code>的形式</li>
+<li>对于 分母是两个不同一次式子时，可以用 线性代数的知识，对分子进行拆分，<ul>
+<li>$1&#x2F;(x^2-1)&#x3D;1&#x2F;((x-1)(x+1))$, 分子 &#x3D;((x+1)-(x-1) )&#x2F;2</li>
+</ul>
+</li>
+<li>总的来说 这样做，不能解决的就是 分母是难以拆的多项式</li>
+<li>其中特别的 不可拆2次式子可以考虑<ul>
+<li>(x+a)&#x2F;((x+b)^2+c)的形式， 从而化成 d&#x2F;(t^2+c) 和 t&#x2F;(t^2+c),就对应 arctan和ln了</li>
+<li>这一块的感受是，从没想过 tan,ln这些 在微积分之前觉得很远的函数，现在如此近，而这个感觉在后面的泰勒展开和级数的时候会更多</li>
+</ul>
+</li>
+</ul>
+<p>$\int \frac{1}{t^2+a^2}dt&#x3D;\frac{1}{a}arctan(\frac{t}{a})+C$</p>
+<h2 id="19-积分的方法II（三角）"><a href="#19-积分的方法II（三角）" class="headerlink" title="19. 积分的方法II（三角）"></a>19. 积分的方法II（三角）</h2><p>$cos^2(x)&#x3D;\frac{1}{2}(1+cos(2x))$</p>
+<p>$sin^2(x)&#x3D;\frac{1}{2}(1-cos(2x))$</p>
+<p>核心还是三角的换元，看起来就能完成幂次变换，和表达式变换</p>
+<p>$\int sin^ncos^m$,</p>
+<ul>
+<li>有奇数幂可以拆一个，剩下用sin2+cos2&#x3D;1换成只有一个的，从而完成换元</li>
+<li>都是偶幂，用上面的完成降次</li>
+</ul>
+<p>$\int tan(x)dx &#x3D; -\ln |cos(x)|+C$</p>
+<p>$tan^2(x)&#x3D;sec^2(x)-1$</p>
+<p>哎，感觉这一块，真的背不到，查表是能查</p>
+<p>$\int sec^2(x)dx&#x3D;tan(x)+C$</p>
+<p>$I_n&#x3D;\int tan^n(x)dx$</p>
+<p>$I_0&#x3D;x+C$</p>
+<p>$I_1&#x3D;-\ln |cos(x)|+C$</p>
+<p>$I_n&#x3D;\frac{1}{n-1}tan^{n-1}(x)-I_{n-2}$ 约化公式</p>
+<hr>
+<p>类似的 $I_n&#x3D;\int_0^{\pi&#x2F;2} cos^n(x)dx$</p>
+<p>$I_n&#x3D;(n-1)(I_{n-1}-I_n)$</p>
+<p>$I_{n}&#x3D;\frac{n-1}{n}I_{n-2}$</p>
+<p>$I_0&#x3D;\frac{pi}{2},I_1&#x3D;1$</p>
+<hr>
+<p>这一块是对于一些直接求不到，的完成一个形式的递归表达式</p>
+<hr>
+<p>$\sqrt{a^2-x^2}$ 换元 $x&#x3D;a\sin(\theta)$</p>
+<p>$\sqrt{a^2+x^2}$ 换元 $x&#x3D;a\tan(\theta)$</p>
+<p>$\sqrt{x^2-a^2}$ 换元 $x&#x3D;a\sec(\theta)$</p>
+<hr>
+<p>整个的核心还是要对 微分结果熟悉</p>
+<h2 id="20-反常积分：基本概念"><a href="#20-反常积分：基本概念" class="headerlink" title="20. 反常积分：基本概念"></a>20. 反常积分：基本概念</h2><p>目标</p>
+<ul>
+<li>有些函数，在定义域无限时，围成面积有限，（ 例如 等比例的 实数定义域版 $f(x)&#x3D;(1&#x2F;2)^x$</li>
+<li>有些函数，在有限定义域，无限值域时，围成面积有限，（例如$2\sqrt{x}$求导得到的形如$\frac{1}{\sqrt{x}}$在[0,1]</li>
+<li>其它的都无限</li>
+</ul>
+<p>主要希望能计算那些有限的函数</p>
+<ul>
+<li>那么这里补充定义，如果 [a,b],仅在点a无限，$\int_a^b&#x3D;\lim_{\epsilon\to 0^+}\int_{a+\epsilon}^b$<ul>
+<li>这里有点（覆盖写入的感觉），也就是积分 前面定义了 <code>[]连续,()可导</code>，以及拆分。而这里补充定义了 单点值域极限的情况，这样定义了$\int_{0}^{1}\frac{1}{\sqrt{x}}$的值</li>
+<li>其实 根据前面 对称性，和可拆分性，我们自然的也对一些间断点，破裂点，b出的无穷有了 “自然”的定义 例如 上面要趋于$b-\epsilon$，<ul>
+<li>换个角度思考，那如果就是连续呢，会发现单点的值，不论无不无穷 直接被视作0,也就是当连续时，我们要算(a,b)的积分，也能这样定义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同样关于积分范围的无穷定义，也是补充定义$\int_a^{\infty}&#x3D;\lim_{N\to \infty} \int_{a}^{N}$</li>
+<li>再换句话说，积分的符号写法是“模糊的”，而为了让模糊的写法，在满足最纯粹 <code>[]连续,()可导</code>以及嵌入四则运算的前提下，补充了一些“更自然”的补充定义</li>
+</ul>
+<hr>
+<p>$x\to a,\frac{f(x)}{g(x)}&#x3D;1$那么称作在点$a$他们相似$f(x)\sim g(x)$</p>
+<ul>
+<li>关于相似 引入 四则运算</li>
+<li>f<del>g,h</del>j &#x3D;&gt; fh~gj</li>
+<li>注意的是，加减运算是无法保证的<ul>
+<li>tan<del>x,sin</del>x,但是 tan-sin~0是错的！！之后会引入等价无穷小</li>
+</ul>
+</li>
+<li>这里～的核心是连续的把（值？）捆在不太远的位置，<ul>
+<li>而当都趋于0时，加减的实际内容不是这个（值），而是对捆绑的力度加减</li>
+<li>当都不趋于0时，加减的实际内容是针对这个值，而这个值的（结果 需要不是0）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>有了比较判别法，如果一个积分结果无穷，另一个函数比它大，那么积分也是无穷（核心也是夹击类似的想法）</p>
+<p>而这里又是一个重要的 极限</p>
+<ul>
+<li>$\int_a^{\infty} \frac{1}{x^p} dx, a &gt; 0$,<ul>
+<li>$p\le 1$时，发散</li>
+<li>$p &gt; 1$时，收敛</li>
+</ul>
+</li>
+<li>另外的 $\int_0^a,\frac{1}{x^a}dx a&gt;0$<ul>
+<li>p&lt;1 收敛</li>
+<li>$p\ge 1$ 发散</li>
+</ul>
+</li>
+</ul>
+<p>绝对收敛判别法, int|f(x)|收敛，则 int f(x),收敛，核心还是夹挤, -|f(x)| &lt;&#x3D; f(x) &lt;&#x3D; |f(x)|,在足够大的n以后左右都趋于0</p>
+<h2 id="21-反常积分：如何解题"><a href="#21-反常积分：如何解题" class="headerlink" title="21. 反常积分：如何解题"></a>21. 反常积分：如何解题</h2><ol>
+<li>找所有瑕点，以瑕点切割，切割成多个 <code>[],()</code>，每个里面使用新的或朴素的积分定义计算</li>
+</ol>
+<p>x在无穷附近</p>
+<p>f(x)的最高幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin,cos 可以用 绝对收敛判别法， $||\le1$</p>
+<p>对于 x &gt; 0, $e^{-x} \le \frac{C}{x^n}$, </p>
+<p>对于 x &gt; 0, $ln(x)\le Cx^n$</p>
+<hr>
+<p>x在0附近</p>
+<p>f(x)的最低幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin~x</p>
+<p>tan~x</p>
+<p>cos~1</p>
+<p>$e^x\sim 1$</p>
+<p>$e^x-1\sim x$</p>
+<p>$|\ln(x)|\le \frac{C}{x^{a}}, a&gt;0$,足够小的a</p>
+<hr>
+<p>总的来说这里，在0或者在无穷附近的处理，都希望能变成x的幂次的样子</p>
+<p>而需要注意的是加减法的结果不应该是 ~0,否则会有问题(加减的是幅度)</p>
+<h2 id="22-数列和级数：基本概念"><a href="#22-数列和级数：基本概念" class="headerlink" title="22.数列和级数：基本概念"></a>22.数列和级数：基本概念</h2><p>数列：极限，是一种（可列，无穷）</p>
+<p>例如 $f(x)&#x3D;sin(n)&#x2F;x^n$, 也可以定义$a_n&#x3D;sin(n)&#x2F;x^n$, 那么 这可以看成对函数的无穷方向的 整点采样</p>
+<p>感官上显然的，如果函数数列同样表达式，那么函数收敛必然数列收敛，但数列首先可能刚好因为（采样的被采样点特殊）而收敛 函数却不收敛</p>
+<ul>
+<li>$f(x)&#x3D;sin(2<em>\pi</em>n)$</li>
+<li>这里感官上，是对于 图像的 epsilon和N的理解</li>
+</ul>
+<p>连续函数保持极限：</p>
+<ul>
+<li>和上面不同，f(x)在点a是连续的，那么数列的 采样$a_i&#x3D;f(t_i)$,然后t_i随着i趋于无穷，采样t趋于a,那么a_i的极限也就是f(a)</li>
+</ul>
+<p>重要数列</p>
+<ul>
+<li>$a_n&#x3D;r^n$, 讨论 r<ul>
+<li>（-1,1） 收敛于0</li>
+<li>1,收敛于1</li>
+<li><blockquote>
+<p>1, 趋于无穷</p>
+</blockquote>
+</li>
+<li>&lt;&#x3D; -1, 不存在</li>
+</ul>
+</li>
+<li>$a_n&#x3D;(1+k&#x2F;n)^n$, 趋于 $e^k$</li>
+</ul>
+<hr>
+<p>series 级数，就是数列的和, 起始有的0,有的1都行</p>
+<ul>
+<li>$\sum_{1}^\infty &#x3D; \lim_{N\to \infty}\sum_{1}^N$ 称作无穷级数</li>
+<li>$\sum_0^{\infty} {r^n}$<ul>
+<li>(-1,1) &#x3D;&gt; $\frac{1}{1-r}$</li>
+<li>其它的发散</li>
+</ul>
+</li>
+<li>从观感上自然的，需要a_n是趋于0的，能判断是发散，（注意只能判断是发散，不能判断收敛，因为这只是收敛的必要条件，不是充分的）</li>
+</ul>
+<p>比较判别，类似函数的比较判别 a_n~b_n, 等价于 lim n-&gt;\infty, a_n&#x2F;b_n&#x3D;1</p>
+<ul>
+<li>例如 $sin(1&#x2F;2^n) \sim (1&#x2F;2)^n$</li>
+</ul>
+<p>级数中有新的判别法：比式判别法</p>
+<ul>
+<li>$\lim_{n\to \infty}a_{n+1}&#x2F;a_n &#x3D; L &lt; 1$ , 那么收敛，<ul>
+<li>这里核心思想就两个 小于1的等比数列和极限收敛</li>
+<li>第二比例有极限，所以可以被捆绑在明确小于一个明确小于1的数以内，所以至少是有界的,从而根据柯西的，截取尾部可以和任意小的想法</li>
+</ul>
+</li>
+</ul>
+<p>类似的，还是利用等比数列求和的想法 和 上面的 等价的想法，</p>
+<ul>
+<li>有了根式判别法 $(a_n)^{\frac{1}{n}}&#x3D;L&lt;1$</li>
+</ul>
+<p>级数的拆分 也有满足的四则运算，</p>
+<ul>
+<li>不过注意的是</li>
+</ul>
+<h2 id="23-求解级数问题"><a href="#23-求解级数问题" class="headerlink" title="23.求解级数问题"></a>23.求解级数问题</h2><h2 id="24-泰勒多项式、泰勒级数和幂级数导论"><a href="#24-泰勒多项式、泰勒级数和幂级数导论" class="headerlink" title="24. 泰勒多项式、泰勒级数和幂级数导论"></a>24. 泰勒多项式、泰勒级数和幂级数导论</h2><h2 id="25-求解估算问题"><a href="#25-求解估算问题" class="headerlink" title="25. 求解估算问题"></a>25. 求解估算问题</h2><h2 id="26-泰勒级数和幂级数：如何解题"><a href="#26-泰勒级数和幂级数：如何解题" class="headerlink" title="26. 泰勒级数和幂级数：如何解题"></a>26. 泰勒级数和幂级数：如何解题</h2><h2 id="27-参数方程和极坐标"><a href="#27-参数方程和极坐标" class="headerlink" title="27. 参数方程和极坐标"></a>27. 参数方程和极坐标</h2><h2 id="28-复数"><a href="#28-复数" class="headerlink" title="28. 复数"></a>28. 复数</h2><h2 id="29-体积、弧长和表面积"><a href="#29-体积、弧长和表面积" class="headerlink" title="29. 体积、弧长和表面积"></a>29. 体积、弧长和表面积</h2><h2 id="30-微分方程"><a href="#30-微分方程" class="headerlink" title="30. 微分方程"></a>30. 微分方程</h2><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>本书出了口语化流畅，细致内容，很多例子，以外，还有很大优点就是图多</p>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/" title="普林斯顿 微积分读本">https://yexiaorain.github.io/Math/the_calculus_lifesaver/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"><i class="fa fa-tag"></i> 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/newton_identities/" rel="prev" title="牛顿恒等式">
+                  <i class="fa fa-chevron-left"></i> 牛顿恒等式
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">272k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">4:07</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/Math/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/Math/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/the_calculus_lifesaver/"}</script>
+  <script src="/Math/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yexiaorain","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/Math/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

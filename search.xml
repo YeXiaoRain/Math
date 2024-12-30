@@ -148,6 +148,55 @@
       </tags>
   </entry>
   <entry>
+    <title>求手算出x^3+101=y^2的正整数解</title>
+    <url>/Math/2024-08-14-Mordell_equation/</url>
+    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$x^3+101&#x3D;y^2$ 求手算一组正整数解</p>
+<p>这道题目来自2009年初中数学竞赛的一道题</p>
+<p><a href="https://zhidao.baidu.com/question/123254978.html">https://zhidao.baidu.com/question/123254978.html</a></p>
+<p><a href="https://zhidao.baidu.com/question/114242326.html">https://zhidao.baidu.com/question/114242326.html</a></p>
+<hr>
+<p><a href="https://www.zhihu.com/question/664003966">https://www.zhihu.com/question/664003966</a></p>
+<p><a href="https://math.stackexchange.com/questions/4957099">https://math.stackexchange.com/questions/4957099</a></p>
+<h2 id="一些不算成功的尝试"><a href="#一些不算成功的尝试" class="headerlink" title="一些不算成功的尝试"></a>一些不算成功的尝试</h2><p>在场上 有尝试做一些mod,但没有很多，然后以为不会太大，就开始了暴力计算，当然当场是没有做出这个题目</p>
+<hr>
+<p>当时赛后 问了汀舅，汀舅给的方案是</p>
+<p>做了更多的mod,进一步缩小枚举范围，但没有特别如意</p>
+<hr>
+<p>最近在整理一些东西，突然又看到了这个，自己尝试了一下</p>
+<p>通过 $x^3+1 &#x3D; (x+1)(x^2-x+1)&#x3D;(y-10)(y+10)$ 的变形，让我对于2相关的 幂次很感兴趣</p>
+<p>比较容易的得到了 $x\equiv 3\pmod{16}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{16}, y\equiv 2 \pmod{4}$</p>
+<p>这对于知道答案的来说，的确已经可以暴力手动计算了，但对于不知道答案的来说，其实不知道自己会需要枚举多少个</p>
+<h2 id="来自math-stackexchange的提速方案"><a href="#来自math-stackexchange的提速方案" class="headerlink" title="来自math.stackexchange的提速方案"></a>来自math.stackexchange的提速方案</h2><p>$x^3+101&#x3D;y^2\pmod 9$</p>
+<p>容易得到 $x\equiv 2 \pmod{3}$,  计算量也不大，因为$x$侧只用关心 $\mod 3$, $y$侧考虑$0\to8$</p>
+<hr>
+<p>然后 考察</p>
+<p>$x^3+101&#x3D;y^2\pmod 8$</p>
+<p>可以得到 $x\equiv 3\pmod{8}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{8}, y\equiv 2 \pmod{4}$</p>
+<hr>
+<p>两者结合可以得到 </p>
+<p>$x\equiv -1 \pmod{24}, y \equiv 2 \pmod{4}$</p>
+<p>$x\equiv 11 \pmod{24}, y \equiv 0 \pmod{4}$</p>
+<hr>
+<p>$x&#x3D;24a-1,y&#x3D;4b+2$ 通过测试$\pmod{16}$可以得到$a$是偶数,$x&#x3D;48c-1$, 再尝试$\pmod{32}$可以得到$x&#x3D;96d-1$</p>
+<p>$x&#x3D;24a+11,y&#x3D;4b$ 通过测试$\pmod{16}$可以得到$a$是奇数$x&#x3D;48c+35$ ??TODO</p>
+<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p><a href="https://zhuanlan.zhihu.com/p/27159180">知乎 椭圆曲线的一些基础性质 陆zz</a></p>
+<p><a href="https://www.zhihu.com/question/491035924">知乎 </a></p>
+<p><a href="https://hr.userweb.mwn.de/numb/mordell.html">https://hr.userweb.mwn.de/numb/mordell.html</a></p>
+<p><a href="https://math.stackexchange.com/a/4957401/728591">Travis Willse</a> 大佬说  The following routine in Sage 的结果 看来只有 x&#x3D;-1,和x&#x3D;95两个解</p>
+<p><a href="https://math.stackexchange.com/a/4958295/728591">Sayan Dutta</a>  大佬说 这是 Mordell’s equation</p>
+<p><a href="http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf">http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf</a></p>
+<p><a href="https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf">https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf</a></p>
+<p><a href="https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf">https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf</a></p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>Mordell_s_equation</tag>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>立直麻将 麻雀（マージャン）</title>
     <url>/Math/2023-07-23-Japanese_Mahjong/</url>
     <content><![CDATA[<p>有很多细则这里不一定提及(比如十三幺可以抢按杠,比如宝牌), 主要还是常见普适一点的内容</p>
@@ -418,65 +467,19 @@
       </tags>
   </entry>
   <entry>
-    <title>求手算出x^3+101=y^2的正整数解</title>
-    <url>/Math/2024-08-14-Mordell_equation/</url>
-    <content><![CDATA[<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$x^3+101&#x3D;y^2$ 求手算一组正整数解</p>
-<p>这道题目来自2009年初中数学竞赛的一道题</p>
-<p><a href="https://zhidao.baidu.com/question/123254978.html">https://zhidao.baidu.com/question/123254978.html</a></p>
-<p><a href="https://zhidao.baidu.com/question/114242326.html">https://zhidao.baidu.com/question/114242326.html</a></p>
-<hr>
-<p><a href="https://www.zhihu.com/question/664003966">https://www.zhihu.com/question/664003966</a></p>
-<p><a href="https://math.stackexchange.com/questions/4957099">https://math.stackexchange.com/questions/4957099</a></p>
-<h2 id="一些不算成功的尝试"><a href="#一些不算成功的尝试" class="headerlink" title="一些不算成功的尝试"></a>一些不算成功的尝试</h2><p>在场上 有尝试做一些mod,但没有很多，然后以为不会太大，就开始了暴力计算，当然当场是没有做出这个题目</p>
-<hr>
-<p>当时赛后 问了汀舅，汀舅给的方案是</p>
-<p>做了更多的mod,进一步缩小枚举范围，但没有特别如意</p>
-<hr>
-<p>最近在整理一些东西，突然又看到了这个，自己尝试了一下</p>
-<p>通过 $x^3+1 &#x3D; (x+1)(x^2-x+1)&#x3D;(y-10)(y+10)$ 的变形，让我对于2相关的 幂次很感兴趣</p>
-<p>比较容易的得到了 $x\equiv 3\pmod{16}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{16}, y\equiv 2 \pmod{4}$</p>
-<p>这对于知道答案的来说，的确已经可以暴力手动计算了，但对于不知道答案的来说，其实不知道自己会需要枚举多少个</p>
-<h2 id="来自math-stackexchange的提速方案"><a href="#来自math-stackexchange的提速方案" class="headerlink" title="来自math.stackexchange的提速方案"></a>来自math.stackexchange的提速方案</h2><p>$x^3+101&#x3D;y^2\pmod 9$</p>
-<p>容易得到 $x\equiv 2 \pmod{3}$,  计算量也不大，因为$x$侧只用关心 $\mod 3$, $y$侧考虑$0\to8$</p>
-<hr>
-<p>然后 考察</p>
-<p>$x^3+101&#x3D;y^2\pmod 8$</p>
-<p>可以得到 $x\equiv 3\pmod{8}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{8}, y\equiv 2 \pmod{4}$</p>
-<hr>
-<p>两者结合可以得到 </p>
-<p>$x\equiv -1 \pmod{24}, y \equiv 2 \pmod{4}$</p>
-<p>$x\equiv 11 \pmod{24}, y \equiv 0 \pmod{4}$</p>
-<hr>
-<p>$x&#x3D;24a-1,y&#x3D;4b+2$ 通过测试$\pmod{16}$可以得到$a$是偶数,$x&#x3D;48c-1$, 再尝试$\pmod{32}$可以得到$x&#x3D;96d-1$</p>
-<p>$x&#x3D;24a+11,y&#x3D;4b$ 通过测试$\pmod{16}$可以得到$a$是奇数$x&#x3D;48c+35$ ??TODO</p>
-<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p><a href="https://zhuanlan.zhihu.com/p/27159180">知乎 椭圆曲线的一些基础性质 陆zz</a></p>
-<p><a href="https://www.zhihu.com/question/491035924">知乎 </a></p>
-<p><a href="https://hr.userweb.mwn.de/numb/mordell.html">https://hr.userweb.mwn.de/numb/mordell.html</a></p>
-<p><a href="https://math.stackexchange.com/a/4957401/728591">Travis Willse</a> 大佬说  The following routine in Sage 的结果 看来只有 x&#x3D;-1,和x&#x3D;95两个解</p>
-<p><a href="https://math.stackexchange.com/a/4958295/728591">Sayan Dutta</a>  大佬说 这是 Mordell’s equation</p>
-<p><a href="http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf">http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf</a></p>
-<p><a href="https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf">https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf</a></p>
-<p><a href="https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf">https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf</a></p>
-]]></content>
-      <categories>
-        <category>数论</category>
-      </categories>
-      <tags>
-        <tag>Mordell_s_equation</tag>
-        <tag>数论</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高等代数 零 汇总以及其它</title>
     <url>/Math/Advanced_algebra_0/</url>
     <content><![CDATA[<p>ISBN 978-7-302-22518-8</p>
 <p>b站: <a href="https://www.bilibili.com/video/BV1jR4y1M78W">https://www.bilibili.com/video/BV1jR4y1M78W</a></p>
+<p>b站有个很大的问题，虽然有合集 分p,但是评论区竟然没有 按视频的评论区！？真的有够离谱, 这种评论区对于这种视频真的零作用。</p>
+<p>另外一个是 视频课 没有 书上的内容全</p>
 <h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
 <li>II 页的总览图</li>
 <li>序 其实就是整个脉络，学完后可以保留序</li>
 </ul>
 <h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><p>视频 相对于书的优点是push和动态清晰</p>
 <p>书相对于视频的优点是，自我节奏和多页快速来回翻看</p>
+<p>书上的脉络差了些，视频和书一起看最好，我觉得一些视频用来连接上下关系的内容，看似口头，实际上完全可以写成文字到书里。</p>
 ]]></content>
       <categories>
         <category>高等代数</category>
@@ -560,150 +563,657 @@
       </tags>
   </entry>
   <entry>
-    <title>高等代数 二 行列式</title>
-    <url>/Math/Advanced_algebra_2/</url>
-    <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><p>视频 p8~p18</p>
-<ol>
-<li>希望不做消元探索矩阵性质</li>
-<li>考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法</li>
-<li>从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质)</li>
-<li>相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)</li>
-</ol>
-<h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
+    <title>高等代数 十 具有度量的线性空间</title>
+    <url>/Math/Advanced_algebra_10/</url>
+    <content><![CDATA[<p>视频121-144</p>
+<h1 id="具有度量的线性空间"><a href="#具有度量的线性空间" class="headerlink" title="具有度量的线性空间"></a>具有度量的线性空间</h1><p>考虑在线性空间中 增加长度而概念</p>
 <span id="more"></span>
 
-<h2 id="n-元排列"><a href="#n-元排列" class="headerlink" title="n 元排列"></a>n 元排列</h2><p>$n$的排列有$n!$个</p>
-<p>性质1: 交换相邻元素得到新排列, 会改变<code>逆序对个数</code> 奇偶性</p>
-<p>性质2: 交换i和j得到新排列,会改变<code>逆序对个数</code>奇偶性,(相当于多次相邻交换)</p>
-<p>性质3: 保持下标和值的对应关系,让值有序而下标不一定有序,那么下标的<code>逆序对个数</code>的奇偶性和变化前的<code>逆序对</code>奇偶性一致S</p>
-<p>显然一个数列<code>逆序对个数</code> 的奇偶性只与它内容有关,与交换的具体过程无关</p>
-<h2 id="二阶行列式"><a href="#二阶行列式" class="headerlink" title="二阶行列式"></a>二阶行列式</h2><p>考虑$2\cdot 2$矩阵的解的个数</p>
-<p>$a_{11}a_{22}-a_{21}a_{12} \ne 0$ 唯一解</p>
-<p>$a_{11}a_{22}-a_{21}a_{12} &#x3D; 0$ 无穷多</p>
-<p>定义符号$\left |\begin{array}{hls} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right| &#x3D; a_{11}a_{22}-a_{21}a_{12}$</p>
-<p>二阶行列式$|A| \ne 0 \Leftrightarrow$   有唯一解</p>
-<h2 id="n-阶行列式"><a href="#n-阶行列式" class="headerlink" title="n 阶行列式"></a>n 阶行列式</h2><p>从二阶出发进行思考, 类似的定义n阶, 符号类似用系数表示</p>
-<p>对于值的定义: </p>
-<ol>
-<li>求和的每一项是, 不同行,不同列的元素的乘积</li>
-<li>行下标按照顺序, 列下标为全排列</li>
-<li>符号为$-1$的<code>列下标逆序对个数</code>的<code>幂次</code></li>
-</ol>
-<p>即是 $\sum_{j_1j_2\cdots j_n} (-1)^{\tau(j_1j_2\cdots j_n)}\prod_{i&#x3D;1}^n{a_{ij_i}}$ 这才是行列式的定义, 写成 $n\cdot n$的形状只是为了方便书写</p>
-<p>$n$阶行列式 称作$n$阶矩阵的行列式</p>
-<p>上三角形行列式: 主对角线下方全为$0$ 其值$&#x3D;\prod_{i&#x3D;1}^n a_{ii}$ </p>
-<hr>
-<p>这里有个后面(克莱姆法则)会解决的问题, 虽然二阶说明了与有唯一解的充要关系, 而这里虽然定义了n阶行列式, 却没有说明和原矩阵之间唯一解的充要关系</p>
-<h2 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h2><ol>
-<li><p>行列式交换两行, 等于所有被加的元素中的列下标中的两个交换, 因此行列式的两行交换&#x3D;值$\cdot -1$</p>
-</li>
-<li><p>可以得到$\sum_{i_1i_2\cdots i_n} (-1)^{\tau(i_1i_2\cdots i_n)}\prod_{j&#x3D;1}^na_{i_jj}$</p>
-</li>
-<li><p>转置:行列互换, 常见的3种写法$A’,A^T,A^t$, 显然行列式值相等$|A|&#x3D;|A^T|$</p>
-</li>
-<li><p>一行的$k$倍: 考虑代数表达式所有被加的元素都乘了k, 所以显然值也是k倍</p>
-</li>
-<li><p>一行加另一行上: 考虑代数表达式可以把所有加的括号拆开, 变成两个符号记法之和</p>
-</li>
-</ol>
-<p>$\left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ (b_1+c_1) &amp; \cdots &amp; (b_n+c_n) \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| &#x3D; \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ b_1 &amp; \cdots &amp; b_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| + \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ c_1 &amp; \cdots &amp; c_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right|$</p>
-<ol start="6">
-<li><p>两行成倍数, 考虑分别为$i_0,i_1$ 两行, 那么它的表达式中加法的项 不含符号部分一定有 $\cdots a_{i_0j_{i_0}} a_{i_1j_{i_1}}$ 和 $\cdots a_{i_1j_{i_0}} a_{i_0j_{i_1}}$ , 它们其它项一样,而仅有下标交换, 又有行成倍数, 因此它们绝对值相等而符号相反, 所以行列式的值为$0$, (另一个角度是, 它们可以互换互为相反数则只能是0</p>
-</li>
-<li><p>一行倍数加到另一行, 根据上面加法和倍数性质, 显然值不变</p>
-</li>
-<li><p>按一行(列)展开</p>
-</li>
-</ol>
-<p>$&#x3D; a_{11}M_{11}-a_{12}M_{12}+a_{13}M_{13} + \cdots$</p>
-<p>去掉行列剩下按照顺序拼接出的叫做<code>余子式</code>$M_{ij}$,带上<code>-1</code>幂次的叫做<code>代数余子式</code>$A_{ij}&#x3D; (-1)^{i+j}M_{ij}$</p>
-<p>$&#x3D; a_{11}A_{11}+a_{12}A_{12}+a_{13}M_{13} + \cdots$</p>
-<p>证明相等: 显然考虑表达式本来有$-1$的逆序对的幂次, 而移除了$a_{ij}$剩下按原来排列, 那么其内部和之间的逆序对未变化, 都是关于$a_{ij}$相关的, 那么分别是$a_{&lt;i,&gt;j}$和$a_{&gt;i,&lt;j}$ 的个数之和, 设$k &#x3D; a_{&lt;i,&gt;j}$, 那么有$a_{&lt;i,&lt;j} &#x3D; i-1-k$, $a_{&gt;i,&lt;j} &#x3D; j-1-(i-1-k) &#x3D; j-i+k$个, 所以一共$j-i+2k$个, 只考虑奇偶性的话$i+j$的奇偶性,也就有上面的等式, (另一个角度,考虑使用相邻交换把i行和j列分别交换到1行,1列,这样交换了(i-1+j-1)次, 再只需要考虑$a_{11}$的情况即可</p>
-<ol start="9">
-<li>反过来$i_0\ne i_1$ 时,考虑从代数表达式变成符号记法,带回去会让两行相等, $\sum_{j&#x3D;1}^n a_{i_0j}A_{i_1j} &#x3D;0$</li>
-</ol>
-<h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>n元线性方程组有唯一解的条件</p>
-<p>增广矩阵$\to$初等行变换阶梯形, 无解有非零行$(0,\cdots,0,d \ne 0)$, 无穷解非零行数$r &lt; n$,唯一解$r &#x3D; n$</p>
-<p>系数矩阵$\to$初等行变换阶梯形</p>
-<p>也就对应系数矩阵$\to$初等行变换阶梯形 上三角 有唯一解 (初等变换过程中行列式值不变), 行列式$\ne 0$</p>
-<p>同样上面的无解和无穷解都对应行列式$&#x3D; 0$</p>
-<p>至此得到了行列式的值与n元线性方程组有唯一解之间的关系</p>
-<hr>
-<p>推论1: 对于没有常数项的n元齐次n个方程组, 只有0解 $\Leftrightarrow |A|\ne 0$, 有非零解 $|A| &#x3D; 0$</p>
-<hr>
-<p>取$A$中$k$行$k$列的交叉点按原顺序排,称作$k$阶子式, 对应剩下的是余子式, 根据上面提出$a_{ij}$ 类似的思路,可以考虑先把选定的$k$行$k$列通过相邻交换,换到开头的$k$行$k$列,这样操作次数是, $(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k)$, 剩下的就是选定的$k$阶子式子和它的<code>余子式</code>相乘,其<code>余子式</code>乘上$(-1)^(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k) &#x3D; (-1)^{\sum_{p&#x3D;1}^k (i_p+j_p)}$则称作代数余子式</p>
-<h2 id="laplace定理-指定k行的展开"><a href="#laplace定理-指定k行的展开" class="headerlink" title="laplace定理(指定k行的展开)"></a>laplace定理(指定k行的展开)</h2><p>$|A|&#x3D;$ 任意的指定$k$行后, 所有$k$阶子式和它的代数余子式的乘积之和</p>
-<p>上面证明了每一项会怎么变化, 下面证明原行列式的每一项存在且唯一存在于一个乘积之中</p>
-<p>其实和一行展开类似, 任何一项对于指定的$k$行来说其列是确定的,则唯一确定了所在的$k$阶子式,证明了每一个都唯一存在于一个</p>
-<p>任意两个不同的k阶子式和它的代数余子式的乘积,都是行列式的项,且不会产生相同的加和项</p>
-<p>得证</p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>$\left|\begin{array}{d2} A &amp; O \\ C &amp; B \end{array}\right| &#x3D; |A||B|$</p>
-<h2 id="行列式在其它地方的应用"><a href="#行列式在其它地方的应用" class="headerlink" title="行列式在其它地方的应用"></a>行列式在其它地方的应用</h2><p>二阶行列式$\left|\begin{array}{d2} a_1 &amp; b_1 \\ a_2 &amp; b_2 \end{array}\right|$ 表示向量$(a_1,a_2)$和$(b_1,b_2)$所构成平行四边形,从$a$到$b$定向面积</p>
-<p>三阶行列式, 表示向量$(a_1,a_2,a_3)$,$(b_1,b_2,b_3)$,$(c_1,c_2,c_3)$所构成的平行六面体的定向体积,$a\to b$,c大拇指右手系</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>范德蒙行列式 $&#x3D;\prod_{i&lt;j} (a_j-a_i)$</p>
-<hr>
-<p>找 f(x,y,z)&#x3D;x3+y3+z3-3xyz 的一次因式?</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">x y z</span><br><span class="line">z x y</span><br><span class="line">y z x</span><br><span class="line">感觉还是很妙的</span><br></pre></td></tr></table></figure>
-
-<p>这里有三对角行列式的一般情况的 公式推导</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a b</span><br><span class="line">c a b</span><br><span class="line">  c a b</span><br><span class="line">    c a ...</span><br></pre></td></tr></table></figure>
-
-<p>&#96;</p>
-<h2 id="思路总结"><a href="#思路总结" class="headerlink" title="思路总结"></a>思路总结</h2><p>有不少是先看看二阶三阶怎么设计,再推广</p>
-<p>但看了18.06我认为这么早上行列式并不好啊，感觉第二第三章顺序可以交换</p>
+<h2 id="10-1-双线性函数"><a href="#10-1-双线性函数" class="headerlink" title="10.1 双线性函数"></a>10.1 双线性函数</h2><p>a,b是向量，内积： $a\cdot b &#x3D; |a||b| cos&lt;a,b&gt;$, ，内积有一 加法乘法 分配，数量乘法，于是在内积之前，引进 双线性函数</p>
+<p>定义1. 设V是域F上的一个线性空间V, VxV到F的一个映射f, 如果满足一切的 a1,a2,a,b1,b2,b \in V, k1,k2 \in F 有</p>
 <ul>
-<li>排列<ul>
-<li>逆序数 &#x3D; 交换次数奇偶性<ul>
-<li>归纳法易证，对于n-1成立，那么对于n个数，考虑n 相邻交换一直到最后 的 操作次数 &#x3D; 额外逆序数</li>
+<li>$f(k_1a_1+k_2a_2,b)&#x3D;k_1f(a_1,b)+k_2(a_2,b)$</li>
+<li>$f(a,k_1b_1+k_2b_2)&#x3D;k_1f(a,b_1)+k_2(a,b_2)$</li>
+<li>那么成为是V上的双线性函数<ul>
+<li>说白了就是，两个入参，都可以“线性”拆开，而之前学的主要是入参只有一个（可以线性拆开），而之前的如果固定一个入参，那么也是线性函数</li>
+</ul>
+</li>
+</ul>
+<p>f(a,b)&#x3D;f(按照基展开成$\sum$,按基展开成$\sum$)</p>
+<p>$&#x3D;\sum \sum a在基下的每个坐标*b在基下的每个坐标 * f(每个基向量,每个基向量)$</p>
+<p>(a的坐标行向量) (n * n 的f(每个基向量，每个基向量)的矩阵) * (b的坐标列向量)，</p>
+<p>那么 中间这个矩阵 称作 f在 给定基 下的 “度量矩阵”</p>
+<hr>
+<p>反过来，对于$A\in M_n(F)$, 那么 可以构造一个$f(a,b)&#x3D;X^TAY$ 就构造出一个双线性函数，（这里和前面不同的是，这里的 基 和 A决定f的，而前面是 f 和 基 决定 A)</p>
+<hr>
+<p>定理1. f是域F上的n维线性空间V上的双线性函数，基b&#x3D;基a * 矩阵C</p>
+<ul>
+<li>在基a下的度量矩阵是A</li>
+<li>在基b下的度量矩阵为B</li>
+<li>B &#x3D; (f(bi,bj)) 矩阵 &#x3D; ( (c的i列 行向量)A(c的j列 列向量)   ) &#x3D; $C^TAC$， C是可逆的 ， rank(A)&#x3D;rank(B)</li>
+<li>称 A与B是合同的， 也就是合同意味着同一个双线性函数在不同的基下的度量矩阵<ul>
+<li>自反，对称，传递 &#x3D;&gt; 所以合同是一种等价关系</li>
+<li>之前 相似：同一个线性变换 在不同的基下是相似的$B&#x3D;S^{-1}AS$</li>
+</ul>
+</li>
+<li>$rank_{matrix}(f)$ 双线性函数的矩阵秩</li>
+</ul>
+<hr>
+<p>定义3</p>
+<ul>
+<li>左根 $rad_LV&#x3D;$ {$a \in V | f(a,b)&#x3D;0, \forall b\in V$}, 是V的一个子空间</li>
+<li>右根 $rad_RV&#x3D;$ {$b \in V | f(a,b)&#x3D;0, \forall a\in V$}, 是V的一个子空间</li>
+</ul>
+<p>定义4： V上的双线性函数f在V中的左根和右根都是0子空间，则称f是非退化的</p>
+<ul>
+<li>左右根只有0解，那么 rank(V)&#x3D;n</li>
+</ul>
+<hr>
+<p>对称双线性函数 f(x,y)&#x3D;f(y,x) 显然 矩阵是对称矩阵</p>
+<ul>
+<li>斜对称,反对称 f(x,y)&#x3D;-f(y,x) skew</li>
+</ul>
+<p>同样，希望能选择一组好的基，让度量矩阵尽量简单</p>
+<hr>
+<p>对于 “内积函数”的度量矩阵来说，如果选取了两两垂直的基来说，可以只有主对角线非零</p>
+<p>那么如何找两两垂直的基，对于任意找的基a,b，可以b&#x3D;b-(b在a方向的投影)，来到了（mit讲过的投影矩阵，然后写法上还有“点乘”，没有直接的矩阵乘法，这点感觉还是mit更好）</p>
+<hr>
+<p>定理1. 对称双线性函数f，特征不为2，存在一个基，使得度量矩阵是 对角矩阵</p>
+<ul>
+<li>f&#x3D;0 零函数是对称</li>
+<li>$f\neq 0$ <ul>
+<li>若任何f(a,a)&#x3D;0,有 0&#x3D;f(a+b,a+b)&#x3D;f(a,a)+2f(a,b)+f(b,b) 即 f(a,b)&#x3D;0， （这里需要特征不为2）</li>
+<li>所以存在$a, f(a,a) \neq 0$, 然后所有和a投影减去，变成子空间子问题，这里其实就是任选基中 完成一个基的等价变换，而剩余的span成的空间 和 a 的直和 &#x3D; 原来空间</li>
+</ul>
+</li>
+</ul>
+<p>推论1. 特征不为2 的 域F上的n级对称矩阵A 合同于 一个对角矩阵A</p>
+<ul>
+<li>合同标准型</li>
+</ul>
+<p>定理2. f是特征不为2的 反&#x2F;斜对称 矩阵 双线性函数，则V中存在一个基，使得f在此基下的度量矩阵是形如下述的分块对角矩阵</p>
+<ul>
+<li>多个  <code>[0,1;-1,0]</code>的对角块</li>
+</ul>
+<p>推论2, 特征不为2的域F上的 斜对称矩阵一定相似于</p>
+<hr>
+<p>几何空间 内积 a * a &gt;&#x3D; 0, 等号成立当且仅当 a&#x3D;0</p>
+<p>定义1. 实数域上的线性空间V上的对称双线性函数f, 对于任意 向量a,有 $f(a,a)\ge 0$, 等号成立当且仅当 a&#x3D;0</p>
+<ul>
+<li>称f是 正定的</li>
+</ul>
+<p>命题1. n维实线性空间V上的对称双线性函数f是正定的：</p>
+<ul>
+<li>当且仅当， f在V的一个基下的 度量矩阵A 满足<ul>
+<li>A是对称矩阵，且 任意x, $x^TAx \ge 0$, 等号成立当且仅当x&#x3D;0</li>
+</ul>
+</li>
+</ul>
+<p>定义2. n级是对称矩阵A,若满足x!&#x3D;0, $x^TAx &gt;0$ 则A是正定对称矩阵，简称正定矩阵</p>
+<p>定义3. 实线性空间V上的一个 正定的对称双线性函数f  称为V上的一个 内积</p>
+<p>若是线性空间V,指定了一个内积，则称V是一个  实内积空间</p>
+<p>有限维的  实内积空间  成为 欧几里得空间 </p>
+<h2 id="10-2-欧几里得空间"><a href="#10-2-欧几里得空间" class="headerlink" title="10.2 欧几里得空间"></a>10.2 欧几里得空间</h2><p>例1. 任给x,y,  $f(x,y)&#x3D;x^Ty&#x3D;x^TIy$</p>
+<ul>
+<li>也就是在 基$\epsilon_{1\cdots n}$的坐标</li>
+<li>是$R^n$上的一个双线性函数</li>
+<li>称它为 标准内积</li>
+</ul>
+<p>设V是实内积空间，</p>
+<p>定义4 V中向量a的长度 $|a|&#x3D;\sqrt {f(a,a)}$</p>
+<ul>
+<li>根据 双线性函数性质,可证 $|ka|&#x3D;|k||a|, k\in R,a\in V$</li>
+<li>|a|&#x3D;1称$a$为 单位向量<ul>
+<li>$a\neq 0$, 则 $\frac{1}{|a|}a$ 是一个 单位向量</li>
+</ul>
+</li>
+</ul>
+<p>几何空间 $a,b$ 的$cos&lt;a,b&gt;&#x3D;\frac{f(a,b)}{|a||b|}$</p>
+<p>定理1. Cauchy-（俄文不会写）-Schwarz 不等式）</p>
+<ul>
+<li>$|f(a,b)|\le |a||b|$, 等号成立 当且仅当 a,b 线性相关<ul>
+<li>一个是零向量时,(0,a)时证明</li>
+<li>(a,ka)时证明</li>
+<li>对于不相关时 0 &lt; f(ta-b,ta-b)&#x3D; 关于t的二次多项式<ul>
+<li>说明判别式 &lt; 0 </li>
+<li>得到 上面的要证的部分</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>定义：<ul>
-<li>这上这个公式，虽然 从2阶，3阶 有端倪，但的确不如18.06的三个基础性质得到公式</li>
 </ul>
-</li>
-<li>性质：<ul>
-<li>能代数化前置的一个优点是 证明“更暴力，更不直观，更容易”</li>
-<li>图2-1</li>
+<p>定义5 a,b 不等于0, <code>&lt;a,b&gt;</code> &#x3D; arcos (f(a,b)&#x2F;(|a||b|))</p>
+<ul>
+<li>夹角 pi&#x2F;2 &lt;&#x3D;&gt; f(a,b)&#x3D;0</li>
 </ul>
-</li>
-<li>按一列&#x2F;一行展开<ul>
-<li>代数余子式： 也就是 展开时看作 aij的系数的部分，</li>
-<li>规律化的推导</li>
-<li>特殊Vandermonde 范德蒙行列式<ul>
-<li>用处:<ul>
-<li>f(x)是n-1次多项式,那么 拟合n个不同的输入 和 n个输出，只有唯一解<ul>
-<li>找规律与 f(x)&#x3D;a0+a1x+a2x2+a3x3的线性代数</li>
-<li>对于 圆的公式相关 也可以转换成线性方程组</li>
+<p>定义6, f(a,b)&#x3D;0, 称a与b正交</p>
+<p>定义7. a与b的距离 d(a,b) &#x3D; |a-b|</p>
+<ul>
+<li>可以验证 d(a,b)&#x3D;d(b,a)</li>
+<li>$d(a,b) \le d(a,c)+d(c,b)$ 三角不等式</li>
 </ul>
-<p>				</p>
-</li>
-<li>因为 输入对应了一个范德蒙矩阵det非零，而 f(x)的系数是要求的 向量，输出 是目标向量</li>
+<p>推论， a，b正交，则 $|a+b|^2&#x3D;|a|^2+|b|^2$ 勾股定理</p>
+<ul>
+<li>的确在 向量空间里这些证明起来是快了不少</li>
 </ul>
-</li>
+<p>命题1. 实内积空间V中，由  两两正交的非零向量 组成的集合S一定是线性无关的</p>
+<ul>
+<li>证， 任取S的一个有限子集 { $a_1,\cdots,a_n$  }<ul>
+<li>$f(a_j,\sum k_ia_i)&#x3D;0$,  可证明 所有系数只能取0</li>
 </ul>
 </li>
 </ul>
+<p>n维欧几里得空间中，n个两两正交非零向量 是一个基，称作V的一个正交基</p>
+<ul>
+<li>再加上单位向量，就是 标准正交基</li>
+</ul>
+<p>定理1. <code>[a...]</code> 线性无关的向量组</p>
+<ul>
+<li>然后 就开始 schmidt正交化了，很自然的逐个减去投影</li>
+<li>主要的是证明 可线性表出？<ul>
+<li>一点点归纳的感觉</li>
+</ul>
 </li>
-<li>Cramer法则<ul>
-<li>解的公式表达形式（虽然实际对于大矩阵，还是高斯消元靠谱）</li>
-<li>这里Carmer法则又是先给公式再证明，没有推导，从天而来<ul>
-<li>18.06是，展开&#x3D;&gt;代数余子式的逆矩阵&#x3D;&gt; 解&#x3D;逆 * 目标 &#x3D;&gt; 逆展开</li>
+</ul>
+<p>推论2. 一定有 标准准正交基</p>
+<ul>
+<li>取基</li>
+<li>schmidt 正交化</li>
+<li>单位化 所有基向量</li>
+</ul>
+<p>内积 在给定基 下的度量矩阵，称为 基a_{1..n}的度量矩阵</p>
+<hr>
+<p>这里的最重要的是  定义度量矩阵，即使不是常见的点积，也有对应的 长度等的定义</p>
+<p>性质1. $f(a,b)&#x3D;x^TIy$</p>
+<p>性质2. v在 标准基$a_i$ 下的第i各坐标为 $f(v, a_i)$, 这里有了用 标准正交基 和 内积 来反求坐标的下标</p>
+<p>定理2. $a_i$ 是n维欧几里得空间的一个标准正交基</p>
+<ul>
+<li>(b_i) &#x3D; (a_i) P</li>
+<li>如果 (b_i) 是一个 标准正交基<ul>
+<li>&lt;&#x3D;&gt; P的性质，$P^TP&#x3D;I$,P是正交矩阵</li>
+</ul>
+</li>
+</ul>
+<p>性质1，I是正交矩阵</p>
+<p>性质2，正交矩阵的乘积还是正交矩阵</p>
+<ul>
+<li>$(AB)^T(AB)&#x3D;I$</li>
+</ul>
+<p>性质3. A是正交矩阵，$A^{-1}&#x3D;A^T$是正交矩阵</p>
+<p>性质4. 正交矩阵 |A| &#x3D; 1或-1</p>
+<h2 id="10-3-正交补，正交投影"><a href="#10-3-正交补，正交投影" class="headerlink" title="10.3 正交补，正交投影"></a>10.3 正交补，正交投影</h2><p>定义2,S是实内积空间的一个非空子集</p>
+<ul>
+<li>S的正交补 &#x3D; {$a\in V| f(a,b)&#x3D;0, \forall b \in S$}</li>
+<li>它 也是 实内积空间</li>
+<li>注意 这里 S并不要求S是子空间<ul>
+<li>但从感觉上 和 <code>span&lt; S &gt;</code> 就和 之前的直和感觉一样了</li>
+</ul>
+</li>
+</ul>
+<p>定理3. 设U是实内积空间V的一个 有限维子空间</p>
+<ul>
+<li>则 V 能表示成 U  和  U的正交补 的直和</li>
+</ul>
+<p>正交投影： $P_U(a)&#x3D;a$在空间U的投影， 也就是拆直和时的表示</p>
+<p>定理4. a 和 a到U的正交投影，是a到U所有向量的距离是最短的</p>
+<p>定义2. a 到 U中最近的向量，称作 a 到 U中最佳逼近元</p>
+<p>定义3，设V与V’ 都是 实内积空间， 如果 V,V’之间有双射，且保持 加法，数量乘法，内积</p>
+<ul>
+<li>那么 是 保距同构（线性同构+内积同构）<ul>
+<li>把V的一个标准正交基 映成V’的一个标准正交基</li>
+</ul>
+</li>
+</ul>
+<p>定理5. 两个欧几里得空间同构</p>
+<ul>
+<li>&lt;&#x3D;&gt; 有相同的维数</li>
+<li>&lt;&#x3D;&gt; 本质上就是$R^n$</li>
+</ul>
+<h2 id="10-4-正交变换与对称变换"><a href="#10-4-正交变换与对称变换" class="headerlink" title="10.4 正交变换与对称变换"></a>10.4 正交变换与对称变换</h2><p>定义1. A是实内积空间V上的一个变换</p>
+<ul>
+<li>如果A是满射，满足：保持内积不变 f(Aa,Ab)&#x3D;f(a,b)</li>
+<li>那么A是一个V上的一个  正交变换</li>
+</ul>
+<p>性质， A是 实内积 空间V上的正交变换</p>
+<ul>
+<li>|Aa|&#x3D;|a|</li>
+<li>&lt; Aa,Ab &gt; &#x3D; &lt; a,b &gt;,</li>
+<li>保持 垂直</li>
+<li>正交变换 一定是线性变换<ul>
+<li>想证明 保持 A(a+b)&#x3D;Aa+Ab, 可以 去证明$|A(a+b)-Aa-Ab|^2&#x3D;0$</li>
+<li>类似的 证明 A(ka)&#x3D;kAa</li>
+</ul>
+</li>
+<li>Ker A &#x3D;0 所以是单射，加上满射 所以是双射</li>
+<li>内积不变 距离不变</li>
+<li>&lt;&#x3D;&gt; 到自身的同构映射，保距的</li>
+</ul>
+<p>正交变换的乘积还是正交变换</p>
+<p>命题3. 对于有限维，保持内积，那么是V上的一个正交变换</p>
+<ul>
+<li>保持内积 f(Aa,Ab)&#x3D;f(a,b)</li>
+</ul>
+<p>正交变换</p>
+<ul>
+<li>把V的标准正交基 映成标准正交基</li>
+<li>正交变换 在 标准正交基 下 是 正交矩阵</li>
+</ul>
+<p>定理2 A是n维欧几里得空间V上的正交变换，则V中存在一个标准正交基，使得A在此基下的矩阵为下属形式 分块对角矩阵</p>
+<ul>
+<li>小块是 <code>[cos,-sin;sin, cos]</code>, 非小块的对角是 特征值对角</li>
+</ul>
+<hr>
+<p>定义1. A是实内积空间V上的一个变换，如果A对于任意a,b有</p>
+<ul>
+<li>f(Aa,b)&#x3D;f(a,Ab) 那么称A是一个对称变换</li>
+<li>例如 投影变换</li>
+</ul>
+<p>命题1. 实内积空间上的 对称变换A,一定是线性变换</p>
+<p>命题2 n维欧几里得空间V上的一个线性变换是 对称变换</p>
+<ul>
+<li>A在V的一个标准正交基下的矩阵</li>
+<li>$a_{ij}&#x3D;f(A基_j,基_i)$<ul>
+<li>如果A是对称变换 f(变换A a,b)&#x3D;f(a,变换A b)</li>
+<li>即 $a_{ij}&#x3D;f(基_j,A基i)$</li>
+<li>$a_{ij}&#x3D;a_{ji}$ 也就是 在标准正交基下矩阵是对称矩阵</li>
+</ul>
+</li>
+</ul>
+<p>命题3. n级实对称矩阵A 的 特征多项式 f(x)的复根都是实数</p>
+<ul>
+<li>这里老师强调，实数域上的特征值 肯定是实数，而特征多项式的复根（如果有复数根，也不能称作它的复根，因为域的定义是在实数上）都是实数<ul>
+<li>很多教材 在域上的描述出现了问题</li>
+</ul>
+</li>
+<li>证明 看成 复域上矩阵 $\lambda a^T\bar{a}&#x3D;(Aa)^T\bar{a}&#x3D;a^TA^T\bar{a}&#x3D;a^TA\bar{a}&#x3D;a^T(A\bar{a})&#x3D;a^T(\bar{\lambda}\bar{a})&#x3D;\bar{\lambda}a^T\bar{a}$</li>
+</ul>
+<p>命题4. n级实对称矩阵A，不同特征值的特征向量是正交的</p>
+<ul>
+<li>类似上面，构造$\lambda_0a_0^Ta_1&#x3D;\lambda_1a_0^Ta_1$</li>
+<li>这里 其实 就是 点积，mit 上更多是 $a^Tb$, 这里清华的是 f(a,b)</li>
+</ul>
+<p>命题5. 设A是实内积空间V上的一个对称变换，如果W是A的一个不变子空间，那么W的正交补也一定是A的一个不变子空间</p>
+<p>定理1. 设A是n维 欧几里得空间V 上的一个对称变换，则V中存在一个标准正交基，使它是对角矩阵</p>
+<ul>
+<li>证明 对维数做数学归纳法</li>
+<li>找单位特征向量，构成子空间，正交补也是不变子空间<ul>
+<li>对正交补 归纳法，出来的 基和特征 都可以和前面的单位特征向量正交，组成标准正交基，也有 特征值构成对角</li>
+</ul>
+</li>
+</ul>
+<p>推论1. A是实对称矩阵，存在正交矩阵Q</p>
+<ul>
+<li>$Q^{-1}AQ&#x3D;$对角矩阵， 此时称 A正交相似于对角矩阵</li>
+<li>如何求Q<ul>
+<li>求$|\lambda I - A|$的所有不同根（一定是实数）</li>
+<li>对于每个特征值，求 $(\lambda_i I-A)X&#x3D;0$的基础解系<ul>
+<li>schmidt正交化</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Laplace定理<ul>
-<li>这个18.06倒是没有，相当于行列式计算的分块切割的性质，而分块的每块还可以不连续</li>
+</ul>
+<h2 id="10-5-酉空间，酉变换，Hermite变换，正规变换"><a href="#10-5-酉空间，酉变换，Hermite变换，正规变换" class="headerlink" title="10.5 酉空间，酉变换，Hermite变换，正规变换"></a>10.5 酉空间，酉变换，Hermite变换，正规变换</h2><p>复内积空间</p>
+<p>f(ia,ia)&#x3D;-f(a,a), 这个和正定性矛盾</p>
+<p>这里讲的修改看得一头包，感觉还是 f(x,x) &#x3D; |x|</p>
+<p>那么如果x&#x3D;a+bi, 则需要 $x^Hx &#x3D; |x|$</p>
+<p>这样就更自然 $f(x,y)&#x3D;x^Hy$,验证一下是双线性即可</p>
+<p>然后观察矩阵 $A^H&#x3D;A$ ,也就是$\overline{A^T}&#x3D;A$</p>
+<p>性质</p>
+<ul>
+<li>$f(a,b)&#x3D;\overline{f(b,a)}$</li>
+<li>第一个变量线性, 但注意乘法 $k\in C$</li>
+<li>f(a,a) &gt;&#x3D;0 等号成立当且仅当 a&#x3D;0 （正定性</li>
+<li>那么称它是V上的一个内积</li>
+</ul>
+<p>酉(Unitary)空间 &#x3D; 复 线性空间 + 指定内积</p>
+<p>可推出</p>
+<ul>
+<li>对第二个变量，半线性</li>
+<li>加法线性，但乘上k,是提出来$\bar{k}$</li>
+<li>$f(a,kb)&#x3D;\bar{k}f(a,b)$ 一个<code>半线性函数</code></li>
+</ul>
+<hr>
+<p>定义</p>
+<ul>
+<li>长度 &#x3D; sqrt(f(a,b))</li>
+<li>定义夹角 cos &#x3D; |f(a,b)|&#x2F;(|a||b|)<ul>
+<li>同样 要证明其范围 $\in [0,1]$</li>
+<li>一样的思路，先证明线性相关</li>
+<li>然后 $0 &lt; f(a+tb,a+tb)&#x3D;|a|^2+\bar{t}f(a,b)+t\overline{f(a,b)}+t\bar{t}|b|^2$</li>
+<li>这里不能用 判别式，然后 drop from sky了一个<ul>
+<li>$t&#x3D;-\frac{f(a,b)}{|b|^2}$, 其实想法就是 把4项变2项，然后 导出 $|a||b| &gt; |f(a,b)|$</li>
+<li>$0 \le &lt;a,b&gt; \le  \pi&#x2F;2$, 在物理里面有的用于 概率 而不是夹角（量子力学中应用小天地）</li>
 </ul>
 </li>
-<li>应用小天地<ul>
-<li>这里也是fib递推 和  解微分方程，但这里连 特征值都还没讲</li>
+</ul>
+</li>
+<li>在酉空间中<ul>
+<li>有了三角不等式</li>
+<li>勾股定理</li>
+<li>距离</li>
+</ul>
+</li>
+</ul>
+<p>研究 酉空间结构</p>
+<ul>
+<li>n维酉空间 的标准正交基，</li>
+<li>命题1. 酉空间V中 两两正交的非零向量，组成的集合是 线性无关</li>
+<li>定义4. n维 酉空间V中，n个两两正交的非零向量成为V的一个正交基，<ul>
+<li>如果都是单位向量 ，则标准正交基</li>
+</ul>
+</li>
+<li>然后像上面提到的特殊的 $f(x,y)&#x3D;y^Hx$ 称它为<code>标准内积</code></li>
+</ul>
+<p>定理2. n维 酉空间V上一定有标准正交基</p>
+<ul>
+<li>V中取 基 &#x3D;&gt; schmidt正交化 &#x3D;&gt; 单位化</li>
+</ul>
+<p>定理3. n维酉空间V的一个组标准正交基(a_i), (b_i)</p>
+<ul>
+<li>$f(a,b)&#x3D;y^Hx$, 在a,b同个标准正交基下的坐标，对于内积容易计算</li>
+<li>(b_i)&#x3D;(a_i) 矩阵P <ul>
+<li>那么 $I&#x3D;B^HB&#x3D;(AP)^H(AP)&#x3D;P^HA^HAP&#x3D;P^HP$</li>
+</ul>
+</li>
+<li>说明 两个标准正交基的过度矩阵是 酉矩阵<ul>
+<li>酉矩阵 和 单位矩阵区别就是 一个是转置，一个是转置+共轭</li>
+</ul>
+</li>
+</ul>
+<p>正交补</p>
+<ul>
+<li>定理4. U是酉空间中有限维子空间，则V可以分解成U和U的正交补 的直和</li>
+<li>有直和拆分，就可以定义正交投影(拆成 两个直和空间的唯一和)，<ul>
+<li>然后 性质 到U中的投影距离最短</li>
+</ul>
+</li>
+</ul>
+<p>定义6. 酉空间V中的子空间U，a到U中最短的，称作a的最佳逼近元</p>
+<ul>
+<li>上面 的正交投影 &lt;&#x3D;&gt; 最佳逼近</li>
+</ul>
+<p>定义7. 设V是复（实）内积空间</p>
+<ul>
+<li>若V中每一个Cauchy序列 （距离可以定义极限），都在V中有极限，则成V是一个 Hilbert空间 <ul>
+<li>完备化（取极限）</li>
+</ul>
+</li>
+</ul>
+<p>定理5. V是一个Hilbert空间</p>
+<ul>
+<li>若U是V的一个闭子空间</li>
+<li>则V中任一向量a在U上都有最佳逼近元，从而V&#x3D;U直和 U的正交补<ul>
+<li>证明： 见群表示论， 6.9</li>
+</ul>
+</li>
+</ul>
+<p>两个有限维酉空间同构 &#x3D;&gt; 保持加法 数量乘法 内积，（线性同构+保距）</p>
+<ul>
+<li>充要条件： 维数相同</li>
+</ul>
+<p>定义1. 酉空间V上的一个变换A如果是满射，且满足保持内积，那么称，A是V上的一个酉变换</p>
+<p>命题1. 酉空间V上的变换</p>
+<ul>
+<li>&lt;&#x3D;&gt; A是V到自身的一个同构映射</li>
+</ul>
+<p>命题2. n维酉空间V上的变换 A</p>
+<ul>
+<li>若(Aa,Ab)&#x3D;(a,b) 则是V上的一个酉变换</li>
+</ul>
+<p>命题3. n维酉空间V上的酉变换A的特征值性质：</p>
+<ul>
+<li>模为1 : $f(a,a)&#x3D;f(Aa,Aa)&#x3D;f(\lambda a,\lambda a)&#x3D;()^H()&#x3D;|\lambda|^2f(a,a)$</li>
+</ul>
+<p>命题4. A是酉空间V上的一个酉变换，W是A的一个不变子空间，则 W的正交补，也是A的一个不变子空间</p>
+<ul>
+<li>任取 b \in W正交补，要证明 任意a\in W, f(Ab,a)&#x3D;0, 也就是b经过变换后依然在正交补里<ul>
+<li>W中A|W 单射，满射，找原相c。f(Ab,a)&#x3D;f(Ab,Ac)&#x3D;f(b,c)&#x3D;0</li>
+</ul>
+</li>
+</ul>
+<p>定理1. A是n维酉空间V上一个有变化内，则V中存在一个标准正交基，使得A在基下的矩阵是对角矩阵</p>
+<ul>
+<li>对于 维数 归纳法<ul>
+<li>特征值 单位向量，子空间，正交补，归纳</li>
+</ul>
+</li>
+</ul>
+<p>推论1. n级酉矩阵A</p>
+<ul>
+<li>$A&#x3D;Q^{H}\Lambda Q$, （酉相似）于对角矩阵, 注意这里是酉相似不是正交相似 $^H$</li>
+</ul>
+<hr>
+<p>Hermite 变换：相当于实内积空间的对称变换</p>
+<ul>
+<li>一定是线性变换</li>
+<li>f(Aa,b)&#x3D;f(a,Ab)<ul>
+<li>思路一样，把a,b换成正交基中的向量，从而证明$A^H&#x3D;A$,， （充要的）</li>
+<li>此时称A是一个 Hermite矩阵 或 自伴矩阵</li>
+</ul>
+</li>
+</ul>
+<p>命题3。 n维酉空间上的 Hermite 变换 的特征值</p>
+<p>命题4。类似的，不变子空间的正交补也是不不变子空间</p>
+<hr>
+<h2 id="10-6-正交空间与辛空间"><a href="#10-6-正交空间与辛空间" class="headerlink" title="10.6 正交空间与辛空间"></a>10.6 正交空间与辛空间</h2><p>物理空间中：</p>
+<p>(t,x,y,z)</p>
+<ul>
+<li>宏观低速 Calieo时空变换 保持内积 $R^4$</li>
+<li>接近光速 的 Lorentz 变换 不保持 内积<ul>
+<li>新内积 $f(a,b)&#x3D;-c^2t_1t_2+x_1x_2+y_1y_2+z_1z_2$</li>
+<li>是一个非退化的 对称双线性函数</li>
+<li>称作 Mikowski 空间(俄国数学家)<ul>
+<li>$\sigma$是 不同坐标系中的映射</li>
+<li>$f(\sigma(a),\sigma(b))&#x3D;f(a,b)$ 保持新的内积</li>
+<li>$f(a-b,a-b)$称为 a与b的时空间隔平方</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定义1. 域F上线性空间V的一个非退化对称化 双线性函数f</p>
+<ul>
+<li>称为V上的一个内积</li>
+<li>没有正定性，没有夹角，有正交性</li>
+</ul>
+<p>指定了一个内积的域F上的线性空间V 为一个正交空间</p>
+<p>辛空间：（反对称）</p>
+<h2 id="10-7-正交群，酉群，辛群"><a href="#10-7-正交群，酉群，辛群" class="headerlink" title="10.7 正交群，酉群，辛群"></a>10.7 正交群，酉群，辛群</h2><p>TODO 视频课没有</p>
+<h2 id="速览"><a href="#速览" class="headerlink" title="速览"></a>速览</h2><p>有一说一，这课在一些抽象程度上比MIT更抽象化，挺好，但是在符号使用上，MIT的$Q,\Lambda$ 带来的体验更好</p>
+<ul>
+<li>注意到的是<ul>
+<li>这里定义的“内积”和“常用的内积”是不一样的，这里只要求一些关系，而“常用的内积”是 其中一个特例 称作“标准内积”</li>
+<li>如果描述有n维，那么意思是“有限维”</li>
+</ul>
+</li>
+<li>双线性函数 f(a,b) &#x3D; a,b都是向量，可以线性拆到f外<ul>
+<li>从而 引出 $f(a,b)&#x3D;x^TAy$, </li>
+<li>其中x,y是a,b在所选基下的坐标</li>
+<li>而A叫做度量矩阵</li>
+</ul>
+</li>
+<li>实线性空间V上的一个 正定的对称双线性函数f  称为V上的一个 内积<ul>
+<li>若是线性空间V,指定了一个内积，则称V是一个  实内积空间</li>
+<li>有限维的  实内积空间  成为 欧几里得空间 </li>
+<li>而 定义了内积f(a,b)，也就基于内积定义了长度，和前面线性空间 相比 多了内积，在研究同构时，会需要内积相等 f(变换A a,变换A b) &#x3D; f(a,b)</li>
+</ul>
+</li>
+<li>正交矩阵:<ul>
+<li>$Q^{T}Q&#x3D;I$</li>
+<li>a到  a在U的投影 距离最短</li>
+<li>正交补： 类似于之前的 直和的补的部分，但原始的不要求是空间，（其实可以span一下）</li>
+</ul>
+</li>
+<li>正交变换<ul>
+<li>定义是保持 内积</li>
+<li>性质是，变换矩阵 是 正交矩阵，空间效果就是无放缩的旋转</li>
+<li>最优基下的表示是 对角分块的 小旋转标准型 <code>[cos,-sin;sin,cos]</code></li>
+</ul>
+</li>
+<li>对称变换<ul>
+<li>定义是 f(变换A a,b)&#x3D;f(a,变换A b)</li>
+<li>性质是，对应矩阵 是 实对称矩阵</li>
+<li>特征多项式的 复解 全是实数</li>
+<li>特点是 $A&#x3D;Q^{-1}\Lambda Q$,其中Q是标准正交矩阵</li>
+<li>求法 和 之前 对角化类似，只是需要标准正交化</li>
+</ul>
+</li>
+<li>酉空间<ul>
+<li>这玩意儿 有啥可视化方法吗？</li>
+<li>&#x3D; 复 线性空间 + 指定的 Hermite性 的内积</li>
+<li>其核心就是 从实 变 复，然后内积的定义要变一下</li>
+<li>然后对应照搬很多前面正交变换相关的内容</li>
+<li>酉变换，也就是 复线性空间保距 的变换（某种旋转）</li>
+</ul>
+</li>
+<li>Hermite变换 （相对于 实空间的对称变换）<ul>
+<li>类似的定义和性质</li>
+<li>特征值 全是实数</li>
+<li>$A&#x3D;Q^{H}\Lambda Q$</li>
 </ul>
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 十 具有度量的线性空间</title>
+    <url>/Math/Advanced_algebra_11/</url>
+    <content><![CDATA[<p>视频 p145 - 151 （最后有一个整个学期回顾）</p>
+<h1 id="多重线性代数"><a href="#多重线性代数" class="headerlink" title="多重线性代数"></a>多重线性代数</h1><span id="more"></span>
+
+<h2 id="11-1-多重线性映射"><a href="#11-1-多重线性映射" class="headerlink" title="11.1 多重线性映射"></a>11.1 多重线性映射</h2><p>一个对称双线性函数，一个基下度量矩阵为A</p>
+<p>$f(a,b)&#x3D;x^TAy$</p>
+<p>$q(a)&#x3D;f(a,a)&#x3D;x^TAx$</p>
+<p>$q$上是V上的一个 二次函数</p>
+<p>&#x3D;&gt; n元多项式</p>
+<hr>
+<p>定义1. F是一个域，$x_1,\cdots,x_n$是n个符号，形如下述的表达式</p>
+<p>$\sum a_{l_1l_2\cdots l_n}x_1^{l_1}x_2^{l_2}\cdots x_n^{l_i}$, 其中 幂次都是自然数，a是F中元素称为系数</p>
+<ul>
+<li>有限多系数不为零</li>
+<li>相等定义： 系数对应相等</li>
+<li>则称 表达式是 域F上的一个n元多项式</li>
+<li>$x_1,\cdots,x_n$是n个无关不定元</li>
+</ul>
+<p>定义加法，乘法</p>
+<ul>
+<li>可验证，有 单位元 的交换环</li>
+<li>n元 多项式环</li>
+</ul>
+<p>定义2，若每个系数不为的单项式次数都&#x3D;m,则称它为m次齐次多项式</p>
+<ul>
+<li>所有m次齐次多项式的集合，是域F上的一个线性空间</li>
+</ul>
+<p>定理1. （n元多项式环的通用性质）设F是一个域，R是一个有单位元的交换环，且域F到R的一个子环R_1（含有R的单位元）有一个同构映射</p>
+<ul>
+<li>$\sigma$ a到$\tau(a)$, xi -&gt; ti<ul>
+<li>保持加法 乘法运算</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>这里只关心 n元，二次齐次多项式</p>
+<ul>
+<li>加上 aij&#x3D;aji的限制， 即对称矩阵</li>
+<li>称为n元二次型<ul>
+<li>对于给定表达式，二次型矩阵是唯一的</li>
+</ul>
+</li>
+</ul>
+<p>$f(x) &#x3D; x^TAx$, 注意输入的x是n维向量</p>
+<p>$f(Cx)&#x3D;(Cx)^TA(Cx)$, 于是$x^T(C^TAC)x$, 中间的和A合同</p>
+<ul>
+<li>如果C可逆，那么意味着 选取不同的x的组合，希望让对称矩阵合同（一定是对称矩阵），形式尽量简单，引出正定性<ul>
+<li>这里x用Cx带入，是一种非退化的线性替换（也就是C要可逆）</li>
+<li>如果C是正交矩阵，那么叫正交替换</li>
+</ul>
+</li>
+</ul>
+<p>定义3 域F上 两个n元二次型，存在一个非退化（降秩）线性替换，使得$x^TAx$变为$x^TBx$. 那么称这两个二次型等价（不相等但等价）</p>
+<ul>
+<li>也就是A和B合同时</li>
+<li>自反，传递性，是一个等价关系，存在等价类<ul>
+<li>希望找等价类中最简形式</li>
+</ul>
+</li>
+<li>7.2节， 合同于一个对角矩阵</li>
+<li>特征不为2的域F上的n元二次型 一定等价于 $\sum d_ix_i^2$ 只有平方项<ul>
+<li>$x^TDx$, D是对角矩阵</li>
+</ul>
+</li>
+<li>最简形称作标准型<ul>
+<li>系数不为0的平方项的个数</li>
+<li>rank(A)&#x3D;系数不为0的平方项的个数</li>
+</ul>
+</li>
+</ul>
+<p>定理2,实数域上的n元二次型 $x^TAx$有一个标准型</p>
+<ul>
+<li><p>实对称矩阵 &#x3D;&gt; 存在正交矩阵$Q$, $Q^{-1}AQ&#x3D;\Lambda$, 其中$Q^T&#x3D;Q^{-1}$</p>
+</li>
+<li><p>所以，是对称矩阵 合同于 $\Lambda$</p>
+</li>
+<li><p>对于每个 x_i可以再变化$\frac{1}{\sqrt{d_i}}x^i$ 可以让系数只有1,-1,0</p>
+</li>
+<li><p>只有 1,-1,0系数的称作 规范型</p>
+</li>
+<li><p>更精细的结论：正系数个数 和 负系数个数是固定的</p>
+<ul>
+<li>规范型是唯一的：惯性定理</li>
+<li>证明 前面章节好像证明过，两个规范型 通过过渡矩阵，去想办法一个正一个负，</li>
+<li>规范型中：<ul>
+<li>正的个数 叫做正惯性指数</li>
+<li>负的个数 叫做负惯性指数</li>
+<li>正惯性指数-负惯性指数 称作符号差</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>命题1. n元实二次型 $x^TAx$的任一【标准型】中</p>
+<ul>
+<li>同样 对应 称作 正负惯性指数</li>
+</ul>
+<p>定理2. 等价的$x^TAx$和$x^TBx$的</p>
+<ul>
+<li>&lt;&#x3D;&gt; 规范型相同</li>
+<li>&lt;&#x3D;&gt; 正负惯性指数 相同，或者 rank相同+正惯性指数相同</li>
+</ul>
+<p>定理3. 两个n级实对称矩阵 A与B 合同</p>
+<ul>
+<li>合同规范型 &#x3D; <code>diag &#123;1*,-1 *,0 *&#125;</code></li>
+</ul>
+<p>这表明，秩，正惯性指数，是 【n级实对称矩阵】在合同关系下的一个组 完全不变量</p>
+<hr>
+<p>正定二次型：</p>
+<p>定义1. n元二次型 $x^TAx$如果 任意$x\neq 0$,$x^TAx &gt;0$</p>
+<ul>
+<li>正定的 &lt;&#x3D;&gt; 规范型 rank &#x3D; 正惯性指数 &#x3D; n</li>
+<li>合同于 I</li>
+<li>A的特征值全大于0<ul>
+<li>因为 正交相似&#x2F;正交合同 于$\Lambda$</li>
+</ul>
+</li>
+</ul>
+<p>类似的</p>
+<ul>
+<li>定义矩阵的正定矩阵</li>
+<li>实二次型是正定的</li>
+<li>所有 顺势 主 子式 的 行列式 为正</li>
+</ul>
+<p>半正定：非负</p>
+<p>负定：所有负</p>
+<p>半负定：非正</p>
+<p>多元函数极值</p>
+<h2 id="11-2-线性空间的张量积"><a href="#11-2-线性空间的张量积" class="headerlink" title="11.2 线性空间的张量积"></a>11.2 线性空间的张量积</h2><p>2,3,4都没有视频课</p>
+<h2 id="11-3-张量代数"><a href="#11-3-张量代数" class="headerlink" title="11.3 张量代数"></a>11.3 张量代数</h2><h2 id="11-4-外代数"><a href="#11-4-外代数" class="headerlink" title="11.4 外代数"></a>11.4 外代数</h2>]]></content>
       <categories>
         <category>高等代数</category>
       </categories>
@@ -887,6 +1397,158 @@
       </tags>
   </entry>
   <entry>
+    <title>高等代数 二 行列式</title>
+    <url>/Math/Advanced_algebra_2/</url>
+    <content><![CDATA[<h1 id="第2章-行列式"><a href="#第2章-行列式" class="headerlink" title="第2章 行列式"></a>第2章 行列式</h1><p>视频 p8~p18</p>
+<ol>
+<li>希望不做消元探索矩阵性质</li>
+<li>考虑2阶矩阵有唯一解充要, 定义行列式代数表达式和符号记法</li>
+<li>从2阶拓展到n阶的表达式定义和符号技法(n元排列知识,交换操作与逆序对性质)</li>
+<li>相关性质研究(转置,交换,倍数一行, 倍数一行加到另一行上)</li>
+</ol>
+<h2 id="为什么要行列式"><a href="#为什么要行列式" class="headerlink" title="为什么要行列式"></a>为什么要行列式</h2><p>在没有行列式时, 只有对方程组的系数矩阵消元以后,才知道解的情况, 期望不需要处理矩阵,就能知道相关性质</p>
+<span id="more"></span>
+
+<h2 id="n-元排列"><a href="#n-元排列" class="headerlink" title="n 元排列"></a>n 元排列</h2><p>$n$的排列有$n!$个</p>
+<p>性质1: 交换相邻元素得到新排列, 会改变<code>逆序对个数</code> 奇偶性</p>
+<p>性质2: 交换i和j得到新排列,会改变<code>逆序对个数</code>奇偶性,(相当于多次相邻交换)</p>
+<p>性质3: 保持下标和值的对应关系,让值有序而下标不一定有序,那么下标的<code>逆序对个数</code>的奇偶性和变化前的<code>逆序对</code>奇偶性一致S</p>
+<p>显然一个数列<code>逆序对个数</code> 的奇偶性只与它内容有关,与交换的具体过程无关</p>
+<h2 id="二阶行列式"><a href="#二阶行列式" class="headerlink" title="二阶行列式"></a>二阶行列式</h2><p>考虑$2\cdot 2$矩阵的解的个数</p>
+<p>$a_{11}a_{22}-a_{21}a_{12} \ne 0$ 唯一解</p>
+<p>$a_{11}a_{22}-a_{21}a_{12} &#x3D; 0$ 无穷多</p>
+<p>定义符号$\left |\begin{array}{hls} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{array}\right| &#x3D; a_{11}a_{22}-a_{21}a_{12}$</p>
+<p>二阶行列式$|A| \ne 0 \Leftrightarrow$   有唯一解</p>
+<h2 id="n-阶行列式"><a href="#n-阶行列式" class="headerlink" title="n 阶行列式"></a>n 阶行列式</h2><p>从二阶出发进行思考, 类似的定义n阶, 符号类似用系数表示</p>
+<p>对于值的定义: </p>
+<ol>
+<li>求和的每一项是, 不同行,不同列的元素的乘积</li>
+<li>行下标按照顺序, 列下标为全排列</li>
+<li>符号为$-1$的<code>列下标逆序对个数</code>的<code>幂次</code></li>
+</ol>
+<p>即是 $\sum_{j_1j_2\cdots j_n} (-1)^{\tau(j_1j_2\cdots j_n)}\prod_{i&#x3D;1}^n{a_{ij_i}}$ 这才是行列式的定义, 写成 $n\cdot n$的形状只是为了方便书写</p>
+<p>$n$阶行列式 称作$n$阶矩阵的行列式</p>
+<p>上三角形行列式: 主对角线下方全为$0$ 其值$&#x3D;\prod_{i&#x3D;1}^n a_{ii}$ </p>
+<hr>
+<p>这里有个后面(克莱姆法则)会解决的问题, 虽然二阶说明了与有唯一解的充要关系, 而这里虽然定义了n阶行列式, 却没有说明和原矩阵之间唯一解的充要关系</p>
+<h2 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a>行列式性质</h2><ol>
+<li><p>行列式交换两行, 等于所有被加的元素中的列下标中的两个交换, 因此行列式的两行交换&#x3D;值$\cdot -1$</p>
+</li>
+<li><p>可以得到$\sum_{i_1i_2\cdots i_n} (-1)^{\tau(i_1i_2\cdots i_n)}\prod_{j&#x3D;1}^na_{i_jj}$</p>
+</li>
+<li><p>转置:行列互换, 常见的3种写法$A’,A^T,A^t$, 显然行列式值相等$|A|&#x3D;|A^T|$</p>
+</li>
+<li><p>一行的$k$倍: 考虑代数表达式所有被加的元素都乘了k, 所以显然值也是k倍</p>
+</li>
+<li><p>一行加另一行上: 考虑代数表达式可以把所有加的括号拆开, 变成两个符号记法之和</p>
+</li>
+</ol>
+<p>$\left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ (b_1+c_1) &amp; \cdots &amp; (b_n+c_n) \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| &#x3D; \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ b_1 &amp; \cdots &amp; b_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right| + \left |\begin{array}{equation}\cdots &amp; \cdots &amp; \cdots \\ c_1 &amp; \cdots &amp; c_n \\ \cdots &amp; \cdots &amp; \cdots \end{array}\right|$</p>
+<ol start="6">
+<li><p>两行成倍数, 考虑分别为$i_0,i_1$ 两行, 那么它的表达式中加法的项 不含符号部分一定有 $\cdots a_{i_0j_{i_0}} a_{i_1j_{i_1}}$ 和 $\cdots a_{i_1j_{i_0}} a_{i_0j_{i_1}}$ , 它们其它项一样,而仅有下标交换, 又有行成倍数, 因此它们绝对值相等而符号相反, 所以行列式的值为$0$, (另一个角度是, 它们可以互换互为相反数则只能是0</p>
+</li>
+<li><p>一行倍数加到另一行, 根据上面加法和倍数性质, 显然值不变</p>
+</li>
+<li><p>按一行(列)展开</p>
+</li>
+</ol>
+<p>$&#x3D; a_{11}M_{11}-a_{12}M_{12}+a_{13}M_{13} + \cdots$</p>
+<p>去掉行列剩下按照顺序拼接出的叫做<code>余子式</code>$M_{ij}$,带上<code>-1</code>幂次的叫做<code>代数余子式</code>$A_{ij}&#x3D; (-1)^{i+j}M_{ij}$</p>
+<p>$&#x3D; a_{11}A_{11}+a_{12}A_{12}+a_{13}M_{13} + \cdots$</p>
+<p>证明相等: 显然考虑表达式本来有$-1$的逆序对的幂次, 而移除了$a_{ij}$剩下按原来排列, 那么其内部和之间的逆序对未变化, 都是关于$a_{ij}$相关的, 那么分别是$a_{&lt;i,&gt;j}$和$a_{&gt;i,&lt;j}$ 的个数之和, 设$k &#x3D; a_{&lt;i,&gt;j}$, 那么有$a_{&lt;i,&lt;j} &#x3D; i-1-k$, $a_{&gt;i,&lt;j} &#x3D; j-1-(i-1-k) &#x3D; j-i+k$个, 所以一共$j-i+2k$个, 只考虑奇偶性的话$i+j$的奇偶性,也就有上面的等式, (另一个角度,考虑使用相邻交换把i行和j列分别交换到1行,1列,这样交换了(i-1+j-1)次, 再只需要考虑$a_{11}$的情况即可</p>
+<ol start="9">
+<li>反过来$i_0\ne i_1$ 时,考虑从代数表达式变成符号记法,带回去会让两行相等, $\sum_{j&#x3D;1}^n a_{i_0j}A_{i_1j} &#x3D;0$</li>
+</ol>
+<h2 id="克莱姆法则"><a href="#克莱姆法则" class="headerlink" title="克莱姆法则"></a>克莱姆法则</h2><p>n元线性方程组有唯一解的条件</p>
+<p>增广矩阵$\to$初等行变换阶梯形, 无解有非零行$(0,\cdots,0,d \ne 0)$, 无穷解非零行数$r &lt; n$,唯一解$r &#x3D; n$</p>
+<p>系数矩阵$\to$初等行变换阶梯形</p>
+<p>也就对应系数矩阵$\to$初等行变换阶梯形 上三角 有唯一解 (初等变换过程中行列式值不变), 行列式$\ne 0$</p>
+<p>同样上面的无解和无穷解都对应行列式$&#x3D; 0$</p>
+<p>至此得到了行列式的值与n元线性方程组有唯一解之间的关系</p>
+<hr>
+<p>推论1: 对于没有常数项的n元齐次n个方程组, 只有0解 $\Leftrightarrow |A|\ne 0$, 有非零解 $|A| &#x3D; 0$</p>
+<hr>
+<p>取$A$中$k$行$k$列的交叉点按原顺序排,称作$k$阶子式, 对应剩下的是余子式, 根据上面提出$a_{ij}$ 类似的思路,可以考虑先把选定的$k$行$k$列通过相邻交换,换到开头的$k$行$k$列,这样操作次数是, $(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k)$, 剩下的就是选定的$k$阶子式子和它的<code>余子式</code>相乘,其<code>余子式</code>乘上$(-1)^(i_1-1)+(i_2-2)+\cdots +(i_k-k) + (j_1-1)+(j_2-2)+\cdots +(j_k-k) &#x3D; (-1)^{\sum_{p&#x3D;1}^k (i_p+j_p)}$则称作代数余子式</p>
+<h2 id="laplace定理-指定k行的展开"><a href="#laplace定理-指定k行的展开" class="headerlink" title="laplace定理(指定k行的展开)"></a>laplace定理(指定k行的展开)</h2><p>$|A|&#x3D;$ 任意的指定$k$行后, 所有$k$阶子式和它的代数余子式的乘积之和</p>
+<p>上面证明了每一项会怎么变化, 下面证明原行列式的每一项存在且唯一存在于一个乘积之中</p>
+<p>其实和一行展开类似, 任何一项对于指定的$k$行来说其列是确定的,则唯一确定了所在的$k$阶子式,证明了每一个都唯一存在于一个</p>
+<p>任意两个不同的k阶子式和它的代数余子式的乘积,都是行列式的项,且不会产生相同的加和项</p>
+<p>得证</p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><p>$\left|\begin{array}{d2} A &amp; O \\ C &amp; B \end{array}\right| &#x3D; |A||B|$</p>
+<h2 id="行列式在其它地方的应用"><a href="#行列式在其它地方的应用" class="headerlink" title="行列式在其它地方的应用"></a>行列式在其它地方的应用</h2><p>二阶行列式$\left|\begin{array}{d2} a_1 &amp; b_1 \\ a_2 &amp; b_2 \end{array}\right|$ 表示向量$(a_1,a_2)$和$(b_1,b_2)$所构成平行四边形,从$a$到$b$定向面积</p>
+<p>三阶行列式, 表示向量$(a_1,a_2,a_3)$,$(b_1,b_2,b_3)$,$(c_1,c_2,c_3)$所构成的平行六面体的定向体积,$a\to b$,c大拇指右手系</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>范德蒙行列式 $&#x3D;\prod_{i&lt;j} (a_j-a_i)$</p>
+<hr>
+<p>找 f(x,y,z)&#x3D;x3+y3+z3-3xyz 的一次因式?</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">x y z</span><br><span class="line">z x y</span><br><span class="line">y z x</span><br><span class="line">感觉还是很妙的</span><br></pre></td></tr></table></figure>
+
+<p>这里有三对角行列式的一般情况的 公式推导</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a b</span><br><span class="line">c a b</span><br><span class="line">  c a b</span><br><span class="line">    c a ...</span><br></pre></td></tr></table></figure>
+
+<p>&#96;</p>
+<h2 id="思路总结"><a href="#思路总结" class="headerlink" title="思路总结"></a>思路总结</h2><p>有不少是先看看二阶三阶怎么设计,再推广</p>
+<p>但看了18.06我认为这么早上行列式并不好啊，感觉第二第三章顺序可以交换</p>
+<ul>
+<li>排列<ul>
+<li>逆序数 &#x3D; 交换次数奇偶性<ul>
+<li>归纳法易证，对于n-1成立，那么对于n个数，考虑n 相邻交换一直到最后 的 操作次数 &#x3D; 额外逆序数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>定义：<ul>
+<li>这上这个公式，虽然 从2阶，3阶 有端倪，但的确不如18.06的三个基础性质得到公式</li>
+</ul>
+</li>
+<li>性质：<ul>
+<li>能代数化前置的一个优点是 证明“更暴力，更不直观，更容易”</li>
+<li>图2-1</li>
+</ul>
+</li>
+<li>按一列&#x2F;一行展开<ul>
+<li>代数余子式： 也就是 展开时看作 aij的系数的部分，</li>
+<li>规律化的推导</li>
+<li>特殊Vandermonde 范德蒙行列式<ul>
+<li>用处:<ul>
+<li>f(x)是n-1次多项式,那么 拟合n个不同的输入 和 n个输出，只有唯一解<ul>
+<li>找规律与 f(x)&#x3D;a0+a1x+a2x2+a3x3的线性代数</li>
+<li>对于 圆的公式相关 也可以转换成线性方程组</li>
+</ul>
+<p>				</p>
+</li>
+<li>因为 输入对应了一个范德蒙矩阵det非零，而 f(x)的系数是要求的 向量，输出 是目标向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cramer法则<ul>
+<li>解的公式表达形式（虽然实际对于大矩阵，还是高斯消元靠谱）</li>
+<li>这里Carmer法则又是先给公式再证明，没有推导，从天而来<ul>
+<li>18.06是，展开&#x3D;&gt;代数余子式的逆矩阵&#x3D;&gt; 解&#x3D;逆 * 目标 &#x3D;&gt; 逆展开</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Laplace定理<ul>
+<li>这个18.06倒是没有，相当于行列式计算的分块切割的性质，而分块的每块还可以不连续</li>
+</ul>
+</li>
+<li>应用小天地<ul>
+<li>这里也是fib递推 和  解微分方程，但这里连 特征值都还没讲</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高等代数 四 矩阵的运算</title>
     <url>/Math/Advanced_algebra_4/</url>
     <content><![CDATA[<h1 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h1><p>P55-65</p>
@@ -973,194 +1635,6 @@
       </categories>
       <tags>
         <tag>高等代数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Fermat&#39;s two square theorem</title>
-    <url>/Math/Fermat_s_two_square_theorem/</url>
-    <content><![CDATA[<h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><p>对于奇素数$p$有能被表示成$p &#x3D; a^2+b^2$和$p &#x3D; 4k+1$为充要条件</p>
-<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="一定不是-4k-3"><a href="#一定不是-4k-3" class="headerlink" title="一定不是$4k+3$"></a>一定不是$4k+3$</h2><p>众所周知</p>
-<p>$(4k+0)^2 \equiv 0 \pmod 4$</p>
-<p>$(4k+1)^2 \equiv 1 \pmod 4$</p>
-<p>$(4k+2)^2 \equiv 0 \pmod 4$</p>
-<p>$(4k+3)^2 \equiv 1 \pmod 4$</p>
-<p>所以</p>
-<p>$a^2 + b^2 \not\equiv 3 \pmod 4$</p>
-<p>那么有了充分, 如果$p &#x3D; a^2+b^2$则一定$p &#x3D; 4k+1$</p>
-<h2 id="p-x3D-4k-1-to-p-x3D-a-2-b-2"><a href="#p-x3D-4k-1-to-p-x3D-a-2-b-2" class="headerlink" title="$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$"></a>$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$</h2><p>现在问题剩下就是如果 奇素数$p &#x3D; 4k+1$, 如何证明它可以被表示成$a^2+b^2$</p>
-<h2 id="Euler’s-proof-by-infinite-descent"><a href="#Euler’s-proof-by-infinite-descent" class="headerlink" title="Euler’s proof by infinite descent"></a>Euler’s proof by infinite descent</h2><h3 id="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"><a href="#如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和" class="headerlink" title="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"></a>如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和</h3><p><code>Brahmagupta-Fibonacci Identity</code></p>
-<p>$(a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2 + (ad-bc)^2$</p>
-<blockquote>
-<p>只有$ad&#x3D;bc$ 时右侧有0的平方 , 也就是两个整数成$c^2&#x2F;a^2$的倍数</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"><a href="#如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"></a>如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; k (c^2+d^2)$,$(c^2+d^2) &#x3D; p$为素数</p>
-<p>$(cb-ad)(cb+ad) &#x3D; c^2(a^2+b^2)-a^2(c^2+d^2) &#x3D; (c^2k-a^2)p$</p>
-<p>若$cb-ad$ 是 p 的倍数(另一半假设,对称同理)</p>
-<p>$kp^2 &#x3D; (a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2+(ad-bc)^2$</p>
-<p>得到 $ap+bq$ 也是 p的倍数</p>
-<p>$k &#x3D; (\frac{ac+bd}{p})^2+(\frac{ad-bc}{p})^2$ 能表示成整数的平方和</p>
-<h3 id="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"><a href="#如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"></a>如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n$ x不能表示为两个数的平方和, 则 $p_i$ 中至少有一个不能表示为两个平方数之和的因子</p>
-<p>如果$p_i$ 都能表示成，那么根据上面的结论，必定能表示成平方和，矛盾</p>
-<h3 id="如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和"><a href="#如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和" class="headerlink" title="如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和"></a>如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n $</p>
-<p>$a &#x3D; mx \pm c, b &#x3D; nx \pm d$, 其中 $ 2|c| \leq x,2|d| \leq x$</p>
-<p>有 $a^2+b^2 &#x3D; m^2x^2 \pm 2mxc + c^2 + n^2x^2 \pm 2nxd + d^2 &#x3D; Ax+(c^2+d^2)$</p>
-<p>$c^2+d^2 &#x3D; kx$</p>
-<p>令$g &#x3D; gcd(c,d)$</p>
-<p>因为$\gcd(a,b)&#x3D;1 \Rightarrow \gcd(a,x)&#x3D;1 \Rightarrow \gcd(c,x)&#x3D;1$, 同理 $\gcd(d,x)&#x3D;1$, 所以$\gcd(g,x)&#x3D;1$</p>
-<p>$g^2((\frac{c}{g})^2+(\frac{d}{g})^2) &#x3D; kx$, 说明中间的部分也是$x$的倍数</p>
-<p>能得到 $e^2+f^2&#x3D;k_1x$ 且$e,f$互素</p>
-<p>$k_1x &#x3D; e^2+f^2 \leq c^2+d^2 \leq (\frac{x}{2})^2 + (\frac{x}{2})^2 &#x3D; \frac{x^2}{2}$</p>
-<p>有 $k_1 \leq \frac{x}{2}$</p>
-<p>由上一个定理，若x非平方和，那么k包含非平方和因子,令这个因子为$x’$</p>
-<p>$x’ \leq k_1 \leq \frac{x}{2} &lt; x $</p>
-<p>综上 如果$a,b$互质,$x$是 $a^2+b^2$ 的因子，且$x$不能被表示成两个数的平方和，那么存在一个小于$x$的数$x’$，也满足是$e^2+f^2$的因子($\gcd(e,f)&#x3D;1,e\le a,f\le b$),且$x’ &lt; x$小，同时也是不能表示成两个数的平方和。</p>
-<p>然而整数无法无限下降，所以所有因子都能表示成两个数的平方和</p>
-<p>即若$\gcd(a,b)&#x3D;1$,那么$a^2+b^2$的质因子只有$2$和$4k+1$形式的</p>
-<h3 id="4n-1-形式的素数是平方分解数"><a href="#4n-1-形式的素数是平方分解数" class="headerlink" title="$4n+1$形式的素数是平方分解数"></a>$4n+1$形式的素数是平方分解数</h3><p>$p &#x3D; 4n + 1$</p>
-<p>$1,2^{4n},3^{4n},…,(4n)^{4n}$ 模$p$余1 (费马小定理)</p>
-<p>$2^{4n}-1,3^{4n}-2^{4n},…,(4n)^{4n}-(4n-1)^{4n}$ 均是$p$的倍数</p>
-<p>$a^{4n} - b^{4n} &#x3D; (a^{2n}+b^{2n})(a^{2n}-b^{2n})$</p>
-<ol>
-<li>若 $p$ 是任意一个 $a^{2n}+b^{2n}$ 的因子，注意到 $a,p$ 互质, $b,p$互质,$a,b$ 互质（a&#x3D;b+1）</li>
-</ol>
-<p>由上一条引理，$p$ 是互素平方和的因子，所以$p$可以拆解成两个数的平方和</p>
-<ol start="2">
-<li>否则 $p$ 是所有 $a^{2n}-b^{2n}$ 的因子</li>
-</ol>
-<p>$(x+1)^{2n} - x^{2n} &#x3D; ((x+1)^n + x^n) ((x+1)^n - x^n)$</p>
-<h4 id="差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n"><a href="#差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n" class="headerlink" title="差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$"></a>差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$</h4><p><img data-src="http://nonagon.org/ExLibris/sites/default/files/images/Differences-Cubes.jpg" alt="差分"></p>
-<p>$ f(x) &#x3D; a_0 + a_1x $</p>
-<p>$ f(x+1) - f(x) &#x3D; a_1 $ 一次多项式得证</p>
-<p>若 $n-1$次多项式成立</p>
-<p>设 $f$ 是$n$次多项式 $ f(x) &#x3D; a_0 + a_1x+ \cdots + a_nx^n $</p>
-<p>$ g(x) &#x3D; f(x+1) - f(x) &#x3D; k_0 + k_1x+ \cdots + a_n \cdot n x^{n-1} $</p>
-<p>$g$是 $n-1$次多项式，且其最高项的系数为 $a_n \cdot n $</p>
-<p>因为 $g(x)$ 的$n-1$阶差分为 $(n-1)!(a_n \cdot n)  &#x3D; n! a_n$，归纳法递推得证</p>
-<p>回到上面 我们因为p是所有减法式子的因子，因此$f(x) &#x3D; x^{2n}$的$2n$阶差分为$(2n)!$, 差分过程中始终是$p$的倍数</p>
-<p>而$(2n)!$不是$p$的倍数，所以矛盾。必然$p$是上面某个加法的因子</p>
-<blockquote>
-<p>综上，$4n+1$ 形式的素数是平方分解数</p>
-</blockquote>
-<p>$4n+3$ 根据模4的余数，显然不是</p>
-<blockquote>
-<p>综上充要得证: 一个奇素数是平方分解数，那么它是$4n+1$, 一个素数是$4n+1$形式，那么它是平方分解数</p>
-</blockquote>
-<h3 id="补充性质"><a href="#补充性质" class="headerlink" title="补充性质"></a>补充性质</h3><p>$p &#x3D; x^2+y^2$ 质数唯一表示</p>
-<p>$p &#x3D; a^2+b^2&#x3D;c^2+d^2$</p>
-<p>轮换性质，不妨设$a&gt;c&gt;d&gt;b$</p>
-<p>$(ac+bd)(ad+bc) &#x3D; (a^2+b^2)cd +(c^2+d^2)ab &#x3D; p(cd+ab)$</p>
-<p>至少一个是p的倍数, 若 $(ac+bd) &#x3D; Kp$ ,</p>
-<p>$0 &lt; (a-c)^2+(b-d)^2 &#x3D; a^2+b^2+c^2+d^2-2ac-2bd &#x3D; 2p-2Kp &lt; 2p $，</p>
-<p>同时除2,$0 &lt; p-Kp &lt; p $ 矛盾</p>
-<p>因此$p$ 唯一表示成两个</p>
-<h2 id="Lagrange’s-proof-through-quadratic-forms"><a href="#Lagrange’s-proof-through-quadratic-forms" class="headerlink" title="Lagrange’s proof through quadratic forms"></a>Lagrange’s proof through quadratic forms</h2><p>TODO</p>
-<h2 id="Dedekind’s-two-proofs-using-Gaussian-integers"><a href="#Dedekind’s-two-proofs-using-Gaussian-integers" class="headerlink" title="Dedekind’s two proofs using Gaussian integers"></a>Dedekind’s two proofs using Gaussian integers</h2><p>TODO</p>
-<h2 id="Proof-by-Minkowski’s-Theorem"><a href="#Proof-by-Minkowski’s-Theorem" class="headerlink" title="Proof by Minkowski’s Theorem"></a>Proof by Minkowski’s Theorem</h2><p>TODO</p>
-<h2 id="Zagier’s-“one-sentence-proof”"><a href="#Zagier’s-“one-sentence-proof”" class="headerlink" title="Zagier’s “one-sentence proof”"></a>Zagier’s “one-sentence proof”</h2><p><a href="https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf">https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf</a></p>
-<h2 id="Roger-Heath-Brown-in-1971"><a href="#Roger-Heath-Brown-in-1971" class="headerlink" title="Roger Heath-Brown in 1971"></a>Roger Heath-Brown in 1971</h2><p>$p &#x3D; 1 + 4k$</p>
-<p>如果可以拆分，显然一奇一偶</p>
-<p>$p &#x3D; x^2+ (2y)^2 &#x3D; x^2+4y^2$</p>
-<p>考虑</p>
-<p>$p &#x3D; x^2+4yz$</p>
-<p>有解$(x,y,z) &#x3D; (1,1,k)$, 注意到如果 $y\neq z$,那么$(x,y,z)$如果是一组解,则有$(x,z,y)$,形成配对</p>
-<p>那么如果能证明$p&#x3D;x^2+4yz$的所有解的个数是奇数个，那么必定有不能配对的就是$y&#x3D;z$的, 就是一个解了(这种方法不会直接给到如何计算，但是从存在性上完成证明)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   b</span><br><span class="line">cccb</span><br><span class="line"> dob</span><br><span class="line"> daaa</span><br><span class="line"> d</span><br><span class="line"></span><br><span class="line">   b</span><br><span class="line">cooo</span><br><span class="line"> ooo</span><br><span class="line"> oooa</span><br><span class="line"> d</span><br></pre></td></tr></table></figure>
-
-<p>以$x^2$拼<code>o</code>,然后以类似上面形式拼4个$yz$</p>
-<p>那么 只有</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">dddobbb</span><br><span class="line">   a</span><br><span class="line">   a</span><br><span class="line">   a</span><br></pre></td></tr></table></figure>
-
-<p>唯一对应$(y,z)$ (因为 相当于$y&#x3D;x$的情况,即$p&#x3D;x^2+4xz&#x3D;x(x+4z)$只有$x&#x3D;1$)</p>
-<p>而其它的都对应两个不同的$(y,z)$的解</p>
-<p>得证</p>
-<h1 id="x-2-ny-2"><a href="#x-2-ny-2" class="headerlink" title="$x^2+ny^2$"></a>$x^2+ny^2$</h1><p>原文见Cox的书</p>
-<p>有几个性质(稍后证明):</p>
-<p>$p&#x3D;x^2+y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \pmod 4$</p>
-<p>$p&#x3D;x^2+2y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \mathrm{or} 3 \pmod 8$</p>
-<p>$p&#x3D;x^2+3y^2, x,y \in \mathbb{Z} \Leftrightarrow p&#x3D;3 \mathrm{or} p \equiv 1 \pmod 3$</p>
-<hr>
-<p>$(x^2+ny^2)(z^2+nw^2) &#x3D; (zx\pm nyw)^2+n(xw\mp yz)^2$</p>
-<hr>
-<p>若$N &#x3D; x^2+ny^2, p | N,p&#x3D;a^2+nb^2,\gcd(a,b) &#x3D; 1$, $p$是质数</p>
-<p>参考$n&#x3D;1$时</p>
-<p>$(ax-nby)(ax+nby) &#x3D; a^2x^2-n^2b^2y^2 &#x3D; a^2(x^2+ny^2) - ny^2(a^2+nb^2) &#x3D; a^2N - ny^2p$</p>
-<p>因此前面至少一个是p的倍数, 不妨设$c&#x3D;\frac{ax-nby}{p}$,则$d&#x3D;\frac{bx+ay}{p}$,均为整数</p>
-<p>因此如果$N&#x3D;x^2+ny^2$且有质因子也能表示成$p&#x3D;a^2+ny^2$,那么$\frac{N}{p}$也可以表示成$c^2+nd^2$</p>
-<hr>
-<p>若$N&#x3D;x^2+ny^2, N &#x3D; zz’$,而$z$无法被表示成$a^2+nb^2$,则$z’$中有无法被表示成$a^2+nb^2$形式的质因子</p>
-<p>反证法, 若$z’$的的所有质数因子都能被表示,根据上面的$\frac{N}{p_1}$能被表示$\frac{N}{p_1p_2}$,这样逐个除$z’$中的质因子,最终$z$也可以被表示矛盾</p>
-<hr>
-<p>对于$p | x^2+ny^2,\gcd(x,y)&#x3D;1$, 因为知道$t^2 \equiv (p-t)^2\pmod p$, 所以可以取$x &#x3D; min(|x| \bmod p, p - |x| \bmod p) \le \frac{p}{2}$, 对于$y$同理</p>
-<p>注意的是，在调整到$\le \frac{p}{2}$的过程中 $\gcd(x,y)&#x3D;1$可能会不满足,但是注意到$gcd(x,p)&#x3D;1,gcd(y,p)&#x3D;1$,即$\gcd(\gcd(x,y),p) &#x3D; 1$,因此即使过程$\gcd(x,y)\neq 1$,只需要$x,y$同时除以$gcd(x,y)$即可</p>
-<p>因此可以取$|x|,|y|\le \frac{p}{2}$ 因为$\gcd(x,y)&#x3D;1$，只有$x&#x3D;y&#x3D;\frac{p}{2} &#x3D; 1$时才会有同时小于等于取等,也就是$p&#x3D;2$的特殊q情况</p>
-<p>对于一般$p&gt;3$的情况, 则当$n\le 3$时, $x^2+ny^2 &lt; (\frac{p}{2})^2 + n(\frac{p}{2})^2 &#x3D;\frac{1+n}{4}p^2 \le p^2$时</p>
-<p>这就是Fermat的当$p &gt; 3$是$x^2+ny^2$的因子时,可以通过调整$x,y$让$x^2+ny^2 &lt; p^2$</p>
-<p>那么有如果$p$不可被表示,则$1 &lt; \frac{x^2+ny^2}{p} &lt; p$且不可被表示,无法无穷下降</p>
-<p>综上$x^2+ny^2,n\le 3,\gcd(x,y)&#x3D;1$时, 它的质因子形式都是$a^2+nb^2$</p>
-<p>特殊的</p>
-<p>对于$n&#x3D;2$时，如果$2|x$则考虑$y^2+2(\frac{x}{2})^2$, 最后会递降到3</p>
-<p>其中对于$n&#x3D;3$ 时,如果$3|x$则考虑$y^2+3(\frac{x}{3})^2$,可能有$4$也是因子, 即$4p | x^2+3y^2,gcd(x,y)&#x3D;1$</p>
-<p>但是注意到$x-3y,x+3y$ 至少一个是4的倍数,因此同上面拆的部分可得到$p|x’^2+3y’^2$, 也就是当$x,y$同时为奇数的时候，可以除以$1^2+3\cdot 1^2$来完成下降,直到$p$可以表示或者$x,y$一个奇一个偶数</p>
-<hr>
-<p>$p&#x3D;x^2+ny^2$ and Quadratic Reciprocity</p>
-<p>($n&#x3D;5$时Euler和Fermat都知道这个结论不一定 $21&#x3D;1^2+5\cdot 2^2, 3|21$,但是$3$不能被表示)</p>
-<p>Legendre symbol (a是整数,p是奇质数)</p>
-<p>${\displaystyle \left({\frac {a}{p}}\right)&#x3D;{\begin{cases}1&amp;{\text{if }}a{\text{ is a quadratic residue modulo }}p{\text{ and }}a\not \equiv 0{\pmod {p}},\\ -1&amp;{\text{if }}a{\text{ is a quadratic nonresidue modulo }}p,\\ 0&amp;{\text{if }}a\equiv 0{\pmod {p}}.\end{cases}}}$</p>
-<p>或者$(\frac{a}{p}) &#x3D; a^{\frac{p-1}{2}} \pmod p$</p>
-<p>对于$1,-1$也就是是否存在$x^2 \equiv a \pmod p$,因为存在时显然$a^{\frac{p-1}{2}} \equiv x^{p-1} \equiv 1 \pmod p$</p>
-<p>设$g$为模$p$的一个原根,则存在$k$使$g^k\equiv n \pmod p$,所以$(g^k)^{\frac{p-1}{2}} \equiv 1 \pmod p$, 因为$g$是原根,所以$p-1 | k\cdot \frac{p-1}{2}$, 因此$\frac{k}{2}$是整数,所以$n \equiv (g^{\frac{k}{2}})^2$</p>
-<p>综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) &#x3D; -1$</p>
-<hr>
-<p>定理1.7: $n$是非零整数, $p$是奇质数且$p\nmid n$, 则 $p \mid x^2+ny^2,\gcd(x,y)&#x3D;1 \Leftrightarrow (\frac{-n}{p})&#x3D;1$</p>
-<p>因为$x^2+ny^2\equiv 0 \pmod p, gcd(x,y)&#x3D;1$ 则$gcd(y,p) &#x3D; 1$</p>
-<p>$x^2 \equiv -ny^2 \pmod p$</p>
-<p>$(x^2)^{\frac{p-1}{2}} \equiv (-ny^2)^{\frac{p-1}{2}} \pmod p$</p>
-<p>$x^{p-1} \equiv (-n)^{\frac{p-1}{2}}y^{p-1} \pmod p$</p>
-<p>$1 \equiv (-n)^{\frac{p-1}{2}}\cdot 1 \pmod p$</p>
-<p>正向得证</p>
-<p>即存在$z^2 \equiv -n \pmod p$</p>
-<p>即$z^2 + n\cdot 1^2 \equiv -n+n \equiv 0 \pmod p, gcd(z,1)&#x3D;1$</p>
-<p>反向得证，充要得证</p>
-<hr>
-<p>然后欧拉发现了一些</p>
-<p>$(\frac{-3}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,7 \mod 12$</p>
-<p>$(\frac{-5}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,3,7,9 \mod 20$</p>
-<p>$(\frac{-7}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,9,11,15,23,25 \mod 28$</p>
-<p>$(\frac{3}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1 \mod 12$</p>
-<p>$(\frac{5}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9 \mod 20$, (注这里$\pm 9$也可以写成$\pm 11$,但是$\pm 9$会让人发现都是奇数平方)</p>
-<p>$(\frac{7}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9,\pm 25 \mod 28$</p>
-<hr>
-<p>但不是所有都能变成平方，比如</p>
-<p>$(\frac{6}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 5 \mod 24$</p>
-<p>但6不是质数</p>
-<hr>
-<p>若$p$是奇质数,</p>
-<p>若$p\equiv 1 \pmod 4, (\frac{-1}{p}) &#x3D; 1$</p>
-<p>若$p\equiv 3 \pmod 4, (\frac{-1}{p}) &#x3D; -1$</p>
-<p>证明 $(\frac{-1}{p}) \equiv (-1)^{\frac{p-1}{2}} \pmod p$, 显然得证</p>
-<hr>
-<p>猜想1.9, 如果$p,q$是不同的质数,则$(\frac{q}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm \beta^2 \bmod 4q$对于一些奇数$\beta$, (待证明)</p>
-<p>命题1.10(重要,也就是而二次互反律quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) &#x3D; (-1)^{\frac{(p-1)(q-1)}{4}}$</p>
-<p>证明: 显然$(\frac{-1}{p}) &#x3D; (-1)^{\frac{p-1}{2}}$,$(\frac{ab}{p}) &#x3D; (\frac{a}{p})(\frac{b}{p})$</p>
-<p>????????</p>
-<p>Page 27&#x2F;363</p>
-<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p><a href="https://yexiaorain.github.io/Blog/pe/233">https://yexiaorain.github.io/Blog/pe/233</a></p>
-<p><a href="https://mathoverflow.net/a/299696/500903">https://mathoverflow.net/a/299696/500903</a></p>
-<p><a href="http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf">http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf</a></p>
-<p><a href="https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares">https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Legendre_symbol">https://en.wikipedia.org/wiki/Legendre_symbol</a></p>
-<p><a href="https://www.youtube.com/watch?v=VBPrP4nChbo">https://www.youtube.com/watch?v=VBPrP4nChbo</a></p>
-<p><a href="http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf">http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf</a></p>
-<p><a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd">https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd</a></p>
-]]></content>
-      <categories>
-        <category>数论</category>
-      </categories>
-      <tags>
-        <tag>Fermat</tag>
-        <tag>平方和定理</tag>
       </tags>
   </entry>
   <entry>
@@ -1361,6 +1835,2509 @@
       </categories>
       <tags>
         <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 七 多项式环</title>
+    <url>/Math/Advanced_algebra_7/</url>
+    <content><![CDATA[<p>视频066-085</p>
+<h1 id="多项式环"><a href="#多项式环" class="headerlink" title="多项式环"></a>多项式环</h1><p>半群, 集合G,运算$\oplus$， 例如: 正整数 与 加法</p>
+<ul>
+<li>封闭性: $\forall a,b \in G, a\oplus b\in G$</li>
+<li>结合律: $\forall a,b,c, (a\oplus b)\oplus c &#x3D; a\oplus (b \oplus c)$</li>
+</ul>
+<p>幺半群： 半群+幺元: 零元（幺元）: $\forall a, 0\oplus a &#x3D; a &#x3D; a\oplus 0$ </p>
+<ul>
+<li>例如所有非负整数 与 加法</li>
+</ul>
+<p>群: 幺半群 + 逆元, $\forall a, \exists b, a\oplus b&#x3D;0&#x3D;b\oplus a$ </p>
+<ul>
+<li>有了逆元可以 用语法糖定义减法，</li>
+<li>例如所有整数与加法，<ul>
+<li>注意的是 加法是有交换律的</li>
+</ul>
+</li>
+<li>这里一个例子是 排列， S_3 &#x3D; { (123),(132),(213),(231),(312),(321) }, 其中 $ijk$ 表示把第1个放到i，第2各放到j,第3各放到k<ul>
+<li>$(a_1a_2a_3)\oplus (b_1b_2b_3) &#x3D; (a_{b_1}a_{b_2}a_{b_3})$</li>
+<li>封闭性显然 因为每次取出1,2,3放回也是3个位置</li>
+<li>幺元 (123)</li>
+<li>逆元 $(a_1a_2a_3)$的逆元$B[a_1]&#x3D;1,B[a_2]&#x3D;2,B[a_3]&#x3D;3$</li>
+<li>不满足交换律</li>
+<li>$(a&#x3D;(132))\oplus(213) &#x3D; (a_2a_1a_3) &#x3D;(312)$</li>
+<li>$(a&#x3D;(213))\oplus(132) &#x3D; (a_1a_3a_2) &#x3D;(231)$</li>
+</ul>
+</li>
+</ul>
+<p>交换群(阿贝尔群): 群+交换律, $\forall a,b, a\oplus b&#x3D;b\oplus a$ </p>
+<ul>
+<li>例如所有整数与加法</li>
+</ul>
+<p>环，集合G,运算$\oplus,\otimes$, 例如整数环 与 加法 乘法</p>
+<ul>
+<li>$&lt;G,\oplus&gt;$ 是交换群</li>
+<li>分配率(特殊！不是群相关的性质) $\forall a,b,c, a\otimes(b\oplus c)&#x3D;(a\otimes b)\oplus (a\otimes c)$</li>
+<li>$&lt;G,\otimes&gt;$ 是幺半群</li>
+</ul>
+<p>域, 集合G,运算$\oplus,\otimes$ 没有整数域，因为整数的幺元是1, 比如2在整数中没有逆元，有理数域</p>
+<ul>
+<li>$&lt;G,\oplus&gt;$ 是交换群</li>
+<li>分配率(同上)</li>
+<li>$&lt;G,\otimes&gt;$ 是交换群， 除去$&lt;G,\oplus&gt;$的零元 均有$\otimes$ 逆元<ul>
+<li>于是可以用语法糖定义除法</li>
+</ul>
+</li>
+</ul>
+<p>&lt;–more–&gt;</p>
+<h2 id="一元-多项式"><a href="#一元-多项式" class="headerlink" title="一元 多项式"></a>一元 多项式</h2><p>$\sum_{i&#x3D;0}^n a_ix^i$</p>
+<p>系数$a_0\cdots,a_{n}\in K$数域$K$</p>
+<ul>
+<li>表法唯一<ul>
+<li>如果如此形式的表达式 相等，当且仅当它们有完全相同的项（除去系数为0的项)</li>
+<li>称作 数域K的一个一元多项式</li>
+</ul>
+</li>
+<li>系数全为0的多项式称作 零多项式 记作 0</li>
+<li>deg f(x) &#x3D; 最高系数非零对应的次数， 零次多项式 不含 零多项式 &#x3D; K中的非零元<ul>
+<li>deg非零常数 &#x3D; 0</li>
+<li>$deg 0 &#x3D; -\infty$</li>
+</ul>
+</li>
+<li>K[x]&#x3D;{一元多项式}<ul>
+<li>加法 同次数系数对应相加, 满足交换律，结合律，有零元，有逆元</li>
+<li>乘法 系数卷积形式，</li>
+<li>数量乘法， 所有系数乘上k</li>
+<li>因为满足 线性法则，所以对于 加法和数量乘法 成为数域K上一个先行空间<ul>
+<li>基 : {1,x,x^2,x^3…} 线性唯一表出所有， 一个无限维的线性空间</li>
+<li>那么它的任意有限子集 也线性无关</li>
+</ul>
+</li>
+<li>K[x] 中乘法 满足律 交换律，对加法有分配率<ul>
+<li>deg(f(x)) + g(x)) &lt;&#x3D; max(deg(f(x)),deg(g(x)))<ul>
+<li>两个次数不等式 取等</li>
+<li>次数相等时可能相等 可能 更小（抵消掉）</li>
+</ul>
+</li>
+<li>deg(f(x)g(x)) &#x3D; deg(f(x))+deg(g(x)), 这个 也是把 deg 0 设为-infty的好处而不是-1<ul>
+<li>推论 f(x)!&#x3D;0 g(x)!&#x3D;0 则 f(x)g(x)!&#x3D;0</li>
+<li>推论 f(x)g(x)&#x3D;0 则 f(x)&#x3D;0或g(x)&#x3D;0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类似的 整数, n阶矩阵(没有乘法的交换律), 偶数（没有单位元）<ul>
+<li>抽象出环的概念<ul>
+<li>2个代数运算 +, * 满足<ul>
+<li>加法<ul>
+<li>运算封闭</li>
+<li>结合律 (a+b)+c&#x3D;a+(b+c)</li>
+<li>交换律 a+b&#x3D;b+a</li>
+<li>零元: 0+a&#x3D;a+0&#x3D;a</li>
+<li>逆元: 对于a存在b, a+b&#x3D;b+a&#x3D;0</li>
+</ul>
+</li>
+<li>乘法<ul>
+<li>运算封闭</li>
+<li>结合律 ab&#x3D;ba</li>
+<li>对于加法的分配<ul>
+<li>a(b+c)&#x3D;ab+ac</li>
+<li>(b+c)a&#x3D;ba+ca</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>则称作环</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="一元多项式环的概念和性质"><a href="#一元多项式环的概念和性质" class="headerlink" title="一元多项式环的概念和性质"></a>一元多项式环的概念和性质</h2><p>R是一个环</p>
+<p>减法： 不过是加法和逆元的一个 语法糖？</p>
+<ul>
+<li>交换环：如果乘法满足交换律</li>
+<li>单位元(乘法的零元，不一定有例如素数环，偶数环): R中有一个元素e, 对于a\inR,  ea&#x3D;ae&#x3D;a</li>
+<li>对于a\in R,如果存在非零b,使得 ab&#x3D;0, 则a是一个左零因子<ul>
+<li>ba&#x3D;0 右零因子，（通称零因子），例如 矩阵中的 <code>[0,1;0,0]</code>， 这是乘法中的定义</li>
+<li>零元（加法的零元） 是零因子<ul>
+<li>0&#x3D;0a+(-0a)&#x3D;(0+0)a+(-0a)&#x3D;0a+0a+(-0a)&#x3D;0a+0&#x3D;0a</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>子环：<ul>
+<li>环R中一个非空子集R1,如果对于R的 加法 乘法运算 也成为一个环，则称作子环<ul>
+<li>也就是 保持运算规则，但集合是子集合，那么 环&lt;子集合,加,乘&gt;是 环&lt;集合,加,乘&gt;的 子环</li>
+</ul>
+</li>
+<li>充要条件 a,b\in R1, 可推出 a+(-b) \in R1, ab\in R1 <ul>
+<li>方便验证是不是环</li>
+<li>K[给定n阶矩阵] ，是有单位元I的交换环</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>k和kI 双射 保持 加法 乘法<ul>
+<li>也就是 元素双射，然后运算有对应的运算（注意！集合不同 加法&#x2F;乘法一定不同，集合相同，加法乘法也可以不同）</li>
+<li>称作 同构映射<ul>
+<li>例如 i 与-i映射，i与2i映射</li>
+<li>如果 环R和环R‘有一个同构映射 $\sigma$ 且R有单位元e，则sigma(e)是R’的单位元</li>
+<li>同构映射的用处 是 例如 简单的运算研究其延伸规则时， 对应的抽象复杂也同样的效果，例如 多项式 $(x+3)^2&#x3D;x^2+6x+9$,那么 <code>K[A]</code>和多项式 同构的话, $(A+3I)^2&#x3D;A^2+6A+9I$, 整个都是在“证明 这种带入的数学合法性”<ul>
+<li>类似的，如果两个 域 同构，那么一个域的子域，按照同样的“同构映射” 能得到另一个域的 子域，并且和前一个子域是“同构映射”</li>
+<li>所以这种玩意使用的时候，一个很重要的是延伸结论时 其抽象的最小依赖是什么，例如 矩阵运算对于乘法没有交换律，所以如果延伸结论有用到交换律，那么对应的映射不一定成立，</li>
+<li>再更不数学一点，就是平时打比方举例的感觉，而现实中很多时候 并不足够的同构</li>
+</ul>
+</li>
+<li>注意 其中的x, k[A]的A，在研究结构的时候都是不具体运算的，要保持其相关内容“基”的性质</li>
+<li>扩环<ul>
+<li>$\sigma: K[x]\to R$</li>
+<li>$f_{K[x]}(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i \to f_R(t) \sum_{i&#x3D;0}^n \tau(a_i)t^i$</li>
+<li>感觉7的定理1的 证明有点多于，感觉从 “同构的” 角度讲，把 集合，运算 全部都能看成参数，那么参数对应了 就能证明了？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-2-整除关系，带余除法"><a href="#7-2-整除关系，带余除法" class="headerlink" title="7.2 整除关系，带余除法"></a>7.2 整除关系，带余除法</h2><ul>
+<li>$K[x]$ 整除:<ul>
+<li>整除符号 还是 左 | 右 表示 <code>右=左*?</code></li>
+<li>注意 这是多项式 中的整除<ul>
+<li>f(x) | g(x) 且 g(x) | f(x) 那么相伴，并不是相等<ul>
+<li>例如 2 | 1 且  1 | 2 在多项式中的“整除”定义上是对的</li>
+<li>说明两个 多项式deg相等，成数量倍数关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>f(x)可以表示成 $f(x)&#x3D;g(x)h(x)$ 那么 g(x)能整除f(x)<ul>
+<li>特殊的 任何 零多项式 能整除 零多项式<ul>
+<li>0&#x3D;0f(x)</li>
+</ul>
+</li>
+<li>$\mathrm{deg} g(x) \le \mathrm{deg} f(x)$</li>
+</ul>
+</li>
+<li>g(x) | f_i(x) 则 g(x) | \sum ui(x)fi(x)</li>
+</ul>
+</li>
+<li>也可以定义带余除法了<ul>
+<li>f(x)&#x3D;h(x)g(x)+r(x), g(x) !&#x3D;0, deg r(x) &lt; deg g(x),</li>
+<li>整除 关系不会随着 域扩大而改变<ul>
+<li>因为h，r 属于小的域 也就属于更大的域, 两个表法唯一，扩域 不会产生多射</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>书上7.2 多 整数环 和 整环R上的矩阵</p>
+<p>来到整数环 a&#x3D;qb+r, 0&lt;&#x3D;r&lt;|b|, 给定整数a,b , 存在唯一一对整数 (q,r)</p>
+<ul>
+<li>这玩意能和 多项式映射吗？</li>
+</ul>
+<hr>
+<p>未来章节9.8会用到</p>
+<p>定义3 R是整环，由R中sn个元素排成s行n列的一张表，称为R上的一个$s\times n$矩阵</p>
+<ul>
+<li>可以定义 R上矩阵的 加法&#x2F;纯量乘法（矩阵乘以R中的元素）&#x2F;乘法 这3种运算</li>
+<li>可以定义3种初等 行列变换（这里稍微注意的是，乘的时候乘可逆元，而 跨行乘加的时候可以h(lambda) ）</li>
+<li>可以类似的定义行列式</li>
+<li>可以定义可逆矩阵概念，注意 可逆矩阵 的充要是 |A|为R中可逆元</li>
+</ul>
+<p>定义4, A是整环R上一个非零矩阵，如果A有一个r阶子式不为0,而所有r+1阶子式（如果有的话）权威0,那么称作A的秩为r.零矩阵秩规定为0</p>
+<ul>
+<li>如果 $A(\lambda)$ 能够经过一系列初等变换变成$B(\lambda)$ ，那么称 他们相抵</li>
+</ul>
+<p>定理3 任意一个非零n级$\lambda-$矩阵一定相抵于对角$\lambda-$矩阵, diag {$d_1(\lambda),d_2(\lambda),\cdots,d_n(\lambda)$}</p>
+<ul>
+<li>其中 $d_i(\lambda)|d_{i+1}(\lambda)$</li>
+<li>且对于非零的$d_i(\lambda)$其最高次系数为1，</li>
+<li>称作相抵标准形</li>
+</ul>
+<p>证明：归纳法</p>
+<p>n&#x3D;1 时，只需 乘上 首相系数的逆元</p>
+<p>对于n&gt;1,</p>
+<ul>
+<li>若 第一行，第一列全为0,则 归纳成立</li>
+<li>否则 至少一个不为0,可以交换使得 $a_{11} \neq 0$</li>
+<li>令 S&#x3D;{$G(\lambda) | G(\lambda)与 A(\lambda)相抵，且g_{11}(\lambda)\neq 0$}<ul>
+<li>在S中取$B(\lambda)$,其中$deg b_{11}(\lambda)\le deg g_{11}(\lambda),\forall g_{11}(\lambda)\neq 0$ 也就是 S中的所有矩阵中 1行1列多项式的deg最小的那个，且$b_{11}$最高次系数为1</li>
+<li>希望能证明，这样的$b_{11}(\lambda)$ 整除第一行第一列所有元素<ul>
+<li>什么工具呢，带余除法，如果不是倍数，那么可以用带余除法得到更小deg的 $\lambda$表达式，再交换就行，和上面找最小deg的矛盾</li>
+<li>那么一旦能整除，则可以初等变换，让第一行 第一列除了它全为0,剩下的就可以归纳变换了</li>
+<li>而归纳变换以后 得到的是 diag {b11 , … 归纳的对角，} &#x3D; diag{b11,d2,d3,….}</li>
+<li>如果 b11 不是 d2的因数<ul>
+<li>对于左上角2x2的区域可以 <code>[b11,0;0,d2]=&gt;[b11,d2;0,d2]=&gt; [b11,剩余r;0,d2]</code> 还是带余除法，这样又能得到更小的矛盾</li>
+<li>所以 b11是d2的因数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理4. 把上面的定理3是 lambda多项式环，换成整数环，所以对于一般的矩阵相抵于一个 对角整数矩阵，且有对角约数关系</p>
+<h2 id="7-3-最大公因式"><a href="#7-3-最大公因式" class="headerlink" title="7.3 最大公因式"></a>7.3 最大公因式</h2><p> 公因式</p>
+<ul>
+<li>c(x) | f(x), c(x) | g(x)</li>
+<li>最大公因式 任意c(x) | d(x) ,且 d(x)是公因式<ul>
+<li>关于0的：<ul>
+<li>f(x) | 0</li>
+<li>0 | 0</li>
+</ul>
+</li>
+<li>存在性: 辗转相除法 证明 f和g的公因式 和 r与r的公因式 一样<ul>
+<li>同时得到 能表示成 u(x)f(x)+v(x)g(x)&#x3D;d(x)</li>
+</ul>
+</li>
+<li>性质 首个系数&#x3D;1的最大公因式 唯一， deg 唯一</li>
+<li>互素：(f(x),g(x))的最大首一公因式 &#x3D; 1<ul>
+<li>同时得到 能表示成 u(x)f(x)+v(x)g(x)&#x3D;1 充要</li>
+<li>互素性 同样不随着数域扩大而改变</li>
+</ul>
+</li>
+<li>f(x) | g(x)h(x), (f(x),g(x)) 则 f(x) | h(x) 这里证明了很多 数论里面会证明的东西，所以如果有一个东西能建立 多项式 和 整数之间的 同构关系就好了，</li>
+</ul>
+</li>
+</ul>
+<p>四、最大公因式应用之一： lambda-矩阵的行列式因子</p>
+<p>定义6 设A(lambda)是一个sxn lambda-矩阵 ，对于A(lambda)的所有k阶子式的首一最大公因式D_k(lambda)称为A(lambda)的k阶行列式因子</p>
+<p>定理6,相抵的lambda-矩阵，它们的秩相等， 并且各阶行列式因子也对应相等</p>
+<ul>
+<li>A-&gt; j行+&#x3D;k * i行 得到 B<ul>
+<li>那么B中 不含j行的行列式不变</li>
+<li>B中含有j行 那么行列式 &#x3D; 原来的B + 原来的j行替换成h(lambda) * i行<ul>
+<li>如果包含i行，那么 行列式不变</li>
+<li>如果不包含i行，那么是 （原来的+ h(lambda) * 原来的替换成i行)<ul>
+<li>注意到 gcd(原来的B，原来的替换成i行) &#x3D; gcd(原来的B+h(lambda) * 原来的替换成i行，原来的替换成i行) 所以 总的gcd不变</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理7. n级 lambda-矩阵 A(lambda)的相抵标准型是唯一的</p>
+<p>定义7：相抵标准型主对角线上 非零元 称为 A(lambda)的不变因子</p>
+<p>定理8 两个矩阵相抵，充要条件，有相同的不变因子，或者有相同的各阶行列式因子</p>
+<h2 id="7-4-不可约多项式"><a href="#7-4-不可约多项式" class="headerlink" title="7.4 不可约多项式"></a>7.4 不可约多项式</h2><p>注： 这玩意儿的性质像整数里的素数</p>
+<p>不可约定义：f(x)只有K中非零数，和f(x)的相伴元（非零数系数倍数的）是它的因式</p>
+<ul>
+<li>还是 想不出一个映射，能 完成 整数和多项式之间的映射，感觉好难受啊，处处都很像 但想不出一个映射<ul>
+<li>一个点是 像整数加法中 1+1&#x3D;2 ，变到了乘法的两个不同元</li>
+<li>而 在多项式中 (x+x&#x3D;2x) 是一个相伴多项式，并没有变成乘法的两个不同元，所以似乎没法同构？</li>
+</ul>
+</li>
+</ul>
+<p>$p(x)\in K[x]$ 中一个次数大于0的多项式，以下等价</p>
+<ul>
+<li>$p(x)$是不可约多项式</li>
+<li>$\forall f(x)\in K[x]$有$p(x)|f(x)$或$(p(x),f(x))&#x3D;1$</li>
+<li>在$K[x]$中，从$p(x)|f(x)g(x)$可推出 $p(x)|f(x)$或$p(x)|g(x)$</li>
+</ul>
+<p>推论：</p>
+<ul>
+<li>p(x)|f(x),且p(x)不可约 那么p(x)|f(x)中的某个因式</li>
+<li>K[x] 中 一次多项式不可约</li>
+</ul>
+<p>教材上这里 定义2,定理3,定理4 也就是 数论中整数的对应的一些命题</p>
+<p>唯一因式分解定理(这个也是和整数的 唯一分解很像)</p>
+<ul>
+<li>$f(x)&#x3D;p_1(x)p_2(x)\cdots p_s(x)&#x3D;q_1(x)q_2(x)\cdots q_s(x)$ 的表示,s固定，适当排列后$p_i(x)\sim q_i(x)$</li>
+<li>归纳法：<ul>
+<li>如果$f(x)&#x3D;g(x)h(x)$ 可分解，则f可分解</li>
+<li>如果f&#x3D;prod p &#x3D; prod q,考虑p的最后一个，一定有q中是它的倍数，而q不可分解，所以p是 对应的q的倍数，两个相伴，两边同时去掉p,q剩余根据归纳唯一分解，也有s唯一</li>
+</ul>
+</li>
+</ul>
+<p>综上：</p>
+<ul>
+<li>带余除法</li>
+<li>最大公因式</li>
+<li>互素</li>
+<li>不可约多项式</li>
+<li>唯一因式分解定理</li>
+</ul>
+<h2 id="7-5-重因式"><a href="#7-5-重因式" class="headerlink" title="7.5 重因式"></a>7.5 重因式</h2><p>$p^k(x) | f(x),p^{k+1}(x) \not{|} f(x),k &gt; 1$, k重多项式</p>
+<p>定义2 <code>K[x]</code>中多项式 的一阶导数: $f’(x)&#x3D;\sum_{i&#x3D;1}^n  ia_ix^{i-1}$</p>
+<ul>
+<li>分配率 (f+g)’&#x3D;f’+g’</li>
+<li>数乘 (cf)’&#x3D;c(f’)</li>
+<li>乘法 (fg)’&#x3D;f’g+fg’</li>
+<li>整幂次复合运算 $(f^m(x))’&#x3D;mf^{m-1}(x)f’(x)$</li>
+</ul>
+<p>定理1:</p>
+<ul>
+<li>p(x)是f(x)的k重因式，那么p(x)是f’(x)的k-1重因式</li>
+</ul>
+<p>推论:</p>
+<ul>
+<li>p(x)是f(x)的重(&gt;1)因式,当且仅当 p(x) | (f(x),f’(x))</li>
+<li>(f(x),f’(x)) \neq 1 &lt;&#x3D;&gt; f(x)有重因式 </li>
+<li>f(x)\in K[x] 有无有重因式，不会随着数域扩大而改变</li>
+</ul>
+<h2 id="7-6-多项式的根，复数域上的不可约多项式"><a href="#7-6-多项式的根，复数域上的不可约多项式" class="headerlink" title="7.6 多项式的根，复数域上的不可约多项式"></a>7.6 多项式的根，复数域上的不可约多项式</h2><p>定理一</p>
+<ul>
+<li>$f(x)&#x3D;h(x)(x-a)+f(a)$, 也就是f(x)除以x-a的余项是f(a)</li>
+<li>x-a|f(x) &lt;&#x3D;&gt; f(a)&#x3D;0</li>
+</ul>
+<p>定义1：K是数域，R是一个有单位元的交换环，且R可看成K的一个扩环，$f(x)\in K[x]$, 如果有$c\in R$使得$f(c)&#x3D;0$那么称c是在R中的一个根</p>
+<ul>
+<li>f(x)在实数域，和复数域中的根分别称为 复根和实根</li>
+<li>$f(x)\in Q[x]$ 则 称作有理根</li>
+</ul>
+<p>定理2（Bezout定理） <code>K[x]</code>中,x-a是f(x)的一次因式 当且仅当 a是f(x)在K中的一个根</p>
+<ul>
+<li>对应 重因式的定义重根</li>
+<li>注意的是 这里的假设是 $f(x)&#x3D;k \prod_{i&#x3D;1\to s} (x_i-c_i)^ri * \prod_{j&#x3D;s+1\to t} p_j(x)^rj$ 也就是分解成<ul>
+<li>系数k</li>
+<li>首一的一次因式的重幂次写法</li>
+<li>首一的大于一次的不可分解因式的幂次写法</li>
+</ul>
+</li>
+</ul>
+<p>定理3. K[x]中n次 多项式 f(x)在K中之多有n个根</p>
+<p>定理4：$f(x),g(x)\in K[x]$ 次数不超过n,如果有n+1各不同的 $c_{1\to n+1}$使得$f(c_i)&#x3D;g(c_i)$ 则两个相等</p>
+<ul>
+<li>考虑差 有n+1重根，所以差只能是0</li>
+<li>这里， 可以把 多项式 映射到 一元多项式函数，其定义域是K<ul>
+<li>这是从$K[x]$到 $K_{pol}$的一个映射</li>
+</ul>
+</li>
+<li>函数的加法 和 乘法 有对应的映射</li>
+<li>多项式 是表达式， 函数是映射，现在是把 （表达式）映射到（映射）</li>
+</ul>
+<p>定理5：数域K上的两个多项式f(x)与g(x)如果不相等，那么它们的诱导的多项式函数f,g也不相等</p>
+<ul>
+<li>函数如果相等，有无穷多元素a,使得 f(a)&#x3D;g(a) 根据上面的，两个多项式相等</li>
+</ul>
+<p>定义2, 设R和R‘是两个换，如果存在 R到R’的一个双射$\sigma$，保持加法和乘法运算，</p>
+<p>$\sigma(a+<em>R b)&#x3D;\sigma(a)+</em>{R’}\sigma(b)$</p>
+<p>$\sigma(a*<em>R b)&#x3D;\sigma(a)*</em>{R’}\sigma(b)$</p>
+<p>那么是一个同构映射，换是同构的 $R\simeq R’$, 上面有$K[x]\simeq K_{pol}$</p>
+<p>可以用 函数值f(a)&#x3D;0来研究 不可约多项式</p>
+<hr>
+<p>研究复数域多项式中不可约多项式有哪些</p>
+<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i \in C[x], \mathrm{deg} f(x)&#x3D;n &gt; 0$</p>
+<p>若$f(x)$无复数根,$\forall z\in C,f(z)\neq 0$,$\Phi(z)&#x3D;\frac{1}{f(z)}$的定义域为$C$</p>
+<ul>
+<li>$\Phi(x)$ 在复平面上 每个点都有导数(在每个点解析)，在复平面上 “解析”</li>
+</ul>
+<p>$z&#x3D;r(\cos\theta+i\sin\theta)$</p>
+<p>$z^n&#x3D;r^n(\cos n\theta+i\sin n\theta)$</p>
+<p>$|z|\to +\infty$时</p>
+<p>$f(z)&#x3D;|\sum_{i&#x3D;0}^n a_iz^i|$</p>
+<p>$\ge |a_nz^n|-|\sum_{i&#x3D;0}^n a_iz^i|$ 三角定理</p>
+<p>$\ge |a_n||z|^n-(\sum_{i&#x3D;0}^n |a_i||z|^i)$</p>
+<p>$\lim_{|z|\to +\infty}\Phi(z) &#x3D;\frac{\frac{1}{|z|^n}}{a_n+…}\to 0$ 高数的证明过程 就是去钦定一个max,把小的部分消掉</p>
+<p>存在$r &gt; 0,M_1 &gt;0$使得$|z|&gt;r$有$|\Phi(z)|\le M_1$ 从而有界闭集 $|z|\le r$中 有上界</p>
+<p>根据 复变函数Liouvill定理？？？？？？: 在复平面C上解析且有界的函数必为常值函数，所以$\Phi(z)&#x3D;b$, 所以f(x)必有复根</p>
+<p>Liouville定理 <a href="https://zhuanlan.zhihu.com/p/393074166">https://zhuanlan.zhihu.com/p/393074166</a></p>
+<p>定理6：代数基本定理：每一个次数大于0的复系数多项式至少一个复根</p>
+<ul>
+<li><code>C[x]</code>中不可约多项式只有一次多项式</li>
+<li>n次有n个根</li>
+</ul>
+<p>定理7：复系数多项式唯一因式分解定理</p>
+<ul>
+<li>$f(x)&#x3D;k\prod (x-c_i)^l_i$</li>
+</ul>
+<h2 id="7-7-实数域上的不可与多项式，实系数多项式的实根"><a href="#7-7-实数域上的不可与多项式，实系数多项式的实根" class="headerlink" title="7.7 实数域上的不可与多项式，实系数多项式的实根"></a>7.7 实数域上的不可与多项式，实系数多项式的实根</h2><p>$f(x)&#x3D;\sum_{i&#x3D;0}^na_ix^i\in\mathbb{R}[x]$</p>
+<p>如果有复根c,则c的共轭也是根</p>
+<ul>
+<li>$f(c)&#x3D;0$说明复部为0,$f(\bar{c})&#x3D;\bar{f(c)}&#x3D;\bar{0}&#x3D;0$</li>
+</ul>
+<p>不可约多项式:</p>
+<ul>
+<li>1次多项式</li>
+<li>判别式小于0的二次多项式 &#x3D;&gt; 有复根</li>
+</ul>
+<p>任取R上一个不可约多项式$p(x)$</p>
+<ul>
+<li>如果有实根c &#x3D;&gt; x-c 和p(x)相伴</li>
+<li>如果有复根c &#x3D;&gt; $(x-c)(x-\bar{c}) |p(x)$<ul>
+<li>共轭成对出现</li>
+<li>而$(x-(a+bi))(x-(a-bi))&#x3D;x^2-2ax+a^2-b^2$<ul>
+<li>所以p(x)和这个相伴</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>从而 实系数多项式的唯一因式分解定理<ul>
+<li>f(x) &#x3D; k \prod 一次式 \prod 判别式小于0的二次式</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-8-有理数域上的不可约多项式"><a href="#7-8-有理数域上的不可约多项式" class="headerlink" title="7.8 有理数域上的不可约多项式"></a>7.8 有理数域上的不可约多项式</h2><p>$f(x)\in Q[x]$</p>
+<p>考虑乘上 分母的倍数 可以变成整系数多项式</p>
+<p>定义1. 如果一个非零整系数多项式g(x)如果各项系数 因数只有 $\pm 1$, 那么称作本原多项式</p>
+<ul>
+<li>唯一性</li>
+</ul>
+<p>研究 相伴的本原多项式</p>
+<p>性质2：高斯(Gauss)引理, 本原多项式的乘积是本原多项式</p>
+<ul>
+<li>一个p能整除 fg的所有系数，但是不能整除f,g的所有系数，考虑 (f的最小不能整除p的) 和 (g最小不能整除p的) 对应的位置，可得矛盾</li>
+</ul>
+<p>性质3：一个本原多项式可约，当且仅当能分解成两个次数较低本原多项式的乘积</p>
+<ul>
+<li>f&#x3D;gh &#x3D;&gt; f&#x3D;g本原 * h本原 * 常数逆操作 &#x3D; (g本原 * h本原) * 常数逆操作， 因此常数逆操作只能是$\pm 1$</li>
+</ul>
+<p>性质4： 本原多项式唯一分解</p>
+<hr>
+<p>整系数多项式的有理根：</p>
+<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i$ 是一个整系数多项式</p>
+<p>定理1: 如果$\frac{q}{p}$是一个有理根，$(p,q)&#x3D;1$,那么$p|a_n,q|a_0$</p>
+<ul>
+<li>本原化更好, &#x3D;&gt;(px-q)是 本原因式</li>
+</ul>
+<hr>
+<p>整系数多项式在Q上不可约的判别法</p>
+<p>二次，三次 在Q上不可约 当且仅当它没有有理根（因为如果能分解 至少会分解出一个一次的因式 同时还是本原多项式）</p>
+<p>四次及以上，如果没有有理根可能有2次及以上的因式</p>
+<p>如果$f(x)&#x3D;(\sum_{i&#x3D;0}^m b_ix^i)(\sum_{j&#x3D;0}^t c_jx^j)$， 且存在一个素数p能整除$f(x)$除了最高次的所有系数</p>
+<ul>
+<li>从而 类似上面的拆解，如果 考虑最大$i$, $p| b_{0..i}$,从而$p | a_{i+1}$推出 $p|b_{i+1}c_0$,从而$p|c_0$</li>
+</ul>
+<p>定理2： Eisenstein判别法</p>
+<ul>
+<li>存在素数p 整除除去最高次的所有系数</li>
+<li>$p^2 \not{|} a_0$</li>
+<li>那么它不可约，（注意 第一条性质导致有些本原多项式无法用这个办法判断例如 $x^2+2x+3,x^2+5x+6$）<ul>
+<li>一个办法是 考虑 g(x)&#x3D;f(x+b), b通常取1&#x2F;-1</li>
+</ul>
+</li>
+<li>这个结论能推出存在任意次数的本原多项式<ul>
+<li>$x^n+2x^{n-1\to 0}$</li>
+<li>$x^n+p$</li>
+</ul>
+</li>
+</ul>
+<p>定理3：颠倒一下0次和n次</p>
+<ul>
+<li>$p^2\not{|} a_n$</li>
+<li>$p\not{|} a_0$</li>
+<li>$p | a_{1\cdots n}$</li>
+<li>很好证明 $x^nf(1&#x2F;x)$</li>
+</ul>
+<h2 id="7-9-多元多项式环"><a href="#7-9-多元多项式环" class="headerlink" title="7.9 多元多项式环"></a>7.9 多元多项式环</h2><p>似乎视频课上没有这个</p>
+<p>n圆多项式概念 </p>
+<p>圆: $x^2+y^2-r^2&#x3D;0$</p>
+<p>球: $x^2+y^2+z^2-r^2&#x3D;0$</p>
+<p>$\sum_{i_1,\cdots,i_n} a_{i_1,\cdots,i_n} \prod_{j&#x3D;1}^n x_{j}^{i_j}$ 也就是下标区分x,下标对应的幂次 区分项，每个项有具体的系数</p>
+<p>deg 单项式 &#x3D; $\sum_{i_j}$, deg 0 &#x3D; -infty</p>
+<p>deg f &#x3D; 最大的 $\max_{deg 单项式}$</p>
+<p>一个排序法是按照 幂次的有序数组的字典序</p>
+<p>加法&#x2F;乘法： 经典的定义</p>
+<p>定理1：f,g首项的乘积 &#x3D; 乘积fg的首项， 因为按字典序从大到小排列， 从幂次依次评断可用归纳+反证法易得</p>
+<ul>
+<li>所以非零多项式的乘积一定是非零多项式</li>
+<li>因此fg&#x3D;0，那么f&#x3D;0或g&#x3D;0</li>
+</ul>
+<p>定义2：m次齐次多项式，每个系数不为零的多项式的单项式次数都是m次的</p>
+<ul>
+<li>m次齐次多项式 * n次齐次多项式 &#x3D; m+n 次齐次多项式 (m+n)</li>
+<li>任意m次 多项式 可以唯一拆分成，$\sum_{i&#x3D;0}^m (i次多项式)$</li>
+</ul>
+<p>deg (d + g) &lt;&#x3D; max (deg(f),deg(g))</p>
+<p>deg (fg) &#x3D;deg g + deg g</p>
+<p>定理3, K是一个数域，R是一个有单位元的交换环，并且R可以看成一个ieK的一个扩环（即R有一个子环R1与K同构，且R的单位元是R1的单位元，K到R1的同构映射记作$\tau$</p>
+<ul>
+<li>还是 系数同构 和 x的关系的同构，同时映射了运算以及 元素，</li>
+</ul>
+<p>n元多项式函数： 从多项式 到 多项式函数 的映射</p>
+<p>定理4： 非零多元多项式的诱导函数一定不是零函数</p>
+<ul>
+<li>按次数归纳法+拆分法可证</li>
+</ul>
+<p>定理5： 两个n元多项式相等， 当且仅当他们的诱导函数相等 </p>
+<ul>
+<li>人话一点 其实和前面1元多项式一样的</li>
+<li>n元多项式相等的定义是 对应系数相等</li>
+<li>而函数相等的定义是，任意输入 输出相等</li>
+<li>所以证明这两个充要关系就好了</li>
+</ul>
+<p>五. 1964年H.Hironaka引进了n元多项式的出发算法。1965年，b. Buchbergerr引进了项目、序概念</p>
+<p>定义3. 整除： 同样的类似定义 f&#x3D;gh如果有表示法，那么g能整除f</p>
+<ul>
+<li>相伴：有系数倍关系，类似的</li>
+<li>但是没有带余除法，所以没有辗转相除法，可以有最大公因式的定义，和互素的定义</li>
+<li>不可约多项式，只有非零数和相伴元是它的因式<ul>
+<li>当且仅当不可分解成两个次数较低的多项式乘积</li>
+</ul>
+</li>
+<li>唯一因式分解定理<ul>
+<li>f&#x3D;系数 \prod 首1因式：标准分解式</li>
+<li>由此 如果有办法分解，那么就能快速得到最大公因式，但是没有“容易实践的分解办法”</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-10-对称多项式"><a href="#7-10-对称多项式" class="headerlink" title="7.10 对称多项式"></a>7.10 对称多项式</h2><p>$f(x_1,x_2,x_3)&#x3D;x_1^3+x_2^3+x_3^3+x_1^2x_2+x_1^2x_3+x_2^2x_3+x_1x_2^2+x_1x_3^2+x_2x_3^2$</p>
+<p>这就是中学学的 齐次轮换，不过这里连齐次好像没有强求</p>
+<p>$n$元对称多项式: 对于x的任意排列有$f(x_1,\cdots,x_n)&#x3D;f(x_{p_1},\cdots,x_{p_n})$， 则称为n元对称多项式</p>
+<p>$\sigma_1(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n x_i$ 因为出现一个其它都要出现</p>
+<p>$\sigma_2(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n \sum_{j&#x3D;i+1}^n x_ix_j$, 这里没有平方项</p>
+<p>$\sigma_k(x_1,\cdots,x_n)&#x3D;\sum \prod_{j&#x3D;1,t_{j}&lt;t_{j+1}}^k x_{t_j}$ 类似的</p>
+<p>$\sigma_n(x_1,\cdots,x_n)&#x3D;\prod_{i&#x3D;1}^n x_i$</p>
+<p>上面称作初等对称多项式</p>
+<hr>
+<p>对称多项式 对加法乘法封闭</p>
+<p>对称多项式 是$K[x_1,\cdots,x_n]$ 的一个子环</p>
+<p>$f_i$是初等对称多项式，g是任意多项式</p>
+<ul>
+<li>那么$g(f_1,\cdots,f_n)$是对称多项式，即 初等对称多项式的的多项式 仍是 对称多项式<ul>
+<li>易证：带入不同顺序时，注意到g的输入没有变</li>
+</ul>
+</li>
+<li>$g(\sigma_1,\cdots,\sigma_n)$ 也是对称多项式</li>
+</ul>
+<p>定理1： 对称多项式基本定理，任意一个n元对称多项式f,存在唯一g,使得$f&#x3D;g(\sigma_1,\cdots,\sigma_n)$</p>
+<ul>
+<li>那么考虑f的首项，因为f对称，所以一定有对称的 幂次非严格单调递减的存在，所以首项的幂次一定也非严格单调递减</li>
+<li>那么 如果首项为 $k \prod_{i&#x3D;1}^n a_i^{l_i}$<ul>
+<li>那么 $\Phi&#x3D;k\prod_{i&#x3D;1}^n \sigma_i^{l_i-l_{i+1}}$ 的首项和 这个相等,其中$l_{n+1}&#x3D;0$</li>
+<li>显然 它是对称的，显然它的每个单项的系数在f中相等，因此 $f-\Phi$ 剩下的不包含这个轮换项 且同样是对称，那么这个下降???是有限次数的，所以总可以<ul>
+<li>这里下降的评判是用 首相的有序幂次 的字典序评判的<ul>
+<li>这里也体现了 规定顺序的一种用途</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>唯一性：<ul>
+<li>反证法: 如果有两种表示$g_1,g_2$，那么$g&#x3D;g_1-g_2$的差多项式不是零多项式，但是这个非零多项式带入 $\sigma_i$以后是零多项式，要证明这个为假<ul>
+<li>那么 既然不是零多项式 存在一组输出$b_1\cdots b_n$使得导出函数 的值$g(b_1,\cdots,b_n)\neq 0$</li>
+<li>那么 剩下就是想构造出$c_{1\to n}$使得$b_i&#x3D;\sigma_i(c_{1\to n})$</li>
+<li>Vieta 韦达公式 $\Phi(x)&#x3D;\sum_{i&#x3D;0}^n (-1)^{n-i}b_ix^i$，根据前面的复数域多项式的定理，有n个复数根，而且满足上面的形状。</li>
+<li>从而 g直接带入b不为0,但是能找到n个c，直接先把g带入f,再从f带入又等于0 矛盾</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数域K上一元多项式的判别式<ul>
+<li>对称多项式基本定理 一个应用：研究数域K上的一元多项式 在 复数域中有无重根</li>
+<li>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i, a_n&#x3D;1$ 首1,一元 多项式 有n个复数根<ul>
+<li>如果有重根，&lt;&#x3D;&gt;  $\prod (c_i-c_j)^2 &#x3D;0$ 这里加平方是为了对称性</li>
+<li>而这个是对称多项式，有唯一的 g 可以表示，找到g以后,那么 $\prod(c_i-c_j)^2 &#x3D; g(-a_{n-1},a_{n-2},\cdots,(-1)^na_0)$ 可以作为重根存在的判别式！ 命题3</li>
+<li>&#x3D; |纵范德蒙矩阵| |横范德蒙矩阵|</li>
+<li>&#x3D; <code>|[matrix]|</code>, $matrix_{i\in [1,n],j\in[1,n]}&#x3D;\sum_{k&#x3D;1}^n c_k^{i-1+j-1}$<ul>
+<li>令 $s_k &#x3D; \sum_{i&#x3D;1}^n x_i^k$</li>
+<li>&#x3D;  $matrix_{i\in [1,n],j\in[1,n]}&#x3D;s_{i+j-2}$</li>
+<li>注意到 $s_k$ 也是对称的，可以表示出，所以如果能得到n个s的表达式，那么矩阵的det就是 g了</li>
+<li>牛顿 Newton 公式<ul>
+<li>$k\in [1,n]$时 有$s_k-\sigma_1s_{k-1}+\sigma_2s_{k-2}\cdots+(-1)^{k-1}\sigma_{k-1}s_1+(-1)^kk\sigma_k&#x3D;0$</li>
+<li>$k &gt; n$时有$s_k-\sigma_1s_{k-1}+\sigma_2s_{k-2}\cdots+(-1)^{k-1}\sigma_{k-n+1}s_1+(-1)^n\sigma_{n}s_{k-n}&#x3D;0$</li>
+<li>这个我好像还专门写过 不这么系统的单独的文章</li>
+<li>证明: <ul>
+<li>考虑n+1元多项式 $f(x_1,\cdots,x_n,x)&#x3D;\prod (x-x_i)$</li>
+<li>展开 $x^n-\sigma_1 x^{n-1}+\cdots+(-1)^n\sigma_n$</li>
+<li>把x用$x_{1\to n}$带入</li>
+<li>$x_i^n-\sigma_1 x_i^{n-1}+\cdots+(-1)^n\sigma_n &#x3D; 0$</li>
+<li>$n\ge k$时 满足上面的式子<ul>
+<li>乘上$x_i^{k-n}$</li>
+<li>$x_i^k-\sigma_1 x_i^{k-1}+\cdots+(-1)^n\sigma_nx_i^{k-n} &#x3D; 0$</li>
+<li>所有n各表达式相加</li>
+<li>$s_k-\sigma_1 s_{k-1}+\cdots+(-1)^n\sigma_n s_{k-n} &#x3D; 0$</li>
+</ul>
+</li>
+<li>$n &lt; k$时<ul>
+<li>这又开始先猜想后证明了+归纳法了</li>
+<li>这里核心是不定元个数 下降 与 零多项式，通过x_n&#x3D;0来带入并就能完成 这个转换</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>有了牛顿公式，可以用递推计算出所有s的关于sigma的表达式了，也就是g的表达式，从而 再计算det就有了 重根判别式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子: 以 开篇的$f(x_1,x_2,x_3)&#x3D;x_1^3+x_2^3+x_3^3+x_1^2x_2+x_1^2x_3+x_2^2x_3+x_1x_2^2+x_1x_3^2+x_2x_3^2$<br>来举例</p>
+<p>$x_1^3$是首项 对应$1\cdot x_1^3x_2^0x_3^0$ 那么需要$\Phi_1&#x3D;1\cdot \sigma_{1}^{3}&#x3D;(x_1+x_2+x_3)^3&#x3D;(\sum_{i&#x3D;1}^3x_i^3)+3(\sum_{i\in [1,3],j\in [1,3],i\neq j}x_i^2x_j)+3!(\prod_{i&#x3D;1}^3x_i)$</p>
+<p>$f-\Phi_1&#x3D;-2(\sum_{i\in[1,3],j\in[1,3],i\neq j}x_i^2x_j^2)-3!(\prod_{i&#x3D;1}^3x_i)$</p>
+<p>接下来的首项是$-2x_1^2x_2^1 &#x3D; (-2)x_1^2x_2^1x_3^0$</p>
+<p>所以需要$\Phi_2&#x3D;(-2) \sigma_1^{2-1}\sigma_2^{1-0}&#x3D;(-2)(x_1+x_2+x_3)(x_1x_2+x_2x_3+x_3x_1)$</p>
+<p>$&#x3D;-2(\sum_{i\in[1,3],j\in[1,3],i\neq j}x_i^2x_j^2)-6(\prod_{i&#x3D;1}^3x_i)$</p>
+<p>$f-\Phi_2&#x3D;0$</p>
+<p>所以 $f&#x3D;\Phi_1+\Phi_2&#x3D;\sigma_1^3+(-2)\sigma_1\sigma_2$</p>
+<p>所以$g(x_1,x_2,x_3)&#x3D;x_1^3-2x_1x_2$</p>
+<h2 id="7-11-结式"><a href="#7-11-结式" class="headerlink" title="7.11 结式"></a>7.11 结式</h2><p>上面讨论的一元n次多项式的 重根判别式 D(f)，首先要求出复根 幂和，再计算行列式，运算量大</p>
+<p>f有重根，当且仅当f(x)在<code>C[x]</code>有重因式, 不随数域扩大而改变，因此当且仅当<code>K[x]</code>中有重因式</p>
+<p>当且仅当在<code>K[x]</code>中有重因式 当且仅当 f(x)与f’(x) 不互素，于是 辗转相除法 求(f(x),f’(x))</p>
+<p>D(f)&#x3D;0 当且仅当 $(f(x),f’(x)) \neq 1$</p>
+<p>$f(x),g(x)$ 分别是 $K[x]$中两个非零n次,m次多项式</p>
+<p>若 f,g有公共复根</p>
+<p>$f(x)&#x3D;f_1(x)d(x),g(x)&#x3D;g_1(x)d(x),\mathrm{deg} d(x) &gt; 0$ 其中$f_1,g_1$分别可以写成n-1次,m-1次表达式</p>
+<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_{n-i}x^i$</p>
+<p>$g(x)&#x3D;\sum_{i&#x3D;0}^m b_{m-i}x^i$</p>
+<p>$f_1(x)&#x3D;\sum_{i&#x3D;0}^{n-1} c_{n-1-i}x^i$</p>
+<p>$g_1(x)&#x3D;\sum_{i&#x3D;0}^{m-1} d_{m-1-i}x^i$</p>
+<p>把$f_1(x)g(x) &#x3D; f(x)g_1(x)$ 左右展开，对应系数相等 构成 n+m 个方程</p>
+<p>也就是 m+n元齐次线性方程组有非零解$(d_0,d_1,\cdots,d_{m-1},-c_0,-c_1,\cdots,-c_{n-1})$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[ m 列     ][n 列      ]</span><br><span class="line">a0          b0</span><br><span class="line">a1 a0       b1 b0</span><br><span class="line">a2 a1 a0    b2 b1 b0    * d0    = 0</span><br><span class="line">                          d1</span><br><span class="line">                          ...</span><br><span class="line">                          -c0</span><br><span class="line">                          -c1</span><br><span class="line">                          ...</span><br><span class="line">						  </span><br><span class="line"></span><br><span class="line">有非零解，说明左边 (m+n)*(m+n) 的矩阵 不可逆，行列式为0</span><br><span class="line">左边的形状就是</span><br><span class="line">f的系数构成列，每次移一个列偏移1位，所以长度u是n+1,最大偏移次是m-1，所以一共m+n行，</span><br><span class="line">然后就是g的系数构成列向量，同样每次移动偏移一位，所以长度m+1,最大偏移n-1,所以同样一共m+n行</span><br></pre></td></tr></table></figure>
+
+<p>结式 <code>Res(f,g) = |f的系数向量构成列 m次偏移，g系数的向量构成列 n次偏移|</code></p>
+<p>如果 有公共复根，那么 Res(f,g) &#x3D; 0(必要条件)</p>
+<p>那么如果 Res(f,g)&#x3D;0,则 有非零解， 能找到$f_1,g_1$</p>
+<ul>
+<li>若 $a_0,b_0$ 不全为0, 不妨设 $a_0\neq 0$, 也就是 f不含(x-0), 那么 $f(x) | f_1(x)g(x)$<ul>
+<li>若 (f,g)&#x3D;1,则， $f | f_1$ 根据deg大小矛盾</li>
+</ul>
+</li>
+</ul>
+<p>deg f &gt; 0 ,deg g &gt; 0</p>
+<ul>
+<li>Reg(f,g)&#x3D;0 的充要条件 &lt;&#x3D;&gt; $a_0&#x3D;b_0&#x3D;0$ 或 f(x),g(x)有公共复根, （注意a_0,b_0是最高次的系数，不是最低次的系数）</li>
+</ul>
+<p>用处</p>
+<ul>
+<li>判别 f,g是否有公共复根的新方法，真的比辗转相除好吗？虽然 根据行列式变化 其中蕴含的辗转相除吗？</li>
+<li>求f(x,y),g(x,y) 上的公共零点<ul>
+<li>按照x的幂次展开，y相关的表达式变成系数</li>
+<li>如果 $f(x_0,y_0)&#x3D;0&#x3D;g(x_0,y_0)$ , 那么 $x_0$ 是复系数多项式 $f(x,y_0),g(x,y_0)$的一个公共根<ul>
+<li>$Res(f(x,y_0),g(x,y_0))&#x3D;0$</li>
+</ul>
+</li>
+<li>所以算法为 Res_x(f,g)的表达式 只有y</li>
+<li>求 所有y复根</li>
+<li>对于每个复根 带入 $(f(x,y_0),g(x,y_0))$用辗转相除 求关于x公因式 ，再求x的复根，可以得到所有零点</li>
+</ul>
+</li>
+</ul>
+<p>P115~119 TODO</p>
+<p>定理2：$f,g,a_0\neq 0,b_0\neq 0$, 设f的n个复根为$c_1,\cdots c_n$,g的m个复根为$d_1,\cdots,d_m$</p>
+<p>则 $Res(f,g)&#x3D;a_0^m\prod_{i&#x3D;1}^n g(c_i)$</p>
+<p>$&#x3D;(-1)^{mn}b_0^n\prod_{j&#x3D;1}^m f(d_j)$</p>
+<p>定理3: $D(f)&#x3D;(-1)^{\frac{n(n-1)}{2}}a_0^{-1}Res(f,f’)$</p>
+<h2 id="7-12-域与域上的一元多项式环"><a href="#7-12-域与域上的一元多项式环" class="headerlink" title="7.12 域与域上的一元多项式环"></a>7.12 域与域上的一元多项式环</h2><p>在 f不能整除g时，引入$\frac{f(x)}{g(x)}$记作分式，</p>
+<p>可以看成 有序多项式对 (f(x),g(x)), 是 <code>K[x],K[x]</code>中的元素</p>
+<p>定义相似 $(f_1,g_1)\sim (f_2,g_2)$ &lt;&#x3D;&gt; $f_1g_2&#x3D;g_1f_2$</p>
+<ul>
+<li>具有反身性 （自己和自己相似）</li>
+<li>具有对称性 （sim左右交换依然保持 bool值）</li>
+<li>传递性  (x sim y, y sim z) &#x3D;&gt; x sim z</li>
+<li>等价类 记作 $\frac{f}{g}$<ul>
+<li>所有等价类组成集合记作 K(x), 圆括号，称作 $K[x]\times K[x]$对于等价关系$\sim$的商集</li>
+</ul>
+</li>
+<li>加法定义 $\frac{f_1}{g_1}+\frac{f_2}{g_2}&#x3D;\frac{f_1g_2+g_1f_2}{g_1g_2}$, </li>
+<li>乘法定义 $\frac{f_1}{g_1}\cdot \frac{f_2}{g_2}&#x3D;\frac{f_1f_2}{g_1g_2}$</li>
+<li>上面运算 结果不受 等价类中代表元选取影响，最终结果对于不同代表元的选择是同一个等价类</li>
+<li>$\frac{0}{1}$记作0元</li>
+<li>$\frac{f}{g}$的加法逆元$\frac{-f}{g}$  记作$-\frac{f}{g}$ (这个时候就会发现 如果是 (f,g)表示法，要么就需要定义外部加法，要么就是内部变成（-f,g）)， 类似可以定义减法</li>
+<li>$\frac{1}{1}$ 是乘法0元，也就是单位元</li>
+<li>K(x)是有单位元的交换环</li>
+<li>非零元$\frac{f}{g}$的乘法逆元$\frac{g}{f}$ 也记作$(\frac{f}{g})^{-1}$, 类似可以定义除法</li>
+</ul>
+<p>定义1.一个有单位元$1(\neq 0)$的交换环F,如果它的每个非零元都可逆，那么称F是一个域</p>
+<ul>
+<li>例如K(x)是一个域，称作数域K上的 一元 分式域， 或一元有理函数域<ul>
+<li>其元素称作 一元分式 或一元有理函数，f分子，g分母</li>
+</ul>
+</li>
+</ul>
+<p>分式的次数 &#x3D; deg f - deg g</p>
+<p>如果分子坟墓互素，那么成为 既约分式</p>
+<p>数域的元素是数，而一元分式的元素是分式</p>
+<p>命题1. 域F中没有非平凡的零因子，从而域一定是整环</p>
+<ul>
+<li>如果有 $a,b \neq 0, ab&#x3D;0$ 那么  $b&#x3D;a^{-1}(ab)&#x3D;a^{-1}0&#x3D;0$  矛盾</li>
+</ul>
+<hr>
+<p>mod p 剩余类域 与 mod m 剩余类环</p>
+<p>Z 中定义二元关系 $\sim$, $a\sim b$&lt;&#x3D;&gt; a与b被7整除余数相同 &lt;&#x3D;&gt; 7 | a-b</p>
+<p>有 若 $a\equiv b\pmod{7},c\equiv d\pmod{7}$ 则$a+c\equiv b+d\pmod{7}, ac\equiv bd\pmod{7}$</p>
+<p>有mod 7下的等价类 剩余类，记作$Z_7$或 $Z&#x2F;(7)$</p>
+<ul>
+<li>有单位元的交换环<ul>
+<li>每个非零元有乘法逆元 所以是 域， 且是有限域</li>
+</ul>
+</li>
+</ul>
+<p>对于 m,类似的定义，但是m不是质数时，例如 m&#x3D;4, 那么有 $2 * 2 &#x3D; 0$ 非平凡零因子，不是域</p>
+<p>若 p是素数$Z_p$是域, 只需要证明每个非零元可逆, 这里没有用费马小定理，而是 $gcd(p,a) &#x3D; 1$,所以$up+va&#x3D;1$, 即 $va\equiv 1 \pmod{p}$</p>
+<p>若 是合数那么 $m&#x3D;m_1m_2$ 都是它的非平凡零因子</p>
+<p>这里也是给出了 矩阵 <code>[0,1;0,0]</code>这种零因子 以外的一种零因子</p>
+<hr>
+<p>域 F 中，  $n * 单位元I, n &gt; 0$ 表示n个单位元相加</p>
+<ul>
+<li>情况1, 均不为0</li>
+<li>情况2, 存在n使得$n 单位元I &#x3D; 0$, 取最小的n, 若n是合数,<ul>
+<li>$0 &#x3D; nI&#x3D;n_1(n_2I)&#x3D;n_1(I(n_2I))&#x3D;(n_1I)(n_2I)$ ，因为最小的n， 所以$n_1I,n_2I$都是非平凡零元， 所以不是域，所以n不能是合数</li>
+</ul>
+</li>
+</ul>
+<p>定理2, $nI\neq 0$ 或者存在素数$p &gt; 0$ 使得$pI&#x3D;0, lI\neq 0, 0 &lt; l &lt; p$</p>
+<p>定义2.</p>
+<ul>
+<li>$nI\neq 0$ 特征 为 0</li>
+<li>$pI&#x3D;0,lI\neq 0,0 &lt; l &lt; p$ 特征 为 $p$</li>
+<li>记作 char F, charactor的前缀,应该是</li>
+</ul>
+<p>性质</p>
+<ul>
+<li>char 数域  &#x3D;0</li>
+<li>char Z_p &#x3D; p</li>
+<li>有限域 的特征一定是素数， 否则 e,2e,3e,…. 全都不等 有无穷多元素 矛盾</li>
+<li>$Z_p(x)$ mod p的一元分式域 首先是无穷域，但是同样有特征$p$</li>
+</ul>
+<p>命题3： 设域F的特征为素数p,则 $nI&#x3D;0$ &lt;&#x3D;&gt; p|n</p>
+<ul>
+<li>这个更深刻，意味着更多的“特征” 唯一性</li>
+<li>$pI &#x3D; 0 &#x3D; wI$ &#x3D;&gt; $(w-kp)I &#x3D; 0$, &#x3D;&gt; $(w \mod p) I &#x3D; 0$, 所以w只能是倍数</li>
+</ul>
+<p>命题4: p为特征， $\forall A \in F, A\neq 0$ 那么 $n A &#x3D; 0$ &lt;&#x3D;&gt; $p | n$  </p>
+<ul>
+<li>想法还是 把n变成 非“个数”而是元素，所以 $0&#x3D;nA&#x3D;n(IA)&#x3D;(nI)A$, &lt;&#x3D;&gt; $nI&#x3D;0$</li>
+</ul>
+<hr>
+<p>四、域F上的一元多项式环</p>
+<p>有限域 上有些和无限域不同的性质</p>
+<p>例如 $Z_3[x]$ 中 $f(x)&#x3D;x^3+2x^2+2$ 和$g(x)&#x3D;2x^2+x+2$ 的多项式不同</p>
+<p>但是 诱导函数 $f(0)&#x3D;2&#x3D;g(0),f(1)&#x3D;2&#x3D;g(1),f(2)&#x3D;0&#x3D;g(2)$ 相同， 这个反例也说明了前面 为什么要区分 多项式，和多项式函数</p>
+<ul>
+<li>这里相同的一个原因可以是 $x(x-1)(x-2)$ 在 $Z_3$上恒为0，$&#x3D;x^3-3x^2+2x$</li>
+</ul>
+<p>若 $g(x)$是$f(x)$的k重因式, 那么$g(x)$是$f’(x)$的k-1重因式，f(x)的特征为p</p>
+<ul>
+<li>书上这里 素数和函数 混用p真的大便一样</li>
+<li>若 $p | k$ 或 $g’(x)&#x3D; 0$ 则 $g(x) | (kg’(x)&#x3D;0)$ 则 $g(x)$是$f’(x)$的至少$k$重因式，(因为$f(x)&#x3D;g(x)^kh(x)$, $f’(x)&#x3D;kg’(x)g(x)^{k-1}h(x)+g(x)^kh’(x)$, 第一项为0)</li>
+<li>若$p\not{|}k$ 且$g’(x)\neq 0$则 $g(x) \not{|} kg’(x)$ 这里还没有 更复杂的等价化简，只是 直接的多项式，所以有幂次更小但非零一定不是倍数， 从而是$f’(x)$的k-1次重因式（同上展开）</li>
+<li>这两种情况，f有 $k&gt;1$的重因式，都有$(f(x),f’(x))\neq 1$</li>
+</ul>
+<p>命题5：整系数多项式$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i$, p是素数, $p\not{|}a_n$. f对应的 $Z_p$上的不可约，那么f在$Q$上不可约</p>
+<ul>
+<li>注意这里只是必要条件， 因为如果可约，那么可约展开的首项依然满足 首项系数不是p的倍数，所以有表达式</li>
+<li>所以 这是一种判断“不可约”的方法</li>
+</ul>
+<hr>
+<p>五、中国剩余定理</p>
+<p>整数环 与 数域K 上的 <code>K[x]</code> 结构很相似</p>
+<p>同余方程组 $x\equiv b_i \pmod{m_i}$, 其中$(m_i,m_j)&#x3D;1,i\neq j$</p>
+<p>那么 $Z$中必定有解， 且任意两个解$c,d$满足$c\equiv d\pmod{\prod m_i}$</p>
+<p>证明：</p>
+<p>如果有多个解，解之间关系好证明，直接作差，是所有$m_i$倍数，所以可证</p>
+<p>两两互素 $(m_i,\prod_{j\neq i} m_j)&#x3D;1$</p>
+<p>即 $um_i+v_i\prod_{j\neq i}m_j &#x3D; 1$</p>
+<p>$v_i\prod_{j\neq i}m_j\equiv 1 \pmod{m_i}$</p>
+<p>$v_i\prod_{j\neq i}m_j\equiv 0 \pmod{m_k},k\neq i$</p>
+<p>看起来就像正交基一样</p>
+<p>$c&#x3D;\sum_{i} b_i(v_i\prod_{j\neq i}m_j)$</p>
+<hr>
+<p>应用小天地，序列密码，m序列</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>核心内容</p>
+<ul>
+<li>一元多项式<ul>
+<li>很多和 质数 乘法相关的相似的性质</li>
+<li>其中引出 不可约多项式</li>
+<li>对于 可约多项式的因式拆解，特别提到了重因式</li>
+<li>因式分解<ul>
+<li>复数域，然后利用 Liouville定理 模有界定理 <a href="https://zhuanlan.zhihu.com/p/393074166">https://zhuanlan.zhihu.com/p/393074166</a> 得到 <code>C[x]</code> 的不可约多项式 只能是1次，和代数基本定理 n次有n各根</li>
+<li>有了必有复根以后，反过来研究实数域上的不可约多项式</li>
+<li>只有 1次，判别式小于0的2次式</li>
+<li>有理数环上 化成整系数，说实话没有特别漂亮的结论，只是延伸了一些前面同样成立的结论，多了一个Eisenstein判别法</li>
+</ul>
+</li>
+<li>注意到 一元多元 都在证明 $a * b&#x3D;0$ 那么$a&#x3D;0$或$b&#x3D;0$这个 在初中高中以前感觉显然，但自从有了矩阵的 非零 幂零矩阵的例子，这个玩意的确有证明的必要</li>
+</ul>
+</li>
+<li>然后来到多元多项式环，没有特别深的结论，主要是沿用前面的一些定义看哪些同样在这成立 （感觉这章可以后移<ul>
+<li>研究对称多项式， 其核心是可以由 初等对称多项式$\sigma_i$来表示</li>
+<li>引出 一元多项式 新的 重根判别法，以及牛顿公式</li>
+</ul>
+</li>
+<li>结式<ul>
+<li>主要是 判断f,g是否有非1因式的</li>
+<li>看着 花里胡哨的，感觉核心还是辗转相除法 的行列式表达，或者说 辗转相除需要一些智力，结式需要一些暴力。我觉得本质问题还是没有更早的把 多项式以 系数向量的形式写出来，还在写x,所以感觉上有转换，其实挺自然</li>
+<li>然后 对于多元也可以按元展开</li>
+</ul>
+</li>
+<li>分式<ul>
+<li>多项式分式定义和性质</li>
+<li>“特征”，和有限域&#x2F;无限域 里的 特征的性质<ul>
+<li>$Z_p$</li>
+</ul>
+</li>
+<li>再次研究 在这种域里的 多项式之间的因式</li>
+</ul>
+</li>
+<li>总结<ul>
+<li>核心还是 研究很多和整数 类似的，不可约，因式，两个f,g的因式的各种性质。只是对象 变为了 不同域（复数域，实属域，有理域，$Z_p$）</li>
+<li>对于单个 的拆分，一个是 eisenstein 判别一些特殊的Q，$Z_p$上能反过去判断Q的不可约</li>
+</ul>
+</li>
+<li>这里面有几次出现一个叫做 “（xx性质）不随数域扩大而改变 感觉很迷惑”<ul>
+<li>似乎是 【给定数域甲，性质乙】</li>
+<li>意味着 数域甲的运算定义导致的 包含关系的性质保证了 性质乙用到的相关元素 都在甲中</li>
+<li>那么 所有 甲 映射 出的 甲’ 是 丙的一个子域，那么丙中的甲‘的 关于乙的性质不变</li>
+<li>这里的关键点是 甲是固定的，且甲一般是看作最小的（实际上不一定是最小的），所以只考虑比甲大的</li>
+<li>所以 在这个情况下 甲 和 甲’ 的这个关系是双射的 所以 也就是充要的</li>
+</ul>
+</li>
+<li>说一点 非常讨厌书里 把 幂次和系数下标反着写的 表达方法, 虽然上面笔记保持和书上一致</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 六 二次型 矩阵的合同</title>
+    <url>/Math/Advanced_algebra_6/</url>
+    <content><![CDATA[<h1 id="二次型，矩阵的合同"><a href="#二次型，矩阵的合同" class="headerlink" title="二次型，矩阵的合同"></a>二次型，矩阵的合同</h1><p>把$f(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n\sum_{j&#x3D;1}^n a_{ij}x_ix_j$ 表示成对称矩阵A, 其中$a_{ij} &#x3D; a_{ji}$</p>
+<p>则称A是二次型矩阵, 显然它唯一，非对角的系数是</p>
+<p>$f()&#x3D;x^TAx$</p>
+<p>若 $x&#x3D;Cy$,且$C$可逆，那么陈果一个非退化线性替换，（简单说可以换回来一一对应</p>
+<p>$f()&#x3D;(Cy)^TA(Cy)&#x3D;y^T(C^TAC)y$</p>
+<p>定义2. $x^TAx$和$y^TBy$ 如果能通过$x&#x3D;Cy$得到，其中$C$是可逆的，那么这两个二次型等价,</p>
+<ul>
+<li>&#x3D;&gt; $A$和$B$合同 </li>
+<li>标准型 转化成$\Lambda$ 特征值对角阵 $&#x3D;\sum_{i&#x3D;1}^n \lambda_iy_i^2$<ul>
+<li>这里实际上就是 多元二次表达式的配方，因为 最初的变换 行变换对应消行，列变换对应新增变量（配变量），而这里是一种行列空间同步变化的过程</li>
+<li>标准型 中 rank &#x3D; 非零特征值个数</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2-实二次型的规范型"><a href="#6-2-实二次型的规范型" class="headerlink" title="6.2 实二次型的规范型"></a>6.2 实二次型的规范型</h2><p>注意到上面的$C$ 只需要可逆，也就意味着，如果在变换为$\Lambda$以后，再做单个位置的倍数变换也是“合法”的，所以标准型不唯一</p>
+<p>rank 因为全是初等变换所以不变，所以非零个数不变</p>
+<p>规范型：</p>
+<ul>
+<li>全部变为|系数|&#x3D;1的平方项<ul>
+<li>前面+1,中间-1,后面0</li>
+<li>规范型</li>
+</ul>
+</li>
+<li>规范型唯一 也就是 +，-，0的个数固定<ul>
+<li>如果表示成<ul>
+<li>$z_1^2+\cdots +z_q^2-z_{q+1}^2-\cdots-z_r^2$</li>
+<li>$y_1^2+\cdots +y_p^2-y_{p+1}^2-\cdots-y_r^2$</li>
+<li>$z&#x3D;Qy$</li>
+<li>若 $p &gt; q$<ul>
+<li>考虑 $Q_{q\times r}y&#x3D;z_{q}$ <ul>
+<li>让$y$的$y_{\ge p+1} &#x3D; 0$,而前面不全为0</li>
+<li>让 $z_{\le q} &#x3D; 0$ 注意到 rank($Q_{q\times r}$)&#x3D;q, 一定存在非零解</li>
+<li>从而 z的表示不大于0,  而y的表示大于0, 因此矛盾, 所以表示法唯一</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>+号个数：正惯性指数<ul>
+<li>是二次型等价： 规范型相同<ul>
+<li>rank相同 且 正惯性指数相同</li>
+<li>对应的矩阵合同</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-3-正定二次型与正定矩阵"><a href="#6-3-正定二次型与正定矩阵" class="headerlink" title="6.3 正定二次型与正定矩阵"></a>6.3 正定二次型与正定矩阵</h2><p>任意非零向量$x$有$x^TAx &gt;0$</p>
+<ul>
+<li>正惯性指数&#x3D;n</li>
+<li>用处 MIT18.06 有讲，求极小值 不会是局部最小值</li>
+<li>与正定矩阵合同的实对称矩阵是正定矩阵</li>
+<li>正定的行列式大于0<ul>
+<li>应为是在A两侧乘上可逆的C^T和C，它们行列式相同所以符号不变</li>
+</ul>
+</li>
+<li>所有顺序主子式全大于0<ul>
+<li>最常用的判别方式</li>
+<li>$x^TAx &gt; 0$ 让 x后半取零同样 &#x3D;&gt; 容易得顺序主子式 都是正定的 &#x3D;&gt; 顺序主子式大于0， 必要</li>
+<li>充分性：归纳法(n-1阶是正定的) + 分块矩阵 <code>[A,a;a^T,v0]=&gt;[I,b;b^T,v1]=&gt;[I,0;0^T,v2]</code></li>
+</ul>
+</li>
+<li>半正定<ul>
+<li>$\ge 0$</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 八 线性空间</title>
+    <url>/Math/Advanced_algebra_8/</url>
+    <content><![CDATA[<p>视频 42-54 </p>
+<h1 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h1><p>上来就是我非常讨厌的表达式 $A(\alpha+\beta)&#x3D;A(\alpha)+A(\beta)$</p>
+<p>$A:V\to V’$</p>
+<p>$\alpha,\beta \in V$</p>
+<p>一个我更喜欢的是 $A(\alpha+<em>{V}\beta)&#x3D;A(\alpha)+</em>{V’}A(\beta)$</p>
+<ul>
+<li>即使这样，也不够完全，因为$V$和$V’$ 里都可以 按你需要定义 加法, 也就是对于$V$你可以定义多种加法</li>
+<li>一个我更喜欢的是 $A(\alpha+<em>{S_1}\beta)&#x3D;A(\alpha)+</em>{S_2}A(\beta)$  这样强调两个加法的不同，是两个线性空间中具体的加法</li>
+<li>或者 $A(\alpha+\beta)&#x3D;A(\alpha)\oplus A(\beta)$  也是强调两个加法的不同</li>
+<li>$A(k \cdot_{S_1}\alpha)&#x3D;k\cdot_{S_2} A(\alpha), k\in F$</li>
+</ul>
+<p>那么有加，数量乘法 映射，那么这是一个线性映射</p>
+<h2 id="8-1-域F上线性空间的基与维数"><a href="#8-1-域F上线性空间的基与维数" class="headerlink" title="8.1 域F上线性空间的基与维数"></a>8.1 域F上线性空间的基与维数</h2><p>定义1. 非空集合V, 加法运算:$V\times V\to V$ 的一个映射， 域F, 乘法运算$F\times V\to V$的一个映射</p>
+<ul>
+<li>加法结合</li>
+<li>加法零元， 称作零元素</li>
+<li>加法逆元</li>
+<li>加法交换</li>
+<li>$(1_F) a &#x3D; a$, </li>
+<li>$(k_Fl_F) a &#x3D;k_F(l_F a)$, </li>
+<li>$(k_F+<em>Fl_F) a &#x3D;(k_Fa)+</em>{V}(l_F a)$, </li>
+<li>$k_F(a+<em>{V}b) &#x3D;(k_Fa)+</em>{V}(k_F b)$, </li>
+<li>称作线性空间</li>
+</ul>
+<p>例如： </p>
+<ul>
+<li>几何空间中以原点为起点的所有向量组成的集合</li>
+<li>域F上 所有n元有序组组成的集合$F^n$</li>
+<li>矩阵 $M_{s n}(K)$</li>
+<li>一元多项式 $K[x]$</li>
+<li>复数域 a+bi &#x3D; (a,b)</li>
+</ul>
+<p>性质:</p>
+<ul>
+<li>唯一零元 $0_1&#x3D;0_1+0_2&#x3D;0_2$</li>
+<li>逆元唯一 $(-a)_1&#x3D;(-a)_1+(a+(-a)_2)&#x3D;((-a)_1+a)+(-a)_2&#x3D;(-a)_2$</li>
+<li>$0_Fa&#x3D;0_V$ , $0_V&#x3D;(0_Fa)+_V(-(0_Fa))&#x3D;(0_F+_F0_F)a+_V(-(0_Fa))&#x3D;(0_Fa)+_V(0_Fa)+_V(-(0_Fa))&#x3D;(0_Fa)+_V((0_Fa)+_V(-(0_Fa)))&#x3D;(0_Fa)+_V0_V&#x3D;0_Fa$</li>
+<li>$k_F0_V&#x3D;0_V$, 类似的</li>
+<li>$k_Fa_V&#x3D;0_V$ 则$k_F&#x3D;0_F$或$a_V&#x3D;0_V$,  证明核心在$k$属于域$F$，要么有零元 要么有逆元</li>
+<li>$(-1)_Fa_V&#x3D;-(a_V)$, F域中单位元的逆元 乘 V中的元 能得到V中对应的逆元，也就是证明 前面表示 $+a_V &#x3D;0$</li>
+</ul>
+<hr>
+<p>线性组合 $\sum k_ia_i,k\in K,a\in V$</p>
+<p>向量组 选中的$a_i$</p>
+<p>线性表出: $b&#x3D;\sum k_ia_i$</p>
+<p>线性无关: $\sum k_ia_i&#x3D;0 \to k_i&#x3D;0$, 任意一个不能被其它的线性表出</p>
+<p>命题1. 组线性相关：任意一个部分线性相关，则整体线性相关</p>
+<p>命题2. 包含0线性相关</p>
+<p>命题3, &lt;&#x3D;&gt; 存在一个可以被其他线性表出</p>
+<p>命题4，b 被W表出，(表法唯一 &lt;&#x3D;&gt; W线性无关)</p>
+<p>命题5, W线性无关， <code>b可被W线性表出 &lt;=&gt; [...W,b]线性相关</code></p>
+<p>定义3：一个极大线性无关组，线性无关 且 加入任何其它会导致线性相关</p>
+<ul>
+<li>这里“极” 很准确，因为这时候还没有“最”的概念，认为是一种局部的极值</li>
+</ul>
+<p>定义4：等价，向量组X,Y，X能表出Y所有，Y能表出X所有</p>
+<ul>
+<li>任意两个极大线性无关组 等价</li>
+<li>传递性</li>
+</ul>
+<p>引理1. 如果X由Y线性表出，且X中向量个数r &gt; Y中向量个数s，那么X线性相关</p>
+<ul>
+<li>也就是求$c$使得 $\sum_i c_ix_i&#x3D;0$ 把每个x_i展开成$Y$的线性表出</li>
+<li>所以是求 r列,s行 的null space, 一定不是零空间，所以 一定有非零解，所以X线性相关</li>
+</ul>
+<p>推论1. (r个向量线性无关向量组X)由(s个向量的向量组Y) 线性表出，那么 $r\le s$， 也证明了rank的上限</p>
+<ul>
+<li>引理1的逆否命题</li>
+</ul>
+<p>推论2， 等价的线性无关向量组所含向量个数相等</p>
+<ul>
+<li>定义4+推论1 显然</li>
+</ul>
+<p>推论3： 一个向量组（不要求线性无关）的任意两个极大线性无关所含向量的个数相等</p>
+<ul>
+<li>等价 传递性 极大A &lt;&#x3D;&gt; 本身 &lt;&#x3D;&gt; 极大B</li>
+</ul>
+<p>定义5, 向量组 &#x3D;&gt; 极大线性无关组的个数 记作 rank</p>
+<p>命题6, X中 线性无关 &lt;&#x3D;&gt; rank &#x3D; 向量个数</p>
+<ul>
+<li>&#x3D;&gt; 本身是一个 极大线性无关组</li>
+<li>&lt;&#x3D; rank&#x3D;个数 只能取所有，注意这里始终是取向量还没谈论空间</li>
+</ul>
+<p>命题7： X由Y线性表出, $rank(X) \le rank(Y)$</p>
+<ul>
+<li>X的任意极大线性无关 能被 Y的任意极大线性无关 表出</li>
+<li>根据推论1</li>
+</ul>
+<p>命题8：等价向量组，rank相等</p>
+<ul>
+<li>根据表出关系 A 极大 &lt;&#x3D;&gt; A &lt;&#x3D;&gt; b &lt;&#x3D;&gt; B极大</li>
+</ul>
+<hr>
+<p>基与维数</p>
+<p>定义6： V是域F上线性空间，V中向量集S</p>
+<ul>
+<li>S线性无关</li>
+<li>V中每个可以由S线性表出</li>
+</ul>
+<p>S是一个基</p>
+<p>集合S + 偏序( $S\times S\to$ true&#x2F;false&#x2F;undefined 无环 )</p>
+<ul>
+<li>偏序<ul>
+<li>自反 $A\le A$</li>
+<li>无环</li>
+</ul>
+</li>
+<li>链：子集，且两两有偏序关系</li>
+<li>极大元素: A, 集合中没有比A大的$A \le B \in S \to B&#x3D;A$，可能一个可能多个可能没有</li>
+<li>上界， 任意$x \in U \subset S, x \le B\in S$,那么B是U的一个上界</li>
+<li>Zorn引理： 一个偏序集，每条链 都有上界，那么S有极大元素</li>
+</ul>
+<p>定理1. 任意线性空间V都有一个基</p>
+<ul>
+<li>V中任意多个 线性无关的向量构成集合，形成拓扑图上的每个点</li>
+<li>偏序关系 定义是 集合的包含关系</li>
+<li>每条链都有上界怎么证明？？？ 无穷维的呢？<ul>
+<li>不懂</li>
+</ul>
+</li>
+</ul>
+<p>定义7. 线性空间 根据其基的个数 ，称它是 有限维&#x2F;无限维</p>
+<p>定理2. 有限维线性空间，任意两个基的向量个数相等</p>
+<ul>
+<li>引理1</li>
+</ul>
+<p>推论4，无限维 任意一个基都还有无穷多向量</p>
+<p>定义8. 有限维 个数称作维数记作 $dim V$, 无限维 dim V &#x3D; infty</p>
+<p>命题9. n维线性空间, 任意n+1各向量都线性相关</p>
+<p>命题10. n维 线性空间，任意n个线性无关向量 都是 基</p>
+<p>命题11. 可以表示V中任意向量的线性无关组是基</p>
+<p>命题12. 任意一个线性无关向量组可以扩充为一个基</p>
+<ul>
+<li>因为如果 个数少，必定有不可表出的可以加入，否则 个数少 和 基 相互表出 &#x3D;&gt; 个数相等</li>
+</ul>
+<hr>
+<p>四 基变换和坐标变换</p>
+<p>$基A * 矩阵A &#x3D; 基B$ ， 当且仅当 矩阵A可逆</p>
+<p>可逆 &#x3D;&gt; 基可以相互表出 &#x3D;&gt; rank(A)&#x3D;rank(B)</p>
+<p>都是基 &lt;&#x3D;&gt; 可以相互表出 &#x3D;&gt; 表出过程就是求逆</p>
+<p>结论：</p>
+<ul>
+<li>基 * 可逆矩阵 得到另一个基</li>
+<li>两个基之间可以通过可逆矩阵转换</li>
+</ul>
+<h2 id="8-2-子空间及其交与和，子空间的直和"><a href="#8-2-子空间及其交与和，子空间的直和" class="headerlink" title="8.2 子空间及其交与和，子空间的直和"></a>8.2 子空间及其交与和，子空间的直和</h2><p>保持域F不变(!!)，在域F上，线性子空间： 子空间 且 保持同样的加法和乘法</p>
+<p>定理1：子集+加法乘法封闭 &lt;&#x3D;&gt; 子空间</p>
+<p>有限维度V的子空间U, dim U &lt;&#x3D; dim V</p>
+<ul>
+<li>张成span 空间，W是 向量组的张成空间</li>
+<li>取等号当且仅当 U &#x3D; V</li>
+<li>dim(span(向量组)) &#x3D; rank(向量组)</li>
+</ul>
+<hr>
+<p>子空间交与和</p>
+<p>交: $V_1,V_2$是$V$的子空间，那么牠们的交也是子空间, 核心是封闭性的证明，因为对于$V_1,V_2$来说 属于它们的向量，保持加法乘法不变，在其运算规则中 总是唯一的得到V中的结果，那么其实问题只有 能否保证这个结果在V中了</p>
+<p>并：并不是子空间</p>
+<p>而我们希望有一个类似于并的运算能保持 依然是V的子空间</p>
+<p>和: $V_1+V_2$不是 空间的并，而是 $V_1,V_2$ 的基 的集合 的生成空间, 它也是包含$V_1\cup V_2$的最小子空间</p>
+<p>命题1.</p>
+<ul>
+<li>$(V_1\cap V_2)+(V_1\cap V_3) \subseteq V_1\cap (V_2+V_3)$</li>
+<li>$V_1+(V_2\cap V_3)\subseteq (V_1+ V_2)\cap(V_1+ V_3)$</li>
+</ul>
+<p>命题2. 和 是 基的并集关系</p>
+<p>定理4. 子空间维数公式</p>
+<p>$dim V_1+dim V_2 &#x3D; dim(V_1+V_2)+dim(V_1\cap V_2)$ ,注意括号中的+是和</p>
+<p>推论 1, $dim V_1 + dim V_2 &#x3D; dim (V_1+V_2) &lt;&#x3D;&gt; V_1\cap V_2 &#x3D; 0$</p>
+<hr>
+<p>子空间直和， 也就是针对两个交集只有0向量的子空间 （注意空间交集不是空）</p>
+<p>定义1. 如果$V_1+V_2$唯一表示称 两个分别来自两个子空间的 向量和，那么成为直和, $V_1\oplus V_2$</p>
+<p>定理5. 以下命题等价</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>$V_1+V_2$中零向量表法唯一</li>
+<li>$V_1\cap V_2 &#x3D; 0$</li>
+</ul>
+<p>定理6. 如果是有限维子空间</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>dim(V_1+V_2)&#x3D;dim V_1+dim V_2</li>
+<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
+</ul>
+<p>定义 补空间：直和 &#x3D; V</p>
+<p>命题3. 设V是域F上n维线性空间，则V的每一个子空间U都有补空间</p>
+<ul>
+<li>扩充的部分形成 补空间</li>
+</ul>
+<p>定理7.  无限维度子空间</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
+</ul>
+<p>命题4. 无限维子空间 有补空间</p>
+<p>定义2. 多个子空间的连续直和： 任意两个子空间交为0</p>
+<p>定理8. 多个子空间命题等价</p>
+<ul>
+<li>$V_1+V_2+\cdots+V_s$是直和</li>
+<li>零向量表法唯一</li>
+<li>$V_i\cap (\sum_{j\neq i}V_j) &#x3D; 0$</li>
+</ul>
+<p>定理9. 有限维子空间，等价命题</p>
+<ul>
+<li>直和</li>
+<li>$dim(和) &#x3D; \sum dim$</li>
+<li>分别的基合起来 是和的基</li>
+</ul>
+<h2 id="8-3-域F上线性空间的同构"><a href="#8-3-域F上线性空间的同构" class="headerlink" title="8.3 域F上线性空间的同构"></a>8.3 域F上线性空间的同构</h2><p>同构映射, $V,V’$都是域F上的线性空间，存在双射$\sigma: V \to V’$, 且保持 加法和乘法的映射</p>
+<p>$\sigma(a+<em>{V}b)&#x3D;\sigma(a)+</em>{V’}\sigma(b)$</p>
+<p>$\sigma(k\cdot_{V}a)&#x3D;k\cdot_{V’}\sigma(a)$</p>
+<p>性质1. $\sigma(0)$是$V’$的零元素</p>
+<p>性质2. $\sigma(-a)&#x3D;-\sigma(a)$ 加法逆元映射</p>
+<p>性质3. $\sigma(\sum {k_i}a_i)&#x3D;\sum {k_i} \sigma(a_i)$</p>
+<p>性质4. 向量组$X$线性相关，当且仅当 $\sigma(X)$线性相关，证明:也就是线性和 只有0解</p>
+<p>性质5. 基 &#x3D;&gt; $\sigma$ 是基，证明：一来线性相关性（表出性（和 与 数量积））</p>
+<p>定理1. 有限维 线性空间同构 &lt;&#x3D;&gt; 维数相等</p>
+<ul>
+<li>&#x3D;&gt; 上面结构 可证</li>
+<li>&lt;&#x3D; 钦定映射</li>
+</ul>
+<p>命题1. V的子空间U &#x3D;&gt; $\sigma(U)$ 也是$V’$的子空间，如果有限维，子空间维数相等</p>
+<hr>
+<p>有限域的元素个数</p>
+<p>$F$是有限域，设 特征为$p$, 单位元为$I$, 取 $F_p&#x3D;$ { $0,I,2I,\cdots, (p-1)I$ }</p>
+<p>$F_p$ 对于减法 乘法封闭（之前推的充要条件），是F的一个子环（这里的运算的映射$F$和$F_p$也是一致的哦）</p>
+<p>$F$ 看成$F_p$域上的线性空间，加法是 域$F$的加法, 纯量乘法是 $F_p$中元素 与 $F$中元素的乘法，</p>
+<ul>
+<li>??? 总可以看成吗，这里的感觉是F上有一些不可合并的元，那么每个不与其它合并的元的系数一定可以提取成$F_p$中的, 所以每个不能合成的 看作线性空间的一个维度</li>
+</ul>
+<p>因为有限 $F$作为 域$F_p$ 上的线性空间一定有限维的, 若$n$维, $F$和$F_p^n$ 同构, 有双射，个数相等，$F$的 元素个数 $p^n$</p>
+<p>$F_p^n &#x3D;$ { $(a_1,a_2,\cdots,a_n)|a_i\in F_p$}</p>
+<p>定理2 F是任一有限域，F的元素是一个素数p的幂次，其中p是域F的特征</p>
+<ul>
+<li>&#x3D;&gt; 按照上述构造 $p^n$ 一定存在，任意两个$p^n$ 有限域 都是同构的, 或者记作 $GF(p^n)$ ，或者$F_{p^n}$ 称作 Galois fields</li>
+</ul>
+<hr>
+<p>三 外直和</p>
+<p>$U,W$是域F上 任意两个线性空间，笛卡儿积</p>
+<p>$U\times W&#x3D;${$(a,b)|a\in U,b\in W$}</p>
+<p>可以规定 加法运算和 纯量乘法运算</p>
+<p>一种 拼接 连接的感觉， 可以证明满足线性空间性质，称作外直和 记作\dot{+} $\dot{+}$</p>
+<p>$dim(U\dot{+}W)&#x3D;n+m&#x3D;dim U + dim W$</p>
+<p>是一种小的线性空间 构造大的线性空间的一种方法</p>
+<ul>
+<li>考虑 (a,0) 和 (b,0) 是 (a,b)的子空间，所以 $U\dot{+}W$是 $U\dot{+}0_W$和$0_U\dot{+}W$的直和</li>
+<li>其实 容易看出 U 和 (a,0)是同构</li>
+<li>W 和 (0,b)是同构</li>
+</ul>
+<h2 id="8-4-商空间"><a href="#8-4-商空间" class="headerlink" title="8.4 商空间"></a>8.4 商空间</h2><p>$V&#x2F;\sim$, 也就是 按照$\sim$定义等价，把$V$划分成多个等价类</p>
+<p>一个等价类 &#x3D; 代表元 + (0的等价类)</p>
+<p>陪集 $\bar{a}&#x3D;a+W$</p>
+<p>也可以记作 $V&#x2F;W$ V对于子空间W的商集, 每个等价类 {$a+W | a \in V$}</p>
+<p>加法 和 纯量乘法</p>
+<p>(a+W)+(b+W) &#x3D; (a+b)+W</p>
+<p>k(a+W) &#x3D; ka + W</p>
+<p>0+W是零元</p>
+<p>构成线性空间，是V对于W的商空间， 也是线性空间</p>
+<p>其中 $V&#x2F;W$的元素不是$V$的向量，而是一个等价类</p>
+<p>dim V&#x2F;W &#x3D; dim V - dim W</p>
+<ul>
+<li>W中取基，扩充成V的基</li>
+<li>[w基，非w基]<ul>
+<li>V&#x2F;W的元素 a+W &#x3D; (a在V中 按照扩充基展开的加法)+W<ul>
+<li>&#x3D; 新加法的拆分 sum ki (基i + W)<ul>
+<li>其中 (属于W的基 + W) &#x3D; 0 + W</li>
+</ul>
+</li>
+<li>&#x3D; sum ki (非w基i + W) 证明了任意可以由  (非w基+W) 表示</li>
+<li>只需要再证明 这些 线性无关</li>
+<li>即 sum li (非w基i + W) &#x3D; W 的li只有0解，（注意这里W就是零元）</li>
+<li>即 (sum li 非w基i ) + W &#x3D; W</li>
+<li>那么有 (sum li w基i) 能表示 W中的任意，包括 (sum li 非w基i)</li>
+<li>而 注意到 (sum li w基i) - (sum li 非w基i) &#x3D; 0 只有零解，所以 证明了 上面只有零解，所以线性无关</li>
+<li>综上，可表示任意，又线性无关，所以是基，rank &#x3D; 个数 &#x3D; dim V - dim W</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>余维数</p>
+<p>V是无限维，W是子空间 也是无限维度</p>
+<p>定义1. W是域F上线性空间V的一个子空间，如果 V&#x2F;W是有限维的, 那么称作W在V中的余维数，记作 记作$codim_V W$</p>
+<hr>
+<p>标准映射</p>
+<p>V 到 V&#x2F;W 有一个很自然的映射</p>
+<p>$a\to a + W$</p>
+<p>称作标准映射，典范映射 canonical mapping, 显然 满射，W不是零子空间时，它不是单射</p>
+<p>这种映射，有加法和纯量乘法对应，只是对应 因为不是单射，所以不是同构</p>
+<ul>
+<li>但有一个用处，如果 $V&#x2F;W$中 几个$a+W$是线性无关，反过来 对应的几个$a$是线性无关</li>
+</ul>
+<p>命题1. 域F上线性空间V的任一子空间W都有补空间</p>
+<ul>
+<li>V&#x2F;W 的一个基为 S’<ul>
+<li>S’ 是按照标准映射的逆映射 到V中的S，S也是线性无关的</li>
+<li>令U是由S生成的子空间<ul>
+<li>那么S是U的一个基</li>
+</ul>
+</li>
+<li>下面证明 U是W在V中的补空间</li>
+<li>在 商集 中 任意 a+W 可被 S’ 表出，表出 的非W的部分记作b, a+W&#x3D;b+W (在商集中相等，在V中不一定相等)<ul>
+<li>$a-b \in W, b \in U$</li>
+<li>存在 $c\in W, a-b&#x3D;c$</li>
+<li>$a&#x3D;b+c$, 也就是 a 可以被 U 与 W中的表示</li>
+<li>分割线</li>
+<li>b \in W 交U,<ul>
+<li>属于W: b+W&#x3D;W</li>
+<li>属于U: b可以被 S表出</li>
+<li>W&#x3D;b+W&#x3D;(sum 系数 * 基)+W&#x3D;sum 系数(基+W)，只有零解，所以交为空</li>
+</ul>
+</li>
+<li>所以是补空间 （U+W &#x3D; V, U交W&#x3D;0）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>核心:</p>
+<ul>
+<li>基和维数： 线性空间V中每个元素，能用V中“有限多个向量” 唯一的表出</li>
+<li>子空间，子空间直和</li>
+<li>商集：把等价类看成一个元素</li>
+<li>线性空间同构:线性空间之间关系的角度  </li>
+<li>然后研究  空间中 两个子空间 交，加，（正交时 的加&#x3D;&gt; 直和），维度性质，V减去一个子空间性质<ul>
+<li>这块核心的研究是基于 <code>基向量</code> 与 <code>表出</code>，围绕这两个，再保持 <code>加</code> 和 <code>乘</code> 的运算</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 九 线性空间</title>
+    <url>/Math/Advanced_algebra_9/</url>
+    <content><![CDATA[<p>视频 86-120</p>
+<h1 id="线性映射"><a href="#线性映射" class="headerlink" title="线性映射"></a>线性映射</h1><ol>
+<li>研究 线性映射的运算： 线性映射作为映射，可以做乘法运算，乘积仍是线性映射，还可以定义线性映射的加法和纯法</li>
+<li>研究 线 线性映射的整体结构： 线性映射的运算，域F上 V到V’的所有线性映射组成的集合，记作Hom(V,V’), 对于线性映射的加法和纯量乘法，成为域F上的一个线性空间，V上所有线性变换组成的集合Hom(V,V) （自身到自身） 即是域F上的线性空间，又是一个有单位元的环</li>
+<li>研究线性映射的 核 与 象， V到V’的线性映射A的核 Ker A是一V的一个子空间，A的象Im A是V’的一个子空间. 线性映射A的核Ker A可以用来研究线性空间V的结构</li>
+<li>研究线性映射和线性变换的矩阵表示。</li>
+<li>V上的线性函数以及V的对偶空间V’ (他是V上所有线性函数组成的线性空间)</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="9-1-线性映射及其运算"><a href="#9-1-线性映射及其运算" class="headerlink" title="9.1 线性映射及其运算"></a>9.1 线性映射及其运算</h2><p>两个线性空间。元素映射，加法映射（保持加法），乘法映射（保持乘法）。 则是线性映射</p>
+<p>V到自身的 线性映射。 通常称为V上的线性变换。</p>
+<p>线性空间V-&gt;域F, 称为V上的线性函数</p>
+<p>例如</p>
+<ul>
+<li>区间(a,b)上，所有 一次 可微函数 集合，构成线性空间，其求导过程 是一个线性空间，其导函数集合 也是一个线性空间 （这里的映射是双射）</li>
+<li>区间<code>[a,b]</code>上 所有 连续函数组成集合，构成线性空间，做定积分 是一个到R的映射，也是线性映射，（这里可能不同函数的 定积分值相同，不是单射，但也是线性映射，这里展示列一种降维的例子）</li>
+<li>过原点 的3维向量集合 到一个过原点给定平面的投影向量，同样是一个带有降维的线性映射</li>
+<li>矩阵 $A_{s\times n}$, A: $F^n\to F^s, a \to Aa$ 线性代数里常见的矩阵乘法，这个例子中 如果s &gt; n, 将不是满射，</li>
+<li>零映射，把V中任意向量都映射到 V’中零向量</li>
+<li>恒等变化 V 所有向量映射到自身 ， 记作$I$</li>
+<li>标准映射 V -&gt; V&#x2F;W， 是一个线性映射</li>
+<li>线性空间之间的一个 同构映射</li>
+</ul>
+<hr>
+<p>线性映射的存在性，投影</p>
+<p>定理1. V和V’ 都是域F上的线性空间，V有限维度，V中取基S,V’任意n个向量$t_i$, 下面映射是一个线性映射</p>
+<ul>
+<li>A: V-&gt; V’</li>
+<li>a 的按S表出的 $\sum {k_i}s_i \to \sum k_it_i$</li>
+<li>这个其实就是说V中的按S的 坐标，在V’中 按照t_i的坐标，首先这始终是线性映射，置于映射结果 就看t_i的 线性有关性了</li>
+</ul>
+<p>定理2. V是域F上的一个线性空间，U和W是V的两个子空间，且U和W关于V互补</p>
+<ul>
+<li>任取 V中向量a,唯一表示成两个子空间向量和, a&#x3D;a_1+a_2,那么a_1,a_2分别称作在子空间中的投影</li>
+<li>投影是幂等变换</li>
+</ul>
+<p>定义2：如果线性变化A 满足$A^2 &#x3D; A$那么称作幂等变换</p>
+<p>定义3：两个线性变换 A,B 如果 AB&#x3D;BA&#x3D;0 那么成A,B是正交的</p>
+<ul>
+<li>(上面 V到W的投影$P_W$)和(V到U的投影$P_V$)是 正交的<ul>
+<li>也就是 投影到W 再投影到U 一定投影到零</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>三，线性映射的运算和线性映射的整体结构</p>
+<p>V和V’都是域F上的线性空间，</p>
+<ul>
+<li>所有线性映射组成的集合记作$Hom(V,V’)$</li>
+<li>所以线性变换组成的集合记作Hom(V,V)</li>
+</ul>
+<p>$A\in Hom(V,U)， B\in Hom(U,W)$ 那么 $BA\in Hom(V,W)$ 非常显然不满足交换律</p>
+<p>若 $A\in Hom(V,V’)$ 且可逆，那么是一个同构映射， $A^{-1} \in Hom(V’,V)$</p>
+<p>定义，线性映射之家你的加法和乘法:</p>
+<p>$A,B\in Hom(V,V’)$</p>
+<p>$(A+<em>{定义}B)a&#x3D;Aa+</em>{V’}Ba$</p>
+<p>$(k\cdot_{定义}A)a&#x3D;k\cdot_{V’}(Aa)$</p>
+<p>能够验证 线性映射 满足 线性空间8条法则，因此$Hom$是性空间。 这里我们得到一种 映射的集合 是线性空间</p>
+<p>线性映射的乘法有左右分配率，但是没有交换律</p>
+<p>特别的 $Hom(V,V)$ 对于加法和乘法构成 一个有单位元 的环</p>
+<p>定义4. 一个非空集合A，如果有加法、乘法运算，以及域F与A的纯量乘法运算，并且A对于加法和纯量乘法成为域F上的一个线性空间，A对于加法和乘法成为一个有单位元的环，A的乘法与 纯量乘法满足 $k(ab)&#x3D;(ka)b&#x3D;a(k)b, k\in F,ab\in A$</p>
+<ul>
+<li>那么称A是域F上的一个代数，线性空间维数A 称作 代数A的维数</li>
+<li>简短说:<ul>
+<li>A自身 环</li>
+<li><code>[F,A]</code> 构成 线性空间</li>
+<li>$k(ab)&#x3D;(ka)b&#x3D;a(k)b, k\in F,ab\in A$</li>
+<li>其实 这里 A自身环 和 &lt;F,A&gt; 的线性空间 两个中的加法 是同样的</li>
+</ul>
+</li>
+</ul>
+<p>$Hom(V,V)$ 是域F上的一个代数</p>
+<p>矩阵 $M_n(F)$ 对于矩阵的加法、乘法与纯量乘法，成为域F上的一个代数</p>
+<p>Hom(V,V’) 中 定义 减法 $A-B &#x3D; A+(-B)$</p>
+<p>Hom(V,V)中 定义 <code>正整数</code> 指数幂: $A^n&#x3D;$ n个A做乘法</p>
+<p>这里定义的幂次全是整数</p>
+<p>可逆时 $A^{-m}\to (A^{-1})^m$</p>
+<p>$A^m\cdot A^n &#x3D; A^{m+n}$</p>
+<p>$(A^m)^n &#x3D; A^{mn}$</p>
+<p>$f(x)\in F[x]$ 多项式，带入$A$, 显然$f(A)\in Hom(V,V)$, 称作f(A)的一个多项式，</p>
+<p>$f(A)g(A)&#x3D;g(A)f(A)$, 注意这里要两边一样</p>
+<p>所以多项式组成集合记作$F[A]$, $F[A]$对于减法乘法都封闭，所以是一个环,</p>
+<ul>
+<li>$F[A]$ 是 Hom(V,V)的子环</li>
+<li>$F[A]$是交换环</li>
+<li>$I\in F[A]$</li>
+<li>$F[A]$中所有数乘变换 组成的集合 是 $F[A]$的一个子环，且域F与这个子环之间有一个双射，且保持 加法乘法运算, 因此$F[A]$可以看成$F$的一个扩环</li>
+<li>f(x)中 可以用$F[A]$中元素带入</li>
+</ul>
+<p>例如 线性空间V的两个互补子空间U,W的投影 $P_U,P_W$</p>
+<ul>
+<li>自身幂等</li>
+<li>$P_{U},P_{W}$正交</li>
+<li>$(P_{U}+P_{W})a &#x3D; a$ 所以$P_{U}+P_{W}&#x3D;I$</li>
+</ul>
+<p>那么逆命题呢?</p>
+<ul>
+<li>在线性空间V上 $A+B&#x3D;I, AB&#x3D;0,A^2&#x3D;A,B^2&#x3D;B$ 那么A,B能否看作两个子空间的投影呢</li>
+<li>直接反过来，U&#x3D;Im A, V&#x3D; Im B<ul>
+<li>加，纯量乘封闭 U,V 都是子空间</li>
+<li>任意 V中可表示两个的和， 所以 U+V (子空间的和运算) &#x3D;V，接下来只需要证明交只有零向量</li>
+<li>任意 属于交的 a&#x3D;Ax&#x3D;By 两种表示法<ul>
+<li>a&#x3D;Ax&#x3D;AAx&#x3D;Aa&#x3D;A(By)&#x3D;(AB)y&#x3D;0</li>
+</ul>
+</li>
+<li>至此 U,V是两个互补线性子空间</li>
+<li>还需要证明 A,B就分别是他们的投影 即$P_U &#x3D; A$<ul>
+<li>那么根据定理2(互补， 表示成 子空间向量和，分量的映射，那么就是投影)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>命题2.</p>
+<ul>
+<li>A,B 是V上正交幂等变换, A+B&#x3D;I. 则$V&#x3D;Im A \oplus Im B$ 这里是直和</li>
+</ul>
+<h2 id="9-2-线性映射的核与象"><a href="#9-2-线性映射的核与象" class="headerlink" title="9.2  线性映射的核与象"></a>9.2  线性映射的核与象</h2><p>定义1. 核 A:V-&gt;V’ ，那么ker A &#x3D; V中 映射到V’的零向量的所有向量</p>
+<p>ker A &#x3D; { $a\in V | Aa&#x3D;0$ } </p>
+<p>$Im A &#x3D; AV$</p>
+<p>命题1. ker A是V的一个子空间, Im A是 V’的一个子空间</p>
+<ul>
+<li>因为加法乘法不变，所以只需要证明封闭性即可</li>
+<li>同样 A是线性映射，保证了 Im A的 加法乘法的运算性质，只需要证明封闭</li>
+</ul>
+<p>命题2 A是V-&gt; V’,</p>
+<ol>
+<li>是单射 当且仅当 Ker A &#x3D; 0, <ol>
+<li>&#x3D;&gt; 因为0始终属于Ker A</li>
+<li>&lt;&#x3D; 任意两个Aa&#x3D;Ab相等 那么差A(a-b)&#x3D;0反过来在a-b \in ker 0中，而ker 0只有0,所以 a&#x3D;b</li>
+</ol>
+</li>
+<li>满射当且仅当 Im A &#x3D; V’， 就是定义</li>
+</ol>
+<p>定理1， A:V-&gt;V’,  那么 V&#x2F;Ker A 和 Im A同构</p>
+<ul>
+<li>$\sigma: a+Ker A \to Aa$<ul>
+<li>是映射(同样输入唯一输出) a+kerA&#x3D;b+kerA &lt;&#x3D;&gt; a-b \in ker A ,&#x3D;&gt; A(a-b)&#x3D;0 &lt;&#x3D;&gt; Aa&#x3D;Ab 且是单射，满射，双射（单射 双射 线性映射不要求，但是同构要求）</li>
+<li>再 容易证明 保持 加法和乘法，所以 同构映射</li>
+</ul>
+</li>
+</ul>
+<p>定理2. 设V和V’都是F上的线性空间,V是有限维，摄A是一个线性映射，Ker A和Im A都是有限维度 且 dim Ker A + dim Im A &#x3D; dim V</p>
+<ul>
+<li>由上 dim(Im A) &#x3D; dim(V&#x2F;Ker A) &#x3D; dim(V) - dim(Ker A)</li>
+</ul>
+<p>定理3. 有限维线性空间,A:V-&gt;V’ 线性映射</p>
+<ul>
+<li>A是单射</li>
+<li>&lt;&#x3D;&gt; Ker A &#x3D; 0</li>
+<li>&lt;&#x3D;&gt; dim(Im A)&#x3D;dim (V) &#x3D; dim(V’)</li>
+<li>&lt;&#x3D;&gt; ImA&#x3D;V’</li>
+<li>&lt;&#x3D;&gt;A是满射</li>
+</ul>
+<p>推论1. A: V-&gt;V 线性变换： 单射&lt;&#x3D;&gt; 满射</p>
+<p>根据这个，可以有矩阵乘法 维数的一种证明</p>
+<p>$A_{s\times n}:F^n\to F^s$</p>
+<p>Ker A 等于 AX&#x3D;0 的解空间</p>
+<p>ImA 等于A的列空间</p>
+<p>$dim Ker A  + dim Im A &#x3D; dim F^n$ 这在MIT 课用 矩阵解和图画展示了</p>
+<p>dim (null space) + rank A &#x3D; n(列数)</p>
+<hr>
+<p>注意！对于线性变化，虽然 维数 和 等于 dim(kerA)+dim(ImA)&#x3D;dim V, 但是 两个空间 的 和 并不一定等于，其实显然，本来ker A是V中的，但是Im V是转换过的, 这两个 没啥关系，相当于 按照 ker A的规则压缩，压缩后的和之前的 就不相关的感觉更自然</p>
+<ul>
+<li>比如 $K[x]<em>n$ 求导D, $Im D &#x3D; K[x]</em>{n-1}, Ker D &#x3D; K$ 显然 $K[x]_{n-1}+K\neq K[x]_n$</li>
+</ul>
+<p>命题3. A是线性空间V上的线性变换，如果是V上的幂等变换$A^2&#x3D;A$， 那么 $V&#x3D;Im A \oplus Ker A$</p>
+<ul>
+<li>比上面多一个幂等</li>
+<li>上面已经证明了 维数 ImA 和KerA的和是V,那么只需要证明 它们是互补（任何V中可表示，之间交为0）</li>
+</ul>
+<p>推论2, V中互补的U,W. $U&#x3D; Im P_U, W&#x3D;Ker P_U$,</p>
+<ul>
+<li>前半之前证明过了，后半根据命题3</li>
+</ul>
+<p>定义. A:V-&gt;V’ 余核 Coker A &#x3D; V’&#x2F;Im A</p>
+<p>命题4. A:V-&gt;V’ （线性空间之间的线性映射), 那么 满射 &lt;&#x3D;&gt; Coker A &#x3D; 0</p>
+<ul>
+<li>满射</li>
+<li>&lt;&#x3D;&gt; ImA&#x3D;V’</li>
+<li>&lt;&#x3D;&gt; V’&#x2F;Im A&#x3D;0</li>
+</ul>
+<h2 id="9-3-线性映射和线性变换的矩阵表示"><a href="#9-3-线性映射和线性变换的矩阵表示" class="headerlink" title="9.3 线性映射和线性变换的矩阵表示"></a>9.3 线性映射和线性变换的矩阵表示</h2><p>A:V-&gt;V’, $F^n\to F^s$</p>
+<p>在V中 任意x&#x3D;$\sum k_ia_i$ 用V的基a唯一表示</p>
+<p>而对于V中的基的每个向量，经过变化$Aa_i &#x3D; \sum l_{ij} a’_j$ 在V’中，被V’的的基a’ 唯一表示</p>
+<p>直接关注基的变换 $(Aa_1,\cdots,Aa_n) &#x3D; (a’_1,\cdots,a’_s) (l 矩阵)$</p>
+<p>那么 要表示x,就是两边同时右乘上 k的列向量 A x &#x3D; (A V基) * k列 &#x3D; V’基 * l及转换矩阵 * k列</p>
+<p>对于 线性变换(V-&gt;V):</p>
+<ul>
+<li>(A V基) &#x3D; V基(两边选择一样的基) * l及转换矩阵</li>
+<li>所以 把线性变换 对应 一个 右乘$L_A$矩阵</li>
+<li>变换A V基 &#x3D; V基 * 矩阵A</li>
+</ul>
+<p>若 A 是幂等变换，根据 命题3, $V&#x3D;Im A \oplus Ker A$</p>
+<ul>
+<li>基a(Im A)+基b(Ker A) 是V的一个基</li>
+<li>Aa&#x3D;a</li>
+<li>Ab&#x3D;0</li>
+<li>所以 如果选择基 &#x3D; <code>[...基a,...基b]</code></li>
+<li>那么 矩阵A &#x3D; <code>对角矩阵[I_rank(a),...0]</code></li>
+</ul>
+<p>命题1. rank(变换A) &#x3D; rank(V中选择基 的一个 矩阵A)</p>
+<ul>
+<li>rank(变换A) &#x3D; dim(Im A) &#x3D; rank(A)</li>
+</ul>
+<hr>
+<p>Hom(V,V’) 与$M_{s\times n}(F)$的关系,  Hom(V,V) 与$M_{n}(F)$的关系</p>
+<p>定理1. (选V基)-&gt;(选V’基): 线性映射A 与 对应的变换矩阵A 是同构的</p>
+<ul>
+<li>Hom(V,V’) 同构于 $M_{s\times b}(F)$, 注意的是这里 两边基先选定，而基的选定并不要求 标准，就已经有了同构</li>
+<li>dim (Hom(V,V’)) &#x3D; sn &#x3D; (dim V)(dim V’)</li>
+</ul>
+<p>特殊的V’ 取V</p>
+<p>变换: (变换A变换B)a&#x3D;变换A(变换B a)&#x3D;变换A (a 矩阵B)&#x3D;(变换A a) 矩阵B &#x3D; a 变换A 矩阵B</p>
+<p>定义1. M,M’都是域F上的代数，双射$\sigma$ 是 线性空间的同构映射，又是环的同构映射，那么称作代数的同构映射</p>
+<ul>
+<li>这里其实再次强调了， 同构不只是元素的映射 还有运算的保持</li>
+</ul>
+<p>定理2. $线性变换A\to 矩阵A$ 是 Hom(V,V) 到 M_n(F)的一个同构映射</p>
+<p>变换可逆</p>
+<ul>
+<li>&lt;&#x3D;&gt;  存在变换B, 变换A变换B&#x3D;变换B变换A&#x3D;变换I</li>
+<li>&lt;&#x3D;&gt; 存在矩阵B, 矩阵A矩阵B&#x3D;矩阵B矩阵A&#x3D;矩阵I</li>
+<li>&lt;&#x3D;&gt; 矩阵可逆</li>
+</ul>
+<p>类似的 变换的幂等 与 矩阵的幂等 也是冲要的</p>
+<hr>
+<p>向量在线性映射下 象的坐标</p>
+<ul>
+<li>(变换A)a&#x3D;变换A((基)X)&#x3D;(变换A 基)X&#x3D;基(矩阵A)X</li>
+<li>所以对于 同样的基的选择，(A_基)X是新的坐标,….. 这里 矩阵A是与基的选择是有关的！！！！，所以在书写上应该把 选定基作为一个很前置的很固定的条件</li>
+</ul>
+<p>对于线性映射 A:V-&gt;V’ 来说，a的 新坐标 $&#x3D; 矩阵A_{基V\to 基V’}X$</p>
+<hr>
+<p>不同基下 矩阵之间的关系</p>
+<p>基1 变换A_1, 基2 变换A_2</p>
+<p>$A_2&#x3D;S^{-1}A_1S$</p>
+<p>已知</p>
+<p>变换A 基1 &#x3D; 基1 * 矩阵A_1</p>
+<p>变换A 基2 &#x3D; 基2 * 矩阵A_2</p>
+<p>基2 &#x3D; 基1 * 矩阵S</p>
+<p>那么有 </p>
+<p>$变换A 基2 &#x3D; 变换A (基1 * 矩阵S) &#x3D; (变换A 基1) * 矩阵S &#x3D; (基1 矩阵A) * 矩阵S &#x3D; ((基2 * S^{-1})A)S &#x3D; 基2 (S^{-1}AS)$</p>
+<p>表明 同一个线性变换， 不同的基下的矩阵之间的相似的！！！！！</p>
+<p>相似的矩阵的 det,rank,trace迹 是相等，叫做线性变换的 det,rank,trace</p>
+<ul>
+<li>5章证明过 利用 trace(AB)&#x3D;trace(BA) 核心结论</li>
+<li>这是一个找相似矩阵的最简单形式的好理由</li>
+</ul>
+<h2 id="9-4-线性变换的特征值，特征向量，线性变换和对角化的条件"><a href="#9-4-线性变换的特征值，特征向量，线性变换和对角化的条件" class="headerlink" title="9.4 线性变换的特征值，特征向量，线性变换和对角化的条件"></a>9.4 线性变换的特征值，特征向量，线性变换和对角化的条件</h2><p>希望找到 对角矩阵D</p>
+<p>变换A 基 &#x3D; 基 * 对角矩阵</p>
+<hr>
+<p>一、线性变换 的特征值和特征向量</p>
+<p>$(变换A) 非零向量a &#x3D; \lambda a, \lambda\in F$</p>
+<p>特征值$\lambda$和对应特征向量$a$</p>
+<p>作用就是把这个特征向量压缩&#x2F;拉伸 倍数</p>
+<p>变换A的特征值 &lt;&#x3D;&gt; 矩阵A的特征值</p>
+<p>特征向量 是 属于 特征值的一个特征向量： 变换A &lt;&#x3D;&gt; 矩阵A</p>
+<hr>
+<p>二、线性变换可对角化的充要条件</p>
+<p>如果V中存在一个基，使得线性变换A在这个基下的矩阵是对角矩阵，那么称A可对角化</p>
+<p>定理1. 域F上n维线性空间V上的线性变换A可对角化，当且仅当A有n个线性无关的特征向量， 此时在 基下的矩阵为 特征值的对应位置的对角矩阵， 称作A的标准形</p>
+<p>推论1. V上的线性变化A可对角化，当且仅当V中存在由A的特征向量组成的一个基</p>
+<p>特征子空间： 对于特征值$\lambda_0$, 所有该特征值对应的特征向量构成的空间, 记作$V_{\lambda_0}$</p>
+<p>$a\in V_{\lambda_0}$&lt;&#x3D;&gt; 变换$Aa&#x3D;\lambda_0a$ &lt;&#x3D;&gt; $(\lambda_0I-变换A)a&#x3D;0$ &lt;&#x3D;&gt; $a\in Ker(\lambda_0I-变换A)$</p>
+<p>也就是 特征值 的 特征子空间 是 线性变换$\lambda_0I-A$的核, 所以 度 &#x3D; n-解空间</p>
+<p>所以 $dim(V_{\lambda_0})&#x3D;n-rank(\lambda_0I-A)$</p>
+<p>推论2, 可对角化 当且仅当 属于不同特征值 的特征子空间的维数直和等于n</p>
+<p>推论3. 可对角化，当且仅当 V&#x3D;特征子空间的直和</p>
+<h2 id="9-5-线性变换的不变子空间-Hamilton-Cayley-定理"><a href="#9-5-线性变换的不变子空间-Hamilton-Cayley-定理" class="headerlink" title="9.5 线性变换的不变子空间, Hamilton-Cayley 定理"></a>9.5 线性变换的不变子空间, Hamilton-Cayley 定理</h2><p>定义1. 设V是域F上的线性空间, A是V上的一个线性变换，V的子空间W如果具有下述性质：“对于任意 $a\in W$ 都有$变换A a\in W$，那么称W是A的不变子空间, A-子空间</p>
+<ul>
+<li>零子空间0 是 平凡的不变子空间</li>
+</ul>
+<p>命题1. 变换A的核 与 象，变换A的特征子空间都是 A-子空间</p>
+<ul>
+<li>核：因为 这个空间里所有的运算结果都是0向量，而零向量的确属于核</li>
+<li>象：因为 $F^n$中任意向量 经过变换都得到象，而象是$F^n$的子空间，变换后依然是象</li>
+<li>特征子空间: 对于一个给定的特征子空间，根据定义，每个向量 在这个空间中都是 $\lambda$ 倍的长度变换，</li>
+</ul>
+<p>命题2. A,B都是V上的线性变换，如果A,B可交换，那么Ker B,Im B, B的特征子空间 都是A-子空间</p>
+<ul>
+<li>这里只是 充分: 可交换 &#x3D;&gt; Ker B, Im B, B特征子空间，是 A-子空间</li>
+<li>$a\in ker B \to Aa\in ker B$: 变换B(变换A a) &#x3D; 变换A (变换B a) &#x3D; 变换A 0 &#x3D; 0</li>
+<li>$a\in Im B\to Aa\in Im B$: 存在b,使得a&#x3D;Bb, Aa&#x3D;ABb&#x3D;BAb</li>
+<li>$a\in V_{\lambda}\to Aa\in V_{\lambda}$ : $Ba&#x3D;\lambda a$, $BAa&#x3D;ABa&#x3D;A\lambda a&#x3D;\lambda Aa$</li>
+</ul>
+<p>推论1, $f(x) \in F[x]$ 则 $Ker f(A),Im f(A),f(A)$的特征子空间 都是 A-子空间， 因为$f(A)$和A可交换</p>
+<p>命题3. 不变子空间的 和 与 交 仍是 A的不变子空间</p>
+<p>命题4. 单个非零向量 的生成空间 是A-子空间，当且仅当 是A的一个特征向量</p>
+<ul>
+<li>特征向量 &#x3D;&gt; 显然能构成</li>
+<li>如果能构成 &#x3D;&gt; 满足特征向量定义</li>
+</ul>
+<p>命题5. 由向量组 a1,a2… 生成空间W是A-子空间，当且仅当$Aa_i \in W$</p>
+<ul>
+<li>是A-子空间 &#x3D;&gt;  定义需要属于</li>
+<li>如果全部属于 &#x3D;&gt; 任何一个空间中向量 可被aI线性表示，也就拆分表示再合并，可以被 Aai线性表示</li>
+</ul>
+<hr>
+<p>总而言之，如果W是V上线性变换A的不变子空间</p>
+<ul>
+<li>那么可以诱导出子空间W上的线性变换 A|W<ul>
+<li>定义 $a\in W, (A|W)a&#x3D;Aa$</li>
+</ul>
+</li>
+<li>又可以诱导出 商空间 V&#x2F;W上的线性变换<ul>
+<li>定义 $V&#x2F;W\to V&#x2F;W$<ul>
+<li>$a+W\to Aa+W$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>二、 不变子空间 研究 线性变换的矩阵表示</p>
+<p>A是线性变换 且 A不可对角化， 寻求A的最简形式</p>
+<p>定理1. A是域F上n维线性空间V上的一个线性变换，A在V的一个基下的矩阵为分块对角矩阵 当且仅当V能分解成A的   非平凡  不变子空间的直和</p>
+<p>定理2. 设V是域F上的线性空间，A是线性变换, $K[x]$中 f(x)&#x3D;f1(x)f2(x),且(f1(x),f2(x))&#x3D;1 则</p>
+<ul>
+<li>Ker f(A)&#x3D;ker f1(A) 直和 Ker f2(A)</li>
+<li>显然 带入 变换A, Ker fi(A) 是 Ker f(A)的子集，因为 f(A)a&#x3D;任意 * fi(A) a&#x3D;任意 * 0 &#x3D; 0</li>
+<li>又多项式 无公因式 u(x)f1(x)+v(x)f2(x)&#x3D;1<ul>
+<li>u1(A)f1(A)+u2(A)f2(A)&#x3D;I</li>
+<li>取 a \in ker f(A)</li>
+<li>a&#x3D;Ia&#x3D;u1(A)f1(A)a+u2(A)f2(A)a<ul>
+<li>前面 这个 左乘f2(A)有  f2(A) u1(A)f1(A)a &#x3D; u1(A) f(A)a&#x3D;u1(A) 0 &#x3D; 0, 说明 属于ker f2(A)</li>
+<li>后面 同理 属于 ker f1(A)</li>
+</ul>
+</li>
+<li>这里说明了kerf(A)中的任意 a 可以表示成 ker f1(A)和ker f2(A)中的两个向量之和，这里证明了 “和”</li>
+<li>那么还需要证明 唯一表示 或者 交只有0向量</li>
+<li>取 a \in ker f1(A)交 ker f2(A)</li>
+<li>a&#x3D;Ia&#x3D;u1(A)f1(A)a+u2(A)f2(A)a&#x3D;0, 说明只有0向量</li>
+</ul>
+</li>
+</ul>
+<p>定理3. 把定理2推广到更多子空间的直和，f(x)&#x3D;\prod fi(x), 且 (fi(x),fj(x))&#x3D;1,i \neq j两两互素</p>
+<ul>
+<li>那么 ker f(A)&#x3D; 直和 ker fi(A)</li>
+<li>证明: 归纳法</li>
+</ul>
+<hr>
+<p>三、线性变换和矩阵的零化多项式，Hamilton-Cayley定理</p>
+<p>定义2, F上的一元多项式使得 f(A)&#x3D;0, 那么称 f(x)是A的一个零化多项式， A是线性变换</p>
+<p>令 n &#x3D; dim V, 则$dim(Hom(V,V))&#x3D;n^2$ 从而</p>
+<ul>
+<li>$I,A,A^2,\cdots,A^{n^2}$ 一定线性相关<ul>
+<li>不妨令 $A^0&#x3D;I$</li>
+<li>存在不全为零的$k_i$使得 $\sum_{i&#x3D;0}^{n^2} {k_i} A^i&#x3D;0$</li>
+<li>令 $f(x)&#x3D;\sum_{i&#x3D;0}^{n^2} k_ix^i$ ，则$f(A)&#x3D;0$是一个 非零多项式 的 零化多项式</li>
+</ul>
+</li>
+</ul>
+<p>定义3. F[x]中的多项式使得 f(A)&#x3D;0, 那么称 f(x)是A的一个零化多项式，A是矩阵</p>
+<ul>
+<li>和定义2不同的是这里是矩阵</li>
+<li>矩阵总是能找到 一个线性变换 和 线性变换选的基<ul>
+<li>线性变换 表达式 &lt;&#x3D;&gt; 矩阵表达式构成映射</li>
+</ul>
+</li>
+</ul>
+<p>伴随矩阵 $A^<em>A&#x3D;AA^</em>&#x3D;|A|I$</p>
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[2x^3+x^2+1,x^2-3;</span><br><span class="line">x^3-1,2x+5] 按幂次拆分</span><br><span class="line"></span><br><span class="line">= x^3[2,0;1,0]+x^2[1,1;0,0]+x[0,0;0,2]+[1,-3;-1,5]</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>Hamilton-Cayley定理： A是域F上的n级矩阵，A的特征多项式 是A的零化多项式</p>
+<ul>
+<li>特征多项式 的来源是 特征值定义+行列式</li>
+<li>零化多项式是 指 把A带入多项式 结果会是零矩阵</li>
+</ul>
+<p>证明:</p>
+<ul>
+<li>设$B(\lambda)$ 是 $\lambda I-A$ 的伴随矩阵</li>
+<li>$B(\lambda)(\lambda I -A) &#x3D; |\lambda I-A|I&#x3D;f(\lambda)I$<ul>
+<li>因为$B(\lambda)$ 是$\lambda I-A$ 的代数余子式，所以$B(\lambda)$最高次 不超过$\lambda^{n-1}$</li>
+<li>$&#x3D;(\sum_{i&#x3D;0}^{n-1} \lambda^i B_i)(\lambda I-A)$</li>
+<li>$&#x3D;\lambda^n B_{n-1}-B_0A + \sum_{i&#x3D;1}^{n-1}(\lambda^i (B_{i-1}-B_iA))$</li>
+</ul>
+</li>
+<li>右侧$f(\lambda)I&#x3D;(\sum_{i&#x3D;0}^n a_i\lambda^i)I$</li>
+<li>系数对应相等<ul>
+<li>得到很多 $B_{i-1}-B_iA&#x3D;a_{i-1}I$</li>
+<li>配幂次得到 $B_{i-1}A^{i-1}-B_iA^n&#x3D;a_{i-1}A^{i-1}$</li>
+<li>全部相加 左侧&#x3D;$0$, 右侧&#x3D;$f(A)$ 也就是 把$A$带入$f(\lambda)$</li>
+</ul>
+</li>
+</ul>
+<p>所以 $f(\lambda)&#x3D;\prod f_i(\lambda)^{r_i}$, 其中$f_i$是两两不等 首一 不可约多项式</p>
+<ul>
+<li>则 $V &#x3D; Ker f(A) &#x3D;\oplus_i Ker(f_i(A)^{r_i})$ 所有的变换的核的直和</li>
+<li>更特别的 如果$f(\lambda)&#x3D;\prod (\lambda-\lambda_i)^r_i$<ul>
+<li>则 $V&#x3D;\oplus_i Ker((A-\lambda_i I)^{r_i})$<ul>
+<li>其中每一核 称为A的根子空间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-6-线性变换和矩阵的最小多项式"><a href="#9-6-线性变换和矩阵的最小多项式" class="headerlink" title="9.6 线性变换和矩阵的最小多项式"></a>9.6 线性变换和矩阵的最小多项式</h2><p>V是域F上的n维线性空间</p>
+<p>A是V上的一个线性变换，找一个合适的基使得A在此基下的矩阵具有最简单的形式</p>
+<p>第一步9.5 找A的一个非零的零化多项式</p>
+<ul>
+<li>f(\lambda) 分解成 两两不等 不可约多项式 方幂的乘积，<ul>
+<li>则V能分解成A的不变子空间的直和</li>
+<li>每个不变子空间取一个基，合起来成为V的一个基</li>
+<li>A在这个基下的矩阵是分块对角矩阵</li>
+</ul>
+</li>
+</ul>
+<p>第二步，每个不变子空间中取依托各合适的基，使得A在这个不变子空间上的限制在此基下的矩阵具有最简单形式</p>
+<hr>
+<p>一、最小多项式的定义和性质</p>
+<p>定义1. 线性变换A, A的所有非零的零化多项式中，次数最低的首相系数为1的多项式 成为A的最小多项式</p>
+<p>命题1. 唯一的</p>
+<ul>
+<li>证明 首先 如果两个都是最小多项式 那么如果次数不同，那么次数大的肯定不是</li>
+<li>那么 如果有两个次数相同的 但是不等的最小多项式， 那么它们的差 一定是更小次数的零化多项式</li>
+</ul>
+<p>命题2. 任意零化多项式 是 最小多项式的倍数</p>
+<ul>
+<li>多项式带余除法，如果有余那么 这个余多项式 是幂次更小的零化多项式</li>
+</ul>
+<p>命题3. 最小多项式 和 特征多项式 的根的集合 相同（根的重数幂次不一定相同）</p>
+<ul>
+<li>显然 最小多项式 | 特征多项式， 所以最小多项式的根是特征多项式的根</li>
+<li>反之 若存在特征值 不是最小多项式根，选一个对应特征向量a,那么有 0&#x3D;(零化多项式)&#x3D;m(A)a&#x3D;(特征值替换)&#x3D;m(lambda) a, 因此是一个根</li>
+</ul>
+<p>命题4. A是域F上的n级矩阵，域E包含F,则A的最小多项式m(lambda),与A的特征多项式 f(lambda)在E中有相同的根</p>
+<ul>
+<li>取一对特征向量a和特征值lambda: 0&#x3D;m(A)a&#x3D;(展开)a&#x3D;m(lambda)a, 所以m(lambda)&#x3D;0</li>
+</ul>
+<p>命题5. 域F上最小多项式为 m(lambda), 域E包含F,那么仍然为m(lambda)</p>
+<ul>
+<li>首先 m(lambda)一定是 E上的零化多项式，那么最小多项式只可能是它的因式，而这个因式在F上会同样为零化多项式</li>
+</ul>
+<hr>
+<p>二、 几类特殊线性变换或矩阵的最小多项式</p>
+<p>A是幂零指数为l的幂零变换 &lt;&#x3D;&gt; $\lambda^l$是A的一个零化多项式，而当$r &lt; l$时，$\lambda^r$不是零化多项式&lt;&#x3D;&gt;  A的最小多项式是 $\lambda^l$</p>
+<p>A幂等变换 &lt;&#x3D;&gt; $\lambda^2-\lambda$ 是一个零化多项式，最小多项式为$\lambda,\lambda^2-\lambda,\lambda -1$中的一个</p>
+<p>A是对合变换 &lt;&#x3D;&gt; $\lambda^2-1$是一个零化多项式， 最小多项式同理</p>
+<p>A是周期为m的周期变换, &lt;&#x3D;&gt; $\lambda^m-1$是零化多项式，$\lambda^{&lt;m}-1$不是零化多项式, &lt;&#x3D;&gt; 同理是 前面的因式，不是后面的因式</p>
+<p>定义2:</p>
+<ul>
+<li>Jordan块，对角是a,对角右移1位全是1,</li>
+<li>例如 <code>[a,1,0;0,a,1;0,0,a]</code></li>
+</ul>
+<p>命题6： 主对角元为a的r级Jordan块，最小多项式等于它的特征多项式 $f(\lambda)&#x3D;(\lambda-a)^r$</p>
+<ul>
+<li>$J_r(a)-aI&#x3D;J_r(0)$有$J_r(0)^r&#x3D;0,J_r(0)^{&lt;r}\neq 0$</li>
+</ul>
+<p>定理1. V是线性变换，如果V能分解成A的一些非平凡不变子空间直和 $V&#x3D;W_1\oplus W_2\oplus \cdots\oplus W_s$</p>
+<ul>
+<li>$m(\lambda)&#x3D;$ 每个子空间 最小多项式的最小公倍式</li>
+<li>推论4,如果A能写成对角分块矩阵，那么每个对角的块的 最小多项式就可以作为m_i用到上面去</li>
+</ul>
+<hr>
+<p>三、用最小多项式研究线性变换的矩阵表示</p>
+<p>定理2： 线性变换可对角化 &lt;&#x3D;&gt; 当且仅当 A的最小多项式m(lambda)在F[\lambda] 能分解成“不同”一次因式的成绩</p>
+<ul>
+<li>9.4推论3 V能表示成不同特征子空间的直和<ul>
+<li>$V_{\lambda_i}&#x3D;Ker(A-\lambda_i I)$</li>
+<li>因为 $V_{\lambda_i}$ 是A的不变子空间（其中任何向量 经过变换后还属于它）</li>
+<li>那么 根据上面 <code>(A|V)a=Aa</code>, 其中A|V表示 在子空间的同样&#x2F;诱导出的变换A</li>
+<li>任意$a\in V_{\lambda_i}$（诱导A-$\lambda_i$ 诱导I ）a&#x3D;(A-$\lambda_i$I)a&#x3D;0,从而 $\lambda-\lambda_i$ 是诱导变换A的零化多项式，，所以得到m</li>
+<li>充分性，不同特征子空间的lambda不相同，所以多项式互素</li>
+</ul>
+</li>
+</ul>
+<p>推论5 n级矩阵A可对角化，当且仅当A的最小多项式，在F[lambda]中能分解成不同的一次因式的成绩</p>
+<p>命题7</p>
+<ul>
+<li>幂等变化A一定可对角化<ul>
+<li>最小是 $\lambda^2-\lambda$  的因式，一定可以</li>
+</ul>
+</li>
+<li>幂零指数l &gt; 1的幂零变换一定不可对角化<ul>
+<li>最小是$\lambda^l$ 一定不可以</li>
+</ul>
+</li>
+<li>特征不等于2时，对合变换A一定可对角化。特征等于2时，不等于I的对合变换一定不可对角化<ul>
+<li>特征：mod 3的特征是3,mod 7的特征是7</li>
+<li>对合变换: AA &#x3D; I, </li>
+<li>特征不等于2, 最小多项式是 $\lambda^2-1$ 的因式，因为这里特征不为2,所以 1 !&#x3D; -1</li>
+<li>特征等于2,最小多项式是$\lambda^2-1$ 的因式，这里特征是2,所以1&#x3D;-1,$(\lambda+1)^2$的因式，如果$\lambda+1$是最小多项式$A&#x3D;-I&#x3D;I$ 这时就是I,所以不等于I的一定不能对角化</li>
+</ul>
+</li>
+<li>F是复数域时，周期变换一定可对角化</li>
+</ul>
+<p>命题8, r &gt; 1的Jordan块 一定不可对角化，包含级数大于1的jordan块的jordan形矩阵一定不可对角化</p>
+<ul>
+<li>证明 最小多项式是 $(lambda-a)^r$</li>
+</ul>
+<p>推论6. A对角化，那么A的任意一个非平凡 不变子空间W, A|W都可对角化</p>
+<ul>
+<li>证明，也就是 子空间诱导A的最小多项式 是 A的最小多项式的因式，而A的最小多项式同样特征值最高幂次为1次，所以诱导的最高幂次也不会超过1次，得证</li>
+</ul>
+<p>命题9 A可对角化，A的任意不变子空间W &#x3D; $\oplus (V_{\lambda_i} \cap W)$的直和</p>
+<ul>
+<li>由上，不变子空间特征值 都是 A的特征值<ul>
+<li>属于 A|W的某个特征值的 子空间 正是 对应的和W的交</li>
+<li>并且 A|W可对角化，所以可以由它们的直和</li>
+</ul>
+</li>
+</ul>
+<p>命题10. A可对角化，当且仅当，特征多项式在包含F的代数封闭域中的全部n个根都在F中，且对于A的任一不变子空间W，都存在A的不变子空间作为W在V中的补空间。</p>
+<h2 id="9-7-幂零变换的Jordan标准型"><a href="#9-7-幂零变换的Jordan标准型" class="headerlink" title="9.7 幂零变换的Jordan标准型"></a>9.7 幂零变换的Jordan标准型</h2><p>B是幂零变换，指数为l</p>
+<p>存在向量a, $B^{&lt; l}a\neq 0,B^la&#x3D;0$</p>
+<p>且$a,Ba,\cdots,B^{l-1}a$线性无关 （否则存在一个另一个 最小式 ）</p>
+<p>是 子空间$&lt;a,Ba,\cdots,B^{l-1}a&gt;$的一个基</p>
+<p>这个子空间是不变子空间（B(展开) &#x3D; 0+表示）</p>
+<p>在这个基下的矩阵为，$jordan(0)$ 对角右便宜1个为1</p>
+<hr>
+<p>定义1. $a\in V$, $B^{t-1}a\neq 0,B^ta&#x3D;0$, 那么$&lt;B^{t-1}a,…Ba,a&gt;$称作B-强循环子空间</p>
+<ul>
+<li>是不变子空间</li>
+<li>这些是它的一个基</li>
+</ul>
+<p>定理1. B是r维线性空间W上的幂零变换，指数为l,则W能分解成 dim W_0个B-强循环子空间的直和</p>
+<ul>
+<li>其中$W_0$是B的属于特征值0的特征子空间</li>
+<li>幂零，特征值有0,所以$W_0 !&#x3D;0$</li>
+<li>dim W&#x2F;W_0 &#x3D; dim W - dim W_0 &lt; r<ul>
+<li>商空间 $a+W_0\in W&#x2F;W_0$中， 诱导线性变换$B_0$, $B_0^l(a+W_0)&#x3D;B_0^la+W_0&#x3D;0+W_0&#x3D;W_0$<ul>
+<li>所以 $B_0$ 是商空间上的幂零变换</li>
+<li>归纳法，商空间可以分解成 如上形式的直和</li>
+<li>W &#x3D; W_0 直和 （归纳中 上述形式的直和 个数为$s &#x3D; dim (W&#x2F;W_0)_0$）</li>
+<li>由表示法 $\sum_i c_iB^{t_{i}}a_i &#x3D; 0$ 知道 这些$B^{t_i}a_i$ 在W_0中 且线性无关</li>
+<li>又都是$W_0$中的，所以 $B^{t_i}a_i$ 扩充成W_0的一个基，</li>
+<li>W &#x3D; 上述形式 每个的 幂次从$B^{t_i-1}a_i$ 多一个$B^{t_i}a_i$, 以及生于扩充所用到的基<ul>
+<li>这里其实如何和 W&#x3D;W_0直和 归纳 对应着看的话</li>
+<li>那么 归纳中的每一个都多一个向量，这些向量线性无关，且都属于W_0,然后W_0剩余的部分，每个向量一个 强循环子空间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理2. B是r维线性空间W上的幂零变换，幂零指数为l,W中存在一个基，使得B在此基下的矩阵B为一个Jordan形矩阵，其中每个Jordan块的主对角元都是0,级数不超过l, Jordan块总数 &#x3D; dim(Ker B)&#x3D;r - rank(B),t级Jordan块的个数N(t)&#x3D;rank(B^{t+1})+rank(B^{t-1})-2rank(B^t)</p>
+<ul>
+<li>总数 &#x3D; dim W_0 &#x3D; dim Ker B &#x3D; r - rank(B)</li>
+<li>rank $J_n(0)^m&#x3D;max(n-m,0)$</li>
+<li>在考虑 $B^{t-1}$ 会让 小于t的 jordan块都变成零矩阵<ul>
+<li>$rank(B^{t-1})&#x3D; 1<em>N(t)+2</em>N(t+1)+\cdots +(l-(t-1)) N(l)$</li>
+<li>$rank(B^{t})&#x3D; 1*N(t+1)+\cdots +(l-t) N(l)$</li>
+<li>$rank(B^{t-1})-rank(B^t)&#x3D; N(t)+\cdots +N(l)$</li>
+<li>$rank(B^{t})-rank(B^{t+1})&#x3D; N(t+1)+\cdots +N(l)$</li>
+<li>得证</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-8-线性变换的jordan标准型"><a href="#9-8-线性变换的jordan标准型" class="headerlink" title="9.8 线性变换的jordan标准型"></a>9.8 线性变换的jordan标准型</h2><p>线性变换A的最小多项式m(lambda)在F[lambda]中的标准分解式为 $m(\lambda)&#x3D;\prod (\lambda-\lambda_i)^{l_i}$</p>
+<p>那么V下存在一个基，使得在此基下的矩阵A为jordan形矩阵，主对角元是全部特征值</p>
+<p>主对角元 $\lambda_j$的Jordan块的总数$N_j&#x3D;n-rank(A-\lambda_jI)$</p>
+<p>lambda_i是所有不同特征值</p>
+<p>$V&#x3D;Ker(A-\lambda_iI)^{l_i}$的直和</p>
+<p>令$W_i&#x3D;Ker(A-\lambda_iI)^{l_i}$ ,$B_i&#x3D;A|W_i-\lambda_iI$</p>
+<p>则$B_i$是 $W_i$上的幂零变换，存在基使得B_i在W_i上是Jordan形</p>
+<p>在这个基下 诱导A 为$A_i&#x3D;\lambda_iI+B_i$</p>
+<ul>
+<li>$N_i&#x3D;dim Ker B_i&#x3D; dim Ker(A|W_i-\lambda_iI)&#x3D;dim(Ker(A-\lambda_iI))&#x3D;n-rank(A-\lambda_iI)$</li>
+<li>$N_i(t)&#x3D;rank(A-\lambda_iI)^{t+1}+rank(A-\lambda_iI)^{t-1}-2rank(A-\lambda_iI)^{t}$</li>
+</ul>
+<hr>
+<p>推论2，线性变换有jordan标准形，当且仅当A的最小多项式m(lambda) 在F[lambda] 中可分解成一次因式的乘积</p>
+<p>推论3, 线性变换有jordan标准形，当且仅当A的特征多项式m(lambda) 在F[lambda] 中可分解成一次因式的乘积</p>
+<p>定义1. A有Jordan标准型J,那么J中所有Jordan块的最小多项式称为A的初等因子</p>
+<ul>
+<li>如果有jordan标准型，那么完全有初等因子决定</li>
+</ul>
+<p>推论5. $A,B\in M_n(F)$如果A,B都有Jordan标准形，那么A与B相似当且仅当A与B有相同的初等因子</p>
+<p>推论6,两个n级复矩阵相似当且仅当它们有相同的初等因子</p>
+<ul>
+<li>在复数域上所有n级矩阵组成的集合$M_n(C)$中，初等因子是相似关系下的一组完全不变量</li>
+</ul>
+<hr>
+<p>综上所述，我们对于最小多项式m(lambda)在F[lambda]中能分解成一次因式乘积的线性变换A,通过把线性空间V分解成A的根子空间的直和，在A的每个根子空间$W_i&#x3D;Ker(A-\lambda_iI)^{l_i}$ 中取一个合适的基（通过 W_i上的幂零变换$B_i&#x3D;A|W_i-\lambda_iI$来找合适的基）使A|W_i在此基下的矩阵A_i为一个jordan形矩阵，把W_i的基合起来成唯V的一个基，A在V的这个基下的矩阵A&#x3D;diag{A1…As}就是一个jordan形矩阵。 这样求出A的最简单形式的矩阵表示的方法称为线性空间V分解成A的根子空间的直和的方法，简称为空间分解的方法。</p>
+<hr>
+<blockquote>
+<p>这里要看章节7.2的 定义 定理3 &#x2F;4, 章节7.3定义定理 6&#x2F;7</p>
+</blockquote>
+<p>定理2. 任意一个非零的n级$\lambda-$矩阵 一定相抵于对角 lambda矩阵</p>
+<ul>
+<li>相抵：初等行列变换</li>
+<li>diag {$d_1(\lambda),d_2(\lambda),\cdots,d_n(\lambda)$}</li>
+<li>其中$d_i(\lambda) | d_{i+1}(\lambda)$</li>
+<li>对于非0的d_i,首项系数为1,</li>
+<li>满足这些要求的矩阵 称为 一个相抵标准形，或Smith 标准型</li>
+</ul>
+<p>定义2 $A(\lambda)$的相抵标准形中主对角线上的非零元 $d_i(\lambda)$ 称为$A(\lambda)$的不变因子</p>
+<p>定义3 $s\times n$ $\lambda-$矩阵$A(\lambda)$ 的所有k阶子式的首一最大公因式称为A(lambda)的k阶行列式因子，记作$D_k(\lambda),1\le k \le min(s,n)$</p>
+<p>定义4, 如果非零 $\lambda-$矩阵A($\lambda$) 有一个r阶子式不为0,而所有r+1阶子式都为0,那么称$A(\lambda)$的秩为r,零矩阵的秩规定为0</p>
+<p>定理3, 相抵的$\lambda-$矩阵有相同的秩和相同的各阶行列式因子</p>
+<ul>
+<li>$D_1(\lambda)&#x3D;d_1(\lambda)$</li>
+<li>$D_2(\lambda)&#x3D;d_1(\lambda)d_2(\lambda)$</li>
+<li>$D_r(\lambda)&#x3D;\prod d_i(\lambda)$</li>
+<li>$D_{r+1}(\lambda)&#x3D;0$</li>
+</ul>
+<p>因此有</p>
+<ul>
+<li>$d_1(\lambda)&#x3D;D_1(\lambda)$</li>
+<li>$d_i(\lambda)&#x3D;\frac{D_i(\lambda)}{D_{i-1}(\lambda)}$</li>
+</ul>
+<p>定理4, 两个n级 $\lambda-$矩阵相抵，当且仅当它们有相同的不变因子，或者有相同的各阶行列式因子。</p>
+<ul>
+<li>术语K上的n级矩阵A的特征矩阵$\lambda I-A$的n阶行列式因子$D_n(\lambda)$就是$\lambda I-A$的行列式$|\lambda I - A|$即A的多项式</li>
+</ul>
+<p>定义5, $A(\lambda)$是$C[\lambda]$上n级非零矩阵，每个次数大于0的不变因子，分解成互不相同的一次因式方幂的乘积，所有这些一次因式的方幂（相同的必须按出现的次数计算）称为$A(\lambda)$的初等因子</p>
+<p>定理5：C[lambda]上两个满秩矩阵，通过初等变换把A(lambda)化成对角行，然后，把主对角线上每个次数大于0的多项式分解成互不相同的一次因式的方幂的成绩，则所有这些一次因式的方幂就是A(lambda)的初等因子</p>
+<p>定理7： 复数域上 两个n级矩阵的特征矩阵 相抵的充分必要条件是他们有相同的不变因子，或者它们有相同的初等因子</p>
+<p>定理8：数域K上两个n级矩阵A与B相似的充要条件是， $\lambda I-A$与$\lambda I-B$相抵</p>
+<p>定理9：数域K上两个n级矩阵相似的充分必要条件是 它们有相同的不变因子</p>
+<ul>
+<li>不变因子 是 $M_n(K)$在相似关系下的一组完全不变量</li>
+<li>初等因子 是$M_n(C)$在相似关系下的一组完全不变量</li>
+</ul>
+<p>jordan块$J_r(a)$的 r阶行列式因子为 $D_r(\lambda)&#x3D;(\lambda - a)^r$, $D_{&lt;r}(\lambda)&#x3D;1$(右上角的1)</p>
+<ul>
+<li>有$d_r(\lambda)&#x3D;(\lambda-a)^r, d_{&lt;r}(\lambda)&#x3D;1$</li>
+</ul>
+<p>jordan矩阵，由它的每个jordan块的 初等因子决定（除了顺序）</p>
+<p>定理10：n级复矩阵A都与一个jordan形矩阵相似，这个Jordan形矩阵除去其中jordan块的排列次序外被A唯一决定，称它为jordan标准型</p>
+<ul>
+<li>证明：设一个n级复矩阵的初等因子为 $(\lambda-\lambda_i)^{r_i},\cdots$ （可能有相同的特征值）</li>
+<li>A所有初等因子的乘积等于 $\lambda I-A$的所有不变因子的成绩 &#x3D; A的特征多项式，从而 jordan块阶数和 &#x3D; n</li>
+<li>每一个初等因子$(\lambda-\lambda_i)^{r_i}$决定一个Jordan块，共同组成jordan形矩阵</li>
+<li>除了jordan块的次序外是相同的 唯一的</li>
+<li>把 J（jordan形矩阵）中所有jordan块的最小多项式成为A的初等因子，<ul>
+<li>m(lambda) &#x3D; 最小公倍数 ((lambda-lambda_i)^{r_i})</li>
+<li>注意到特征值可能有相同的，因此 相同时 取最大的幂次</li>
+</ul>
+</li>
+</ul>
+<p>推论7： n级复矩阵   A的最小多项式 m(lambda) 扥远古A的最后一个不变因子 d_n(lambda)</p>
+<p>推论8：数域K上n级矩阵   A的最小多项式m(lambda)等于A的最后一个不变因子d_n(lambda)</p>
+<p>推论9: 数域K上n级 矩阵A 和 矩阵B 相似，当且仅当把它们堪称复矩阵后相似</p>
+<ul>
+<li>也就是 不变因子，在看成复矩阵后，还是同样的不变因子</li>
+<li>&lt;&#x3D;&gt; A与B有相同的不变因子</li>
+<li>&lt;&#x3D;&gt; A与B堪称复矩阵后相似</li>
+</ul>
+<p>定义6 设A是域F上n维 线性空间V上的线性变换，如果A在V的一个基下的矩阵是Jordan形矩阵，那么称这个基成为A的一个Jordan基</p>
+<ul>
+<li>如何求jordan基</li>
+<li>A和B相似: $A&#x3D;P^{-1}BP$, 有$\lambda I-A&#x3D;P^{-1}(\lambda I - B)P$ 这两个相抵<ul>
+<li>存在可逆 $\lambda-$矩阵$P(\lambda),Q(\lambda)$</li>
+<li>$\lambda I - A&#x3D; P(\lambda)(\lambda I - B)Q(\lambda)$<ul>
+<li>$P^{-1}(\lambda)(\lambda I - A)&#x3D;(\lambda I - B)Q(\lambda)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>引理1 设A是域F上的任一非零矩阵，G(\lambda)是任意一个n级lambda-矩阵， 则存在n级\lambda-矩阵$H_1(\lambda),H_2(\lambda)$ 和域F上n级矩阵$T_1,T_2$使得</p>
+<ul>
+<li>$G(\lambda)&#x3D;H_1(\lambda)(\lambda I - A) + T_1$</li>
+<li>$G(\lambda)&#x3D;(\lambda I - A)H_2(\lambda) + T_2$<ul>
+<li>证明 按照$\lambda$的幂次，把G(\lambda)拆开成和$G(\lambda)&#x3D;\sum_{i&#x3D;0}^m \lambda^i G_i(\lambda)$, 最高次$G_m(\lambda)$ 不是零矩阵</li>
+<li>上面的  $H_1$ 最高次就是$m-1$,可以$H_1$同样的方式 按照幂次展开，$H_1(\lambda)&#x3D;\sum_{i&#x3D;0}^{m-1} \lambda^i B_i(\lambda)$<ul>
+<li>幂次对应相等有 $B_{m-1}&#x3D;G_m$, $B_{i\le m-2}&#x3D;G_{i+1}+B_{i+1}A$, $T_1&#x3D;G_0+B_0A$ 所以有方法表示</li>
+<li>同理 可以正民有 $H_2,T_2$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理11. 域F上两个n级矩阵A与B相似当且仅当$\lambda I - A$与$\lambda I -B$相抵</p>
+<ul>
+<li>若相抵，则 存在$P,Q$ 使得$\lambda I -A&#x3D;P(\lambda I -B)Q$<ul>
+<li>根据引理</li>
+<li>$Q&#x3D;H_1(\lambda I -A)+T_1$</li>
+<li>$P&#x3D;(\lambda I -A)H_2+T_2$<ul>
+<li>$P^{-1}(\lambda I-A)&#x3D;(\lambda I - B)(H_1(\lambda I - A) +T_1)$ 带入得</li>
+<li>$(P^{-1}-(\lambda I -B)H_1)(\lambda I -A)&#x3D;(\lambda I -B)T_1$,  右侧幂次为1或0,左右 左侧的左边因子 lambda幂次为0<ul>
+<li>$S&#x3D; P^{-1}-(\lambda I -B)H_1$</li>
+<li>$I&#x3D;PP^{-1}&#x3D;P(S+(\lambda I-B)H_1)$</li>
+<li>$&#x3D;((\lambda I - A)H_2+T_2)S+(\lambda I-A)Q^{-1}H_1$</li>
+<li>$&#x3D;T_2S+(\lambda I -A)(H_2S+Q^{-1}H_1)$ &#x2F;&#x2F; 这里注意到lambda的幂次，所以$H_2S+Q^{-1}H_1&#x3D;0$</li>
+<li>所以 $I&#x3D;T_2S$, 从而S是可逆矩阵</li>
+<li>$\lambda I - B&#x3D;S^{-1}(\lambda I - A)T_1&#x3D;\lambda S^{-1}T_1-S^{-1}AT_1$ 同样 lambda的幂次对应相等</li>
+<li>有 $I&#x3D;S^{-1}T_1,B&#x3D;S^{-1}AT_1$<ul>
+<li>即$B&#x3D;S^{-1}AS$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子 ： <code>A=[-1,1,0;-4,3,0;1,0,2]</code></p>
+<p>行列式因子</p>
+<ul>
+<li>$D_3(\lambda) &#x3D; |\lambda I - A|&#x3D;(\lambda-2)(\lambda-1)^2$</li>
+<li>$D_2(\lambda)&#x3D;1$ 这种 随便取几个很快得到1</li>
+<li>$D_1(\lambda)&#x3D;1$ 这种 随便取几个很快得到1</li>
+</ul>
+<p>不变因子</p>
+<ul>
+<li>$d_1(\lambda)&#x3D;D_1(\lambda)&#x3D;1$</li>
+<li>$d_2(\lambda)&#x3D;D_2(\lambda)&#x2F;D_1(\lambda)&#x3D;1$</li>
+<li>$d_3(\lambda)&#x3D;D_3(\lambda)&#x2F;D_2(\lambda)&#x3D;(\lambda-2)(\lambda-1)^2$</li>
+</ul>
+<p>初等因子</p>
+<ul>
+<li>$(\lambda -2)$</li>
+<li>$(\lambda -1)^2$</li>
+</ul>
+<p>Jordan标准型</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">= diag(J_2(1),J_1(2))</span><br><span class="line">1 1</span><br><span class="line">  1</span><br><span class="line">    2</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-9-线性变换的有理标准型"><a href="#9-9-线性变换的有理标准型" class="headerlink" title="9.9 线性变换的有理标准型"></a>9.9 线性变换的有理标准型</h2><p>最小多项式，在F[lambda]中不能分解成一次因式的乘积，那么A的最简单形式的矩阵表示是什么样呢？</p>
+<h2 id="9-10-线性函数与对偶空间"><a href="#9-10-线性函数与对偶空间" class="headerlink" title="9.10 线性函数与对偶空间"></a>9.10 线性函数与对偶空间</h2><p>V是域F上的线性空间，由于域F可以看成自身上的线性空间，因此自然可以考虑线性空间V到F的线性映射，我们把这种线性映射称为V上的线性函数</p>
+<p>定义1. V是域上线性空间，V到F的一个映射f如果满足</p>
+<ul>
+<li>f(a+b)&#x3D;f(a)+f(b),$a,b\in V$</li>
+<li>f(ka)&#x3D;kf(a), $a\in V, k \in F$</li>
+<li>那么称f是V的一个线性函数</li>
+</ul>
+<p>例如 trace函数 ，有线性加和数量乘</p>
+<p>线性函数空间</p>
+<p><code>dim Hom(V,F)=(dim V)(dim F)=n * 1 = n</code></p>
+<p>设V的一个基是 $a_1,\cdots,a_n$</p>
+<ul>
+<li>$\sigma: Hom(V,F)\to F^n, f\to (f(a_1),\cdots,f(a_n))$</li>
+<li>$\sigma^{-1}$也是一个同构映射<ul>
+<li>$F^n$中取标准基$\epsilon_1,\cdots,\epsilon_n$<ul>
+<li>$\sigma^{-1}(\epsilon_1),\cdots,\sigma^{-1}(\epsilon_n)$ 是Hom中的一个基，称作对偶基， Hom(V,F)称为V的对偶空间 记作$V^*$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理1 V是域F上的n维线性空间</p>
+<ul>
+<li>取两组基a_i,b_i,那么$V^*$中相应的对偶基有f_i,g_i</li>
+<li>a1-&gt;b1的过度矩阵为A,那么f_i-&gt;g_i的过度矩阵$B&#x3D;(A^{-1})^T$<ul>
+<li>证明</li>
+<li>(b_i)&#x3D;(a_i)A</li>
+<li>$(a_i)&#x3D;(b_i)A^{-1}$</li>
+<li>$(g_i)&#x3D;(f_i)B$</li>
+<li>注意到  Y &#x3D; base x 的意义可以看成Y的j列的第i个分量，在 base基下的 坐标是 x[i,j]</li>
+<li>$A^{-1}[i,j]&#x3D;g_i(a_j)&#x3D;B[j;i]&#x3D;B^T[i;j]$</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>9.1 幂等，投影，与 线性映射 本身也是一种线性空间</li>
+<li>9.2 线性映射过程中：投影的结果是 0 的源叫做核Ker A，dim V&#x2F;(Ker A) &#x3D; dim (Im A), 其子空间关系</li>
+<li>9.3 用矩阵来表示，建立 变换 &lt;&#x3D;&gt; 矩阵 的关系， 所有变换构成的线性空间 和 矩阵构成的线性空间的 同构<ul>
+<li>一个具体变换，在不同基选择下，对应的矩阵 是相似的！！！</li>
+<li>这是一个找相似矩阵的最简单形式的好理由</li>
+</ul>
+</li>
+<li>9.4 从这个引入 特征向量 和 特征值</li>
+<li>9.5 不变子空间（任意 子空间内向量 经过 线性变换A后 依然属于子空间）<ul>
+<li>对于可对角化的 表示成 特征子空间直和，注意到这些特征子空间中 的 向量经过变化后 还是在特征子空间中，考虑引出不变子空间<ul>
+<li>0,V 这两个都是平凡不变子空间（显然的）</li>
+<li>Ker 和 Im 也是不变子空间</li>
+<li>特征子空间 也是 不变子空间</li>
+</ul>
+</li>
+<li>关系的研究 主要通过向量通过基的表示法</li>
+<li>多项式 可以拆分成互素子多项式的乘积，那么多项式的Ker也可以拆成对应 子多项式Ker 的直和</li>
+<li>零化多项式 f(A)&#x3D;0</li>
+<li>Hamiton-Cayley 特征多项式 是 A的一个零化多项式</li>
+</ul>
+</li>
+<li>9.6 最小多项式<ul>
+<li>零化多项式，最小，</li>
+<li>是 特征多项式的因式，唯一</li>
+<li>特殊的零化多项式  和 jordan块</li>
+</ul>
+</li>
+<li>9.7 幂零变换的jordan标准型<ul>
+<li>结构是 强循环子空间: 取这样的基 可以产生 jordan块，<ul>
+<li>可以分解成 dim W_0(特征值0的子空间)各 强循环子空间的直和</li>
+</ul>
+</li>
+<li>一般的是由jordan块拼成的对角</li>
+</ul>
+</li>
+<li>9.8 线性变换的jordan标准形<ul>
+<li>$\lambda I - A$, 最小多项式 与 幂零建立联系，从而建立 线性变换和jordan块的联系</li>
+<li>初等因子</li>
+<li>不变因子（相抵标准型 主对角线） d_i</li>
+<li>k阶行列式因子, D_i</li>
+</ul>
+</li>
+</ul>
+<p>脉络</p>
+<ul>
+<li><p>这里其实就是，对角化（并不通用）</p>
+</li>
+<li><p>观察对角化 表示成 特征子空间的直和</p>
+<ul>
+<li>对角化是 n个线性无关的向量</li>
+</ul>
+</li>
+<li><p>也就是希望有一个基，在这个基下的 变换矩阵比较简单</p>
+</li>
+<li><p>如果能变成 这在矩阵书写形状上是对角分块，那么可以变成块之间的 直和</p>
+</li>
+<li><p>而 分块 的意义 就是“不变子空间”</p>
+<ul>
+<li>那么去哪里找这些不变子空间</li>
+<li>另一个启发是， AB&#x3D;BA (如果可交换，那么ker B是A的不变子空间)<ul>
+<li>那么可以考虑 A的幂次, &#x3D;&gt; A的多项式， F[A]&#x3D;{A的多项式} \in Hom(V,V)， 是交换环</li>
+<li>所以 任何一个多项式 F[A]的 Ker 是A的不变子空间</li>
+</ul>
+</li>
+<li>互素 f1,f2 以及f&#x3D;f1f2 &#x3D;&gt; 从而 uf1+vf2&#x3D;I &#x3D;&gt; 从而 可以去想 ker f &#x3D; ker f1 + ker f2 通过表示法，和直和定义（交空，和能表示所有）<ul>
+<li>再归纳法，拓展到f&#x3D;多个 互素多项式的乘积，这样 ker f &#x3D; ker fi 的直和</li>
+<li>我们希望整个V 分解成成A的不变子空间的直和</li>
+<li>V &#x3D; ker ? &#x3D;&gt; 直和拆解<ul>
+<li>而 ker 0 &#x3D; V 引出 零变换 （V的每个向量 的 映射到 0），和零化多项式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>f(A)&#x3D;0 零化多项式 f[x]带入A<ul>
+<li>矩阵 和 线性变换 同构，可以研究矩阵，线性变换零化多项式&lt;&#x3D;&gt; 矩阵零化多项式</li>
+<li>一定存在： 抽屉原理 A^{n^2} 可得总能线性相关</li>
+<li>gcd辗转相除 得到有最小，和都是倍数的性质 </li>
+<li>Hamiton-Cayley 特征多项式 是 A的一个零化多项式<ul>
+<li>书上是一个 伴随矩阵强行代数，然后的对应位置相等来完成证明了，视频是105，没有什么感受</li>
+<li>搜了下知乎和google, 一个观点是，可对角化&#x3D;&gt;n个不同向量 f(A)ai&#x3D;f(lambda i)ai&#x3D;0 所以是零化多项式, 然后可对角化稠密+连续性 &#x3D;&gt; 不可对角化可以趋近，所以不可对角化也是零化多项式</li>
+<li>V &#x3D; ker f(A) &#x3D; ker $A-\lambda_i I$ 们的直和，而特征多项式 可以分解成 方幂的乘积</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>希望有各更“临界的状态”，希望有个临界的 零化多项式，而不只是特征多项式，同时和特征多项式建立联系</li>
+<li>引出 最小零化多项式m(\lambda)，（为了唯一 让最高次系数为1）<ul>
+<li>又是 带余除法那一套，证明唯一性，倍数性</li>
+<li>和特征多项式关系，倍数性质，根显然也是特征多项式根，而特征多项式根对应特征向量有 m(lambda_i)a_i&#x3D;(展开)a_i&#x3D;替换成A&#x3D;m(A)a_i&#x3D;0a_i&#x3D;0, 说明了 两边根相同（重数不保证）</li>
+</ul>
+</li>
+<li>根据之前的 两个矩阵相似，可以看成同一个线性变换，在不同基下的 变换矩阵<ul>
+<li>矩阵A 和 变换A 的 最小多项式 相同</li>
+<li>矩阵B 和 变换A 的 最小多项式 相同<ul>
+<li>所以 相似矩阵 最小多项式相同</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>V&#x3D;Wi们的直和<ul>
+<li>每个W_i的最小多项式是m_i(lambda)</li>
+<li>可以证明 V的最小多项式 是 m_i(lambda)的倍数（通过零化关系证明）<ul>
+<li>所以V的最小多项式是 所有m_i的最小公倍数 的倍数</li>
+<li>这边用 两边集合互相包含来证明相等 得到是最小公倍数。 {零化多项式} 互相包含 {m_i公倍数}</li>
+<li>感觉似乎可以直接推至少的幂次吗？吧？</li>
+</ul>
+</li>
+<li>结论就是 V&#x3D;W_i们的直和，那么m()&#x3D;lcm(m_i)<ul>
+<li>从书写上，就是对角分块，的每个分块的 最小多项式 的 lcm</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>那么接下来就是研究 具体的小块的 最小多项式了<ul>
+<li>复杂的难观察，先观察幂零变换，有特点是 幂次l时&#x3D;0, 小于l时非0</li>
+<li>$f(\lambda)&#x3D;\lambda^l$</li>
+<li>可对角化 &lt;&#x3D;&gt; 可分解成不同特征值的子空间的直和<ul>
+<li>因为 向量属于 特征值$\lambda_i$的特征子空间中， 当且仅当 它  属于 ker $A-\lambda_i I$， 所以有 $V_{\lambda_i}&#x3D;Ker (A-\lambda_i I)$<ul>
+<li>$\lambda-\lambda_i$是$A|V_{\lambda_i}$的一个零化多项式</li>
+<li>即 特征子空间的零化多项式lambda最高幂次为1</li>
+</ul>
+</li>
+<li>所以 V &#x3D; Ker(A-\lambda_i I) 们的直和</li>
+<li>可对角化 &lt;&#x3D;&gt; 最小多项式每个特征值对应$\lambda-\lambda_i$最高幂次为1 , &lt;- 一个有用的结论<ul>
+<li>推论 如果有幂次 &gt; 1则一定不可以对角化</li>
+<li>例子 幂等可对角化 ，最小多项式 lambda(lambda-1) 的因式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$m(\lambda)&#x3D;\prod_i (\lambda-\lambda_i)^{l_i}$, 其中特征值两两不同，这里$l_i$ 表示原始矩阵的最小多项式的对应特征值的幂次<ul>
+<li>V&#x3D; Ker $((A-\lambda_i I)^{l_i})$ 们的直和 （分块对角矩阵）</li>
+<li>下个目标就是<ul>
+<li>希望 对于 $(A-\lambda_i I)^{l_i}$中找到一个基，使得在这个基下的坐标尽量简单</li>
+<li>如何 求 m_i(lambda)：<ul>
+<li>找一个零化多项式，然后让它尽量小</li>
+</ul>
+</li>
+<li>$\forall a_j\in W_i&#x3D;Ker((A-\lambda_i I)^{l_i})$ 有$(A|W_i-\lambda_i I)^{l_i}a_j&#x3D;(A-\lambda_i I)^{l_i}a_j&#x3D;0$<ul>
+<li>所以 $(\lambda-\lambda_i)^{l_i}$ 是零化多项式，因为（上面把$A|W_i$带进入是零多项式）</li>
+<li>证明最小：和m()中分解出的m_i中的幂次一致</li>
+<li>$B_i&#x3D;A|W_i-\lambda_i I$, 是$W_i$上的幂零变换，幂次为$l_i$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引出问题：幂零变换在什么样的基最简形式， 如果找到的话，$A|W_i&#x3D;B_i+\lambda_i I$, 也就是最简单形式 + 对角线的lambda<ul>
+<li>注意到$B^{l_i}&#x3D;0,B^{&lt;l_i}\neq 0$,所以存在 $a\in W_i$, $a,Ba,\cdots,B^{l_i-1}a$线性无关<ul>
+<li>因为 $\sum k_jB^ja&#x3D;0$ 只有$k_j&#x3D;0$零解 （证明, 左边同时乘以$B^{l_i-1}$ 可以得到 $k_j&#x3D;0$, 反复 降低乘的幂次可得所有k是0</li>
+<li>所以可以选作一组基</li>
+<li>同时也是不变子空间 </li>
+<li>B 在基 {$B^{l-1}a,\cdots,Ba,a$ } 下的矩阵为 对角线右移一位全1,其它地方全1的矩阵 &#x3D; Jordan_{l}(0)<ul>
+<li>也就是前面学的  变换B (基)&#x3D;基 * 矩阵B</li>
+<li>定义 a,Aa,…A^{t-1}a 线性无关, $A^t$ 属于它们的生成空间<ul>
+<li>那么称作 循环子空间</li>
+<li>如果$A^t&#x3D;0$ 称作 强循环子空间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>希望把 对于是r维线性空间V的幂零变换B,希望把W分解成 与 B-强循环子空间 有关 的直和<ul>
+<li>对于空间的维数大小，用数学归纳法<ul>
+<li>1维 &lt;基&gt;</li>
+<li>n维 （这个构造的思路怎么冒出来的），小于n维可分解，对于幂零变换B，幂零指数为l<ul>
+<li>l&#x3D;1, 那么W分解成 每个基向量子空间的直和<ul>
+<li>也就是B&#x3D;0, $B^1a&#x3D;0^1a&#x3D;0$ 所以每个基向量的子空间 是 0-强循环子空间</li>
+</ul>
+</li>
+<li>l &gt; 1, $B\neq 0$, 有特征值, B的基于特征值0的特征子空间，$W_0\neq 0$<ul>
+<li>$1\le dim W&#x2F;W_0 &#x3D;dim W - dim W_0 &lt; dim W &#x3D; r$</li>
+<li>dim W&#x2F;W_0 可以拆成<ul>
+<li>每个拆的多一个 $B^{幂次_i+1}a_i$</li>
+<li>一方面 在W中 它们线性无关，一方面这些都是W_0中的，什么感觉呢 W&#x3D;W_0直和 V, 然后V是 可以拆分成 强循环 的直和的，很巧V中每个强循环的 增加一个幂次，都在W_0中，又线性无关，那么W_0就可以拆分成它们 以及 扩充的基，这样 总个数 就是W_0各强循环，这里的“强”（也就是幂次增1会让结果是0)保证了 每个多一个幂次都在$W_0$中，</li>
+<li>个数是 dim W_0个</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>所以 有 空间V和幂零变换B（上面选择的是Ker) 然后就可以拆直和，（既然是直和，那么完成了拆分+填满）<ul>
+<li>幂零矩阵 相似于 jordan形矩阵</li>
+<li>$B_i&#x3D;A|W_i-\lambda_i I$ 是一个$W_i$上的幂零变换, 然后V取所有$W_i$对应基组成的，为jordan形矩阵</li>
+</ul>
+</li>
+<li>如果 最小多项式，变换某个乘项幂次更大，根据拆分还是同样的基<ul>
+<li>那么 我们就不一定要找最小多项式了，而是找特征多项式</li>
+<li>$N_i&#x3D;dim Ker(A|W_i-\lambda I ) &#x3D; n-rank(A-\lambda_i I)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>最终证明是jordan型，表示成 特征子空间直和（可能有重复的特征值）</p>
+<ul>
+<li>而jordan型是所有都可以，那么对角化只是jordan型的一种特例</li>
+</ul>
+</li>
+</ul>
+<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><p>Hamiton-Cayley</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/392031909">哈密顿-凯莱定理为什么不用矩阵或线性变换直接代入？</a></li>
+<li><a href="https://www.zhihu.com/question/31557902">哈密尔顿-凯莱定理的本质是什么？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/499834277">聊聊凯莱-哈密顿(Cayley-Hamilton)定理</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/265392174">Hamilton-Cayley定理的另证</a> 哎 内容还在 账号已注销</li>
+<li><a href="https://zhuanlan.zhihu.com/p/7745376929">凯莱哈密顿Cayley-Hamilton定理的4个证明</a></li>
+<li><a href="https://www.quora.com/Which-proof-of-the-Cayley-Hamilton-theorem-in-linear-algebra-is-the-easiest-and-shortest-to-understand-And-which-proof-is-the-most-elegant">Which proof of the Cayley-Hamilton theorem in linear algebra is the easiest and shortest to understand? And which proof is the most elegant?</a></li>
+</ul>
+<p>Jordan 标准型</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/470026382">szmike - Jordan(若尔当)标准型知识梳理</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/375021829">Lewis - Jordan标准形的推导，“空间分解”是关键</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/666594267">名前 - 最凶最恶の矩阵相似——Jordan标准型</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/855821521">霜夏 - 【抄书笔记】如何作 Jordan 分解</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/646886010">圆规 - Jordan标准型的计算（北大数学系代数小组教材）</a></li>
+<li><a href="https://www.zhihu.com/question/37226720/answer/644040310">仓鼠磨光 - Jordan标准形的本质是什么？</a></li>
+</ul>
+<p>吐槽：书上变换是粗体的A,矩阵是正常字体的A, 要是用笔写真的吐血</p>
+<ul>
+<li>是不是这里完全可以先把这两个同构掉，然后就只用讨论一个了啊</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fermat&#39;s two square theorem</title>
+    <url>/Math/Fermat_s_two_square_theorem/</url>
+    <content><![CDATA[<h1 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h1><p>对于奇素数$p$有能被表示成$p &#x3D; a^2+b^2$和$p &#x3D; 4k+1$为充要条件</p>
+<h1 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h1><h2 id="一定不是-4k-3"><a href="#一定不是-4k-3" class="headerlink" title="一定不是$4k+3$"></a>一定不是$4k+3$</h2><p>众所周知</p>
+<p>$(4k+0)^2 \equiv 0 \pmod 4$</p>
+<p>$(4k+1)^2 \equiv 1 \pmod 4$</p>
+<p>$(4k+2)^2 \equiv 0 \pmod 4$</p>
+<p>$(4k+3)^2 \equiv 1 \pmod 4$</p>
+<p>所以</p>
+<p>$a^2 + b^2 \not\equiv 3 \pmod 4$</p>
+<p>那么有了充分, 如果$p &#x3D; a^2+b^2$则一定$p &#x3D; 4k+1$</p>
+<h2 id="p-x3D-4k-1-to-p-x3D-a-2-b-2"><a href="#p-x3D-4k-1-to-p-x3D-a-2-b-2" class="headerlink" title="$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$"></a>$p&#x3D;4k+1 \to p&#x3D;a^2+b^2$</h2><p>现在问题剩下就是如果 奇素数$p &#x3D; 4k+1$, 如何证明它可以被表示成$a^2+b^2$</p>
+<h2 id="Euler’s-proof-by-infinite-descent"><a href="#Euler’s-proof-by-infinite-descent" class="headerlink" title="Euler’s proof by infinite descent"></a>Euler’s proof by infinite descent</h2><h3 id="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"><a href="#如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和" class="headerlink" title="如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和"></a>如果两个整数都能表示为两个平方数之和，则它们的积也能表示为两个平方数之和</h3><p><code>Brahmagupta-Fibonacci Identity</code></p>
+<p>$(a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2 + (ad-bc)^2$</p>
+<blockquote>
+<p>只有$ad&#x3D;bc$ 时右侧有0的平方 , 也就是两个整数成$c^2&#x2F;a^2$的倍数</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"><a href="#如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和"></a>如果一个能表示为两个平方数之和的整数被另一个能表示为两个平方数之和的素数整除，则它们的商也能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; k (c^2+d^2)$,$(c^2+d^2) &#x3D; p$为素数</p>
+<p>$(cb-ad)(cb+ad) &#x3D; c^2(a^2+b^2)-a^2(c^2+d^2) &#x3D; (c^2k-a^2)p$</p>
+<p>若$cb-ad$ 是 p 的倍数(另一半假设,对称同理)</p>
+<p>$kp^2 &#x3D; (a^2+b^2)(c^2+d^2) &#x3D; (ac+bd)^2+(ad-bc)^2$</p>
+<p>得到 $ap+bq$ 也是 p的倍数</p>
+<p>$k &#x3D; (\frac{ac+bd}{p})^2+(\frac{ad-bc}{p})^2$ 能表示成整数的平方和</p>
+<h3 id="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"><a href="#如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子" class="headerlink" title="如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子"></a>如果一个能表示为两个平方数之和的整数被另一个不能表示为两个平方数之和的整数整除，则它们的商也必有一个不能表示为两个平方数之和的因子</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n$ x不能表示为两个数的平方和, 则 $p_i$ 中至少有一个不能表示为两个平方数之和的因子</p>
+<p>如果$p_i$ 都能表示成，那么根据上面的结论，必定能表示成平方和，矛盾</p>
+<h3 id="如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和"><a href="#如果-a-b-互素，那么-a-2-b-2-所有因子都能表示为两个平方数之和" class="headerlink" title="如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和"></a>如果$a,b$互素，那么$a^2+b^2$ 所有因子都能表示为两个平方数之和</h3><p>$a^2+b^2 &#x3D; x \cdot p_1 \cdot p_2 \cdots p_n $</p>
+<p>$a &#x3D; mx \pm c, b &#x3D; nx \pm d$, 其中 $ 2|c| \leq x,2|d| \leq x$</p>
+<p>有 $a^2+b^2 &#x3D; m^2x^2 \pm 2mxc + c^2 + n^2x^2 \pm 2nxd + d^2 &#x3D; Ax+(c^2+d^2)$</p>
+<p>$c^2+d^2 &#x3D; kx$</p>
+<p>令$g &#x3D; gcd(c,d)$</p>
+<p>因为$\gcd(a,b)&#x3D;1 \Rightarrow \gcd(a,x)&#x3D;1 \Rightarrow \gcd(c,x)&#x3D;1$, 同理 $\gcd(d,x)&#x3D;1$, 所以$\gcd(g,x)&#x3D;1$</p>
+<p>$g^2((\frac{c}{g})^2+(\frac{d}{g})^2) &#x3D; kx$, 说明中间的部分也是$x$的倍数</p>
+<p>能得到 $e^2+f^2&#x3D;k_1x$ 且$e,f$互素</p>
+<p>$k_1x &#x3D; e^2+f^2 \leq c^2+d^2 \leq (\frac{x}{2})^2 + (\frac{x}{2})^2 &#x3D; \frac{x^2}{2}$</p>
+<p>有 $k_1 \leq \frac{x}{2}$</p>
+<p>由上一个定理，若x非平方和，那么k包含非平方和因子,令这个因子为$x’$</p>
+<p>$x’ \leq k_1 \leq \frac{x}{2} &lt; x $</p>
+<p>综上 如果$a,b$互质,$x$是 $a^2+b^2$ 的因子，且$x$不能被表示成两个数的平方和，那么存在一个小于$x$的数$x’$，也满足是$e^2+f^2$的因子($\gcd(e,f)&#x3D;1,e\le a,f\le b$),且$x’ &lt; x$小，同时也是不能表示成两个数的平方和。</p>
+<p>然而整数无法无限下降，所以所有因子都能表示成两个数的平方和</p>
+<p>即若$\gcd(a,b)&#x3D;1$,那么$a^2+b^2$的质因子只有$2$和$4k+1$形式的</p>
+<h3 id="4n-1-形式的素数是平方分解数"><a href="#4n-1-形式的素数是平方分解数" class="headerlink" title="$4n+1$形式的素数是平方分解数"></a>$4n+1$形式的素数是平方分解数</h3><p>$p &#x3D; 4n + 1$</p>
+<p>$1,2^{4n},3^{4n},…,(4n)^{4n}$ 模$p$余1 (费马小定理)</p>
+<p>$2^{4n}-1,3^{4n}-2^{4n},…,(4n)^{4n}-(4n-1)^{4n}$ 均是$p$的倍数</p>
+<p>$a^{4n} - b^{4n} &#x3D; (a^{2n}+b^{2n})(a^{2n}-b^{2n})$</p>
+<ol>
+<li>若 $p$ 是任意一个 $a^{2n}+b^{2n}$ 的因子，注意到 $a,p$ 互质, $b,p$互质,$a,b$ 互质（a&#x3D;b+1）</li>
+</ol>
+<p>由上一条引理，$p$ 是互素平方和的因子，所以$p$可以拆解成两个数的平方和</p>
+<ol start="2">
+<li>否则 $p$ 是所有 $a^{2n}-b^{2n}$ 的因子</li>
+</ol>
+<p>$(x+1)^{2n} - x^{2n} &#x3D; ((x+1)^n + x^n) ((x+1)^n - x^n)$</p>
+<h4 id="差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n"><a href="#差分-f-x-为-n-次多项式，那么-f-x-的-n-阶差分为-n-a-n" class="headerlink" title="差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$"></a>差分 $f(x)$ 为$n$次多项式，那么 $f(x)$ 的$n$阶差分为 $n!a_n$</h4><p><img data-src="http://nonagon.org/ExLibris/sites/default/files/images/Differences-Cubes.jpg" alt="差分"></p>
+<p>$ f(x) &#x3D; a_0 + a_1x $</p>
+<p>$ f(x+1) - f(x) &#x3D; a_1 $ 一次多项式得证</p>
+<p>若 $n-1$次多项式成立</p>
+<p>设 $f$ 是$n$次多项式 $ f(x) &#x3D; a_0 + a_1x+ \cdots + a_nx^n $</p>
+<p>$ g(x) &#x3D; f(x+1) - f(x) &#x3D; k_0 + k_1x+ \cdots + a_n \cdot n x^{n-1} $</p>
+<p>$g$是 $n-1$次多项式，且其最高项的系数为 $a_n \cdot n $</p>
+<p>因为 $g(x)$ 的$n-1$阶差分为 $(n-1)!(a_n \cdot n)  &#x3D; n! a_n$，归纳法递推得证</p>
+<p>回到上面 我们因为p是所有减法式子的因子，因此$f(x) &#x3D; x^{2n}$的$2n$阶差分为$(2n)!$, 差分过程中始终是$p$的倍数</p>
+<p>而$(2n)!$不是$p$的倍数，所以矛盾。必然$p$是上面某个加法的因子</p>
+<blockquote>
+<p>综上，$4n+1$ 形式的素数是平方分解数</p>
+</blockquote>
+<p>$4n+3$ 根据模4的余数，显然不是</p>
+<blockquote>
+<p>综上充要得证: 一个奇素数是平方分解数，那么它是$4n+1$, 一个素数是$4n+1$形式，那么它是平方分解数</p>
+</blockquote>
+<h3 id="补充性质"><a href="#补充性质" class="headerlink" title="补充性质"></a>补充性质</h3><p>$p &#x3D; x^2+y^2$ 质数唯一表示</p>
+<p>$p &#x3D; a^2+b^2&#x3D;c^2+d^2$</p>
+<p>轮换性质，不妨设$a&gt;c&gt;d&gt;b$</p>
+<p>$(ac+bd)(ad+bc) &#x3D; (a^2+b^2)cd +(c^2+d^2)ab &#x3D; p(cd+ab)$</p>
+<p>至少一个是p的倍数, 若 $(ac+bd) &#x3D; Kp$ ,</p>
+<p>$0 &lt; (a-c)^2+(b-d)^2 &#x3D; a^2+b^2+c^2+d^2-2ac-2bd &#x3D; 2p-2Kp &lt; 2p $，</p>
+<p>同时除2,$0 &lt; p-Kp &lt; p $ 矛盾</p>
+<p>因此$p$ 唯一表示成两个</p>
+<h2 id="Lagrange’s-proof-through-quadratic-forms"><a href="#Lagrange’s-proof-through-quadratic-forms" class="headerlink" title="Lagrange’s proof through quadratic forms"></a>Lagrange’s proof through quadratic forms</h2><p>TODO</p>
+<h2 id="Dedekind’s-two-proofs-using-Gaussian-integers"><a href="#Dedekind’s-two-proofs-using-Gaussian-integers" class="headerlink" title="Dedekind’s two proofs using Gaussian integers"></a>Dedekind’s two proofs using Gaussian integers</h2><p>TODO</p>
+<h2 id="Proof-by-Minkowski’s-Theorem"><a href="#Proof-by-Minkowski’s-Theorem" class="headerlink" title="Proof by Minkowski’s Theorem"></a>Proof by Minkowski’s Theorem</h2><p>TODO</p>
+<h2 id="Zagier’s-“one-sentence-proof”"><a href="#Zagier’s-“one-sentence-proof”" class="headerlink" title="Zagier’s “one-sentence proof”"></a>Zagier’s “one-sentence proof”</h2><p><a href="https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf">https://people.mpim-bonn.mpg.de/zagier/files/doi/10.2307/2323918/fulltext.pdf</a></p>
+<h2 id="Roger-Heath-Brown-in-1971"><a href="#Roger-Heath-Brown-in-1971" class="headerlink" title="Roger Heath-Brown in 1971"></a>Roger Heath-Brown in 1971</h2><p>$p &#x3D; 1 + 4k$</p>
+<p>如果可以拆分，显然一奇一偶</p>
+<p>$p &#x3D; x^2+ (2y)^2 &#x3D; x^2+4y^2$</p>
+<p>考虑</p>
+<p>$p &#x3D; x^2+4yz$</p>
+<p>有解$(x,y,z) &#x3D; (1,1,k)$, 注意到如果 $y\neq z$,那么$(x,y,z)$如果是一组解,则有$(x,z,y)$,形成配对</p>
+<p>那么如果能证明$p&#x3D;x^2+4yz$的所有解的个数是奇数个，那么必定有不能配对的就是$y&#x3D;z$的, 就是一个解了(这种方法不会直接给到如何计算，但是从存在性上完成证明)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   b</span><br><span class="line">cccb</span><br><span class="line"> dob</span><br><span class="line"> daaa</span><br><span class="line"> d</span><br><span class="line"></span><br><span class="line">   b</span><br><span class="line">cooo</span><br><span class="line"> ooo</span><br><span class="line"> oooa</span><br><span class="line"> d</span><br></pre></td></tr></table></figure>
+
+<p>以$x^2$拼<code>o</code>,然后以类似上面形式拼4个$yz$</p>
+<p>那么 只有</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">   c</span><br><span class="line">dddobbb</span><br><span class="line">   a</span><br><span class="line">   a</span><br><span class="line">   a</span><br></pre></td></tr></table></figure>
+
+<p>唯一对应$(y,z)$ (因为 相当于$y&#x3D;x$的情况,即$p&#x3D;x^2+4xz&#x3D;x(x+4z)$只有$x&#x3D;1$)</p>
+<p>而其它的都对应两个不同的$(y,z)$的解</p>
+<p>得证</p>
+<h1 id="x-2-ny-2"><a href="#x-2-ny-2" class="headerlink" title="$x^2+ny^2$"></a>$x^2+ny^2$</h1><p>原文见Cox的书</p>
+<p>有几个性质(稍后证明):</p>
+<p>$p&#x3D;x^2+y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \pmod 4$</p>
+<p>$p&#x3D;x^2+2y^2, x,y \in \mathbb{Z} \Leftrightarrow p\equiv 1 \mathrm{or} 3 \pmod 8$</p>
+<p>$p&#x3D;x^2+3y^2, x,y \in \mathbb{Z} \Leftrightarrow p&#x3D;3 \mathrm{or} p \equiv 1 \pmod 3$</p>
+<hr>
+<p>$(x^2+ny^2)(z^2+nw^2) &#x3D; (zx\pm nyw)^2+n(xw\mp yz)^2$</p>
+<hr>
+<p>若$N &#x3D; x^2+ny^2, p | N,p&#x3D;a^2+nb^2,\gcd(a,b) &#x3D; 1$, $p$是质数</p>
+<p>参考$n&#x3D;1$时</p>
+<p>$(ax-nby)(ax+nby) &#x3D; a^2x^2-n^2b^2y^2 &#x3D; a^2(x^2+ny^2) - ny^2(a^2+nb^2) &#x3D; a^2N - ny^2p$</p>
+<p>因此前面至少一个是p的倍数, 不妨设$c&#x3D;\frac{ax-nby}{p}$,则$d&#x3D;\frac{bx+ay}{p}$,均为整数</p>
+<p>因此如果$N&#x3D;x^2+ny^2$且有质因子也能表示成$p&#x3D;a^2+ny^2$,那么$\frac{N}{p}$也可以表示成$c^2+nd^2$</p>
+<hr>
+<p>若$N&#x3D;x^2+ny^2, N &#x3D; zz’$,而$z$无法被表示成$a^2+nb^2$,则$z’$中有无法被表示成$a^2+nb^2$形式的质因子</p>
+<p>反证法, 若$z’$的的所有质数因子都能被表示,根据上面的$\frac{N}{p_1}$能被表示$\frac{N}{p_1p_2}$,这样逐个除$z’$中的质因子,最终$z$也可以被表示矛盾</p>
+<hr>
+<p>对于$p | x^2+ny^2,\gcd(x,y)&#x3D;1$, 因为知道$t^2 \equiv (p-t)^2\pmod p$, 所以可以取$x &#x3D; min(|x| \bmod p, p - |x| \bmod p) \le \frac{p}{2}$, 对于$y$同理</p>
+<p>注意的是，在调整到$\le \frac{p}{2}$的过程中 $\gcd(x,y)&#x3D;1$可能会不满足,但是注意到$gcd(x,p)&#x3D;1,gcd(y,p)&#x3D;1$,即$\gcd(\gcd(x,y),p) &#x3D; 1$,因此即使过程$\gcd(x,y)\neq 1$,只需要$x,y$同时除以$gcd(x,y)$即可</p>
+<p>因此可以取$|x|,|y|\le \frac{p}{2}$ 因为$\gcd(x,y)&#x3D;1$，只有$x&#x3D;y&#x3D;\frac{p}{2} &#x3D; 1$时才会有同时小于等于取等,也就是$p&#x3D;2$的特殊q情况</p>
+<p>对于一般$p&gt;3$的情况, 则当$n\le 3$时, $x^2+ny^2 &lt; (\frac{p}{2})^2 + n(\frac{p}{2})^2 &#x3D;\frac{1+n}{4}p^2 \le p^2$时</p>
+<p>这就是Fermat的当$p &gt; 3$是$x^2+ny^2$的因子时,可以通过调整$x,y$让$x^2+ny^2 &lt; p^2$</p>
+<p>那么有如果$p$不可被表示,则$1 &lt; \frac{x^2+ny^2}{p} &lt; p$且不可被表示,无法无穷下降</p>
+<p>综上$x^2+ny^2,n\le 3,\gcd(x,y)&#x3D;1$时, 它的质因子形式都是$a^2+nb^2$</p>
+<p>特殊的</p>
+<p>对于$n&#x3D;2$时，如果$2|x$则考虑$y^2+2(\frac{x}{2})^2$, 最后会递降到3</p>
+<p>其中对于$n&#x3D;3$ 时,如果$3|x$则考虑$y^2+3(\frac{x}{3})^2$,可能有$4$也是因子, 即$4p | x^2+3y^2,gcd(x,y)&#x3D;1$</p>
+<p>但是注意到$x-3y,x+3y$ 至少一个是4的倍数,因此同上面拆的部分可得到$p|x’^2+3y’^2$, 也就是当$x,y$同时为奇数的时候，可以除以$1^2+3\cdot 1^2$来完成下降,直到$p$可以表示或者$x,y$一个奇一个偶数</p>
+<hr>
+<p>$p&#x3D;x^2+ny^2$ and Quadratic Reciprocity</p>
+<p>($n&#x3D;5$时Euler和Fermat都知道这个结论不一定 $21&#x3D;1^2+5\cdot 2^2, 3|21$,但是$3$不能被表示)</p>
+<p>Legendre symbol (a是整数,p是奇质数)</p>
+<p>${\displaystyle \left({\frac {a}{p}}\right)&#x3D;{\begin{cases}1&amp;{\text{if }}a{\text{ is a quadratic residue modulo }}p{\text{ and }}a\not \equiv 0{\pmod {p}},\\ -1&amp;{\text{if }}a{\text{ is a quadratic nonresidue modulo }}p,\\ 0&amp;{\text{if }}a\equiv 0{\pmod {p}}.\end{cases}}}$</p>
+<p>或者$(\frac{a}{p}) &#x3D; a^{\frac{p-1}{2}} \pmod p$</p>
+<p>对于$1,-1$也就是是否存在$x^2 \equiv a \pmod p$,因为存在时显然$a^{\frac{p-1}{2}} \equiv x^{p-1} \equiv 1 \pmod p$</p>
+<p>设$g$为模$p$的一个原根,则存在$k$使$g^k\equiv n \pmod p$,所以$(g^k)^{\frac{p-1}{2}} \equiv 1 \pmod p$, 因为$g$是原根,所以$p-1 | k\cdot \frac{p-1}{2}$, 因此$\frac{k}{2}$是整数,所以$n \equiv (g^{\frac{k}{2}})^2$</p>
+<p>综上$x^2 \not\equiv a\pmod p \Leftrightarrow (\frac{a}{p}) &#x3D; -1$</p>
+<hr>
+<p>定理1.7: $n$是非零整数, $p$是奇质数且$p\nmid n$, 则 $p \mid x^2+ny^2,\gcd(x,y)&#x3D;1 \Leftrightarrow (\frac{-n}{p})&#x3D;1$</p>
+<p>因为$x^2+ny^2\equiv 0 \pmod p, gcd(x,y)&#x3D;1$ 则$gcd(y,p) &#x3D; 1$</p>
+<p>$x^2 \equiv -ny^2 \pmod p$</p>
+<p>$(x^2)^{\frac{p-1}{2}} \equiv (-ny^2)^{\frac{p-1}{2}} \pmod p$</p>
+<p>$x^{p-1} \equiv (-n)^{\frac{p-1}{2}}y^{p-1} \pmod p$</p>
+<p>$1 \equiv (-n)^{\frac{p-1}{2}}\cdot 1 \pmod p$</p>
+<p>正向得证</p>
+<p>即存在$z^2 \equiv -n \pmod p$</p>
+<p>即$z^2 + n\cdot 1^2 \equiv -n+n \equiv 0 \pmod p, gcd(z,1)&#x3D;1$</p>
+<p>反向得证，充要得证</p>
+<hr>
+<p>然后欧拉发现了一些</p>
+<p>$(\frac{-3}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,7 \mod 12$</p>
+<p>$(\frac{-5}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,3,7,9 \mod 20$</p>
+<p>$(\frac{-7}{p}) &#x3D; 1 \Leftrightarrow p\equiv 1,9,11,15,23,25 \mod 28$</p>
+<p>$(\frac{3}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1 \mod 12$</p>
+<p>$(\frac{5}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9 \mod 20$, (注这里$\pm 9$也可以写成$\pm 11$,但是$\pm 9$会让人发现都是奇数平方)</p>
+<p>$(\frac{7}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 9,\pm 25 \mod 28$</p>
+<hr>
+<p>但不是所有都能变成平方，比如</p>
+<p>$(\frac{6}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm 1,\pm 5 \mod 24$</p>
+<p>但6不是质数</p>
+<hr>
+<p>若$p$是奇质数,</p>
+<p>若$p\equiv 1 \pmod 4, (\frac{-1}{p}) &#x3D; 1$</p>
+<p>若$p\equiv 3 \pmod 4, (\frac{-1}{p}) &#x3D; -1$</p>
+<p>证明 $(\frac{-1}{p}) \equiv (-1)^{\frac{p-1}{2}} \pmod p$, 显然得证</p>
+<hr>
+<p>猜想1.9, 如果$p,q$是不同的质数,则$(\frac{q}{p}) &#x3D; 1 \Leftrightarrow p\equiv \pm \beta^2 \bmod 4q$对于一些奇数$\beta$, (待证明)</p>
+<p>命题1.10(重要,也就是而二次互反律quadratic reciprocity) 若$p,q$是不同奇质数,则1.9等价于 $(\frac{p}{q})(\frac{q}{p}) &#x3D; (-1)^{\frac{(p-1)(q-1)}{4}}$</p>
+<p>证明: 显然$(\frac{-1}{p}) &#x3D; (-1)^{\frac{p-1}{2}}$,$(\frac{ab}{p}) &#x3D; (\frac{a}{p})(\frac{b}{p})$</p>
+<p>????????</p>
+<p>Page 27&#x2F;363</p>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p><a href="https://yexiaorain.github.io/Blog/pe/233">https://yexiaorain.github.io/Blog/pe/233</a></p>
+<p><a href="https://mathoverflow.net/a/299696/500903">https://mathoverflow.net/a/299696/500903</a></p>
+<p><a href="http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf">http://www.math.toronto.edu/~ila/Cox-Primes_of_the_form_x2+ny2.pdf</a></p>
+<p><a href="https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares">https://nonagon.org/ExLibris/euler-proves-fermats-theorem-sum-two-squares</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Legendre_symbol">https://en.wikipedia.org/wiki/Legendre_symbol</a></p>
+<p><a href="https://www.youtube.com/watch?v=VBPrP4nChbo">https://www.youtube.com/watch?v=VBPrP4nChbo</a></p>
+<p><a href="http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf">http://ramanujan.math.trinity.edu/rdaileda/teach/f20/m3341/lectures/lecture18_slides.pdf</a></p>
+<p><a href="https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd">https://egrove.olemiss.edu/cgi/viewcontent.cgi?article=2539&amp;context=etd</a></p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>Fermat</tag>
+        <tag>平方和定理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 CheatSheet</title>
+    <url>/Math/Mathematical_analysis-cheatsheet/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
+<p>$\tan^2x+1&#x3D;\sec^2x$</p>
+<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<span id="more"></span>
+
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
+<p>$\cos’x &#x3D; - \sin x$</p>
+<p>$\tan’x &#x3D; \sec^2x$</p>
+<p>$\cot’x &#x3D; - \csc^2x$</p>
+<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
+<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x &#x3D; \sinh x$</p>
+<p>$\sinh’ x &#x3D; \cosh x$</p>
+<p>$\tanh’ x &#x3D; sech^2 x$</p>
+<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
+<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
+<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>CheatSheet</tag>
+        <tag>数学分析</tag>
       </tags>
   </entry>
   <entry>
@@ -2596,47 +5573,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 CheatSheet</title>
-    <url>/Math/Mathematical_analysis-cheatsheet/</url>
-    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
-<p>$\tan^2x+1&#x3D;\sec^2x$</p>
-<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
-<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
-<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
-<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
-<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
-<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
-<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<span id="more"></span>
-
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
-<p>$\cos’x &#x3D; - \sin x$</p>
-<p>$\tan’x &#x3D; \sec^2x$</p>
-<p>$\cot’x &#x3D; - \csc^2x$</p>
-<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
-<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
-<p>$\cosh’ x &#x3D; \sinh x$</p>
-<p>$\sinh’ x &#x3D; \cosh x$</p>
-<p>$\tanh’ x &#x3D; sech^2 x$</p>
-<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
-<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
-<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
-<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
-<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
-<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
-<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>CheatSheet</tag>
-        <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学分析 一 分析基础</title>
     <url>/Math/Mathematical_analysis_problems_1/</url>
     <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
@@ -2799,36 +5735,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 五 多元函数微分学</title>
-    <url>/Math/Mathematical_analysis_problems_5/</url>
-    <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
-<p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
-<p>二重极限存在,对应的累次极限不一定存在</p>
-<p>例如lim(x,y)→(0,0)(xsin(1&#x2F;y)+ysin(1&#x2F;x))&#x3D;0</p>
-<p>对应的两个累次极限limx→0(limy→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))和limy→0(limx→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))都不存在</p>
-<span id="more"></span>
-
-<h3 id="题目5-1-8"><a href="#题目5-1-8" class="headerlink" title="题目5.1.8"></a>题目5.1.8</h3><p>闭包?</p>
-<h3 id="题目5-1-14"><a href="#题目5-1-14" class="headerlink" title="题目5.1.14"></a>题目5.1.14</h3><p>(2)</p>
-<h3 id="题目5-1-23"><a href="#题目5-1-23" class="headerlink" title="题目5.1.23"></a>题目5.1.23</h3><h3 id="题目5-1-24"><a href="#题目5-1-24" class="headerlink" title="题目5.1.24"></a>题目5.1.24</h3><h3 id="题目5-1-25"><a href="#题目5-1-25" class="headerlink" title="题目5.1.25"></a>题目5.1.25</h3><h2 id="偏导数与微分"><a href="#偏导数与微分" class="headerlink" title="偏导数与微分"></a>偏导数与微分</h2><p>多元函数泰勒公式</p>
-<p>例10,例11</p>
-<p>可微<code>(f(x,y)-f(x0,y0) - fx&#39; * (x-x0) - fy&#39; * (y-y0) )/sqrt&#123;(x-x0)^2+(y-y0)^2&#125; = 0</code></p>
-<p>第一，偏导x&#x2F;偏导s的倒数写法要求s是x，y的函数，否则就是全导数ds&#x2F;dx。</p>
-<p>第二，倒数写法存在当且仅当x（s，t），y（s，t）的反函数存在。</p>
-<p>第三，反函数存在除了要求一系列的偏导数连续，还要求雅可比行列式不为0。(重要?)</p>
-<p>综上，必须通过一个一般的y&#x3D;g（s，t）且满足反函数存在定理，才可以讨论 偏x&#x2F;偏s !&#x3D; 1&#x2F;(偏s&#x2F;偏x)</p>
-<p><a href="https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function">https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function</a></p>
-<p>1 &#x3D; dx&#x2F;dx &#x3D; 偏x&#x2F;偏x &#x3D; 偏f(s(x),t(x))&#x2F;偏x &#x3D; 偏f&#x2F;偏s \cdot ds&#x2F;dx + 偏f&#x2F;偏t \cdot dt&#x2F;dx &#x3D; 偏f&#x2F;偏s \cdot 偏s&#x2F;偏x + 偏f&#x2F;偏t \cdot 偏t&#x2F;偏x</p>
-<h3 id="题目-5-2-9"><a href="#题目-5-2-9" class="headerlink" title="题目 5.2.9"></a>题目 5.2.9</h3><h3 id="题目-5-2-14-系数why"><a href="#题目-5-2-14-系数why" class="headerlink" title="题目 5.2.14 系数why"></a>题目 5.2.14 系数why</h3><h3 id="题目-5-2-15"><a href="#题目-5-2-15" class="headerlink" title="题目 5.2.15"></a>题目 5.2.15</h3><h3 id="题目-5-2-16"><a href="#题目-5-2-16" class="headerlink" title="题目 5.2.16"></a>题目 5.2.16</h3><h3 id="题目-5-2-25"><a href="#题目-5-2-25" class="headerlink" title="题目 5.2.25"></a>题目 5.2.25</h3><h3 id="题目-5-2-27"><a href="#题目-5-2-27" class="headerlink" title="题目 5.2.27"></a>题目 5.2.27</h3><h3 id="题目-5-2-28"><a href="#题目-5-2-28" class="headerlink" title="题目 5.2.28"></a>题目 5.2.28</h3><h3 id="题目-5-2-29"><a href="#题目-5-2-29" class="headerlink" title="题目 5.2.29"></a>题目 5.2.29</h3><h3 id="题目-5-2-30"><a href="#题目-5-2-30" class="headerlink" title="题目 5.2.30"></a>题目 5.2.30</h3><h3 id="题目-5-2-31"><a href="#题目-5-2-31" class="headerlink" title="题目 5.2.31"></a>题目 5.2.31</h3><h3 id="题目-5-2-32"><a href="#题目-5-2-32" class="headerlink" title="题目 5.2.32"></a>题目 5.2.32</h3><h2 id="反函数与隐函数"><a href="#反函数与隐函数" class="headerlink" title="反函数与隐函数"></a>反函数与隐函数</h2><h3 id="练习题-5-3"><a href="#练习题-5-3" class="headerlink" title="练习题 5.3"></a>练习题 5.3</h3><h2 id="切空间与极值"><a href="#切空间与极值" class="headerlink" title="切空间与极值"></a>切空间与极值</h2><h2 id="含参变量的定积分"><a href="#含参变量的定积分" class="headerlink" title="含参变量的定积分"></a>含参变量的定积分</h2><h2 id="含参变量的广义积分"><a href="#含参变量的广义积分" class="headerlink" title="含参变量的广义积分"></a>含参变量的广义积分</h2>]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数学分析 四 级数</title>
     <url>/Math/Mathematical_analysis_problems_4/</url>
     <content><![CDATA[<h1 id="级数-4"><a href="#级数-4" class="headerlink" title="级数 4"></a>级数 4</h1><h2 id="级数敛散判别法与性质、上极限与下极限"><a href="#级数敛散判别法与性质、上极限与下极限" class="headerlink" title="级数敛散判别法与性质、上极限与下极限"></a>级数敛散判别法与性质、上极限与下极限</h2><p>-P224</p>
@@ -2885,6 +5791,36 @@
     <content><![CDATA[<h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2><span id="more"></span>
 
 <h2 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h2><h2 id="曲线积分与格林公式"><a href="#曲线积分与格林公式" class="headerlink" title="曲线积分与格林公式"></a>曲线积分与格林公式</h2><h2 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h2><h2 id="奥氏公式、斯托克斯公式、线积分与路径无关"><a href="#奥氏公式、斯托克斯公式、线积分与路径无关" class="headerlink" title="奥氏公式、斯托克斯公式、线积分与路径无关"></a>奥氏公式、斯托克斯公式、线积分与路径无关</h2><h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 五 多元函数微分学</title>
+    <url>/Math/Mathematical_analysis_problems_5/</url>
+    <content><![CDATA[<h1 id="多元函数微分学-5"><a href="#多元函数微分学-5" class="headerlink" title="多元函数微分学 5"></a>多元函数微分学 5</h1><h2 id="欧式空间、多元函数的极限与连续"><a href="#欧式空间、多元函数的极限与连续" class="headerlink" title="欧式空间、多元函数的极限与连续"></a>欧式空间、多元函数的极限与连续</h2><p>$\bar{E} &#x3D; ((E^c)^o)^c$</p>
+<p>全面极限（所有方向），累次极限（先极限一部分再极限另一部分），二重极限（同时?）</p>
+<p>二重极限存在,对应的累次极限不一定存在</p>
+<p>例如lim(x,y)→(0,0)(xsin(1&#x2F;y)+ysin(1&#x2F;x))&#x3D;0</p>
+<p>对应的两个累次极限limx→0(limy→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))和limy→0(limx→0(xsin(1&#x2F;y)+ysin(1&#x2F;x)))都不存在</p>
+<span id="more"></span>
+
+<h3 id="题目5-1-8"><a href="#题目5-1-8" class="headerlink" title="题目5.1.8"></a>题目5.1.8</h3><p>闭包?</p>
+<h3 id="题目5-1-14"><a href="#题目5-1-14" class="headerlink" title="题目5.1.14"></a>题目5.1.14</h3><p>(2)</p>
+<h3 id="题目5-1-23"><a href="#题目5-1-23" class="headerlink" title="题目5.1.23"></a>题目5.1.23</h3><h3 id="题目5-1-24"><a href="#题目5-1-24" class="headerlink" title="题目5.1.24"></a>题目5.1.24</h3><h3 id="题目5-1-25"><a href="#题目5-1-25" class="headerlink" title="题目5.1.25"></a>题目5.1.25</h3><h2 id="偏导数与微分"><a href="#偏导数与微分" class="headerlink" title="偏导数与微分"></a>偏导数与微分</h2><p>多元函数泰勒公式</p>
+<p>例10,例11</p>
+<p>可微<code>(f(x,y)-f(x0,y0) - fx&#39; * (x-x0) - fy&#39; * (y-y0) )/sqrt&#123;(x-x0)^2+(y-y0)^2&#125; = 0</code></p>
+<p>第一，偏导x&#x2F;偏导s的倒数写法要求s是x，y的函数，否则就是全导数ds&#x2F;dx。</p>
+<p>第二，倒数写法存在当且仅当x（s，t），y（s，t）的反函数存在。</p>
+<p>第三，反函数存在除了要求一系列的偏导数连续，还要求雅可比行列式不为0。(重要?)</p>
+<p>综上，必须通过一个一般的y&#x3D;g（s，t）且满足反函数存在定理，才可以讨论 偏x&#x2F;偏s !&#x3D; 1&#x2F;(偏s&#x2F;偏x)</p>
+<p><a href="https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function">https://math.stackexchange.com/questions/1090061/manipulating-partial-derivatives-of-inverse-function</a></p>
+<p>1 &#x3D; dx&#x2F;dx &#x3D; 偏x&#x2F;偏x &#x3D; 偏f(s(x),t(x))&#x2F;偏x &#x3D; 偏f&#x2F;偏s \cdot ds&#x2F;dx + 偏f&#x2F;偏t \cdot dt&#x2F;dx &#x3D; 偏f&#x2F;偏s \cdot 偏s&#x2F;偏x + 偏f&#x2F;偏t \cdot 偏t&#x2F;偏x</p>
+<h3 id="题目-5-2-9"><a href="#题目-5-2-9" class="headerlink" title="题目 5.2.9"></a>题目 5.2.9</h3><h3 id="题目-5-2-14-系数why"><a href="#题目-5-2-14-系数why" class="headerlink" title="题目 5.2.14 系数why"></a>题目 5.2.14 系数why</h3><h3 id="题目-5-2-15"><a href="#题目-5-2-15" class="headerlink" title="题目 5.2.15"></a>题目 5.2.15</h3><h3 id="题目-5-2-16"><a href="#题目-5-2-16" class="headerlink" title="题目 5.2.16"></a>题目 5.2.16</h3><h3 id="题目-5-2-25"><a href="#题目-5-2-25" class="headerlink" title="题目 5.2.25"></a>题目 5.2.25</h3><h3 id="题目-5-2-27"><a href="#题目-5-2-27" class="headerlink" title="题目 5.2.27"></a>题目 5.2.27</h3><h3 id="题目-5-2-28"><a href="#题目-5-2-28" class="headerlink" title="题目 5.2.28"></a>题目 5.2.28</h3><h3 id="题目-5-2-29"><a href="#题目-5-2-29" class="headerlink" title="题目 5.2.29"></a>题目 5.2.29</h3><h3 id="题目-5-2-30"><a href="#题目-5-2-30" class="headerlink" title="题目 5.2.30"></a>题目 5.2.30</h3><h3 id="题目-5-2-31"><a href="#题目-5-2-31" class="headerlink" title="题目 5.2.31"></a>题目 5.2.31</h3><h3 id="题目-5-2-32"><a href="#题目-5-2-32" class="headerlink" title="题目 5.2.32"></a>题目 5.2.32</h3><h2 id="反函数与隐函数"><a href="#反函数与隐函数" class="headerlink" title="反函数与隐函数"></a>反函数与隐函数</h2><h3 id="练习题-5-3"><a href="#练习题-5-3" class="headerlink" title="练习题 5.3"></a>练习题 5.3</h3><h2 id="切空间与极值"><a href="#切空间与极值" class="headerlink" title="切空间与极值"></a>切空间与极值</h2><h2 id="含参变量的定积分"><a href="#含参变量的定积分" class="headerlink" title="含参变量的定积分"></a>含参变量的定积分</h2><h2 id="含参变量的广义积分"><a href="#含参变量的广义积分" class="headerlink" title="含参变量的广义积分"></a>含参变量的广义积分</h2>]]></content>
       <categories>
         <category>数学分析</category>
       </categories>
@@ -2957,7 +5893,8 @@
   <entry>
     <title>牛顿恒等式</title>
     <url>/Math/newton_identities/</url>
-    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>$x&#x3D;1$</p>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式</p>
+<h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>$x&#x3D;1$</p>
 <p>$x^2&#x3D;?$</p>
 <p>$x^m&#x3D;?, m \ge 1, m \in \mathbb{Z}$</p>
 <h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>$x+y&#x3D;1$</p>
@@ -3048,6 +5985,7 @@
         <category>代数</category>
       </categories>
       <tags>
+        <tag>高等代数</tag>
         <tag>线性代数</tag>
         <tag>newton_identities</tag>
       </tags>
@@ -3897,6 +6835,546 @@
         <tag>数论基础</tag>
         <tag>欧拉定理</tag>
         <tag>费马小定理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>普林斯顿 微积分读本</title>
+    <url>/Math/the_calculus_lifesaver/</url>
+    <content><![CDATA[<p>isbn 978711543559</p>
+<p>据说有视频课 calclifesaver.com</p>
+<span id="more"></span>
+
+<h2 id="1-函数，图像，直线"><a href="#1-函数，图像，直线" class="headerlink" title="1 函数，图像，直线"></a>1 函数，图像，直线</h2><p>挺细的，高中可读</p>
+<h2 id="2-三角学回顾"><a href="#2-三角学回顾" class="headerlink" title="2 三角学回顾"></a>2 三角学回顾</h2><p>是真的细，从角度到弧度</p>
+<p>$sin^2+cos^2&#x3D;1$</p>
+<p>$1+tan^2&#x3D;sec^2$</p>
+<p>$cot^2+1&#x3D;csc^2$</p>
+<p>$sin(a+b)&#x3D;sin(A)cos(B)+cos(A)sin(B)$</p>
+<p>$cos(a+b)&#x3D;cos(A)cos(B)-sin(A)sin(B)$</p>
+<p>$sin(2x)&#x3D;2sin(x)cos(x)$</p>
+<p>$cos(2x)&#x3D;2cos^2(x)-1&#x3D;1-2sin^2(x)$</p>
+<h2 id="3-极限导论"><a href="#3-极限导论" class="headerlink" title="3 极限导论"></a>3 极限导论</h2><p>一个对比的例子 f(x)&#x3D;x+1,那么</p>
+<ul>
+<li>x趋于1时 f(x)的极限是2</li>
+</ul>
+<p>g(x)&#x3D;x+1,x !&#x3D; 1时</p>
+<p>g(x)&#x3D;3,x &#x3D;1时</p>
+<p>同样有: x趋于1时 g(x)的极限是2</p>
+<p>函数的点极限是在聊没（不一定）取到的趋近值</p>
+<hr>
+<p>垂直极限， x在左右趋于a时，有一侧的值趋于正无穷或负无穷</p>
+<p>点附近不趋于任何数 sin(1&#x2F;x), x 趋于0时</p>
+<p>x趋于正无穷时，的极限，意味着有水平渐近线</p>
+<hr>
+<p>夹逼定理（三明治定理）g&lt;&#x3D;f&lt;&#x3D;h 在x的范围附近，那么g和h极限相同，则f也是</p>
+<h2 id="4-求多项式的极限问题"><a href="#4-求多项式的极限问题" class="headerlink" title="4 求多项式的极限问题"></a>4 求多项式的极限问题</h2><p>f(x)&#x3D;(x-1)(x+1)&#x2F;(x-1) 在点1的极限</p>
+<p>里面主要是一些做题的例子，例如什么分子有理化</p>
+<p>四则运算保持部分，主要注意的是在加减过程中 可能导致低次等价无穷小 无穷大的消失</p>
+<p>(x^2+x)&#x2F;x, (x^2-x)&#x2F;x 在 无穷大 极值都是 无穷大，但是差在无穷大的差是 趋于2</p>
+<p>这里 主要列的都是 x多项式的 p(x)&#x2F;q(x) 在无穷的极限</p>
+<h2 id="5-连续性和可导性"><a href="#5-连续性和可导性" class="headerlink" title="5. 连续性和可导性"></a>5. 连续性和可导性</h2><p>直觉上是一笔画，但对于数学这并不对。</p>
+<p>f(x)&#x3D;x当x有理数，0当x无理数，能在0点有极限，（这就是点连续的感觉反例）</p>
+<p>这点连续，但区间不连续</p>
+<p>或者 f(x)&#x3D;1&#x2F;x在0以外处处连续（但是不一致连续）</p>
+<hr>
+<p>这块内容核心是，</p>
+<ul>
+<li>点连续：该点的值&#x3D;该点的极限</li>
+<li>区间上连续：区间上所有点连续<ul>
+<li>这两个都是数学抽象的定义，图像上最好的描述可能还是 y 包裹距离lambda的线，和x包裹 delta的线</li>
+</ul>
+</li>
+</ul>
+<p>有些函数 点没有定义，但是对应位置有极限，可以考虑补充定义 f(x)&#x3D;xsin(1&#x2F;x)</p>
+<hr>
+<p>介值定理：闭区间，左右端点异号，然后函数连续，那么 区间中存在一点f(x)&#x3D;0</p>
+<ul>
+<li>这个定理通过平移可以有 左右端点(f(l)-a)(f(r)-a) 异号，中存在点 f(m)&#x3D;a</li>
+</ul>
+<p>最大值最小值存在定理： 闭区间+连续，区间有最大值，最小值</p>
+<ul>
+<li>这个理解其要素，要考虑如果开区间，如果不连续 不存在的例子就能更深刻</li>
+</ul>
+<hr>
+<p>可导性：</p>
+<p>从时间，速度，距离出发，引出距离时间图像中 速度与导数的关系</p>
+<p>单点的导数也就是：</p>
+<ul>
+<li>f(a)’ &#x3D; (f(x)-f(a))&#x2F;(x-a), 当x趋于a的极限<ul>
+<li>这里 我们也就用了前面学的极限</li>
+<li>另一个代换就是 (f(a+h)-f(a))&#x2F;h</li>
+<li>那么 同样极限可能存在，可能不存在。 如果极限存在，定义在 此点 可导</li>
+<li>分母是 delta x, 分子是 delta y</li>
+<li>记作 dy&#x2F;dx <ul>
+<li>注意不是分数，而是表示 delta y &#x2F; delta x的极限</li>
+<li>更具体的应该是 d&#x2F;dx(y(x)), 也就是y是关于x的函数，对其自变量x求导的</li>
+<li>更进阶的有可微概念（说白了是 关于自变量的线性表出，不过好像微积分不学，在数学分析里）</li>
+</ul>
+</li>
+<li>不存在例子 |x|&#x2F;x<ul>
+<li>这里说明 连续不一定可导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>常见的导数表</p>
+<ul>
+<li>$ax^b &#x3D; abx^{b-1},b\neq 0$</li>
+</ul>
+<p>可导 &#x3D;&gt; 连续</p>
+<ul>
+<li>考虑 f(x)&#x3D;x+1, 特别的x&#x3D;0时f(x)&#x3D;2, 其实会发现，分母趋于0时，如果不连续，会导致分子不趋于0（甚至没有极限）</li>
+</ul>
+<h2 id="6-求解微分问题"><a href="#6-求解微分问题" class="headerlink" title="6. 求解微分问题"></a>6. 求解微分问题</h2><p>用定义求导</p>
+<p>常用公式</p>
+<ul>
+<li>$d&#x2F;dx (x^a)&#x3D;ax^{a-1}$</li>
+<li>$d&#x2F;dx(C)&#x3D;0$</li>
+</ul>
+<p>推论</p>
+<ul>
+<li>乘积法则<ul>
+<li>h(x)&#x3D;f(x)g(x), h’(x)&#x3D;f’(x)g(x)+f(x)g’(x)</li>
+<li>或者写成 y&#x3D;uv, d&#x2F;dx(y)&#x3D;v d&#x2F;dx(u)+u d&#x2F;dx (v)</li>
+<li>还可以扩展更多的y&#x3D;uvw</li>
+</ul>
+</li>
+<li>商:<ul>
+<li>h&#x3D;f&#x2F;g, $h’&#x3D;(f’g-fg’)&#x2F;(g^2)$</li>
+</ul>
+</li>
+<li>说白了 希望能用四则运算的思路对这个进行分解<ul>
+<li>那么加减其实也有h&#x3D;f+-g,h’&#x3D;f’+-g’</li>
+<li>而需要注意的是，这里需要每一部分的导数是存在的</li>
+</ul>
+</li>
+<li>特别的，4则运算以外有函数复合 h&#x3D;f(g(x))  称作链式求导，可以更多的复合<ul>
+<li>就是导数定义展开就能得到</li>
+<li>h’&#x3D;f’(g(x))g’(x)</li>
+<li>y(u),u(x), d&#x2F;dx(y)&#x3D;d&#x2F;dx(y) * d&#x2F;dx(u)</li>
+<li>例子 $y&#x3D;u^{100}, u&#x3D;x^2+1$<ul>
+<li>$d&#x2F;dx(y) &#x3D; 100u^{99} 2x&#x3D;200x(x^2+1)^{99}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>这里 乘积法的解释用的 长方形边长分别f,g, 面积的变化的概念</p>
+<p>这里 链式法的理解用的 在 放大镜后面拉伸口香糖，那么是倍率相乘</p>
+<p>加速度引出二阶导数</p>
+<p>做题：导数伪装的极限（那些可以看成导数表达的极限）</p>
+<p>导函数图像绘制：</p>
+<ul>
+<li>找导数为零的点，为切割点（不一定切割 例如f(x)&#x3D;x^3</li>
+<li>找二阶导数 为0的点，为函数 凸 凹的切割点</li>
+</ul>
+<h2 id="7-三角函数的极限和导数"><a href="#7-三角函数的极限和导数" class="headerlink" title="7. 三角函数的极限和导数"></a>7. 三角函数的极限和导数</h2><p>重要极限： x趋于0, sin(x)&#x2F;x&#x3D;1</p>
+<p>其他常用</p>
+<ul>
+<li>cos(x-&gt;0)-&gt;1</li>
+<li>x-&gt;0, tan x &#x2F; x &#x3D; 1</li>
+<li>sin’ &#x3D; cos</li>
+<li>cos’&#x3D;-sin</li>
+<li>$tan’&#x3D;sec^2$</li>
+<li>$sec’&#x3D;sec\cdot tan$ </li>
+<li>$cot’&#x3D;-csc^2$</li>
+<li>反正背了无数年也背诵不到</li>
+</ul>
+<p>其它方法，把分母想办法化作0的形式，变量替换，</p>
+<p>一个本身可导导函数 不连续 的函数：</p>
+<p>$f(x)&#x3D;x^2sin(1&#x2F;x)$ 补充定义x&#x3D;0, </p>
+<h2 id="8-隐函数求导和相关变化率"><a href="#8-隐函数求导和相关变化率" class="headerlink" title="8. 隐函数求导和相关变化率"></a>8. 隐函数求导和相关变化率</h2><p>隐函数：给的表达式不是y(x)&#x3D;…的形式，但从自变量因变量上，依然x是自变量，y(x)的因变量</p>
+<p>$x^2+y^2&#x3D;4$</p>
+<p>方法：在两边加上 d&#x2F;dx ，因为f(x,y)&#x3D;g(x,y), 那么我们认为这两个函数在要求的一段区间上的 映射是一致的，</p>
+<ul>
+<li>那么 如果导数存在，左右导数相等</li>
+</ul>
+<p>求二阶导：</p>
+<ul>
+<li>一样的步骤</li>
+<li>注意的是 d^2&#x2F;dx^2(y)&#x3D;d&#x2F;dx(d&#x2F;dx(y))<ul>
+<li>和 $(d&#x2F;dx(y))^2$ 这两个意义是不同的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子</p>
+<ul>
+<li>A上方5m,3m&#x2F;s向上</li>
+<li>B右侧12m, 4m&#x2F;s向 左</li>
+<li>求A&#x2F;B之间距离变化速度<ul>
+<li>$a^2+b^2&#x3D;c^2$</li>
+<li>$2a d&#x2F;dt(a)+2b d&#x2F;dt(b)&#x3D;2c d&#x2F;dt(c)$, </li>
+<li>$5 \cdot 3+12\cdot (-4)&#x3D;13 d&#x2F;dt(c)$<ul>
+<li>可计算要求的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-指数函数和对数函数"><a href="#9-指数函数和对数函数" class="headerlink" title="9. 指数函数和对数函数"></a>9. 指数函数和对数函数</h2><p>书上这么细致，都快要初中生可看了，从对数 指数 反函数开始讲</p>
+<p>重要极限 e&#x3D;(1+1&#x2F;x)^x, x趋于无穷大时的极限，</p>
+<p>重要函数 d&#x2F;dx(ln(x)) &#x3D; 1&#x2F;x</p>
+<ul>
+<li>$d&#x2F;dx (a^x) &#x3D; a^x ln(a)$</li>
+<li>$x\to 0$, $\frac{e^x-1}{x}&#x3D;1$</li>
+<li>$x\to 0$, $\frac{ln(1+x)}{x}&#x3D;1$</li>
+<li>注，这些东西，到后面等价无穷小会 更不特例化,或者洛必达</li>
+</ul>
+<p>指数增长迅速$x\to \infty \frac{x^n}{e^x}&#x3D;0$, 也就是  多项式&#x2F;指数型 -&gt; 0</p>
+<p>对数增长缓慢 $a&gt;0,x\to \infty \frac{ln(x)}{x^a}&#x3D;0$, 不管a多小</p>
+<p>对数函数在0附近“增长”缓慢：不管a多小, 如果$a&gt;0, x\to 0^+ x^aln(x)&#x3D;0$</p>
+<hr>
+<p>指数增长：复利，动物种群数</p>
+<p>指数衰变： 放射性衰变</p>
+<p>若 $y&#x3D;e^{kx}$,那么 dy&#x2F;dx &#x3D; ke^{kx},也就是 dy&#x2F;dx&#x3D;ky</p>
+<ul>
+<li>这是一个微分方程例子，第30章会有更多例子</li>
+<li>这里 如果dy&#x2F;dx&#x3D;ky,那么$y&#x3D;Ae^{kx}$,在30.2节中说为什么会这样</li>
+<li>而这里对应到 兔子繁殖，说明了，增长速度和现有量保持常熟倍数关系</li>
+<li>dP&#x2F;dt&#x3D;kP, &#x3D;&gt; P(t)&#x3D;P_0e^{kt}</li>
+</ul>
+<p>类似的 dP&#x2F;dt&#x3D;-kP 指数衰变，$P(t)&#x3D;P_0e^{-kt}$</p>
+<hr>
+<p>双曲函数:</p>
+<ul>
+<li>$cosh(x)&#x3D;\frac{e^x+e^{-x}}{2}$</li>
+<li>$sinh(x)&#x3D;\frac{e^x-e^{-x}}{2}$</li>
+<li>作者的评价： 伪装的指数函数又和三角函数相似<ul>
+<li>$cosh^2-sinh^2&#x3D;1$ 双曲方程</li>
+<li>sinh’&#x3D;cosh</li>
+<li>cosh’&#x3D;sinh</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-反函数和反三角函数"><a href="#10-反函数和反三角函数" class="headerlink" title="10. 反函数和反三角函数"></a>10. 反函数和反三角函数</h2><p>充分,非必要，严格单调递增函数 f(x) 有反函数，那么如果函数可导，导函数符号不变，那么也可以得到有反函数</p>
+<p>如果存在，那么当 f(y)&#x3D;x时，我们就能求f的反函数了，因为这时的 y(x)输入得到x,</p>
+<p>1&#x3D;d&#x2F;dx (x)&#x3D;d&#x2F;dx(f(y))&#x3D;f’ * d&#x2F;dx(y)</p>
+<p>f’&#x3D;1&#x2F;(d&#x2F;dx(y))</p>
+<p>这个东西，对于 一元的，去看函数图像的对称更好看，更直观</p>
+<hr>
+<p>具体的 反三角函数</p>
+<p>$d&#x2F;dx \sin^{-1}(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \cos^{-1}(x)&#x3D;-\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \tan^{-1}(x)&#x3D;-\frac{1}{\sqrt{1+x^2}}$</p>
+<p>… 这里还有其它反三角函数的导数，然后也有反双曲函数的导数</p>
+<p>$x&gt;1,d&#x2F;dx \cosh^{-1}(x)&#x3D;\frac{1}{x^2-1}$</p>
+<p>$d&#x2F;dx \sinh^{-1}(x)&#x3D;\frac{1}{x^2+1}$</p>
+<h2 id="11-导数和图像"><a href="#11-导数和图像" class="headerlink" title="11. 导数和图像"></a>11. 导数和图像</h2><p>局部最大值，称作局部极大值</p>
+<p>极值定理：开区间(a,b)内的局部极值，一定是导数为0,或者导数不存在</p>
+<p>罗尔定理：f在<code>[a,b]</code>连续,在(a,b)可导，f(a)&#x3D;f(b),存在一点 f’(c)&#x3D;0</p>
+<p>在罗尔定理上，增加一个线性函数就有了中值定理：</p>
+<ul>
+<li><code>[a,b]</code>内连续,(a,b)内可导，(a,b)中存在c, f’(c)&#x3D;(f(b)-f(a))&#x2F;(b-a)</li>
+<li>需要注意的是这是 增加线性函数不是旋转，因为旋转可能让函数变得不是函数，而线性偏移，保证y的输出还是一个</li>
+</ul>
+<p>注意的是，罗尔定理和中值定理，都是存在性定理</p>
+<ul>
+<li>用途</li>
+<li>例如 导数为0 证明 常函数<ul>
+<li>任取两点，因为可导，存在f’(c)&#x3D;两点值差&#x2F;坐标差，那么只能值相等</li>
+</ul>
+</li>
+<li>上面这个结论可以推得，两个导数相同的函数 的差是常数</li>
+</ul>
+<p>二阶导数 图像：凹凸，拐点（’’&#x3D;0)</p>
+<p>一阶导数零点：</p>
+<ul>
+<li>局部最大：一阶 +-&gt;-， 二阶 &lt;0</li>
+<li>局部最小：一阶  - -&gt; +, 二阶 &gt;0</li>
+<li>水平拐点，单调递增： 一阶 +, 二阶&#x3D;0</li>
+<li>水平拐点，单调递减： 一阶 -，二阶&#x3D;0</li>
+<li>注意的是， 二阶&#x3D;0只是必要，但不充分，也就是无法从二阶&#x3D;0判断什么，<ul>
+<li>例子 $x^3,x^4$ 在0点的时候 二阶都&#x3D;0</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-绘制函数图像"><a href="#12-绘制函数图像" class="headerlink" title="12. 绘制函数图像"></a>12. 绘制函数图像</h2><p>利用上面性质找关键点绘制，然后研究凹凸性绘制</p>
+<h2 id="13-最优化和线性化"><a href="#13-最优化和线性化" class="headerlink" title="13.最优化和线性化"></a>13.最优化和线性化</h2><p>实际应用：</p>
+<p>最优化的核心思想是，找到所有变量，和优化目标，然后利用等式化简成单变量函数 f(x)，然后确定范围和极值点</p>
+<p>线性化求近似值，这里例子是f(x)&#x3D;sqrt(x),然后算 sqrt(11),用的x&#x3D;3的一阶展开，思想核心有泰勒展开也有牛顿切线，完成估算</p>
+<p>L(x)&#x3D;f(a)+f’(x)(x-a) 称作在x&#x3D;a点处的线性化</p>
+<p>微分: <code>df=f&#39;(a) delta x</code>, 误差: rf&#x3D;f(x)-L(x)&#x3D;delta f-df&#x3D;1&#x2F;2 f’’(c) (x-a)^2 (根据中值定理) &lt;&#x3D; 1&#x2F;2 (x-a)^2 max(f’’)</p>
+<p>牛顿法： a是方程 f(x)&#x3D;0的解的一个近似，如果b&#x3D;a-f(a)&#x2F;f’(a), 很多情况b是更好的近似，这个图像上 很“显然”</p>
+<ul>
+<li>一个明显的优点是，对于高次函数难以有直接求根公式时，这个方法很多时候能有效的求得一个数值根</li>
+<li>同时从图像上也能知道，这个方法无法始终有效，当选取的初始点和范围无法完成对应的下降的话</li>
+</ul>
+<h2 id="14-洛必达法则及极限问题总结"><a href="#14-洛必达法则及极限问题总结" class="headerlink" title="14. 洛必达法则及极限问题总结"></a>14. 洛必达法则及极限问题总结</h2><p>结论： f(a)&#x3D;g(a)&#x3D;0,  lim x-&gt; a, f(x)&#x2F;g(x) &#x3D; f’(x)&#x2F;g’(x)</p>
+<p>这个的核心想法是，f(x)&#x2F;g(x)在a附近 &#x3D; (f(a)+delta f)&#x2F;(g(a)+delta g) &#x3D; delta f &#x2F; delta g &#x3D; (df+rf)&#x2F;(dg+rg), 微分+误差</p>
+<ul>
+<li>如果df,dg不同时为0, 那么就有结果了，rf,rg是高阶无穷小，可以忽略的部分</li>
+<li>如果df,dg 同时为0,那么 rf&#x2F;rg 再次展开，可以再次洛必达</li>
+<li>这里 的另一个解释是，希望导函数在附近是一致收敛的，这样 f’(c)(x-a)&#x2F;g’(c)(x-a)来表示</li>
+</ul>
+<p>对于0&#x2F;0有了，那么 无穷&#x2F;无穷，可以看成 倒数</p>
+<hr>
+<p>这里延伸了一点，不过感觉要在等价无穷小那里讲，</p>
+<ul>
+<li>x趋于0, 1&#x2F;x-1&#x2F;sin(x)， 注意的是 无穷-无穷，（没有减法的对应运算），但是可以通分，</li>
+<li>0 乘上 无穷， x-&gt;0, xln(x), 化成 无穷&#x2F;无穷</li>
+</ul>
+<h2 id="15-积分"><a href="#15-积分" class="headerlink" title="15. 积分"></a>15. 积分</h2><p>这里先讲 求和符号，以及高斯计算1+…+100</p>
+<p>这里用的 汽车 速度 时间 路程 的 坐标轴图像来引入，导出了 积分就是“希望”求和坐标轴围起来的“有向”面积</p>
+<ul>
+<li>这里讲“有向”就是向上是正，向下是复<ul>
+<li>可以无向吗，显然你可以这样定义，但是这显然不符合期望<ul>
+<li>例子就是 车的速度变化，的变化函数的围成面积，引入方向是更自然的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这里的“希望”是说，目前阶段的积分定义 解决不了一些 以后学实分析时 f(x)&#x3D;1(当x是无理数时),0(x是有理数时)的这种积分</li>
+</ul>
+<p>积分的想法，就是通过“均匀”（非必要，只是常用的方法）纵向切割，切割面积成很多纵条</p>
+<ul>
+<li>每个纵条在原函数下方，且最大，则称为小和</li>
+<li>每个纵条在原函数上方，且最小，则称为大和</li>
+</ul>
+<p>书上写的 上和 下和，应该更直观一些</p>
+<p>然后极限的是 切割的数量 趋于无穷</p>
+<ul>
+<li>这时候，大和小和要趋于同样的值，那么根据三明治夹击定理，得到了函数的“积分”</li>
+<li>这里 趋于同样值，意味着大和小和的差趋于0</li>
+</ul>
+<h2 id="16-定积分"><a href="#16-定积分" class="headerlink" title="16. 定积分"></a>16. 定积分</h2><p>上面这个东西，我们称它为定积分$\int_{a}^b f(x)$, 表达式 f(x)在取值<code>[a,b]</code> 范围时，和坐标轴 围成有向面积</p>
+<p>这里注意的是，我们会发现 一条线 的面积是0,（概率论中的 0 概率不表示不可能）</p>
+<p>$\int_{a}^b f(x)&#x3D;\lim_{mesh -&gt; 0}\sum f(c_j)(x_j-x_{j-1})$</p>
+<ul>
+<li>也就是切割最大间隔趋于0</li>
+<li>c_j 是$[x_{j-1},x_j]$之间的某个值，那么f(cj)就是之间最大最小值之间</li>
+<li>称作 黎曼和，黎曼积分</li>
+</ul>
+<p>常用技巧就是 以1&#x2F;n,然后完成求和表达式，当n趋于无穷时，计算这个极限</p>
+<p>为了计算一些分段的函数，并且和连续函数契合，定义了 <code>int[a,b]+int[b,c] = int[a,c]</code></p>
+<ul>
+<li>为了使它合理，定义了 a &gt;&#x3D; b的值</li>
+<li>这里我们可以发现，虽然 划分也好，拆分int也好，<code>[a,b]+[b,c]</code> 看起来计算了两次，而对于有限值的点来说，面积就是0,</li>
+<li>以及列了一些 和四则运算相关的性质，常数倍数提出，int 加减拆分</li>
+</ul>
+<p>然后类似的，在积分上有 三明治夹击定理，中值定理</p>
+<p>不可积函数：举例了上面实分析的例子：下和&#x3D;0,上和&#x3D;1</p>
+<h2 id="17-微积分基本定理"><a href="#17-微积分基本定理" class="headerlink" title="17. 微积分基本定理"></a>17. 微积分基本定理</h2><p>中文的 积分 微分 都带一个分，而且名字都叫微积分，有一种关联的感觉</p>
+<p>但这里 才是“一个厉害的结论”</p>
+<p>从 定积分 在点a的 增量是面积，微分是f(x) deltax, 导数是f(x), 引出：积分 和 微分 是（一种逆运算的感觉）</p>
+<ul>
+<li>这个意义在于，微分看起来更好求，那么如果有了微分，那么不再需要 黎曼切割去算积分，而直接有积分</li>
+<li>第二是，中文叫做不定积分，和定积分<ul>
+<li>写法上差别是 范围，与+C,看起来很像</li>
+<li>但从 关系上说，定积分,不定积分 的微分得到 f, f的积分是不定积分，</li>
+<li>图像上，两个函数可以通过沿y移动重叠，那么它们必然微分相同，差值是C, 它们微分的不定积分 涵盖了他两，而这两个函数在[a,b]上，从a到b的变化是一样的，这个变化是想求的微分的定积分的值</li>
+<li>F(x)&#x3D;x^2,f(x)&#x3D;F’(x)&#x3D;2x, int f(x) &#x3D; x^2+C  得到了一系列函数, int_1^2 f(x) &#x3D; 3, 表示 这一系列函数从点x&#x3D;1到x&#x3D;2的增量都是3</li>
+</ul>
+</li>
+</ul>
+<p>微积分的第一基本定理：f在[a,b]上连续,F(x) 在(a,b)可导，且F(x)&#x3D;f(x)</p>
+<ul>
+<li>那么 $F(x)&#x3D;\int_{a}^x f(t)dt,x\in[a,b]$</li>
+<li>函数的导函数围成的面积 &#x3D; 原函数的增量</li>
+</ul>
+<p>微积分第二基本定理, f在[a,b]连续，F是f的任意一个反导数，那么</p>
+<ul>
+<li>$\int_{a}^b f(x)dx&#x3D;F(b)-F(a)$</li>
+<li>反导数 也就是 不定积分中任意一个</li>
+<li>$\frac{d}{dx}F(x)&#x3D;f(x)$那么$\int f(x)dx&#x3D;F(x)+C$</li>
+</ul>
+<p>这里同样 塞一下四则运算</p>
+<p>很多例题，包括各种上下限是变量的，</p>
+<p>而定积分时还有一个可用的东西，叫做奇偶性，这得益于它是有向的面积</p>
+<p>P338有个积分表</p>
+<p>这个证明核心 又是“中值定理&#x2F;介值定理”</p>
+<h2 id="18-积分的方法I（换元，分部，分式）"><a href="#18-积分的方法I（换元，分部，分式）" class="headerlink" title="18. 积分的方法I（换元，分部，分式）"></a>18. 积分的方法I（换元，分部，分式）</h2><p>这一块没有新的数学原理，而是实际应用中，怎么求积分，</p>
+<p>换元法： 核心思想是 int f(x) dx 中，如果能把其中一个x的表达式g(x),全部都表示g(x)的表达式，那么就能完成换元</p>
+<ul>
+<li>$\int 2xe^{x^2} dx&#x3D;\int e^{x^2} d x^2$,  这里 $x^2$可以看成整体$t&#x3D;x^2$</li>
+<li>$\int \frac{f’(x)}{f(x)}dx &#x3D; \ln|f(x)|+C$</li>
+<li>$\int x(3x+2)^{1&#x2F;5} dx$,这里 把$t&#x3D;(3x+2)^{1&#x2F;5}$,那么原式&#x3D;$\int \frac{1}{3}(t^5-2)(t)\frac{5}{3}t^4 dt$</li>
+</ul>
+<p>这里理论解释是 复合函数链式求导，的反向积分过程</p>
+<hr>
+<p>分部积分法, 同样是来自于微分过程中的逆向操作而已</p>
+<p>$\frac{d}{dx}(uv)&#x3D;v\frac{d}{dx}(u)+u\frac{d}{dx}v$</p>
+<ul>
+<li>$\int u\frac{d}{dx}(v)dx&#x3D;uv-\int v\frac{d}{dx}(u) dx$</li>
+<li>$\int u dv &#x3D; uv - \int v du$</li>
+</ul>
+<hr>
+<p>部分分式$\int \frac{p(x)}{q(x)}dx$</p>
+<ul>
+<li>这里的方法还是 多项式 求余法</li>
+<li>然后 再待定系数法，最终希望是<code>int 整式子 + 多个\frac&#123;常数&#125;&#123;(x+a)^t&#125;</code>的形式</li>
+<li>对于 分母是两个不同一次式子时，可以用 线性代数的知识，对分子进行拆分，<ul>
+<li>$1&#x2F;(x^2-1)&#x3D;1&#x2F;((x-1)(x+1))$, 分子 &#x3D;((x+1)-(x-1) )&#x2F;2</li>
+</ul>
+</li>
+<li>总的来说 这样做，不能解决的就是 分母是难以拆的多项式</li>
+<li>其中特别的 不可拆2次式子可以考虑<ul>
+<li>(x+a)&#x2F;((x+b)^2+c)的形式， 从而化成 d&#x2F;(t^2+c) 和 t&#x2F;(t^2+c),就对应 arctan和ln了</li>
+<li>这一块的感受是，从没想过 tan,ln这些 在微积分之前觉得很远的函数，现在如此近，而这个感觉在后面的泰勒展开和级数的时候会更多</li>
+</ul>
+</li>
+</ul>
+<p>$\int \frac{1}{t^2+a^2}dt&#x3D;\frac{1}{a}arctan(\frac{t}{a})+C$</p>
+<h2 id="19-积分的方法II（三角）"><a href="#19-积分的方法II（三角）" class="headerlink" title="19. 积分的方法II（三角）"></a>19. 积分的方法II（三角）</h2><p>$cos^2(x)&#x3D;\frac{1}{2}(1+cos(2x))$</p>
+<p>$sin^2(x)&#x3D;\frac{1}{2}(1-cos(2x))$</p>
+<p>核心还是三角的换元，看起来就能完成幂次变换，和表达式变换</p>
+<p>$\int sin^ncos^m$,</p>
+<ul>
+<li>有奇数幂可以拆一个，剩下用sin2+cos2&#x3D;1换成只有一个的，从而完成换元</li>
+<li>都是偶幂，用上面的完成降次</li>
+</ul>
+<p>$\int tan(x)dx &#x3D; -\ln |cos(x)|+C$</p>
+<p>$tan^2(x)&#x3D;sec^2(x)-1$</p>
+<p>哎，感觉这一块，真的背不到，查表是能查</p>
+<p>$\int sec^2(x)dx&#x3D;tan(x)+C$</p>
+<p>$I_n&#x3D;\int tan^n(x)dx$</p>
+<p>$I_0&#x3D;x+C$</p>
+<p>$I_1&#x3D;-\ln |cos(x)|+C$</p>
+<p>$I_n&#x3D;\frac{1}{n-1}tan^{n-1}(x)-I_{n-2}$ 约化公式</p>
+<hr>
+<p>类似的 $I_n&#x3D;\int_0^{\pi&#x2F;2} cos^n(x)dx$</p>
+<p>$I_n&#x3D;(n-1)(I_{n-1}-I_n)$</p>
+<p>$I_{n}&#x3D;\frac{n-1}{n}I_{n-2}$</p>
+<p>$I_0&#x3D;\frac{pi}{2},I_1&#x3D;1$</p>
+<hr>
+<p>这一块是对于一些直接求不到，的完成一个形式的递归表达式</p>
+<hr>
+<p>$\sqrt{a^2-x^2}$ 换元 $x&#x3D;a\sin(\theta)$</p>
+<p>$\sqrt{a^2+x^2}$ 换元 $x&#x3D;a\tan(\theta)$</p>
+<p>$\sqrt{x^2-a^2}$ 换元 $x&#x3D;a\sec(\theta)$</p>
+<hr>
+<p>整个的核心还是要对 微分结果熟悉</p>
+<h2 id="20-反常积分：基本概念"><a href="#20-反常积分：基本概念" class="headerlink" title="20. 反常积分：基本概念"></a>20. 反常积分：基本概念</h2><p>目标</p>
+<ul>
+<li>有些函数，在定义域无限时，围成面积有限，（ 例如 等比例的 实数定义域版 $f(x)&#x3D;(1&#x2F;2)^x$</li>
+<li>有些函数，在有限定义域，无限值域时，围成面积有限，（例如$2\sqrt{x}$求导得到的形如$\frac{1}{\sqrt{x}}$在[0,1]</li>
+<li>其它的都无限</li>
+</ul>
+<p>主要希望能计算那些有限的函数</p>
+<ul>
+<li>那么这里补充定义，如果 [a,b],仅在点a无限，$\int_a^b&#x3D;\lim_{\epsilon\to 0^+}\int_{a+\epsilon}^b$<ul>
+<li>这里有点（覆盖写入的感觉），也就是积分 前面定义了 <code>[]连续,()可导</code>，以及拆分。而这里补充定义了 单点值域极限的情况，这样定义了$\int_{0}^{1}\frac{1}{\sqrt{x}}$的值</li>
+<li>其实 根据前面 对称性，和可拆分性，我们自然的也对一些间断点，破裂点，b出的无穷有了 “自然”的定义 例如 上面要趋于$b-\epsilon$，<ul>
+<li>换个角度思考，那如果就是连续呢，会发现单点的值，不论无不无穷 直接被视作0,也就是当连续时，我们要算(a,b)的积分，也能这样定义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同样关于积分范围的无穷定义，也是补充定义$\int_a^{\infty}&#x3D;\lim_{N\to \infty} \int_{a}^{N}$</li>
+<li>再换句话说，积分的符号写法是“模糊的”，而为了让模糊的写法，在满足最纯粹 <code>[]连续,()可导</code>以及嵌入四则运算的前提下，补充了一些“更自然”的补充定义</li>
+</ul>
+<hr>
+<p>$x\to a,\frac{f(x)}{g(x)}&#x3D;1$那么称作在点$a$他们相似$f(x)\sim g(x)$</p>
+<ul>
+<li>关于相似 引入 四则运算</li>
+<li>f<del>g,h</del>j &#x3D;&gt; fh~gj</li>
+<li>注意的是，加减运算是无法保证的<ul>
+<li>tan<del>x,sin</del>x,但是 tan-sin~0是错的！！之后会引入等价无穷小</li>
+</ul>
+</li>
+<li>这里～的核心是连续的把（值？）捆在不太远的位置，<ul>
+<li>而当都趋于0时，加减的实际内容不是这个（值），而是对捆绑的力度加减</li>
+<li>当都不趋于0时，加减的实际内容是针对这个值，而这个值的（结果 需要不是0）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>有了比较判别法，如果一个积分结果无穷，另一个函数比它大，那么积分也是无穷（核心也是夹击类似的想法）</p>
+<p>而这里又是一个重要的 极限</p>
+<ul>
+<li>$\int_a^{\infty} \frac{1}{x^p} dx, a &gt; 0$,<ul>
+<li>$p\le 1$时，发散</li>
+<li>$p &gt; 1$时，收敛</li>
+</ul>
+</li>
+<li>另外的 $\int_0^a,\frac{1}{x^a}dx a&gt;0$<ul>
+<li>p&lt;1 收敛</li>
+<li>$p\ge 1$ 发散</li>
+</ul>
+</li>
+</ul>
+<p>绝对收敛判别法, int|f(x)|收敛，则 int f(x),收敛，核心还是夹挤, -|f(x)| &lt;&#x3D; f(x) &lt;&#x3D; |f(x)|,在足够大的n以后左右都趋于0</p>
+<h2 id="21-反常积分：如何解题"><a href="#21-反常积分：如何解题" class="headerlink" title="21. 反常积分：如何解题"></a>21. 反常积分：如何解题</h2><ol>
+<li>找所有瑕点，以瑕点切割，切割成多个 <code>[],()</code>，每个里面使用新的或朴素的积分定义计算</li>
+</ol>
+<p>x在无穷附近</p>
+<p>f(x)的最高幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin,cos 可以用 绝对收敛判别法， $||\le1$</p>
+<p>对于 x &gt; 0, $e^{-x} \le \frac{C}{x^n}$, </p>
+<p>对于 x &gt; 0, $ln(x)\le Cx^n$</p>
+<hr>
+<p>x在0附近</p>
+<p>f(x)的最低幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin~x</p>
+<p>tan~x</p>
+<p>cos~1</p>
+<p>$e^x\sim 1$</p>
+<p>$e^x-1\sim x$</p>
+<p>$|\ln(x)|\le \frac{C}{x^{a}}, a&gt;0$,足够小的a</p>
+<hr>
+<p>总的来说这里，在0或者在无穷附近的处理，都希望能变成x的幂次的样子</p>
+<p>而需要注意的是加减法的结果不应该是 ~0,否则会有问题(加减的是幅度)</p>
+<h2 id="22-数列和级数：基本概念"><a href="#22-数列和级数：基本概念" class="headerlink" title="22.数列和级数：基本概念"></a>22.数列和级数：基本概念</h2><p>数列：极限，是一种（可列，无穷）</p>
+<p>例如 $f(x)&#x3D;sin(n)&#x2F;x^n$, 也可以定义$a_n&#x3D;sin(n)&#x2F;x^n$, 那么 这可以看成对函数的无穷方向的 整点采样</p>
+<p>感官上显然的，如果函数数列同样表达式，那么函数收敛必然数列收敛，但数列首先可能刚好因为（采样的被采样点特殊）而收敛 函数却不收敛</p>
+<ul>
+<li>$f(x)&#x3D;sin(2<em>\pi</em>n)$</li>
+<li>这里感官上，是对于 图像的 epsilon和N的理解</li>
+</ul>
+<p>连续函数保持极限：</p>
+<ul>
+<li>和上面不同，f(x)在点a是连续的，那么数列的 采样$a_i&#x3D;f(t_i)$,然后t_i随着i趋于无穷，采样t趋于a,那么a_i的极限也就是f(a)</li>
+</ul>
+<p>重要数列</p>
+<ul>
+<li>$a_n&#x3D;r^n$, 讨论 r<ul>
+<li>（-1,1） 收敛于0</li>
+<li>1,收敛于1</li>
+<li><blockquote>
+<p>1, 趋于无穷</p>
+</blockquote>
+</li>
+<li>&lt;&#x3D; -1, 不存在</li>
+</ul>
+</li>
+<li>$a_n&#x3D;(1+k&#x2F;n)^n$, 趋于 $e^k$</li>
+</ul>
+<hr>
+<p>series 级数，就是数列的和, 起始有的0,有的1都行</p>
+<ul>
+<li>$\sum_{1}^\infty &#x3D; \lim_{N\to \infty}\sum_{1}^N$ 称作无穷级数</li>
+<li>$\sum_0^{\infty} {r^n}$<ul>
+<li>(-1,1) &#x3D;&gt; $\frac{1}{1-r}$</li>
+<li>其它的发散</li>
+</ul>
+</li>
+<li>从观感上自然的，需要a_n是趋于0的，能判断是发散，（注意只能判断是发散，不能判断收敛，因为这只是收敛的必要条件，不是充分的）</li>
+</ul>
+<p>比较判别，类似函数的比较判别 a_n~b_n, 等价于 lim n-&gt;\infty, a_n&#x2F;b_n&#x3D;1</p>
+<ul>
+<li>例如 $sin(1&#x2F;2^n) \sim (1&#x2F;2)^n$</li>
+</ul>
+<p>级数中有新的判别法：比式判别法</p>
+<ul>
+<li>$\lim_{n\to \infty}a_{n+1}&#x2F;a_n &#x3D; L &lt; 1$ , 那么收敛，<ul>
+<li>这里核心思想就两个 小于1的等比数列和极限收敛</li>
+<li>第二比例有极限，所以可以被捆绑在明确小于一个明确小于1的数以内，所以至少是有界的,从而根据柯西的，截取尾部可以和任意小的想法</li>
+</ul>
+</li>
+</ul>
+<p>类似的，还是利用等比数列求和的想法 和 上面的 等价的想法，</p>
+<ul>
+<li>有了根式判别法 $(a_n)^{\frac{1}{n}}&#x3D;L&lt;1$</li>
+</ul>
+<p>级数的拆分 也有满足的四则运算，</p>
+<ul>
+<li>不过注意的是</li>
+</ul>
+<h2 id="23-求解级数问题"><a href="#23-求解级数问题" class="headerlink" title="23.求解级数问题"></a>23.求解级数问题</h2><h2 id="24-泰勒多项式、泰勒级数和幂级数导论"><a href="#24-泰勒多项式、泰勒级数和幂级数导论" class="headerlink" title="24. 泰勒多项式、泰勒级数和幂级数导论"></a>24. 泰勒多项式、泰勒级数和幂级数导论</h2><h2 id="25-求解估算问题"><a href="#25-求解估算问题" class="headerlink" title="25. 求解估算问题"></a>25. 求解估算问题</h2><h2 id="26-泰勒级数和幂级数：如何解题"><a href="#26-泰勒级数和幂级数：如何解题" class="headerlink" title="26. 泰勒级数和幂级数：如何解题"></a>26. 泰勒级数和幂级数：如何解题</h2><h2 id="27-参数方程和极坐标"><a href="#27-参数方程和极坐标" class="headerlink" title="27. 参数方程和极坐标"></a>27. 参数方程和极坐标</h2><h2 id="28-复数"><a href="#28-复数" class="headerlink" title="28. 复数"></a>28. 复数</h2><h2 id="29-体积、弧长和表面积"><a href="#29-体积、弧长和表面积" class="headerlink" title="29. 体积、弧长和表面积"></a>29. 体积、弧长和表面积</h2><h2 id="30-微分方程"><a href="#30-微分方程" class="headerlink" title="30. 微分方程"></a>30. 微分方程</h2><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>本书出了口语化流畅，细致内容，很多例子，以外，还有很大优点就是图多</p>
+]]></content>
+      <tags>
+        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
