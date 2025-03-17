@@ -198,7 +198,7 @@ $A_{m\times n}$
 
 $r=m=n$时1个解
 
-这里结论: 
+这里结论:
 
 - 解 = 特解+nullspace
 - 而 矩阵的rank决定了 特解存在性 与 nullspace的形状，也就决定了解的数目
@@ -385,14 +385,14 @@ dim(解空间)=2
 
 - graphs & networks
 - incidence matrices （关联矩阵）
-- kirchnoff's laws 
+- kirchnoff's laws
 
 与实际应用相关的
 
 Graphs: 点 和 边, 也可以表示电路系统，液压系统，桥系统
 
 ```
-A = 
+A =
          列对应点
 行对应 边 [        ], -1表示出，1表示入点
 ```
@@ -403,7 +403,7 @@ $Ax= [x入-x出...]^T=0$
 
 对于“连通图”
 
-零空间是 `[1,1,1,1,1,1]` 
+零空间是 `[1,1,1,1,1,1]`
 
 看成电势能，可以选一个点接地（xi=0）
 
@@ -415,7 +415,7 @@ nullspace(A^T) = 那么 线性无关的 A^T 的列 对应的图中的边 不含�
 
 连通图的不含回边含有所有点的图是树
 
-dim N(A^T) = m - r = 独立loops个数 = edges - (点数-1) 
+dim N(A^T) = m - r = 独立loops个数 = edges - (点数-1)
 
 点数-边数+独立环数=1
 
@@ -445,7 +445,7 @@ $A^TCAx=f$ 稳定电流问题，
 rref(A) =
   I   F  的形状
     O
-解形状 = 
+解形状 =
   -F
    O
 ```
@@ -461,7 +461,7 @@ rref(A) =
 
 这里 nullspace用上面的N(CD)=N(D)来算
 
-而`特解` 注意到 
+而`特解` 注意到
 
 ```
 [1 1 0] [1]   1
@@ -582,7 +582,7 @@ $p = A\hat{x} = A(A^TA)^{-1}A^T b$
 
 $P(b) = A(A^TA)^{-1}A^T b$, 这里的一个结论是，如果$A$是方阵且可逆，则 $P(b)=b$
 
-性质 
+性质
 
 - $P^T= P$, 这里要用到 对称矩阵的逆 是对称矩阵？啊？？？？？？
 - $P^2 = P$，这个同样从意义上 投影的投影幂等，从表达式上结合律
@@ -690,7 +690,7 @@ columns definitely independent if they are (perp.unit vectors/orthogornal vector
 
 orthog-normal vectors: 基两两正交，且每个基长度为1
 
-$Q=[q_1,\cdots,q_n]$ 
+$Q=[q_1,\cdots,q_n]$
 
 正交矩阵:
 - $Q^TQ = I$, 注意 虽然名字里没有 normal,只有orthog,但正交矩阵是要求normal的
@@ -709,7 +709,7 @@ $Q=[q_1,\cdots,q_n]$
 
 adhermar matrix, 全是1,-1组成的，还有系数的
 
-    [1 -2  2] 
+    [1 -2  2]
 1/3 [2 -1 -2]
     [2  2  1]
 ```
@@ -722,7 +722,7 @@ $P=Q(Q^TQ)^{-1}Q^T = QQ^T$
 - 再次 对称
 - 再次 幂等
 
-这种情况下 $\hat{x_i} = q_i^T b$ 
+这种情况下 $\hat{x_i} = q_i^T b$
 
 ---
 
@@ -730,12 +730,12 @@ Gram-Schmidt 正交化
 
 - 把一般的矩阵的线性无关的列向量 转化为正交列向量
 
-从两个向量开始 $(a,b) \to (a_1=a,b_1=b-\frac{aa^T}{a^Ta}b)$, 上面学的投影，完成后，再进行单位化$(q_1=\frac{a}{||a||},q_2=\frac{b}{||b||})$， 
+从两个向量开始 $(a,b) \to (a_1=a,b_1=b-\frac{aa^T}{a^Ta}b)$, 上面学的投影，完成后，再进行单位化$(q_1=\frac{a}{||a||},q_2=\frac{b}{||b||})$，
 
 - 这里视频上是$\frac{a^Tb}{a^Ta}a$的形式，这表现出是向量$a$的某个倍数，而且更容易计算
 - 因为“数”可以交换位置 $\frac{aa^T}{a^Ta}b = \frac{a^Tb}{a^Ta} a$
 
-三个向量 $(a,b,c) \to (a_1=a,b_1=b-\frac{aa^T}{a^Ta}b,c)$, 
+三个向量 $(a,b,c) \to (a_1=a,b_1=b-\frac{aa^T}{a^Ta}b,c)$,
 
 $\to (a_1=a,b_1=b-\frac{aa^T}{a^Ta}b,c_1=c-\frac{a_1a_1^T}{a_1^Ta_1}c-\frac{b_1b_1^T}{b_1^Tb_1}c)$, 这里因为前两项已经完成了正交，所以后面的减法才能合并成立
 
@@ -763,7 +763,7 @@ eigen values(固有值， 特征值)
 - 性质3. 每行都是可以独立考虑线性性质的，也就是固定其它行 有数乘和加法
 	- 3.1. 单行乘上t, 结果乘上t
 		- $\det kA = k^n \det A$
-	- 3.2. 两个矩阵n-1行相同, 那么它们的行列式相加 = 这相同的n-1行以及 对应的对位相加 的 矩阵的行列式.  
+	- 3.2. 两个矩阵n-1行相同, 那么它们的行列式相加 = 这相同的n-1行以及 对应的对位相加 的 矩阵的行列式.
 
 虽然直接上代数式更代数，但这里3个性质更 直观，但这样的性质有一些潜在的风险，例如 性质2
 	- 这里 数学一点 需要证明如果行两两不同，那么奇数次交换 和 偶数次交换 无法得到同样的矩阵， 而隐藏在里面的 正是排列数的内容，
@@ -832,8 +832,8 @@ $\det A =a_{11}C_{11}+a_{12}C_{12}+\cdots+a_{1n}C_{1n}$
 代数余子式的想法的拆解，能对于一些有规律的大矩阵得到递推公式
 
 ```
-1 1 
-1 1 1 
+1 1
+1 1 1
   1 1 1
     1 1 1
       1 1 ...
@@ -867,7 +867,7 @@ $x_{i}=\frac{\det B_i}{\det A}$, 其中 $B_i =$ 把$A$的第i列换成$b$, 这�
 
 感觉算法竞赛里 常见的还是高斯消元，但那偏应用，而这里是数学性质的推导
 
-这个的主要价值 是 提供了一个表达式，但不易于计算
+这个的主要价值 是 提供了一个表达式，但不易于计算, (三阶求逆的时候比较好用
 
 ---
 
@@ -894,6 +894,7 @@ x2 y2 1
 x3 y3 1
 )
 ```
+
 
 ## 21 eigenvalues特征值 与 eigenvectors特征向量
 
@@ -1014,8 +1015,8 @@ A is Sure to have n indep evectors (and be diagonaligable) if all the $\lambda$ 
 		- 则有 找到一个s-1有非零解，矛盾
 	- 另一个是空间意义的反证法
 		- 如果 特征向量 和前面的特征向量集合线性相关，那么就是在前面向量的生成空间中，而前面的可以看作生成空间的基（不一定正交）的放缩，容易证明在基的生成空间中，每个基的放缩不同时，对于非平行于基的点的变化一定带有旋转，
-	
-		
+
+
 
 
 当有重复特征值时
@@ -1069,7 +1070,7 @@ $\lambda_2=3, x_1=[1;-1]$
 
 solution: $u(t)=c_1e^{\lambda_1 t}x_1+c_2e^{\lambda_2 t}x_2$, drop from sky
 
-check:  $\frac{du}{dt}=c_1\lambda_1 e^{\lambda_1 t}x_1+c_2\lambda_2 e^{\lambda_2 t}x_2 = \lambda_1 x_1 c_1 e^{\lambda_1 t}x_1+\lambda_2 x_2 c_2e^{\lambda_2 t} = A(c_1e^{\lambda_1 t}x_1+c_2e^{\lambda_2 t}x_2 )=Au$ 
+check:  $\frac{du}{dt}=c_1\lambda_1 e^{\lambda_1 t}x_1+c_2\lambda_2 e^{\lambda_2 t}x_2 = \lambda_1 x_1 c_1 e^{\lambda_1 t}x_1+\lambda_2 x_2 c_2e^{\lambda_2 t} = A(c_1e^{\lambda_1 t}x_1+c_2e^{\lambda_2 t}x_2 )=Au$
 带入得 $u(t)=c_1\cdot 1 [2;1]+c_2e^{-3t}[1;-1]$
 
 利用$u(0)=[2;1]$
@@ -1216,7 +1217,7 @@ q = integral(f,0,2*pi);
 - 特征向量
 - sum = trace, prod = det
 - 对角化
-	- 幂次 
+	- 幂次
 - 差分/递推 方程
 	- fib
 	- 周期的递推，在特征值视角上 也是 复平面的单位圆
@@ -1228,8 +1229,8 @@ q = integral(f,0,2*pi);
 
 `a = [2;1;2]`, 任意向量到a的投影矩阵P $=\frac{aa^T}{a^Ta}$, 空间是$A(A^TA)^{-1}A^T$
 
- $P = 1/9 [4,2,4;2,1,2;4,2,4]$, 
- 
+ $P = 1/9 [4,2,4;2,1,2;4,2,4]$,
+
  特征值: 维度是1,所以现有有两个是0, 另一个 = $trace - 0-0=1$
 
 特征值 对应的特征向量是a,因为$Pa=a$
@@ -1249,7 +1250,7 @@ $u_k=A^ku_0=c_1\lambda_1^kx_1+c_2\lambda_2^kx_2+c_3\lambda_3^ku_3$
 ```
  1       4
  2 [k] = 5
- 3       9   
+ 3       9
 ```
 
 $a^Ta \hat{k}=a^Tb$
@@ -1268,7 +1269,7 @@ $\hat{k} = \frac{38}{14}$
 - $det(A^{-1}) = \prod \frac{1}{\lambda_i}$
 	- $x=Ix=A^{-1}Ax=A^{-1}\lambda x$
 		- $A^{-1}x=\frac{1}{\lambda}x$, 总感觉之前和现在一直没证明 有重复存在时的一些对应关系
-- $trace(A+I) = \sum_i (\lambda_i+1)$ 
+- $trace(A+I) = \sum_i (\lambda_i+1)$
 
 ---
 
@@ -1302,7 +1303,7 @@ $A=A^T$ 性质
 		- $x_1^TAx_2=x_2^TA^Tx_1=x_2^TAx_1 = x_2^T\lambda_1 x_1$
 		- 那么有 $\lambda_1 x_1^Tx_2=\lambda_2 x_2^Tx_1$, 要么正交，要么 相等
 			- 这里还说明 $A$和$A^T$ 的不同特征值的特征向量 正交
-		
+
 来自复习3 特征向量正交+特征值实数 => 是对称矩阵 prove ???？？？
 
 通常$A=S\Lambda S^{-1}$
@@ -1342,19 +1343,19 @@ positive definite symmetric matrix 正定对称矩阵
 
 - 所有 特征值 是正的
 - 所有 pivots 是 positive
-	- $\det = \prod pivots > 0$ 
+	- $\det = \prod pivots > 0$
 - all subdeterminants are positive, 所有 余子式非负
 - 上面 这三条 是相互可推的？prove？？？？？？
 
 ```
-5 2 
+5 2
 2 3
 主元, 5, 11/5
 特征值, 4\pm sqrt(5)
 ```
 
 ## 27 复数矩阵，FFT 傅里叶矩阵
- 
+
 相当于一个插入的分支章节
 
 - complex vectors matrices
@@ -1374,7 +1375,7 @@ Hermition写法$z^Hz$ 表示 `共轭`+`转置`, inner product
 
 symmetric $A^T=A$ no good if A complex
 
-$\bar{A}^T=A$或者$A^H=A$ 例如 $[2,3+i;3-i,5]$ 
+$\bar{A}^T=A$或者$A^H=A$ 例如 $[2,3+i;3-i,5]$
 
 同时 重新 定义 正交, 也重新定义 $Q$
 
@@ -1394,7 +1395,7 @@ It's just math starts counting with one, and electrical engineers start counting
 0-index Fn = []
 1 1       1          ... 1
 1 w       w2         ... w^{(n-1)}
-1 w^2     w4         
+1 w^2     w4
 ...
 1 w^{n-1} w^{2(n-1)} ... w^{(n-1)(n-1)}
 ```
@@ -1432,7 +1433,7 @@ P 的形状: (奇偶穿插矩阵)
   1
     1
       1
- 1      
+ 1
    1
      1
        1
@@ -1501,7 +1502,7 @@ why什么对正定性感兴趣，椭圆/双曲线
 
 判定方式
 - 特征值均正 $\lambda_1 >0, \lambda_2 >0$, 有等于零 则 是semi半正定
-- 从左上角的子det均正 $a >0,ac-b^2>0$ 
+- 从左上角的子det均正 $a >0,ac-b^2>0$
 - rref以后的主元为正，pivots $a > 0, \frac{ac-b^2}{a} > 0$
 - $x^TAx > 0$
 
@@ -1517,7 +1518,7 @@ why什么对正定性感兴趣，椭圆/双曲线
 - $x^TAx=2x_1^2+12x_1x_2+18x_2^2$
 
 
-matlab 
+matlab
 
 ```
 f=@(x,y) 2*x.^2+12*x.*y+1*y.^2;
@@ -1594,10 +1595,10 @@ A,B相似，意味着,存在$M$
 
 $B=M^{-1}AM$
 - 性质： 相似矩阵有相同的特征值，因为她们都能变化为 特征值的对角矩阵, 但这个性质不充分，见下
-- 
+-
 - $Ax=\lambda x$
 	- $(M^{-1}AM)(M^{-1}x)=\lambda(M^{-1}x)$
-	
+
 
 核心依然是 $S^{-1}AS=\Lambda$, $S$是特征向量矩阵
 
@@ -1785,7 +1786,7 @@ T: $R^2\to R^2$
 ```
   c0
 A c1 =   c1
-  c2    2c2 
+  c2    2c2
 
 A= 0 1 0
    0 0 2
@@ -1810,7 +1811,7 @@ JPEG = Joint Photograpihc Experts Group
 better basis
 
 ```
-1  1      1 
+1  1      1
 1  1     -1
 1 -1      1
 1 -1 ... -1
@@ -1894,7 +1895,7 @@ $c=P^{-1}x$
 			- $A^n 相似于 B^n$
 			- 意义 通过不同的基表示同样的东西
 		- SVD: $A=U Sigma V^T$ 对于非对称矩阵的 正交矩阵 对角矩阵 正交矩阵 的分解
-			
+
 
 ---
 
@@ -1930,7 +1931,7 @@ A 对称 且 正交矩阵
 - 证明 1/2 (A+I) 是一个投影矩阵
 	- 特征值 只有0,1
 	- 对称:显然
-	- 幂等: 1/4(A^2+2A+I) = 1/2(A+I)? 
+	- 幂等: 1/4(A^2+2A+I) = 1/2(A+I)?
 		- 因为$A=A^T=A^{-1}$ 得证
 
 ## 34 左逆，右逆，伪逆
