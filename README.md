@@ -1,5 +1,5 @@
-Math
-====
+[Math](https://yexiaorain.github.io/Math/)
+==========================================
 
 ```bash
 yarn global add hexo-cli
