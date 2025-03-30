@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="微分法 differentiation">
+    <meta name="description" content="微分法 differentiation实函数中的导数 the derivative of a real function5.1 Let f be defined (and real-valued) on [a,b], For any x in [a,b] form the quotient  $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Walter Rudin 数学分析原理 5 微分法">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="微分法 differentiation">
+<meta property="og:description" content="微分法 differentiation实函数中的导数 the derivative of a real function5.1 Let f be defined (and real-valued) on [a,b], For any x in [a,b] form the quotient  $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-02-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-30T16:07:44.285Z">
+<meta property="article:modified_time" content="2025-03-30T16:14:32.751Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="数学分析">
 <meta property="article:tag" content="微积分">
@@ -268,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -319,15 +319,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="微分法-differentiation"><a href="#微分法-differentiation" class="headerlink" title="微分法 differentiation"></a>微分法 differentiation</h2><span id="more"></span>
-
-<h3 id="实函数中的导数-the-derivative-of-a-real-function"><a href="#实函数中的导数-the-derivative-of-a-real-function" class="headerlink" title="实函数中的导数 the derivative of a real function"></a>实函数中的导数 the derivative of a real function</h3><p>5.1 Let f be defined (and real-valued) on <code>[a,b]</code>, For any x in <code>[a,b]</code> form the quotient</p>
+        <h2 id="微分法-differentiation"><a href="#微分法-differentiation" class="headerlink" title="微分法 differentiation"></a>微分法 differentiation</h2><h3 id="实函数中的导数-the-derivative-of-a-real-function"><a href="#实函数中的导数-the-derivative-of-a-real-function" class="headerlink" title="实函数中的导数 the derivative of a real function"></a>实函数中的导数 the derivative of a real function</h3><p>5.1 Let f be defined (and real-valued) on <code>[a,b]</code>, For any x in <code>[a,b]</code> form the quotient</p>
 <ul>
 <li>$\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,t\neq x$</li>
 <li>define: $f’(x)&#x3D;\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f </li>
 <li>如果 $f’(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable</li>
 <li>类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数</li>
 </ul>
+<span id="more"></span>
+
 <p>5.2 f定义在<code>[a,b]</code>上, 如果f在点$x\in[a,b]$可微, 那么f在x点连续</p>
 <ul>
 <li>f(t)-f(x)&#x3D;f’(x) (t-x), 可微左边f’(x)对于给定x是常数，所以 趋于0</li>

@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分">
+    <meta name="description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分  积分的定义和存在性 definition and existence of the integral6.1 let [a,b] be a given interval. by a partition P of [a,b] we">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分">
+<meta property="og:description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分  积分的定义和存在性 definition and existence of the integral6.1 let [a,b] be a given interval. by a partition P of [a,b] we">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-02-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-30T16:07:44.285Z">
+<meta property="article:modified_time" content="2025-03-30T16:14:32.751Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="数学分析">
 <meta property="article:tag" content="微积分">
@@ -268,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -324,8 +324,6 @@
 <li>后面推广到区间上的复值和向量值函数的积分</li>
 <li>10～11章 再讨论在不是区间上的积分</li>
 </ul>
-<span id="more"></span>
-
 <h3 id="积分的定义和存在性-definition-and-existence-of-the-integral"><a href="#积分的定义和存在性-definition-and-existence-of-the-integral" class="headerlink" title="积分的定义和存在性 definition and existence of the integral"></a>积分的定义和存在性 definition and existence of the integral</h3><p>6.1 let <code>[a,b]</code> be a given interval. by a partition P of [a,b] we mean a finite set of points $x_0,\cdots,x_n$ where</p>
 <ul>
 <li>$a &#x3D; x_0 \le x_1 \le \cdots \le x_{n-1} \le x_n&#x3D;b$</li>
@@ -350,6 +348,8 @@
 </ul>
 </li>
 </ul>
+<span id="more"></span>
+
 <p>6.2 设g是<code>[a,b]</code> 上一个单调递增函数，g(a),g(b)有限，所以g在[a,b]上有界, 对于a,b的每个分割法P</p>
 <ul>
 <li>$\Delta g_i&#x3D;g(x_i)-g(x_{i-1}) \ge 0$</li>

@@ -260,7 +260,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,807 +358,14 @@
 </ul>
 </li>
 </ul>
-<p>&lt;–more–&gt;</p>
-<h2 id="一元-多项式"><a href="#一元-多项式" class="headerlink" title="一元 多项式"></a>一元 多项式</h2><p>$\sum_{i&#x3D;0}^n a_ix^i$</p>
-<p>系数$a_0\cdots,a_{n}\in K$数域$K$</p>
-<ul>
-<li>表法唯一<ul>
-<li>如果如此形式的表达式 相等，当且仅当它们有完全相同的项（除去系数为0的项)</li>
-<li>称作 数域K的一个一元多项式</li>
-</ul>
-</li>
-<li>系数全为0的多项式称作 零多项式 记作 0</li>
-<li>deg f(x) &#x3D; 最高系数非零对应的次数， 零次多项式 不含 零多项式 &#x3D; K中的非零元<ul>
-<li>deg非零常数 &#x3D; 0</li>
-<li>$deg 0 &#x3D; -\infty$</li>
-</ul>
-</li>
-<li>K[x]&#x3D;{一元多项式}<ul>
-<li>加法 同次数系数对应相加, 满足交换律，结合律，有零元，有逆元</li>
-<li>乘法 系数卷积形式，</li>
-<li>数量乘法， 所有系数乘上k</li>
-<li>因为满足 线性法则，所以对于 加法和数量乘法 成为数域K上一个先行空间<ul>
-<li>基 : {1,x,x^2,x^3…} 线性唯一表出所有， 一个无限维的线性空间</li>
-<li>那么它的任意有限子集 也线性无关</li>
-</ul>
-</li>
-<li>K[x] 中乘法 满足律 交换律，对加法有分配率<ul>
-<li>deg(f(x)) + g(x)) &lt;&#x3D; max(deg(f(x)),deg(g(x)))<ul>
-<li>两个次数不等式 取等</li>
-<li>次数相等时可能相等 可能 更小（抵消掉）</li>
-</ul>
-</li>
-<li>deg(f(x)g(x)) &#x3D; deg(f(x))+deg(g(x)), 这个 也是把 deg 0 设为-infty的好处而不是-1<ul>
-<li>推论 f(x)!&#x3D;0 g(x)!&#x3D;0 则 f(x)g(x)!&#x3D;0</li>
-<li>推论 f(x)g(x)&#x3D;0 则 f(x)&#x3D;0或g(x)&#x3D;0</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>类似的 整数, n阶矩阵(没有乘法的交换律), 偶数（没有单位元）<ul>
-<li>抽象出环的概念<ul>
-<li>2个代数运算 +, * 满足<ul>
-<li>加法<ul>
-<li>运算封闭</li>
-<li>结合律 (a+b)+c&#x3D;a+(b+c)</li>
-<li>交换律 a+b&#x3D;b+a</li>
-<li>零元: 0+a&#x3D;a+0&#x3D;a</li>
-<li>逆元: 对于a存在b, a+b&#x3D;b+a&#x3D;0</li>
-</ul>
-</li>
-<li>乘法<ul>
-<li>运算封闭</li>
-<li>结合律 ab&#x3D;ba</li>
-<li>对于加法的分配<ul>
-<li>a(b+c)&#x3D;ab+ac</li>
-<li>(b+c)a&#x3D;ba+ca</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>则称作环</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="一元多项式环的概念和性质"><a href="#一元多项式环的概念和性质" class="headerlink" title="一元多项式环的概念和性质"></a>一元多项式环的概念和性质</h2><p>R是一个环</p>
-<p>减法： 不过是加法和逆元的一个 语法糖？</p>
-<ul>
-<li>交换环：如果乘法满足交换律</li>
-<li>单位元(乘法的零元，不一定有例如素数环，偶数环): R中有一个元素e, 对于a\inR,  ea&#x3D;ae&#x3D;a</li>
-<li>对于a\in R,如果存在非零b,使得 ab&#x3D;0, 则a是一个左零因子<ul>
-<li>ba&#x3D;0 右零因子，（通称零因子），例如 矩阵中的 <code>[0,1;0,0]</code>， 这是乘法中的定义</li>
-<li>零元（加法的零元） 是零因子<ul>
-<li>0&#x3D;0a+(-0a)&#x3D;(0+0)a+(-0a)&#x3D;0a+0a+(-0a)&#x3D;0a+0&#x3D;0a</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>子环：<ul>
-<li>环R中一个非空子集R1,如果对于R的 加法 乘法运算 也成为一个环，则称作子环<ul>
-<li>也就是 保持运算规则，但集合是子集合，那么 环&lt;子集合,加,乘&gt;是 环&lt;集合,加,乘&gt;的 子环</li>
-</ul>
-</li>
-<li>充要条件 a,b\in R1, 可推出 a+(-b) \in R1, ab\in R1 <ul>
-<li>方便验证是不是环</li>
-<li>K[给定n阶矩阵] ，是有单位元I的交换环</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>k和kI 双射 保持 加法 乘法<ul>
-<li>也就是 元素双射，然后运算有对应的运算（注意！集合不同 加法&#x2F;乘法一定不同，集合相同，加法乘法也可以不同）</li>
-<li>称作 同构映射<ul>
-<li>例如 i 与-i映射，i与2i映射</li>
-<li>如果 环R和环R‘有一个同构映射 $\sigma$ 且R有单位元e，则sigma(e)是R’的单位元</li>
-<li>同构映射的用处 是 例如 简单的运算研究其延伸规则时， 对应的抽象复杂也同样的效果，例如 多项式 $(x+3)^2&#x3D;x^2+6x+9$,那么 <code>K[A]</code>和多项式 同构的话, $(A+3I)^2&#x3D;A^2+6A+9I$, 整个都是在“证明 这种带入的数学合法性”<ul>
-<li>类似的，如果两个 域 同构，那么一个域的子域，按照同样的“同构映射” 能得到另一个域的 子域，并且和前一个子域是“同构映射”</li>
-<li>所以这种玩意使用的时候，一个很重要的是延伸结论时 其抽象的最小依赖是什么，例如 矩阵运算对于乘法没有交换律，所以如果延伸结论有用到交换律，那么对应的映射不一定成立，</li>
-<li>再更不数学一点，就是平时打比方举例的感觉，而现实中很多时候 并不足够的同构</li>
-</ul>
-</li>
-<li>注意 其中的x, k[A]的A，在研究结构的时候都是不具体运算的，要保持其相关内容“基”的性质</li>
-<li>扩环<ul>
-<li>$\sigma: K[x]\to R$</li>
-<li>$f_{K[x]}(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i \to f_R(t) \sum_{i&#x3D;0}^n \tau(a_i)t^i$</li>
-<li>感觉7的定理1的 证明有点多于，感觉从 “同构的” 角度讲，把 集合，运算 全部都能看成参数，那么参数对应了 就能证明了？</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-2-整除关系，带余除法"><a href="#7-2-整除关系，带余除法" class="headerlink" title="7.2 整除关系，带余除法"></a>7.2 整除关系，带余除法</h2><ul>
-<li>$K[x]$ 整除:<ul>
-<li>整除符号 还是 左 | 右 表示 <code>右=左*?</code></li>
-<li>注意 这是多项式 中的整除<ul>
-<li>f(x) | g(x) 且 g(x) | f(x) 那么相伴，并不是相等<ul>
-<li>例如 2 | 1 且  1 | 2 在多项式中的“整除”定义上是对的</li>
-<li>说明两个 多项式deg相等，成数量倍数关系</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>f(x)可以表示成 $f(x)&#x3D;g(x)h(x)$ 那么 g(x)能整除f(x)<ul>
-<li>特殊的 任何 零多项式 能整除 零多项式<ul>
-<li>0&#x3D;0f(x)</li>
-</ul>
-</li>
-<li>$\mathrm{deg} g(x) \le \mathrm{deg} f(x)$</li>
-</ul>
-</li>
-<li>g(x) | f_i(x) 则 g(x) | \sum ui(x)fi(x)</li>
-</ul>
-</li>
-<li>也可以定义带余除法了<ul>
-<li>f(x)&#x3D;h(x)g(x)+r(x), g(x) !&#x3D;0, deg r(x) &lt; deg g(x),</li>
-<li>整除 关系不会随着 域扩大而改变<ul>
-<li>因为h，r 属于小的域 也就属于更大的域, 两个表法唯一，扩域 不会产生多射</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>书上7.2 多 整数环 和 整环R上的矩阵</p>
-<p>来到整数环 a&#x3D;qb+r, 0&lt;&#x3D;r&lt;|b|, 给定整数a,b , 存在唯一一对整数 (q,r)</p>
-<ul>
-<li>这玩意能和 多项式映射吗？</li>
-</ul>
-<hr>
-<p>未来章节9.8会用到</p>
-<p>定义3 R是整环，由R中sn个元素排成s行n列的一张表，称为R上的一个$s\times n$矩阵</p>
-<ul>
-<li>可以定义 R上矩阵的 加法&#x2F;纯量乘法（矩阵乘以R中的元素）&#x2F;乘法 这3种运算</li>
-<li>可以定义3种初等 行列变换（这里稍微注意的是，乘的时候乘可逆元，而 跨行乘加的时候可以h(lambda) ）</li>
-<li>可以类似的定义行列式</li>
-<li>可以定义可逆矩阵概念，注意 可逆矩阵 的充要是 |A|为R中可逆元</li>
-</ul>
-<p>定义4, A是整环R上一个非零矩阵，如果A有一个r阶子式不为0,而所有r+1阶子式（如果有的话）权威0,那么称作A的秩为r.零矩阵秩规定为0</p>
-<ul>
-<li>如果 $A(\lambda)$ 能够经过一系列初等变换变成$B(\lambda)$ ，那么称 他们相抵</li>
-</ul>
-<p>定理3 任意一个非零n级$\lambda-$矩阵一定相抵于对角$\lambda-$矩阵, diag {$d_1(\lambda),d_2(\lambda),\cdots,d_n(\lambda)$}</p>
-<ul>
-<li>其中 $d_i(\lambda)|d_{i+1}(\lambda)$</li>
-<li>且对于非零的$d_i(\lambda)$其最高次系数为1，</li>
-<li>称作相抵标准形</li>
-</ul>
-<p>证明：归纳法</p>
-<p>n&#x3D;1 时，只需 乘上 首相系数的逆元</p>
-<p>对于n&gt;1,</p>
-<ul>
-<li>若 第一行，第一列全为0,则 归纳成立</li>
-<li>否则 至少一个不为0,可以交换使得 $a_{11} \neq 0$</li>
-<li>令 S&#x3D;{$G(\lambda) | G(\lambda)与 A(\lambda)相抵，且g_{11}(\lambda)\neq 0$}<ul>
-<li>在S中取$B(\lambda)$,其中$deg b_{11}(\lambda)\le deg g_{11}(\lambda),\forall g_{11}(\lambda)\neq 0$ 也就是 S中的所有矩阵中 1行1列多项式的deg最小的那个，且$b_{11}$最高次系数为1</li>
-<li>希望能证明，这样的$b_{11}(\lambda)$ 整除第一行第一列所有元素<ul>
-<li>什么工具呢，带余除法，如果不是倍数，那么可以用带余除法得到更小deg的 $\lambda$表达式，再交换就行，和上面找最小deg的矛盾</li>
-<li>那么一旦能整除，则可以初等变换，让第一行 第一列除了它全为0,剩下的就可以归纳变换了</li>
-<li>而归纳变换以后 得到的是 diag {b11 , … 归纳的对角，} &#x3D; diag{b11,d2,d3,….}</li>
-<li>如果 b11 不是 d2的因数<ul>
-<li>对于左上角2x2的区域可以 <code>[b11,0;0,d2]=&gt;[b11,d2;0,d2]=&gt; [b11,剩余r;0,d2]</code> 还是带余除法，这样又能得到更小的矛盾</li>
-<li>所以 b11是d2的因数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>定理4. 把上面的定理3是 lambda多项式环，换成整数环，所以对于一般的矩阵相抵于一个 对角整数矩阵，且有对角约数关系</p>
-<h2 id="7-3-最大公因式"><a href="#7-3-最大公因式" class="headerlink" title="7.3 最大公因式"></a>7.3 最大公因式</h2><p> 公因式</p>
-<ul>
-<li>c(x) | f(x), c(x) | g(x)</li>
-<li>最大公因式 任意c(x) | d(x) ,且 d(x)是公因式<ul>
-<li>关于0的：<ul>
-<li>f(x) | 0</li>
-<li>0 | 0</li>
-</ul>
-</li>
-<li>存在性: 辗转相除法 证明 f和g的公因式 和 r与r的公因式 一样<ul>
-<li>同时得到 能表示成 u(x)f(x)+v(x)g(x)&#x3D;d(x)</li>
-</ul>
-</li>
-<li>性质 首个系数&#x3D;1的最大公因式 唯一， deg 唯一</li>
-<li>互素：(f(x),g(x))的最大首一公因式 &#x3D; 1<ul>
-<li>同时得到 能表示成 u(x)f(x)+v(x)g(x)&#x3D;1 充要</li>
-<li>互素性 同样不随着数域扩大而改变</li>
-</ul>
-</li>
-<li>f(x) | g(x)h(x), (f(x),g(x)) 则 f(x) | h(x) 这里证明了很多 数论里面会证明的东西，所以如果有一个东西能建立 多项式 和 整数之间的 同构关系就好了，</li>
-</ul>
-</li>
-</ul>
-<p>四、最大公因式应用之一： lambda-矩阵的行列式因子</p>
-<p>定义6 设A(lambda)是一个sxn lambda-矩阵 ，对于A(lambda)的所有k阶子式的首一最大公因式D_k(lambda)称为A(lambda)的k阶行列式因子</p>
-<p>定理6,相抵的lambda-矩阵，它们的秩相等， 并且各阶行列式因子也对应相等</p>
-<ul>
-<li>A-&gt; j行+&#x3D;k * i行 得到 B<ul>
-<li>那么B中 不含j行的行列式不变</li>
-<li>B中含有j行 那么行列式 &#x3D; 原来的B + 原来的j行替换成h(lambda) * i行<ul>
-<li>如果包含i行，那么 行列式不变</li>
-<li>如果不包含i行，那么是 （原来的+ h(lambda) * 原来的替换成i行)<ul>
-<li>注意到 gcd(原来的B，原来的替换成i行) &#x3D; gcd(原来的B+h(lambda) * 原来的替换成i行，原来的替换成i行) 所以 总的gcd不变</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>定理7. n级 lambda-矩阵 A(lambda)的相抵标准型是唯一的</p>
-<p>定义7：相抵标准型主对角线上 非零元 称为 A(lambda)的不变因子</p>
-<p>定理8 两个矩阵相抵，充要条件，有相同的不变因子，或者有相同的各阶行列式因子</p>
-<h2 id="7-4-不可约多项式"><a href="#7-4-不可约多项式" class="headerlink" title="7.4 不可约多项式"></a>7.4 不可约多项式</h2><p>注： 这玩意儿的性质像整数里的素数</p>
-<p>不可约定义：f(x)只有K中非零数，和f(x)的相伴元（非零数系数倍数的）是它的因式</p>
-<ul>
-<li>还是 想不出一个映射，能 完成 整数和多项式之间的映射，感觉好难受啊，处处都很像 但想不出一个映射<ul>
-<li>一个点是 像整数加法中 1+1&#x3D;2 ，变到了乘法的两个不同元</li>
-<li>而 在多项式中 (x+x&#x3D;2x) 是一个相伴多项式，并没有变成乘法的两个不同元，所以似乎没法同构？</li>
-</ul>
-</li>
-</ul>
-<p>$p(x)\in K[x]$ 中一个次数大于0的多项式，以下等价</p>
-<ul>
-<li>$p(x)$是不可约多项式</li>
-<li>$\forall f(x)\in K[x]$有$p(x)|f(x)$或$(p(x),f(x))&#x3D;1$</li>
-<li>在$K[x]$中，从$p(x)|f(x)g(x)$可推出 $p(x)|f(x)$或$p(x)|g(x)$</li>
-</ul>
-<p>推论：</p>
-<ul>
-<li>p(x)|f(x),且p(x)不可约 那么p(x)|f(x)中的某个因式</li>
-<li>K[x] 中 一次多项式不可约</li>
-</ul>
-<p>教材上这里 定义2,定理3,定理4 也就是 数论中整数的对应的一些命题</p>
-<p>唯一因式分解定理(这个也是和整数的 唯一分解很像)</p>
-<ul>
-<li>$f(x)&#x3D;p_1(x)p_2(x)\cdots p_s(x)&#x3D;q_1(x)q_2(x)\cdots q_s(x)$ 的表示,s固定，适当排列后$p_i(x)\sim q_i(x)$</li>
-<li>归纳法：<ul>
-<li>如果$f(x)&#x3D;g(x)h(x)$ 可分解，则f可分解</li>
-<li>如果f&#x3D;prod p &#x3D; prod q,考虑p的最后一个，一定有q中是它的倍数，而q不可分解，所以p是 对应的q的倍数，两个相伴，两边同时去掉p,q剩余根据归纳唯一分解，也有s唯一</li>
-</ul>
-</li>
-</ul>
-<p>综上：</p>
-<ul>
-<li>带余除法</li>
-<li>最大公因式</li>
-<li>互素</li>
-<li>不可约多项式</li>
-<li>唯一因式分解定理</li>
-</ul>
-<h2 id="7-5-重因式"><a href="#7-5-重因式" class="headerlink" title="7.5 重因式"></a>7.5 重因式</h2><p>$p^k(x) | f(x),p^{k+1}(x) \not{|} f(x),k &gt; 1$, k重多项式</p>
-<p>定义2 <code>K[x]</code>中多项式 的一阶导数: $f’(x)&#x3D;\sum_{i&#x3D;1}^n  ia_ix^{i-1}$</p>
-<ul>
-<li>分配率 (f+g)’&#x3D;f’+g’</li>
-<li>数乘 (cf)’&#x3D;c(f’)</li>
-<li>乘法 (fg)’&#x3D;f’g+fg’</li>
-<li>整幂次复合运算 $(f^m(x))’&#x3D;mf^{m-1}(x)f’(x)$</li>
-</ul>
-<p>定理1:</p>
-<ul>
-<li>p(x)是f(x)的k重因式，那么p(x)是f’(x)的k-1重因式</li>
-</ul>
-<p>推论:</p>
-<ul>
-<li>p(x)是f(x)的重(&gt;1)因式,当且仅当 p(x) | (f(x),f’(x))</li>
-<li>(f(x),f’(x)) \neq 1 &lt;&#x3D;&gt; f(x)有重因式 </li>
-<li>f(x)\in K[x] 有无有重因式，不会随着数域扩大而改变</li>
-</ul>
-<h2 id="7-6-多项式的根，复数域上的不可约多项式"><a href="#7-6-多项式的根，复数域上的不可约多项式" class="headerlink" title="7.6 多项式的根，复数域上的不可约多项式"></a>7.6 多项式的根，复数域上的不可约多项式</h2><p>定理一</p>
-<ul>
-<li>$f(x)&#x3D;h(x)(x-a)+f(a)$, 也就是f(x)除以x-a的余项是f(a)</li>
-<li>x-a|f(x) &lt;&#x3D;&gt; f(a)&#x3D;0</li>
-</ul>
-<p>定义1：K是数域，R是一个有单位元的交换环，且R可看成K的一个扩环，$f(x)\in K[x]$, 如果有$c\in R$使得$f(c)&#x3D;0$那么称c是在R中的一个根</p>
-<ul>
-<li>f(x)在实数域，和复数域中的根分别称为 复根和实根</li>
-<li>$f(x)\in Q[x]$ 则 称作有理根</li>
-</ul>
-<p>定理2（Bezout定理） <code>K[x]</code>中,x-a是f(x)的一次因式 当且仅当 a是f(x)在K中的一个根</p>
-<ul>
-<li>对应 重因式的定义重根</li>
-<li>注意的是 这里的假设是 $f(x)&#x3D;k \prod_{i&#x3D;1\to s} (x_i-c_i)^ri * \prod_{j&#x3D;s+1\to t} p_j(x)^rj$ 也就是分解成<ul>
-<li>系数k</li>
-<li>首一的一次因式的重幂次写法</li>
-<li>首一的大于一次的不可分解因式的幂次写法</li>
-</ul>
-</li>
-</ul>
-<p>定理3. K[x]中n次 多项式 f(x)在K中之多有n个根</p>
-<p>定理4：$f(x),g(x)\in K[x]$ 次数不超过n,如果有n+1各不同的 $c_{1\to n+1}$使得$f(c_i)&#x3D;g(c_i)$ 则两个相等</p>
-<ul>
-<li>考虑差 有n+1重根，所以差只能是0</li>
-<li>这里， 可以把 多项式 映射到 一元多项式函数，其定义域是K<ul>
-<li>这是从$K[x]$到 $K_{pol}$的一个映射</li>
-</ul>
-</li>
-<li>函数的加法 和 乘法 有对应的映射</li>
-<li>多项式 是表达式， 函数是映射，现在是把 （表达式）映射到（映射）</li>
-</ul>
-<p>定理5：数域K上的两个多项式f(x)与g(x)如果不相等，那么它们的诱导的多项式函数f,g也不相等</p>
-<ul>
-<li>函数如果相等，有无穷多元素a,使得 f(a)&#x3D;g(a) 根据上面的，两个多项式相等</li>
-</ul>
-<p>定义2, 设R和R‘是两个换，如果存在 R到R’的一个双射$\sigma$，保持加法和乘法运算，</p>
-<p>$\sigma(a+<em>R b)&#x3D;\sigma(a)+</em>{R’}\sigma(b)$</p>
-<p>$\sigma(a*<em>R b)&#x3D;\sigma(a)*</em>{R’}\sigma(b)$</p>
-<p>那么是一个同构映射，换是同构的 $R\simeq R’$, 上面有$K[x]\simeq K_{pol}$</p>
-<p>可以用 函数值f(a)&#x3D;0来研究 不可约多项式</p>
-<hr>
-<p>研究复数域多项式中不可约多项式有哪些</p>
-<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i \in C[x], \mathrm{deg} f(x)&#x3D;n &gt; 0$</p>
-<p>若$f(x)$无复数根,$\forall z\in C,f(z)\neq 0$,$\Phi(z)&#x3D;\frac{1}{f(z)}$的定义域为$C$</p>
-<ul>
-<li>$\Phi(x)$ 在复平面上 每个点都有导数(在每个点解析)，在复平面上 “解析”</li>
-</ul>
-<p>$z&#x3D;r(\cos\theta+i\sin\theta)$</p>
-<p>$z^n&#x3D;r^n(\cos n\theta+i\sin n\theta)$</p>
-<p>$|z|\to +\infty$时</p>
-<p>$f(z)&#x3D;|\sum_{i&#x3D;0}^n a_iz^i|$</p>
-<p>$\ge |a_nz^n|-|\sum_{i&#x3D;0}^n a_iz^i|$ 三角定理</p>
-<p>$\ge |a_n||z|^n-(\sum_{i&#x3D;0}^n |a_i||z|^i)$</p>
-<p>$\lim_{|z|\to +\infty}\Phi(z) &#x3D;\frac{\frac{1}{|z|^n}}{a_n+…}\to 0$ 高数的证明过程 就是去钦定一个max,把小的部分消掉</p>
-<p>存在$r &gt; 0,M_1 &gt;0$使得$|z|&gt;r$有$|\Phi(z)|\le M_1$ 从而有界闭集 $|z|\le r$中 有上界</p>
-<p>根据 复变函数Liouvill定理？？？？？？: 在复平面C上解析且有界的函数必为常值函数，所以$\Phi(z)&#x3D;b$, 所以f(x)必有复根</p>
-<p>Liouville定理 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/393074166">https://zhuanlan.zhihu.com/p/393074166</a></p>
-<p>定理6：代数基本定理：每一个次数大于0的复系数多项式至少一个复根</p>
-<ul>
-<li><code>C[x]</code>中不可约多项式只有一次多项式</li>
-<li>n次有n个根</li>
-</ul>
-<p>定理7：复系数多项式唯一因式分解定理</p>
-<ul>
-<li>$f(x)&#x3D;k\prod (x-c_i)^l_i$</li>
-</ul>
-<h2 id="7-7-实数域上的不可与多项式，实系数多项式的实根"><a href="#7-7-实数域上的不可与多项式，实系数多项式的实根" class="headerlink" title="7.7 实数域上的不可与多项式，实系数多项式的实根"></a>7.7 实数域上的不可与多项式，实系数多项式的实根</h2><p>$f(x)&#x3D;\sum_{i&#x3D;0}^na_ix^i\in\mathbb{R}[x]$</p>
-<p>如果有复根c,则c的共轭也是根</p>
-<ul>
-<li>$f(c)&#x3D;0$说明复部为0,$f(\bar{c})&#x3D;\bar{f(c)}&#x3D;\bar{0}&#x3D;0$</li>
-</ul>
-<p>不可约多项式:</p>
-<ul>
-<li>1次多项式</li>
-<li>判别式小于0的二次多项式 &#x3D;&gt; 有复根</li>
-</ul>
-<p>任取R上一个不可约多项式$p(x)$</p>
-<ul>
-<li>如果有实根c &#x3D;&gt; x-c 和p(x)相伴</li>
-<li>如果有复根c &#x3D;&gt; $(x-c)(x-\bar{c}) |p(x)$<ul>
-<li>共轭成对出现</li>
-<li>而$(x-(a+bi))(x-(a-bi))&#x3D;x^2-2ax+a^2-b^2$<ul>
-<li>所以p(x)和这个相伴</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>从而 实系数多项式的唯一因式分解定理<ul>
-<li>f(x) &#x3D; k \prod 一次式 \prod 判别式小于0的二次式</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-8-有理数域上的不可约多项式"><a href="#7-8-有理数域上的不可约多项式" class="headerlink" title="7.8 有理数域上的不可约多项式"></a>7.8 有理数域上的不可约多项式</h2><p>$f(x)\in Q[x]$</p>
-<p>考虑乘上 分母的倍数 可以变成整系数多项式</p>
-<p>定义1. 如果一个非零整系数多项式g(x)如果各项系数 因数只有 $\pm 1$, 那么称作本原多项式</p>
-<ul>
-<li>唯一性</li>
-</ul>
-<p>研究 相伴的本原多项式</p>
-<p>性质2：高斯(Gauss)引理, 本原多项式的乘积是本原多项式</p>
-<ul>
-<li>一个p能整除 fg的所有系数，但是不能整除f,g的所有系数，考虑 (f的最小不能整除p的) 和 (g最小不能整除p的) 对应的位置，可得矛盾</li>
-</ul>
-<p>性质3：一个本原多项式可约，当且仅当能分解成两个次数较低本原多项式的乘积</p>
-<ul>
-<li>f&#x3D;gh &#x3D;&gt; f&#x3D;g本原 * h本原 * 常数逆操作 &#x3D; (g本原 * h本原) * 常数逆操作， 因此常数逆操作只能是$\pm 1$</li>
-</ul>
-<p>性质4： 本原多项式唯一分解</p>
-<hr>
-<p>整系数多项式的有理根：</p>
-<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i$ 是一个整系数多项式</p>
-<p>定理1: 如果$\frac{q}{p}$是一个有理根，$(p,q)&#x3D;1$,那么$p|a_n,q|a_0$</p>
-<ul>
-<li>本原化更好, &#x3D;&gt;(px-q)是 本原因式</li>
-</ul>
-<hr>
-<p>整系数多项式在Q上不可约的判别法</p>
-<p>二次，三次 在Q上不可约 当且仅当它没有有理根（因为如果能分解 至少会分解出一个一次的因式 同时还是本原多项式）</p>
-<p>四次及以上，如果没有有理根可能有2次及以上的因式</p>
-<p>如果$f(x)&#x3D;(\sum_{i&#x3D;0}^m b_ix^i)(\sum_{j&#x3D;0}^t c_jx^j)$， 且存在一个素数p能整除$f(x)$除了最高次的所有系数</p>
-<ul>
-<li>从而 类似上面的拆解，如果 考虑最大$i$, $p| b_{0..i}$,从而$p | a_{i+1}$推出 $p|b_{i+1}c_0$,从而$p|c_0$</li>
-</ul>
-<p>定理2： Eisenstein判别法</p>
-<ul>
-<li>存在素数p 整除除去最高次的所有系数</li>
-<li>$p^2 \not{|} a_0$</li>
-<li>那么它不可约，（注意 第一条性质导致有些本原多项式无法用这个办法判断例如 $x^2+2x+3,x^2+5x+6$）<ul>
-<li>一个办法是 考虑 g(x)&#x3D;f(x+b), b通常取1&#x2F;-1</li>
-</ul>
-</li>
-<li>这个结论能推出存在任意次数的本原多项式<ul>
-<li>$x^n+2x^{n-1\to 0}$</li>
-<li>$x^n+p$</li>
-</ul>
-</li>
-</ul>
-<p>定理3：颠倒一下0次和n次</p>
-<ul>
-<li>$p^2\not{|} a_n$</li>
-<li>$p\not{|} a_0$</li>
-<li>$p | a_{1\cdots n}$</li>
-<li>很好证明 $x^nf(1&#x2F;x)$</li>
-</ul>
-<h2 id="7-9-多元多项式环"><a href="#7-9-多元多项式环" class="headerlink" title="7.9 多元多项式环"></a>7.9 多元多项式环</h2><p>似乎视频课上没有这个</p>
-<p>n圆多项式概念 </p>
-<p>圆: $x^2+y^2-r^2&#x3D;0$</p>
-<p>球: $x^2+y^2+z^2-r^2&#x3D;0$</p>
-<p>$\sum_{i_1,\cdots,i_n} a_{i_1,\cdots,i_n} \prod_{j&#x3D;1}^n x_{j}^{i_j}$ 也就是下标区分x,下标对应的幂次 区分项，每个项有具体的系数</p>
-<p>deg 单项式 &#x3D; $\sum_{i_j}$, deg 0 &#x3D; -infty</p>
-<p>deg f &#x3D; 最大的 $\max_{deg 单项式}$</p>
-<p>一个排序法是按照 幂次的有序数组的字典序</p>
-<p>加法&#x2F;乘法： 经典的定义</p>
-<p>定理1：f,g首项的乘积 &#x3D; 乘积fg的首项， 因为按字典序从大到小排列， 从幂次依次评断可用归纳+反证法易得</p>
-<ul>
-<li>所以非零多项式的乘积一定是非零多项式</li>
-<li>因此fg&#x3D;0，那么f&#x3D;0或g&#x3D;0</li>
-</ul>
-<p>定义2：m次齐次多项式，每个系数不为零的多项式的单项式次数都是m次的</p>
-<ul>
-<li>m次齐次多项式 * n次齐次多项式 &#x3D; m+n 次齐次多项式 (m+n)</li>
-<li>任意m次 多项式 可以唯一拆分成，$\sum_{i&#x3D;0}^m (i次多项式)$</li>
-</ul>
-<p>deg (d + g) &lt;&#x3D; max (deg(f),deg(g))</p>
-<p>deg (fg) &#x3D;deg g + deg g</p>
-<p>定理3, K是一个数域，R是一个有单位元的交换环，并且R可以看成一个ieK的一个扩环（即R有一个子环R1与K同构，且R的单位元是R1的单位元，K到R1的同构映射记作$\tau$</p>
-<ul>
-<li>还是 系数同构 和 x的关系的同构，同时映射了运算以及 元素，</li>
-</ul>
-<p>n元多项式函数： 从多项式 到 多项式函数 的映射</p>
-<p>定理4： 非零多元多项式的诱导函数一定不是零函数</p>
-<ul>
-<li>按次数归纳法+拆分法可证</li>
-</ul>
-<p>定理5： 两个n元多项式相等， 当且仅当他们的诱导函数相等 </p>
-<ul>
-<li>人话一点 其实和前面1元多项式一样的</li>
-<li>n元多项式相等的定义是 对应系数相等</li>
-<li>而函数相等的定义是，任意输入 输出相等</li>
-<li>所以证明这两个充要关系就好了</li>
-</ul>
-<p>五. 1964年H.Hironaka引进了n元多项式的出发算法。1965年，b. Buchbergerr引进了项目、序概念</p>
-<p>定义3. 整除： 同样的类似定义 f&#x3D;gh如果有表示法，那么g能整除f</p>
-<ul>
-<li>相伴：有系数倍关系，类似的</li>
-<li>但是没有带余除法，所以没有辗转相除法，可以有最大公因式的定义，和互素的定义</li>
-<li>不可约多项式，只有非零数和相伴元是它的因式<ul>
-<li>当且仅当不可分解成两个次数较低的多项式乘积</li>
-</ul>
-</li>
-<li>唯一因式分解定理<ul>
-<li>f&#x3D;系数 \prod 首1因式：标准分解式</li>
-<li>由此 如果有办法分解，那么就能快速得到最大公因式，但是没有“容易实践的分解办法”</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-10-对称多项式"><a href="#7-10-对称多项式" class="headerlink" title="7.10 对称多项式"></a>7.10 对称多项式</h2><p>$f(x_1,x_2,x_3)&#x3D;x_1^3+x_2^3+x_3^3+x_1^2x_2+x_1^2x_3+x_2^2x_3+x_1x_2^2+x_1x_3^2+x_2x_3^2$</p>
-<p>这就是中学学的 齐次轮换，不过这里连齐次好像没有强求</p>
-<p>$n$元对称多项式: 对于x的任意排列有$f(x_1,\cdots,x_n)&#x3D;f(x_{p_1},\cdots,x_{p_n})$， 则称为n元对称多项式</p>
-<p>$\sigma_1(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n x_i$ 因为出现一个其它都要出现</p>
-<p>$\sigma_2(x_1,\cdots,x_n)&#x3D;\sum_{i&#x3D;1}^n \sum_{j&#x3D;i+1}^n x_ix_j$, 这里没有平方项</p>
-<p>$\sigma_k(x_1,\cdots,x_n)&#x3D;\sum \prod_{j&#x3D;1,t_{j}&lt;t_{j+1}}^k x_{t_j}$ 类似的</p>
-<p>$\sigma_n(x_1,\cdots,x_n)&#x3D;\prod_{i&#x3D;1}^n x_i$</p>
-<p>上面称作初等对称多项式</p>
-<hr>
-<p>对称多项式 对加法乘法封闭</p>
-<p>对称多项式 是$K[x_1,\cdots,x_n]$ 的一个子环</p>
-<p>$f_i$是初等对称多项式，g是任意多项式</p>
-<ul>
-<li>那么$g(f_1,\cdots,f_n)$是对称多项式，即 初等对称多项式的的多项式 仍是 对称多项式<ul>
-<li>易证：带入不同顺序时，注意到g的输入没有变</li>
-</ul>
-</li>
-<li>$g(\sigma_1,\cdots,\sigma_n)$ 也是对称多项式</li>
-</ul>
-<p>定理1： 对称多项式基本定理，任意一个n元对称多项式f,存在唯一g,使得$f&#x3D;g(\sigma_1,\cdots,\sigma_n)$</p>
-<ul>
-<li>那么考虑f的首项，因为f对称，所以一定有对称的 幂次非严格单调递减的存在，所以首项的幂次一定也非严格单调递减</li>
-<li>那么 如果首项为 $k \prod_{i&#x3D;1}^n a_i^{l_i}$<ul>
-<li>那么 $\Phi&#x3D;k\prod_{i&#x3D;1}^n \sigma_i^{l_i-l_{i+1}}$ 的首项和 这个相等,其中$l_{n+1}&#x3D;0$</li>
-<li>显然 它是对称的，显然它的每个单项的系数在f中相等，因此 $f-\Phi$ 剩下的不包含这个轮换项 且同样是对称，那么这个下降???是有限次数的，所以总可以<ul>
-<li>这里下降的评判是用 首相的有序幂次 的字典序评判的<ul>
-<li>这里也体现了 规定顺序的一种用途</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>唯一性：<ul>
-<li>反证法: 如果有两种表示$g_1,g_2$，那么$g&#x3D;g_1-g_2$的差多项式不是零多项式，但是这个非零多项式带入 $\sigma_i$以后是零多项式，要证明这个为假<ul>
-<li>那么 既然不是零多项式 存在一组输出$b_1\cdots b_n$使得导出函数 的值$g(b_1,\cdots,b_n)\neq 0$</li>
-<li>那么 剩下就是想构造出$c_{1\to n}$使得$b_i&#x3D;\sigma_i(c_{1\to n})$</li>
-<li>Vieta 韦达公式 $\Phi(x)&#x3D;\sum_{i&#x3D;0}^n (-1)^{n-i}b_ix^i$，根据前面的复数域多项式的定理，有n个复数根，而且满足上面的形状。</li>
-<li>从而 g直接带入b不为0,但是能找到n个c，直接先把g带入f,再从f带入又等于0 矛盾</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数域K上一元多项式的判别式<ul>
-<li>对称多项式基本定理 一个应用：研究数域K上的一元多项式 在 复数域中有无重根</li>
-<li>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i, a_n&#x3D;1$ 首1,一元 多项式 有n个复数根<ul>
-<li>如果有重根，&lt;&#x3D;&gt;  $\prod (c_i-c_j)^2 &#x3D;0$ 这里加平方是为了对称性</li>
-<li>而这个是对称多项式，有唯一的 g 可以表示，找到g以后,那么 $\prod(c_i-c_j)^2 &#x3D; g(-a_{n-1},a_{n-2},\cdots,(-1)^na_0)$ 可以作为重根存在的判别式！ 命题3</li>
-<li>&#x3D; |纵范德蒙矩阵| |横范德蒙矩阵|</li>
-<li>&#x3D; <code>|[matrix]|</code>, $matrix_{i\in [1,n],j\in[1,n]}&#x3D;\sum_{k&#x3D;1}^n c_k^{i-1+j-1}$<ul>
-<li>令 $s_k &#x3D; \sum_{i&#x3D;1}^n x_i^k$</li>
-<li>&#x3D;  $matrix_{i\in [1,n],j\in[1,n]}&#x3D;s_{i+j-2}$</li>
-<li>注意到 $s_k$ 也是对称的，可以表示出，所以如果能得到n个s的表达式，那么矩阵的det就是 g了</li>
-<li>牛顿 Newton 公式<ul>
-<li>$k\in [1,n]$时 有$s_k-\sigma_1s_{k-1}+\sigma_2s_{k-2}\cdots+(-1)^{k-1}\sigma_{k-1}s_1+(-1)^kk\sigma_k&#x3D;0$</li>
-<li>$k &gt; n$时有$s_k-\sigma_1s_{k-1}+\sigma_2s_{k-2}\cdots+(-1)^{k-1}\sigma_{k-n+1}s_1+(-1)^n\sigma_{n}s_{k-n}&#x3D;0$</li>
-<li>这个我好像还专门写过 不这么系统的单独的文章</li>
-<li>证明: <ul>
-<li>考虑n+1元多项式 $f(x_1,\cdots,x_n,x)&#x3D;\prod (x-x_i)$</li>
-<li>展开 $x^n-\sigma_1 x^{n-1}+\cdots+(-1)^n\sigma_n$</li>
-<li>把x用$x_{1\to n}$带入</li>
-<li>$x_i^n-\sigma_1 x_i^{n-1}+\cdots+(-1)^n\sigma_n &#x3D; 0$</li>
-<li>$n\ge k$时 满足上面的式子<ul>
-<li>乘上$x_i^{k-n}$</li>
-<li>$x_i^k-\sigma_1 x_i^{k-1}+\cdots+(-1)^n\sigma_nx_i^{k-n} &#x3D; 0$</li>
-<li>所有n各表达式相加</li>
-<li>$s_k-\sigma_1 s_{k-1}+\cdots+(-1)^n\sigma_n s_{k-n} &#x3D; 0$</li>
-</ul>
-</li>
-<li>$n &lt; k$时<ul>
-<li>这又开始先猜想后证明了+归纳法了</li>
-<li>这里核心是不定元个数 下降 与 零多项式，通过x_n&#x3D;0来带入并就能完成 这个转换</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>有了牛顿公式，可以用递推计算出所有s的关于sigma的表达式了，也就是g的表达式，从而 再计算det就有了 重根判别式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>例子: 以 开篇的$f(x_1,x_2,x_3)&#x3D;x_1^3+x_2^3+x_3^3+x_1^2x_2+x_1^2x_3+x_2^2x_3+x_1x_2^2+x_1x_3^2+x_2x_3^2$<br>来举例</p>
-<p>$x_1^3$是首项 对应$1\cdot x_1^3x_2^0x_3^0$ 那么需要$\Phi_1&#x3D;1\cdot \sigma_{1}^{3}&#x3D;(x_1+x_2+x_3)^3&#x3D;(\sum_{i&#x3D;1}^3x_i^3)+3(\sum_{i\in [1,3],j\in [1,3],i\neq j}x_i^2x_j)+3!(\prod_{i&#x3D;1}^3x_i)$</p>
-<p>$f-\Phi_1&#x3D;-2(\sum_{i\in[1,3],j\in[1,3],i\neq j}x_i^2x_j^2)-3!(\prod_{i&#x3D;1}^3x_i)$</p>
-<p>接下来的首项是$-2x_1^2x_2^1 &#x3D; (-2)x_1^2x_2^1x_3^0$</p>
-<p>所以需要$\Phi_2&#x3D;(-2) \sigma_1^{2-1}\sigma_2^{1-0}&#x3D;(-2)(x_1+x_2+x_3)(x_1x_2+x_2x_3+x_3x_1)$</p>
-<p>$&#x3D;-2(\sum_{i\in[1,3],j\in[1,3],i\neq j}x_i^2x_j^2)-6(\prod_{i&#x3D;1}^3x_i)$</p>
-<p>$f-\Phi_2&#x3D;0$</p>
-<p>所以 $f&#x3D;\Phi_1+\Phi_2&#x3D;\sigma_1^3+(-2)\sigma_1\sigma_2$</p>
-<p>所以$g(x_1,x_2,x_3)&#x3D;x_1^3-2x_1x_2$</p>
-<h2 id="7-11-结式"><a href="#7-11-结式" class="headerlink" title="7.11 结式"></a>7.11 结式</h2><p>上面讨论的一元n次多项式的 重根判别式 D(f)，首先要求出复根 幂和，再计算行列式，运算量大</p>
-<p>f有重根，当且仅当f(x)在<code>C[x]</code>有重因式, 不随数域扩大而改变，因此当且仅当<code>K[x]</code>中有重因式</p>
-<p>当且仅当在<code>K[x]</code>中有重因式 当且仅当 f(x)与f’(x) 不互素，于是 辗转相除法 求(f(x),f’(x))</p>
-<p>D(f)&#x3D;0 当且仅当 $(f(x),f’(x)) \neq 1$</p>
-<p>$f(x),g(x)$ 分别是 $K[x]$中两个非零n次,m次多项式</p>
-<p>若 f,g有公共复根</p>
-<p>$f(x)&#x3D;f_1(x)d(x),g(x)&#x3D;g_1(x)d(x),\mathrm{deg} d(x) &gt; 0$ 其中$f_1,g_1$分别可以写成n-1次,m-1次表达式</p>
-<p>$f(x)&#x3D;\sum_{i&#x3D;0}^n a_{n-i}x^i$</p>
-<p>$g(x)&#x3D;\sum_{i&#x3D;0}^m b_{m-i}x^i$</p>
-<p>$f_1(x)&#x3D;\sum_{i&#x3D;0}^{n-1} c_{n-1-i}x^i$</p>
-<p>$g_1(x)&#x3D;\sum_{i&#x3D;0}^{m-1} d_{m-1-i}x^i$</p>
-<p>把$f_1(x)g(x) &#x3D; f(x)g_1(x)$ 左右展开，对应系数相等 构成 n+m 个方程</p>
-<p>也就是 m+n元齐次线性方程组有非零解$(d_0,d_1,\cdots,d_{m-1},-c_0,-c_1,\cdots,-c_{n-1})$</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[ m 列     ][n 列      ]</span><br><span class="line">a0          b0</span><br><span class="line">a1 a0       b1 b0</span><br><span class="line">a2 a1 a0    b2 b1 b0    * d0    = 0</span><br><span class="line">                          d1</span><br><span class="line">                          ...</span><br><span class="line">                          -c0</span><br><span class="line">                          -c1</span><br><span class="line">                          ...</span><br><span class="line">						  </span><br><span class="line"></span><br><span class="line">有非零解，说明左边 (m+n)*(m+n) 的矩阵 不可逆，行列式为0</span><br><span class="line">左边的形状就是</span><br><span class="line">f的系数构成列，每次移一个列偏移1位，所以长度u是n+1,最大偏移次是m-1，所以一共m+n行，</span><br><span class="line">然后就是g的系数构成列向量，同样每次移动偏移一位，所以长度m+1,最大偏移n-1,所以同样一共m+n行</span><br></pre></td></tr></table></figure>
-
-<p>结式 <code>Res(f,g) = |f的系数向量构成列 m次偏移，g系数的向量构成列 n次偏移|</code></p>
-<p>如果 有公共复根，那么 Res(f,g) &#x3D; 0(必要条件)</p>
-<p>那么如果 Res(f,g)&#x3D;0,则 有非零解， 能找到$f_1,g_1$</p>
-<ul>
-<li>若 $a_0,b_0$ 不全为0, 不妨设 $a_0\neq 0$, 也就是 f不含(x-0), 那么 $f(x) | f_1(x)g(x)$<ul>
-<li>若 (f,g)&#x3D;1,则， $f | f_1$ 根据deg大小矛盾</li>
-</ul>
-</li>
-</ul>
-<p>deg f &gt; 0 ,deg g &gt; 0</p>
-<ul>
-<li>Reg(f,g)&#x3D;0 的充要条件 &lt;&#x3D;&gt; $a_0&#x3D;b_0&#x3D;0$ 或 f(x),g(x)有公共复根, （注意a_0,b_0是最高次的系数，不是最低次的系数）</li>
-</ul>
-<p>用处</p>
-<ul>
-<li>判别 f,g是否有公共复根的新方法，真的比辗转相除好吗？虽然 根据行列式变化 其中蕴含的辗转相除吗？</li>
-<li>求f(x,y),g(x,y) 上的公共零点<ul>
-<li>按照x的幂次展开，y相关的表达式变成系数</li>
-<li>如果 $f(x_0,y_0)&#x3D;0&#x3D;g(x_0,y_0)$ , 那么 $x_0$ 是复系数多项式 $f(x,y_0),g(x,y_0)$的一个公共根<ul>
-<li>$Res(f(x,y_0),g(x,y_0))&#x3D;0$</li>
-</ul>
-</li>
-<li>所以算法为 Res_x(f,g)的表达式 只有y</li>
-<li>求 所有y复根</li>
-<li>对于每个复根 带入 $(f(x,y_0),g(x,y_0))$用辗转相除 求关于x公因式 ，再求x的复根，可以得到所有零点</li>
-</ul>
-</li>
-</ul>
-<p>P115~119 TODO</p>
-<p>定理2：$f,g,a_0\neq 0,b_0\neq 0$, 设f的n个复根为$c_1,\cdots c_n$,g的m个复根为$d_1,\cdots,d_m$</p>
-<p>则 $Res(f,g)&#x3D;a_0^m\prod_{i&#x3D;1}^n g(c_i)$</p>
-<p>$&#x3D;(-1)^{mn}b_0^n\prod_{j&#x3D;1}^m f(d_j)$</p>
-<p>定理3: $D(f)&#x3D;(-1)^{\frac{n(n-1)}{2}}a_0^{-1}Res(f,f’)$</p>
-<h2 id="7-12-域与域上的一元多项式环"><a href="#7-12-域与域上的一元多项式环" class="headerlink" title="7.12 域与域上的一元多项式环"></a>7.12 域与域上的一元多项式环</h2><p>在 f不能整除g时，引入$\frac{f(x)}{g(x)}$记作分式，</p>
-<p>可以看成 有序多项式对 (f(x),g(x)), 是 <code>K[x],K[x]</code>中的元素</p>
-<p>定义相似 $(f_1,g_1)\sim (f_2,g_2)$ &lt;&#x3D;&gt; $f_1g_2&#x3D;g_1f_2$</p>
-<ul>
-<li>具有反身性 （自己和自己相似）</li>
-<li>具有对称性 （sim左右交换依然保持 bool值）</li>
-<li>传递性  (x sim y, y sim z) &#x3D;&gt; x sim z</li>
-<li>等价类 记作 $\frac{f}{g}$<ul>
-<li>所有等价类组成集合记作 K(x), 圆括号，称作 $K[x]\times K[x]$对于等价关系$\sim$的商集</li>
-</ul>
-</li>
-<li>加法定义 $\frac{f_1}{g_1}+\frac{f_2}{g_2}&#x3D;\frac{f_1g_2+g_1f_2}{g_1g_2}$, </li>
-<li>乘法定义 $\frac{f_1}{g_1}\cdot \frac{f_2}{g_2}&#x3D;\frac{f_1f_2}{g_1g_2}$</li>
-<li>上面运算 结果不受 等价类中代表元选取影响，最终结果对于不同代表元的选择是同一个等价类</li>
-<li>$\frac{0}{1}$记作0元</li>
-<li>$\frac{f}{g}$的加法逆元$\frac{-f}{g}$  记作$-\frac{f}{g}$ (这个时候就会发现 如果是 (f,g)表示法，要么就需要定义外部加法，要么就是内部变成（-f,g）)， 类似可以定义减法</li>
-<li>$\frac{1}{1}$ 是乘法0元，也就是单位元</li>
-<li>K(x)是有单位元的交换环</li>
-<li>非零元$\frac{f}{g}$的乘法逆元$\frac{g}{f}$ 也记作$(\frac{f}{g})^{-1}$, 类似可以定义除法</li>
-</ul>
-<p>定义1.一个有单位元$1(\neq 0)$的交换环F,如果它的每个非零元都可逆，那么称F是一个域</p>
-<ul>
-<li>例如K(x)是一个域，称作数域K上的 一元 分式域， 或一元有理函数域<ul>
-<li>其元素称作 一元分式 或一元有理函数，f分子，g分母</li>
-</ul>
-</li>
-</ul>
-<p>分式的次数 &#x3D; deg f - deg g</p>
-<p>如果分子坟墓互素，那么成为 既约分式</p>
-<p>数域的元素是数，而一元分式的元素是分式</p>
-<p>命题1. 域F中没有非平凡的零因子，从而域一定是整环</p>
-<ul>
-<li>如果有 $a,b \neq 0, ab&#x3D;0$ 那么  $b&#x3D;a^{-1}(ab)&#x3D;a^{-1}0&#x3D;0$  矛盾</li>
-</ul>
-<hr>
-<p>mod p 剩余类域 与 mod m 剩余类环</p>
-<p>Z 中定义二元关系 $\sim$, $a\sim b$&lt;&#x3D;&gt; a与b被7整除余数相同 &lt;&#x3D;&gt; 7 | a-b</p>
-<p>有 若 $a\equiv b\pmod{7},c\equiv d\pmod{7}$ 则$a+c\equiv b+d\pmod{7}, ac\equiv bd\pmod{7}$</p>
-<p>有mod 7下的等价类 剩余类，记作$Z_7$或 $Z&#x2F;(7)$</p>
-<ul>
-<li>有单位元的交换环<ul>
-<li>每个非零元有乘法逆元 所以是 域， 且是有限域</li>
-</ul>
-</li>
-</ul>
-<p>对于 m,类似的定义，但是m不是质数时，例如 m&#x3D;4, 那么有 $2 * 2 &#x3D; 0$ 非平凡零因子，不是域</p>
-<p>若 p是素数$Z_p$是域, 只需要证明每个非零元可逆, 这里没有用费马小定理，而是 $gcd(p,a) &#x3D; 1$,所以$up+va&#x3D;1$, 即 $va\equiv 1 \pmod{p}$</p>
-<p>若 是合数那么 $m&#x3D;m_1m_2$ 都是它的非平凡零因子</p>
-<p>这里也是给出了 矩阵 <code>[0,1;0,0]</code>这种零因子 以外的一种零因子</p>
-<hr>
-<p>域 F 中，  $n * 单位元I, n &gt; 0$ 表示n个单位元相加</p>
-<ul>
-<li>情况1, 均不为0</li>
-<li>情况2, 存在n使得$n 单位元I &#x3D; 0$, 取最小的n, 若n是合数,<ul>
-<li>$0 &#x3D; nI&#x3D;n_1(n_2I)&#x3D;n_1(I(n_2I))&#x3D;(n_1I)(n_2I)$ ，因为最小的n， 所以$n_1I,n_2I$都是非平凡零元， 所以不是域，所以n不能是合数</li>
-</ul>
-</li>
-</ul>
-<p>定理2, $nI\neq 0$ 或者存在素数$p &gt; 0$ 使得$pI&#x3D;0, lI\neq 0, 0 &lt; l &lt; p$</p>
-<p>定义2.</p>
-<ul>
-<li>$nI\neq 0$ 特征 为 0</li>
-<li>$pI&#x3D;0,lI\neq 0,0 &lt; l &lt; p$ 特征 为 $p$</li>
-<li>记作 char F, charactor的前缀,应该是</li>
-</ul>
-<p>性质</p>
-<ul>
-<li>char 数域  &#x3D;0</li>
-<li>char Z_p &#x3D; p</li>
-<li>有限域 的特征一定是素数， 否则 e,2e,3e,…. 全都不等 有无穷多元素 矛盾</li>
-<li>$Z_p(x)$ mod p的一元分式域 首先是无穷域，但是同样有特征$p$</li>
-</ul>
-<p>命题3： 设域F的特征为素数p,则 $nI&#x3D;0$ &lt;&#x3D;&gt; p|n</p>
-<ul>
-<li>这个更深刻，意味着更多的“特征” 唯一性</li>
-<li>$pI &#x3D; 0 &#x3D; wI$ &#x3D;&gt; $(w-kp)I &#x3D; 0$, &#x3D;&gt; $(w \mod p) I &#x3D; 0$, 所以w只能是倍数</li>
-</ul>
-<p>命题4: p为特征， $\forall A \in F, A\neq 0$ 那么 $n A &#x3D; 0$ &lt;&#x3D;&gt; $p | n$  </p>
-<ul>
-<li>想法还是 把n变成 非“个数”而是元素，所以 $0&#x3D;nA&#x3D;n(IA)&#x3D;(nI)A$, &lt;&#x3D;&gt; $nI&#x3D;0$</li>
-</ul>
-<hr>
-<p>四、域F上的一元多项式环</p>
-<p>有限域 上有些和无限域不同的性质</p>
-<p>例如 $Z_3[x]$ 中 $f(x)&#x3D;x^3+2x^2+2$ 和$g(x)&#x3D;2x^2+x+2$ 的多项式不同</p>
-<p>但是 诱导函数 $f(0)&#x3D;2&#x3D;g(0),f(1)&#x3D;2&#x3D;g(1),f(2)&#x3D;0&#x3D;g(2)$ 相同， 这个反例也说明了前面 为什么要区分 多项式，和多项式函数</p>
-<ul>
-<li>这里相同的一个原因可以是 $x(x-1)(x-2)$ 在 $Z_3$上恒为0，$&#x3D;x^3-3x^2+2x$</li>
-</ul>
-<p>若 $g(x)$是$f(x)$的k重因式, 那么$g(x)$是$f’(x)$的k-1重因式，f(x)的特征为p</p>
-<ul>
-<li>书上这里 素数和函数 混用p真的大便一样</li>
-<li>若 $p | k$ 或 $g’(x)&#x3D; 0$ 则 $g(x) | (kg’(x)&#x3D;0)$ 则 $g(x)$是$f’(x)$的至少$k$重因式，(因为$f(x)&#x3D;g(x)^kh(x)$, $f’(x)&#x3D;kg’(x)g(x)^{k-1}h(x)+g(x)^kh’(x)$, 第一项为0)</li>
-<li>若$p\not{|}k$ 且$g’(x)\neq 0$则 $g(x) \not{|} kg’(x)$ 这里还没有 更复杂的等价化简，只是 直接的多项式，所以有幂次更小但非零一定不是倍数， 从而是$f’(x)$的k-1次重因式（同上展开）</li>
-<li>这两种情况，f有 $k&gt;1$的重因式，都有$(f(x),f’(x))\neq 1$</li>
-</ul>
-<p>命题5：整系数多项式$f(x)&#x3D;\sum_{i&#x3D;0}^n a_ix^i$, p是素数, $p\not{|}a_n$. f对应的 $Z_p$上的不可约，那么f在$Q$上不可约</p>
-<ul>
-<li>注意这里只是必要条件， 因为如果可约，那么可约展开的首项依然满足 首项系数不是p的倍数，所以有表达式</li>
-<li>所以 这是一种判断“不可约”的方法</li>
-</ul>
-<hr>
-<p>五、中国剩余定理</p>
-<p>整数环 与 数域K 上的 <code>K[x]</code> 结构很相似</p>
-<p>同余方程组 $x\equiv b_i \pmod{m_i}$, 其中$(m_i,m_j)&#x3D;1,i\neq j$</p>
-<p>那么 $Z$中必定有解， 且任意两个解$c,d$满足$c\equiv d\pmod{\prod m_i}$</p>
-<p>证明：</p>
-<p>如果有多个解，解之间关系好证明，直接作差，是所有$m_i$倍数，所以可证</p>
-<p>两两互素 $(m_i,\prod_{j\neq i} m_j)&#x3D;1$</p>
-<p>即 $um_i+v_i\prod_{j\neq i}m_j &#x3D; 1$</p>
-<p>$v_i\prod_{j\neq i}m_j\equiv 1 \pmod{m_i}$</p>
-<p>$v_i\prod_{j\neq i}m_j\equiv 0 \pmod{m_k},k\neq i$</p>
-<p>看起来就像正交基一样</p>
-<p>$c&#x3D;\sum_{i} b_i(v_i\prod_{j\neq i}m_j)$</p>
-<hr>
-<p>应用小天地，序列密码，m序列</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>核心内容</p>
-<ul>
-<li>一元多项式<ul>
-<li>很多和 质数 乘法相关的相似的性质</li>
-<li>其中引出 不可约多项式</li>
-<li>对于 可约多项式的因式拆解，特别提到了重因式</li>
-<li>因式分解<ul>
-<li>复数域，然后利用 Liouville定理 模有界定理 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/393074166">https://zhuanlan.zhihu.com/p/393074166</a> 得到 <code>C[x]</code> 的不可约多项式 只能是1次，和代数基本定理 n次有n各根</li>
-<li>有了必有复根以后，反过来研究实数域上的不可约多项式</li>
-<li>只有 1次，判别式小于0的2次式</li>
-<li>有理数环上 化成整系数，说实话没有特别漂亮的结论，只是延伸了一些前面同样成立的结论，多了一个Eisenstein判别法</li>
-</ul>
-</li>
-<li>注意到 一元多元 都在证明 $a * b&#x3D;0$ 那么$a&#x3D;0$或$b&#x3D;0$这个 在初中高中以前感觉显然，但自从有了矩阵的 非零 幂零矩阵的例子，这个玩意的确有证明的必要</li>
-</ul>
-</li>
-<li>然后来到多元多项式环，没有特别深的结论，主要是沿用前面的一些定义看哪些同样在这成立 （感觉这章可以后移<ul>
-<li>研究对称多项式， 其核心是可以由 初等对称多项式$\sigma_i$来表示</li>
-<li>引出 一元多项式 新的 重根判别法，以及牛顿公式</li>
-</ul>
-</li>
-<li>结式<ul>
-<li>主要是 判断f,g是否有非1因式的</li>
-<li>看着 花里胡哨的，感觉核心还是辗转相除法 的行列式表达，或者说 辗转相除需要一些智力，结式需要一些暴力。我觉得本质问题还是没有更早的把 多项式以 系数向量的形式写出来，还在写x,所以感觉上有转换，其实挺自然</li>
-<li>然后 对于多元也可以按元展开</li>
-</ul>
-</li>
-<li>分式<ul>
-<li>多项式分式定义和性质</li>
-<li>“特征”，和有限域&#x2F;无限域 里的 特征的性质<ul>
-<li>$Z_p$</li>
-</ul>
-</li>
-<li>再次研究 在这种域里的 多项式之间的因式</li>
-</ul>
-</li>
-<li>总结<ul>
-<li>核心还是 研究很多和整数 类似的，不可约，因式，两个f,g的因式的各种性质。只是对象 变为了 不同域（复数域，实属域，有理域，$Z_p$）</li>
-<li>对于单个 的拆分，一个是 eisenstein 判别一些特殊的Q，$Z_p$上能反过去判断Q的不可约</li>
-</ul>
-</li>
-<li>这里面有几次出现一个叫做 “（xx性质）不随数域扩大而改变 感觉很迷惑”<ul>
-<li>似乎是 【给定数域甲，性质乙】</li>
-<li>意味着 数域甲的运算定义导致的 包含关系的性质保证了 性质乙用到的相关元素 都在甲中</li>
-<li>那么 所有 甲 映射 出的 甲’ 是 丙的一个子域，那么丙中的甲‘的 关于乙的性质不变</li>
-<li>这里的关键点是 甲是固定的，且甲一般是看作最小的（实际上不一定是最小的），所以只考虑比甲大的</li>
-<li>所以 在这个情况下 甲 和 甲’ 的这个关系是双射的 所以 也就是充要的</li>
-</ul>
-</li>
-<li>说一点 非常讨厌书里 把 幂次和系数下标反着写的 表达方法, 虽然上面笔记保持和书上一致</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Math/Advanced_algebra_7/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1220,7 +427,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1285,63 +492,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="6-2-实二次型的规范型"><a href="#6-2-实二次型的规范型" class="headerlink" title="6.2 实二次型的规范型"></a>6.2 实二次型的规范型</h2><p>注意到上面的$C$ 只需要可逆，也就意味着，如果在变换为$\Lambda$以后，再做单个位置的倍数变换也是“合法”的，所以标准型不唯一</p>
-<p>rank 因为全是初等变换所以不变，所以非零个数不变</p>
-<p>规范型：</p>
-<ul>
-<li>全部变为|系数|&#x3D;1的平方项<ul>
-<li>前面+1,中间-1,后面0</li>
-<li>规范型</li>
-</ul>
-</li>
-<li>规范型唯一 也就是 +，-，0的个数固定<ul>
-<li>如果表示成<ul>
-<li>$z_1^2+\cdots +z_q^2-z_{q+1}^2-\cdots-z_r^2$</li>
-<li>$y_1^2+\cdots +y_p^2-y_{p+1}^2-\cdots-y_r^2$</li>
-<li>$z&#x3D;Qy$</li>
-<li>若 $p &gt; q$<ul>
-<li>考虑 $Q_{q\times r}y&#x3D;z_{q}$ <ul>
-<li>让$y$的$y_{\ge p+1} &#x3D; 0$,而前面不全为0</li>
-<li>让 $z_{\le q} &#x3D; 0$ 注意到 rank($Q_{q\times r}$)&#x3D;q, 一定存在非零解</li>
-<li>从而 z的表示不大于0,  而y的表示大于0, 因此矛盾, 所以表示法唯一</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>+号个数：正惯性指数<ul>
-<li>是二次型等价： 规范型相同<ul>
-<li>rank相同 且 正惯性指数相同</li>
-<li>对应的矩阵合同</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-3-正定二次型与正定矩阵"><a href="#6-3-正定二次型与正定矩阵" class="headerlink" title="6.3 正定二次型与正定矩阵"></a>6.3 正定二次型与正定矩阵</h2><p>任意非零向量$x$有$x^TAx &gt;0$</p>
-<ul>
-<li>正惯性指数&#x3D;n</li>
-<li>用处 MIT18.06 有讲，求极小值 不会是局部最小值</li>
-<li>与正定矩阵合同的实对称矩阵是正定矩阵</li>
-<li>正定的行列式大于0<ul>
-<li>应为是在A两侧乘上可逆的C^T和C，它们行列式相同所以符号不变</li>
-</ul>
-</li>
-<li>所有顺序主子式全大于0<ul>
-<li>最常用的判别方式</li>
-<li>$x^TAx &gt; 0$ 让 x后半取零同样 &#x3D;&gt; 容易得顺序主子式 都是正定的 &#x3D;&gt; 顺序主子式大于0， 必要</li>
-<li>充分性：归纳法(n-1阶是正定的) + 分块矩阵 <code>[A,a;a^T,v0]=&gt;[I,b;b^T,v1]=&gt;[I,0;0^T,v2]</code></li>
-</ul>
-</li>
-<li>半正定<ul>
-<li>$\ge 0$</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Math/Advanced_algebra_6/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1403,7 +561,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1458,192 +616,14 @@
 <hr>
 <p>希望把矩阵分类</p>
 <p>定义1, S非空集合, $W$是$S\times S$的一个子集,叫做二元关系, $(a,b)\in W$,那么称它们有该二元关系$aWb,a\sim b$</p>
-<p>定义2, 等价关系</p>
-<ul>
-<li>$a\sim a$ 反身性</li>
-<li>$a\sim b\rightarrow b\sim a$ 对成性</li>
-<li>$a\sim b,b\sim c\rightarrow a\sim c$ 传递性</li>
-</ul>
-<p>定义3, $\sim$是等价关系$\bar{a}$表示等价类</p>
-<p>$a,b\in S$</p>
-<ul>
-<li>$\bar{a}&#x3D;\bar{b}$或$\bar{a}\cap\bar{b}&#x3D;\emptyset$</li>
-</ul>
-<p>定义4, $S&#x3D;\cup S_i,S_i\cap S_j&#x3D; \emptyset$ 则是$S$ 的一个划分$\pi(S)$</p>
-<p>所有等价类组成划分</p>
-<p>定义5, $\sim$是$S$ 上的一个等价关系, 有所有等价类组成的集合称为$S$对于关系$\sim$的商集, 记作$S&#x2F;\sim$</p>
-<p>例子,</p>
-<ul>
-<li>实数集R,二元关系 $a\sim b, a-b\in Z$, 再附加 $\sigma : R&#x2F;Z \to [0,1)$</li>
-<li>实数集R, 二元关系$a\sim b,\lfloor a\rfloor &#x3D; \lfloor b \rfloor$</li>
-<li>平面点集$\pi$, $p_1\sim p_2, x_1-x_2\in Z 且 y_1-y_2\in Z$</li>
-</ul>
-<h2 id="矩阵的相抵"><a href="#矩阵的相抵" class="headerlink" title="矩阵的相抵"></a>矩阵的相抵</h2><p>数域K上$A_{sn},B_{sn}$</p>
-<p>如果A经过一系列初等变化 变成 矩阵B,那么A与B相抵</p>
-<ul>
-<li>存在可逆矩阵P,Q, 使得$PAQ&#x3D;B$</li>
-</ul>
-<p>定理1 设r&#x3D;rank(A),则A相抵于 $[I_r,0;0,0]$ 相抵标准形</p>
-<p>定理2 A,B形状相同，那么rank(A)&#x3D;rank(B) &lt;-&gt; 相抵</p>
-<h2 id="5-3-广义逆矩阵"><a href="#5-3-广义逆矩阵" class="headerlink" title="5.3 广义逆矩阵"></a>5.3 广义逆矩阵</h2><p>Ax&#x3D;b</p>
-<ul>
-<li>如果A可逆，唯一解</li>
-<li>如果不可逆，且有解 如何找到这个“表达”<ul>
-<li>希望找到 $AXA&#x3D;A$ 说实在的还是 神奇中有些自然，自然中有些神奇</li>
-<li>$A_{sn}&#x3D;P_s[I_r,0;0,0]Q_n$, 其中$P,Q$是可逆的</li>
-<li>$X&#x3D;Q^{-1}[I_r,B;C,D]P^{-1}$, 其中B,C,D是 任意的 （这里B,C,D的观感的确没有SVD好，但是从这个角度上给出了 多个广义的逆</li>
-</ul>
-</li>
-<li>记作$A^{-}$</li>
-</ul>
-<p>$Ax&#x3D;b$ 有解的充要条件是$b&#x3D;AA^{-}b$</p>
-<p>通解为$A^{-}\beta$: 说人话就是i任意一个解$x$可以找到对应$A^{-}$使得 $x&#x3D;A^{-}\beta$</p>
-<ul>
-<li>同样按照上面 拆A,的方式去凑</li>
-<li>这样看来又比SVD的好，因为SVD的视角是唯一的</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 0 1</span><br><span class="line">0 1 1</span><br><span class="line">0 0 0</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A=[1,0,1;0,1,1;0,0,0];</span><br><span class="line">[U,S,V]=svd(A);</span><br><span class="line">W=[1/sqrt(3),0,0;0,1,0;0,0,0];</span><br><span class="line">RA=V*W*U&#x27;; </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">U:</span><br><span class="line">1/sqrt(2)  -1/sqrt(2)</span><br><span class="line">1/sqrt(2)   1/sqrt(2)</span><br><span class="line">                      1</span><br><span class="line">  </span><br><span class="line">S:</span><br><span class="line">sqrt(3)</span><br><span class="line">        1</span><br><span class="line">           0</span><br><span class="line">           </span><br><span class="line">V:</span><br><span class="line">1/sqrt(6)  -1/sqrt(2) -1/sqrt(3)</span><br><span class="line">1/sqrt(6)   1/sqrt(2) -1/sqrt(3)</span><br><span class="line">2/sqrt(6)   0          1/sqrt(2)</span><br><span class="line"></span><br><span class="line">这里 A= U*S*V&#x27;</span><br><span class="line"></span><br><span class="line">发现 A*RA = [1,0,0;0,1,0;0,0,0] 但是RA*A并不如此好看， 不过这样 是满足了这里的 A*RA*A = A (容易证明)</span><br></pre></td></tr></table></figure>
-
-<p>这里的P,Q没有个一个具体的实践方案，主要讨论其存在性和可表示性，而svd切实的提出了 通过$AA^T$和$A^TA$的特征向量组成的单位正交基矩阵</p>
-<hr>
-<p>$Ax&#x3D;0$的通解为 $x&#x3D;(I_n-A^{-}A)Z$, Z是$K^n$中任意向量 (可证明充要性)</p>
-<p>因此$Ax&#x3D;b$的通解还可以写做 $x&#x3D;A^{-}b+(I_n-A^{-}A)Z$</p>
-<h3 id="Penrose-方程组"><a href="#Penrose-方程组" class="headerlink" title="Penrose 方程组"></a>Penrose 方程组</h3><p>定义 Morre-Penrose 广义逆 满足</p>
-<ul>
-<li>$AXA&#x3D;A$</li>
-<li>$XAX&#x3D;X$</li>
-<li>$(AX)^H&#x3D;AX$</li>
-<li>$(XA)^H&#x3D;XA$</li>
-</ul>
-<p>定理5: 复数域上 非零矩阵，Penrose方程组总是有唯一解（这就是SVD的那个解吧）？</p>
-<p>$A&#x3D;BC$,其中B和C分别是 列满秩和行满秩的矩阵</p>
-<p>则唯一解是 $X&#x3D;C^H(CC^H)^{-1}(B^HB)^{-1}B^H$, 不是这然后就带入证明了？？？这突兀感觉太强了。TODO 如何drop from sky的</p>
-<p>你看SVD的理论基础 矩阵Ax如果x属于行向量空间那么输出和列向量空间一一对应且满足线性关系，所以才有了 (A * (行向量空间的基+nullspace的基))&#x3D;(列空间基+nullspace(A^T)的基) * 对角Sigma的想法，就感觉上更自然，这里直接甩我一个表达式，然后证明 是解又唯一真的怪</p>
-<h2 id="5-4-矩阵的相似"><a href="#5-4-矩阵的相似" class="headerlink" title="5.4 矩阵的相似"></a>5.4 矩阵的相似</h2><p>好好好，先讲相似后讲特征值是吧！？！？</p>
-<p>定义还是 $A&#x3D;QBQ^{-1}$</p>
-<ul>
-<li>行列式相等</li>
-<li>同时可逆或不可逆（由上）</li>
-<li>相等的rank</li>
-</ul>
-<p>trace(AB)&#x3D;trace(BA) ： 证明：展开对角项 （这里其实 需要保证A和B^T的形状相同）</p>
-<ul>
-<li>相似有 trace相等, trace(A)&#x3D;trace(QBQ^{-1})&#x3D;trace(Q^{-1}QB)&#x3D;trace(B)</li>
-</ul>
-<p>可对角化: n个线性无关的列向量, $Q^{-1}AQ&#x3D;\Lambda$，写了特征值形式，但没提到特征值</p>
-<h3 id="5-5-特征值与特征向量"><a href="#5-5-特征值与特征向量" class="headerlink" title="5.5 特征值与特征向量"></a>5.5 特征值与特征向量</h3><ul>
-<li>定义与等价命题</li>
-<li>特征多项式的根 对应特征值(注意不是充要 比如 <code>[1,1;0,1]</code>和<code>[1,0;0,1]</code>)&#96;<ul>
-<li>相似矩阵特征多项式相同 $|A-xI|&#x3D;|QBQ^{-1}-xQQ^{-1}|&#x3D;|Q||B-xI||Q^{-1}|$</li>
-</ul>
-</li>
-<li>对于“重复特征值”<ul>
-<li>对应的特征向量 维度 叫做 几何重数</li>
-<li>对于 特征多项式根的重数 叫做 代数重数<ul>
-<li>几何重数 &lt;&#x3D; 代数重数:  证明: 维数选基 &#x3D;&gt; 类似对角化 &#x3D;&gt; 特征多项式 &#x3D;&gt; 幂次不少于</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-6-可对角化条件"><a href="#5-6-可对角化条件" class="headerlink" title="5.6 可对角化条件"></a>5.6 可对角化条件</h2><ul>
-<li>n个线性无关的特征向量<ul>
-<li>不同特征值对应的 特征子空间维数 和为n</li>
-</ul>
-</li>
-<li>不同特征值 的特征向量 两两线性无关<ul>
-<li>不同特征值 的特征向量 任意个线性无关</li>
-<li>n个不同特征值 一定可以对角化</li>
-</ul>
-</li>
-<li>定理5： 全部复根属于数域K,且每个特征值的几何重数&#x3D;代数重数</li>
-</ul>
-<p>幂等矩阵</p>
-<ul>
-<li>一定可以对角化:<ul>
-<li>特征值0和1 : $(\lambda-\lambda^2)b&#x3D;0$</li>
-<li>0特征值 对应解空间 rank(A)&#x3D;n-r</li>
-<li>根据4.5章节通过分块证明了 幂等矩阵充要 rank(A)+rank(I-A)&#x3D;n<ul>
-<li>所以1的特征值 对应 n-rank(I-A)&#x3D;r个特征向量</li>
-</ul>
-</li>
-<li>相似trace不变 ，所以trace &#x3D; trace(对角化后) &#x3D; 特征向量1的个数 &#x3D; rank(A)</li>
-</ul>
-</li>
-</ul>
-<p>例3. $\sum_i^s A_i&#x3D;I$, 且$A_i$全为幂等矩阵，那么$\sum_{i&#x3D;1}^s rank(A_i)&#x3D;n$</p>
-<ul>
-<li>n&#x3D;trace(I)&#x3D;trace(sum ai)&#x3D;sum trace(ai) &#x3D; sum rank(ai)</li>
-</ul>
-<p>例4, 不为零矩阵的幂零矩阵不能对角化</p>
-<ul>
-<li>幂零矩阵特征值 只有0<ul>
-<li>0 &#x3D; det 0 &#x3D; det A^l &#x3D; (det a)^l<ul>
-<li>det a &#x3D; 0, 所以0是特征值</li>
-<li>$\lambda^lb&#x3D;A^lb&#x3D;0b&#x3D;0$ 只有0</li>
-</ul>
-</li>
-<li>0对应特征空间维数 &lt; n</li>
-</ul>
-</li>
-</ul>
-<h2 id="5-7-实对称矩阵的对角化"><a href="#5-7-实对称矩阵的对角化" class="headerlink" title="5.7 实对称矩阵的对角化"></a>5.7 实对称矩阵的对角化</h2><p>$x^2+4y^2+z^2-4xy-8xz-4yz&#x3D;1$</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(x,y,z) (1  -2 -4) (x)</span><br><span class="line">        (-2  4 -2) (y)</span><br><span class="line">        (-4 -2  1) (z)                  </span><br></pre></td></tr></table></figure>
-
-<p>$a^TAa$的形式</p>
-<p>希望把$A$对角化 $a^TQ^{-1}\Lambda Qa$ 这样反过去$Qa$对应新的$x,y,z$ 变来只有平方项的表达</p>
-<p>实对称矩阵</p>
-<ul>
-<li>每个特征值都是实数</li>
-<li>不同特征值 的特征向量正交</li>
-<li>一定 正交相似于 对角矩阵<ul>
-<li>归纳法+分块</li>
-</ul>
-</li>
-</ul>
-<p>正交相似于对角矩阵一定是对称矩阵</p>
-<ul>
-<li>$A^T&#x3D;(Q\Lambda Q^{-1})^T&#x3D;(Q^{-1})^TB^TQ^{T}&#x3D;QBQ^{-1}&#x3D;A$</li>
-</ul>
-<p>两个实对称 正交相似 充要条件 它们相似, 从而有了传递性</p>
-<ul>
-<li>额外的 两个矩阵正交相似 则有相同的 特征方程，这两个矩阵可以不是实对称</li>
-</ul>
-<p>实对称矩阵+幂零矩阵&#x3D;&gt; A&#x3D;0, 证明: 因为可以相似对角化</p>
-<p>$A^TA$ 的特征值都是非负实数</p>
-<p>实矩阵A正交相似于 上三角矩阵 充要条件 A的特征多项式在复数域中的根都是实数</p>
-<ul>
-<li>必要性：正交相似 于B 所以A,B特征多项式相同，所以特征值为B的对角线的值</li>
-<li>充分性：归纳法+分块</li>
-</ul>
-<p>A的特征多项式在复数域中的根都是实数，且$AA’&#x3D;A’A$那么A是对称矩阵</p>
-<ul>
-<li>因为都是实数， 所以A正交相似于一个上三角矩阵 <ul>
-<li>带入得$Q^{-1}UQ (Q^{-1}UQ)^T&#x3D;(Q^{-1}UQ)^TQ^{-1}UQ$, 其中$U$是上三角实(?)矩阵</li>
-<li>即 $Q^{-1}UU^TQ&#x3D;Q^{-1}U^TUQ$</li>
-<li>即 $UU^T&#x3D;U^TU$<ul>
-<li>考虑 结果的对角线上的两边相等，可推出$U$是对角矩阵<ul>
-<li>所以$A$是 对称矩阵</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>任意复矩阵一定相似于一个上三角矩阵</p>
-<ul>
-<li>类似的： 归纳法+分块</li>
-</ul>
-<p>$A&#x3D;-A^T$ 则 特征多项式在复数域的根为 0 或 纯虚数</p>
-<ul>
-<li>特征值+共轭 &#x3D;&gt; $(\lambda+\bar{\lambda})\alpha^T\bar{\alpha}&#x3D;0$</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Math/Advanced_algebra_5/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1705,7 +685,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1757,6 +737,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="矩阵的运算"><a href="#矩阵的运算" class="headerlink" title="矩阵的运算"></a>矩阵的运算</h1><p>P55-65</p>
+<p>矩阵和 $C&#x3D;A+B, C_{ij}&#x3D;A_{ij}+B_{ij}$</p>
+<p>矩阵乘 $C&#x3D;AB, C_{ij}&#x3D;\sum_{k} A_{ik}B_{kj}$</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Math/Advanced_algebra_4/#more" rel="contents">
@@ -1826,7 +808,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1887,12 +869,6 @@
 <li>数量乘法:所有元素乘上k倍</li>
 <li>零向量:所有元素都为0</li>
 </ol>
-<p>对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像</p>
-<p>满射:$f(A) &#x3D; B$ </p>
-<p>单射:不同$a$的$f(a)$不同</p>
-<p>双射(一一对应): 单射+满射</p>
-<p>笛卡尔积: $A\times B &#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长</p>
-<h2 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h2><p>线性空间 &#x3D; 4条加法法则+4条数乘法则</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/Math/Advanced_algebra_3/#more" rel="contents">
@@ -1962,7 +938,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2090,7 +1066,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2218,7 +1194,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2273,14 +1249,14 @@
 <p>b站: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jR4y1M78W">https://www.bilibili.com/video/BV1jR4y1M78W</a></p>
 <p>b站有个很大的问题，虽然有合集 分p,但是评论区竟然没有 按视频的评论区！？真的有够离谱, 这种评论区对于这种视频真的零作用。</p>
 <p>另外一个是 视频课 没有 书上的内容全</p>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
-<li>II 页的总览图</li>
-<li>序 其实就是整个脉络，学完后可以保留序</li>
-</ul>
-<h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><p>视频 相对于书的优点是push和动态清晰</p>
-<p>书相对于视频的优点是，自我节奏和多页快速来回翻看</p>
-<p>书上的脉络差了些，视频和书一起看最好，我觉得一些视频用来连接上下关系的内容，看似口头，实际上完全可以写成文字到书里。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Math/Advanced_algebra_0/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -2342,7 +1318,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2473,7 +1449,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

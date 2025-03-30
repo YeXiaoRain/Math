@@ -19,15 +19,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
 
-    <meta name="description" content="微分形式的积分 integration of differential forms本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，">
+    <meta name="description" content="微分形式的积分 integration of differential forms本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面， 积分 integration10.1 定义设$I^k$是$R^k$中的k-方格, 它由满足 $a_i \le x_i \le b_i$的一切, $x&#x3D;(x_1,\cdots,x_k)$组成  $I^j$是$R^j$中的$j-$方格, 前j个不等式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Walter Rudin 数学分析原理 10 微分形式的积分">
 <meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/index.html">
 <meta property="og:site_name" content="YeXiaoRain&#39;s Math">
-<meta property="og:description" content="微分形式的积分 integration of differential forms本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，">
+<meta property="og:description" content="微分形式的积分 integration of differential forms本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面， 积分 integration10.1 定义设$I^k$是$R^k$中的k-方格, 它由满足 $a_i \le x_i \le b_i$的一切, $x&#x3D;(x_1,\cdots,x_k)$组成  $I^j$是$R^j$中的$j-$方格, 前j个不等式">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2025-03-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-30T16:07:44.285Z">
+<meta property="article:modified_time" content="2025-03-30T16:14:32.751Z">
 <meta property="article:author" content="YeXiaoRain">
 <meta property="article:tag" content="数学分析">
 <meta property="article:tag" content="微积分">
@@ -268,7 +268,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2025-03-31 00:07:44" itemprop="dateModified" datetime="2025-03-31T00:07:44+08:00">2025-03-31</time>
+      <time title="修改時間：2025-03-31 00:14:32" itemprop="dateModified" datetime="2025-03-31T00:14:32+08:00">2025-03-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -320,8 +320,6 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="微分形式的积分-integration-of-differential-forms"><a href="#微分形式的积分-integration-of-differential-forms" class="headerlink" title="微分形式的积分 integration of differential forms"></a>微分形式的积分 integration of differential forms</h2><p>本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，</p>
-<span id="more"></span>
-
 <h3 id="积分-integration"><a href="#积分-integration" class="headerlink" title="积分 integration"></a>积分 integration</h3><p>10.1 定义设$I^k$是$R^k$中的k-方格, 它由满足 $a_i \le x_i \le b_i$的一切, $x&#x3D;(x_1,\cdots,x_k)$组成</p>
 <ul>
 <li>$I^j$是$R^j$中的$j-$方格, 前j个不等式确定, $f$是$I^k$上的实连续函数</li>
@@ -334,6 +332,8 @@
 <li>$f_{j-1}$是$f_j$关于$x_j$在$[a_j,b_j]上的积分$ 这样$k$步以后, 得到一个数$f_0$, 我们就把这个数叫做$f$在$I^k$上的积分，并写成下面这种形式$\int_{I^k} f(x) dx$或 $\int_{I^k}f$</li>
 <li>感觉上可能与积分的顺序有关， 用$L(f)$表示一个顺序的积分结果$L’(f)$表示另一个顺序的积分结果</li>
 </ul>
+<span id="more"></span>
+
 <p>10.2 定理 对每个$f\in \mathscr{C}(I^k), L(f)&#x3D;L’(f)$, 也就是连续则积分结果不受到积分顺序影响</p>
 <ul>
 <li>证明 如果 $h(x)&#x3D;h_1(x_1)\cdots h_k(x_k)$ 那么<ul>

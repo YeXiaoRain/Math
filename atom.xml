@@ -6,7 +6,7 @@
   <link href="https://yexiaorain.github.io/Math/atom.xml" rel="self"/>
   
   <link href="https://yexiaorain.github.io/Math/"/>
-  <updated>2025-03-30T16:07:44.285Z</updated>
+  <updated>2025-03-30T16:14:32.751Z</updated>
   <id>https://yexiaorain.github.io/Math/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/</id>
     <published>2025-03-30T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Lebesgue理论&quot;&gt;&lt;a href=&quot;#Lebesgue理论&quot; class=&quot;headerlink&quot; title=&quot;Lebesgue理论&quot;&gt;&lt;/a&gt;Lebesgue理论&lt;/h2&gt;</summary>
@@ -42,10 +42,22 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/</id>
     <published>2025-03-23T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;微分形式的积分-integration-of-differential-forms&quot;&gt;&lt;a href=&quot;#微分形式的积分-integration-of-differential-forms&quot; class=&quot;headerlink&quot; title=&quot;微分形式的积分 integration of differential forms&quot;&gt;&lt;/a&gt;微分形式的积分 integration of differential forms&lt;/h2&gt;&lt;p&gt;本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;微分形式的积分-integration-of-differential-forms&quot;&gt;&lt;a href=&quot;#微分形式的积分-integration-of-differential-forms&quot; class=&quot;headerlink&quot; title=&quot;微分形式的积分 integration of differential forms&quot;&gt;&lt;/a&gt;微分形式的积分 integration of differential forms&lt;/h2&gt;&lt;p&gt;本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，&lt;/p&gt;
+&lt;h3 id=&quot;积分-integration&quot;&gt;&lt;a href=&quot;#积分-integration&quot; class=&quot;headerlink&quot; title=&quot;积分 integration&quot;&gt;&lt;/a&gt;积分 integration&lt;/h3&gt;&lt;p&gt;10.1 定义设$I^k$是$R^k$中的k-方格, 它由满足 $a_i \le x_i \le b_i$的一切, $x&amp;#x3D;(x_1,\cdots,x_k)$组成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$I^j$是$R^j$中的$j-$方格, 前j个不等式确定, $f$是$I^k$上的实连续函数&lt;/li&gt;
+&lt;li&gt;$f&amp;#x3D;f_k$&lt;ul&gt;
+&lt;li&gt;$f_{k-1}(x_1,\cdots,x_{k-1})&amp;#x3D;\int_{a_k}^{b_k} f_k(x_1,\cdots,x_{k-1},x_k)d x_k$,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;$f_k$在$I^k$上的一致连续性表明$f_{k-1}$在$I^{k-1}$上连续&lt;/li&gt;
+&lt;li&gt;因此重复这样能得到$I^j$上的连续函数&lt;/li&gt;
+&lt;li&gt;$f_{j-1}$是$f_j$关于$x_j$在$[a_j,b_j]上的积分$ 这样$k$步以后, 得到一个数$f_0$, 我们就把这个数叫做$f$在$I^k$上的积分，并写成下面这种形式$\int_{I^k} f(x) dx$或 $\int_{I^k}f$&lt;/li&gt;
+&lt;li&gt;感觉上可能与积分的顺序有关， 用$L(f)$表示一个顺序的积分结果$L’(f)$表示另一个顺序的积分结果&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -63,10 +75,22 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/</id>
     <published>2025-03-16T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.286Z</updated>
+    <updated>2025-03-30T16:14:32.752Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;多元函数-functions-of-several-variables&quot;&gt;&lt;a href=&quot;#多元函数-functions-of-several-variables&quot; class=&quot;headerlink&quot; title=&quot;多元函数 functions of several variables&quot;&gt;&lt;/a&gt;多元函数 functions of several variables&lt;/h2&gt;&lt;p&gt;主要讨论 euclidean n-space $R^n$ 中&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;多元函数-functions-of-several-variables&quot;&gt;&lt;a href=&quot;#多元函数-functions-of-several-variables&quot; class=&quot;headerlink&quot; title=&quot;多元函数 functions of several variables&quot;&gt;&lt;/a&gt;多元函数 functions of several variables&lt;/h2&gt;&lt;p&gt;主要讨论 euclidean n-space $R^n$ 中&lt;/p&gt;
+&lt;h3 id=&quot;线性变换-linear-transformations&quot;&gt;&lt;a href=&quot;#线性变换-linear-transformations&quot; class=&quot;headerlink&quot; title=&quot;线性变换 linear transformations&quot;&gt;&lt;/a&gt;线性变换 linear transformations&lt;/h3&gt;&lt;p&gt;9.1 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;向量空间vector space，加法封闭，scalar数乘封闭&lt;/li&gt;
+&lt;li&gt;线性组合linear combination，张成 生成span&lt;ul&gt;
+&lt;li&gt;每一个 生成 是向量空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;线性无关independent, $\sum c_{i}x_{i}&amp;#x3D;0$可推出 所有$c_{i}&amp;#x3D;0$ （任一个不能被其它线性表出）&lt;/li&gt;
+&lt;li&gt;空间X 含有由r个向量，组成无关集，不含r+1个向量的无关集，X是r维， dim X &amp;#x3D; r&lt;/li&gt;
+&lt;li&gt;X的一个无关子集 能 span X,那么 这个子集称作一个基&lt;/li&gt;
+&lt;li&gt;{$e_1,\dots,e_{n}$称作$\mathbb{R}^n$的标准基 standard basis&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -84,10 +108,43 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/</id>
     <published>2025-03-09T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.752Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;一些特殊函数-some-special-functions&quot;&gt;&lt;a href=&quot;#一些特殊函数-some-special-functions&quot; class=&quot;headerlink&quot; title=&quot;一些特殊函数 some special functions&quot;&gt;&lt;/a&gt;一些特殊函数 some special functions&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;一些特殊函数-some-special-functions&quot;&gt;&lt;a href=&quot;#一些特殊函数-some-special-functions&quot; class=&quot;headerlink&quot; title=&quot;一些特殊函数 some special functions&quot;&gt;&lt;/a&gt;一些特殊函数 some special functions&lt;/h2&gt;&lt;h3 id=&quot;幂级数-power-series&quot;&gt;&lt;a href=&quot;#幂级数-power-series&quot; class=&quot;headerlink&quot; title=&quot;幂级数 power series&quot;&gt;&lt;/a&gt;幂级数 power series&lt;/h3&gt;&lt;p&gt;$f(x)&amp;#x3D;\sum_{n&amp;#x3D;0}^{\infty}c_n x^n$， 在0点展开&lt;/p&gt;
+&lt;p&gt;更一般 $f(x)&amp;#x3D;\sum_{n&amp;#x3D;0}^{\infty}c_n (x-a)^n$ 在a点展开&lt;/p&gt;
+&lt;p&gt;这些都称作解析函数 analytic functions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;限制x实值，（不会遇到 3.39 收敛圆）而是面向收敛区间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;8.1 假设对于 $|x| &amp;lt; R$级数$\sum_{n&amp;#x3D;0}^{\infty} c_nx^n$收敛&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;令$f(x)&amp;#x3D;\sum_{n&amp;#x3D;0}^{\infty} c_nx^n, |x| &amp;lt; R$&lt;/li&gt;
+&lt;li&gt;那么 任意$\epsilon &amp;gt; 0$, $f(x)$在$[-R+\epsilon,R+\epsilon]$上一致收敛，在(-R,R)连续，可微，且&lt;/li&gt;
+&lt;li&gt;$f’(x)&amp;#x3D;\sum_{n&amp;#x3D;1}^{\infty} nc_nx^{n-1}, |x|&amp;lt; R$&lt;/li&gt;
+&lt;li&gt;证明&lt;ul&gt;
+&lt;li&gt;$|c_nx^n|\le |c_n(R-\epsilon)^n|$&lt;ul&gt;
+&lt;li&gt;$\sum c_n(R-\epsilon)^n$ 绝对收l敛(3.39 收敛半径内绝对收敛)，由7.10（被值控制，值收敛，则一致收敛） $f_n$ 一致收敛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;根据收敛半径 $R$ 的定义，而导函数中$R&amp;#x3D;\sup \lim_{n\to\infty} \sqrt[n]{nc_n} &amp;#x3D;\sup \lim_{n\to\infty} \sqrt[n]{c_n}$ ，所以 幂级数 和 幂级数导数 的定义域相同&lt;/li&gt;
+&lt;li&gt;幂级数导数在$[-R-\epsilon,R+\epsilon]$一致收敛，7.17(一致收敛与微分保持)，可证明 收敛到导数&lt;/li&gt;
+&lt;li&gt;对于任意 $x&amp;lt;R$ 能找到$\epsilon$&lt;/li&gt;
+&lt;li&gt;连续性 5.2 可微则连续&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;推论&lt;ul&gt;
+&lt;li&gt;$(-R,R)$内有任意阶的导数&lt;/li&gt;
+&lt;li&gt;特别的$f^{(k)}(0)&amp;#x3D;k!c_k$&lt;/li&gt;
+&lt;li&gt;注意的是 这里看上去 f 与 ($c_k$列) 构成一一对应关系，但这里有前提是0的邻域收敛，如果一个在邻域收敛但是任然任意阶可导的函数的反向是不能得到原函数的 &lt;ul&gt;
+&lt;li&gt;$f(x)&amp;#x3D;e^{-\frac{1}{x^2}}, f(x)&amp;#x3D;0(当x&amp;#x3D;0)$ 它任意阶导系数为0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;补充 在一个端点 例如x&amp;#x3D;R 如果也收敛，那么也连续&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这类的东西好想画2x2的方格，每次都是“冂”形状的证明路径&lt;/p&gt;</summary>
     
     
     
@@ -105,11 +162,26 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/</id>
     <published>2025-03-02T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;函数序列与函数项级数-sequences-and-series-of-functions&quot;&gt;&lt;a href=&quot;#函数序列与函数项级数-sequences-and-series-of-functions&quot; class=&quot;headerlink&quot; title=&quot;函数序列与函数项级数 sequences and series of functions&quot;&gt;&lt;/a&gt;函数序列与函数项级数 sequences and series of functions&lt;/h2&gt;&lt;p&gt;这一章里 只限于讨论复值函数。&lt;/p&gt;
-&lt;p&gt;注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）&lt;/p&gt;</summary>
+&lt;p&gt;注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）&lt;/p&gt;
+&lt;h3 id=&quot;主要问题的讨论-discussion-of-main-problem&quot;&gt;&lt;a href=&quot;#主要问题的讨论-discussion-of-main-problem&quot; class=&quot;headerlink&quot; title=&quot;主要问题的讨论 discussion of main problem&quot;&gt;&lt;/a&gt;主要问题的讨论 discussion of main problem&lt;/h3&gt;&lt;p&gt;7.1, n&amp;#x3D;1,2, {$f_n$}是一个定义在集E上的函数序列，再假设${f_n(x)}$对于每个$x\in E$收敛，可由&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$f(x)&amp;#x3D;\lim_{n\to\infty} f_n(x)$确定一个函数f&lt;/li&gt;
+&lt;li&gt;称$f_n$在$E$上收敛,f是{$f_n$}的极限limit 或 极限函数limit function&lt;/li&gt;
+&lt;li&gt;{$f_n$} converges to f pointwise on E, 在E上逐点收敛到f&lt;/li&gt;
+&lt;li&gt;类似的 $f(x)&amp;#x3D;\sum_{n&amp;#x3D;1}^{\infty} f_n(x), x\in E$, 说f是 级数$\sum f_n$的和. f is called the sum of the series $\sum f_n$&lt;/li&gt;
+&lt;li&gt;那么研究什么呢，例如 连续性，可微性，可积 这些性质能否保持，导数的关系&lt;ul&gt;
+&lt;li&gt;例如连续性: &lt;ul&gt;
+&lt;li&gt;点连续 $\lim_{t\to x}f(t)&amp;#x3D;f(x)$&lt;/li&gt;
+&lt;li&gt;是否保持连续性 $\lim_{t\to x}\lim_{n\to \infty}f_n(t)&amp;#x3D;?&amp;#x3D;\lim_{n\to\infty} \lim_{t \to x}f_n(t)$  或者说这个次序是否影响结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -127,7 +199,7 @@
     <link href="https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/"/>
     <id>https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/</id>
     <published>2025-02-28T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.282Z</updated>
+    <updated>2025-03-30T16:14:32.748Z</updated>
     
     
     <summary type="html">1988imop6</summary>
@@ -146,13 +218,37 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/</id>
     <published>2025-02-23T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Riemann-Stieltjes-积分integral&quot;&gt;&lt;a href=&quot;#Riemann-Stieltjes-积分integral&quot; class=&quot;headerlink&quot; title=&quot;Riemann-Stieltjes 积分integral&quot;&gt;&lt;/a&gt;Riemann-Stieltjes 积分integral&lt;/h2&gt;&lt;p&gt;先讨论区间上实值函数的积分，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;后面推广到区间上的复值和向量值函数的积分&lt;/li&gt;
 &lt;li&gt;10～11章 再讨论在不是区间上的积分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;积分的定义和存在性-definition-and-existence-of-the-integral&quot;&gt;&lt;a href=&quot;#积分的定义和存在性-definition-and-existence-of-the-integral&quot; class=&quot;headerlink&quot; title=&quot;积分的定义和存在性 definition and existence of the integral&quot;&gt;&lt;/a&gt;积分的定义和存在性 definition and existence of the integral&lt;/h3&gt;&lt;p&gt;6.1 let &lt;code&gt;[a,b]&lt;/code&gt; be a given interval. by a partition P of [a,b] we mean a finite set of points $x_0,\cdots,x_n$ where&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$a &amp;#x3D; x_0 \le x_1 \le \cdots \le x_{n-1} \le x_n&amp;#x3D;b$&lt;/li&gt;
+&lt;li&gt;令 $\Delta x_i&amp;#x3D;x_i-x_{i-1}$&lt;/li&gt;
+&lt;li&gt;假设f is a bounded real function defined on [a,b]. Corresponding to each partition P of [a,b] we put&lt;/li&gt;
+&lt;li&gt;$M_i&amp;#x3D;\sup f(x)$ $x_{i-1}\le x \le x_i$ 每个区间上确界&lt;/li&gt;
+&lt;li&gt;$m_i&amp;#x3D;\inf f(x)$ $x_{i-1}\le x \le x_i$ 每个区间下确界&lt;ul&gt;
+&lt;li&gt;$U(P,f)&amp;#x3D;\sum_{i&amp;#x3D;1}^n M_i\Delta x_i$  这个和不小于原来的 面积, 上和 上积分&lt;/li&gt;
+&lt;li&gt;$L(P,f)&amp;#x3D;\sum_{i&amp;#x3D;1}^n m_i\Delta x_i$ 这个和不大于原来的 面积，下和 下积分&lt;/li&gt;
+&lt;li&gt;$\bar{\int_a^b} f dx &amp;#x3D; \inf U(P,f)$ 上和的下确界, 称作 upper Riemann integrals of f&lt;/li&gt;
+&lt;li&gt;$\underline{\int}_a^b f dx &amp;#x3D; \sup L(P,f)$ 下和的上确界 ,称作 lower Riemann integrals of f (这个tex怎么打啊??&lt;/li&gt;
+&lt;li&gt;over &lt;code&gt;[a,b]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果 upper &amp;#x3D; lower ,那么 称f is Riemann-integrable on [a,b] ,  $f\in \mathscr{R}$ ,, (mathscr)&lt;ul&gt;
+&lt;li&gt;记作$\int_a^b f(x) dx$&lt;/li&gt;
+&lt;li&gt;因为假设 $f$ is a bounded real function, 所以存在$m,M$, 使得$m \le f([a,b])\le M$&lt;/li&gt;
+&lt;li&gt;$m(b-a)\le L(P,f)\le U(P,f) \le M(b-a)$ 注意的是，这个条件 并不要求 黎曼积分存在，这是描述f上下界与 下和 上和 的大小关系&lt;ul&gt;
+&lt;li&gt;也就是有界函数f,上积分和下积分都有定义&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</summary>
     
     
@@ -171,10 +267,16 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/</id>
     <published>2025-02-16T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;微分法-differentiation&quot;&gt;&lt;a href=&quot;#微分法-differentiation&quot; class=&quot;headerlink&quot; title=&quot;微分法 differentiation&quot;&gt;&lt;/a&gt;微分法 differentiation&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;微分法-differentiation&quot;&gt;&lt;a href=&quot;#微分法-differentiation&quot; class=&quot;headerlink&quot; title=&quot;微分法 differentiation&quot;&gt;&lt;/a&gt;微分法 differentiation&lt;/h2&gt;&lt;h3 id=&quot;实函数中的导数-the-derivative-of-a-real-function&quot;&gt;&lt;a href=&quot;#实函数中的导数-the-derivative-of-a-real-function&quot; class=&quot;headerlink&quot; title=&quot;实函数中的导数 the derivative of a real function&quot;&gt;&lt;/a&gt;实函数中的导数 the derivative of a real function&lt;/h3&gt;&lt;p&gt;5.1 Let f be defined (and real-valued) on &lt;code&gt;[a,b]&lt;/code&gt;, For any x in &lt;code&gt;[a,b]&lt;/code&gt; form the quotient&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\phi(t)&amp;#x3D;\frac{f(t)-f(x)}{t-x}, a &amp;lt; t &amp;lt; b,t\neq x$&lt;/li&gt;
+&lt;li&gt;define: $f’(x)&amp;#x3D;\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f &lt;/li&gt;
+&lt;li&gt;如果 $f’(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable&lt;/li&gt;
+&lt;li&gt;类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -192,18 +294,16 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/</id>
     <published>2025-02-09T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
-
-&lt;h2 id=&quot;连续性-continuity&quot;&gt;&lt;a href=&quot;#连续性-continuity&quot; class=&quot;headerlink&quot; title=&quot;连续性 continuity&quot;&gt;&lt;/a&gt;连续性</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;连续性-continuity&quot;&gt;&lt;a href=&quot;#连续性-continuity&quot; class=&quot;headerlink&quot; title=&quot;连续性 continuity&quot;&gt;&lt;/a&gt;连续性 continuity&lt;/h2&gt;&lt;h3 id=&quot;函数的极限-limit-of-functions&quot;&gt;&lt;a href=&quot;#函数的极限-limit-of-functions&quot; class=&quot;headerlink&quot; title=&quot;函数的极限 limit of functions&quot;&gt;&lt;/a&gt;函数的极限 limit of functions&lt;/h3&gt;&lt;p&gt;4.1 X,Y是度量空间, $E\subset X$,f maps E into Y，p是E的极限点. We write $f(x) \to q$ as $x \to p$, or &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$\lim_{x\to p} f(x)&amp;#x3D;q$&lt;/li&gt;
+&lt;li&gt;这里是 可以在度量空间X通过控制p的距离（邻域）$0&amp;lt;d_X(x,p) &amp;lt; \delta$，来控制在度量空间Y中$d_Y(f(x),q) &amp;lt; \epsilon$的距离&lt;/li&gt;
+&lt;li&gt;注意1: $p\in X$ 不一定$p\in E$, &lt;/li&gt;
+&lt;li&gt;注意2: 关注的是邻域 不含中心点的 $0 &amp;lt; d_X(x,p)$, 所以 $f(p)\neq \lim_{x\to p}f(x)$ 也是可能的&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -221,10 +321,13 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/</id>
     <published>2025-02-02T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;数列与级数-numerical-sequences-and-series&quot;&gt;&lt;a href=&quot;#数列与级数-numerical-sequences-and-series&quot; class=&quot;headerlink&quot; title=&quot;数列与级数 numerical sequences and series&quot;&gt;&lt;/a&gt;数列与级数 numerical sequences and series&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;数列与级数-numerical-sequences-and-series&quot;&gt;&lt;a href=&quot;#数列与级数-numerical-sequences-and-series&quot; class=&quot;headerlink&quot; title=&quot;数列与级数 numerical sequences and series&quot;&gt;&lt;/a&gt;数列与级数 numerical sequences and series&lt;/h2&gt;&lt;h3 id=&quot;收敛序列-convergent-sequences&quot;&gt;&lt;a href=&quot;#收敛序列-convergent-sequences&quot; class=&quot;headerlink&quot; title=&quot;收敛序列 convergent sequences&quot;&gt;&lt;/a&gt;收敛序列 convergent sequences&lt;/h3&gt;&lt;p&gt;3.1 数列收敛converge，能找到p，对于任意给定距离需求，可以通过N来控制 $|a_{n&amp;gt;N}-p|&amp;lt;$距离需求&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;否则  diverge&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -242,10 +345,14 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/</id>
     <published>2025-01-26T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.285Z</updated>
+    <updated>2025-03-30T16:14:32.751Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;基础拓扑-Basic-topology&quot;&gt;&lt;a href=&quot;#基础拓扑-Basic-topology&quot; class=&quot;headerlink&quot; title=&quot;基础拓扑 Basic topology&quot;&gt;&lt;/a&gt;基础拓扑 Basic topology&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;基础拓扑-Basic-topology&quot;&gt;&lt;a href=&quot;#基础拓扑-Basic-topology&quot; class=&quot;headerlink&quot; title=&quot;基础拓扑 Basic topology&quot;&gt;&lt;/a&gt;基础拓扑 Basic topology&lt;/h2&gt;&lt;h3 id=&quot;有限集、可数集和不可数集&quot;&gt;&lt;a href=&quot;#有限集、可数集和不可数集&quot; class=&quot;headerlink&quot; title=&quot;有限集、可数集和不可数集&quot;&gt;&lt;/a&gt;有限集、可数集和不可数集&lt;/h3&gt;&lt;p&gt;2.1 A,B 都是 sets, A中x和B中一个元素关联associated, f(x)表示，f is said to be a function from A to B(or mapping of A into B).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the set A is called the &lt;code&gt;domain&lt;/code&gt; of f(we also say f is defined on A)&lt;/li&gt;
+&lt;li&gt;and the elements f(x) are called the values of f. the set of all values of f is called the &lt;code&gt;range&lt;/code&gt; of f&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -263,14 +370,15 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/</id>
     <published>2025-01-19T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.284Z</updated>
+    <updated>2025-03-30T16:14:32.750Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;中文 9787111134176&lt;/li&gt;
 &lt;li&gt;英文 9787111619543&lt;/li&gt;
-&lt;/ul&gt;</summary>
+&lt;/ul&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;受众：数学专业高年级，或一年级研究生&lt;/p&gt;</summary>
     
     
     
@@ -288,7 +396,7 @@
     <link href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/"/>
     <id>https://yexiaorain.github.io/Math/A_First_Course_in_Probability/</id>
     <published>2025-01-06T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.282Z</updated>
+    <updated>2025-03-30T16:14:32.749Z</updated>
     
     
     <summary type="html">&lt;p&gt;前置知识：微积分&lt;/p&gt;
@@ -318,7 +426,7 @@
     <link href="https://yexiaorain.github.io/Math/the_probability_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_probability_lifesaver/</id>
     <published>2024-12-31T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.287Z</updated>
+    <updated>2025-03-30T16:14:32.753Z</updated>
     
     
     <summary type="html">&lt;p&gt;前置知识：微积分， 看了下有些结论需要依赖复分析的结果&lt;/p&gt;
@@ -343,31 +451,11 @@
   </entry>
   
   <entry>
-    <title>普林斯顿 微积分读本</title>
-    <link href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/"/>
-    <id>https://yexiaorain.github.io/Math/the_calculus_lifesaver/</id>
-    <published>2024-12-19T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.286Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;isbn 978711543559&lt;/p&gt;
-&lt;p&gt;据说有视频课 calclifesaver.com&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
-    
-    
-    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>普林斯顿 数学分析读本</title>
     <link href="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/</id>
     <published>2024-12-19T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.287Z</updated>
+    <updated>2025-03-30T16:14:32.753Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn 9787115543844&lt;/p&gt;
@@ -386,11 +474,31 @@
   </entry>
   
   <entry>
+    <title>普林斯顿 微积分读本</title>
+    <link href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/"/>
+    <id>https://yexiaorain.github.io/Math/the_calculus_lifesaver/</id>
+    <published>2024-12-19T16:00:00.000Z</published>
+    <updated>2025-03-30T16:14:32.753Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn 978711543559&lt;/p&gt;
+&lt;p&gt;据说有视频课 calclifesaver.com&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>牛顿恒等式</title>
     <link href="https://yexiaorain.github.io/Math/newton_identities/"/>
     <id>https://yexiaorain.github.io/Math/newton_identities/</id>
     <published>2024-10-20T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.286Z</updated>
+    <updated>2025-03-30T16:14:32.752Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式&lt;/p&gt;
@@ -441,7 +549,7 @@
     <link href="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/"/>
     <id>https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/</id>
     <published>2024-08-13T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.282Z</updated>
+    <updated>2025-03-30T16:14:32.748Z</updated>
     
     
     <summary type="html">来自2009年初中数学竞赛的一道题</summary>
@@ -462,7 +570,7 @@
     <link href="https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/"/>
     <id>https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/</id>
     <published>2024-03-22T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.284Z</updated>
+    <updated>2025-03-30T16:14:32.750Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;MIT-线性代数公开课&quot;&gt;&lt;a href=&quot;#MIT-线性代数公开课&quot; class=&quot;headerlink&quot; title=&quot;MIT 线性代数公开课&quot;&gt;&lt;/a&gt;MIT 线性代数公开课&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/18.06&quot;&gt;http://web.mit.edu/18.06&lt;/a&gt;&lt;/p&gt;
@@ -485,7 +593,7 @@
     <link href="https://yexiaorain.github.io/Math/rubicks_cube/"/>
     <id>https://yexiaorain.github.io/Math/rubicks_cube/</id>
     <published>2023-08-30T16:00:00.000Z</published>
-    <updated>2025-03-30T16:07:44.286Z</updated>
+    <updated>2025-03-30T16:14:32.753Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;魔方&quot;&gt;&lt;a href=&quot;#魔方&quot; class=&quot;headerlink&quot; title=&quot;魔方&quot;&gt;&lt;/a&gt;魔方&lt;/h1&gt;&lt;p&gt;不知道魔方公式的情况下,用数学解决魔方&lt;/p&gt;</summary>
