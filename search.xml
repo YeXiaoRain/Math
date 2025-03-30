@@ -2964,350 +2964,6 @@
       </tags>
   </entry>
   <entry>
-    <title>高等代数 八 线性空间</title>
-    <url>/Math/Advanced_algebra_8/</url>
-    <content><![CDATA[<p>视频 42-54 </p>
-<h1 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h1><p>上来就是我非常讨厌的表达式 $A(\alpha+\beta)&#x3D;A(\alpha)+A(\beta)$</p>
-<p>$A:V\to V’$</p>
-<p>$\alpha,\beta \in V$</p>
-<p>一个我更喜欢的是 $A(\alpha+<em>{V}\beta)&#x3D;A(\alpha)+</em>{V’}A(\beta)$</p>
-<ul>
-<li>即使这样，也不够完全，因为$V$和$V’$ 里都可以 按你需要定义 加法, 也就是对于$V$你可以定义多种加法</li>
-<li>一个我更喜欢的是 $A(\alpha+<em>{S_1}\beta)&#x3D;A(\alpha)+</em>{S_2}A(\beta)$  这样强调两个加法的不同，是两个线性空间中具体的加法</li>
-<li>或者 $A(\alpha+\beta)&#x3D;A(\alpha)\oplus A(\beta)$  也是强调两个加法的不同</li>
-<li>$A(k \cdot_{S_1}\alpha)&#x3D;k\cdot_{S_2} A(\alpha), k\in F$</li>
-</ul>
-<p>那么有加，数量乘法 映射，那么这是一个线性映射</p>
-<h2 id="8-1-域F上线性空间的基与维数"><a href="#8-1-域F上线性空间的基与维数" class="headerlink" title="8.1 域F上线性空间的基与维数"></a>8.1 域F上线性空间的基与维数</h2><p>定义1. 非空集合V, 加法运算:$V\times V\to V$ 的一个映射， 域F, 乘法运算$F\times V\to V$的一个映射</p>
-<ul>
-<li>加法结合</li>
-<li>加法零元， 称作零元素</li>
-<li>加法逆元</li>
-<li>加法交换</li>
-<li>$(1_F) a &#x3D; a$, </li>
-<li>$(k_Fl_F) a &#x3D;k_F(l_F a)$, </li>
-<li>$(k_F+<em>Fl_F) a &#x3D;(k_Fa)+</em>{V}(l_F a)$, </li>
-<li>$k_F(a+<em>{V}b) &#x3D;(k_Fa)+</em>{V}(k_F b)$, </li>
-<li>称作线性空间</li>
-</ul>
-<p>例如： </p>
-<ul>
-<li>几何空间中以原点为起点的所有向量组成的集合</li>
-<li>域F上 所有n元有序组组成的集合$F^n$</li>
-<li>矩阵 $M_{s n}(K)$</li>
-<li>一元多项式 $K[x]$</li>
-<li>复数域 a+bi &#x3D; (a,b)</li>
-</ul>
-<p>性质:</p>
-<ul>
-<li>唯一零元 $0_1&#x3D;0_1+0_2&#x3D;0_2$</li>
-<li>逆元唯一 $(-a)_1&#x3D;(-a)_1+(a+(-a)_2)&#x3D;((-a)_1+a)+(-a)_2&#x3D;(-a)_2$</li>
-<li>$0_Fa&#x3D;0_V$ , $0_V&#x3D;(0_Fa)+_V(-(0_Fa))&#x3D;(0_F+_F0_F)a+_V(-(0_Fa))&#x3D;(0_Fa)+_V(0_Fa)+_V(-(0_Fa))&#x3D;(0_Fa)+_V((0_Fa)+_V(-(0_Fa)))&#x3D;(0_Fa)+_V0_V&#x3D;0_Fa$</li>
-<li>$k_F0_V&#x3D;0_V$, 类似的</li>
-<li>$k_Fa_V&#x3D;0_V$ 则$k_F&#x3D;0_F$或$a_V&#x3D;0_V$,  证明核心在$k$属于域$F$，要么有零元 要么有逆元</li>
-<li>$(-1)_Fa_V&#x3D;-(a_V)$, F域中单位元的逆元 乘 V中的元 能得到V中对应的逆元，也就是证明 前面表示 $+a_V &#x3D;0$</li>
-</ul>
-<hr>
-<p>线性组合 $\sum k_ia_i,k\in K,a\in V$</p>
-<p>向量组 选中的$a_i$</p>
-<p>线性表出: $b&#x3D;\sum k_ia_i$</p>
-<p>线性无关: $\sum k_ia_i&#x3D;0 \to k_i&#x3D;0$, 任意一个不能被其它的线性表出</p>
-<p>命题1. 组线性相关：任意一个部分线性相关，则整体线性相关</p>
-<p>命题2. 包含0线性相关</p>
-<p>命题3, &lt;&#x3D;&gt; 存在一个可以被其他线性表出</p>
-<p>命题4，b 被W表出，(表法唯一 &lt;&#x3D;&gt; W线性无关)</p>
-<p>命题5, W线性无关， <code>b可被W线性表出 &lt;=&gt; [...W,b]线性相关</code></p>
-<p>定义3：一个极大线性无关组，线性无关 且 加入任何其它会导致线性相关</p>
-<ul>
-<li>这里“极” 很准确，因为这时候还没有“最”的概念，认为是一种局部的极值</li>
-</ul>
-<p>定义4：等价，向量组X,Y，X能表出Y所有，Y能表出X所有</p>
-<ul>
-<li>任意两个极大线性无关组 等价</li>
-<li>传递性</li>
-</ul>
-<p>引理1. 如果X由Y线性表出，且X中向量个数r &gt; Y中向量个数s，那么X线性相关</p>
-<ul>
-<li>也就是求$c$使得 $\sum_i c_ix_i&#x3D;0$ 把每个x_i展开成$Y$的线性表出</li>
-<li>所以是求 r列,s行 的null space, 一定不是零空间，所以 一定有非零解，所以X线性相关</li>
-</ul>
-<p>推论1. (r个向量线性无关向量组X)由(s个向量的向量组Y) 线性表出，那么 $r\le s$， 也证明了rank的上限</p>
-<ul>
-<li>引理1的逆否命题</li>
-</ul>
-<p>推论2， 等价的线性无关向量组所含向量个数相等</p>
-<ul>
-<li>定义4+推论1 显然</li>
-</ul>
-<p>推论3： 一个向量组（不要求线性无关）的任意两个极大线性无关所含向量的个数相等</p>
-<ul>
-<li>等价 传递性 极大A &lt;&#x3D;&gt; 本身 &lt;&#x3D;&gt; 极大B</li>
-</ul>
-<p>定义5, 向量组 &#x3D;&gt; 极大线性无关组的个数 记作 rank</p>
-<p>命题6, X中 线性无关 &lt;&#x3D;&gt; rank &#x3D; 向量个数</p>
-<ul>
-<li>&#x3D;&gt; 本身是一个 极大线性无关组</li>
-<li>&lt;&#x3D; rank&#x3D;个数 只能取所有，注意这里始终是取向量还没谈论空间</li>
-</ul>
-<p>命题7： X由Y线性表出, $rank(X) \le rank(Y)$</p>
-<ul>
-<li>X的任意极大线性无关 能被 Y的任意极大线性无关 表出</li>
-<li>根据推论1</li>
-</ul>
-<p>命题8：等价向量组，rank相等</p>
-<ul>
-<li>根据表出关系 A 极大 &lt;&#x3D;&gt; A &lt;&#x3D;&gt; b &lt;&#x3D;&gt; B极大</li>
-</ul>
-<hr>
-<p>基与维数</p>
-<p>定义6： V是域F上线性空间，V中向量集S</p>
-<ul>
-<li>S线性无关</li>
-<li>V中每个可以由S线性表出</li>
-</ul>
-<p>S是一个基</p>
-<p>集合S + 偏序( $S\times S\to$ true&#x2F;false&#x2F;undefined 无环 )</p>
-<ul>
-<li>偏序<ul>
-<li>自反 $A\le A$</li>
-<li>无环</li>
-</ul>
-</li>
-<li>链：子集，且两两有偏序关系</li>
-<li>极大元素: A, 集合中没有比A大的$A \le B \in S \to B&#x3D;A$，可能一个可能多个可能没有</li>
-<li>上界， 任意$x \in U \subset S, x \le B\in S$,那么B是U的一个上界</li>
-<li>Zorn引理： 一个偏序集，每条链 都有上界，那么S有极大元素</li>
-</ul>
-<p>定理1. 任意线性空间V都有一个基</p>
-<ul>
-<li>V中任意多个 线性无关的向量构成集合，形成拓扑图上的每个点</li>
-<li>偏序关系 定义是 集合的包含关系</li>
-<li>每条链都有上界怎么证明？？？ 无穷维的呢？<ul>
-<li>不懂</li>
-</ul>
-</li>
-</ul>
-<p>定义7. 线性空间 根据其基的个数 ，称它是 有限维&#x2F;无限维</p>
-<p>定理2. 有限维线性空间，任意两个基的向量个数相等</p>
-<ul>
-<li>引理1</li>
-</ul>
-<p>推论4，无限维 任意一个基都还有无穷多向量</p>
-<p>定义8. 有限维 个数称作维数记作 $dim V$, 无限维 dim V &#x3D; infty</p>
-<p>命题9. n维线性空间, 任意n+1各向量都线性相关</p>
-<p>命题10. n维 线性空间，任意n个线性无关向量 都是 基</p>
-<p>命题11. 可以表示V中任意向量的线性无关组是基</p>
-<p>命题12. 任意一个线性无关向量组可以扩充为一个基</p>
-<ul>
-<li>因为如果 个数少，必定有不可表出的可以加入，否则 个数少 和 基 相互表出 &#x3D;&gt; 个数相等</li>
-</ul>
-<hr>
-<p>四 基变换和坐标变换</p>
-<p>$基A * 矩阵A &#x3D; 基B$ ， 当且仅当 矩阵A可逆</p>
-<p>可逆 &#x3D;&gt; 基可以相互表出 &#x3D;&gt; rank(A)&#x3D;rank(B)</p>
-<p>都是基 &lt;&#x3D;&gt; 可以相互表出 &#x3D;&gt; 表出过程就是求逆</p>
-<p>结论：</p>
-<ul>
-<li>基 * 可逆矩阵 得到另一个基</li>
-<li>两个基之间可以通过可逆矩阵转换</li>
-</ul>
-<h2 id="8-2-子空间及其交与和，子空间的直和"><a href="#8-2-子空间及其交与和，子空间的直和" class="headerlink" title="8.2 子空间及其交与和，子空间的直和"></a>8.2 子空间及其交与和，子空间的直和</h2><p>保持域F不变(!!)，在域F上，线性子空间： 子空间 且 保持同样的加法和乘法</p>
-<p>定理1：子集+加法乘法封闭 &lt;&#x3D;&gt; 子空间</p>
-<p>有限维度V的子空间U, dim U &lt;&#x3D; dim V</p>
-<ul>
-<li>张成span 空间，W是 向量组的张成空间</li>
-<li>取等号当且仅当 U &#x3D; V</li>
-<li>dim(span(向量组)) &#x3D; rank(向量组)</li>
-</ul>
-<hr>
-<p>子空间交与和</p>
-<p>交: $V_1,V_2$是$V$的子空间，那么牠们的交也是子空间, 核心是封闭性的证明，因为对于$V_1,V_2$来说 属于它们的向量，保持加法乘法不变，在其运算规则中 总是唯一的得到V中的结果，那么其实问题只有 能否保证这个结果在V中了</p>
-<p>并：并不是子空间</p>
-<p>而我们希望有一个类似于并的运算能保持 依然是V的子空间</p>
-<p>和: $V_1+V_2$不是 空间的并，而是 $V_1,V_2$ 的基 的集合 的生成空间, 它也是包含$V_1\cup V_2$的最小子空间</p>
-<p>命题1.</p>
-<ul>
-<li>$(V_1\cap V_2)+(V_1\cap V_3) \subseteq V_1\cap (V_2+V_3)$</li>
-<li>$V_1+(V_2\cap V_3)\subseteq (V_1+ V_2)\cap(V_1+ V_3)$</li>
-</ul>
-<p>命题2. 和 是 基的并集关系</p>
-<p>定理4. 子空间维数公式</p>
-<p>$dim V_1+dim V_2 &#x3D; dim(V_1+V_2)+dim(V_1\cap V_2)$ ,注意括号中的+是和</p>
-<p>推论 1, $dim V_1 + dim V_2 &#x3D; dim (V_1+V_2) &lt;&#x3D;&gt; V_1\cap V_2 &#x3D; 0$</p>
-<hr>
-<p>子空间直和， 也就是针对两个交集只有0向量的子空间 （注意空间交集不是空）</p>
-<p>定义1. 如果$V_1+V_2$唯一表示称 两个分别来自两个子空间的 向量和，那么成为直和, $V_1\oplus V_2$</p>
-<p>定理5. 以下命题等价</p>
-<ul>
-<li>$V_1+V_2$是直和</li>
-<li>$V_1+V_2$中零向量表法唯一</li>
-<li>$V_1\cap V_2 &#x3D; 0$</li>
-</ul>
-<p>定理6. 如果是有限维子空间</p>
-<ul>
-<li>$V_1+V_2$是直和</li>
-<li>dim(V_1+V_2)&#x3D;dim V_1+dim V_2</li>
-<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
-</ul>
-<p>定义 补空间：直和 &#x3D; V</p>
-<p>命题3. 设V是域F上n维线性空间，则V的每一个子空间U都有补空间</p>
-<ul>
-<li>扩充的部分形成 补空间</li>
-</ul>
-<p>定理7.  无限维度子空间</p>
-<ul>
-<li>$V_1+V_2$是直和</li>
-<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
-</ul>
-<p>命题4. 无限维子空间 有补空间</p>
-<p>定义2. 多个子空间的连续直和： 任意两个子空间交为0</p>
-<p>定理8. 多个子空间命题等价</p>
-<ul>
-<li>$V_1+V_2+\cdots+V_s$是直和</li>
-<li>零向量表法唯一</li>
-<li>$V_i\cap (\sum_{j\neq i}V_j) &#x3D; 0$</li>
-</ul>
-<p>定理9. 有限维子空间，等价命题</p>
-<ul>
-<li>直和</li>
-<li>$dim(和) &#x3D; \sum dim$</li>
-<li>分别的基合起来 是和的基</li>
-</ul>
-<h2 id="8-3-域F上线性空间的同构"><a href="#8-3-域F上线性空间的同构" class="headerlink" title="8.3 域F上线性空间的同构"></a>8.3 域F上线性空间的同构</h2><p>同构映射, $V,V’$都是域F上的线性空间，存在双射$\sigma: V \to V’$, 且保持 加法和乘法的映射</p>
-<p>$\sigma(a+<em>{V}b)&#x3D;\sigma(a)+</em>{V’}\sigma(b)$</p>
-<p>$\sigma(k\cdot_{V}a)&#x3D;k\cdot_{V’}\sigma(a)$</p>
-<p>性质1. $\sigma(0)$是$V’$的零元素</p>
-<p>性质2. $\sigma(-a)&#x3D;-\sigma(a)$ 加法逆元映射</p>
-<p>性质3. $\sigma(\sum {k_i}a_i)&#x3D;\sum {k_i} \sigma(a_i)$</p>
-<p>性质4. 向量组$X$线性相关，当且仅当 $\sigma(X)$线性相关，证明:也就是线性和 只有0解</p>
-<p>性质5. 基 &#x3D;&gt; $\sigma$ 是基，证明：一来线性相关性（表出性（和 与 数量积））</p>
-<p>定理1. 有限维 线性空间同构 &lt;&#x3D;&gt; 维数相等</p>
-<ul>
-<li>&#x3D;&gt; 上面结构 可证</li>
-<li>&lt;&#x3D; 钦定映射</li>
-</ul>
-<p>命题1. V的子空间U &#x3D;&gt; $\sigma(U)$ 也是$V’$的子空间，如果有限维，子空间维数相等</p>
-<hr>
-<p>有限域的元素个数</p>
-<p>$F$是有限域，设 特征为$p$, 单位元为$I$, 取 $F_p&#x3D;$ { $0,I,2I,\cdots, (p-1)I$ }</p>
-<p>$F_p$ 对于减法 乘法封闭（之前推的充要条件），是F的一个子环（这里的运算的映射$F$和$F_p$也是一致的哦）</p>
-<p>$F$ 看成$F_p$域上的线性空间，加法是 域$F$的加法, 纯量乘法是 $F_p$中元素 与 $F$中元素的乘法，</p>
-<ul>
-<li>??? 总可以看成吗，这里的感觉是F上有一些不可合并的元，那么每个不与其它合并的元的系数一定可以提取成$F_p$中的, 所以每个不能合成的 看作线性空间的一个维度</li>
-</ul>
-<p>因为有限 $F$作为 域$F_p$ 上的线性空间一定有限维的, 若$n$维, $F$和$F_p^n$ 同构, 有双射，个数相等，$F$的 元素个数 $p^n$</p>
-<p>$F_p^n &#x3D;$ { $(a_1,a_2,\cdots,a_n)|a_i\in F_p$}</p>
-<p>定理2 F是任一有限域，F的元素是一个素数p的幂次，其中p是域F的特征</p>
-<ul>
-<li>&#x3D;&gt; 按照上述构造 $p^n$ 一定存在，任意两个$p^n$ 有限域 都是同构的, 或者记作 $GF(p^n)$ ，或者$F_{p^n}$ 称作 Galois fields</li>
-</ul>
-<hr>
-<p>三 外直和</p>
-<p>$U,W$是域F上 任意两个线性空间，笛卡儿积</p>
-<p>$U\times W&#x3D;${$(a,b)|a\in U,b\in W$}</p>
-<p>可以规定 加法运算和 纯量乘法运算</p>
-<p>一种 拼接 连接的感觉， 可以证明满足线性空间性质，称作外直和 记作\dot{+} $\dot{+}$</p>
-<p>$dim(U\dot{+}W)&#x3D;n+m&#x3D;dim U + dim W$</p>
-<p>是一种小的线性空间 构造大的线性空间的一种方法</p>
-<ul>
-<li>考虑 (a,0) 和 (b,0) 是 (a,b)的子空间，所以 $U\dot{+}W$是 $U\dot{+}0_W$和$0_U\dot{+}W$的直和</li>
-<li>其实 容易看出 U 和 (a,0)是同构</li>
-<li>W 和 (0,b)是同构</li>
-</ul>
-<h2 id="8-4-商空间"><a href="#8-4-商空间" class="headerlink" title="8.4 商空间"></a>8.4 商空间</h2><p>$V&#x2F;\sim$, 也就是 按照$\sim$定义等价，把$V$划分成多个等价类</p>
-<p>一个等价类 &#x3D; 代表元 + (0的等价类)</p>
-<p>陪集 $\bar{a}&#x3D;a+W$</p>
-<p>也可以记作 $V&#x2F;W$ V对于子空间W的商集, 每个等价类 {$a+W | a \in V$}</p>
-<p>加法 和 纯量乘法</p>
-<p>(a+W)+(b+W) &#x3D; (a+b)+W</p>
-<p>k(a+W) &#x3D; ka + W</p>
-<p>0+W是零元</p>
-<p>构成线性空间，是V对于W的商空间， 也是线性空间</p>
-<p>其中 $V&#x2F;W$的元素不是$V$的向量，而是一个等价类</p>
-<p>dim V&#x2F;W &#x3D; dim V - dim W</p>
-<ul>
-<li>W中取基，扩充成V的基</li>
-<li>[w基，非w基]<ul>
-<li>V&#x2F;W的元素 a+W &#x3D; (a在V中 按照扩充基展开的加法)+W<ul>
-<li>&#x3D; 新加法的拆分 sum ki (基i + W)<ul>
-<li>其中 (属于W的基 + W) &#x3D; 0 + W</li>
-</ul>
-</li>
-<li>&#x3D; sum ki (非w基i + W) 证明了任意可以由  (非w基+W) 表示</li>
-<li>只需要再证明 这些 线性无关</li>
-<li>即 sum li (非w基i + W) &#x3D; W 的li只有0解，（注意这里W就是零元）</li>
-<li>即 (sum li 非w基i ) + W &#x3D; W</li>
-<li>那么有 (sum li w基i) 能表示 W中的任意，包括 (sum li 非w基i)</li>
-<li>而 注意到 (sum li w基i) - (sum li 非w基i) &#x3D; 0 只有零解，所以 证明了 上面只有零解，所以线性无关</li>
-<li>综上，可表示任意，又线性无关，所以是基，rank &#x3D; 个数 &#x3D; dim V - dim W</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>余维数</p>
-<p>V是无限维，W是子空间 也是无限维度</p>
-<p>定义1. W是域F上线性空间V的一个子空间，如果 V&#x2F;W是有限维的, 那么称作W在V中的余维数，记作 记作$codim_V W$</p>
-<hr>
-<p>标准映射</p>
-<p>V 到 V&#x2F;W 有一个很自然的映射</p>
-<p>$a\to a + W$</p>
-<p>称作标准映射，典范映射 canonical mapping, 显然 满射，W不是零子空间时，它不是单射</p>
-<p>这种映射，有加法和纯量乘法对应，只是对应 因为不是单射，所以不是同构</p>
-<ul>
-<li>但有一个用处，如果 $V&#x2F;W$中 几个$a+W$是线性无关，反过来 对应的几个$a$是线性无关</li>
-</ul>
-<p>命题1. 域F上线性空间V的任一子空间W都有补空间</p>
-<ul>
-<li>V&#x2F;W 的一个基为 S’<ul>
-<li>S’ 是按照标准映射的逆映射 到V中的S，S也是线性无关的</li>
-<li>令U是由S生成的子空间<ul>
-<li>那么S是U的一个基</li>
-</ul>
-</li>
-<li>下面证明 U是W在V中的补空间</li>
-<li>在 商集 中 任意 a+W 可被 S’ 表出，表出 的非W的部分记作b, a+W&#x3D;b+W (在商集中相等，在V中不一定相等)<ul>
-<li>$a-b \in W, b \in U$</li>
-<li>存在 $c\in W, a-b&#x3D;c$</li>
-<li>$a&#x3D;b+c$, 也就是 a 可以被 U 与 W中的表示</li>
-<li>分割线</li>
-<li>b \in W 交U,<ul>
-<li>属于W: b+W&#x3D;W</li>
-<li>属于U: b可以被 S表出</li>
-<li>W&#x3D;b+W&#x3D;(sum 系数 * 基)+W&#x3D;sum 系数(基+W)，只有零解，所以交为空</li>
-</ul>
-</li>
-<li>所以是补空间 （U+W &#x3D; V, U交W&#x3D;0）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>核心:</p>
-<ul>
-<li>基和维数： 线性空间V中每个元素，能用V中“有限多个向量” 唯一的表出</li>
-<li>子空间，子空间直和</li>
-<li>商集：把等价类看成一个元素</li>
-<li>线性空间同构:线性空间之间关系的角度  </li>
-<li>然后研究  空间中 两个子空间 交，加，（正交时 的加&#x3D;&gt; 直和），维度性质，V减去一个子空间性质<ul>
-<li>这块核心的研究是基于 <code>基向量</code> 与 <code>表出</code>，围绕这两个，再保持 <code>加</code> 和 <code>乘</code> 的运算</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>高等代数</category>
-      </categories>
-      <tags>
-        <tag>高等代数</tag>
-        <tag>线性空间</tag>
-        <tag>直和</tag>
-        <tag>线性空间同构</tag>
-        <tag>商空间</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>高等代数 七 多项式环</title>
     <url>/Math/Advanced_algebra_7/</url>
     <content><![CDATA[<p>视频066-085</p>
@@ -4165,6 +3821,350 @@
         <tag>高等代数</tag>
         <tag>多项式环</tag>
         <tag>结式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 八 线性空间</title>
+    <url>/Math/Advanced_algebra_8/</url>
+    <content><![CDATA[<p>视频 42-54 </p>
+<h1 id="线性空间"><a href="#线性空间" class="headerlink" title="线性空间"></a>线性空间</h1><p>上来就是我非常讨厌的表达式 $A(\alpha+\beta)&#x3D;A(\alpha)+A(\beta)$</p>
+<p>$A:V\to V’$</p>
+<p>$\alpha,\beta \in V$</p>
+<p>一个我更喜欢的是 $A(\alpha+<em>{V}\beta)&#x3D;A(\alpha)+</em>{V’}A(\beta)$</p>
+<ul>
+<li>即使这样，也不够完全，因为$V$和$V’$ 里都可以 按你需要定义 加法, 也就是对于$V$你可以定义多种加法</li>
+<li>一个我更喜欢的是 $A(\alpha+<em>{S_1}\beta)&#x3D;A(\alpha)+</em>{S_2}A(\beta)$  这样强调两个加法的不同，是两个线性空间中具体的加法</li>
+<li>或者 $A(\alpha+\beta)&#x3D;A(\alpha)\oplus A(\beta)$  也是强调两个加法的不同</li>
+<li>$A(k \cdot_{S_1}\alpha)&#x3D;k\cdot_{S_2} A(\alpha), k\in F$</li>
+</ul>
+<p>那么有加，数量乘法 映射，那么这是一个线性映射</p>
+<h2 id="8-1-域F上线性空间的基与维数"><a href="#8-1-域F上线性空间的基与维数" class="headerlink" title="8.1 域F上线性空间的基与维数"></a>8.1 域F上线性空间的基与维数</h2><p>定义1. 非空集合V, 加法运算:$V\times V\to V$ 的一个映射， 域F, 乘法运算$F\times V\to V$的一个映射</p>
+<ul>
+<li>加法结合</li>
+<li>加法零元， 称作零元素</li>
+<li>加法逆元</li>
+<li>加法交换</li>
+<li>$(1_F) a &#x3D; a$, </li>
+<li>$(k_Fl_F) a &#x3D;k_F(l_F a)$, </li>
+<li>$(k_F+<em>Fl_F) a &#x3D;(k_Fa)+</em>{V}(l_F a)$, </li>
+<li>$k_F(a+<em>{V}b) &#x3D;(k_Fa)+</em>{V}(k_F b)$, </li>
+<li>称作线性空间</li>
+</ul>
+<p>例如： </p>
+<ul>
+<li>几何空间中以原点为起点的所有向量组成的集合</li>
+<li>域F上 所有n元有序组组成的集合$F^n$</li>
+<li>矩阵 $M_{s n}(K)$</li>
+<li>一元多项式 $K[x]$</li>
+<li>复数域 a+bi &#x3D; (a,b)</li>
+</ul>
+<p>性质:</p>
+<ul>
+<li>唯一零元 $0_1&#x3D;0_1+0_2&#x3D;0_2$</li>
+<li>逆元唯一 $(-a)_1&#x3D;(-a)_1+(a+(-a)_2)&#x3D;((-a)_1+a)+(-a)_2&#x3D;(-a)_2$</li>
+<li>$0_Fa&#x3D;0_V$ , $0_V&#x3D;(0_Fa)+_V(-(0_Fa))&#x3D;(0_F+_F0_F)a+_V(-(0_Fa))&#x3D;(0_Fa)+_V(0_Fa)+_V(-(0_Fa))&#x3D;(0_Fa)+_V((0_Fa)+_V(-(0_Fa)))&#x3D;(0_Fa)+_V0_V&#x3D;0_Fa$</li>
+<li>$k_F0_V&#x3D;0_V$, 类似的</li>
+<li>$k_Fa_V&#x3D;0_V$ 则$k_F&#x3D;0_F$或$a_V&#x3D;0_V$,  证明核心在$k$属于域$F$，要么有零元 要么有逆元</li>
+<li>$(-1)_Fa_V&#x3D;-(a_V)$, F域中单位元的逆元 乘 V中的元 能得到V中对应的逆元，也就是证明 前面表示 $+a_V &#x3D;0$</li>
+</ul>
+<hr>
+<p>线性组合 $\sum k_ia_i,k\in K,a\in V$</p>
+<p>向量组 选中的$a_i$</p>
+<p>线性表出: $b&#x3D;\sum k_ia_i$</p>
+<p>线性无关: $\sum k_ia_i&#x3D;0 \to k_i&#x3D;0$, 任意一个不能被其它的线性表出</p>
+<p>命题1. 组线性相关：任意一个部分线性相关，则整体线性相关</p>
+<p>命题2. 包含0线性相关</p>
+<p>命题3, &lt;&#x3D;&gt; 存在一个可以被其他线性表出</p>
+<p>命题4，b 被W表出，(表法唯一 &lt;&#x3D;&gt; W线性无关)</p>
+<p>命题5, W线性无关， <code>b可被W线性表出 &lt;=&gt; [...W,b]线性相关</code></p>
+<p>定义3：一个极大线性无关组，线性无关 且 加入任何其它会导致线性相关</p>
+<ul>
+<li>这里“极” 很准确，因为这时候还没有“最”的概念，认为是一种局部的极值</li>
+</ul>
+<p>定义4：等价，向量组X,Y，X能表出Y所有，Y能表出X所有</p>
+<ul>
+<li>任意两个极大线性无关组 等价</li>
+<li>传递性</li>
+</ul>
+<p>引理1. 如果X由Y线性表出，且X中向量个数r &gt; Y中向量个数s，那么X线性相关</p>
+<ul>
+<li>也就是求$c$使得 $\sum_i c_ix_i&#x3D;0$ 把每个x_i展开成$Y$的线性表出</li>
+<li>所以是求 r列,s行 的null space, 一定不是零空间，所以 一定有非零解，所以X线性相关</li>
+</ul>
+<p>推论1. (r个向量线性无关向量组X)由(s个向量的向量组Y) 线性表出，那么 $r\le s$， 也证明了rank的上限</p>
+<ul>
+<li>引理1的逆否命题</li>
+</ul>
+<p>推论2， 等价的线性无关向量组所含向量个数相等</p>
+<ul>
+<li>定义4+推论1 显然</li>
+</ul>
+<p>推论3： 一个向量组（不要求线性无关）的任意两个极大线性无关所含向量的个数相等</p>
+<ul>
+<li>等价 传递性 极大A &lt;&#x3D;&gt; 本身 &lt;&#x3D;&gt; 极大B</li>
+</ul>
+<p>定义5, 向量组 &#x3D;&gt; 极大线性无关组的个数 记作 rank</p>
+<p>命题6, X中 线性无关 &lt;&#x3D;&gt; rank &#x3D; 向量个数</p>
+<ul>
+<li>&#x3D;&gt; 本身是一个 极大线性无关组</li>
+<li>&lt;&#x3D; rank&#x3D;个数 只能取所有，注意这里始终是取向量还没谈论空间</li>
+</ul>
+<p>命题7： X由Y线性表出, $rank(X) \le rank(Y)$</p>
+<ul>
+<li>X的任意极大线性无关 能被 Y的任意极大线性无关 表出</li>
+<li>根据推论1</li>
+</ul>
+<p>命题8：等价向量组，rank相等</p>
+<ul>
+<li>根据表出关系 A 极大 &lt;&#x3D;&gt; A &lt;&#x3D;&gt; b &lt;&#x3D;&gt; B极大</li>
+</ul>
+<hr>
+<p>基与维数</p>
+<p>定义6： V是域F上线性空间，V中向量集S</p>
+<ul>
+<li>S线性无关</li>
+<li>V中每个可以由S线性表出</li>
+</ul>
+<p>S是一个基</p>
+<p>集合S + 偏序( $S\times S\to$ true&#x2F;false&#x2F;undefined 无环 )</p>
+<ul>
+<li>偏序<ul>
+<li>自反 $A\le A$</li>
+<li>无环</li>
+</ul>
+</li>
+<li>链：子集，且两两有偏序关系</li>
+<li>极大元素: A, 集合中没有比A大的$A \le B \in S \to B&#x3D;A$，可能一个可能多个可能没有</li>
+<li>上界， 任意$x \in U \subset S, x \le B\in S$,那么B是U的一个上界</li>
+<li>Zorn引理： 一个偏序集，每条链 都有上界，那么S有极大元素</li>
+</ul>
+<p>定理1. 任意线性空间V都有一个基</p>
+<ul>
+<li>V中任意多个 线性无关的向量构成集合，形成拓扑图上的每个点</li>
+<li>偏序关系 定义是 集合的包含关系</li>
+<li>每条链都有上界怎么证明？？？ 无穷维的呢？<ul>
+<li>不懂</li>
+</ul>
+</li>
+</ul>
+<p>定义7. 线性空间 根据其基的个数 ，称它是 有限维&#x2F;无限维</p>
+<p>定理2. 有限维线性空间，任意两个基的向量个数相等</p>
+<ul>
+<li>引理1</li>
+</ul>
+<p>推论4，无限维 任意一个基都还有无穷多向量</p>
+<p>定义8. 有限维 个数称作维数记作 $dim V$, 无限维 dim V &#x3D; infty</p>
+<p>命题9. n维线性空间, 任意n+1各向量都线性相关</p>
+<p>命题10. n维 线性空间，任意n个线性无关向量 都是 基</p>
+<p>命题11. 可以表示V中任意向量的线性无关组是基</p>
+<p>命题12. 任意一个线性无关向量组可以扩充为一个基</p>
+<ul>
+<li>因为如果 个数少，必定有不可表出的可以加入，否则 个数少 和 基 相互表出 &#x3D;&gt; 个数相等</li>
+</ul>
+<hr>
+<p>四 基变换和坐标变换</p>
+<p>$基A * 矩阵A &#x3D; 基B$ ， 当且仅当 矩阵A可逆</p>
+<p>可逆 &#x3D;&gt; 基可以相互表出 &#x3D;&gt; rank(A)&#x3D;rank(B)</p>
+<p>都是基 &lt;&#x3D;&gt; 可以相互表出 &#x3D;&gt; 表出过程就是求逆</p>
+<p>结论：</p>
+<ul>
+<li>基 * 可逆矩阵 得到另一个基</li>
+<li>两个基之间可以通过可逆矩阵转换</li>
+</ul>
+<h2 id="8-2-子空间及其交与和，子空间的直和"><a href="#8-2-子空间及其交与和，子空间的直和" class="headerlink" title="8.2 子空间及其交与和，子空间的直和"></a>8.2 子空间及其交与和，子空间的直和</h2><p>保持域F不变(!!)，在域F上，线性子空间： 子空间 且 保持同样的加法和乘法</p>
+<p>定理1：子集+加法乘法封闭 &lt;&#x3D;&gt; 子空间</p>
+<p>有限维度V的子空间U, dim U &lt;&#x3D; dim V</p>
+<ul>
+<li>张成span 空间，W是 向量组的张成空间</li>
+<li>取等号当且仅当 U &#x3D; V</li>
+<li>dim(span(向量组)) &#x3D; rank(向量组)</li>
+</ul>
+<hr>
+<p>子空间交与和</p>
+<p>交: $V_1,V_2$是$V$的子空间，那么牠们的交也是子空间, 核心是封闭性的证明，因为对于$V_1,V_2$来说 属于它们的向量，保持加法乘法不变，在其运算规则中 总是唯一的得到V中的结果，那么其实问题只有 能否保证这个结果在V中了</p>
+<p>并：并不是子空间</p>
+<p>而我们希望有一个类似于并的运算能保持 依然是V的子空间</p>
+<p>和: $V_1+V_2$不是 空间的并，而是 $V_1,V_2$ 的基 的集合 的生成空间, 它也是包含$V_1\cup V_2$的最小子空间</p>
+<p>命题1.</p>
+<ul>
+<li>$(V_1\cap V_2)+(V_1\cap V_3) \subseteq V_1\cap (V_2+V_3)$</li>
+<li>$V_1+(V_2\cap V_3)\subseteq (V_1+ V_2)\cap(V_1+ V_3)$</li>
+</ul>
+<p>命题2. 和 是 基的并集关系</p>
+<p>定理4. 子空间维数公式</p>
+<p>$dim V_1+dim V_2 &#x3D; dim(V_1+V_2)+dim(V_1\cap V_2)$ ,注意括号中的+是和</p>
+<p>推论 1, $dim V_1 + dim V_2 &#x3D; dim (V_1+V_2) &lt;&#x3D;&gt; V_1\cap V_2 &#x3D; 0$</p>
+<hr>
+<p>子空间直和， 也就是针对两个交集只有0向量的子空间 （注意空间交集不是空）</p>
+<p>定义1. 如果$V_1+V_2$唯一表示称 两个分别来自两个子空间的 向量和，那么成为直和, $V_1\oplus V_2$</p>
+<p>定理5. 以下命题等价</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>$V_1+V_2$中零向量表法唯一</li>
+<li>$V_1\cap V_2 &#x3D; 0$</li>
+</ul>
+<p>定理6. 如果是有限维子空间</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>dim(V_1+V_2)&#x3D;dim V_1+dim V_2</li>
+<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
+</ul>
+<p>定义 补空间：直和 &#x3D; V</p>
+<p>命题3. 设V是域F上n维线性空间，则V的每一个子空间U都有补空间</p>
+<ul>
+<li>扩充的部分形成 补空间</li>
+</ul>
+<p>定理7.  无限维度子空间</p>
+<ul>
+<li>$V_1+V_2$是直和</li>
+<li>(V_1的一个基) 与 ($V_2$的一个基) 合起来是$V_1+V_2$的一个基</li>
+</ul>
+<p>命题4. 无限维子空间 有补空间</p>
+<p>定义2. 多个子空间的连续直和： 任意两个子空间交为0</p>
+<p>定理8. 多个子空间命题等价</p>
+<ul>
+<li>$V_1+V_2+\cdots+V_s$是直和</li>
+<li>零向量表法唯一</li>
+<li>$V_i\cap (\sum_{j\neq i}V_j) &#x3D; 0$</li>
+</ul>
+<p>定理9. 有限维子空间，等价命题</p>
+<ul>
+<li>直和</li>
+<li>$dim(和) &#x3D; \sum dim$</li>
+<li>分别的基合起来 是和的基</li>
+</ul>
+<h2 id="8-3-域F上线性空间的同构"><a href="#8-3-域F上线性空间的同构" class="headerlink" title="8.3 域F上线性空间的同构"></a>8.3 域F上线性空间的同构</h2><p>同构映射, $V,V’$都是域F上的线性空间，存在双射$\sigma: V \to V’$, 且保持 加法和乘法的映射</p>
+<p>$\sigma(a+<em>{V}b)&#x3D;\sigma(a)+</em>{V’}\sigma(b)$</p>
+<p>$\sigma(k\cdot_{V}a)&#x3D;k\cdot_{V’}\sigma(a)$</p>
+<p>性质1. $\sigma(0)$是$V’$的零元素</p>
+<p>性质2. $\sigma(-a)&#x3D;-\sigma(a)$ 加法逆元映射</p>
+<p>性质3. $\sigma(\sum {k_i}a_i)&#x3D;\sum {k_i} \sigma(a_i)$</p>
+<p>性质4. 向量组$X$线性相关，当且仅当 $\sigma(X)$线性相关，证明:也就是线性和 只有0解</p>
+<p>性质5. 基 &#x3D;&gt; $\sigma$ 是基，证明：一来线性相关性（表出性（和 与 数量积））</p>
+<p>定理1. 有限维 线性空间同构 &lt;&#x3D;&gt; 维数相等</p>
+<ul>
+<li>&#x3D;&gt; 上面结构 可证</li>
+<li>&lt;&#x3D; 钦定映射</li>
+</ul>
+<p>命题1. V的子空间U &#x3D;&gt; $\sigma(U)$ 也是$V’$的子空间，如果有限维，子空间维数相等</p>
+<hr>
+<p>有限域的元素个数</p>
+<p>$F$是有限域，设 特征为$p$, 单位元为$I$, 取 $F_p&#x3D;$ { $0,I,2I,\cdots, (p-1)I$ }</p>
+<p>$F_p$ 对于减法 乘法封闭（之前推的充要条件），是F的一个子环（这里的运算的映射$F$和$F_p$也是一致的哦）</p>
+<p>$F$ 看成$F_p$域上的线性空间，加法是 域$F$的加法, 纯量乘法是 $F_p$中元素 与 $F$中元素的乘法，</p>
+<ul>
+<li>??? 总可以看成吗，这里的感觉是F上有一些不可合并的元，那么每个不与其它合并的元的系数一定可以提取成$F_p$中的, 所以每个不能合成的 看作线性空间的一个维度</li>
+</ul>
+<p>因为有限 $F$作为 域$F_p$ 上的线性空间一定有限维的, 若$n$维, $F$和$F_p^n$ 同构, 有双射，个数相等，$F$的 元素个数 $p^n$</p>
+<p>$F_p^n &#x3D;$ { $(a_1,a_2,\cdots,a_n)|a_i\in F_p$}</p>
+<p>定理2 F是任一有限域，F的元素是一个素数p的幂次，其中p是域F的特征</p>
+<ul>
+<li>&#x3D;&gt; 按照上述构造 $p^n$ 一定存在，任意两个$p^n$ 有限域 都是同构的, 或者记作 $GF(p^n)$ ，或者$F_{p^n}$ 称作 Galois fields</li>
+</ul>
+<hr>
+<p>三 外直和</p>
+<p>$U,W$是域F上 任意两个线性空间，笛卡儿积</p>
+<p>$U\times W&#x3D;${$(a,b)|a\in U,b\in W$}</p>
+<p>可以规定 加法运算和 纯量乘法运算</p>
+<p>一种 拼接 连接的感觉， 可以证明满足线性空间性质，称作外直和 记作\dot{+} $\dot{+}$</p>
+<p>$dim(U\dot{+}W)&#x3D;n+m&#x3D;dim U + dim W$</p>
+<p>是一种小的线性空间 构造大的线性空间的一种方法</p>
+<ul>
+<li>考虑 (a,0) 和 (b,0) 是 (a,b)的子空间，所以 $U\dot{+}W$是 $U\dot{+}0_W$和$0_U\dot{+}W$的直和</li>
+<li>其实 容易看出 U 和 (a,0)是同构</li>
+<li>W 和 (0,b)是同构</li>
+</ul>
+<h2 id="8-4-商空间"><a href="#8-4-商空间" class="headerlink" title="8.4 商空间"></a>8.4 商空间</h2><p>$V&#x2F;\sim$, 也就是 按照$\sim$定义等价，把$V$划分成多个等价类</p>
+<p>一个等价类 &#x3D; 代表元 + (0的等价类)</p>
+<p>陪集 $\bar{a}&#x3D;a+W$</p>
+<p>也可以记作 $V&#x2F;W$ V对于子空间W的商集, 每个等价类 {$a+W | a \in V$}</p>
+<p>加法 和 纯量乘法</p>
+<p>(a+W)+(b+W) &#x3D; (a+b)+W</p>
+<p>k(a+W) &#x3D; ka + W</p>
+<p>0+W是零元</p>
+<p>构成线性空间，是V对于W的商空间， 也是线性空间</p>
+<p>其中 $V&#x2F;W$的元素不是$V$的向量，而是一个等价类</p>
+<p>dim V&#x2F;W &#x3D; dim V - dim W</p>
+<ul>
+<li>W中取基，扩充成V的基</li>
+<li>[w基，非w基]<ul>
+<li>V&#x2F;W的元素 a+W &#x3D; (a在V中 按照扩充基展开的加法)+W<ul>
+<li>&#x3D; 新加法的拆分 sum ki (基i + W)<ul>
+<li>其中 (属于W的基 + W) &#x3D; 0 + W</li>
+</ul>
+</li>
+<li>&#x3D; sum ki (非w基i + W) 证明了任意可以由  (非w基+W) 表示</li>
+<li>只需要再证明 这些 线性无关</li>
+<li>即 sum li (非w基i + W) &#x3D; W 的li只有0解，（注意这里W就是零元）</li>
+<li>即 (sum li 非w基i ) + W &#x3D; W</li>
+<li>那么有 (sum li w基i) 能表示 W中的任意，包括 (sum li 非w基i)</li>
+<li>而 注意到 (sum li w基i) - (sum li 非w基i) &#x3D; 0 只有零解，所以 证明了 上面只有零解，所以线性无关</li>
+<li>综上，可表示任意，又线性无关，所以是基，rank &#x3D; 个数 &#x3D; dim V - dim W</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>余维数</p>
+<p>V是无限维，W是子空间 也是无限维度</p>
+<p>定义1. W是域F上线性空间V的一个子空间，如果 V&#x2F;W是有限维的, 那么称作W在V中的余维数，记作 记作$codim_V W$</p>
+<hr>
+<p>标准映射</p>
+<p>V 到 V&#x2F;W 有一个很自然的映射</p>
+<p>$a\to a + W$</p>
+<p>称作标准映射，典范映射 canonical mapping, 显然 满射，W不是零子空间时，它不是单射</p>
+<p>这种映射，有加法和纯量乘法对应，只是对应 因为不是单射，所以不是同构</p>
+<ul>
+<li>但有一个用处，如果 $V&#x2F;W$中 几个$a+W$是线性无关，反过来 对应的几个$a$是线性无关</li>
+</ul>
+<p>命题1. 域F上线性空间V的任一子空间W都有补空间</p>
+<ul>
+<li>V&#x2F;W 的一个基为 S’<ul>
+<li>S’ 是按照标准映射的逆映射 到V中的S，S也是线性无关的</li>
+<li>令U是由S生成的子空间<ul>
+<li>那么S是U的一个基</li>
+</ul>
+</li>
+<li>下面证明 U是W在V中的补空间</li>
+<li>在 商集 中 任意 a+W 可被 S’ 表出，表出 的非W的部分记作b, a+W&#x3D;b+W (在商集中相等，在V中不一定相等)<ul>
+<li>$a-b \in W, b \in U$</li>
+<li>存在 $c\in W, a-b&#x3D;c$</li>
+<li>$a&#x3D;b+c$, 也就是 a 可以被 U 与 W中的表示</li>
+<li>分割线</li>
+<li>b \in W 交U,<ul>
+<li>属于W: b+W&#x3D;W</li>
+<li>属于U: b可以被 S表出</li>
+<li>W&#x3D;b+W&#x3D;(sum 系数 * 基)+W&#x3D;sum 系数(基+W)，只有零解，所以交为空</li>
+</ul>
+</li>
+<li>所以是补空间 （U+W &#x3D; V, U交W&#x3D;0）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>核心:</p>
+<ul>
+<li>基和维数： 线性空间V中每个元素，能用V中“有限多个向量” 唯一的表出</li>
+<li>子空间，子空间直和</li>
+<li>商集：把等价类看成一个元素</li>
+<li>线性空间同构:线性空间之间关系的角度  </li>
+<li>然后研究  空间中 两个子空间 交，加，（正交时 的加&#x3D;&gt; 直和），维度性质，V减去一个子空间性质<ul>
+<li>这块核心的研究是基于 <code>基向量</code> 与 <code>表出</code>，围绕这两个，再保持 <code>加</code> 和 <code>乘</code> 的运算</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+        <tag>线性空间</tag>
+        <tag>直和</tag>
+        <tag>线性空间同构</tag>
+        <tag>商空间</tag>
       </tags>
   </entry>
   <entry>
@@ -6588,6 +6588,47 @@
       </tags>
   </entry>
   <entry>
+    <title>数学分析 CheatSheet</title>
+    <url>/Math/Mathematical_analysis-cheatsheet/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
+<p>$\tan^2x+1&#x3D;\sec^2x$</p>
+<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<span id="more"></span>
+
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
+<p>$\cos’x &#x3D; - \sin x$</p>
+<p>$\tan’x &#x3D; \sec^2x$</p>
+<p>$\cot’x &#x3D; - \csc^2x$</p>
+<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
+<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x &#x3D; \sinh x$</p>
+<p>$\sinh’ x &#x3D; \cosh x$</p>
+<p>$\tanh’ x &#x3D; sech^2 x$</p>
+<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
+<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
+<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>CheatSheet</tag>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析 一 分析基础</title>
     <url>/Math/Mathematical_analysis_problems_1/</url>
     <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
@@ -6647,49 +6688,8 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
-        <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 CheatSheet</title>
-    <url>/Math/Mathematical_analysis-cheatsheet/</url>
-    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
-<p>$\tan^2x+1&#x3D;\sec^2x$</p>
-<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
-<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
-<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
-<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
-<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
-<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
-<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<span id="more"></span>
-
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
-<p>$\cos’x &#x3D; - \sin x$</p>
-<p>$\tan’x &#x3D; \sec^2x$</p>
-<p>$\cot’x &#x3D; - \csc^2x$</p>
-<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
-<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
-<p>$\cosh’ x &#x3D; \sinh x$</p>
-<p>$\sinh’ x &#x3D; \cosh x$</p>
-<p>$\tanh’ x &#x3D; sech^2 x$</p>
-<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
-<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
-<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
-<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
-<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
-<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
-<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>CheatSheet</tag>
       </tags>
   </entry>
   <entry>
@@ -6734,8 +6734,8 @@
         <category>数学分析</category>
       </categories>
       <tags>
-        <tag>题目</tag>
         <tag>数学分析</tag>
+        <tag>题目</tag>
       </tags>
   </entry>
   <entry>
@@ -6786,8 +6786,8 @@
         <category>数学分析</category>
       </categories>
       <tags>
-        <tag>题目</tag>
         <tag>数学分析</tag>
+        <tag>题目</tag>
       </tags>
   </entry>
   <entry>
@@ -6837,8 +6837,22 @@
         <category>数学分析</category>
       </categories>
       <tags>
-        <tag>题目</tag>
         <tag>数学分析</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 六 多元函数积分学</title>
+    <url>/Math/Mathematical_analysis_problems_6/</url>
+    <content><![CDATA[<h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2><span id="more"></span>
+
+<h2 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h2><h2 id="曲线积分与格林公式"><a href="#曲线积分与格林公式" class="headerlink" title="曲线积分与格林公式"></a>曲线积分与格林公式</h2><h2 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h2><h2 id="奥氏公式、斯托克斯公式、线积分与路径无关"><a href="#奥氏公式、斯托克斯公式、线积分与路径无关" class="headerlink" title="奥氏公式、斯托克斯公式、线积分与路径无关"></a>奥氏公式、斯托克斯公式、线积分与路径无关</h2><h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
       </tags>
   </entry>
   <entry>
@@ -6867,22 +6881,8 @@
         <category>数学分析</category>
       </categories>
       <tags>
-        <tag>题目</tag>
         <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 六 多元函数积分学</title>
-    <url>/Math/Mathematical_analysis_problems_6/</url>
-    <content><![CDATA[<h1 id="多元函数积分学-6"><a href="#多元函数积分学-6" class="headerlink" title="多元函数积分学 6"></a>多元函数积分学 6</h1><h2 id="重积分的概念与性质、重积分化累次积分"><a href="#重积分的概念与性质、重积分化累次积分" class="headerlink" title="重积分的概念与性质、重积分化累次积分"></a>重积分的概念与性质、重积分化累次积分</h2><span id="more"></span>
-
-<h2 id="重积分变换"><a href="#重积分变换" class="headerlink" title="重积分变换"></a>重积分变换</h2><h2 id="曲线积分与格林公式"><a href="#曲线积分与格林公式" class="headerlink" title="曲线积分与格林公式"></a>曲线积分与格林公式</h2><h2 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h2><h2 id="奥氏公式、斯托克斯公式、线积分与路径无关"><a href="#奥氏公式、斯托克斯公式、线积分与路径无关" class="headerlink" title="奥氏公式、斯托克斯公式、线积分与路径无关"></a>奥氏公式、斯托克斯公式、线积分与路径无关</h2><h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2>]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
         <tag>题目</tag>
-        <tag>数学分析</tag>
       </tags>
   </entry>
   <entry>
@@ -6916,591 +6916,8 @@
         <category>数学分析</category>
       </categories>
       <tags>
+        <tag>数学分析</tag>
         <tag>题目</tag>
-        <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 1 实数系与复数系</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_1/</url>
-    <content><![CDATA[<p>isbn</p>
-<ul>
-<li>中文 9787111134176</li>
-<li>英文 9787111619543</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>受众：数学专业高年级，或一年级研究生</p>
-<h2 id="实数系与复数系"><a href="#实数系与复数系" class="headerlink" title="实数系与复数系"></a>实数系与复数系</h2><h3 id="导引"><a href="#导引" class="headerlink" title="导引"></a>导引</h3><p>有理数&#x3D;m&#x2F;n</p>
-<ul>
-<li>不存在有理数 $p^2&#x3D;2$ 这里普林斯顿那本应该也是抄这个例子的<ul>
-<li>一方面不存在（ 偶数证明</li>
-<li>一方面没有 最近, p &#x3D;(2p+2)&#x2F;(p+2)</li>
-</ul>
-</li>
-</ul>
-<p>1.3 快速过了一下集合的概念</p>
-<h3 id="有序集-Ordered-sets"><a href="#有序集-Ordered-sets" class="headerlink" title="有序集 Ordered sets"></a>有序集 Ordered sets</h3><p>1.5 集合中的 序order, is a relation</p>
-<ul>
-<li>任何两个可按照 给定序比较 或相等</li>
-<li>传递性, if x,y,z in S, if x &lt; y and y &lt; z then x &lt; z</li>
-</ul>
-<p>1.6 集合set+序(order is defined) &#x3D;&gt; 有序集 ordered set</p>
-<p>1.7 子集的上界定义, bounded above 上方有界, (中文书上翻译的 上有界)</p>
-<ul>
-<li>有序集S的子集E, 任意E中元素，&lt;&#x3D; b \in S,那么b是上界upper bound of E</li>
-<li>类似 Lower bound<ul>
-<li>从翻译上 看起来英文的 bounded above是形容集合，而 upper bound of 是一个值的与集合的关系属性</li>
-</ul>
-</li>
-</ul>
-<p>1.8 上确界 least-upper-bound of</p>
-<ul>
-<li>a 是 上界 upper bound of</li>
-<li>更小不是上界,b &lt; a, b is not upper bound of</li>
-<li>类似下确界 greatest-lower-bound property</li>
-</ul>
-<p>1.10 最小上界性 least-upper-bound property</p>
-<ul>
-<li>$E\subset S$,E有上界时, $\text{sup} E \in S$ <ul>
-<li>有理数中 $A&#x3D;\lbrace q| q^2&lt;2\rbrace, B&#x3D;\lbrace q | q^2 &gt; 2\rbrace$, A的上界全在B中，但是B没有最小值 从而 $\mathbb{Q}$没有最小上界性</li>
-</ul>
-</li>
-<li>1.11 最小上界性 &lt;&#x3D;&gt; 最小下界性<ul>
-<li>这个的证明核心 就是 证明上面的定义的要素：是+更（小&#x2F;大）不是</li>
-</ul>
-</li>
-</ul>
-<h3 id="域-Fields"><a href="#域-Fields" class="headerlink" title="域 Fields"></a>域 Fields</h3><p>1.12 Deinition A field is a set F with two operations, called addition and multiplication, 满足两个所谓的 “field axioms”(域的公理)</p>
-<ul>
-<li>Axioms for addition<ul>
-<li>A1 x in F + y in F &#x3D;&gt; x+y in F 封闭</li>
-<li>A2 commutative x+y&#x3D;y+x for all x,y in F 交换</li>
-<li>A3 associative (x+y)+z&#x3D;x+(y+z) for all x,y,z in F 结合</li>
-<li>A4 F contains an elment 0 such that 0+x&#x3D;x for every x in F, 在addition运算下的零元</li>
-<li>A5 x in F, exist y in F, x+y&#x3D;0, y 记作 -x, 逆元存在</li>
-</ul>
-</li>
-<li>Axioms for mutiplication<ul>
-<li>M1 封闭</li>
-<li>M2 交换</li>
-<li>M3 结合</li>
-<li>M4 乘法零元，且不等于加法零元，记作1, 1x&#x3D;x for every x in F</li>
-<li>M5 乘法逆元</li>
-</ul>
-</li>
-<li>the Distribution law 分配<ul>
-<li>x(y+z)&#x3D;xy+xz for x,y,z in F</li>
-</ul>
-</li>
-<li>注意一些地方的一些写法是简记<ul>
-<li>例如 减法 是 加逆元，分数符号或除法是乘上逆元</li>
-<li>同等级 连加，连乘，是省去了运算括号，实际是从左到右侧</li>
-<li>整数次幂次 是 同个数连乘缩写</li>
-<li>这些“简记”并没有 额外定义性质</li>
-</ul>
-</li>
-</ul>
-<p>1.14 命题proposition </p>
-<ul>
-<li>if x+y&#x3D;y+z then y&#x3D;z</li>
-<li>if x+y&#x3D;y then y &#x3D; 0</li>
-<li>if x+y&#x3D;0 then y &#x3D; -x</li>
-<li>-(-x)&#x3D;x 逆元的逆元得到本身</li>
-</ul>
-<p>1.15 命题 关于乘法</p>
-<ul>
-<li>x \neq 0 and xy&#x3D;xz then y&#x3D;z</li>
-<li>x \neq 0 and xy&#x3D;x then y&#x3D;1</li>
-<li>x \neq 0 and xy&#x3D;1 then y&#x3D;1&#x2F;x</li>
-<li>x \neq 0 , 1(1&#x2F;x)&#x3D;x</li>
-</ul>
-<p>1.16 命题 x,y,z in F</p>
-<ul>
-<li>0x&#x3D;0</li>
-<li>x\neq 0 and y \neq0 then xy\neq 0</li>
-<li>(-x)y&#x3D;-(xy)&#x3D;x(-y)</li>
-<li>(-x)(-y)&#x3D;xy</li>
-</ul>
-<p>1.17 定义 ordered field 有序域</p>
-<ul>
-<li>field F + ordered set</li>
-<li>x + y &lt; x+z if x,y,z in F and y &lt; z</li>
-<li>xy &gt; 0 if x in F, y in F, x &gt; 0 and y &gt;0</li>
-<li>这里 定义 positive ,negative</li>
-</ul>
-<p>1.18 命题，因为我们对于实数域很熟，有一些实数域中的结论在 有序域中同样成立，例如</p>
-<ul>
-<li>if x &gt; 0 then -x &lt; 0,对称也成立</li>
-<li>if x &gt; 0 and y &lt; z then xy &lt; xz</li>
-<li>if x &lt; 0 and y &lt; z then xy &gt; xz</li>
-<li>if x \neq 0 then xx &gt;0,特别的 1(乘法零元) &gt; 0（加法零元）</li>
-<li>if 0 &lt; x &lt; y then 0 &lt; 1&#x2F;y &lt; 1&#x2F;x</li>
-</ul>
-<h3 id="实数域-the-reald-field"><a href="#实数域-the-reald-field" class="headerlink" title="实数域 the reald field"></a>实数域 the reald field</h3><p>本章核心 存在定理: existence theorem</p>
-<p>1.19 存在一个 有序域R,有 最小上界性</p>
-<ul>
-<li>同时包含实数域Q 作为子域。<ul>
-<li>这里没有直接说R是啥</li>
-<li>子域 是保持两者之间的运算映射一致</li>
-<li>R的元叫做 实数, the members of R are called real numbers</li>
-<li>具体的R构造见1章附录</li>
-</ul>
-</li>
-</ul>
-<p>1.20 </p>
-<ul>
-<li>archimedean property of R 欧几里德性 x,y in R, x &gt; 0 , then there is a positive integer n such that nx &gt; y<ul>
-<li>不成立y是上界，有界，最小上界性 a&#x3D;sup nx, a-x不是最小上界, 存在m使得a-x &lt; mx, a &lt; (m+1)x ,a不是上界，不是最小上界</li>
-</ul>
-</li>
-<li>Q is dense(稠密) in R.  x,y, in R x &lt; y ,exists p in Q such that x &lt; p &lt; y, 任意两个实数之间有有理数<ul>
-<li>利用1, n(y-x)&gt;1 划缝，让x,y必然落在 1&#x2F;m切割的不同区间中</li>
-</ul>
-</li>
-</ul>
-<p>1.21 $x^n&#x3D;a$ 存在1个正实数解</p>
-<ul>
-<li>y &#x3D; sup x | x^n &lt; a。 因为上确界性</li>
-<li>那么 y^n &#x3D; a, 即是 y^n &lt; a或者 y^n &gt; a都会矛盾（注意不要弄错成 <del>y的n次方都比a小，大于y的n次方都比a大</del></li>
-<li>这里的想法和开篇的 y^2&#x3D;2 的想法类似，插入一个 y^n ~ a 之间的数，而且它的n次方是直接可以y表示的<ul>
-<li>(y+h)^n-y^n &lt; a-y^n, 0 &lt; h &lt; 1</li>
-<li>h(\sum (y+h)^? y^?) &lt; a-y^n</li>
-<li>h(\sum (y+1)^{n-1}) &lt; a-y^n</li>
-<li>h(n(y+1)^{n-1}) &lt; a-y^n</li>
-<li>我们能得到h 关于 a,y,n的 只有乘除加减没有开根的表达式，从而能凑，就能有之间的数，从而就能有矛盾</li>
-</ul>
-</li>
-<li>推论 (ab)^{1&#x2F;n}&#x3D;(a^{1&#x2F;n})(b^{1&#x2F;n})</li>
-</ul>
-<p>1.22 小数 &#x3D;&gt; 实数</p>
-<ul>
-<li>无穷小数，看成 逐渐截断的 10的幂次 系数的和 的集合的 sup E</li>
-<li>since we shall never use decimals ,we do not enter into a detailed discussion</li>
-</ul>
-<h3 id="广义实数系-the-extended-real-number-system"><a href="#广义实数系-the-extended-real-number-system" class="headerlink" title="广义实数系 the extended real number system"></a>广义实数系 the extended real number system</h3><p>这里英文是 extended, 多了 正无穷和负无穷两个 符号</p>
-<ul>
-<li>在 extended 里， 正无穷是 所有的上界，每个非空集合至少一个上界</li>
-<li>一些还能用的四则运算</li>
-</ul>
-<h3 id="复数域-complex-field"><a href="#复数域-complex-field" class="headerlink" title="复数域 complex field"></a>复数域 complex field</h3><p>有序对(a,b)</p>
-<ul>
-<li>相等 对位相等</li>
-<li>复数运算的 新加法，和新乘法</li>
-<li>(a,b)+(c,d)&#x3D;(a+c,b+d)</li>
-<li>(a,b) * (c,d)&#x3D;(ac-bd,ad+bc)</li>
-<li>在新加法乘法的定义下满足 加法5条，乘法5条，交换1条，所以是个 域 field</li>
-<li>实数 对应的是第二维为零，实数和复数有相同的运算性质，因此可以看作子域 the real field as a  subfield of the complex field</li>
-</ul>
-<p>其它记法 a+bi</p>
-<ul>
-<li>新记法下的运算，实部Re(z) real part，虚部Im(z) imaginary</li>
-<li>共轭相关运算 (在普林斯顿那书笔记中有)</li>
-<li>$z\bar{z}$ 是实+正，只有&#x3D;0时&#x3D;0</li>
-<li>absolute value $|z|&#x3D;\sqrt{z\bar{z}}$</li>
-</ul>
-<p>Schwarz inequality</p>
-<ul>
-<li>$|\sum a_i\bar{b_i}|^2 \le (\sum |a_i|^2)(\sum |b_i|^2)$</li>
-<li>书上这个神奇的起手怎么想到的真不知道，drop from sky</li>
-<li>一个办法 $f(t)&#x3D;\sum |a_i+tb_i|^2$ 这个思路是去找判别式靠，在 高代第10章 就是类似这个思路</li>
-</ul>
-<h3 id="欧氏空间-Euclidean-spaces"><a href="#欧氏空间-Euclidean-spaces" class="headerlink" title="欧氏空间 Euclidean spaces"></a>欧氏空间 Euclidean spaces</h3><p>n维坐标, 坐标值都是实数</p>
-<ul>
-<li>线性<ul>
-<li>加法 addition of vectors</li>
-<li>数乘 , multiplication of a vector by a real number (a scalar)</li>
-</ul>
-</li>
-<li>内积 inner product<ul>
-<li>x y &#x3D; sum x_i y_i</li>
-<li>范数 norm of x, |x|&#x3D;(x x)^{1&#x2F;2}</li>
-</ul>
-</li>
-<li>性质1.37<ul>
-<li>|x|&gt;&#x3D;0</li>
-<li>|x| &#x3D;0 if and only if x &#x3D;0</li>
-<li>|ax|&#x3D;|a||x|</li>
-<li>|x y | &lt;&#x3D; |x| |y| 是 Schwarz inequaliy的结果</li>
-<li>|x+y| &lt;&#x3D; |x|+|y| 三角不等式<ul>
-<li>|x-z| &lt;&#x3D; |x-y|+|y-z|</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="附录，从有理数域-为了最小上界性-构造出实数域"><a href="#附录，从有理数域-为了最小上界性-构造出实数域" class="headerlink" title="附录，从有理数域 为了最小上界性 构造出实数域"></a>附录，从有理数域 为了最小上界性 构造出实数域</h3><p>对于1.19，要从Q构造出R</p>
-<p>Step 1. The members of R will be certain subsets of Q, called cuts. A cut is, by definition, any set S \subset Q with following three properties</p>
-<ul>
-<li>S is not empty and S \neq Q, 非空 非全，真子集</li>
-<li>if p in S, q in Q, and q &lt; p, then q in S, Q中某个元素比S中某个元素小，那么同时在S中<ul>
-<li>含有：不在S中的 都比S中的大，否则会在S中</li>
-<li>比 不在S中的大的，同样不在S中</li>
-</ul>
-</li>
-<li>if p in S,then p &lt; r for some r in S,每个S中元素能找到更大的, 没有最大化</li>
-</ul>
-<p>p,q,r表示有理数，S,T,U表示分化 cuts</p>
-<p>Step 2. S &lt; T 表示S是T的真子集</p>
-<ul>
-<li>这里主要是要表达，集合之间，在上述的cuts, 真子集 是一种有序关系<ul>
-<li>（注意普通的集合之间的不是“任意两个都有序的”</li>
-<li>这里至多 一个&gt;&#x3D;&lt; 成立显然</li>
-<li>证明一下至少一个成立，这里用元素属于分类讨论去证明</li>
-</ul>
-</li>
-<li>传递性容易证</li>
-<li>因此 所有cuts 集合 构成的集合 是有序集</li>
-</ul>
-<p>step3 有序集R有最小上界性</p>
-<ul>
-<li>R&#x3D;{cuts的集合}<ul>
-<li>每个cut是 有理数集合 满足step1的性质</li>
-</ul>
-</li>
-<li>那么取任意R非空子集 A</li>
-<li>假定B in R是它的上界</li>
-<li>令$A_1&#x3D;$ 所有 S in A的并 （cut的并）<ul>
-<li>那么要证明 $A_1$ 属于R<ul>
-<li>且$A_1&#x3D;\sup A$, 也就是 最小上界性（能在R中找到最小上界</li>
-</ul>
-</li>
-<li>证明 属于R: 也就是证明A_1 满足step1的3条性质,<ul>
-<li>元素关系证明非空，$S \subset A \subset B \neq R$ 证明不等</li>
-<li>后两条，对于元素p,能找具体的集合S,再在S中找元素q,</li>
-</ul>
-</li>
-<li>证明 是 上确界：<ul>
-<li>上界显然</li>
-<li>证明 比他小的不是上界，靠元素属于关系 拉扯</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>step4 如果 $S,T \in R$, 定义S+T&#x3D;所有 a+b,a in S,b in T 的元素组成</p>
-<ul>
-<li>定义 集合的 <code>加</code> 运算</li>
-<li>那么证明 加法5条，封闭（证明 step1 cut三条），交换，结合，<ul>
-<li>零元($0^*$定义为 所有负有理数组成的集合, 证明相对用互相包含证明)，</li>
-<li>逆元 $A\in R,B&#x3D;\lbrace p | \exists r &gt; 0, -p-r\not \in A \rbrace$ 比-p小一点的有理数不在A内，这样的B就是A的逆元</li>
-</ul>
-</li>
-<li>这里核心证明思路都是通过元素属于关系证明的</li>
-<li>至此 这样定义下 有了 加法 运算性质</li>
-<li>step 5<ul>
-<li>基于 加法 和 序 定义的一些性质</li>
-<li>如消去律 1.14, a+b&#x3D;a+c 则b&#x3D;c</li>
-</ul>
-</li>
-</ul>
-<p>step 6 处理乘法</p>
-<ul>
-<li>$R^+ &#x3D;${a|$a\in R, a &gt; 0^*$}</li>
-<li>先类似加法的方式 通过元素构成定义乘法</li>
-<li>从而类似的有了乘法零元: $1^*$</li>
-</ul>
-<p>step 7 利用 逆元 零元 和 （正数乘法）的定义把乘法的定义扩展到全体R上</p>
-<ul>
-<li>$A0^*&#x3D;0^*$</li>
-<li>至此新的加法和新的乘法都有了</li>
-</ul>
-<p>step 8 用类似的形式，给现有有理数对应的 “分化”</p>
-<ul>
-<li>注意现在还是只有有理数，和上面的集合R，（而不是实数）</li>
-<li>对于任意$r\in \mathbb{Q}$</li>
-<li>$r^*&#x3D;\lbrace p| p&lt;r ,p\in\mathbb{Q}\rbrace$<ul>
-<li>验证step1的3条性质,它是一个分化</li>
-<li>然后我们需要证明的是 有理数加法$(r_1+r_2)^*$，和上面集合的 新加法$r_1^*+r_2^*$ 同构（&#x3D;） ,乘法也是</li>
-</ul>
-</li>
-</ul>
-<p>step 9</p>
-<ul>
-<li>根据上面 同构</li>
-<li>我们把 构造出的R看作实数</li>
-</ul>
-<p>回顾</p>
-<ul>
-<li>第1步 完成构造</li>
-<li>第2步 证明构造东西的有序性</li>
-<li>第3步 证明最小上界性</li>
-<li>第4~7步 新的构造中 定义新的加法和乘法</li>
-<li>第8~9步 证明现有有理数以及加法乘法运算，与新定义的同构，从而证明了“实数”的构造</li>
-</ul>
-<hr>
-<p>戴德金分割，感觉像在所有有理数中间切分，而其“文字描述下”，和可数性又不冲突，</p>
-<ul>
-<li>例如 每个有理数按照有理数的可数排列 同样可以贴着“每个有理数”完成切割，但这种情况，你会发现  A&#x3D;{x^2 &lt; 2}, B&#x3D;{x^2&gt;&#x3D;2} 这种“切割”，又不在按可数排列的切割里</li>
-<li>在 可数 稠密 下 的 切割，和有限比很怪</li>
-<li>而且另一方面，的问题是，和中小学学的：有理数（可以表示成 m&#x2F;n 或者 有限，循环小数），无理数（无限不循环），或者连分数，有理数：有限，无理数：无限。 那这样 A的上确界不在A中，如何能保证取完所有 无理数</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 11 Lebesgue理论</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_11/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="Lebesgue理论"><a href="#Lebesgue理论" class="headerlink" title="Lebesgue理论"></a>Lebesgue理论</h2><h3 id="集函数"><a href="#集函数" class="headerlink" title="集函数"></a>集函数</h3><h3 id="Lebesgue测度的建立"><a href="#Lebesgue测度的建立" class="headerlink" title="Lebesgue测度的建立"></a>Lebesgue测度的建立</h3><h3 id="测度空间"><a href="#测度空间" class="headerlink" title="测度空间"></a>测度空间</h3><h3 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h3><h3 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h3><h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><h3 id="与Riemann积分的比较"><a href="#与Riemann积分的比较" class="headerlink" title="与Riemann积分的比较"></a>与Riemann积分的比较</h3><h3 id="复函数的积分"><a href="#复函数的积分" class="headerlink" title="复函数的积分"></a>复函数的积分</h3><h3 id="mathcal-L-2-类的函数"><a href="#mathcal-L-2-类的函数" class="headerlink" title="$\mathcal{L}^2$类的函数"></a>$\mathcal{L}^2$类的函数</h3><p>11.43</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 2 基础拓扑</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_2/</url>
-    <content><![CDATA[<p>isbn</p>
-<ul>
-<li>中文 9787111134176</li>
-<li>英文 9787111619543</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="基础拓扑-Basic-topology"><a href="#基础拓扑-Basic-topology" class="headerlink" title="基础拓扑 Basic topology"></a>基础拓扑 Basic topology</h2><h3 id="有限集、可数集和不可数集"><a href="#有限集、可数集和不可数集" class="headerlink" title="有限集、可数集和不可数集"></a>有限集、可数集和不可数集</h3><p>2.1 A,B 都是 sets, A中x和B中一个元素关联associated, f(x)表示，f is said to be a function from A to B(or mapping of A into B).</p>
-<ul>
-<li>the set A is called the <code>domain</code> of f(we also say f is defined on A)</li>
-<li>and the elements f(x) are called the values of f. the set of all values of f is called the <code>range</code> of f</li>
-</ul>
-<p>2.2 $E\subset A$, f(E) is defined to be the set of all elements f(x),for x in E. we call f(E) the <code>image</code> of E under f.</p>
-<ul>
-<li>f(A) is the <code>range</code> of f</li>
-<li>$f(A) \subset B$, if f(A)&#x3D;B ,we say that f maps A <code>onto</code> B<ul>
-<li>onto is more specific than into</li>
-</ul>
-</li>
-<li><code>inverse image</code> of E under f: $F\subset B,f^{-1}(F)&#x3D;\lbrace x| x\in A,f(x)\in F \rbrace$</li>
-<li>for each y in B, if $f^{-1}(y)$ 至多一个, then f is said to be <code>1-1(one-to-one)</code> mapping of A <code>into</code> B<ul>
-<li>f is a 1-1 mapping of A into B provided that f(x1) neq f(x2) whenever x1 neq x2</li>
-</ul>
-</li>
-</ul>
-<p>2.3 if <code>1-1 mapping</code> A <code>onto</code> B, we say that A and B can be put in 1-1 correspondence</p>
-<ul>
-<li>or that A and B have the same <code>cardinal number</code> 基数</li>
-<li>or, briefly, that A and B are <code>equivalent</code>  等价</li>
-<li>写作 A~B<ul>
-<li>reflexive 自反性 A~A</li>
-<li>symmetric 对称性 A<del>B then B</del>A</li>
-<li>transitive 传递性 A<del>B,B</del>C then A~C</li>
-<li>同时满足这三个，称作 equivalence relation 等价关系</li>
-</ul>
-</li>
-</ul>
-<p>2.4 正整数n, 令$J_n&#x3D;${1,…,n},令$J$表示全体正整数</p>
-<ul>
-<li>finite有限, A~$J_n$ 对于某个n ，空集合也是有限集合<ul>
-<li>infinite 无限： 不是有限</li>
-</ul>
-</li>
-<li>countable 可数, if A ~ J</li>
-<li>uncountable 不可数, neither finite nor countable</li>
-<li>at most countable if A is finite or countable</li>
-</ul>
-<p>2.6 有限集无法和它真子集(proper subsets)等价</p>
-<ul>
-<li>如果一个集合和自己的真子集等价，那么它是无限的</li>
-</ul>
-<p>2.7 序列 sequence, $f(n)&#x3D;x_n$, 定义在J上的，有时会用下标从0开始</p>
-<p>2.8 定理 可数集A的每个无限子集也是可数集</p>
-<p>2.9 定义 A, B 是集合, A中任意元素a is associated a subset of B which we denote by $E_a$</p>
-<ul>
-<li>记作 {E_a}</li>
-<li>instead of speaking of sets of sets, we shall sometimes speak of a collection of sets, or a family of sets</li>
-<li>union of E_a: $S&#x3D;\cup_{a\in A}E_a$</li>
-<li>intersection of E_a: $S&#x3D;\cap_{a\in A}E_a$</li>
-<li>注意的是 如果A可数&#x2F;可列，那么可以写成 下标的形式，例如$\cup_{i&#x3D;1}^n$</li>
-<li>intersect: $A\cap B$ is not empty<ul>
-<li>otherwise they are <code>disjoint</code></li>
-</ul>
-</li>
-</ul>
-<p>2.11 一些 交并运算</p>
-<p>2.12 可数集的可数并是可数集：斜对角法+定理2.8<br>    - 2.13 {a_i}可数,  由其元素构成的n元组可数<br>        - 有理数可数</p>
-<p>2.14 Let A be the set of all sequences whose elements are the digits 0 and 1 then set A is uncountable</p>
-<ul>
-<li>Cantor 对角矛盾反证法（这在证明无理数不可数时也出现过，</li>
-<li>二进制表示法的一个理解</li>
-</ul>
-<h3 id="度量空间-Metric-space"><a href="#度量空间-Metric-space" class="headerlink" title="度量空间 Metric space"></a>度量空间 Metric space</h3><p>2.15 距离distance: d(p,q)</p>
-<ul>
-<li>同点0,非同点正</li>
-<li>对称性</li>
-<li>最近性: d(p,q)&lt;&#x3D;d(p,r)+d(r,q)</li>
-<li>distance function 满足上述三个条件，或者称作metric(度量)</li>
-</ul>
-<p>2.17 segment(a,b) we mean the set of all real numbers x such that a &lt; x &lt; b</p>
-<ul>
-<li>其它 中括号小括号记法</li>
-<li>convex凸: x,y in E,0 &lt; lambda &lt; 1 则 lambda x + (1-lambda) y \in E</li>
-</ul>
-<p>2.18 度量空间中</p>
-<ul>
-<li>neighborhood 邻域, 通过 点 半径 距离函数来定义<ul>
-<li>例如$R^1$中开区间</li>
-<li>$R^2$中圆内部</li>
-</ul>
-</li>
-<li>limit point 极限点, E的极限点p：p的任意邻域有E中非p的点q<ul>
-<li>记作 E’</li>
-<li>非 limit point, 称作isolated point of E孤立点</li>
-<li>closed闭集 every limit point of E in E</li>
-</ul>
-</li>
-<li>interior point内点, 存在r,使得邻域全属于E<ul>
-<li>open: 所有点都是内点</li>
-</ul>
-</li>
-<li>complement of E($E^c$) 补集, 通过点的属于来定义</li>
-<li>perfect 完全的（完备集？） closed and 所有点都是极限点</li>
-<li>bounded, 某点+某半径覆盖所有点</li>
-<li>dense 稠密: E在X中稠密，X的每个点都是 E的极限点或E的点</li>
-</ul>
-<p>2.19 邻域是开集</p>
-<p>2.20 极限点任意邻域有无穷多点</p>
-<ul>
-<li>定义是任意邻域有非自身的点，而有限能取min, </li>
-<li>corollay. 有限集没有极限点</li>
-</ul>
-<p>2.22 并的补 &#x3D; 补的交</p>
-<p>2.23 开的补是闭，闭的补是开</p>
-<p>2.24 </p>
-<ul>
-<li>开的任意并是开</li>
-<li>闭的任意交是闭</li>
-<li>开的有限交是开</li>
-<li>闭的有限并是闭<ul>
-<li>见普林斯顿那本书的笔记，核心还是有限时有min可取，无限会破坏这个min，从而破坏 “一致性”</li>
-<li>$[0,1&#x2F;n)$</li>
-</ul>
-</li>
-</ul>
-<p>2.26 closure(E), 闭包</p>
-<ul>
-<li>$\bar{E}&#x3D;E\cup E’$ ，E和E的极限点集的并<ul>
-<li>可以看成对E进行一个运算后的结果</li>
-</ul>
-</li>
-<li>性质<ul>
-<li>闭包 是 闭集</li>
-<li>$E&#x3D;\bar{E}$当且仅当E是闭集</li>
-<li>F是闭集, $E \in F$则 $\bar{E}\subset F$ ，也就是 闭集的子集的极限点不会超出原来的闭集</li>
-</ul>
-</li>
-</ul>
-<p>2.28 非空 实数集E 且 bounded above , y &#x3D; sup E , then $y \in \bar{E}$, 也就是从有序集合角度看上去的上确界，是在拓扑角度看上去的闭包中</p>
-<p>2.29 开区间在R1上是开集，在R2上不是开集，<code>open relative to</code></p>
-<ul>
-<li>E subset Y subset X<ul>
-<li>开区间 subset R1 subset R2</li>
-</ul>
-</li>
-<li>X 度量空间, Y有着和X同样的度量函数&#x2F;距离函数, 那么可以用 距离函数 定义在Y上的相对开集</li>
-</ul>
-<p>2.30 theorem 若 $Y\subset X$  , a subset E of Y is open relative to Y if and only if E &#x3D; Y cap G for some open subset G of X</p>
-<ul>
-<li>利用2.24 开的任意并是开 以及 邻域选点+半径，构造 G&#x3D;cup X中邻域(p,按照Y要求选的半径)</li>
-</ul>
-<h3 id="紧集-compact-sets"><a href="#紧集-compact-sets" class="headerlink" title="紧集 compact sets"></a>紧集 compact sets</h3><p>2.31 开覆盖open cover: E subset cup E_a</p>
-<p>2.32 紧compact: every open cover of K contains a finite subcover</p>
-<ul>
-<li>任意 开覆盖 有 有限 子覆盖<ul>
-<li>注意 任意 而不是存在</li>
-<li>后面是 有限</li>
-</ul>
-</li>
-</ul>
-<p>2.33 $K\subset Y\subset X$ , K关于X是紧的当且仅当 K关于Y是紧的</p>
-<p>2.34 度量空间紧子集是闭集</p>
-<ul>
-<li>证明其补是开集，找r&#x3D; 1&#x2F;2 距离再三角不等式</li>
-</ul>
-<p>2.35 紧集的闭子集都是紧集</p>
-<ul>
-<li>闭子集任意开覆盖 加上 <code>闭子集的补</code> 覆盖紧集，存在一个有限子覆盖，其中不含 闭子集的补的部分覆盖了闭子集</li>
-</ul>
-<p>2.36 {紧子集} 任意有限交 非空，那么 {紧子集} 的任意交非空</p>
-<ul>
-<li>反证：k1 中任意点都不存在于所有集合中，其它的补对k1形成开覆盖，紧所有有限个其它的补对k1开覆盖，这些与k1交为空</li>
-</ul>
-<p>2.37 E是紧集K的无限子集，那么E在K中有极限点</p>
-<ul>
-<li>反证：如果没有极限点，那么K中所有点可以开一个半径至多含有一个E中的点，从而有有限开覆盖覆盖了无穷多点的E,而每个开覆盖又只覆盖了一个点，</li>
-</ul>
-<p>2.38 R1中可数闭区间套的可数交非空</p>
-<ul>
-<li>sup 左端点 显然属于其中</li>
-<li>2.39 $R^k$ 中的 可数闭区间套的可数交非空<ul>
-<li>每个维度是独立的</li>
-</ul>
-</li>
-</ul>
-<p>2.40 每个k-方格(k-cell)是紧集</p>
-<ul>
-<li>反证法：无限格子套 + 1&#x2F;2 切割长度 + 邻域控制</li>
-<li>从而 k-方格 任意开覆盖总是有有限子覆盖，所以紧</li>
-</ul>
-<p>2.41 heine-borel定理</p>
-<ul>
-<li>$\mathbb{R}^k$中<ul>
-<li>闭+有界</li>
-<li>紧</li>
-<li>E的每个无限子集 在 E 内有极限点</li>
-<li>这三个等价</li>
-</ul>
-</li>
-</ul>
-<p>2.42 weierstrass定理 $\mathbb{R}^k$中每个有界无限子集在$\mathbb{R}^k$中有极限点</p>
-<h3 id="完备集，完全集perfect-sets"><a href="#完备集，完全集perfect-sets" class="headerlink" title="完备集，完全集perfect sets"></a>完备集，完全集perfect sets</h3><p>2.43 $\mathbb{R}^k$中非空完全集P 不可数</p>
-<ul>
-<li>无限显然</li>
-<li>如果可数，那么有排列</li>
-<li>那么按照顺序，构造嵌套邻域（如果 不在上次构造的邻域中，那么跳过这个点），排除上一个点<ul>
-<li>这样我们可以构造出 新邻域的闭包 属于 旧邻域，的无限嵌套，相对于P的交也是无限嵌套，</li>
-<li>因为每次排除点，认为无限交应该是空，但另一方面嵌套非空紧集无限交非空</li>
-</ul>
-</li>
-</ul>
-<p>(勘误?) 这里中英文书感觉，都漏了一步叫做 $K_n &#x3D; \bar{V_n} \cap P$ , $\bar{V_n}$是有界闭集，所以紧</p>
-<ul>
-<li>$K_n$ 的每个无限子集E, 是 $\bar{V_n}$的 无限子集 &#x3D;&gt; 在$\bar{V_n}$ 中有极限点(2.41), 另一方面E属于P,所以极限点也属于P</li>
-<li>所以该极限点属于$K_n$</li>
-<li>根据2.41 $K_n$ 紧</li>
-<li><a href="https://book.douban.com/subject/1230288/discussion/616834625/">https://book.douban.com/subject/1230288/discussion/616834625/</a></li>
-</ul>
-<p>2.44 cantor set</p>
-<ul>
-<li>每次 3等分去掉中间段</li>
-<li>无限交是无限多点集合</li>
-<li>是紧的</li>
-<li>不含任何线段</li>
-<li>无孤立点</li>
-<li>不可数的0测度集的例子</li>
-</ul>
-<h3 id="连通集-connected-sets"><a href="#连通集-connected-sets" class="headerlink" title="连通集 connected sets"></a>连通集 connected sets</h3><p>2.45 separated 分开的 $\bar{A}\cap B&#x3D;\varnothing ,A\cap \bar{B}&#x3D;\varnothing$</p>
-<ul>
-<li>connected: 不是分开的</li>
-</ul>
-<p>2.47 R1中 connected 当且仅当 x,y in E，那么 x,y之间的in E</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
@@ -8566,6 +7983,589 @@
 <p>10.51 散度定理</p>
 <p>区域内的散度积分等于边界上的法向通量。</p>
 <p>这些定理串起来就是微分形式和积分理论的核心，从基本的积分定义到高维的Stokes定理，应用在数学和物理里非常广泛。希望这样解释能让你轻松理解！</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Walter Rudin 数学分析原理 1 实数系与复数系</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_1/</url>
+    <content><![CDATA[<p>isbn</p>
+<ul>
+<li>中文 9787111134176</li>
+<li>英文 9787111619543</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>受众：数学专业高年级，或一年级研究生</p>
+<h2 id="实数系与复数系"><a href="#实数系与复数系" class="headerlink" title="实数系与复数系"></a>实数系与复数系</h2><h3 id="导引"><a href="#导引" class="headerlink" title="导引"></a>导引</h3><p>有理数&#x3D;m&#x2F;n</p>
+<ul>
+<li>不存在有理数 $p^2&#x3D;2$ 这里普林斯顿那本应该也是抄这个例子的<ul>
+<li>一方面不存在（ 偶数证明</li>
+<li>一方面没有 最近, p &#x3D;(2p+2)&#x2F;(p+2)</li>
+</ul>
+</li>
+</ul>
+<p>1.3 快速过了一下集合的概念</p>
+<h3 id="有序集-Ordered-sets"><a href="#有序集-Ordered-sets" class="headerlink" title="有序集 Ordered sets"></a>有序集 Ordered sets</h3><p>1.5 集合中的 序order, is a relation</p>
+<ul>
+<li>任何两个可按照 给定序比较 或相等</li>
+<li>传递性, if x,y,z in S, if x &lt; y and y &lt; z then x &lt; z</li>
+</ul>
+<p>1.6 集合set+序(order is defined) &#x3D;&gt; 有序集 ordered set</p>
+<p>1.7 子集的上界定义, bounded above 上方有界, (中文书上翻译的 上有界)</p>
+<ul>
+<li>有序集S的子集E, 任意E中元素，&lt;&#x3D; b \in S,那么b是上界upper bound of E</li>
+<li>类似 Lower bound<ul>
+<li>从翻译上 看起来英文的 bounded above是形容集合，而 upper bound of 是一个值的与集合的关系属性</li>
+</ul>
+</li>
+</ul>
+<p>1.8 上确界 least-upper-bound of</p>
+<ul>
+<li>a 是 上界 upper bound of</li>
+<li>更小不是上界,b &lt; a, b is not upper bound of</li>
+<li>类似下确界 greatest-lower-bound property</li>
+</ul>
+<p>1.10 最小上界性 least-upper-bound property</p>
+<ul>
+<li>$E\subset S$,E有上界时, $\text{sup} E \in S$ <ul>
+<li>有理数中 $A&#x3D;\lbrace q| q^2&lt;2\rbrace, B&#x3D;\lbrace q | q^2 &gt; 2\rbrace$, A的上界全在B中，但是B没有最小值 从而 $\mathbb{Q}$没有最小上界性</li>
+</ul>
+</li>
+<li>1.11 最小上界性 &lt;&#x3D;&gt; 最小下界性<ul>
+<li>这个的证明核心 就是 证明上面的定义的要素：是+更（小&#x2F;大）不是</li>
+</ul>
+</li>
+</ul>
+<h3 id="域-Fields"><a href="#域-Fields" class="headerlink" title="域 Fields"></a>域 Fields</h3><p>1.12 Deinition A field is a set F with two operations, called addition and multiplication, 满足两个所谓的 “field axioms”(域的公理)</p>
+<ul>
+<li>Axioms for addition<ul>
+<li>A1 x in F + y in F &#x3D;&gt; x+y in F 封闭</li>
+<li>A2 commutative x+y&#x3D;y+x for all x,y in F 交换</li>
+<li>A3 associative (x+y)+z&#x3D;x+(y+z) for all x,y,z in F 结合</li>
+<li>A4 F contains an elment 0 such that 0+x&#x3D;x for every x in F, 在addition运算下的零元</li>
+<li>A5 x in F, exist y in F, x+y&#x3D;0, y 记作 -x, 逆元存在</li>
+</ul>
+</li>
+<li>Axioms for mutiplication<ul>
+<li>M1 封闭</li>
+<li>M2 交换</li>
+<li>M3 结合</li>
+<li>M4 乘法零元，且不等于加法零元，记作1, 1x&#x3D;x for every x in F</li>
+<li>M5 乘法逆元</li>
+</ul>
+</li>
+<li>the Distribution law 分配<ul>
+<li>x(y+z)&#x3D;xy+xz for x,y,z in F</li>
+</ul>
+</li>
+<li>注意一些地方的一些写法是简记<ul>
+<li>例如 减法 是 加逆元，分数符号或除法是乘上逆元</li>
+<li>同等级 连加，连乘，是省去了运算括号，实际是从左到右侧</li>
+<li>整数次幂次 是 同个数连乘缩写</li>
+<li>这些“简记”并没有 额外定义性质</li>
+</ul>
+</li>
+</ul>
+<p>1.14 命题proposition </p>
+<ul>
+<li>if x+y&#x3D;y+z then y&#x3D;z</li>
+<li>if x+y&#x3D;y then y &#x3D; 0</li>
+<li>if x+y&#x3D;0 then y &#x3D; -x</li>
+<li>-(-x)&#x3D;x 逆元的逆元得到本身</li>
+</ul>
+<p>1.15 命题 关于乘法</p>
+<ul>
+<li>x \neq 0 and xy&#x3D;xz then y&#x3D;z</li>
+<li>x \neq 0 and xy&#x3D;x then y&#x3D;1</li>
+<li>x \neq 0 and xy&#x3D;1 then y&#x3D;1&#x2F;x</li>
+<li>x \neq 0 , 1(1&#x2F;x)&#x3D;x</li>
+</ul>
+<p>1.16 命题 x,y,z in F</p>
+<ul>
+<li>0x&#x3D;0</li>
+<li>x\neq 0 and y \neq0 then xy\neq 0</li>
+<li>(-x)y&#x3D;-(xy)&#x3D;x(-y)</li>
+<li>(-x)(-y)&#x3D;xy</li>
+</ul>
+<p>1.17 定义 ordered field 有序域</p>
+<ul>
+<li>field F + ordered set</li>
+<li>x + y &lt; x+z if x,y,z in F and y &lt; z</li>
+<li>xy &gt; 0 if x in F, y in F, x &gt; 0 and y &gt;0</li>
+<li>这里 定义 positive ,negative</li>
+</ul>
+<p>1.18 命题，因为我们对于实数域很熟，有一些实数域中的结论在 有序域中同样成立，例如</p>
+<ul>
+<li>if x &gt; 0 then -x &lt; 0,对称也成立</li>
+<li>if x &gt; 0 and y &lt; z then xy &lt; xz</li>
+<li>if x &lt; 0 and y &lt; z then xy &gt; xz</li>
+<li>if x \neq 0 then xx &gt;0,特别的 1(乘法零元) &gt; 0（加法零元）</li>
+<li>if 0 &lt; x &lt; y then 0 &lt; 1&#x2F;y &lt; 1&#x2F;x</li>
+</ul>
+<h3 id="实数域-the-reald-field"><a href="#实数域-the-reald-field" class="headerlink" title="实数域 the reald field"></a>实数域 the reald field</h3><p>本章核心 存在定理: existence theorem</p>
+<p>1.19 存在一个 有序域R,有 最小上界性</p>
+<ul>
+<li>同时包含实数域Q 作为子域。<ul>
+<li>这里没有直接说R是啥</li>
+<li>子域 是保持两者之间的运算映射一致</li>
+<li>R的元叫做 实数, the members of R are called real numbers</li>
+<li>具体的R构造见1章附录</li>
+</ul>
+</li>
+</ul>
+<p>1.20 </p>
+<ul>
+<li>archimedean property of R 欧几里德性 x,y in R, x &gt; 0 , then there is a positive integer n such that nx &gt; y<ul>
+<li>不成立y是上界，有界，最小上界性 a&#x3D;sup nx, a-x不是最小上界, 存在m使得a-x &lt; mx, a &lt; (m+1)x ,a不是上界，不是最小上界</li>
+</ul>
+</li>
+<li>Q is dense(稠密) in R.  x,y, in R x &lt; y ,exists p in Q such that x &lt; p &lt; y, 任意两个实数之间有有理数<ul>
+<li>利用1, n(y-x)&gt;1 划缝，让x,y必然落在 1&#x2F;m切割的不同区间中</li>
+</ul>
+</li>
+</ul>
+<p>1.21 $x^n&#x3D;a$ 存在1个正实数解</p>
+<ul>
+<li>y &#x3D; sup x | x^n &lt; a。 因为上确界性</li>
+<li>那么 y^n &#x3D; a, 即是 y^n &lt; a或者 y^n &gt; a都会矛盾（注意不要弄错成 <del>y的n次方都比a小，大于y的n次方都比a大</del></li>
+<li>这里的想法和开篇的 y^2&#x3D;2 的想法类似，插入一个 y^n ~ a 之间的数，而且它的n次方是直接可以y表示的<ul>
+<li>(y+h)^n-y^n &lt; a-y^n, 0 &lt; h &lt; 1</li>
+<li>h(\sum (y+h)^? y^?) &lt; a-y^n</li>
+<li>h(\sum (y+1)^{n-1}) &lt; a-y^n</li>
+<li>h(n(y+1)^{n-1}) &lt; a-y^n</li>
+<li>我们能得到h 关于 a,y,n的 只有乘除加减没有开根的表达式，从而能凑，就能有之间的数，从而就能有矛盾</li>
+</ul>
+</li>
+<li>推论 (ab)^{1&#x2F;n}&#x3D;(a^{1&#x2F;n})(b^{1&#x2F;n})</li>
+</ul>
+<p>1.22 小数 &#x3D;&gt; 实数</p>
+<ul>
+<li>无穷小数，看成 逐渐截断的 10的幂次 系数的和 的集合的 sup E</li>
+<li>since we shall never use decimals ,we do not enter into a detailed discussion</li>
+</ul>
+<h3 id="广义实数系-the-extended-real-number-system"><a href="#广义实数系-the-extended-real-number-system" class="headerlink" title="广义实数系 the extended real number system"></a>广义实数系 the extended real number system</h3><p>这里英文是 extended, 多了 正无穷和负无穷两个 符号</p>
+<ul>
+<li>在 extended 里， 正无穷是 所有的上界，每个非空集合至少一个上界</li>
+<li>一些还能用的四则运算</li>
+</ul>
+<h3 id="复数域-complex-field"><a href="#复数域-complex-field" class="headerlink" title="复数域 complex field"></a>复数域 complex field</h3><p>有序对(a,b)</p>
+<ul>
+<li>相等 对位相等</li>
+<li>复数运算的 新加法，和新乘法</li>
+<li>(a,b)+(c,d)&#x3D;(a+c,b+d)</li>
+<li>(a,b) * (c,d)&#x3D;(ac-bd,ad+bc)</li>
+<li>在新加法乘法的定义下满足 加法5条，乘法5条，交换1条，所以是个 域 field</li>
+<li>实数 对应的是第二维为零，实数和复数有相同的运算性质，因此可以看作子域 the real field as a  subfield of the complex field</li>
+</ul>
+<p>其它记法 a+bi</p>
+<ul>
+<li>新记法下的运算，实部Re(z) real part，虚部Im(z) imaginary</li>
+<li>共轭相关运算 (在普林斯顿那书笔记中有)</li>
+<li>$z\bar{z}$ 是实+正，只有&#x3D;0时&#x3D;0</li>
+<li>absolute value $|z|&#x3D;\sqrt{z\bar{z}}$</li>
+</ul>
+<p>Schwarz inequality</p>
+<ul>
+<li>$|\sum a_i\bar{b_i}|^2 \le (\sum |a_i|^2)(\sum |b_i|^2)$</li>
+<li>书上这个神奇的起手怎么想到的真不知道，drop from sky</li>
+<li>一个办法 $f(t)&#x3D;\sum |a_i+tb_i|^2$ 这个思路是去找判别式靠，在 高代第10章 就是类似这个思路</li>
+</ul>
+<h3 id="欧氏空间-Euclidean-spaces"><a href="#欧氏空间-Euclidean-spaces" class="headerlink" title="欧氏空间 Euclidean spaces"></a>欧氏空间 Euclidean spaces</h3><p>n维坐标, 坐标值都是实数</p>
+<ul>
+<li>线性<ul>
+<li>加法 addition of vectors</li>
+<li>数乘 , multiplication of a vector by a real number (a scalar)</li>
+</ul>
+</li>
+<li>内积 inner product<ul>
+<li>x y &#x3D; sum x_i y_i</li>
+<li>范数 norm of x, |x|&#x3D;(x x)^{1&#x2F;2}</li>
+</ul>
+</li>
+<li>性质1.37<ul>
+<li>|x|&gt;&#x3D;0</li>
+<li>|x| &#x3D;0 if and only if x &#x3D;0</li>
+<li>|ax|&#x3D;|a||x|</li>
+<li>|x y | &lt;&#x3D; |x| |y| 是 Schwarz inequaliy的结果</li>
+<li>|x+y| &lt;&#x3D; |x|+|y| 三角不等式<ul>
+<li>|x-z| &lt;&#x3D; |x-y|+|y-z|</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="附录，从有理数域-为了最小上界性-构造出实数域"><a href="#附录，从有理数域-为了最小上界性-构造出实数域" class="headerlink" title="附录，从有理数域 为了最小上界性 构造出实数域"></a>附录，从有理数域 为了最小上界性 构造出实数域</h3><p>对于1.19，要从Q构造出R</p>
+<p>Step 1. The members of R will be certain subsets of Q, called cuts. A cut is, by definition, any set S \subset Q with following three properties</p>
+<ul>
+<li>S is not empty and S \neq Q, 非空 非全，真子集</li>
+<li>if p in S, q in Q, and q &lt; p, then q in S, Q中某个元素比S中某个元素小，那么同时在S中<ul>
+<li>含有：不在S中的 都比S中的大，否则会在S中</li>
+<li>比 不在S中的大的，同样不在S中</li>
+</ul>
+</li>
+<li>if p in S,then p &lt; r for some r in S,每个S中元素能找到更大的, 没有最大化</li>
+</ul>
+<p>p,q,r表示有理数，S,T,U表示分化 cuts</p>
+<p>Step 2. S &lt; T 表示S是T的真子集</p>
+<ul>
+<li>这里主要是要表达，集合之间，在上述的cuts, 真子集 是一种有序关系<ul>
+<li>（注意普通的集合之间的不是“任意两个都有序的”</li>
+<li>这里至多 一个&gt;&#x3D;&lt; 成立显然</li>
+<li>证明一下至少一个成立，这里用元素属于分类讨论去证明</li>
+</ul>
+</li>
+<li>传递性容易证</li>
+<li>因此 所有cuts 集合 构成的集合 是有序集</li>
+</ul>
+<p>step3 有序集R有最小上界性</p>
+<ul>
+<li>R&#x3D;{cuts的集合}<ul>
+<li>每个cut是 有理数集合 满足step1的性质</li>
+</ul>
+</li>
+<li>那么取任意R非空子集 A</li>
+<li>假定B in R是它的上界</li>
+<li>令$A_1&#x3D;$ 所有 S in A的并 （cut的并）<ul>
+<li>那么要证明 $A_1$ 属于R<ul>
+<li>且$A_1&#x3D;\sup A$, 也就是 最小上界性（能在R中找到最小上界</li>
+</ul>
+</li>
+<li>证明 属于R: 也就是证明A_1 满足step1的3条性质,<ul>
+<li>元素关系证明非空，$S \subset A \subset B \neq R$ 证明不等</li>
+<li>后两条，对于元素p,能找具体的集合S,再在S中找元素q,</li>
+</ul>
+</li>
+<li>证明 是 上确界：<ul>
+<li>上界显然</li>
+<li>证明 比他小的不是上界，靠元素属于关系 拉扯</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>step4 如果 $S,T \in R$, 定义S+T&#x3D;所有 a+b,a in S,b in T 的元素组成</p>
+<ul>
+<li>定义 集合的 <code>加</code> 运算</li>
+<li>那么证明 加法5条，封闭（证明 step1 cut三条），交换，结合，<ul>
+<li>零元($0^*$定义为 所有负有理数组成的集合, 证明相对用互相包含证明)，</li>
+<li>逆元 $A\in R,B&#x3D;\lbrace p | \exists r &gt; 0, -p-r\not \in A \rbrace$ 比-p小一点的有理数不在A内，这样的B就是A的逆元</li>
+</ul>
+</li>
+<li>这里核心证明思路都是通过元素属于关系证明的</li>
+<li>至此 这样定义下 有了 加法 运算性质</li>
+<li>step 5<ul>
+<li>基于 加法 和 序 定义的一些性质</li>
+<li>如消去律 1.14, a+b&#x3D;a+c 则b&#x3D;c</li>
+</ul>
+</li>
+</ul>
+<p>step 6 处理乘法</p>
+<ul>
+<li>$R^+ &#x3D;${a|$a\in R, a &gt; 0^*$}</li>
+<li>先类似加法的方式 通过元素构成定义乘法</li>
+<li>从而类似的有了乘法零元: $1^*$</li>
+</ul>
+<p>step 7 利用 逆元 零元 和 （正数乘法）的定义把乘法的定义扩展到全体R上</p>
+<ul>
+<li>$A0^*&#x3D;0^*$</li>
+<li>至此新的加法和新的乘法都有了</li>
+</ul>
+<p>step 8 用类似的形式，给现有有理数对应的 “分化”</p>
+<ul>
+<li>注意现在还是只有有理数，和上面的集合R，（而不是实数）</li>
+<li>对于任意$r\in \mathbb{Q}$</li>
+<li>$r^*&#x3D;\lbrace p| p&lt;r ,p\in\mathbb{Q}\rbrace$<ul>
+<li>验证step1的3条性质,它是一个分化</li>
+<li>然后我们需要证明的是 有理数加法$(r_1+r_2)^*$，和上面集合的 新加法$r_1^*+r_2^*$ 同构（&#x3D;） ,乘法也是</li>
+</ul>
+</li>
+</ul>
+<p>step 9</p>
+<ul>
+<li>根据上面 同构</li>
+<li>我们把 构造出的R看作实数</li>
+</ul>
+<p>回顾</p>
+<ul>
+<li>第1步 完成构造</li>
+<li>第2步 证明构造东西的有序性</li>
+<li>第3步 证明最小上界性</li>
+<li>第4~7步 新的构造中 定义新的加法和乘法</li>
+<li>第8~9步 证明现有有理数以及加法乘法运算，与新定义的同构，从而证明了“实数”的构造</li>
+</ul>
+<hr>
+<p>戴德金分割，感觉像在所有有理数中间切分，而其“文字描述下”，和可数性又不冲突，</p>
+<ul>
+<li>例如 每个有理数按照有理数的可数排列 同样可以贴着“每个有理数”完成切割，但这种情况，你会发现  A&#x3D;{x^2 &lt; 2}, B&#x3D;{x^2&gt;&#x3D;2} 这种“切割”，又不在按可数排列的切割里</li>
+<li>在 可数 稠密 下 的 切割，和有限比很怪</li>
+<li>而且另一方面，的问题是，和中小学学的：有理数（可以表示成 m&#x2F;n 或者 有限，循环小数），无理数（无限不循环），或者连分数，有理数：有限，无理数：无限。 那这样 A的上确界不在A中，如何能保证取完所有 无理数</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Walter Rudin 数学分析原理 11 Lebesgue理论</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_11/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="Lebesgue理论"><a href="#Lebesgue理论" class="headerlink" title="Lebesgue理论"></a>Lebesgue理论</h2><h3 id="集函数"><a href="#集函数" class="headerlink" title="集函数"></a>集函数</h3><h3 id="Lebesgue测度的建立"><a href="#Lebesgue测度的建立" class="headerlink" title="Lebesgue测度的建立"></a>Lebesgue测度的建立</h3><h3 id="测度空间"><a href="#测度空间" class="headerlink" title="测度空间"></a>测度空间</h3><h3 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h3><h3 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h3><h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><h3 id="与Riemann积分的比较"><a href="#与Riemann积分的比较" class="headerlink" title="与Riemann积分的比较"></a>与Riemann积分的比较</h3><h3 id="复函数的积分"><a href="#复函数的积分" class="headerlink" title="复函数的积分"></a>复函数的积分</h3><h3 id="mathcal-L-2-类的函数"><a href="#mathcal-L-2-类的函数" class="headerlink" title="$\mathcal{L}^2$类的函数"></a>$\mathcal{L}^2$类的函数</h3><p>11.43</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Walter Rudin 数学分析原理 2 基础拓扑</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_2/</url>
+    <content><![CDATA[<p>isbn</p>
+<ul>
+<li>中文 9787111134176</li>
+<li>英文 9787111619543</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="基础拓扑-Basic-topology"><a href="#基础拓扑-Basic-topology" class="headerlink" title="基础拓扑 Basic topology"></a>基础拓扑 Basic topology</h2><h3 id="有限集、可数集和不可数集"><a href="#有限集、可数集和不可数集" class="headerlink" title="有限集、可数集和不可数集"></a>有限集、可数集和不可数集</h3><p>2.1 A,B 都是 sets, A中x和B中一个元素关联associated, f(x)表示，f is said to be a function from A to B(or mapping of A into B).</p>
+<ul>
+<li>the set A is called the <code>domain</code> of f(we also say f is defined on A)</li>
+<li>and the elements f(x) are called the values of f. the set of all values of f is called the <code>range</code> of f</li>
+</ul>
+<p>2.2 $E\subset A$, f(E) is defined to be the set of all elements f(x),for x in E. we call f(E) the <code>image</code> of E under f.</p>
+<ul>
+<li>f(A) is the <code>range</code> of f</li>
+<li>$f(A) \subset B$, if f(A)&#x3D;B ,we say that f maps A <code>onto</code> B<ul>
+<li>onto is more specific than into</li>
+</ul>
+</li>
+<li><code>inverse image</code> of E under f: $F\subset B,f^{-1}(F)&#x3D;\lbrace x| x\in A,f(x)\in F \rbrace$</li>
+<li>for each y in B, if $f^{-1}(y)$ 至多一个, then f is said to be <code>1-1(one-to-one)</code> mapping of A <code>into</code> B<ul>
+<li>f is a 1-1 mapping of A into B provided that f(x1) neq f(x2) whenever x1 neq x2</li>
+</ul>
+</li>
+</ul>
+<p>2.3 if <code>1-1 mapping</code> A <code>onto</code> B, we say that A and B can be put in 1-1 correspondence</p>
+<ul>
+<li>or that A and B have the same <code>cardinal number</code> 基数</li>
+<li>or, briefly, that A and B are <code>equivalent</code>  等价</li>
+<li>写作 A~B<ul>
+<li>reflexive 自反性 A~A</li>
+<li>symmetric 对称性 A<del>B then B</del>A</li>
+<li>transitive 传递性 A<del>B,B</del>C then A~C</li>
+<li>同时满足这三个，称作 equivalence relation 等价关系</li>
+</ul>
+</li>
+</ul>
+<p>2.4 正整数n, 令$J_n&#x3D;${1,…,n},令$J$表示全体正整数</p>
+<ul>
+<li>finite有限, A~$J_n$ 对于某个n ，空集合也是有限集合<ul>
+<li>infinite 无限： 不是有限</li>
+</ul>
+</li>
+<li>countable 可数, if A ~ J</li>
+<li>uncountable 不可数, neither finite nor countable</li>
+<li>at most countable if A is finite or countable</li>
+</ul>
+<p>2.6 有限集无法和它真子集(proper subsets)等价</p>
+<ul>
+<li>如果一个集合和自己的真子集等价，那么它是无限的</li>
+</ul>
+<p>2.7 序列 sequence, $f(n)&#x3D;x_n$, 定义在J上的，有时会用下标从0开始</p>
+<p>2.8 定理 可数集A的每个无限子集也是可数集</p>
+<p>2.9 定义 A, B 是集合, A中任意元素a is associated a subset of B which we denote by $E_a$</p>
+<ul>
+<li>记作 {E_a}</li>
+<li>instead of speaking of sets of sets, we shall sometimes speak of a collection of sets, or a family of sets</li>
+<li>union of E_a: $S&#x3D;\cup_{a\in A}E_a$</li>
+<li>intersection of E_a: $S&#x3D;\cap_{a\in A}E_a$</li>
+<li>注意的是 如果A可数&#x2F;可列，那么可以写成 下标的形式，例如$\cup_{i&#x3D;1}^n$</li>
+<li>intersect: $A\cap B$ is not empty<ul>
+<li>otherwise they are <code>disjoint</code></li>
+</ul>
+</li>
+</ul>
+<p>2.11 一些 交并运算</p>
+<p>2.12 可数集的可数并是可数集：斜对角法+定理2.8<br>    - 2.13 {a_i}可数,  由其元素构成的n元组可数<br>        - 有理数可数</p>
+<p>2.14 Let A be the set of all sequences whose elements are the digits 0 and 1 then set A is uncountable</p>
+<ul>
+<li>Cantor 对角矛盾反证法（这在证明无理数不可数时也出现过，</li>
+<li>二进制表示法的一个理解</li>
+</ul>
+<h3 id="度量空间-Metric-space"><a href="#度量空间-Metric-space" class="headerlink" title="度量空间 Metric space"></a>度量空间 Metric space</h3><p>2.15 距离distance: d(p,q)</p>
+<ul>
+<li>同点0,非同点正</li>
+<li>对称性</li>
+<li>最近性: d(p,q)&lt;&#x3D;d(p,r)+d(r,q)</li>
+<li>distance function 满足上述三个条件，或者称作metric(度量)</li>
+</ul>
+<p>2.17 segment(a,b) we mean the set of all real numbers x such that a &lt; x &lt; b</p>
+<ul>
+<li>其它 中括号小括号记法</li>
+<li>convex凸: x,y in E,0 &lt; lambda &lt; 1 则 lambda x + (1-lambda) y \in E</li>
+</ul>
+<p>2.18 度量空间中</p>
+<ul>
+<li>neighborhood 邻域, 通过 点 半径 距离函数来定义<ul>
+<li>例如$R^1$中开区间</li>
+<li>$R^2$中圆内部</li>
+</ul>
+</li>
+<li>limit point 极限点, E的极限点p：p的任意邻域有E中非p的点q<ul>
+<li>记作 E’</li>
+<li>非 limit point, 称作isolated point of E孤立点</li>
+<li>closed闭集 every limit point of E in E</li>
+</ul>
+</li>
+<li>interior point内点, 存在r,使得邻域全属于E<ul>
+<li>open: 所有点都是内点</li>
+</ul>
+</li>
+<li>complement of E($E^c$) 补集, 通过点的属于来定义</li>
+<li>perfect 完全的（完备集？） closed and 所有点都是极限点</li>
+<li>bounded, 某点+某半径覆盖所有点</li>
+<li>dense 稠密: E在X中稠密，X的每个点都是 E的极限点或E的点</li>
+</ul>
+<p>2.19 邻域是开集</p>
+<p>2.20 极限点任意邻域有无穷多点</p>
+<ul>
+<li>定义是任意邻域有非自身的点，而有限能取min, </li>
+<li>corollay. 有限集没有极限点</li>
+</ul>
+<p>2.22 并的补 &#x3D; 补的交</p>
+<p>2.23 开的补是闭，闭的补是开</p>
+<p>2.24 </p>
+<ul>
+<li>开的任意并是开</li>
+<li>闭的任意交是闭</li>
+<li>开的有限交是开</li>
+<li>闭的有限并是闭<ul>
+<li>见普林斯顿那本书的笔记，核心还是有限时有min可取，无限会破坏这个min，从而破坏 “一致性”</li>
+<li>$[0,1&#x2F;n)$</li>
+</ul>
+</li>
+</ul>
+<p>2.26 closure(E), 闭包</p>
+<ul>
+<li>$\bar{E}&#x3D;E\cup E’$ ，E和E的极限点集的并<ul>
+<li>可以看成对E进行一个运算后的结果</li>
+</ul>
+</li>
+<li>性质<ul>
+<li>闭包 是 闭集</li>
+<li>$E&#x3D;\bar{E}$当且仅当E是闭集</li>
+<li>F是闭集, $E \in F$则 $\bar{E}\subset F$ ，也就是 闭集的子集的极限点不会超出原来的闭集</li>
+</ul>
+</li>
+</ul>
+<p>2.28 非空 实数集E 且 bounded above , y &#x3D; sup E , then $y \in \bar{E}$, 也就是从有序集合角度看上去的上确界，是在拓扑角度看上去的闭包中</p>
+<p>2.29 开区间在R1上是开集，在R2上不是开集，<code>open relative to</code></p>
+<ul>
+<li>E subset Y subset X<ul>
+<li>开区间 subset R1 subset R2</li>
+</ul>
+</li>
+<li>X 度量空间, Y有着和X同样的度量函数&#x2F;距离函数, 那么可以用 距离函数 定义在Y上的相对开集</li>
+</ul>
+<p>2.30 theorem 若 $Y\subset X$  , a subset E of Y is open relative to Y if and only if E &#x3D; Y cap G for some open subset G of X</p>
+<ul>
+<li>利用2.24 开的任意并是开 以及 邻域选点+半径，构造 G&#x3D;cup X中邻域(p,按照Y要求选的半径)</li>
+</ul>
+<h3 id="紧集-compact-sets"><a href="#紧集-compact-sets" class="headerlink" title="紧集 compact sets"></a>紧集 compact sets</h3><p>2.31 开覆盖open cover: E subset cup E_a</p>
+<p>2.32 紧compact: every open cover of K contains a finite subcover</p>
+<ul>
+<li>任意 开覆盖 有 有限 子覆盖<ul>
+<li>注意 任意 而不是存在</li>
+<li>后面是 有限</li>
+</ul>
+</li>
+</ul>
+<p>2.33 $K\subset Y\subset X$ , K关于X是紧的当且仅当 K关于Y是紧的</p>
+<p>2.34 度量空间紧子集是闭集</p>
+<ul>
+<li>证明其补是开集，找r&#x3D; 1&#x2F;2 距离再三角不等式</li>
+</ul>
+<p>2.35 紧集的闭子集都是紧集</p>
+<ul>
+<li>闭子集任意开覆盖 加上 <code>闭子集的补</code> 覆盖紧集，存在一个有限子覆盖，其中不含 闭子集的补的部分覆盖了闭子集</li>
+</ul>
+<p>2.36 {紧子集} 任意有限交 非空，那么 {紧子集} 的任意交非空</p>
+<ul>
+<li>反证：k1 中任意点都不存在于所有集合中，其它的补对k1形成开覆盖，紧所有有限个其它的补对k1开覆盖，这些与k1交为空</li>
+</ul>
+<p>2.37 E是紧集K的无限子集，那么E在K中有极限点</p>
+<ul>
+<li>反证：如果没有极限点，那么K中所有点可以开一个半径至多含有一个E中的点，从而有有限开覆盖覆盖了无穷多点的E,而每个开覆盖又只覆盖了一个点，</li>
+</ul>
+<p>2.38 R1中可数闭区间套的可数交非空</p>
+<ul>
+<li>sup 左端点 显然属于其中</li>
+<li>2.39 $R^k$ 中的 可数闭区间套的可数交非空<ul>
+<li>每个维度是独立的</li>
+</ul>
+</li>
+</ul>
+<p>2.40 每个k-方格(k-cell)是紧集</p>
+<ul>
+<li>反证法：无限格子套 + 1&#x2F;2 切割长度 + 邻域控制</li>
+<li>从而 k-方格 任意开覆盖总是有有限子覆盖，所以紧</li>
+</ul>
+<p>2.41 heine-borel定理</p>
+<ul>
+<li>$\mathbb{R}^k$中<ul>
+<li>闭+有界</li>
+<li>紧</li>
+<li>E的每个无限子集 在 E 内有极限点</li>
+<li>这三个等价</li>
+</ul>
+</li>
+</ul>
+<p>2.42 weierstrass定理 $\mathbb{R}^k$中每个有界无限子集在$\mathbb{R}^k$中有极限点</p>
+<h3 id="完备集，完全集perfect-sets"><a href="#完备集，完全集perfect-sets" class="headerlink" title="完备集，完全集perfect sets"></a>完备集，完全集perfect sets</h3><p>2.43 $\mathbb{R}^k$中非空完全集P 不可数</p>
+<ul>
+<li>无限显然</li>
+<li>如果可数，那么有排列</li>
+<li>那么按照顺序，构造嵌套邻域（如果 不在上次构造的邻域中，那么跳过这个点），排除上一个点<ul>
+<li>这样我们可以构造出 新邻域的闭包 属于 旧邻域，的无限嵌套，相对于P的交也是无限嵌套，</li>
+<li>因为每次排除点，认为无限交应该是空，但另一方面嵌套非空紧集无限交非空</li>
+</ul>
+</li>
+</ul>
+<p>(勘误?) 这里中英文书感觉，都漏了一步叫做 $K_n &#x3D; \bar{V_n} \cap P$ , $\bar{V_n}$是有界闭集，所以紧</p>
+<ul>
+<li>$K_n$ 的每个无限子集E, 是 $\bar{V_n}$的 无限子集 &#x3D;&gt; 在$\bar{V_n}$ 中有极限点(2.41), 另一方面E属于P,所以极限点也属于P</li>
+<li>所以该极限点属于$K_n$</li>
+<li>根据2.41 $K_n$ 紧</li>
+<li><a href="https://book.douban.com/subject/1230288/discussion/616834625/">https://book.douban.com/subject/1230288/discussion/616834625/</a></li>
+</ul>
+<p>2.44 cantor set</p>
+<ul>
+<li>每次 3等分去掉中间段</li>
+<li>无限交是无限多点集合</li>
+<li>是紧的</li>
+<li>不含任何线段</li>
+<li>无孤立点</li>
+<li>不可数的0测度集的例子</li>
+</ul>
+<h3 id="连通集-connected-sets"><a href="#连通集-connected-sets" class="headerlink" title="连通集 connected sets"></a>连通集 connected sets</h3><p>2.45 separated 分开的 $\bar{A}\cap B&#x3D;\varnothing ,A\cap \bar{B}&#x3D;\varnothing$</p>
+<ul>
+<li>connected: 不是分开的</li>
+</ul>
+<p>2.47 R1中 connected 当且仅当 x,y in E，那么 x,y之间的in E</p>
 ]]></content>
       <categories>
         <category>数学分析</category>
@@ -12749,6 +12749,772 @@
       </tags>
   </entry>
   <entry>
+    <title>普林斯顿 微积分读本</title>
+    <url>/Math/the_calculus_lifesaver/</url>
+    <content><![CDATA[<p>isbn 978711543559</p>
+<p>据说有视频课 calclifesaver.com</p>
+<span id="more"></span>
+
+<h2 id="1-函数，图像，直线"><a href="#1-函数，图像，直线" class="headerlink" title="1 函数，图像，直线"></a>1 函数，图像，直线</h2><p>挺细的，高中可读</p>
+<h2 id="2-三角学回顾"><a href="#2-三角学回顾" class="headerlink" title="2 三角学回顾"></a>2 三角学回顾</h2><p>是真的细，从角度到弧度</p>
+<p>$sin^2+cos^2&#x3D;1$</p>
+<p>$1+tan^2&#x3D;sec^2$</p>
+<p>$cot^2+1&#x3D;csc^2$</p>
+<p>$sin(a+b)&#x3D;sin(A)cos(B)+cos(A)sin(B)$</p>
+<p>$cos(a+b)&#x3D;cos(A)cos(B)-sin(A)sin(B)$</p>
+<p>$sin(2x)&#x3D;2sin(x)cos(x)$</p>
+<p>$cos(2x)&#x3D;2cos^2(x)-1&#x3D;1-2sin^2(x)$</p>
+<h2 id="3-极限导论"><a href="#3-极限导论" class="headerlink" title="3 极限导论"></a>3 极限导论</h2><p>一个对比的例子 f(x)&#x3D;x+1,那么</p>
+<ul>
+<li>x趋于1时 f(x)的极限是2</li>
+</ul>
+<p>g(x)&#x3D;x+1,x !&#x3D; 1时</p>
+<p>g(x)&#x3D;3,x &#x3D;1时</p>
+<p>同样有: x趋于1时 g(x)的极限是2</p>
+<p>函数的点极限是在聊没（不一定）取到的趋近值</p>
+<hr>
+<p>垂直极限， x在左右趋于a时，有一侧的值趋于正无穷或负无穷</p>
+<p>点附近不趋于任何数 sin(1&#x2F;x), x 趋于0时</p>
+<p>x趋于正无穷时，的极限，意味着有水平渐近线</p>
+<hr>
+<p>夹逼定理（三明治定理）g&lt;&#x3D;f&lt;&#x3D;h 在x的范围附近，那么g和h极限相同，则f也是</p>
+<h2 id="4-求多项式的极限问题"><a href="#4-求多项式的极限问题" class="headerlink" title="4 求多项式的极限问题"></a>4 求多项式的极限问题</h2><p>f(x)&#x3D;(x-1)(x+1)&#x2F;(x-1) 在点1的极限</p>
+<p>里面主要是一些做题的例子，例如什么分子有理化</p>
+<p>四则运算保持部分，主要注意的是在加减过程中 可能导致低次等价无穷小 无穷大的消失</p>
+<p>(x^2+x)&#x2F;x, (x^2-x)&#x2F;x 在 无穷大 极值都是 无穷大，但是差在无穷大的差是 趋于2</p>
+<p>这里 主要列的都是 x多项式的 p(x)&#x2F;q(x) 在无穷的极限</p>
+<h2 id="5-连续性和可导性"><a href="#5-连续性和可导性" class="headerlink" title="5. 连续性和可导性"></a>5. 连续性和可导性</h2><p>直觉上是一笔画，但对于数学这并不对。</p>
+<p>f(x)&#x3D;x当x有理数，0当x无理数，能在0点有极限，（这就是点连续的感觉反例）</p>
+<p>这点连续，但区间不连续</p>
+<p>或者 f(x)&#x3D;1&#x2F;x在0以外处处连续（但是不一致连续）</p>
+<hr>
+<p>这块内容核心是，</p>
+<ul>
+<li>点连续：该点的值&#x3D;该点的极限</li>
+<li>区间上连续：区间上所有点连续<ul>
+<li>这两个都是数学抽象的定义，图像上最好的描述可能还是 y 包裹距离lambda的线，和x包裹 delta的线</li>
+</ul>
+</li>
+</ul>
+<p>有些函数 点没有定义，但是对应位置有极限，可以考虑补充定义 f(x)&#x3D;xsin(1&#x2F;x)</p>
+<hr>
+<p>介值定理：闭区间，左右端点异号，然后函数连续，那么 区间中存在一点f(x)&#x3D;0</p>
+<ul>
+<li>这个定理通过平移可以有 左右端点(f(l)-a)(f(r)-a) 异号，中存在点 f(m)&#x3D;a</li>
+</ul>
+<p>最大值最小值存在定理： 闭区间+连续，区间有最大值，最小值</p>
+<ul>
+<li>这个理解其要素，要考虑如果开区间，如果不连续 不存在的例子就能更深刻</li>
+</ul>
+<hr>
+<p>可导性：</p>
+<p>从时间，速度，距离出发，引出距离时间图像中 速度与导数的关系</p>
+<p>单点的导数也就是：</p>
+<ul>
+<li>f(a)’ &#x3D; (f(x)-f(a))&#x2F;(x-a), 当x趋于a的极限<ul>
+<li>这里 我们也就用了前面学的极限</li>
+<li>另一个代换就是 (f(a+h)-f(a))&#x2F;h</li>
+<li>那么 同样极限可能存在，可能不存在。 如果极限存在，定义在 此点 可导</li>
+<li>分母是 delta x, 分子是 delta y</li>
+<li>记作 dy&#x2F;dx <ul>
+<li>注意不是分数，而是表示 delta y &#x2F; delta x的极限</li>
+<li>更具体的应该是 d&#x2F;dx(y(x)), 也就是y是关于x的函数，对其自变量x求导的</li>
+<li>更进阶的有可微概念（说白了是 关于自变量的线性表出，不过好像微积分不学，在数学分析里）</li>
+</ul>
+</li>
+<li>不存在例子 |x|&#x2F;x<ul>
+<li>这里说明 连续不一定可导</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>常见的导数表</p>
+<ul>
+<li>$ax^b &#x3D; abx^{b-1},b\neq 0$</li>
+</ul>
+<p>可导 &#x3D;&gt; 连续</p>
+<ul>
+<li>考虑 f(x)&#x3D;x+1, 特别的x&#x3D;0时f(x)&#x3D;2, 其实会发现，分母趋于0时，如果不连续，会导致分子不趋于0（甚至没有极限）</li>
+</ul>
+<h2 id="6-求解微分问题"><a href="#6-求解微分问题" class="headerlink" title="6. 求解微分问题"></a>6. 求解微分问题</h2><p>用定义求导</p>
+<p>常用公式</p>
+<ul>
+<li>$d&#x2F;dx (x^a)&#x3D;ax^{a-1}$</li>
+<li>$d&#x2F;dx(C)&#x3D;0$</li>
+</ul>
+<p>推论</p>
+<ul>
+<li>乘积法则<ul>
+<li>h(x)&#x3D;f(x)g(x), h’(x)&#x3D;f’(x)g(x)+f(x)g’(x)</li>
+<li>或者写成 y&#x3D;uv, d&#x2F;dx(y)&#x3D;v d&#x2F;dx(u)+u d&#x2F;dx (v)</li>
+<li>还可以扩展更多的y&#x3D;uvw</li>
+</ul>
+</li>
+<li>商:<ul>
+<li>h&#x3D;f&#x2F;g, $h’&#x3D;(f’g-fg’)&#x2F;(g^2)$</li>
+</ul>
+</li>
+<li>说白了 希望能用四则运算的思路对这个进行分解<ul>
+<li>那么加减其实也有h&#x3D;f+-g,h’&#x3D;f’+-g’</li>
+<li>而需要注意的是，这里需要每一部分的导数是存在的</li>
+</ul>
+</li>
+<li>特别的，4则运算以外有函数复合 h&#x3D;f(g(x))  称作链式求导，可以更多的复合<ul>
+<li>就是导数定义展开就能得到</li>
+<li>h’&#x3D;f’(g(x))g’(x)</li>
+<li>y(u),u(x), d&#x2F;dx(y)&#x3D;d&#x2F;dx(y) * d&#x2F;dx(u)</li>
+<li>例子 $y&#x3D;u^{100}, u&#x3D;x^2+1$<ul>
+<li>$d&#x2F;dx(y) &#x3D; 100u^{99} 2x&#x3D;200x(x^2+1)^{99}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>这里 乘积法的解释用的 长方形边长分别f,g, 面积的变化的概念</p>
+<p>这里 链式法的理解用的 在 放大镜后面拉伸口香糖，那么是倍率相乘</p>
+<p>加速度引出二阶导数</p>
+<p>做题：导数伪装的极限（那些可以看成导数表达的极限）</p>
+<p>导函数图像绘制：</p>
+<ul>
+<li>找导数为零的点，为切割点（不一定切割 例如f(x)&#x3D;x^3</li>
+<li>找二阶导数 为0的点，为函数 凸 凹的切割点</li>
+</ul>
+<h2 id="7-三角函数的极限和导数"><a href="#7-三角函数的极限和导数" class="headerlink" title="7. 三角函数的极限和导数"></a>7. 三角函数的极限和导数</h2><p>重要极限： x趋于0, sin(x)&#x2F;x&#x3D;1</p>
+<p>其他常用</p>
+<ul>
+<li>cos(x-&gt;0)-&gt;1</li>
+<li>x-&gt;0, tan x &#x2F; x &#x3D; 1</li>
+<li>sin’ &#x3D; cos</li>
+<li>cos’&#x3D;-sin</li>
+<li>$tan’&#x3D;sec^2$</li>
+<li>$sec’&#x3D;sec\cdot tan$ </li>
+<li>$cot’&#x3D;-csc^2$</li>
+<li>反正背了无数年也背诵不到</li>
+</ul>
+<p>其它方法，把分母想办法化作0的形式，变量替换，</p>
+<p>一个本身可导导函数 不连续 的函数：</p>
+<p>$f(x)&#x3D;x^2sin(1&#x2F;x)$ 补充定义x&#x3D;0, </p>
+<h2 id="8-隐函数求导和相关变化率"><a href="#8-隐函数求导和相关变化率" class="headerlink" title="8. 隐函数求导和相关变化率"></a>8. 隐函数求导和相关变化率</h2><p>隐函数：给的表达式不是y(x)&#x3D;…的形式，但从自变量因变量上，依然x是自变量，y(x)的因变量</p>
+<p>$x^2+y^2&#x3D;4$</p>
+<p>方法：在两边加上 d&#x2F;dx ，因为f(x,y)&#x3D;g(x,y), 那么我们认为这两个函数在要求的一段区间上的 映射是一致的，</p>
+<ul>
+<li>那么 如果导数存在，左右导数相等</li>
+</ul>
+<p>求二阶导：</p>
+<ul>
+<li>一样的步骤</li>
+<li>注意的是 d^2&#x2F;dx^2(y)&#x3D;d&#x2F;dx(d&#x2F;dx(y))<ul>
+<li>和 $(d&#x2F;dx(y))^2$ 这两个意义是不同的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子</p>
+<ul>
+<li>A上方5m,3m&#x2F;s向上</li>
+<li>B右侧12m, 4m&#x2F;s向 左</li>
+<li>求A&#x2F;B之间距离变化速度<ul>
+<li>$a^2+b^2&#x3D;c^2$</li>
+<li>$2a d&#x2F;dt(a)+2b d&#x2F;dt(b)&#x3D;2c d&#x2F;dt(c)$, </li>
+<li>$5 \cdot 3+12\cdot (-4)&#x3D;13 d&#x2F;dt(c)$<ul>
+<li>可计算要求的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-指数函数和对数函数"><a href="#9-指数函数和对数函数" class="headerlink" title="9. 指数函数和对数函数"></a>9. 指数函数和对数函数</h2><p>书上这么细致，都快要初中生可看了，从对数 指数 反函数开始讲</p>
+<p>重要极限 e&#x3D;(1+1&#x2F;x)^x, x趋于无穷大时的极限，</p>
+<p>重要函数 d&#x2F;dx(ln(x)) &#x3D; 1&#x2F;x</p>
+<ul>
+<li>$d&#x2F;dx (a^x) &#x3D; a^x ln(a)$</li>
+<li>$x\to 0$, $\frac{e^x-1}{x}&#x3D;1$</li>
+<li>$x\to 0$, $\frac{ln(1+x)}{x}&#x3D;1$</li>
+<li>注，这些东西，到后面等价无穷小会 更不特例化,或者洛必达</li>
+</ul>
+<p>指数增长迅速$x\to \infty \frac{x^n}{e^x}&#x3D;0$, 也就是  多项式&#x2F;指数型 -&gt; 0</p>
+<p>对数增长缓慢 $a&gt;0,x\to \infty \frac{ln(x)}{x^a}&#x3D;0$, 不管a多小</p>
+<p>对数函数在0附近“增长”缓慢：不管a多小, 如果$a&gt;0, x\to 0^+ x^aln(x)&#x3D;0$</p>
+<hr>
+<p>指数增长：复利，动物种群数</p>
+<p>指数衰变： 放射性衰变</p>
+<p>若 $y&#x3D;e^{kx}$,那么 dy&#x2F;dx &#x3D; ke^{kx},也就是 dy&#x2F;dx&#x3D;ky</p>
+<ul>
+<li>这是一个微分方程例子，第30章会有更多例子</li>
+<li>这里 如果dy&#x2F;dx&#x3D;ky,那么$y&#x3D;Ae^{kx}$,在30.2节中说为什么会这样</li>
+<li>而这里对应到 兔子繁殖，说明了，增长速度和现有量保持常熟倍数关系</li>
+<li>dP&#x2F;dt&#x3D;kP, &#x3D;&gt; P(t)&#x3D;P_0e^{kt}</li>
+</ul>
+<p>类似的 dP&#x2F;dt&#x3D;-kP 指数衰变，$P(t)&#x3D;P_0e^{-kt}$</p>
+<hr>
+<p>双曲函数:</p>
+<ul>
+<li>$cosh(x)&#x3D;\frac{e^x+e^{-x}}{2}$</li>
+<li>$sinh(x)&#x3D;\frac{e^x-e^{-x}}{2}$</li>
+<li>作者的评价： 伪装的指数函数又和三角函数相似<ul>
+<li>$cosh^2-sinh^2&#x3D;1$ 双曲方程</li>
+<li>sinh’&#x3D;cosh</li>
+<li>cosh’&#x3D;sinh</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-反函数和反三角函数"><a href="#10-反函数和反三角函数" class="headerlink" title="10. 反函数和反三角函数"></a>10. 反函数和反三角函数</h2><p>充分,非必要，严格单调递增函数 f(x) 有反函数，那么如果函数可导，导函数符号不变，那么也可以得到有反函数</p>
+<p>如果存在，那么当 f(y)&#x3D;x时，我们就能求f的反函数了，因为这时的 y(x)输入得到x,</p>
+<p>1&#x3D;d&#x2F;dx (x)&#x3D;d&#x2F;dx(f(y))&#x3D;f’ * d&#x2F;dx(y)</p>
+<p>f’&#x3D;1&#x2F;(d&#x2F;dx(y))</p>
+<p>这个东西，对于 一元的，去看函数图像的对称更好看，更直观</p>
+<hr>
+<p>具体的 反三角函数</p>
+<p>$d&#x2F;dx \sin^{-1}(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \cos^{-1}(x)&#x3D;-\frac{1}{\sqrt{1-x^2}}$</p>
+<p>$d&#x2F;dx \tan^{-1}(x)&#x3D;-\frac{1}{\sqrt{1+x^2}}$</p>
+<p>… 这里还有其它反三角函数的导数，然后也有反双曲函数的导数</p>
+<p>$x&gt;1,d&#x2F;dx \cosh^{-1}(x)&#x3D;\frac{1}{x^2-1}$</p>
+<p>$d&#x2F;dx \sinh^{-1}(x)&#x3D;\frac{1}{x^2+1}$</p>
+<h2 id="11-导数和图像"><a href="#11-导数和图像" class="headerlink" title="11. 导数和图像"></a>11. 导数和图像</h2><p>局部最大值，称作局部极大值</p>
+<p>极值定理：开区间(a,b)内的局部极值，一定是导数为0,或者导数不存在</p>
+<p>罗尔定理：f在<code>[a,b]</code>连续,在(a,b)可导，f(a)&#x3D;f(b),存在一点 f’(c)&#x3D;0</p>
+<p>在罗尔定理上，增加一个线性函数就有了中值定理：</p>
+<ul>
+<li><code>[a,b]</code>内连续,(a,b)内可导，(a,b)中存在c, f’(c)&#x3D;(f(b)-f(a))&#x2F;(b-a)</li>
+<li>需要注意的是这是 增加线性函数不是旋转，因为旋转可能让函数变得不是函数，而线性偏移，保证y的输出还是一个</li>
+</ul>
+<p>注意的是，罗尔定理和中值定理，都是存在性定理</p>
+<ul>
+<li>用途</li>
+<li>例如 导数为0 证明 常函数<ul>
+<li>任取两点，因为可导，存在f’(c)&#x3D;两点值差&#x2F;坐标差，那么只能值相等</li>
+</ul>
+</li>
+<li>上面这个结论可以推得，两个导数相同的函数 的差是常数</li>
+</ul>
+<p>二阶导数 图像：凹凸，拐点（’’&#x3D;0)</p>
+<p>一阶导数零点：</p>
+<ul>
+<li>局部最大：一阶 +-&gt;-， 二阶 &lt;0</li>
+<li>局部最小：一阶  - -&gt; +, 二阶 &gt;0</li>
+<li>水平拐点，单调递增： 一阶 +, 二阶&#x3D;0</li>
+<li>水平拐点，单调递减： 一阶 -，二阶&#x3D;0</li>
+<li>注意的是， 二阶&#x3D;0只是必要，但不充分，也就是无法从二阶&#x3D;0判断什么，<ul>
+<li>例子 $x^3,x^4$ 在0点的时候 二阶都&#x3D;0</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-绘制函数图像"><a href="#12-绘制函数图像" class="headerlink" title="12. 绘制函数图像"></a>12. 绘制函数图像</h2><p>利用上面性质找关键点绘制，然后研究凹凸性绘制</p>
+<h2 id="13-最优化和线性化"><a href="#13-最优化和线性化" class="headerlink" title="13.最优化和线性化"></a>13.最优化和线性化</h2><p>实际应用：</p>
+<p>最优化的核心思想是，找到所有变量，和优化目标，然后利用等式化简成单变量函数 f(x)，然后确定范围和极值点</p>
+<p>线性化求近似值，这里例子是f(x)&#x3D;sqrt(x),然后算 sqrt(11),用的x&#x3D;3的一阶展开，思想核心有泰勒展开也有牛顿切线，完成估算</p>
+<p>L(x)&#x3D;f(a)+f’(x)(x-a) 称作在x&#x3D;a点处的线性化</p>
+<p>微分: <code>df=f&#39;(a) delta x</code>, 误差: rf&#x3D;f(x)-L(x)&#x3D;delta f-df&#x3D;1&#x2F;2 f’’(c) (x-a)^2 (根据中值定理) &lt;&#x3D; 1&#x2F;2 (x-a)^2 max(f’’)</p>
+<p>牛顿法： a是方程 f(x)&#x3D;0的解的一个近似，如果b&#x3D;a-f(a)&#x2F;f’(a), 很多情况b是更好的近似，这个图像上 很“显然”</p>
+<ul>
+<li>一个明显的优点是，对于高次函数难以有直接求根公式时，这个方法很多时候能有效的求得一个数值根</li>
+<li>同时从图像上也能知道，这个方法无法始终有效，当选取的初始点和范围无法完成对应的下降的话</li>
+</ul>
+<h2 id="14-洛必达法则及极限问题总结"><a href="#14-洛必达法则及极限问题总结" class="headerlink" title="14. 洛必达法则及极限问题总结"></a>14. 洛必达法则及极限问题总结</h2><p>结论： f(a)&#x3D;g(a)&#x3D;0,  lim x-&gt; a, f(x)&#x2F;g(x) &#x3D; f’(x)&#x2F;g’(x)</p>
+<p>这个的核心想法是，f(x)&#x2F;g(x)在a附近 &#x3D; (f(a)+delta f)&#x2F;(g(a)+delta g) &#x3D; delta f &#x2F; delta g &#x3D; (df+rf)&#x2F;(dg+rg), 微分+误差</p>
+<ul>
+<li>如果df,dg不同时为0, 那么就有结果了，rf,rg是高阶无穷小，可以忽略的部分</li>
+<li>如果df,dg 同时为0,那么 rf&#x2F;rg 再次展开，可以再次洛必达</li>
+<li>这里 的另一个解释是，希望导函数在附近是一致收敛的，这样 f’(c)(x-a)&#x2F;g’(c)(x-a)来表示</li>
+</ul>
+<p>对于0&#x2F;0有了，那么 无穷&#x2F;无穷，可以看成 倒数</p>
+<hr>
+<p>这里延伸了一点，不过感觉要在等价无穷小那里讲，</p>
+<ul>
+<li>x趋于0, 1&#x2F;x-1&#x2F;sin(x)， 注意的是 无穷-无穷，（没有减法的对应运算），但是可以通分，</li>
+<li>0 乘上 无穷， x-&gt;0, xln(x), 化成 无穷&#x2F;无穷</li>
+</ul>
+<h2 id="15-积分"><a href="#15-积分" class="headerlink" title="15. 积分"></a>15. 积分</h2><p>这里先讲 求和符号，以及高斯计算1+…+100</p>
+<p>这里用的 汽车 速度 时间 路程 的 坐标轴图像来引入，导出了 积分就是“希望”求和坐标轴围起来的“有向”面积</p>
+<ul>
+<li>这里讲“有向”就是向上是正，向下是复<ul>
+<li>可以无向吗，显然你可以这样定义，但是这显然不符合期望<ul>
+<li>例子就是 车的速度变化，的变化函数的围成面积，引入方向是更自然的结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这里的“希望”是说，目前阶段的积分定义 解决不了一些 以后学实分析时 f(x)&#x3D;1(当x是无理数时),0(x是有理数时)的这种积分</li>
+</ul>
+<p>积分的想法，就是通过“均匀”（非必要，只是常用的方法）纵向切割，切割面积成很多纵条</p>
+<ul>
+<li>每个纵条在原函数下方，且最大，则称为小和</li>
+<li>每个纵条在原函数上方，且最小，则称为大和</li>
+</ul>
+<p>书上写的 上和 下和，应该更直观一些</p>
+<p>然后极限的是 切割的数量 趋于无穷</p>
+<ul>
+<li>这时候，大和小和要趋于同样的值，那么根据三明治夹击定理，得到了函数的“积分”</li>
+<li>这里 趋于同样值，意味着大和小和的差趋于0</li>
+</ul>
+<h2 id="16-定积分"><a href="#16-定积分" class="headerlink" title="16. 定积分"></a>16. 定积分</h2><p>上面这个东西，我们称它为定积分$\int_{a}^b f(x)$, 表达式 f(x)在取值<code>[a,b]</code> 范围时，和坐标轴 围成有向面积</p>
+<p>这里注意的是，我们会发现 一条线 的面积是0,（概率论中的 0 概率不表示不可能）</p>
+<p>$\int_{a}^b f(x)&#x3D;\lim_{mesh -&gt; 0}\sum f(c_j)(x_j-x_{j-1})$</p>
+<ul>
+<li>也就是切割最大间隔趋于0</li>
+<li>c_j 是$[x_{j-1},x_j]$之间的某个值，那么f(cj)就是之间最大最小值之间</li>
+<li>称作 黎曼和，黎曼积分</li>
+</ul>
+<p>常用技巧就是 以1&#x2F;n,然后完成求和表达式，当n趋于无穷时，计算这个极限</p>
+<p>为了计算一些分段的函数，并且和连续函数契合，定义了 <code>int[a,b]+int[b,c] = int[a,c]</code></p>
+<ul>
+<li>为了使它合理，定义了 a &gt;&#x3D; b的值</li>
+<li>这里我们可以发现，虽然 划分也好，拆分int也好，<code>[a,b]+[b,c]</code> 看起来计算了两次，而对于有限值的点来说，面积就是0,</li>
+<li>以及列了一些 和四则运算相关的性质，常数倍数提出，int 加减拆分</li>
+</ul>
+<p>然后类似的，在积分上有 三明治夹击定理，中值定理</p>
+<p>不可积函数：举例了上面实分析的例子：下和&#x3D;0,上和&#x3D;1</p>
+<h2 id="17-微积分基本定理"><a href="#17-微积分基本定理" class="headerlink" title="17. 微积分基本定理"></a>17. 微积分基本定理</h2><p>中文的 积分 微分 都带一个分，而且名字都叫微积分，有一种关联的感觉</p>
+<p>但这里 才是“一个厉害的结论”</p>
+<p>从 定积分 在点a的 增量是面积，微分是f(x) deltax, 导数是f(x), 引出：积分 和 微分 是（一种逆运算的感觉）</p>
+<ul>
+<li>这个意义在于，微分看起来更好求，那么如果有了微分，那么不再需要 黎曼切割去算积分，而直接有积分</li>
+<li>第二是，中文叫做不定积分，和定积分<ul>
+<li>写法上差别是 范围，与+C,看起来很像</li>
+<li>但从 关系上说，定积分,不定积分 的微分得到 f, f的积分是不定积分，</li>
+<li>图像上，两个函数可以通过沿y移动重叠，那么它们必然微分相同，差值是C, 它们微分的不定积分 涵盖了他两，而这两个函数在[a,b]上，从a到b的变化是一样的，这个变化是想求的微分的定积分的值</li>
+<li>F(x)&#x3D;x^2,f(x)&#x3D;F’(x)&#x3D;2x, int f(x) &#x3D; x^2+C  得到了一系列函数, int_1^2 f(x) &#x3D; 3, 表示 这一系列函数从点x&#x3D;1到x&#x3D;2的增量都是3</li>
+</ul>
+</li>
+</ul>
+<p>微积分的第一基本定理：f在[a,b]上连续,F(x) 在(a,b)可导，且F(x)&#x3D;f(x)</p>
+<ul>
+<li>那么 $F(x)&#x3D;\int_{a}^x f(t)dt,x\in[a,b]$</li>
+<li>函数的导函数围成的面积 &#x3D; 原函数的增量</li>
+</ul>
+<p>微积分第二基本定理, f在[a,b]连续，F是f的任意一个反导数，那么</p>
+<ul>
+<li>$\int_{a}^b f(x)dx&#x3D;F(b)-F(a)$</li>
+<li>反导数 也就是 不定积分中任意一个</li>
+<li>$\frac{d}{dx}F(x)&#x3D;f(x)$那么$\int f(x)dx&#x3D;F(x)+C$</li>
+</ul>
+<p>这里同样 塞一下四则运算</p>
+<p>很多例题，包括各种上下限是变量的，</p>
+<p>而定积分时还有一个可用的东西，叫做奇偶性，这得益于它是有向的面积</p>
+<p>P338有个积分表</p>
+<p>这个证明核心 又是“中值定理&#x2F;介值定理”</p>
+<h2 id="18-积分的方法I（换元，分部，分式）"><a href="#18-积分的方法I（换元，分部，分式）" class="headerlink" title="18. 积分的方法I（换元，分部，分式）"></a>18. 积分的方法I（换元，分部，分式）</h2><p>这一块没有新的数学原理，而是实际应用中，怎么求积分，</p>
+<p>换元法： 核心思想是 int f(x) dx 中，如果能把其中一个x的表达式g(x),全部都表示g(x)的表达式，那么就能完成换元</p>
+<ul>
+<li>$\int 2xe^{x^2} dx&#x3D;\int e^{x^2} d x^2$,  这里 $x^2$可以看成整体$t&#x3D;x^2$</li>
+<li>$\int \frac{f’(x)}{f(x)}dx &#x3D; \ln|f(x)|+C$</li>
+<li>$\int x(3x+2)^{1&#x2F;5} dx$,这里 把$t&#x3D;(3x+2)^{1&#x2F;5}$,那么原式&#x3D;$\int \frac{1}{3}(t^5-2)(t)\frac{5}{3}t^4 dt$</li>
+</ul>
+<p>这里理论解释是 复合函数链式求导，的反向积分过程</p>
+<hr>
+<p>分部积分法, 同样是来自于微分过程中的逆向操作而已</p>
+<p>$\frac{d}{dx}(uv)&#x3D;v\frac{d}{dx}(u)+u\frac{d}{dx}v$</p>
+<ul>
+<li>$\int u\frac{d}{dx}(v)dx&#x3D;uv-\int v\frac{d}{dx}(u) dx$</li>
+<li>$\int u dv &#x3D; uv - \int v du$</li>
+</ul>
+<p>看了下youtube <a href="https://www.youtube.com/watch?v=J40ZhIfoPx4">https://www.youtube.com/watch?v=J40ZhIfoPx4</a> 有个DI积分法, 本质上也是这个，不过书写上更快速</p>
+<hr>
+<p>部分分式$\int \frac{p(x)}{q(x)}dx$</p>
+<ul>
+<li>这里的方法还是 多项式 求余法</li>
+<li>然后 再待定系数法，最终希望是<code>int 整式子 + 多个\frac&#123;常数&#125;&#123;(x+a)^t&#125;</code>的形式</li>
+<li>对于 分母是两个不同一次式子时，可以用 线性代数的知识，对分子进行拆分，<ul>
+<li>$1&#x2F;(x^2-1)&#x3D;1&#x2F;((x-1)(x+1))$, 分子 &#x3D;((x+1)-(x-1) )&#x2F;2</li>
+</ul>
+</li>
+<li>总的来说 这样做，不能解决的就是 分母是难以拆的多项式</li>
+<li>其中特别的 不可拆2次式子可以考虑<ul>
+<li>(x+a)&#x2F;((x+b)^2+c)的形式， 从而化成 d&#x2F;(t^2+c) 和 t&#x2F;(t^2+c),就对应 arctan和ln了</li>
+<li>这一块的感受是，从没想过 tan,ln这些 在微积分之前觉得很远的函数，现在如此近，而这个感觉在后面的泰勒展开和级数的时候会更多</li>
+</ul>
+</li>
+</ul>
+<p>$\int \frac{1}{t^2+a^2}dt&#x3D;\frac{1}{a}arctan(\frac{t}{a})+C$</p>
+<h2 id="19-积分的方法II（三角）"><a href="#19-积分的方法II（三角）" class="headerlink" title="19. 积分的方法II（三角）"></a>19. 积分的方法II（三角）</h2><p>$cos^2(x)&#x3D;\frac{1}{2}(1+cos(2x))$</p>
+<p>$sin^2(x)&#x3D;\frac{1}{2}(1-cos(2x))$</p>
+<p>核心还是三角的换元，看起来就能完成幂次变换，和表达式变换</p>
+<p>$\int sin^ncos^m$,</p>
+<ul>
+<li>有奇数幂可以拆一个，剩下用sin2+cos2&#x3D;1换成只有一个的，从而完成换元</li>
+<li>都是偶幂，用上面的完成降次</li>
+</ul>
+<p>$\int tan(x)dx &#x3D; -\ln |cos(x)|+C$</p>
+<p>$tan^2(x)&#x3D;sec^2(x)-1$</p>
+<p>哎，感觉这一块，真的背不到，查表是能查</p>
+<p>$\int sec^2(x)dx&#x3D;tan(x)+C$</p>
+<p>$I_n&#x3D;\int tan^n(x)dx$</p>
+<p>$I_0&#x3D;x+C$</p>
+<p>$I_1&#x3D;-\ln |cos(x)|+C$</p>
+<p>$I_n&#x3D;\frac{1}{n-1}tan^{n-1}(x)-I_{n-2}$ 约化公式</p>
+<hr>
+<p>类似的 $I_n&#x3D;\int_0^{\pi&#x2F;2} cos^n(x)dx$</p>
+<p>$I_n&#x3D;(n-1)(I_{n-1}-I_n)$</p>
+<p>$I_{n}&#x3D;\frac{n-1}{n}I_{n-2}$</p>
+<p>$I_0&#x3D;\frac{pi}{2},I_1&#x3D;1$</p>
+<hr>
+<p>这一块是对于一些直接求不到，的完成一个形式的递归表达式</p>
+<hr>
+<p>$\sqrt{a^2-x^2}$ 换元 $x&#x3D;a\sin(\theta)$</p>
+<p>$\sqrt{a^2+x^2}$ 换元 $x&#x3D;a\tan(\theta)$</p>
+<p>$\sqrt{x^2-a^2}$ 换元 $x&#x3D;a\sec(\theta)$</p>
+<hr>
+<p>整个的核心还是要对 微分结果熟悉</p>
+<h2 id="20-反常积分：基本概念"><a href="#20-反常积分：基本概念" class="headerlink" title="20. 反常积分：基本概念"></a>20. 反常积分：基本概念</h2><p>目标</p>
+<ul>
+<li>有些函数，在定义域无限时，围成面积有限，（ 例如 等比例的 实数定义域版 $f(x)&#x3D;(1&#x2F;2)^x$</li>
+<li>有些函数，在有限定义域，无限值域时，围成面积有限，（例如$2\sqrt{x}$求导得到的形如$\frac{1}{\sqrt{x}}$在[0,1]</li>
+<li>其它的都无限</li>
+</ul>
+<p>主要希望能计算那些有限的函数</p>
+<ul>
+<li>那么这里补充定义，如果 [a,b],仅在点a无限，$\int_a^b&#x3D;\lim_{\epsilon\to 0^+}\int_{a+\epsilon}^b$<ul>
+<li>这里有点（覆盖写入的感觉），也就是积分 前面定义了 <code>[]连续,()可导</code>，以及拆分。而这里补充定义了 单点值域极限的情况，这样定义了$\int_{0}^{1}\frac{1}{\sqrt{x}}$的值</li>
+<li>其实 根据前面 对称性，和可拆分性，我们自然的也对一些间断点，破裂点，b出的无穷有了 “自然”的定义 例如 上面要趋于$b-\epsilon$，<ul>
+<li>换个角度思考，那如果就是连续呢，会发现单点的值，不论无不无穷 直接被视作0,也就是当连续时，我们要算(a,b)的积分，也能这样定义</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>同样关于积分范围的无穷定义，也是补充定义$\int_a^{\infty}&#x3D;\lim_{N\to \infty} \int_{a}^{N}$</li>
+<li>再换句话说，积分的符号写法是“模糊的”，而为了让模糊的写法，在满足最纯粹 <code>[]连续,()可导</code>以及嵌入四则运算的前提下，补充了一些“更自然”的补充定义</li>
+</ul>
+<hr>
+<p>$x\to a,\frac{f(x)}{g(x)}&#x3D;1$那么称作在点$a$他们相似$f(x)\sim g(x)$</p>
+<ul>
+<li>关于相似 引入 四则运算</li>
+<li>f<del>g,h</del>j &#x3D;&gt; fh~gj</li>
+<li>注意的是，加减运算是无法保证的<ul>
+<li>tan<del>x,sin</del>x,但是 tan-sin~0是错的！！之后会引入等价无穷小</li>
+</ul>
+</li>
+<li>这里～的核心是连续的把（值？）捆在不太远的位置，<ul>
+<li>而当都趋于0时，加减的实际内容不是这个（值），而是对捆绑的力度加减</li>
+<li>当都不趋于0时，加减的实际内容是针对这个值，而这个值的（结果 需要不是0）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>有了比较判别法，如果一个积分结果无穷，另一个函数比它大，那么积分也是无穷（核心也是夹击类似的想法）</p>
+<p>而这里又是一个重要的 极限</p>
+<ul>
+<li>$\int_a^{\infty} \frac{1}{x^p} dx, a &gt; 0$,<ul>
+<li>$p\le 1$时，发散</li>
+<li>$p &gt; 1$时，收敛</li>
+</ul>
+</li>
+<li>另外的 $\int_0^a,\frac{1}{x^a}dx a&gt;0$<ul>
+<li>p&lt;1 收敛</li>
+<li>$p\ge 1$ 发散</li>
+</ul>
+</li>
+</ul>
+<p>绝对收敛判别法, int|f(x)|收敛，则 int f(x),收敛，核心还是夹挤, -|f(x)| &lt;&#x3D; f(x) &lt;&#x3D; |f(x)|,在足够大的n以后左右都趋于0</p>
+<h2 id="21-反常积分：如何解题"><a href="#21-反常积分：如何解题" class="headerlink" title="21. 反常积分：如何解题"></a>21. 反常积分：如何解题</h2><ol>
+<li>找所有瑕点，以瑕点切割，切割成多个 <code>[],()</code>，每个里面使用新的或朴素的积分定义计算</li>
+</ol>
+<p>x在无穷附近</p>
+<p>f(x)的最高幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin,cos 可以用 绝对收敛判别法， $||\le1$</p>
+<p>对于 x &gt; 0, $e^{-x} \le \frac{C}{x^n}$, </p>
+<p>对于 x &gt; 0, $ln(x)\le Cx^n$</p>
+<hr>
+<p>x在0附近</p>
+<p>f(x)的最低幂次 $f(x)~b_ix^{m_i}$</p>
+<p>sin~x</p>
+<p>tan~x</p>
+<p>cos~1</p>
+<p>$e^x\sim 1$</p>
+<p>$e^x-1\sim x$</p>
+<p>$|\ln(x)|\le \frac{C}{x^{a}}, a&gt;0$,足够小的a</p>
+<hr>
+<p>总的来说这里，在0或者在无穷附近的处理，都希望能变成x的幂次的样子</p>
+<p>而需要注意的是加减法的结果不应该是 ~0,否则会有问题(加减的是幅度)</p>
+<h2 id="22-数列和级数：基本概念"><a href="#22-数列和级数：基本概念" class="headerlink" title="22.数列和级数：基本概念"></a>22.数列和级数：基本概念</h2><p>数列：极限，是一种（可列，无穷）</p>
+<p>例如 $f(x)&#x3D;sin(n)&#x2F;x^n$, 也可以定义$a_n&#x3D;sin(n)&#x2F;x^n$, 那么 这可以看成对函数的无穷方向的 整点采样</p>
+<p>感官上显然的，如果函数数列同样表达式，那么函数收敛必然数列收敛，但数列首先可能刚好因为（采样的被采样点特殊）而收敛 函数却不收敛</p>
+<ul>
+<li>$f(x)&#x3D;sin(2<em>\pi</em>n)$</li>
+<li>这里感官上，是对于 图像的 epsilon和N的理解</li>
+</ul>
+<p>连续函数保持极限：</p>
+<ul>
+<li>和上面不同，f(x)在点a是连续的，那么数列的 采样$a_i&#x3D;f(t_i)$,然后t_i随着i趋于无穷，采样t趋于a,那么a_i的极限也就是f(a)</li>
+</ul>
+<p>重要数列</p>
+<ul>
+<li>$a_n&#x3D;r^n$, 讨论 r<ul>
+<li>（-1,1） 收敛于0</li>
+<li>1,收敛于1</li>
+<li><blockquote>
+<p>1, 趋于无穷</p>
+</blockquote>
+</li>
+<li>&lt;&#x3D; -1, 不存在</li>
+</ul>
+</li>
+<li>$a_n&#x3D;(1+k&#x2F;n)^n$, 趋于 $e^k$</li>
+</ul>
+<hr>
+<p>series 级数，就是数列的和, 起始有的0,有的1都行</p>
+<ul>
+<li>$\sum_{1}^\infty &#x3D; \lim_{N\to \infty}\sum_{1}^N$ 称作无穷级数</li>
+<li>$\sum_0^{\infty} {r^n}$<ul>
+<li>(-1,1) &#x3D;&gt; $\frac{1}{1-r}$</li>
+<li>其它的发散</li>
+</ul>
+</li>
+<li>从观感上自然的，需要a_n是趋于0的，能判断是发散，（注意只能判断是发散，不能判断收敛，因为这只是收敛的必要条件，不是充分的）</li>
+</ul>
+<p>比较判别，类似函数的比较判别 a_n~b_n, 等价于 lim n-&gt;\infty, a_n&#x2F;b_n&#x3D;1</p>
+<ul>
+<li>例如 $sin(1&#x2F;2^n) \sim (1&#x2F;2)^n$</li>
+</ul>
+<p>级数中有新的判别法：比式判别法</p>
+<ul>
+<li>$\lim_{n\to \infty}a_{n+1}&#x2F;a_n &#x3D; L &lt; 1$ , 那么收敛，<ul>
+<li>这里核心思想就两个 小于1的等比数列和极限收敛</li>
+<li>第二比例有极限，所以可以被捆绑在明确小于一个明确小于1的数以内，所以至少是有界的,从而根据柯西的，截取尾部可以和任意小的想法</li>
+</ul>
+</li>
+</ul>
+<p>类似的，还是利用等比数列求和的想法 和 上面的 等价的想法，</p>
+<ul>
+<li>有了根式判别法 $(a_n)^{\frac{1}{n}}&#x3D;L&lt;1$</li>
+</ul>
+<p>积分判别法，对于 表达式对应同样函数的积分，比较，可以判断是上下界的</p>
+<ul>
+<li>例如单调递增且有上界，单调递减有下界这样的，利用和积分比较判断它有界</li>
+</ul>
+<p>交错级数：</p>
+<ul>
+<li>正负交替，绝对值趋于0,则收敛</li>
+<li>注意的是，这种级数，可能不是绝对收敛的，这种情况下称作条件收敛</li>
+<li>$(-1)^n&#x2F;n$</li>
+</ul>
+<hr>
+<p>级数中需要注意的是，当正负交替以后，重排序的结果可能 级数值不一样！！！！ 非常神奇的给了极限当头一棒的感觉</p>
+<ul>
+<li>TODO 例子</li>
+</ul>
+<h2 id="23-求解级数问题"><a href="#23-求解级数问题" class="headerlink" title="23.求解级数问题"></a>23.求解级数问题</h2><p>想要漂亮的级数值，这个级数一般就很特殊</p>
+<ul>
+<li>等比例</li>
+</ul>
+<p>主要对22章的具体用例。</p>
+<h2 id="24-泰勒多项式、泰勒级数和幂级数导论"><a href="#24-泰勒多项式、泰勒级数和幂级数导论" class="headerlink" title="24. 泰勒多项式、泰勒级数和幂级数导论"></a>24. 泰勒多项式、泰勒级数和幂级数导论</h2><p>泰勒展开，幂级数：</p>
+<ul>
+<li>核心是 点的幂次展开，然后中值定理控制了结果范围</li>
+<li>成果是，当无限的展开它，就可以看成相等，而 幂级数的 导&#x2F;积 操作是非常容易的<ul>
+<li>泰勒级数 无非是 展开点是a不是0,</li>
+</ul>
+</li>
+</ul>
+<p>$\lim_{n \to \infty} x^n&#x2F;n!&#x3D;0$</p>
+<p>剩余项 可以计算误差范围</p>
+<h2 id="25-求解估算问题"><a href="#25-求解估算问题" class="headerlink" title="25. 求解估算问题"></a>25. 求解估算问题</h2><p>幂级数有个理论叫做收敛半径，TODO存在性证明，收敛半径的意义</p>
+<ul>
+<li><code>[0,r)</code> 收敛</li>
+<li>(-\infty,-r) (r,\infty) 发散</li>
+<li>r处具体讨论</li>
+</ul>
+<h2 id="26-泰勒级数和幂级数：如何解题"><a href="#26-泰勒级数和幂级数：如何解题" class="headerlink" title="26. 泰勒级数和幂级数：如何解题"></a>26. 泰勒级数和幂级数：如何解题</h2><p>求收敛半径 一般用比值法，还是等比数列的想法</p>
+<p>有了泰勒级数，虽然（不科学的因为这里扩展了数域），但是强行带入可以有欧拉公式</p>
+<p>一些极限求解时，可以用 等价无穷小（也就是级数展开 求解</p>
+<h2 id="27-参数方程和极坐标"><a href="#27-参数方程和极坐标" class="headerlink" title="27. 参数方程和极坐标"></a>27. 参数方程和极坐标</h2><p>这块我还是感觉没有悟透，因为函数的话，从感觉上，x作为自变量，f(x)作为唯一输出，有了x到f(x) 的映射</p>
+<p>x&#x3D;g(t), y&#x3D;h(t)</p>
+<p>两个都是t的函数，那么t的取值，在我看来，会在y-x平面绘制出（可能是）一条曲线，它感觉上，不容易保证说是一个x对应一个y</p>
+<p>这里, 链式求导，y&#x3D;f(x),我们不知道f, 但是 d&#x2F;dt(y)&#x3D; d&#x2F;dx(y) d&#x2F;dt(x)</p>
+<ul>
+<li>从而 d&#x2F;dx(y) &#x3D; $\frac{d&#x2F;dt(y)}{d&#x2F;dt(x)}$</li>
+<li>从而 d^2&#x2F;dx^2(y) &#x3D; $\frac{d&#x2F;dt(上面的)}{d&#x2F;dt(x)}$</li>
+<li>注意到 结果会是t的表达式，不是x也不是y的</li>
+</ul>
+<hr>
+<p>笛卡尔坐标系，（用$r,\theta$ 表示</p>
+<p>$x&#x3D;r\cos(\theta)$</p>
+<p>$y&#x3D;r\sin(\theta)$</p>
+<p>对于 $r&#x3D;f(\theta)$</p>
+<p>求切线: $d&#x2F;dx(y)&#x3D;\frac{d&#x2F;d\theta(y)}{d&#x2F;d\theta(x)}$</p>
+<p>极坐标下的面积 $\int_{\theta_0}^{\theta_1} \frac{1}{2}r^2 d\theta$</p>
+<h2 id="28-复数"><a href="#28-复数" class="headerlink" title="28. 复数"></a>28. 复数</h2><p>复分析里：证明n次多项式n个根</p>
+<p>复数核心是二元组，(a,b), 和一套规则，为了写得好看，变成 a+bi的形式</p>
+<ul>
+<li>复数长度 是 $x\bar{x}$ 它与它共轭的乘积</li>
+</ul>
+<p>复平面与 欧拉公式$e^{i\theta}&#x3D;\cos(\theta)+\sin(\theta)$</p>
+<ul>
+<li>一个点可以用 a+bi和 $re^{i\theta}$ 两种形式表示</li>
+</ul>
+<p>$z^n&#x3D;w$,如果把W看成复平面的点，那么z&#x3D;长度的n次根 * 夹角的1&#x2F;n</p>
+<ul>
+<li>另外 因为 $e^{i2\pi}&#x3D;1$,所以 $2k\pi$ 的夹角都可以分</li>
+<li>z&#x3D;长度的n次根 * (夹角的1&#x2F;n + $2\pi k(&#x3D;0\cdots n-1) &#x2F; n$)</li>
+</ul>
+<p>解$e^z&#x3D;w$, z分成x+iy, $e^x&#x3D;w$的长度$e^iy&#x3D;w$的夹角</p>
+<hr>
+<p>这里感觉可以加上三角级数与傅里叶变换？</p>
+<h2 id="29-体积、弧长和表面积"><a href="#29-体积、弧长和表面积" class="headerlink" title="29. 体积、弧长和表面积"></a>29. 体积、弧长和表面积</h2><p>上面知识的应用了</p>
+<p>体积，主要是一些旋转体的，本质上就是找公式算积分</p>
+<hr>
+<p>弧长，要一点微分相关，是delta的近似量，面对的问题是圆形边长为什么不是8r</p>
+<ul>
+<li>$\int_a^b \sqrt{1+(\frac{d}{dx}(y))^2} dx$</li>
+<li>$\int_A^B \sqrt{1+(\frac{d}{dy}(x))^2} dy$</li>
+<li>$\int_{t_0}^{t_1} \sqrt{(\frac{d}{dt}x)^2+(\frac{d}{dt}(y))^2} dt$</li>
+<li>$\int_{\theta_0}^{\theta_1} \sqrt{(f(\theta))^2+(f’(\theta))^2} dt$</li>
+</ul>
+<hr>
+<p>关于x轴，旋转体表面积</p>
+<ul>
+<li>$\int_{a}^b 2\pi y \sqrt{1+(\frac{d}{dx}y)^2} dx$</li>
+</ul>
+<h2 id="30-微分方程"><a href="#30-微分方程" class="headerlink" title="30. 微分方程"></a>30. 微分方程</h2><p>就是包含导数的方程，这里只学一元函数， 常微分方程 ODE</p>
+<p>前面例子 $\frac{d}{dx}y&#x3D;ky$, 唯一形式$y&#x3D;Ae^{kx}$</p>
+<p>对于一类 可通过方程变形成  f(y)dy&#x3D;h(x)dx的形式，可以两边同时积分（记得+C）</p>
+<hr>
+<p>一阶线性方程： 能整理成 y’+p(x)y&#x3D;q(x)</p>
+<p>注意到 $(g(x)y)’&#x3D;g’(x)y+g(x)y’$, 而这样需要 $p(x)&#x3D;\frac{g’}{g}$, 并不容易找到g</p>
+<p>注意到 $(e^{h(x)}y)’&#x3D;h’(x)e^{h(x)}y+e^{h(x)}y’$, 这里利用了$(e^x)’&#x3D;e^x$,  这样的话 只需要$h’(x)&#x3D;p(x)$</p>
+<p>所以 希望 $h(x)&#x3D;\int p(x) dx + C_1$</p>
+<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}p(x)y&#x3D;e^{h(x)}q(x)$</p>
+<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}h’(x)y&#x3D;e^{h(x)}q(x)$</p>
+<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}h’(x)y&#x3D;e^{h(x)}q(x)$</p>
+<p>$\frac{d}{dx} (e^{h(x)}y)&#x3D;e^{h(x)}q(x)$</p>
+<p>$e^{h(x)}y&#x3D;\int (e^{h(x)}q(x)) dx  + C_2$</p>
+<p>$\displaystyle y&#x3D;\frac{1}{e^{h(x)}}(\int (e^{h(x)}q(x)) dx  + C_2), h(x)&#x3D;\int p(x) dx + C_1$</p>
+<hr>
+<p>常系数微分方程, <a href="https://math.fudan.edu.cn/_upload/article/files/8b/6b/f3bc390143b09642a863057be4e7/0771b803-2e2b-487e-830b-a32e4e32dcfe.pdf">https://math.fudan.edu.cn/_upload/article/files/8b/6b/f3bc390143b09642a863057be4e7/0771b803-2e2b-487e-830b-a32e4e32dcfe.pdf</a></p>
+<p>$\sum_{i} a_i\frac{d^i}{dx^i} (y)&#x3D;f(x)$</p>
+<p>二阶常系数齐次线性方程 $a\frac{d^2}{dx^2}(y)+b\frac{d}{dx}(y)+c&#x3D;0$</p>
+<p>若 $y&#x3D;e^{kx},y’&#x3D;ke^{kx},y’’&#x3D;k^2e^{kx}$， </p>
+<ul>
+<li>$ak^2+bk+c&#x3D;0$, 说明k求出，就能找到一个解</li>
+<li>问题是如果不是这个形式就无解了吗？</li>
+<li>这里 知乎的一个回答是运算可逆??? <ul>
+<li>我瞎想的一个是 $e^{f(x)}$,然后f(x)是幂级数展开，那么其它次的都会有带入的幂次不一致问题，只有$e^{kx}$ 没有幂次问题</li>
+</ul>
+</li>
+<li>如果求得两个不同解$e^{k_0x},e^{k_1x}$ 这两个的 线性叠加就都是解,$C_0e^{k_0x}+C_1e^{k_1x}$<ul>
+<li>如果 $k_0&#x3D;k_1$</li>
+<li>也就是 $\frac{d^2}{dx^2}(y)-2k\frac{d}{dx}(y)+k^2y&#x3D;0$<ul>
+<li>$\frac{d^2}{dx^2}(y)-k\frac{d}{dx}(y)&#x3D;k\frac{d}{dx}(y)-k^2y$</li>
+<li>$\frac{d^2}{dx^2}(y)-k\frac{d}{dx}(y)&#x3D;k(\frac{d}{dx}(y)-ky)$, (这个感觉是来自于线性代数 比例的感觉, 右边这一块看成 z(x)的话, 类似的这样拆也能说明 上面和二次方程根有关系</li>
+<li>$\frac{d}{dx}z&#x3D;kz$<ul>
+<li>其中$z&#x3D;0$是一个特殊的也就是$\frac{d}{dx}(y)-ky&#x3D;0$， $y&#x3D;C_0e^{kx}$</li>
+<li>那么还有 $z&#x3D;C_1e^{kx}$</li>
+<li>$\frac{d}{dx}(y)-ky&#x3D;C_1e^{kx}$<ul>
+<li>y&#x3D;特解+零空间（上面的）</li>
+<li>这里有地方说 要$e^{kx}$线性无关，所以$y&#x3D;g(x)e^{kx}$,其中g(x)不为常数<ul>
+<li>$g’(x)e^{kx}+kg(x)e^{kx}-kg(x)e^{kx}&#x3D;C_1e^{kx}$</li>
+<li>$g’(x)&#x3D;C_1$</li>
+<li>$g(x)&#x3D;C_1x+C_2$, 而这里$C_2$可以和$C_0$融合</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>综上<ul>
+<li>不同根就是 线性叠加</li>
+<li>同根就是$(C_0+C_1x)e^{kx}$</li>
+<li>复根，就是同样的用欧拉公式换一换<ul>
+<li>不过 复根的性质，因为二次方程所以会是 共轭 a+bi,a-bi</li>
+<li>这样的话线性无关，叠加就是$e^{ax}(C_0sin(bx)+C_1cos(bx))$ , (本质上一样，只是换了基而已)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>进一步的 n阶常系数齐次方程，也是类似的形式，重根也是类似的</p>
+<p>习题: $yy’’-(y’)^2&#x3D;y^2\ln y$</p>
+<p>$y&#x3D;e^{f(x)}$</p>
+<p>$y’&#x3D;f’(x)e^{f(x)}$</p>
+<p>$y’’&#x3D;f’’(x)e^{f(x)}+(f’(x))^2e^{f(x)}$</p>
+<p>$f’’(x)&#x3D;f(x)$</p>
+<p>$x^2-1&#x3D;0$</p>
+<p>$f(x)&#x3D;C_0e^{-x}+C_1e^{x}$</p>
+<p>$y&#x3D;e^{C_0e^{-x}+C_1e^{x}}$</p>
+<hr>
+<p>那么 解 $&#x3D;f(x)$ 的是特解+零空间</p>
+<p>特解怎么求</p>
+<p>这里给的是形式对应</p>
+<ul>
+<li>f(x)&#x3D;多项式：特解的形式是同次多项式</li>
+<li>f(x)&#x3D;$e^{kx}$: 特解是 $Ce^{kx}$</li>
+<li>sin(nx) 或者 cos(nx),特解是 Csin(nx)+Dcos(nx), </li>
+<li>是上面的乘积，那么特解是对应上面特解的乘积</li>
+</ul>
+<p>有了形式化，那么剩下的是待定系数法了</p>
+<ul>
+<li>失效情况，类似于上面的重根，这里的零空间可能和特解有重复<ul>
+<li>例子 $y’’-3y’+2y&#x3D;7e^{2x}$, 显然零空间里有$e^x,e^{2x}$, 那么特解肯定就不是$Ce^{2x}$<ul>
+<li>这里的结果和上面也是类似，补充x的幂次</li>
+<li>$y&#x3D;Cxe^{2x}$</li>
+<li>$(y’-2y)’-(y’-2y)&#x3D;7e^{2x}$</li>
+<li>$(Ce^{2x}+2Cxe^{2x}-2Cxe^{2x})’-(Ce^{2x}+2Cxe^{2x}-2Cxe^{2x})&#x3D;7e^{2x}$</li>
+<li>$(Ce^{2x})’-(Ce^{2x})&#x3D;7e^{2x}$</li>
+<li>$2Ce^{2x}-Ce^{2x}&#x3D;7e^{2x}$</li>
+<li>$Ce^{2x}&#x3D;7e^{2x}$</li>
+<li>所以特解是$y&#x3D;7xe^{2x}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>注意图像意义虽然对于实数好理解，但是表达式的力量会在一些无法画图的时候体现例如复数</p>
+<ol>
+<li>极限的定义：这里给出了图像上 epsilon, delta的 意义</li>
+<li>极限的四则运算：解决了复杂表达式的极限难以直接计算的问题，转化为可以拆分计算再合并<ol>
+<li>证明核心就是 被控制到了可控范围</li>
+</ol>
+</li>
+<li>其他极限情况，主要讨论 无穷，间断，单侧。同样可以图像意义</li>
+<li>连续与极限：连续是想要的性质，在这个性质下，可以对多个函数的 单点甚至一段区间，进行四则运算甚至复合<ol>
+<li>存在性定理：<ol>
+<li>介值定理</li>
+<li>最大-最小定理证明</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>指数对数函数<ol>
+<li>导数性质</li>
+<li>e的积分表达</li>
+</ol>
+</li>
+<li>微分与极限：<ol>
+<li>微分 是 导数与自变量的表出，与delta 近似</li>
+<li>链式求导与极值定理证明</li>
+<li>罗尔定理-&gt;中值定理-&gt;线性化误差</li>
+<li>分段函数导数</li>
+<li>洛必达法则</li>
+</ol>
+</li>
+<li>泰勒近似定理<ol>
+<li>展开+中值</li>
+</ol>
+</li>
+</ol>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>本书出了口语化流畅，细致内容，很多例子，以外，还有很大优点就是图多</p>
+<p>然后有些内容国内有的的确这里没有，例如 连续封闭的二元函数的封闭区间线积分</p>
+<p>从编程模块化的想法，内核化的想法，我很喜欢这里把 定积分看成 <code>[]</code>连续 <code>()</code>可导 的 内核api</p>
+<ul>
+<li>再把 反常，分段，看成是对于这个的重定义和调用<ul>
+<li>为了调用 和 四则运算相关支持，再引入合理的 补充定义（胶水代码）</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>普林斯顿 概率论读本</title>
     <url>/Math/the_probability_lifesaver/</url>
     <content><![CDATA[<p>前置知识：微积分， 看了下有些结论需要依赖复分析的结果</p>
@@ -14269,772 +15035,6 @@
       </categories>
       <tags>
         <tag>概率论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>普林斯顿 微积分读本</title>
-    <url>/Math/the_calculus_lifesaver/</url>
-    <content><![CDATA[<p>isbn 978711543559</p>
-<p>据说有视频课 calclifesaver.com</p>
-<span id="more"></span>
-
-<h2 id="1-函数，图像，直线"><a href="#1-函数，图像，直线" class="headerlink" title="1 函数，图像，直线"></a>1 函数，图像，直线</h2><p>挺细的，高中可读</p>
-<h2 id="2-三角学回顾"><a href="#2-三角学回顾" class="headerlink" title="2 三角学回顾"></a>2 三角学回顾</h2><p>是真的细，从角度到弧度</p>
-<p>$sin^2+cos^2&#x3D;1$</p>
-<p>$1+tan^2&#x3D;sec^2$</p>
-<p>$cot^2+1&#x3D;csc^2$</p>
-<p>$sin(a+b)&#x3D;sin(A)cos(B)+cos(A)sin(B)$</p>
-<p>$cos(a+b)&#x3D;cos(A)cos(B)-sin(A)sin(B)$</p>
-<p>$sin(2x)&#x3D;2sin(x)cos(x)$</p>
-<p>$cos(2x)&#x3D;2cos^2(x)-1&#x3D;1-2sin^2(x)$</p>
-<h2 id="3-极限导论"><a href="#3-极限导论" class="headerlink" title="3 极限导论"></a>3 极限导论</h2><p>一个对比的例子 f(x)&#x3D;x+1,那么</p>
-<ul>
-<li>x趋于1时 f(x)的极限是2</li>
-</ul>
-<p>g(x)&#x3D;x+1,x !&#x3D; 1时</p>
-<p>g(x)&#x3D;3,x &#x3D;1时</p>
-<p>同样有: x趋于1时 g(x)的极限是2</p>
-<p>函数的点极限是在聊没（不一定）取到的趋近值</p>
-<hr>
-<p>垂直极限， x在左右趋于a时，有一侧的值趋于正无穷或负无穷</p>
-<p>点附近不趋于任何数 sin(1&#x2F;x), x 趋于0时</p>
-<p>x趋于正无穷时，的极限，意味着有水平渐近线</p>
-<hr>
-<p>夹逼定理（三明治定理）g&lt;&#x3D;f&lt;&#x3D;h 在x的范围附近，那么g和h极限相同，则f也是</p>
-<h2 id="4-求多项式的极限问题"><a href="#4-求多项式的极限问题" class="headerlink" title="4 求多项式的极限问题"></a>4 求多项式的极限问题</h2><p>f(x)&#x3D;(x-1)(x+1)&#x2F;(x-1) 在点1的极限</p>
-<p>里面主要是一些做题的例子，例如什么分子有理化</p>
-<p>四则运算保持部分，主要注意的是在加减过程中 可能导致低次等价无穷小 无穷大的消失</p>
-<p>(x^2+x)&#x2F;x, (x^2-x)&#x2F;x 在 无穷大 极值都是 无穷大，但是差在无穷大的差是 趋于2</p>
-<p>这里 主要列的都是 x多项式的 p(x)&#x2F;q(x) 在无穷的极限</p>
-<h2 id="5-连续性和可导性"><a href="#5-连续性和可导性" class="headerlink" title="5. 连续性和可导性"></a>5. 连续性和可导性</h2><p>直觉上是一笔画，但对于数学这并不对。</p>
-<p>f(x)&#x3D;x当x有理数，0当x无理数，能在0点有极限，（这就是点连续的感觉反例）</p>
-<p>这点连续，但区间不连续</p>
-<p>或者 f(x)&#x3D;1&#x2F;x在0以外处处连续（但是不一致连续）</p>
-<hr>
-<p>这块内容核心是，</p>
-<ul>
-<li>点连续：该点的值&#x3D;该点的极限</li>
-<li>区间上连续：区间上所有点连续<ul>
-<li>这两个都是数学抽象的定义，图像上最好的描述可能还是 y 包裹距离lambda的线，和x包裹 delta的线</li>
-</ul>
-</li>
-</ul>
-<p>有些函数 点没有定义，但是对应位置有极限，可以考虑补充定义 f(x)&#x3D;xsin(1&#x2F;x)</p>
-<hr>
-<p>介值定理：闭区间，左右端点异号，然后函数连续，那么 区间中存在一点f(x)&#x3D;0</p>
-<ul>
-<li>这个定理通过平移可以有 左右端点(f(l)-a)(f(r)-a) 异号，中存在点 f(m)&#x3D;a</li>
-</ul>
-<p>最大值最小值存在定理： 闭区间+连续，区间有最大值，最小值</p>
-<ul>
-<li>这个理解其要素，要考虑如果开区间，如果不连续 不存在的例子就能更深刻</li>
-</ul>
-<hr>
-<p>可导性：</p>
-<p>从时间，速度，距离出发，引出距离时间图像中 速度与导数的关系</p>
-<p>单点的导数也就是：</p>
-<ul>
-<li>f(a)’ &#x3D; (f(x)-f(a))&#x2F;(x-a), 当x趋于a的极限<ul>
-<li>这里 我们也就用了前面学的极限</li>
-<li>另一个代换就是 (f(a+h)-f(a))&#x2F;h</li>
-<li>那么 同样极限可能存在，可能不存在。 如果极限存在，定义在 此点 可导</li>
-<li>分母是 delta x, 分子是 delta y</li>
-<li>记作 dy&#x2F;dx <ul>
-<li>注意不是分数，而是表示 delta y &#x2F; delta x的极限</li>
-<li>更具体的应该是 d&#x2F;dx(y(x)), 也就是y是关于x的函数，对其自变量x求导的</li>
-<li>更进阶的有可微概念（说白了是 关于自变量的线性表出，不过好像微积分不学，在数学分析里）</li>
-</ul>
-</li>
-<li>不存在例子 |x|&#x2F;x<ul>
-<li>这里说明 连续不一定可导</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>常见的导数表</p>
-<ul>
-<li>$ax^b &#x3D; abx^{b-1},b\neq 0$</li>
-</ul>
-<p>可导 &#x3D;&gt; 连续</p>
-<ul>
-<li>考虑 f(x)&#x3D;x+1, 特别的x&#x3D;0时f(x)&#x3D;2, 其实会发现，分母趋于0时，如果不连续，会导致分子不趋于0（甚至没有极限）</li>
-</ul>
-<h2 id="6-求解微分问题"><a href="#6-求解微分问题" class="headerlink" title="6. 求解微分问题"></a>6. 求解微分问题</h2><p>用定义求导</p>
-<p>常用公式</p>
-<ul>
-<li>$d&#x2F;dx (x^a)&#x3D;ax^{a-1}$</li>
-<li>$d&#x2F;dx(C)&#x3D;0$</li>
-</ul>
-<p>推论</p>
-<ul>
-<li>乘积法则<ul>
-<li>h(x)&#x3D;f(x)g(x), h’(x)&#x3D;f’(x)g(x)+f(x)g’(x)</li>
-<li>或者写成 y&#x3D;uv, d&#x2F;dx(y)&#x3D;v d&#x2F;dx(u)+u d&#x2F;dx (v)</li>
-<li>还可以扩展更多的y&#x3D;uvw</li>
-</ul>
-</li>
-<li>商:<ul>
-<li>h&#x3D;f&#x2F;g, $h’&#x3D;(f’g-fg’)&#x2F;(g^2)$</li>
-</ul>
-</li>
-<li>说白了 希望能用四则运算的思路对这个进行分解<ul>
-<li>那么加减其实也有h&#x3D;f+-g,h’&#x3D;f’+-g’</li>
-<li>而需要注意的是，这里需要每一部分的导数是存在的</li>
-</ul>
-</li>
-<li>特别的，4则运算以外有函数复合 h&#x3D;f(g(x))  称作链式求导，可以更多的复合<ul>
-<li>就是导数定义展开就能得到</li>
-<li>h’&#x3D;f’(g(x))g’(x)</li>
-<li>y(u),u(x), d&#x2F;dx(y)&#x3D;d&#x2F;dx(y) * d&#x2F;dx(u)</li>
-<li>例子 $y&#x3D;u^{100}, u&#x3D;x^2+1$<ul>
-<li>$d&#x2F;dx(y) &#x3D; 100u^{99} 2x&#x3D;200x(x^2+1)^{99}$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>这里 乘积法的解释用的 长方形边长分别f,g, 面积的变化的概念</p>
-<p>这里 链式法的理解用的 在 放大镜后面拉伸口香糖，那么是倍率相乘</p>
-<p>加速度引出二阶导数</p>
-<p>做题：导数伪装的极限（那些可以看成导数表达的极限）</p>
-<p>导函数图像绘制：</p>
-<ul>
-<li>找导数为零的点，为切割点（不一定切割 例如f(x)&#x3D;x^3</li>
-<li>找二阶导数 为0的点，为函数 凸 凹的切割点</li>
-</ul>
-<h2 id="7-三角函数的极限和导数"><a href="#7-三角函数的极限和导数" class="headerlink" title="7. 三角函数的极限和导数"></a>7. 三角函数的极限和导数</h2><p>重要极限： x趋于0, sin(x)&#x2F;x&#x3D;1</p>
-<p>其他常用</p>
-<ul>
-<li>cos(x-&gt;0)-&gt;1</li>
-<li>x-&gt;0, tan x &#x2F; x &#x3D; 1</li>
-<li>sin’ &#x3D; cos</li>
-<li>cos’&#x3D;-sin</li>
-<li>$tan’&#x3D;sec^2$</li>
-<li>$sec’&#x3D;sec\cdot tan$ </li>
-<li>$cot’&#x3D;-csc^2$</li>
-<li>反正背了无数年也背诵不到</li>
-</ul>
-<p>其它方法，把分母想办法化作0的形式，变量替换，</p>
-<p>一个本身可导导函数 不连续 的函数：</p>
-<p>$f(x)&#x3D;x^2sin(1&#x2F;x)$ 补充定义x&#x3D;0, </p>
-<h2 id="8-隐函数求导和相关变化率"><a href="#8-隐函数求导和相关变化率" class="headerlink" title="8. 隐函数求导和相关变化率"></a>8. 隐函数求导和相关变化率</h2><p>隐函数：给的表达式不是y(x)&#x3D;…的形式，但从自变量因变量上，依然x是自变量，y(x)的因变量</p>
-<p>$x^2+y^2&#x3D;4$</p>
-<p>方法：在两边加上 d&#x2F;dx ，因为f(x,y)&#x3D;g(x,y), 那么我们认为这两个函数在要求的一段区间上的 映射是一致的，</p>
-<ul>
-<li>那么 如果导数存在，左右导数相等</li>
-</ul>
-<p>求二阶导：</p>
-<ul>
-<li>一样的步骤</li>
-<li>注意的是 d^2&#x2F;dx^2(y)&#x3D;d&#x2F;dx(d&#x2F;dx(y))<ul>
-<li>和 $(d&#x2F;dx(y))^2$ 这两个意义是不同的</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>例子</p>
-<ul>
-<li>A上方5m,3m&#x2F;s向上</li>
-<li>B右侧12m, 4m&#x2F;s向 左</li>
-<li>求A&#x2F;B之间距离变化速度<ul>
-<li>$a^2+b^2&#x3D;c^2$</li>
-<li>$2a d&#x2F;dt(a)+2b d&#x2F;dt(b)&#x3D;2c d&#x2F;dt(c)$, </li>
-<li>$5 \cdot 3+12\cdot (-4)&#x3D;13 d&#x2F;dt(c)$<ul>
-<li>可计算要求的结果</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="9-指数函数和对数函数"><a href="#9-指数函数和对数函数" class="headerlink" title="9. 指数函数和对数函数"></a>9. 指数函数和对数函数</h2><p>书上这么细致，都快要初中生可看了，从对数 指数 反函数开始讲</p>
-<p>重要极限 e&#x3D;(1+1&#x2F;x)^x, x趋于无穷大时的极限，</p>
-<p>重要函数 d&#x2F;dx(ln(x)) &#x3D; 1&#x2F;x</p>
-<ul>
-<li>$d&#x2F;dx (a^x) &#x3D; a^x ln(a)$</li>
-<li>$x\to 0$, $\frac{e^x-1}{x}&#x3D;1$</li>
-<li>$x\to 0$, $\frac{ln(1+x)}{x}&#x3D;1$</li>
-<li>注，这些东西，到后面等价无穷小会 更不特例化,或者洛必达</li>
-</ul>
-<p>指数增长迅速$x\to \infty \frac{x^n}{e^x}&#x3D;0$, 也就是  多项式&#x2F;指数型 -&gt; 0</p>
-<p>对数增长缓慢 $a&gt;0,x\to \infty \frac{ln(x)}{x^a}&#x3D;0$, 不管a多小</p>
-<p>对数函数在0附近“增长”缓慢：不管a多小, 如果$a&gt;0, x\to 0^+ x^aln(x)&#x3D;0$</p>
-<hr>
-<p>指数增长：复利，动物种群数</p>
-<p>指数衰变： 放射性衰变</p>
-<p>若 $y&#x3D;e^{kx}$,那么 dy&#x2F;dx &#x3D; ke^{kx},也就是 dy&#x2F;dx&#x3D;ky</p>
-<ul>
-<li>这是一个微分方程例子，第30章会有更多例子</li>
-<li>这里 如果dy&#x2F;dx&#x3D;ky,那么$y&#x3D;Ae^{kx}$,在30.2节中说为什么会这样</li>
-<li>而这里对应到 兔子繁殖，说明了，增长速度和现有量保持常熟倍数关系</li>
-<li>dP&#x2F;dt&#x3D;kP, &#x3D;&gt; P(t)&#x3D;P_0e^{kt}</li>
-</ul>
-<p>类似的 dP&#x2F;dt&#x3D;-kP 指数衰变，$P(t)&#x3D;P_0e^{-kt}$</p>
-<hr>
-<p>双曲函数:</p>
-<ul>
-<li>$cosh(x)&#x3D;\frac{e^x+e^{-x}}{2}$</li>
-<li>$sinh(x)&#x3D;\frac{e^x-e^{-x}}{2}$</li>
-<li>作者的评价： 伪装的指数函数又和三角函数相似<ul>
-<li>$cosh^2-sinh^2&#x3D;1$ 双曲方程</li>
-<li>sinh’&#x3D;cosh</li>
-<li>cosh’&#x3D;sinh</li>
-</ul>
-</li>
-</ul>
-<h2 id="10-反函数和反三角函数"><a href="#10-反函数和反三角函数" class="headerlink" title="10. 反函数和反三角函数"></a>10. 反函数和反三角函数</h2><p>充分,非必要，严格单调递增函数 f(x) 有反函数，那么如果函数可导，导函数符号不变，那么也可以得到有反函数</p>
-<p>如果存在，那么当 f(y)&#x3D;x时，我们就能求f的反函数了，因为这时的 y(x)输入得到x,</p>
-<p>1&#x3D;d&#x2F;dx (x)&#x3D;d&#x2F;dx(f(y))&#x3D;f’ * d&#x2F;dx(y)</p>
-<p>f’&#x3D;1&#x2F;(d&#x2F;dx(y))</p>
-<p>这个东西，对于 一元的，去看函数图像的对称更好看，更直观</p>
-<hr>
-<p>具体的 反三角函数</p>
-<p>$d&#x2F;dx \sin^{-1}(x)&#x3D;\frac{1}{\sqrt{1-x^2}}$</p>
-<p>$d&#x2F;dx \cos^{-1}(x)&#x3D;-\frac{1}{\sqrt{1-x^2}}$</p>
-<p>$d&#x2F;dx \tan^{-1}(x)&#x3D;-\frac{1}{\sqrt{1+x^2}}$</p>
-<p>… 这里还有其它反三角函数的导数，然后也有反双曲函数的导数</p>
-<p>$x&gt;1,d&#x2F;dx \cosh^{-1}(x)&#x3D;\frac{1}{x^2-1}$</p>
-<p>$d&#x2F;dx \sinh^{-1}(x)&#x3D;\frac{1}{x^2+1}$</p>
-<h2 id="11-导数和图像"><a href="#11-导数和图像" class="headerlink" title="11. 导数和图像"></a>11. 导数和图像</h2><p>局部最大值，称作局部极大值</p>
-<p>极值定理：开区间(a,b)内的局部极值，一定是导数为0,或者导数不存在</p>
-<p>罗尔定理：f在<code>[a,b]</code>连续,在(a,b)可导，f(a)&#x3D;f(b),存在一点 f’(c)&#x3D;0</p>
-<p>在罗尔定理上，增加一个线性函数就有了中值定理：</p>
-<ul>
-<li><code>[a,b]</code>内连续,(a,b)内可导，(a,b)中存在c, f’(c)&#x3D;(f(b)-f(a))&#x2F;(b-a)</li>
-<li>需要注意的是这是 增加线性函数不是旋转，因为旋转可能让函数变得不是函数，而线性偏移，保证y的输出还是一个</li>
-</ul>
-<p>注意的是，罗尔定理和中值定理，都是存在性定理</p>
-<ul>
-<li>用途</li>
-<li>例如 导数为0 证明 常函数<ul>
-<li>任取两点，因为可导，存在f’(c)&#x3D;两点值差&#x2F;坐标差，那么只能值相等</li>
-</ul>
-</li>
-<li>上面这个结论可以推得，两个导数相同的函数 的差是常数</li>
-</ul>
-<p>二阶导数 图像：凹凸，拐点（’’&#x3D;0)</p>
-<p>一阶导数零点：</p>
-<ul>
-<li>局部最大：一阶 +-&gt;-， 二阶 &lt;0</li>
-<li>局部最小：一阶  - -&gt; +, 二阶 &gt;0</li>
-<li>水平拐点，单调递增： 一阶 +, 二阶&#x3D;0</li>
-<li>水平拐点，单调递减： 一阶 -，二阶&#x3D;0</li>
-<li>注意的是， 二阶&#x3D;0只是必要，但不充分，也就是无法从二阶&#x3D;0判断什么，<ul>
-<li>例子 $x^3,x^4$ 在0点的时候 二阶都&#x3D;0</li>
-</ul>
-</li>
-</ul>
-<h2 id="12-绘制函数图像"><a href="#12-绘制函数图像" class="headerlink" title="12. 绘制函数图像"></a>12. 绘制函数图像</h2><p>利用上面性质找关键点绘制，然后研究凹凸性绘制</p>
-<h2 id="13-最优化和线性化"><a href="#13-最优化和线性化" class="headerlink" title="13.最优化和线性化"></a>13.最优化和线性化</h2><p>实际应用：</p>
-<p>最优化的核心思想是，找到所有变量，和优化目标，然后利用等式化简成单变量函数 f(x)，然后确定范围和极值点</p>
-<p>线性化求近似值，这里例子是f(x)&#x3D;sqrt(x),然后算 sqrt(11),用的x&#x3D;3的一阶展开，思想核心有泰勒展开也有牛顿切线，完成估算</p>
-<p>L(x)&#x3D;f(a)+f’(x)(x-a) 称作在x&#x3D;a点处的线性化</p>
-<p>微分: <code>df=f&#39;(a) delta x</code>, 误差: rf&#x3D;f(x)-L(x)&#x3D;delta f-df&#x3D;1&#x2F;2 f’’(c) (x-a)^2 (根据中值定理) &lt;&#x3D; 1&#x2F;2 (x-a)^2 max(f’’)</p>
-<p>牛顿法： a是方程 f(x)&#x3D;0的解的一个近似，如果b&#x3D;a-f(a)&#x2F;f’(a), 很多情况b是更好的近似，这个图像上 很“显然”</p>
-<ul>
-<li>一个明显的优点是，对于高次函数难以有直接求根公式时，这个方法很多时候能有效的求得一个数值根</li>
-<li>同时从图像上也能知道，这个方法无法始终有效，当选取的初始点和范围无法完成对应的下降的话</li>
-</ul>
-<h2 id="14-洛必达法则及极限问题总结"><a href="#14-洛必达法则及极限问题总结" class="headerlink" title="14. 洛必达法则及极限问题总结"></a>14. 洛必达法则及极限问题总结</h2><p>结论： f(a)&#x3D;g(a)&#x3D;0,  lim x-&gt; a, f(x)&#x2F;g(x) &#x3D; f’(x)&#x2F;g’(x)</p>
-<p>这个的核心想法是，f(x)&#x2F;g(x)在a附近 &#x3D; (f(a)+delta f)&#x2F;(g(a)+delta g) &#x3D; delta f &#x2F; delta g &#x3D; (df+rf)&#x2F;(dg+rg), 微分+误差</p>
-<ul>
-<li>如果df,dg不同时为0, 那么就有结果了，rf,rg是高阶无穷小，可以忽略的部分</li>
-<li>如果df,dg 同时为0,那么 rf&#x2F;rg 再次展开，可以再次洛必达</li>
-<li>这里 的另一个解释是，希望导函数在附近是一致收敛的，这样 f’(c)(x-a)&#x2F;g’(c)(x-a)来表示</li>
-</ul>
-<p>对于0&#x2F;0有了，那么 无穷&#x2F;无穷，可以看成 倒数</p>
-<hr>
-<p>这里延伸了一点，不过感觉要在等价无穷小那里讲，</p>
-<ul>
-<li>x趋于0, 1&#x2F;x-1&#x2F;sin(x)， 注意的是 无穷-无穷，（没有减法的对应运算），但是可以通分，</li>
-<li>0 乘上 无穷， x-&gt;0, xln(x), 化成 无穷&#x2F;无穷</li>
-</ul>
-<h2 id="15-积分"><a href="#15-积分" class="headerlink" title="15. 积分"></a>15. 积分</h2><p>这里先讲 求和符号，以及高斯计算1+…+100</p>
-<p>这里用的 汽车 速度 时间 路程 的 坐标轴图像来引入，导出了 积分就是“希望”求和坐标轴围起来的“有向”面积</p>
-<ul>
-<li>这里讲“有向”就是向上是正，向下是复<ul>
-<li>可以无向吗，显然你可以这样定义，但是这显然不符合期望<ul>
-<li>例子就是 车的速度变化，的变化函数的围成面积，引入方向是更自然的结果</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>这里的“希望”是说，目前阶段的积分定义 解决不了一些 以后学实分析时 f(x)&#x3D;1(当x是无理数时),0(x是有理数时)的这种积分</li>
-</ul>
-<p>积分的想法，就是通过“均匀”（非必要，只是常用的方法）纵向切割，切割面积成很多纵条</p>
-<ul>
-<li>每个纵条在原函数下方，且最大，则称为小和</li>
-<li>每个纵条在原函数上方，且最小，则称为大和</li>
-</ul>
-<p>书上写的 上和 下和，应该更直观一些</p>
-<p>然后极限的是 切割的数量 趋于无穷</p>
-<ul>
-<li>这时候，大和小和要趋于同样的值，那么根据三明治夹击定理，得到了函数的“积分”</li>
-<li>这里 趋于同样值，意味着大和小和的差趋于0</li>
-</ul>
-<h2 id="16-定积分"><a href="#16-定积分" class="headerlink" title="16. 定积分"></a>16. 定积分</h2><p>上面这个东西，我们称它为定积分$\int_{a}^b f(x)$, 表达式 f(x)在取值<code>[a,b]</code> 范围时，和坐标轴 围成有向面积</p>
-<p>这里注意的是，我们会发现 一条线 的面积是0,（概率论中的 0 概率不表示不可能）</p>
-<p>$\int_{a}^b f(x)&#x3D;\lim_{mesh -&gt; 0}\sum f(c_j)(x_j-x_{j-1})$</p>
-<ul>
-<li>也就是切割最大间隔趋于0</li>
-<li>c_j 是$[x_{j-1},x_j]$之间的某个值，那么f(cj)就是之间最大最小值之间</li>
-<li>称作 黎曼和，黎曼积分</li>
-</ul>
-<p>常用技巧就是 以1&#x2F;n,然后完成求和表达式，当n趋于无穷时，计算这个极限</p>
-<p>为了计算一些分段的函数，并且和连续函数契合，定义了 <code>int[a,b]+int[b,c] = int[a,c]</code></p>
-<ul>
-<li>为了使它合理，定义了 a &gt;&#x3D; b的值</li>
-<li>这里我们可以发现，虽然 划分也好，拆分int也好，<code>[a,b]+[b,c]</code> 看起来计算了两次，而对于有限值的点来说，面积就是0,</li>
-<li>以及列了一些 和四则运算相关的性质，常数倍数提出，int 加减拆分</li>
-</ul>
-<p>然后类似的，在积分上有 三明治夹击定理，中值定理</p>
-<p>不可积函数：举例了上面实分析的例子：下和&#x3D;0,上和&#x3D;1</p>
-<h2 id="17-微积分基本定理"><a href="#17-微积分基本定理" class="headerlink" title="17. 微积分基本定理"></a>17. 微积分基本定理</h2><p>中文的 积分 微分 都带一个分，而且名字都叫微积分，有一种关联的感觉</p>
-<p>但这里 才是“一个厉害的结论”</p>
-<p>从 定积分 在点a的 增量是面积，微分是f(x) deltax, 导数是f(x), 引出：积分 和 微分 是（一种逆运算的感觉）</p>
-<ul>
-<li>这个意义在于，微分看起来更好求，那么如果有了微分，那么不再需要 黎曼切割去算积分，而直接有积分</li>
-<li>第二是，中文叫做不定积分，和定积分<ul>
-<li>写法上差别是 范围，与+C,看起来很像</li>
-<li>但从 关系上说，定积分,不定积分 的微分得到 f, f的积分是不定积分，</li>
-<li>图像上，两个函数可以通过沿y移动重叠，那么它们必然微分相同，差值是C, 它们微分的不定积分 涵盖了他两，而这两个函数在[a,b]上，从a到b的变化是一样的，这个变化是想求的微分的定积分的值</li>
-<li>F(x)&#x3D;x^2,f(x)&#x3D;F’(x)&#x3D;2x, int f(x) &#x3D; x^2+C  得到了一系列函数, int_1^2 f(x) &#x3D; 3, 表示 这一系列函数从点x&#x3D;1到x&#x3D;2的增量都是3</li>
-</ul>
-</li>
-</ul>
-<p>微积分的第一基本定理：f在[a,b]上连续,F(x) 在(a,b)可导，且F(x)&#x3D;f(x)</p>
-<ul>
-<li>那么 $F(x)&#x3D;\int_{a}^x f(t)dt,x\in[a,b]$</li>
-<li>函数的导函数围成的面积 &#x3D; 原函数的增量</li>
-</ul>
-<p>微积分第二基本定理, f在[a,b]连续，F是f的任意一个反导数，那么</p>
-<ul>
-<li>$\int_{a}^b f(x)dx&#x3D;F(b)-F(a)$</li>
-<li>反导数 也就是 不定积分中任意一个</li>
-<li>$\frac{d}{dx}F(x)&#x3D;f(x)$那么$\int f(x)dx&#x3D;F(x)+C$</li>
-</ul>
-<p>这里同样 塞一下四则运算</p>
-<p>很多例题，包括各种上下限是变量的，</p>
-<p>而定积分时还有一个可用的东西，叫做奇偶性，这得益于它是有向的面积</p>
-<p>P338有个积分表</p>
-<p>这个证明核心 又是“中值定理&#x2F;介值定理”</p>
-<h2 id="18-积分的方法I（换元，分部，分式）"><a href="#18-积分的方法I（换元，分部，分式）" class="headerlink" title="18. 积分的方法I（换元，分部，分式）"></a>18. 积分的方法I（换元，分部，分式）</h2><p>这一块没有新的数学原理，而是实际应用中，怎么求积分，</p>
-<p>换元法： 核心思想是 int f(x) dx 中，如果能把其中一个x的表达式g(x),全部都表示g(x)的表达式，那么就能完成换元</p>
-<ul>
-<li>$\int 2xe^{x^2} dx&#x3D;\int e^{x^2} d x^2$,  这里 $x^2$可以看成整体$t&#x3D;x^2$</li>
-<li>$\int \frac{f’(x)}{f(x)}dx &#x3D; \ln|f(x)|+C$</li>
-<li>$\int x(3x+2)^{1&#x2F;5} dx$,这里 把$t&#x3D;(3x+2)^{1&#x2F;5}$,那么原式&#x3D;$\int \frac{1}{3}(t^5-2)(t)\frac{5}{3}t^4 dt$</li>
-</ul>
-<p>这里理论解释是 复合函数链式求导，的反向积分过程</p>
-<hr>
-<p>分部积分法, 同样是来自于微分过程中的逆向操作而已</p>
-<p>$\frac{d}{dx}(uv)&#x3D;v\frac{d}{dx}(u)+u\frac{d}{dx}v$</p>
-<ul>
-<li>$\int u\frac{d}{dx}(v)dx&#x3D;uv-\int v\frac{d}{dx}(u) dx$</li>
-<li>$\int u dv &#x3D; uv - \int v du$</li>
-</ul>
-<p>看了下youtube <a href="https://www.youtube.com/watch?v=J40ZhIfoPx4">https://www.youtube.com/watch?v=J40ZhIfoPx4</a> 有个DI积分法, 本质上也是这个，不过书写上更快速</p>
-<hr>
-<p>部分分式$\int \frac{p(x)}{q(x)}dx$</p>
-<ul>
-<li>这里的方法还是 多项式 求余法</li>
-<li>然后 再待定系数法，最终希望是<code>int 整式子 + 多个\frac&#123;常数&#125;&#123;(x+a)^t&#125;</code>的形式</li>
-<li>对于 分母是两个不同一次式子时，可以用 线性代数的知识，对分子进行拆分，<ul>
-<li>$1&#x2F;(x^2-1)&#x3D;1&#x2F;((x-1)(x+1))$, 分子 &#x3D;((x+1)-(x-1) )&#x2F;2</li>
-</ul>
-</li>
-<li>总的来说 这样做，不能解决的就是 分母是难以拆的多项式</li>
-<li>其中特别的 不可拆2次式子可以考虑<ul>
-<li>(x+a)&#x2F;((x+b)^2+c)的形式， 从而化成 d&#x2F;(t^2+c) 和 t&#x2F;(t^2+c),就对应 arctan和ln了</li>
-<li>这一块的感受是，从没想过 tan,ln这些 在微积分之前觉得很远的函数，现在如此近，而这个感觉在后面的泰勒展开和级数的时候会更多</li>
-</ul>
-</li>
-</ul>
-<p>$\int \frac{1}{t^2+a^2}dt&#x3D;\frac{1}{a}arctan(\frac{t}{a})+C$</p>
-<h2 id="19-积分的方法II（三角）"><a href="#19-积分的方法II（三角）" class="headerlink" title="19. 积分的方法II（三角）"></a>19. 积分的方法II（三角）</h2><p>$cos^2(x)&#x3D;\frac{1}{2}(1+cos(2x))$</p>
-<p>$sin^2(x)&#x3D;\frac{1}{2}(1-cos(2x))$</p>
-<p>核心还是三角的换元，看起来就能完成幂次变换，和表达式变换</p>
-<p>$\int sin^ncos^m$,</p>
-<ul>
-<li>有奇数幂可以拆一个，剩下用sin2+cos2&#x3D;1换成只有一个的，从而完成换元</li>
-<li>都是偶幂，用上面的完成降次</li>
-</ul>
-<p>$\int tan(x)dx &#x3D; -\ln |cos(x)|+C$</p>
-<p>$tan^2(x)&#x3D;sec^2(x)-1$</p>
-<p>哎，感觉这一块，真的背不到，查表是能查</p>
-<p>$\int sec^2(x)dx&#x3D;tan(x)+C$</p>
-<p>$I_n&#x3D;\int tan^n(x)dx$</p>
-<p>$I_0&#x3D;x+C$</p>
-<p>$I_1&#x3D;-\ln |cos(x)|+C$</p>
-<p>$I_n&#x3D;\frac{1}{n-1}tan^{n-1}(x)-I_{n-2}$ 约化公式</p>
-<hr>
-<p>类似的 $I_n&#x3D;\int_0^{\pi&#x2F;2} cos^n(x)dx$</p>
-<p>$I_n&#x3D;(n-1)(I_{n-1}-I_n)$</p>
-<p>$I_{n}&#x3D;\frac{n-1}{n}I_{n-2}$</p>
-<p>$I_0&#x3D;\frac{pi}{2},I_1&#x3D;1$</p>
-<hr>
-<p>这一块是对于一些直接求不到，的完成一个形式的递归表达式</p>
-<hr>
-<p>$\sqrt{a^2-x^2}$ 换元 $x&#x3D;a\sin(\theta)$</p>
-<p>$\sqrt{a^2+x^2}$ 换元 $x&#x3D;a\tan(\theta)$</p>
-<p>$\sqrt{x^2-a^2}$ 换元 $x&#x3D;a\sec(\theta)$</p>
-<hr>
-<p>整个的核心还是要对 微分结果熟悉</p>
-<h2 id="20-反常积分：基本概念"><a href="#20-反常积分：基本概念" class="headerlink" title="20. 反常积分：基本概念"></a>20. 反常积分：基本概念</h2><p>目标</p>
-<ul>
-<li>有些函数，在定义域无限时，围成面积有限，（ 例如 等比例的 实数定义域版 $f(x)&#x3D;(1&#x2F;2)^x$</li>
-<li>有些函数，在有限定义域，无限值域时，围成面积有限，（例如$2\sqrt{x}$求导得到的形如$\frac{1}{\sqrt{x}}$在[0,1]</li>
-<li>其它的都无限</li>
-</ul>
-<p>主要希望能计算那些有限的函数</p>
-<ul>
-<li>那么这里补充定义，如果 [a,b],仅在点a无限，$\int_a^b&#x3D;\lim_{\epsilon\to 0^+}\int_{a+\epsilon}^b$<ul>
-<li>这里有点（覆盖写入的感觉），也就是积分 前面定义了 <code>[]连续,()可导</code>，以及拆分。而这里补充定义了 单点值域极限的情况，这样定义了$\int_{0}^{1}\frac{1}{\sqrt{x}}$的值</li>
-<li>其实 根据前面 对称性，和可拆分性，我们自然的也对一些间断点，破裂点，b出的无穷有了 “自然”的定义 例如 上面要趋于$b-\epsilon$，<ul>
-<li>换个角度思考，那如果就是连续呢，会发现单点的值，不论无不无穷 直接被视作0,也就是当连续时，我们要算(a,b)的积分，也能这样定义</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>同样关于积分范围的无穷定义，也是补充定义$\int_a^{\infty}&#x3D;\lim_{N\to \infty} \int_{a}^{N}$</li>
-<li>再换句话说，积分的符号写法是“模糊的”，而为了让模糊的写法，在满足最纯粹 <code>[]连续,()可导</code>以及嵌入四则运算的前提下，补充了一些“更自然”的补充定义</li>
-</ul>
-<hr>
-<p>$x\to a,\frac{f(x)}{g(x)}&#x3D;1$那么称作在点$a$他们相似$f(x)\sim g(x)$</p>
-<ul>
-<li>关于相似 引入 四则运算</li>
-<li>f<del>g,h</del>j &#x3D;&gt; fh~gj</li>
-<li>注意的是，加减运算是无法保证的<ul>
-<li>tan<del>x,sin</del>x,但是 tan-sin~0是错的！！之后会引入等价无穷小</li>
-</ul>
-</li>
-<li>这里～的核心是连续的把（值？）捆在不太远的位置，<ul>
-<li>而当都趋于0时，加减的实际内容不是这个（值），而是对捆绑的力度加减</li>
-<li>当都不趋于0时，加减的实际内容是针对这个值，而这个值的（结果 需要不是0）</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>有了比较判别法，如果一个积分结果无穷，另一个函数比它大，那么积分也是无穷（核心也是夹击类似的想法）</p>
-<p>而这里又是一个重要的 极限</p>
-<ul>
-<li>$\int_a^{\infty} \frac{1}{x^p} dx, a &gt; 0$,<ul>
-<li>$p\le 1$时，发散</li>
-<li>$p &gt; 1$时，收敛</li>
-</ul>
-</li>
-<li>另外的 $\int_0^a,\frac{1}{x^a}dx a&gt;0$<ul>
-<li>p&lt;1 收敛</li>
-<li>$p\ge 1$ 发散</li>
-</ul>
-</li>
-</ul>
-<p>绝对收敛判别法, int|f(x)|收敛，则 int f(x),收敛，核心还是夹挤, -|f(x)| &lt;&#x3D; f(x) &lt;&#x3D; |f(x)|,在足够大的n以后左右都趋于0</p>
-<h2 id="21-反常积分：如何解题"><a href="#21-反常积分：如何解题" class="headerlink" title="21. 反常积分：如何解题"></a>21. 反常积分：如何解题</h2><ol>
-<li>找所有瑕点，以瑕点切割，切割成多个 <code>[],()</code>，每个里面使用新的或朴素的积分定义计算</li>
-</ol>
-<p>x在无穷附近</p>
-<p>f(x)的最高幂次 $f(x)~b_ix^{m_i}$</p>
-<p>sin,cos 可以用 绝对收敛判别法， $||\le1$</p>
-<p>对于 x &gt; 0, $e^{-x} \le \frac{C}{x^n}$, </p>
-<p>对于 x &gt; 0, $ln(x)\le Cx^n$</p>
-<hr>
-<p>x在0附近</p>
-<p>f(x)的最低幂次 $f(x)~b_ix^{m_i}$</p>
-<p>sin~x</p>
-<p>tan~x</p>
-<p>cos~1</p>
-<p>$e^x\sim 1$</p>
-<p>$e^x-1\sim x$</p>
-<p>$|\ln(x)|\le \frac{C}{x^{a}}, a&gt;0$,足够小的a</p>
-<hr>
-<p>总的来说这里，在0或者在无穷附近的处理，都希望能变成x的幂次的样子</p>
-<p>而需要注意的是加减法的结果不应该是 ~0,否则会有问题(加减的是幅度)</p>
-<h2 id="22-数列和级数：基本概念"><a href="#22-数列和级数：基本概念" class="headerlink" title="22.数列和级数：基本概念"></a>22.数列和级数：基本概念</h2><p>数列：极限，是一种（可列，无穷）</p>
-<p>例如 $f(x)&#x3D;sin(n)&#x2F;x^n$, 也可以定义$a_n&#x3D;sin(n)&#x2F;x^n$, 那么 这可以看成对函数的无穷方向的 整点采样</p>
-<p>感官上显然的，如果函数数列同样表达式，那么函数收敛必然数列收敛，但数列首先可能刚好因为（采样的被采样点特殊）而收敛 函数却不收敛</p>
-<ul>
-<li>$f(x)&#x3D;sin(2<em>\pi</em>n)$</li>
-<li>这里感官上，是对于 图像的 epsilon和N的理解</li>
-</ul>
-<p>连续函数保持极限：</p>
-<ul>
-<li>和上面不同，f(x)在点a是连续的，那么数列的 采样$a_i&#x3D;f(t_i)$,然后t_i随着i趋于无穷，采样t趋于a,那么a_i的极限也就是f(a)</li>
-</ul>
-<p>重要数列</p>
-<ul>
-<li>$a_n&#x3D;r^n$, 讨论 r<ul>
-<li>（-1,1） 收敛于0</li>
-<li>1,收敛于1</li>
-<li><blockquote>
-<p>1, 趋于无穷</p>
-</blockquote>
-</li>
-<li>&lt;&#x3D; -1, 不存在</li>
-</ul>
-</li>
-<li>$a_n&#x3D;(1+k&#x2F;n)^n$, 趋于 $e^k$</li>
-</ul>
-<hr>
-<p>series 级数，就是数列的和, 起始有的0,有的1都行</p>
-<ul>
-<li>$\sum_{1}^\infty &#x3D; \lim_{N\to \infty}\sum_{1}^N$ 称作无穷级数</li>
-<li>$\sum_0^{\infty} {r^n}$<ul>
-<li>(-1,1) &#x3D;&gt; $\frac{1}{1-r}$</li>
-<li>其它的发散</li>
-</ul>
-</li>
-<li>从观感上自然的，需要a_n是趋于0的，能判断是发散，（注意只能判断是发散，不能判断收敛，因为这只是收敛的必要条件，不是充分的）</li>
-</ul>
-<p>比较判别，类似函数的比较判别 a_n~b_n, 等价于 lim n-&gt;\infty, a_n&#x2F;b_n&#x3D;1</p>
-<ul>
-<li>例如 $sin(1&#x2F;2^n) \sim (1&#x2F;2)^n$</li>
-</ul>
-<p>级数中有新的判别法：比式判别法</p>
-<ul>
-<li>$\lim_{n\to \infty}a_{n+1}&#x2F;a_n &#x3D; L &lt; 1$ , 那么收敛，<ul>
-<li>这里核心思想就两个 小于1的等比数列和极限收敛</li>
-<li>第二比例有极限，所以可以被捆绑在明确小于一个明确小于1的数以内，所以至少是有界的,从而根据柯西的，截取尾部可以和任意小的想法</li>
-</ul>
-</li>
-</ul>
-<p>类似的，还是利用等比数列求和的想法 和 上面的 等价的想法，</p>
-<ul>
-<li>有了根式判别法 $(a_n)^{\frac{1}{n}}&#x3D;L&lt;1$</li>
-</ul>
-<p>积分判别法，对于 表达式对应同样函数的积分，比较，可以判断是上下界的</p>
-<ul>
-<li>例如单调递增且有上界，单调递减有下界这样的，利用和积分比较判断它有界</li>
-</ul>
-<p>交错级数：</p>
-<ul>
-<li>正负交替，绝对值趋于0,则收敛</li>
-<li>注意的是，这种级数，可能不是绝对收敛的，这种情况下称作条件收敛</li>
-<li>$(-1)^n&#x2F;n$</li>
-</ul>
-<hr>
-<p>级数中需要注意的是，当正负交替以后，重排序的结果可能 级数值不一样！！！！ 非常神奇的给了极限当头一棒的感觉</p>
-<ul>
-<li>TODO 例子</li>
-</ul>
-<h2 id="23-求解级数问题"><a href="#23-求解级数问题" class="headerlink" title="23.求解级数问题"></a>23.求解级数问题</h2><p>想要漂亮的级数值，这个级数一般就很特殊</p>
-<ul>
-<li>等比例</li>
-</ul>
-<p>主要对22章的具体用例。</p>
-<h2 id="24-泰勒多项式、泰勒级数和幂级数导论"><a href="#24-泰勒多项式、泰勒级数和幂级数导论" class="headerlink" title="24. 泰勒多项式、泰勒级数和幂级数导论"></a>24. 泰勒多项式、泰勒级数和幂级数导论</h2><p>泰勒展开，幂级数：</p>
-<ul>
-<li>核心是 点的幂次展开，然后中值定理控制了结果范围</li>
-<li>成果是，当无限的展开它，就可以看成相等，而 幂级数的 导&#x2F;积 操作是非常容易的<ul>
-<li>泰勒级数 无非是 展开点是a不是0,</li>
-</ul>
-</li>
-</ul>
-<p>$\lim_{n \to \infty} x^n&#x2F;n!&#x3D;0$</p>
-<p>剩余项 可以计算误差范围</p>
-<h2 id="25-求解估算问题"><a href="#25-求解估算问题" class="headerlink" title="25. 求解估算问题"></a>25. 求解估算问题</h2><p>幂级数有个理论叫做收敛半径，TODO存在性证明，收敛半径的意义</p>
-<ul>
-<li><code>[0,r)</code> 收敛</li>
-<li>(-\infty,-r) (r,\infty) 发散</li>
-<li>r处具体讨论</li>
-</ul>
-<h2 id="26-泰勒级数和幂级数：如何解题"><a href="#26-泰勒级数和幂级数：如何解题" class="headerlink" title="26. 泰勒级数和幂级数：如何解题"></a>26. 泰勒级数和幂级数：如何解题</h2><p>求收敛半径 一般用比值法，还是等比数列的想法</p>
-<p>有了泰勒级数，虽然（不科学的因为这里扩展了数域），但是强行带入可以有欧拉公式</p>
-<p>一些极限求解时，可以用 等价无穷小（也就是级数展开 求解</p>
-<h2 id="27-参数方程和极坐标"><a href="#27-参数方程和极坐标" class="headerlink" title="27. 参数方程和极坐标"></a>27. 参数方程和极坐标</h2><p>这块我还是感觉没有悟透，因为函数的话，从感觉上，x作为自变量，f(x)作为唯一输出，有了x到f(x) 的映射</p>
-<p>x&#x3D;g(t), y&#x3D;h(t)</p>
-<p>两个都是t的函数，那么t的取值，在我看来，会在y-x平面绘制出（可能是）一条曲线，它感觉上，不容易保证说是一个x对应一个y</p>
-<p>这里, 链式求导，y&#x3D;f(x),我们不知道f, 但是 d&#x2F;dt(y)&#x3D; d&#x2F;dx(y) d&#x2F;dt(x)</p>
-<ul>
-<li>从而 d&#x2F;dx(y) &#x3D; $\frac{d&#x2F;dt(y)}{d&#x2F;dt(x)}$</li>
-<li>从而 d^2&#x2F;dx^2(y) &#x3D; $\frac{d&#x2F;dt(上面的)}{d&#x2F;dt(x)}$</li>
-<li>注意到 结果会是t的表达式，不是x也不是y的</li>
-</ul>
-<hr>
-<p>笛卡尔坐标系，（用$r,\theta$ 表示</p>
-<p>$x&#x3D;r\cos(\theta)$</p>
-<p>$y&#x3D;r\sin(\theta)$</p>
-<p>对于 $r&#x3D;f(\theta)$</p>
-<p>求切线: $d&#x2F;dx(y)&#x3D;\frac{d&#x2F;d\theta(y)}{d&#x2F;d\theta(x)}$</p>
-<p>极坐标下的面积 $\int_{\theta_0}^{\theta_1} \frac{1}{2}r^2 d\theta$</p>
-<h2 id="28-复数"><a href="#28-复数" class="headerlink" title="28. 复数"></a>28. 复数</h2><p>复分析里：证明n次多项式n个根</p>
-<p>复数核心是二元组，(a,b), 和一套规则，为了写得好看，变成 a+bi的形式</p>
-<ul>
-<li>复数长度 是 $x\bar{x}$ 它与它共轭的乘积</li>
-</ul>
-<p>复平面与 欧拉公式$e^{i\theta}&#x3D;\cos(\theta)+\sin(\theta)$</p>
-<ul>
-<li>一个点可以用 a+bi和 $re^{i\theta}$ 两种形式表示</li>
-</ul>
-<p>$z^n&#x3D;w$,如果把W看成复平面的点，那么z&#x3D;长度的n次根 * 夹角的1&#x2F;n</p>
-<ul>
-<li>另外 因为 $e^{i2\pi}&#x3D;1$,所以 $2k\pi$ 的夹角都可以分</li>
-<li>z&#x3D;长度的n次根 * (夹角的1&#x2F;n + $2\pi k(&#x3D;0\cdots n-1) &#x2F; n$)</li>
-</ul>
-<p>解$e^z&#x3D;w$, z分成x+iy, $e^x&#x3D;w$的长度$e^iy&#x3D;w$的夹角</p>
-<hr>
-<p>这里感觉可以加上三角级数与傅里叶变换？</p>
-<h2 id="29-体积、弧长和表面积"><a href="#29-体积、弧长和表面积" class="headerlink" title="29. 体积、弧长和表面积"></a>29. 体积、弧长和表面积</h2><p>上面知识的应用了</p>
-<p>体积，主要是一些旋转体的，本质上就是找公式算积分</p>
-<hr>
-<p>弧长，要一点微分相关，是delta的近似量，面对的问题是圆形边长为什么不是8r</p>
-<ul>
-<li>$\int_a^b \sqrt{1+(\frac{d}{dx}(y))^2} dx$</li>
-<li>$\int_A^B \sqrt{1+(\frac{d}{dy}(x))^2} dy$</li>
-<li>$\int_{t_0}^{t_1} \sqrt{(\frac{d}{dt}x)^2+(\frac{d}{dt}(y))^2} dt$</li>
-<li>$\int_{\theta_0}^{\theta_1} \sqrt{(f(\theta))^2+(f’(\theta))^2} dt$</li>
-</ul>
-<hr>
-<p>关于x轴，旋转体表面积</p>
-<ul>
-<li>$\int_{a}^b 2\pi y \sqrt{1+(\frac{d}{dx}y)^2} dx$</li>
-</ul>
-<h2 id="30-微分方程"><a href="#30-微分方程" class="headerlink" title="30. 微分方程"></a>30. 微分方程</h2><p>就是包含导数的方程，这里只学一元函数， 常微分方程 ODE</p>
-<p>前面例子 $\frac{d}{dx}y&#x3D;ky$, 唯一形式$y&#x3D;Ae^{kx}$</p>
-<p>对于一类 可通过方程变形成  f(y)dy&#x3D;h(x)dx的形式，可以两边同时积分（记得+C）</p>
-<hr>
-<p>一阶线性方程： 能整理成 y’+p(x)y&#x3D;q(x)</p>
-<p>注意到 $(g(x)y)’&#x3D;g’(x)y+g(x)y’$, 而这样需要 $p(x)&#x3D;\frac{g’}{g}$, 并不容易找到g</p>
-<p>注意到 $(e^{h(x)}y)’&#x3D;h’(x)e^{h(x)}y+e^{h(x)}y’$, 这里利用了$(e^x)’&#x3D;e^x$,  这样的话 只需要$h’(x)&#x3D;p(x)$</p>
-<p>所以 希望 $h(x)&#x3D;\int p(x) dx + C_1$</p>
-<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}p(x)y&#x3D;e^{h(x)}q(x)$</p>
-<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}h’(x)y&#x3D;e^{h(x)}q(x)$</p>
-<p>$e^{h(x)}\frac{d}{dx}(y)+e^{h(x)}h’(x)y&#x3D;e^{h(x)}q(x)$</p>
-<p>$\frac{d}{dx} (e^{h(x)}y)&#x3D;e^{h(x)}q(x)$</p>
-<p>$e^{h(x)}y&#x3D;\int (e^{h(x)}q(x)) dx  + C_2$</p>
-<p>$\displaystyle y&#x3D;\frac{1}{e^{h(x)}}(\int (e^{h(x)}q(x)) dx  + C_2), h(x)&#x3D;\int p(x) dx + C_1$</p>
-<hr>
-<p>常系数微分方程, <a href="https://math.fudan.edu.cn/_upload/article/files/8b/6b/f3bc390143b09642a863057be4e7/0771b803-2e2b-487e-830b-a32e4e32dcfe.pdf">https://math.fudan.edu.cn/_upload/article/files/8b/6b/f3bc390143b09642a863057be4e7/0771b803-2e2b-487e-830b-a32e4e32dcfe.pdf</a></p>
-<p>$\sum_{i} a_i\frac{d^i}{dx^i} (y)&#x3D;f(x)$</p>
-<p>二阶常系数齐次线性方程 $a\frac{d^2}{dx^2}(y)+b\frac{d}{dx}(y)+c&#x3D;0$</p>
-<p>若 $y&#x3D;e^{kx},y’&#x3D;ke^{kx},y’’&#x3D;k^2e^{kx}$， </p>
-<ul>
-<li>$ak^2+bk+c&#x3D;0$, 说明k求出，就能找到一个解</li>
-<li>问题是如果不是这个形式就无解了吗？</li>
-<li>这里 知乎的一个回答是运算可逆??? <ul>
-<li>我瞎想的一个是 $e^{f(x)}$,然后f(x)是幂级数展开，那么其它次的都会有带入的幂次不一致问题，只有$e^{kx}$ 没有幂次问题</li>
-</ul>
-</li>
-<li>如果求得两个不同解$e^{k_0x},e^{k_1x}$ 这两个的 线性叠加就都是解,$C_0e^{k_0x}+C_1e^{k_1x}$<ul>
-<li>如果 $k_0&#x3D;k_1$</li>
-<li>也就是 $\frac{d^2}{dx^2}(y)-2k\frac{d}{dx}(y)+k^2y&#x3D;0$<ul>
-<li>$\frac{d^2}{dx^2}(y)-k\frac{d}{dx}(y)&#x3D;k\frac{d}{dx}(y)-k^2y$</li>
-<li>$\frac{d^2}{dx^2}(y)-k\frac{d}{dx}(y)&#x3D;k(\frac{d}{dx}(y)-ky)$, (这个感觉是来自于线性代数 比例的感觉, 右边这一块看成 z(x)的话, 类似的这样拆也能说明 上面和二次方程根有关系</li>
-<li>$\frac{d}{dx}z&#x3D;kz$<ul>
-<li>其中$z&#x3D;0$是一个特殊的也就是$\frac{d}{dx}(y)-ky&#x3D;0$， $y&#x3D;C_0e^{kx}$</li>
-<li>那么还有 $z&#x3D;C_1e^{kx}$</li>
-<li>$\frac{d}{dx}(y)-ky&#x3D;C_1e^{kx}$<ul>
-<li>y&#x3D;特解+零空间（上面的）</li>
-<li>这里有地方说 要$e^{kx}$线性无关，所以$y&#x3D;g(x)e^{kx}$,其中g(x)不为常数<ul>
-<li>$g’(x)e^{kx}+kg(x)e^{kx}-kg(x)e^{kx}&#x3D;C_1e^{kx}$</li>
-<li>$g’(x)&#x3D;C_1$</li>
-<li>$g(x)&#x3D;C_1x+C_2$, 而这里$C_2$可以和$C_0$融合</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>综上<ul>
-<li>不同根就是 线性叠加</li>
-<li>同根就是$(C_0+C_1x)e^{kx}$</li>
-<li>复根，就是同样的用欧拉公式换一换<ul>
-<li>不过 复根的性质，因为二次方程所以会是 共轭 a+bi,a-bi</li>
-<li>这样的话线性无关，叠加就是$e^{ax}(C_0sin(bx)+C_1cos(bx))$ , (本质上一样，只是换了基而已)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>进一步的 n阶常系数齐次方程，也是类似的形式，重根也是类似的</p>
-<p>习题: $yy’’-(y’)^2&#x3D;y^2\ln y$</p>
-<p>$y&#x3D;e^{f(x)}$</p>
-<p>$y’&#x3D;f’(x)e^{f(x)}$</p>
-<p>$y’’&#x3D;f’’(x)e^{f(x)}+(f’(x))^2e^{f(x)}$</p>
-<p>$f’’(x)&#x3D;f(x)$</p>
-<p>$x^2-1&#x3D;0$</p>
-<p>$f(x)&#x3D;C_0e^{-x}+C_1e^{x}$</p>
-<p>$y&#x3D;e^{C_0e^{-x}+C_1e^{x}}$</p>
-<hr>
-<p>那么 解 $&#x3D;f(x)$ 的是特解+零空间</p>
-<p>特解怎么求</p>
-<p>这里给的是形式对应</p>
-<ul>
-<li>f(x)&#x3D;多项式：特解的形式是同次多项式</li>
-<li>f(x)&#x3D;$e^{kx}$: 特解是 $Ce^{kx}$</li>
-<li>sin(nx) 或者 cos(nx),特解是 Csin(nx)+Dcos(nx), </li>
-<li>是上面的乘积，那么特解是对应上面特解的乘积</li>
-</ul>
-<p>有了形式化，那么剩下的是待定系数法了</p>
-<ul>
-<li>失效情况，类似于上面的重根，这里的零空间可能和特解有重复<ul>
-<li>例子 $y’’-3y’+2y&#x3D;7e^{2x}$, 显然零空间里有$e^x,e^{2x}$, 那么特解肯定就不是$Ce^{2x}$<ul>
-<li>这里的结果和上面也是类似，补充x的幂次</li>
-<li>$y&#x3D;Cxe^{2x}$</li>
-<li>$(y’-2y)’-(y’-2y)&#x3D;7e^{2x}$</li>
-<li>$(Ce^{2x}+2Cxe^{2x}-2Cxe^{2x})’-(Ce^{2x}+2Cxe^{2x}-2Cxe^{2x})&#x3D;7e^{2x}$</li>
-<li>$(Ce^{2x})’-(Ce^{2x})&#x3D;7e^{2x}$</li>
-<li>$2Ce^{2x}-Ce^{2x}&#x3D;7e^{2x}$</li>
-<li>$Ce^{2x}&#x3D;7e^{2x}$</li>
-<li>所以特解是$y&#x3D;7xe^{2x}$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>注意图像意义虽然对于实数好理解，但是表达式的力量会在一些无法画图的时候体现例如复数</p>
-<ol>
-<li>极限的定义：这里给出了图像上 epsilon, delta的 意义</li>
-<li>极限的四则运算：解决了复杂表达式的极限难以直接计算的问题，转化为可以拆分计算再合并<ol>
-<li>证明核心就是 被控制到了可控范围</li>
-</ol>
-</li>
-<li>其他极限情况，主要讨论 无穷，间断，单侧。同样可以图像意义</li>
-<li>连续与极限：连续是想要的性质，在这个性质下，可以对多个函数的 单点甚至一段区间，进行四则运算甚至复合<ol>
-<li>存在性定理：<ol>
-<li>介值定理</li>
-<li>最大-最小定理证明</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>指数对数函数<ol>
-<li>导数性质</li>
-<li>e的积分表达</li>
-</ol>
-</li>
-<li>微分与极限：<ol>
-<li>微分 是 导数与自变量的表出，与delta 近似</li>
-<li>链式求导与极值定理证明</li>
-<li>罗尔定理-&gt;中值定理-&gt;线性化误差</li>
-<li>分段函数导数</li>
-<li>洛必达法则</li>
-</ol>
-</li>
-<li>泰勒近似定理<ol>
-<li>展开+中值</li>
-</ol>
-</li>
-</ol>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>本书出了口语化流畅，细致内容，很多例子，以外，还有很大优点就是图多</p>
-<p>然后有些内容国内有的的确这里没有，例如 连续封闭的二元函数的封闭区间线积分</p>
-<p>从编程模块化的想法，内核化的想法，我很喜欢这里把 定积分看成 <code>[]</code>连续 <code>()</code>可导 的 内核api</p>
-<ul>
-<li>再把 反常，分段，看成是对于这个的重定义和调用<ul>
-<li>为了调用 和 四则运算相关支持，再引入合理的 补充定义（胶水代码）</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
