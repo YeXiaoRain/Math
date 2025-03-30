@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="前置知识：微积分 9版 isbn 9787111447894 推荐：  专业名词出现时有对应英文 有小结 例题, 感觉选得也挺好的 习题 （部分有答案，感觉选题不算紧凑偏题海） 理论习题 (有提示) 自检习题 （部分有答案，感觉选题不算紧凑偏题海）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="概率论基础教程">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="前置知识：微积分 9版 isbn 9787111447894 推荐：  专业名词出现时有对应英文 有小结 例题, 感觉选得也挺好的 习题 （部分有答案，感觉选题不算紧凑偏题海） 理论习题 (有提示) 自检习题 （部分有答案，感觉选题不算紧凑偏题海）">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-01-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-30T07:28:50.959Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="概率论">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/A_First_Course_in_Probability/","path":"A_First_Course_in_Probability/","title":"概率论基础教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>概率论基础教程 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">49</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">11</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">81</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%84%E5%90%88%E5%88%86%E6%9E%90"><span class="nav-text">1. 组合分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%A6%82%E7%8E%87%E8%AE%BA%E5%85%AC%E7%90%86"><span class="nav-text">2. 概率论公理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E5%92%8C%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-text">3. 条件概率和独立性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-text">4. 随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%9C%9F%E6%9C%9B-expectation-x2F-expected-value"><span class="nav-text">4.3 期望(expectation &#x2F; expected value)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E6%96%B9%E5%B7%AE"><span class="nav-text">4.5 方差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83"><span class="nav-text">4.6 常见分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-%E5%88%86%E5%B8%83%E5%87%BD%E6%95%B0%E6%80%A7%E8%B4%A8"><span class="nav-text">4.10 分布函数性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-text">5. 连续型随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BE%8B%E5%AD%90"><span class="nav-text">常见例子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83-uniformly-distribution"><span class="nav-text">均匀分布 uniformly distribution</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A3%E6%80%81%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-text">正态随机变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-text">指数随机变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gamma%E5%88%86%E5%B8%83"><span class="nav-text">Gamma分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9F%A6%E5%B8%83%E5%B0%94%E5%88%86%E5%B8%83"><span class="nav-text">韦布尔分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%88%86%E5%B8%83"><span class="nav-text">柯西分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#beta-%E5%88%86%E5%B8%83"><span class="nav-text">beta 分布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E7%9A%84%E8%81%94%E5%90%88%E5%88%86%E5%B8%83"><span class="nav-text">6. 随机变量的联合分布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%9C%9F%E6%9C%9B%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-text">7. 期望的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%8F%E6%96%B9%E5%B7%AE"><span class="nav-text">协方差</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B"><span class="nav-text">条件期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B%E5%8F%8A%E9%A2%84%E6%B5%8B"><span class="nav-text">条件期望及预测</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9F%A9%E6%AF%8D%E5%87%BD%E6%95%B0-M-t-x3D-E-e-tX"><span class="nav-text">矩母函数: $M(t)&#x3D;E[e^{tX}]$</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="nav-text">8. 极限定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9A%84%E5%85%B6%E4%BB%96%E8%AF%BE%E9%A2%98"><span class="nav-text">9. 概率论的其他课题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E6%A8%A1%E6%8B%9F"><span class="nav-text">10. 模拟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%8E%E7%89%87"><span class="nav-text">碎片</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YeXiaoRain"
+      src="https://avatars.githubusercontent.com/u/7298239?v=4">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">81</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yexiaorain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yexiaorain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yexiaorain@gmail.com" title="E-Mail → mailto:yexiaorain@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://atcoder.jp/users/cromarmot" title="https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;cromarmot" rel="noopener" target="_blank">AtCoder</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://codeforces.com/profile/YeXiaoRain" title="https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;YeXiaoRain" rel="noopener" target="_blank">Codeforces</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="概率论基础教程 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          概率论基础教程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-01-07 00:00:00" itemprop="dateCreated datePublished" datetime="2025-01-07T00:00:00+08:00">2025-01-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-03-30 15:28:50" itemprop="dateModified" datetime="2025-03-30T15:28:50+08:00">2025-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%A6%82%E7%8E%87%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">概率论</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/Math/A_First_Course_in_Probability/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="A_First_Course_in_Probability/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>19k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>17 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>前置知识：微积分</p>
+<p>9版</p>
+<p>isbn 9787111447894</p>
+<p>推荐：</p>
+<ul>
+<li>专业名词出现时有对应英文</li>
+<li>有小结</li>
+<li>例题, 感觉选得也挺好的</li>
+<li>习题 （部分有答案，感觉选题不算紧凑偏题海）</li>
+<li>理论习题 (有提示)</li>
+<li>自检习题 （部分有答案，感觉选题不算紧凑偏题海）</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="1-组合分析"><a href="#1-组合分析" class="headerlink" title="1. 组合分析"></a>1. 组合分析</h2><p>计数基本法则:</p>
+<ul>
+<li>两个试验，一个有m种可能，另一个n种可能，一共有mn种可能</li>
+<li>推广多个试验, 每个m_i种可能，一共$\prod m_i$ 种可能</li>
+</ul>
+<p>排列：</p>
+<ul>
+<li>n个元素 的排列方式个数是 n!</li>
+</ul>
+<p>n个元素排列，其中n_i个元素相同</p>
+<ul>
+<li>那么总方案数$\frac{n!}{\prod n_i!}$</li>
+<li>这个退化到两种相同就是binom, 引出组合</li>
+</ul>
+<p>组合：n个种选出r个，有多少种选法</p>
+<ul>
+<li>$\binom{n}{m}&#x3D;\frac{n!}{m!(n-m)!}&#x3D;\binom{n}{n-m}$</li>
+<li>常用 $\binom{n}{r}&#x3D;\binom{n-1}{r-1}+\binom{n-1}{r}$</li>
+<li>另一方面 $(x+y)^n&#x3D;\sum_{i&#x3D;0}^n \binom{n}{i}x^iy^{n-i}$ 所以也称作二项式系数<ul>
+<li>推广 多项式系数,n个分成r组，每组n_i个，有多少种分法</li>
+<li>$&#x3D;\frac{n!}{\prod n_i!}$</li>
+<li>记号 $\binom{n}{n_1,\cdots,n_r}$</li>
+<li>多项式定理$(\sum_{r} x_i)^n&#x3D;\sum \binom{n}{n_1,\cdots,n_r} \prod x_i^{n_i}$</li>
+</ul>
+</li>
+</ul>
+<p>命题6.1 共有$\binom{n-1}{r-1}$个不同的正整数向量满足$\sum_r x_i &#x3D; n$</p>
+<p>命题6.2 共有$\binom{n+r-1}{r-1}$个不同的非负整数向量满足$\sum_r x_i &#x3D; n$</p>
+<h2 id="2-概率论公理"><a href="#2-概率论公理" class="headerlink" title="2. 概率论公理"></a>2. 概率论公理</h2><p>sample space 样本空间 （所有可能的结果）</p>
+<p>event 事件</p>
+<ul>
+<li>交 intersection</li>
+<li>并 union</li>
+<li>互不相容 mutually exclusive</li>
+<li>补</li>
+<li>运算<ul>
+<li>基本的交换率</li>
+<li>De Morgan law<ul>
+<li>并的补&#x3D; 补的交</li>
+<li>交的补 &#x3D; 补的并</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>概率论公理：</p>
+<ul>
+<li>有人认为 发生频率去定义概率论 会趋于一个值</li>
+<li>公理1,$P[E]\in [0,1]$, 任何事件E概率在0到1之间</li>
+<li>公理2,$P[S]&#x3D;1$, 必然发生事件 概率为1</li>
+<li>公理3,对任一列互不相容的事件 $P(\cup_{i&#x3D;1}^{\infty} E_i)&#x3D;\sum_{i&#x3D;1}^{\infty} P(E_i)$, 任意一列互不相容的事件，至少有一事件发生的概率等于各事件发生的概率之和<ul>
+<li>这里的一点是“序列” （在连续型里会讲到）</li>
+<li>如果样本空间是不可数集，那么P(E)仅仅针对那些所谓可测的事件进行定义</li>
+<li>可以推出 空集事件概率为0</li>
+</ul>
+</li>
+<li>随着试验的不断重复，事件E发生的概率以概率1趋近P(E),第8章强大数定律</li>
+<li>常用命题:</li>
+<li>$P(E)+P(E^c)&#x3D;1$</li>
+<li>$E\subseteq F$则$P(E)\le P(F)$</li>
+<li>$P(E\cup F)&#x3D;P(E)+P(F)-P(E\cap F)$ 书上没有交符号，有点看着难受</li>
+<li>容斥: $P(所有E_i)&#x3D;\sum (-1)^r P(其中r个并 E_i)$</li>
+</ul>
+<p>例5i 也出现了 生日重复概率问题，365种可能</p>
+<p>例5m 错排问题&#x2F;配对问题 ～e^{-1}</p>
+<ul>
+<li>核心还是两个技巧<ul>
+<li>容斥</li>
+<li>$P(&#x3D;N) &#x3D; P(\le N)-P(\le N-1)$</li>
+</ul>
+</li>
+</ul>
+<p>例5o, 游程，我看得懂，定义 计算，和概率，但看不懂为啥说 wwwwwwwllll 说明状态在下滑</p>
+<hr>
+<p>概率：连续集函数</p>
+<ul>
+<li>递增序列 ,i &lt; j $E_i\subset E_j$</li>
+<li>递减序列 ,i &lt; j $E_j\subset E_i$</li>
+<li>如果是递增或者递减序列，那么 $\lim_{i\to \infty}P(E_i)&#x3D;P(\lim_{i\to \infty} E_i)$</li>
+<li>证明：<ul>
+<li>F_n表示属于E_n但不属于E_{n-1}前面并的部分</li>
+<li>那么 F_n的并 &#x3D; E_n的并，但是好处是 F_n两两互斥, 互斥的好处就是可以 在P()括号里外穿梭</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>悖论:</p>
+<ul>
+<li>方案1.<ul>
+<li>距离1分钟，放入1,2,取出2</li>
+<li>距离1&#x2F;2分钟，放入3,4,取出4</li>
+<li>距离1&#x2F;4分钟，放入5,6取出6</li>
+<li>问 1分钟后 有多少个球</li>
+<li>会觉得里面有所有奇数球</li>
+</ul>
+</li>
+<li>方案2.<ul>
+<li>距离1分钟，放入1,2取出1</li>
+<li>1&#x2F;2 -&gt; 放入3,4 取出2</li>
+<li>1&#x2F;4 -&gt; 放入5,6 取出3</li>
+<li>会觉得所有球都被取出了吗？</li>
+</ul>
+</li>
+<li>这里 有点测度论的东西？ 可列可数等势，偶数和正整数个数一样多</li>
+<li>我们必须认识到上面两种不是悖论 也不违背数学原理</li>
+<li>方案3<ul>
+<li>还是每次放是一样的，但是取出是 等概率取出一个</li>
+<li>对于1号球，$P(E_n)&#x3D;$表示n次操作后1号球还未被取走的概率<ul>
+<li>$\prod_n \frac{(k-1)i}{(k-1)i+1}, k&#x3D;2$, k表示每次放进去的个数</li>
+<li>$E_n$ 是一个递减事件 （包含关系）<ul>
+<li>P(lim E交)&#x3D;$lim_{n\to \infty} P(E_{n})&#x3D;\prod_{i\to \infty} \frac{(k-1)i}{(k-1)i+1}$</li>
+<li>$\prod_{i\to infty} (1+\frac{1}{(k-1)i})$</li>
+<li>$\ge \prod_{i&#x3D;1}^m (1+\frac{1}{(k-1)i})$ 截断</li>
+<li>$\ge \sum_{i&#x3D;1}^m \frac{1}{(k-1)i}$ 展开</li>
+<li>$&#x3D;\frac{1}{k-1}\sum_{i&#x3D;1}^m \frac{1}{i}$ 调和级数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类似的 其它球为空的概率 也能得到0</li>
+<li>$P(每个为空)\le \sum P(i个为空) &#x3D; 0$</li>
+</ul>
+</li>
+</ul>
+<p>另一个 把 概率解释为确信程度</p>
+<h2 id="3-条件概率和独立性"><a href="#3-条件概率和独立性" class="headerlink" title="3. 条件概率和独立性"></a>3. 条件概率和独立性</h2><p>如果 P(F) &gt; 0那么</p>
+<ul>
+<li>$P(E|F)&#x3D;P(E\cap F)&#x2F;P(F)$</li>
+<li>推广 乘法规则 $P(E_1\cap E_2\cdots E_n)&#x3D;P(E_1)P(E_2|E_1)\cdots P(E_n|E_1\cap\cdots \cap E_n)$</li>
+</ul>
+<p>贝叶斯公式</p>
+<ul>
+<li>$P(E)&#x3D;P(E\cap F)+P(E\cap F^c)$</li>
+<li>$&#x3D;P(E|F)P(F)+P(E| F^c)P(F^c)$</li>
+<li>$&#x3D;P(E|F)P(F)+P(E| F^c)(1-P(F))$</li>
+<li>推广到多个互斥 $F_i$<ul>
+<li>$P(E)&#x3D;\sum P(E\cap F_i)&#x3D;\sum P(E|F_i)P(F_i)$</li>
+</ul>
+</li>
+</ul>
+<p>事件H优势比: $\frac{P(H)}{P(H^c)}$</p>
+<ul>
+<li>$\displaystyle \frac{P(H | E)}{P(H^c | E)}&#x3D;\frac{P(H)P(E|H)}{P(H^c)P(E|H^c)}$<ul>
+<li>说明 新的 证据E出现后，H的优势比 &#x3D; 原来优势比 * （H成立E发生概率 比上 H不成立 E发生概率）</li>
+</ul>
+</li>
+</ul>
+<p>全概率公式 $P(E)&#x3D;\sum_{i&#x3D;1}^n P(E|F_i)P(F_i)$</p>
+<p>$F_i$互不相容事件列，且并为全空间 贝叶斯公式</p>
+<ul>
+<li>$\displaystyle P(F_j|E)&#x3D;\frac{P(E|F_j)P(F_j)}{\sum_{i&#x3D;1}^n P(E|F_i)P(F_i)}$</li>
+<li>一种视角 当证据E成立时，这些假设F_j的成立的概率的计算方式</li>
+</ul>
+<p>独立independent事件：</p>
+<ul>
+<li>$P(E\cap F)&#x3D;P(E)P(F)$ 独立事件有对称性</li>
+</ul>
+<p>$P(\cdot | F)$ 是概率</p>
+<ul>
+<li>也就是 条件概率 满 概率的三条性质 (范围[0,1]， P(S|F)&#x3D;1, 不相容可加)</li>
+</ul>
+<h2 id="4-随机变量"><a href="#4-随机变量" class="headerlink" title="4. 随机变量"></a>4. 随机变量</h2><p>定义在样本空间上的实值函数成为随机变量（random variable）</p>
+<p>这里写法P{事件}</p>
+<p>对于随机变量X定义如下 $F(x)&#x3D;P${$X\le x$}, 称为X的累积分布函数（cumulative distribution function）</p>
+<ul>
+<li>分布函数 为 随机变量小于等于x的概率</li>
+</ul>
+<p>离散型随机变量</p>
+<ul>
+<li>最多 可数个 可能值</li>
+<li>p(a)&#x3D;P{X&#x3D;a} 称作 概率分布列(probability mass function)</li>
+<li>$p(i)&#x3D;c\lambda^i&#x2F;i!$<ul>
+<li>利用和为1,可以得到c&#x3D;$e^{-\lambda}$</li>
+<li>对于多段的累积分布函数，其连续区间是 <code>[,)</code> 形状的 每个点是右连续的（右极限&#x3D;点值）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-3-期望-expectation-x2F-expected-value"><a href="#4-3-期望-expectation-x2F-expected-value" class="headerlink" title="4.3 期望(expectation &#x2F; expected value)"></a>4.3 期望(expectation &#x2F; expected value)</h3><ul>
+<li>这块内容，我觉得 普利斯顿那本书的 矩出发的角度很好</li>
+<li>$E[X]&#x3D;\sum xp(x)$<ul>
+<li>$E[\sum X_i] &#x3D; \sum E(X_i)$ 来自于 求和的 线性性</li>
+</ul>
+</li>
+<li>所有可能值的加权平均</li>
+<li>类似于质量分布的重心（center of gravity)这一物理概念</li>
+</ul>
+<p>命题4.1 $E[g(X)]&#x3D;\sum g(x)p(x)$</p>
+<ul>
+<li>如果X是一个离散型随机变量，其可能取值为x_i, 概率p(x_i),那么  有上面表达式</li>
+<li>证明 可以按照x展开：<ul>
+<li>$\sum g(x)p(x) &#x3D; \sum_{j} \sum_{g(x_i)&#x3D;y_j} g(x_i)p(x_i)$ 按照相同g(x_i)值合并</li>
+<li>$&#x3D; \sum_{j} \sum_{g(x_i)&#x3D;y_j} y_i p(x_i)$ </li>
+<li>$&#x3D; \sum_{j} y_i \sum_{g(x_i)&#x3D;y_j} p(x_i)$ </li>
+<li>$&#x3D; \sum_{j} y_i P(g(X)&#x3D;y_i)$ 这是按照 事件 * 加权的 表述方式</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-5-方差"><a href="#4-5-方差" class="headerlink" title="4.5 方差"></a>4.5 方差</h3><p>取值对于均值的偏离程度</p>
+<ul>
+<li>这里的理由是 $E[|X-\mu|]$ 不方便观察, 所以考虑平方，这样看来的确是 二阶中心矩更 “数学上 顺畅感”</li>
+<li>$Var(X)&#x3D;E[(X-\mu)^2]&#x3D;E[X^2]-E[X]^2$<ul>
+<li>均值类似于重心，而方差类似于惯性矩</li>
+<li>标准差(standard deviation) $StDev(X)&#x3D;SD(X)&#x3D;\sqrt{Var(X)}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-6-常见分布"><a href="#4-6-常见分布" class="headerlink" title="4.6 常见分布"></a>4.6 常见分布</h3><ul>
+<li>p成功1-p失败</li>
+<li>n次p, 概率(i) &#x3D; $\binom{n}{i}p^i(1-p)^{n-i}$</li>
+</ul>
+<p>大多服从泊松分布的：</p>
+<ul>
+<li>一本书里一页或若干页中印刷错误的数量（p小</li>
+<li>某地居民活到100岁的人数 （p小</li>
+<li>一天中拨错电话号码的次数 （p小</li>
+<li>一家便利店里每天卖出狗粮饼干的合数 （p小</li>
+<li>某一天进入一个邮局的顾客数</li>
+<li>一年中联邦司法系统中空缺位置数</li>
+<li>某放射性材料在一个固定时期放射出来的 alpha粒子数</li>
+<li>如果 n个事件 p小，独立或者弱相依，事件发生次数 近似于 $\sum p_i$的泊松分布</li>
+</ul>
+<p>书上这里推$E[X^k]$  不像之前 普林斯顿具体的带入差分方程，而是推 $E[X^k]$和$E[(aY+b)^{k-1}]$的关系 感觉上更妙啊！！！！！！！！！！</p>
+<ul>
+<li>但始终没提k阶矩</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>描述</th>
+<th>E[X]</th>
+<th>Var(X)</th>
+<th>P(X&#x3D;i)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01分布</td>
+<td>1次操作 成功(&#x3D;1)p,失败(&#x3D;0)1-p概率</td>
+<td>p</td>
+<td>p(1-p)</td>
+<td>p</td>
+</tr>
+<tr>
+<td>二项式</td>
+<td>n次独立的0-1操作</td>
+<td>np</td>
+<td>np(1-p)</td>
+<td>$\binom{n}{i}p^i(1-p)^{n-i}$, 先增后减</td>
+</tr>
+<tr>
+<td>泊松分布</td>
+<td>n足够大p足够小，而np保持适当大小&#x3D;$\lambda$ 的二项随机变量</td>
+<td>$\lambda$</td>
+<td>$\lambda$</td>
+<td>$e^{-\lambda}\frac{\lambda^i}{i!}$上面表达式$np&#x3D;\lambda$,然后对n取极限</td>
+</tr>
+<tr>
+<td>几何geometric分布</td>
+<td>二项分布直到首次成功</td>
+<td>$\frac{1}{p}$</td>
+<td>$\frac{1-p}{p^2}$</td>
+<td>$p(1-p)^{n-1}$</td>
+</tr>
+<tr>
+<td>负二项negativ binomial分布</td>
+<td>持续实验直到累计成功r次</td>
+<td>$\frac{r(r-p+1)}{p^2}$</td>
+<td>$\frac{r(1-p)}{p^2}$</td>
+<td>$\binom{n-1}{r-1}p^r(1-p)^{n-r}$</td>
+</tr>
+<tr>
+<td>超几何hyper geometric分布</td>
+<td>N球，m白，N-m黑，无放回取出n个，X表示白球数</td>
+<td>$\frac{mn}{N}$</td>
+<td>$np(1-p)(1-\frac{n-1}{N-1})$</td>
+<td>$\frac{\binom{m}{i}\binom{N-m}{n-i}}{\binom{N}{n}}$ 注意这里超界的二项式系数定义为0</td>
+</tr>
+<tr>
+<td>zipf分布, 来源于黎曼函数$\zeta(s)&#x3D;\sum (\frac{1}{i})^s$ 给定国家的家庭收入的分布</td>
+<td></td>
+<td></td>
+<td></td>
+<td>$\frac{C}{k^{a+1}}$</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="4-10-分布函数性质"><a href="#4-10-分布函数性质" class="headerlink" title="4.10 分布函数性质"></a>4.10 分布函数性质</h3><ul>
+<li>非降$a &lt; b, F(a)\le F(b)$</li>
+<li>左极限0,右极限1</li>
+<li>右连续（这个普利斯顿教材没提到？）<ul>
+<li>P {a &lt; X &lt;&#x3D; b} &#x3D; F(b)-F(a),</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-连续型随机变量"><a href="#5-连续型随机变量" class="headerlink" title="5. 连续型随机变量"></a>5. 连续型随机变量</h2><p>连续型（continuous）随机变量</p>
+<ul>
+<li>P{$X\in B$} &#x3D; $\int_B f(x) dx$</li>
+<li>f称为概率密度函数 probability density function</li>
+<li>单点值概率都为0 （根据微积分知识）</li>
+</ul>
+<p>期望</p>
+<ul>
+<li>$E[X] &#x3D; \int_{-\infty}^{\infty} xf(x)dx$</li>
+<li>$E[g(X)] &#x3D; \int_{-\infty}^{\infty} g(x)f(x)dx$<ul>
+<li>类似离散的证明，证明按照x积分 和 按照g(X)算权重是一样的</li>
+</ul>
+</li>
+</ul>
+<h3 id="常见例子"><a href="#常见例子" class="headerlink" title="常见例子"></a>常见例子</h3><h4 id="均匀分布-uniformly-distribution"><a href="#均匀分布-uniformly-distribution" class="headerlink" title="均匀分布 uniformly distribution"></a>均匀分布 uniformly distribution</h4><ul>
+<li>f(x)&#x3D;1,0 &lt; x &lt; 1 ，根据微积分知识 这里左右有没有等号都可以</li>
+<li>f(x)&#x3D;0 其它</li>
+<li>(a,b)上均匀分布 $f(x)&#x3D;\frac{1}{b-a}, a &lt; x &lt; b$ 其它位置概率为0<ul>
+<li>累积分布$F(x)&#x3D;\frac{x-a}{b-a},x\in[a,b]$</li>
+<li>E[X]&#x3D;(a+b)&#x2F;2</li>
+<li>Var(X)&#x3D;(b-a)^2&#x2F;12</li>
+</ul>
+</li>
+</ul>
+<h4 id="正态随机变量"><a href="#正态随机变量" class="headerlink" title="正态随机变量"></a>正态随机变量</h4><ul>
+<li>$f(x)&#x3D;\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</li>
+<li>未来中心极限定理会见到<ul>
+<li>标准化 $Z&#x3D;\frac{x-\mu}{\sigma}$ 分母是 标准差 不是 方差</li>
+</ul>
+</li>
+<li>$E[X]&#x3D;\mu$</li>
+<li>$Var(X)&#x3D;\sigma^2$</li>
+<li>哇一张大表</li>
+</ul>
+<p>1733年槺莫弗 引入的 ，后面高斯天文中位置预测高斯分布</p>
+<p>槺莫弗-拉普拉斯极限定理，n次独立重复实验中，每次成功概率为p,记成功的总次数为S_n, 那么对任意a &lt; b有 当$n\to \infty$ 时</p>
+<ul>
+<li>P{$a\le \frac{S_n-np}{\sqrt{np(1-p)}}\le b$}$\to \Phi(b)-\Phi(a)$</li>
+<li>证明见 八章中心极限定理，这是一个特例</li>
+<li>从 图像上能 感觉出这个东西</li>
+<li>普利斯顿的书上建议的是 &gt;&#x3D;30次可以用 正态分布估算</li>
+</ul>
+<h4 id="指数随机变量"><a href="#指数随机变量" class="headerlink" title="指数随机变量"></a>指数随机变量</h4><p>$f(x) &#x3D; \lambda e^{-\lambda x}, x\ge 0$</p>
+<ul>
+<li>通常用来描述某个事件发生的等待时间的分布。</li>
+<li>累积分布 $F(x)&#x3D;1-e^{-\lambda x}$ </li>
+<li>这里书上同样是计算出 $E[X^k]&#x3D;\frac{n}{\lambda} E[X^{n-1}]$</li>
+<li>$E[X]&#x3D;\frac{1}{\lambda}$</li>
+<li>$Var(X)&#x3D;\frac{1}{\lambda^2}$</li>
+<li>特点：无记忆性<ul>
+<li>P{X&gt;s+t|X&gt;t}&#x3D;P{X&gt;s}</li>
+<li>任意一个零件的寿命，的分布，对于任意t,剩余寿命同一个新的零件的寿命的分布是一样的</li>
+<li>失效率$_t&#x3D;\frac{f(t)}{1-F(t)}$ 危险率函数<ul>
+<li>指数函数是唯一失效率为常数的分布，（解微分方程）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Gamma分布"><a href="#Gamma分布" class="headerlink" title="Gamma分布"></a>Gamma分布</h4><ul>
+<li>$\displaystyle f(x)&#x3D;\frac{\lambda e^{\lambda x}(\lambda x)^{a-1}}{\Gamma(a)},x\ge 0$</li>
+<li>有地方也常称为 n-Erlang分布</li>
+<li>看作是某个事件 总共发生n次 的等待时间分布<ul>
+<li>P{T_n&lt;&#x3D; t}, 第n个事件发生时刻不超过t</li>
+<li>&#x3D;P{N(t) &gt;&#x3D; n}, t时刻内 发生事件个数大于等于n</li>
+<li>&#x3D;$\sum_{j&#x3D;n}^{\infty}$ P{$N(t)&#x3D;j$} 对于t时刻内放生次数 进行划分（不相交，并为所有）</li>
+<li>&#x3D;$\sum_{j&#x3D;n}^{\infty} \frac{e^{-\lambda t}(\lambda t)^j}{j!}$ , [0,t]时刻内发生事件数 服从参数为$\lambda t$的泊松分布</li>
+<li>两边求导 可以得到 f(t)表达式</li>
+</ul>
+</li>
+<li>$\Gamma(a)&#x3D;\int_0^{\infty} e^{-y}y^{a-1}dy$<ul>
+<li>$\Gamma(n)&#x3D;(n-1)!$</li>
+</ul>
+</li>
+</ul>
+<h4 id="韦布尔分布"><a href="#韦布尔分布" class="headerlink" title="韦布尔分布"></a>韦布尔分布</h4><ul>
+<li>最初在解释疲劳数据时提出的</li>
+<li>有关生命线性的领域中 应用广泛</li>
+<li>当某对象适合“最弱链”模型的时，其寿命就服从 韦布尔分布<ul>
+<li>很多部分组成 任何一个部分毁坏 生命就终结，</li>
+</ul>
+</li>
+<li>分布函数 $F(x)&#x3D;1-exp(-(\frac{x-v}{a})^b), x &gt; v$</li>
+<li>求导后得到概率密度函数</li>
+</ul>
+<h4 id="柯西分布"><a href="#柯西分布" class="headerlink" title="柯西分布"></a>柯西分布</h4><p>$f(x)&#x3D;\frac{1}{\pi} \frac{1}{1+(x-\theta)^2}$</p>
+<p>例6b</p>
+<ul>
+<li>(0,1)处 有一束光，夹角服从 -pi&#x2F;2 ~pi&#x2F;2的均匀分布，照到y&#x3D;0也就是x轴上的点的x坐标的X随机变量</li>
+<li>$F(x)&#x3D;\frac{1}{2}+\frac{1}{\pi} arctan(x)$</li>
+<li>$f(x)&#x3D;\frac{1}{\pi(1+x^2)}$</li>
+</ul>
+<h4 id="beta-分布"><a href="#beta-分布" class="headerlink" title="beta 分布"></a>beta 分布</h4><p>$f(x)&#x3D;\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1}, x\in(0,1)$</p>
+<ul>
+<li>$B(a,b)&#x3D;\int_0^{1}x^{a-1}(1-x)^{b-1}dx$<ul>
+<li>$B(a,b)&#x3D;\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$</li>
+</ul>
+</li>
+<li>对于 一段 [c,d]随机先现象建立模型，<ul>
+<li>a&#x3D;b时关于 (c+d)&#x2F;2对称</li>
+<li>b&gt;a时 向左侧偏移（取小值可能性更大）</li>
+<li>a&gt;b时 右侧偏移 取大值 可能性更大</li>
+</ul>
+</li>
+<li>$E[X]&#x3D;\frac{a}{a+b}$</li>
+<li>$Var(X)&#x3D;\frac{ab}{(a+b)^2(a+b+1)}$</li>
+</ul>
+<h2 id="6-随机变量的联合分布"><a href="#6-随机变量的联合分布" class="headerlink" title="6. 随机变量的联合分布"></a>6. 随机变量的联合分布</h2><p>联合概率分布函数 joint cumulative probability distribution function</p>
+<p>F(a,b)&#x3D;P{X&lt;&#x3D;a,Y&lt;&#x3D;b} </p>
+<ul>
+<li>$F_X(a)&#x3D;F(a,\infty)$ 称作边缘分布 marginal distribution</li>
+<li>p(a,b)&#x3D;P{X&#x3D;a,Y&#x3D;b} 联合概率分布列 joint probability mass function</li>
+</ul>
+<p>联合连续的 jointly continuous </p>
+<ul>
+<li>存在一个定义于任意实数x和y上的函数f(x,y)满足，任意实数对集合C</li>
+<li>P{(X,Y)\in C} &#x3D; $\int\int_{(x,y)\in C} f(x,y) dx dy$</li>
+</ul>
+<p>联合密度函数 joint probability density function</p>
+<ul>
+<li>C&#x3D;{X\in A, y \in B}</li>
+<li>P{X\in A,Y\in B}&#x3D;$\int_B\int_A f(x,y) dx dy$</li>
+<li>$f(x,y)&#x3D;\frac{\partial^2}{\partial a\partial b} F(a,b)$</li>
+</ul>
+<p>独立的independent,</p>
+<ul>
+<li>P{$X\in A,Y\in B$}&#x3D;P{$X\in A$} P{$Y\in B$}</li>
+<li>$F(a,b)&#x3D;F_X(a)F_Y(b)$</li>
+<li>$p(x,y)&#x3D;p_X(x)p_X(y)$</li>
+</ul>
+<p>独立变量之和</p>
+<ul>
+<li>$f_{X+Y}(x)&#x3D; f_X与f_Y的卷积 &#x3D; \int f_X(a-y)f(y)dy$</li>
+<li>对于累积分布 $F_{X+Y}(x)&#x3D;\int F_X(a-y)f_Y(y)dy$, 注意这里积分部分一个是累积分布一个是概率密度，不如上面的概率密度的那么好看</li>
+<li>这要是出现在 上面具体分布之前就好了，每次分布可以讨论</li>
+<li>这里 很特点很重要的一个就是正态分布, 多个独立的正态分布的随机变量和 的分布还是正态分布，且满足 期望和方差都是对应的和<ul>
+<li>$\sum X_i \sim N(\sum \mu_i,\sum \sigma_i^2)$</li>
+</ul>
+</li>
+<li>泊松分布之和 $\sim 泊松(\sum \lambda_i)$</li>
+<li>二项分布之和 $\sim 二项(\sum n_i,p)$</li>
+</ul>
+<p>例5c t分布, $Z\sim N(0,1), Y\sim \mathcal{X}^2_n$</p>
+<ul>
+<li>$T&#x3D;\frac{Z}{\sqrt{Y&#x2F;n}}$ 自由度为n的t分布<ul>
+<li>卡方分布 $f_Y(y)&#x3D;\frac{e^{-y&#x2F;2}y^{n&#x2F;2-1}}{2^{n&#x2F;2}\Gamma(n&#x2F;2)}$</li>
+<li>t分布 $f_T(t)&#x3D;\frac{\Gamma(\frac{n+1}{2})}{\sqrt{\pi n}\Gamma(\frac{n}{2})}(1+\frac{t^2}{n})^{-(n+1)&#x2F;2}$</li>
+</ul>
+</li>
+</ul>
+<p>例5d 二元正态分布</p>
+<ul>
+<li>TODO</li>
+</ul>
+<hr>
+<p>6.6 次序统计量 order statistics</p>
+<ul>
+<li>X_i 是n个独立同分布, 概率密度函数f(x)</li>
+<li>$X_{(i)}$ 是它们排序后的值</li>
+<li>$f_{次序统计量联合密度}(x_1,\cdots,x_n)&#x3D;n! \prod f(x_i)$ 其中$x_i$单调</li>
+</ul>
+<hr>
+<p>6.7 随机变量函数的联合分布</p>
+<p>$X_1,X_2$是联合连续的随机变量，具有联合密度函数$f_{X_1,X_2}$, $Y_1,Y_2$为$X_1,X_2$的函数，有时我们需要求$Y_1,Y_2$的联合分布</p>
+<ul>
+<li>具体说 $Y_1&#x3D;g_1(X_1,X_2),Y_2&#x3D;g_2(X_1,X_2)$<ul>
+<li><ol>
+<li>由方程组 $y_1&#x3D;g_1(x_1,x_2),y_2&#x3D;g_2(x_1,x_2)$ 可以唯一的解出$x_1,x_2$来</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>$g_1,g_2$对于一切$(x_1,x_2)$有连续偏导数，J(x1,x2)&#x3D;$\frac{\partial g_1}{\partial x_1}\frac{\partial g_2}{\partial x_2}-\frac{\partial g_1}{\partial x_2}\frac{\partial g_2}{\partial x_1}\neq 0$ 也就是$|\frac{\partial g_i}{\partial x_j}|$的行列式</li>
+</ol>
+</li>
+<li>$f_{Y_1,Y_2}(y_1,y_2)&#x3D;f_{X_1,X_2}(x_1,x_2)|J(x_1,x_2)|^{-1}$<ul>
+<li>证明原理 就是 统计累积 相等 从而偏微商相等</li>
+</ul>
+</li>
+<li>对于 n维 到 n维度的转换同理<ul>
+<li>$f_{Y_i\cdots}(y_i\cdots)&#x3D;f_{X_i\cdots}(x_i\cdots)|J(x_i\cdots)|^{-1}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>6.8 可交换，交换后 联合累积分布不变</p>
+<ul>
+<li>对于离散的来说，交换后对称具体点 概率相等</li>
+<li>对于单个变量 分布相同</li>
+</ul>
+<h2 id="7-期望的性质"><a href="#7-期望的性质" class="headerlink" title="7. 期望的性质"></a>7. 期望的性质</h2><ul>
+<li>可以看成加权平均<ul>
+<li>所以如果 $P(x\in[a,b])&#x3D;1$ 那么 $E[X]\in [a,b]$</li>
+</ul>
+</li>
+</ul>
+<p>二元函数:</p>
+<ul>
+<li>$E[g(X,Y)]&#x3D;\sum_{y}\sum_{x} g(x,y)p(x,y)$</li>
+<li>$E[g(X,Y)]&#x3D;\int_{y}\int_{x} g(x,y)f(x,y) dxdy$</li>
+</ul>
+<p>样本均值 $\bar{X}&#x3D;\sum \frac{X_i}{n}$</p>
+<p>boole不等式 P(事件并) &lt;&#x3D; P(事件)的和</p>
+<p>二项随机变量的期望 E[X]&#x3D;n个 0-1分布&#x3D;np</p>
+<p>负二项分布变量均值，成功概率p,直到r次成功总次数</p>
+<ul>
+<li>$X&#x3D;\sum X_i$, 其中$X_i$ 表示 从$i-1$次成功以后到i次所需要的次数，都是 1&#x2F;p</li>
+<li>所以 $E[X] &#x3D; r&#x2F;p$</li>
+</ul>
+<p>超几何随机变量的均值，N球，m白，取出n, X&#x3D;白球的个数期望</p>
+<ul>
+<li>$X_i&#x3D;$ 第i个白球被取出</li>
+<li>$X&#x3D;X_1+\cdots+X_m$</li>
+<li>$E[X_i]&#x3D;\frac{n}{N}$</li>
+<li>$E[X]&#x3D;nm&#x2F;N$</li>
+</ul>
+<p>配对数： n人n个帽子，拿到自己帽子期望</p>
+<ul>
+<li>X_i 第i个人拿到自己帽子期望 &#x3D; 1&#x2F;N</li>
+<li>$E[X]&#x3D;1$</li>
+</ul>
+<p>每次获得 1<del>n中一个数，问 1</del>n全部获得至少一次的期望数</p>
+<ul>
+<li>X_i已经获得i-1个，再获得下一个所需要的 次数, </li>
+<li>P{X_i&#x3D;k}&#x3D;$\frac{N-i}{N}(\frac{i}{N})^{k-1}$</li>
+<li>$E[X_i]&#x3D;\frac{N}{N-i}$</li>
+</ul>
+<p>这里好几个例子看似有关联，但实际上的确可以看作独立事件，好神奇</p>
+<hr>
+<p>7.3 试验序列中 事件发生次数的 矩</p>
+<ul>
+<li>事件 $A_1,\cdots,A_n$</li>
+<li>示性变量 $I_i&#x3D;bool(若A_i发生)$</li>
+<li>$X&#x3D;\sum I_i$</li>
+<li>$E[X]&#x3D;E[\sum I_i]&#x3D;\sum E[I_i]&#x3D;\sum P(A_i)$</li>
+<li>从意义上看 $E[\binom{X}{2}]&#x3D;\sum_{i&lt; j}P(A_i\cap A_j)$ 成对发生的次数</li>
+<li>$Var(X)&#x3D;E[X^2]-E[X]^2&#x3D;\sum P(A_i\cap A_j)$</li>
+<li>类似的 $E[\binom{X}{k}]&#x3D;\sum_{k个从小到大}P(A_{i_1}\cap\cdots\cap A_{i_k})$ k对发生的次数</li>
+<li>这种方法 也可以算k阶矩 $E[X^k]$<ul>
+<li>二项随机变量的矩 $E[X(X-1)\cdots(X-k+1)]&#x3D;n(n-1)\cdots(n-k+1)p^k$</li>
+<li>超几何随机变量的矩 $E[X(X-1)\cdots(X-k+1)]&#x3D;n(n-1)\cdots(n-k+1)\frac{m(m-1)\cdots (m-k+1)}{N(N-1)\cdots (N-k+1)}$</li>
+<li>配对问题中的矩 $E(X(X-1)\cdots(X-k+1)]&#x3D;1$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>命题4.1 X,Y相互独立，那么对于任何函数h,g 有</p>
+<ul>
+<li>$E[g(X)h(Y)]&#x3D;E[g(X)]E[h(Y)]$</li>
+</ul>
+<h4 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h4><ul>
+<li>定义：$Cov(X,Y)&#x3D;E[(X-E[X])(Y-E[Y])]$</li>
+<li>独立 &#x3D;&gt; 协方差  &#x3D;0</li>
+<li>协方差 &#x3D; 0 &#x3D;&gt; 不一定独立</li>
+<li>Cov(X,Y)&#x3D;Cov(Y,X) 对称性</li>
+<li>Cov(X,X)&#x3D;Var(X) 上面的成对问题</li>
+<li>Cov(aX,Y)&#x3D;aCov(X,Y) 变量数量倍数</li>
+<li>Cov(\sum X,\sum Y)&#x3D;\sum \sum Cov(X,Y) 线性加</li>
+<li>Var(\sum X_i)&#x3D;\sum Var(X_i) + 2 \sum \sum_{i&lt;j} Cov(X_i,X_j)</li>
+<li>$Cov(\bar{X},X_i-\bar{X})&#x3D;0$</li>
+<li>相关系数 $\rho(X,Y)&#x3D;\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$</li>
+</ul>
+<p>样本均值 $Var(\bar{X})&#x3D;\frac{\sigma^2}{n}$</p>
+<p>样本方差$S^2$</p>
+<ul>
+<li>自由度 n-1</li>
+<li>$E[S^2&#x3D;\sum \frac{(X_i-\bar{X})^2}{n-1}]&#x3D;\sigma^2$</li>
+<li>$\frac{n-1}S^2&#x2F;\sigma^2 \sim \chi^2_{n-1}$ (通过矩母函数证明)</li>
+</ul>
+<hr>
+<h4 id="条件期望"><a href="#条件期望" class="headerlink" title="条件期望"></a>条件期望</h4><ul>
+<li>$E[X|Y&#x3D;y]&#x3D;\sum_x xp_{x|y}(x|y)&#x3D;\sum_x x\frac{p(x,y)}{p_Y(y)}$</li>
+<li>$E[X|Y&#x3D;y]&#x3D;\int x p_{x|y}(x|y) dx&#x3D;\int x\frac{p(x,y)}{p_Y(y)} dx$</li>
+<li>类似的 条件下的方差定义<ul>
+<li>$Var(X|Y&#x3D;y)&#x3D;E[(X-E[X|Y&#x3D;y])^2|Y&#x3D;y]$<ul>
+<li>条件方差公式 $Var(X)&#x3D;E[Var(X|Y)]+Var(E[X|Y])$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>$E[X|Y]$表示随机变量Y的函数，本身是一个随机变量不是值</p>
+<ul>
+<li>在Y&#x3D;y处的值为 $E[X|Y&#x3D;y]&#x3D;\sum_x xP(X&#x3D;x|Y&#x3D;y)$</li>
+</ul>
+<p>命题5.1 $E[X]&#x3D;E[E[X|Y]]$</p>
+<ul>
+<li>$E[X]&#x3D;\sum_y E[X|Y&#x3D;y]P(Y&#x3D;y)$</li>
+<li>$E[X]&#x3D;\int E[X|Y&#x3D;y]f_Y(y) dy$</li>
+</ul>
+<h4 id="条件期望及预测"><a href="#条件期望及预测" class="headerlink" title="条件期望及预测"></a>条件期望及预测</h4><ul>
+<li>观测到X,基于X对第二个随机变量进行预测，</li>
+<li>预测值 g(X) 希望 最接近Y</li>
+<li>$E[(Y-g(X))^2]$ 来度量</li>
+<li>要证明的结论 $g(X)&#x3D;E[Y|X]$ 是最优的</li>
+</ul>
+<p>命题6.1： </p>
+<ul>
+<li>$E[(Y-g(X))^2]\ge E[(Y-E[Y|X])^2]$</li>
+<li>证明 $E[(Y-g(X))^2 | X]&#x3D; E[(Y-E[Y|X]+E[Y|X]-g(X))^2 | X]$</li>
+<li>$&#x3D; E[(Y-E[Y|X])^2|X]+E[(E[Y|X]-g(X))^2|X]+2E[(Y-E[Y|X])(E[Y|X]-g(X))|X]$</li>
+<li>对于最后一部分 $E[(Y-E[Y|X])(E[Y|X]-g(X))|X]$ <ul>
+<li>因为 $E[(E[Y|X]-g(X))|X]&#x3D;(E[Y|X]-g(X))$ </li>
+<li>$E[(Y-E[Y|X])(E[Y|X]-g(X))|X]$ </li>
+<li>$&#x3D;(E[Y|X]-g(X))E[(Y-E[Y|X])|X]$ </li>
+<li>$&#x3D;(E[Y|X]-g(X))(E[Y|X]-E[Y|X])$ </li>
+<li>$&#x3D;(E[Y|X]-g(X))\cdot 0$</li>
+<li>$&#x3D;0$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="矩母函数-M-t-x3D-E-e-tX"><a href="#矩母函数-M-t-x3D-E-e-tX" class="headerlink" title="矩母函数: $M(t)&#x3D;E[e^{tX}]$"></a>矩母函数: $M(t)&#x3D;E[e^{tX}]$</h4><ul>
+<li>$M(t)^{(n)}&#x3D;E[X^ne^{tX}]$ 求导<ul>
+<li>$M(0)^{(n)}&#x3D;E[X^n]$ 求导</li>
+</ul>
+</li>
+<li>重要的性质<ul>
+<li>随机变量矩母函数 唯一地确定它的分布（普林斯顿 说 有限制 在0点附近邻域可微，否则需要傅里叶分析更）</li>
+<li>$M_{\sum X_i}(t)&#x3D;\prod M_{X_i}(t)$ 对于独立的分布的和<ul>
+<li>利用矩母函数 容易证明 几个稳定分布：正态，泊松，Gamma 分布</li>
+<li>类似的 当给定一个 随机变量X， 想要证明 g(X)满足什么分布，可以用矩母函数作为工具</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>正态分布$M(t)&#x3D;e^{\mu t +\sigma^2 t^2&#x2F;2}$<ul>
+<li>标准正态分布$M(t)&#x3D;e^{t^2&#x2F;2}$</li>
+</ul>
+</li>
+</ul>
+<p>P285 有个整理表</p>
+<h2 id="8-极限定理"><a href="#8-极限定理" class="headerlink" title="8. 极限定理"></a>8. 极限定理</h2><p>重要的理论结果</p>
+<ul>
+<li>大数定律：建立 P(事件 与 常数) 与 均值，方差 的 关系<ul>
+<li>马尔可夫不等式：a &gt; 0, X 非负, 只用了 均值 $E[X]$<ul>
+<li>P(X &gt;&#x3D; a) &lt;&#x3D; $E[X]&#x2F;a$<ul>
+<li>证明 $[x &gt;&#x3D; a] &#x3D; I指标函数 &lt;&#x3D; X&#x2F;a$， 两边取期望</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>切比雪夫不等式：用了 均值 与 方差， 均值方差都有限<ul>
+<li>$P(|X-\mu|\ge k)\le \frac{\sigma^2}{k}$</li>
+<li>多用了 方差，会更“准确”，但对于一些具体的 实例会看到依然只是个很远的上界，（通常情况下，得到的概率上界与实际概率相差较大</li>
+<li>一些科学家 会用这个来说 9?% 的估计 在 多少范围</li>
+<li>单边切比雪夫不等式 $P(X \ge a) \le \frac{\sigma^2}{\sigma^2+a^2}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>中心极限定理：足够多独立同分布的 大多数分布 都将收敛于 正态分布<ul>
+<li>独立同分布 $P(\frac{\sum X_i - n\mu }{\sigma\sqrt{n}}\le a) \to \frac{1}{\sqrt{2\pi}}\int_{-\infty}^a e^{-x^2&#x2F;2} dx$ 当$x\to \infty$ 这里的a的作用是闭区间，因为这证明用的是0点展开？</li>
+<li>相互独立$P(\frac{\sum (X_i - \mu_i) }{\sum \sqrt{\sigma_i^2}}\le a) \to \frac{1}{\sqrt{2\pi}}\int_{-\infty}^a e^{-x^2&#x2F;2} dx$ 当$x\to \infty$ 这里的a的作用是闭区间，因为这证明用的是0点展开？</li>
+<li>证明核心 可以 矩母+极限（泰勒展开）</li>
+<li>历史注记： 拉普拉斯</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>8.4 强 大数定律</p>
+<ul>
+<li>独立同分布的随机变量序列的均值，以 概率1 收敛到分布的均值</li>
+<li>$X_i$独立同分布</li>
+<li>以概率1 成立$n\to \infty$时 $\bar{X} \to \mu$, </li>
+<li>换句话说，如果我们无法知道内在的概率，而可以做实验，那么实验次数无限大时，实验结果的均值就是其内在不可直接知晓的均值<ul>
+<li>注意到用内在概率 定义事件的发生函数，从而 可以实验的 发生函数的期望 趋于 内在概率</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>其它 不等式</p>
+<ul>
+<li>标准正态 切尔诺夫界$Z\sim N(0,1),M(t)&#x3D;e^{t^2&#x2F;2}$<ul>
+<li>$P(Z\ge a)\le e^{-ta}e^{t^2&#x2F;2}$</li>
+<li>其中$t&#x3D;a$时 达到极小值$P(Z\ge a)\le e^{-a^2&#x2F;2}$</li>
+</ul>
+</li>
+<li>泊松 切尔诺夫界<ul>
+<li>$M(t)&#x3D;e^{\lambda(e^t-1)}$</li>
+<li>$P(X\ge a)\le e^{\lambda(e^t-1)e^{-at}},t&gt;0$</li>
+<li>$e^{t}&#x3D;a&#x2F;\lambda$时达到最小值$P(X\ge a)\le \frac{e^{-\lambda}(e\lambda)^a}{a^a}$</li>
+</ul>
+</li>
+<li>詹森不等式， f(x)凸函数，$E[x]$存在且有限<ul>
+<li>$E[f(X)]\ge f(E[X])$, 证明 泰勒展开</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-概率论的其他课题"><a href="#9-概率论的其他课题" class="headerlink" title="9. 概率论的其他课题"></a>9. 概率论的其他课题</h2><p>泊松过程</p>
+<p>某一事件在任一时刻发生</p>
+<ul>
+<li>$N(t)$表示在时间段$[0,t]$内发生的事件数</li>
+<li>随机变量集合 {N(t),t&gt;&#x3D;0}称为具有强度$\lambda$的泊松过程$(\lambda &gt;0)$<ul>
+<li>如果 N(0)&#x3D;0 从0时刻开始</li>
+<li>在不相交的时间段内发生的事件数是相互独立的</li>
+<li>在给定时间段上发生的事件数的分布只跟该时间段的长度有关，而与时间段位置无关</li>
+<li>$P(N(h)&#x3D;1)&#x3D;\lambda h + o(h)$</li>
+<li>$P(N(h)\ge 2)&#x3D;o(h)$</li>
+</ul>
+</li>
+<li>是服从 参数为$\lambda t$ 的泊松分布</li>
+</ul>
+<p>引理 1.1 对于强度$\lambda$的泊松过程</p>
+<ul>
+<li>$P(N(t)&#x3D;0)&#x3D;e^{-\lambda t}$</li>
+<li>$P_0(t+h)&#x3D;P(N(t+h)&#x3D;0)$ 令</li>
+<li>$&#x3D;P(N(t)&#x3D;0,N(t+h)-N(t)&#x3D;0)$ 状态分解</li>
+<li>$&#x3D;P(N(t)&#x3D;0)P(N(t+h)-N(t)&#x3D;0)$ 利用独立性</li>
+<li>$&#x3D;P(N(t)&#x3D;0)P(N(h)&#x3D;0)$ 利用只与长度有关</li>
+<li>$&#x3D;P_0(t)P_0(h)$ 变形</li>
+<li>$&#x3D;P_0(t)[1-\lambda h + o(h)]$ 利用 性质4 的补</li>
+</ul>
+<p>即 $\frac{P_0(t+h)-P_0(t)}{h}&#x3D;-\lambda P_0(t)+\frac{o(h)}{h}$</p>
+<ul>
+<li>令h趋于0, $P_0’(t)&#x3D;-\lambda P_0(t)$, 右边是高阶无穷小 趋于0</li>
+<li>微分方程解 &#x3D; $P_0(t)&#x3D;Ke^{-\lambda t}$<ul>
+<li>带入特解$P_0(0)&#x3D;P(N(0)&#x3D;0)&#x3D;1$得到$P_0(t)&#x3D;e^{-\lambda t}$</li>
+<li>看起来像指数型随机变量 无记忆性</li>
+</ul>
+</li>
+<li>$T_n$ 表示第n-1个事件 到 第n个事件发生的时间间隔<ul>
+<li>$P(T_1 &gt; t)&#x3D;P(N(t)&#x3D;0)&#x3D;e^{-\lambda t}$<ul>
+<li>也就是 $T_1$具有均值 $1&#x2F;\lambda$ 的指数分布</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>命题 1.1 强度为$\lambda$的泊松过程的时间间隔 $T_i$ 相互独立，且服从均值为$1&#x2F;\lambda$的指数分布</p>
+<ul>
+<li>$S_n&#x3D;\sum_n T_i$ 具有 参数为$n, \lambda$的Gamma分布<ul>
+<li>概率密度函数$f(x)&#x3D;\lambda e^{-\lambda x}\frac{(\lambda x)^{n-1}}{(n-1)!}$</li>
+</ul>
+</li>
+</ul>
+<p>定理1.1 对于强度为$\lambda$的泊松过程</p>
+<ul>
+<li>$P(N(t)&#x3D;n)&#x3D;\frac{e^{-\lambda t}(\lambda t)^n}{n!}$<ul>
+<li>&#x3D;P(N(t)&gt;&#x3D;n)-P(N(t)&gt;&#x3D;n+1)</li>
+<li>&#x3D;P(S_n &lt;&#x3D; t) - P(S_n &lt;&#x3D; t+1)</li>
+<li>&#x3D; 两个概率密度函数积分差</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>马尔可夫链：下一个状态只由上一个状态和概率函数决定，对于更早的不关心，很像动态规划，只是概率的</p>
+<ul>
+<li>$X_i$ 表示i时刻的状态</li>
+<li>$P(X_{t+1}&#x3D;j|X_{t}&#x3D;i)&#x3D;P_{ij}$ 表示不论时刻的，当前状态是i,那么下一个状态是j的概率<ul>
+<li>$(\sum_j P_{ij})&#x3D;1$</li>
+</ul>
+</li>
+<li>设所有可选状态 是 0~m中的整数</li>
+<li>因此 可以有 m * m 的概率转移矩阵</li>
+</ul>
+<p>命题2.1 查普曼-科尔莫戈罗夫方程</p>
+<ul>
+<li>$(P^{n})<em>{ij}&#x3D;\sum</em>{k&#x3D;0}^M (P^r)<em>{ik} (P^{n-r})</em>{kj}$</li>
+<li>注意 这里书上$P_{ij}^n$, 它并不是 $P_{ij}$的n次方，而是n次移动$P^n$，从$i$到$j$的概率<ul>
+<li>$(P^n)<em>{ij}&#x3D;P(X</em>{n+m}&#x3D;j | X_m&#x3D;i)$</li>
+</ul>
+</li>
+</ul>
+<p>定理2.1 对于遍历的(?)马尔可夫链，</p>
+<ul>
+<li>$\pi_j&#x3D;\lim_{n\to \infty} (P^n)_{ij}$ 也就是 无论初始是什么i, 无限大移动后，收敛到只和j有关的数，从线性代数的观点上看，转移矩阵最后会达到一个稳态</li>
+<li>存在，并且 是 $\sum \pi_j &#x3D;1, \pi_j&#x3D;\sum_{k&#x3D;0}^M \pi_kP_{kj}$ 的 唯一非负解<ul>
+<li>从极限角度看 稳态会有这个结果</li>
+<li>但这个方程组，是 M 元，M+1个等式 的线性方程组, 如何唯一非负解？</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>惊奇 不确定性，熵</p>
+<ul>
+<li>S(p 概率)</li>
+<li>公理1. S(1)&#x3D;0 一定发生的事件 不会 惊奇</li>
+<li>公理2. p &lt; q则S(p) &gt; S(q), 随着概率增大 越来越不惊奇</li>
+<li>公理3. S(p) 连续</li>
+<li>公理4. S(pq)&#x3D;S(p)+S(q), 这里希望的满足后验概率的转移情况</li>
+<li>定理3.1 若S() 满足 公理1~3 则 $S(p)&#x3D;-C\log_2P$<ul>
+<li>证明 $S(p^x)&#x3D;xS(p)$ 可&#96;加 &#x3D;&gt; 整数 &#x3D;&gt; 1&#x2F;n 整数倒数 &#x3D;&gt; m&#x2F;n 有理数 &#x3D;&gt; 稠密+连续 所有非负实数</li>
+<li>那么希望 $S(p)&#x3D;xS(v)$, 其中v是常数, $p&#x3D;v^x$, $S(p)&#x3D;\log_v p S(v)$<ul>
+<li>例如$v&#x3D;1&#x2F;2$ 有$S(p)&#x3D;-S(v)\log_2p$</li>
+<li>通常情况 令C&#x3D;1,</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>观察到随机变量X的值，引起的平均惊奇 $H(X)&#x3D;-\sum_{i&#x3D;1}^n p_i\log p_i$ 也就是 惊奇值的加权平均<ul>
+<li>信息论中称作 熵</li>
+<li>多变量 联合不确定性 $H(X,Y)&#x3D;-\sum_i\sum_jp(x_i,y_j)\log p(x_i,y_j)$<ul>
+<li>$&#x3D;-\sum_i\sum_j p_{Y}(y_j)p(x_i|y_j)[\log p_Y(y_j)+\log p(x_i|y_j)]$</li>
+<li>$&#x3D;-\sum_i p_{Y}(y_j)\log p_Y(y_j)\sum_j p(x_i|y_j)-\sum_i p_{Y}(y_j)\sum_j p(x_i|y_j)\log p(x_i|y_j)$</li>
+<li>$&#x3D;H(Y)+H_Y(X)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>引理3.1 $\ln x \le x-1$ 只有x&#x3D;1时等号成立</p>
+<p>定理3.2 $H_Y(X)\le H(X)$, 等号成立条件是$Y,X$相互独立</p>
+<ul>
+<li>做差</li>
+</ul>
+<hr>
+<p>编码定理与熵</p>
+<ul>
+<li>编码本身的要求：唯一解码</li>
+<li>额外期望：基于概率期望上的尽量短</li>
+</ul>
+<p>引理4.1 X的可能取值为$x_1,\cdots,x_n$ 为了把它们编成长度为$n_1,\cdots,n_{N}$的0-1序列（不能让其中任何一个序列 是其它序列的前缀）</p>
+<ul>
+<li>充要条件 $\sum (\frac{1}{2})^{n_i}\le 1$<ul>
+<li>长度i的编码个数 $w_i$</li>
+<li>$w_1 \le 2$</li>
+<li>$w_2 \le 2^2-2w_1$</li>
+<li>$w_n \le 2^n-2w_{n-1}-2^2w_{n-2}-\cdots-2^{n-1}w_1$</li>
+</ul>
+</li>
+</ul>
+<p>定理4.1 无噪声编码定理</p>
+<ul>
+<li>X取值 $x_1\cdots x_n$</li>
+<li>概率$p(x_i)$</li>
+<li>编码为长度$n_i$二进制串</li>
+<li>$\sum n_ip(x_i)\ge H(X)&#x3D;-\sum p(x_i)\log p(x_i)$<ul>
+<li>分配权重 $2^{-n_i}$,用 $q_i&#x3D;\frac{2^{-n_i}}{\sum_N 2^{-n_j}}$ 表示 这个权重占比</li>
+<li>$\sum n_ip(x_i) \ge -\sum p(x_i)\log q_i \ge -\sum p(x_i)\log p(x_i)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-模拟"><a href="#10-模拟" class="headerlink" title="10. 模拟"></a>10. 模拟</h2><p>用试验的方式 + 强 大数定律 来计算概率 的方式，称作模拟</p>
+<p>伪随机数生成器 $X_{n+1}&#x3D;(a X_n+c) \mod m$</p>
+<p>$X_n&#x2F;m$ 近似在（0,1）上均匀分布</p>
+<p>例1a 产生随机排列</p>
+<ul>
+<li>初始化<code>a[i]=i</code></li>
+<li>执行n次, 第i次 在$[i,n]$ 中 随机一个位置，和<code>a[i]</code>交换</li>
+<li>首先 排列的总个数是 n!, 那我们可以把它看成一个神奇的变进制！，上面每次操作都是 选定最高位</li>
+</ul>
+<p>10.2 模拟连续型随机变量的一般方法</p>
+<p>10.2.1 逆变换方法</p>
+<ul>
+<li>U 是(0,1)上均匀随机变量，F为任意一个连续分布函数</li>
+<li>定义随机变量$Y&#x3D;F^{-1}(U)$<ul>
+<li>$g_Y(a)&#x3D;P(Y\le a)&#x3D;P(F^{-1}(U)\le a)&#x3D;P(U\le F(a))&#x3D;F(a)$</li>
+<li>因此 Y具有分布函数F</li>
+</ul>
+</li>
+<li>指数随机变量<ul>
+<li>$F(x)&#x3D;1-e^{-x}$</li>
+<li>$F^{-1}(U)&#x3D;-\ln(1-U)$</li>
+<li>$&#x3D;-\ln(U_1)$, 因为1-U也是 (0,1)上均匀分布</li>
+</ul>
+</li>
+<li>$\Gamma(n,\lambda)$<ul>
+<li>利用Gamma和指数分布之间关系</li>
+<li>$&#x3D;\sum_n -\frac{1}{\lambda} \ln U_i$</li>
+<li>$&#x3D;-\frac{1}{\lambda} \ln(\prod_n U_i)$</li>
+<li>$\chi^2_{2k}\sim \Gamma(k,1&#x2F;2)$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>10.2.2 舍取法</p>
+<ul>
+<li><p>如果有能模拟密度函数 g(x)的随机变量，首先产生这样一个Y</p>
+</li>
+<li><p>正比于 f(Y)&#x2F;g(Y)的概率采用Y的值</p>
+</li>
+<li><p>常数c, $\forall y, \frac{f(y)}{g(y)}\le c$</p>
+</li>
+<li><p>第一步 模拟有密度g的Y,同时产生U</p>
+</li>
+<li><p>第二步 若 $U \le f(Y)&#x2F;[cg(Y)]$ 则X&#x3D;Y否则回到第一步</p>
+</li>
+<li><p>由这个步骤产生的 随机变量 具有密度函数f</p>
+</li>
+</ul>
+<p>证明： N 是次数</p>
+<ul>
+<li>$P(X \le x)&#x3D;P(Y_N\le x)$</li>
+<li>$&#x3D;P(Y\le x| U\le \frac{f(Y)}{cg(Y)})$</li>
+<li>$&#x3D;\frac{ P(Y\le x, U\le \frac{f(Y)}{cg(Y)})}{P(U\le \frac{f(Y)}{cg(Y)}))}$ 注意到分母是与x无关的常数 令它为K</li>
+<li>分子化成积分形式，注意到 U和Y独立，联合分布$f(y,u)&#x3D;f_Y(y)f_U(u)&#x3D;f_Y(y)&#x3D;g(y)$<ul>
+<li>从而 可得表达式</li>
+<li>还能得到$cK&#x3D;1$</li>
+</ul>
+</li>
+</ul>
+<p>模拟正态分布：</p>
+<ol>
+<li>Y 模拟 均值为1的指数函数 ，其密度函数 $g(x)&#x3D;e^{-x}$</li>
+<li>$f(x)&#x2F;g(x) \le  \sqrt{\frac{2e}{\pi}}&#x3D;c$</li>
+<li>所以接受条件为 $U\le e^{-(Y-1)^2&#x2F;2}$</li>
+</ol>
+<hr>
+<p>模拟 离散分布：</p>
+<ul>
+<li>核心还是 U + 逆变换</li>
+</ul>
+<hr>
+<p>10.4 方差缩减技术</p>
+<ul>
+<li>$X_1,\cdots,X_n$ 具有给定的联合分布，希望计算$\theta&#x3D;E[g(X_1,\cdots,X_n)]$<ul>
+<li>函数g已知</li>
+<li>k轮<ul>
+<li>每轮 都是模拟n个X,计算出$Y_{1\cdots k}$</li>
+<li>$\theta &#x3D; E[\bar{Y}]$</li>
+<li>$Var(\bar{Y})&#x3D;  E[(\bar{Y}-\theta)^2]$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>10.4.1 对偶变量</p>
+<ul>
+<li>$Var(\frac{Y_1+Y_2}{2})&#x3D;\frac{1}{4}[Var(Y_1)+Var(Y_2)+2Cov(Y_1,Y_2)]&#x3D;\frac{1}{2}Var(Y_1)+\frac{1}{2}Cov(Y_1,Y_2)$</li>
+<li>为了方差减小，我们希望负相关而不是独立</li>
+<li>先假定$X_1,\cdots,X_n$ 相互独立</li>
+<li>那么$X_1^{(2)},\cdots X_n^{(2)}$ 的产生方法用$g(F^{-1}_i(1-U_i),\cdots)$ 的方法产生，因为1-U_i也是均匀分布，而且与U_i负相关</li>
+</ul>
+<p>10.4.2 利用条件</p>
+<ul>
+<li>7.5.4 $Var(Y)&#x3D;E[Var(Y|Z)]+Var(E[Y|Z])$</li>
+<li>如果存在Z,能计算$E[Y|Z]$ <ul>
+<li>那么因为$Var(E[Y|Z]) \le Var(Y), E[Y]&#x3D;E[E[Y|Z]]$ 是更好的估计</li>
+<li>也就是，我们能对每个细分场景的内容进行估计</li>
+</ul>
+</li>
+</ul>
+<p>10.4.3 控制变量</p>
+<ul>
+<li>希望模拟来估计$E[g(X_i\cdots)]$, 已知$E[f(X_i\cdots)]&#x3D;\mu$ </li>
+<li>对任何常数a， 用$W&#x3D;g(X)+a[f(X)-\mu]$, 分析学中的导数为零来找点的想法</li>
+</ul>
+<h2 id="碎片"><a href="#碎片" class="headerlink" title="碎片"></a>碎片</h2><p>TODO</p>
+<ul>
+<li><p>这 1章习题做得我觉得 组合恒等式需要cheatsheet了</p>
+</li>
+<li><p>我感觉这书的定理讲解比 普林斯顿读本好啊,</p>
+<ul>
+<li>更值得反复阅读</li>
+</ul>
+</li>
+<li><p>普林斯顿的 矩，差分恒等式不错</p>
+</li>
+<li><p>联合分布的确该放到具体分布前面讲</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/" title="概率论基础教程">https://yexiaorain.github.io/Math/A_First_Course_in_Probability/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag"><i class="fa fa-tag"></i> 概率论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/the_probability_lifesaver/" rel="prev" title="普林斯顿 概率论读本">
+                  <i class="fa fa-chevron-left"></i> 普林斯顿 概率论读本
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_1/" rel="next" title="Walter Rudin 数学分析原理 1 实数系与复数系">
+                  Walter Rudin 数学分析原理 1 实数系与复数系 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">491k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">7:26</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/Math/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/Math/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/A_First_Course_in_Probability/"}</script>
+  <script src="/Math/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yexiaorain","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/Math/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

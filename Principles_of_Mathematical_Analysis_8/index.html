@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="一些特殊函数 some special functions幂级数 power series$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n x^n$， 在0点展开 更一般 $f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n (x-a)^n$ 在a点展开 这些都称作解析函数 analytic functions  限制x实值，（不会遇到 3.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Walter Rudin 数学分析原理 8 一些特殊函数">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="一些特殊函数 some special functions幂级数 power series$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n x^n$， 在0点展开 更一般 $f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n (x-a)^n$ 在a点展开 这些都称作解析函数 analytic functions  限制x实值，（不会遇到 3.">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-03-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-30T07:28:50.962Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数学分析">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/","path":"Principles_of_Mathematical_Analysis_8/","title":"Walter Rudin 数学分析原理 8 一些特殊函数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Walter Rudin 数学分析原理 8 一些特殊函数 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">49</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">11</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">81</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0-some-special-functions"><span class="nav-text">一些特殊函数 some special functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%82%E7%BA%A7%E6%95%B0-power-series"><span class="nav-text">幂级数 power series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0%E4%B8%8E%E5%AF%B9%E6%95%B0%E5%87%BD%E6%95%B0-the-exponential-and-logarithmic-functions"><span class="nav-text">指数函数与对数函数 the exponential and logarithmic functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0-the-trigonometric-functions"><span class="nav-text">三角函数 the trigonometric functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E5%9F%9F%E7%9A%84%E4%BB%A3%E6%95%B0%E5%AE%8C%E5%A4%87%E6%80%A7-the-algebraic-completeness-of-the-complex-field"><span class="nav-text">复数域的代数完备性 the algebraic completeness of the complex field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fourier%E7%BA%A7%E6%95%B0-fourier-series"><span class="nav-text">Fourier级数 fourier series</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gamma%E5%87%BD%E6%95%B0-the-gamma-functions"><span class="nav-text">Gamma函数 the gamma functions</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YeXiaoRain"
+      src="https://avatars.githubusercontent.com/u/7298239?v=4">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">81</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yexiaorain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yexiaorain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yexiaorain@gmail.com" title="E-Mail → mailto:yexiaorain@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://atcoder.jp/users/cromarmot" title="https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;cromarmot" rel="noopener" target="_blank">AtCoder</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://codeforces.com/profile/YeXiaoRain" title="https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;YeXiaoRain" rel="noopener" target="_blank">Codeforces</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Walter Rudin 数学分析原理 8 一些特殊函数 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Walter Rudin 数学分析原理 8 一些特殊函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-03-10 00:00:00" itemprop="dateCreated datePublished" datetime="2025-03-10T00:00:00+08:00">2025-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-03-30 15:28:50" itemprop="dateModified" datetime="2025-03-30T15:28:50+08:00">2025-03-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/Math/Principles_of_Mathematical_Analysis_8/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Principles_of_Mathematical_Analysis_8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>16k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>14 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <span id="more"></span>
+
+<h2 id="一些特殊函数-some-special-functions"><a href="#一些特殊函数-some-special-functions" class="headerlink" title="一些特殊函数 some special functions"></a>一些特殊函数 some special functions</h2><h3 id="幂级数-power-series"><a href="#幂级数-power-series" class="headerlink" title="幂级数 power series"></a>幂级数 power series</h3><p>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n x^n$， 在0点展开</p>
+<p>更一般 $f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n (x-a)^n$ 在a点展开</p>
+<p>这些都称作解析函数 analytic functions</p>
+<ul>
+<li>限制x实值，（不会遇到 3.39 收敛圆）而是面向收敛区间</li>
+</ul>
+<p>8.1 假设对于 $|x| &lt; R$级数$\sum_{n&#x3D;0}^{\infty} c_nx^n$收敛</p>
+<ul>
+<li>令$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty} c_nx^n, |x| &lt; R$</li>
+<li>那么 任意$\epsilon &gt; 0$, $f(x)$在$[-R+\epsilon,R+\epsilon]$上一致收敛，在(-R,R)连续，可微，且</li>
+<li>$f’(x)&#x3D;\sum_{n&#x3D;1}^{\infty} nc_nx^{n-1}, |x|&lt; R$</li>
+<li>证明<ul>
+<li>$|c_nx^n|\le |c_n(R-\epsilon)^n|$<ul>
+<li>$\sum c_n(R-\epsilon)^n$ 绝对收l敛(3.39 收敛半径内绝对收敛)，由7.10（被值控制，值收敛，则一致收敛） $f_n$ 一致收敛</li>
+</ul>
+</li>
+<li>根据收敛半径 $R$ 的定义，而导函数中$R&#x3D;\sup \lim_{n\to\infty} \sqrt[n]{nc_n} &#x3D;\sup \lim_{n\to\infty} \sqrt[n]{c_n}$ ，所以 幂级数 和 幂级数导数 的定义域相同</li>
+<li>幂级数导数在$[-R-\epsilon,R+\epsilon]$一致收敛，7.17(一致收敛与微分保持)，可证明 收敛到导数</li>
+<li>对于任意 $x&lt;R$ 能找到$\epsilon$</li>
+<li>连续性 5.2 可微则连续</li>
+</ul>
+</li>
+<li>推论<ul>
+<li>$(-R,R)$内有任意阶的导数</li>
+<li>特别的$f^{(k)}(0)&#x3D;k!c_k$</li>
+<li>注意的是 这里看上去 f 与 ($c_k$列) 构成一一对应关系，但这里有前提是0的邻域收敛，如果一个在邻域收敛但是任然任意阶可导的函数的反向是不能得到原函数的 <ul>
+<li>$f(x)&#x3D;e^{-\frac{1}{x^2}}, f(x)&#x3D;0(当x&#x3D;0)$ 它任意阶导系数为0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>补充 在一个端点 例如x&#x3D;R 如果也收敛，那么也连续</li>
+</ul>
+<p>这类的东西好想画2x2的方格，每次都是“冂”形状的证明路径</p>
+<p>8.2 $\sum c_n$收敛, 令$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_n x^n, x\in(-1,1)$</p>
+<ul>
+<li>Abel 定理</li>
+<li>$\lim_{x\to 1} f(x)&#x3D;\sum_{n&#x3D;0}^{\infty} c_n$</li>
+<li>$s_n&#x3D;\sum_n c_i, s_{-1}&#x3D;0$</li>
+<li>$\sum_{i&#x3D;0}^m c_i x^i&#x3D;\sum_{i&#x3D;0}^m (s_i-s_{i-1}) x^i&#x3D;(1-x)\sum_{i&#x3D;0}^{m-1}s_ix^i +s_mx^m$</li>
+<li>$|x|&lt;1$让$m\to \infty$, 便有$f(x)&#x3D;\lim_{m\to\infty} \sum_{i&#x3D;0}^m c_ix^i&#x3D;(1-x)\sum_{n&#x3D;0}^{\infty} s_nx^n$, 这里用到了$s_m$是收敛的 所以末项 &#x3D;$常数邻域 * (&lt;1)^\infty &#x3D;0$</li>
+<li>$s&#x3D;\lim {s_{n\to\infty}}&#x3D;\sum c_n$</li>
+<li>$|f(x)-s|&#x3D;|(1-x)\sum_{n&#x3D;0}^{\infty}(s_n-s)x^n|$ 因为$(1-x)\sum_{n&#x3D;0}^{\infty} x^n&#x3D;1$</li>
+<li>$\le (1-x)\sum_{n&#x3D;0}^N |s_n-s||x|^n+\epsilon&#x2F;2$ 这里N是 根据epsilon选的，用来控制 无穷段$|s_n-s|$的距离</li>
+<li>在此情况下，通过控制1的邻域$1-\delta$,使得 左侧可以任意小， 所以总体能被控制，所以在这个邻域里 $f(x)$可以任意近，从而证明</li>
+</ul>
+<p>8.3 设有二重序列{$a_{ij}$} 设$b_{i}&#x3D;\sum_{j&#x3D;1}^{\infty}|a_{ij}|$</p>
+<ul>
+<li>并且$\sum b_{i}$收敛</li>
+<li>那么$\sum_{i&#x3D;1}^{\infty} \sum_{j&#x3D;1}^{\infty} a_{ij}&#x3D;\sum_{j&#x3D;1}^{\infty} \sum_{i&#x3D;1}^{\infty} a_{ij}$</li>
+<li>令E是点$x_{0}\dots$组成的可数集，且$x_{\infty}\to x_{0}$ (强行取和令</li>
+<li>$f_{i}(x_{0})&#x3D;\sum_{j&#x3D;1}^{\infty}a_{ij}$</li>
+<li>$f_{i}(x_{n &gt; 0})&#x3D;\sum_{j&#x3D;1}^{n}a_{ij}$</li>
+<li>$g(x)&#x3D;\sum_{i&#x3D;1}^{\infty}f_{i}(x)$, 根据7.11 可以交换lim顺序 g在$x_{0}$连续</li>
+<li>那么$\sum_{i&#x3D;1}^{\infty} \sum_{j&#x3D;1}^{\infty} a_{ij}$</li>
+<li>$&#x3D;\sum_{i&#x3D;1}^{\infty}f_{i}(x_{0})$</li>
+<li>$&#x3D;g(x_0)$</li>
+<li>$&#x3D;\lim_{ n \to \infty }g(x_{n})$， 使用在$x_{0}$连续</li>
+<li>$&#x3D;\lim_{ n \to \infty }\sum_{i&#x3D;1}^{\infty}f_{i}(x_{n})$</li>
+<li>$&#x3D;\lim_{ n \to \infty }\sum_{i&#x3D;1}^{\infty}\sum_{j&#x3D;1}^{n}a_{ij}$</li>
+<li>$&#x3D;\lim_{ n \to \infty }\sum_{j&#x3D;1}^{n}\sum_{i&#x3D;1}^{\infty}a_{ij}$</li>
+<li>$\sum_{j&#x3D;1}^{\infty} \sum_{i&#x3D;1}^{\infty} a_{ij}$</li>
+<li>这里 f,g以及$x_i$的点列真的 凭空而来，却通过 $x_{\infty}\to x_{0}$ 来让g在点连续完成证明</li>
+</ul>
+<p>8.4 设 $f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_{n}x^n$</p>
+<ul>
+<li>在$|x|&lt; R$内收敛, 若f便可以在x&#x3D;a附近展称幂级数， 在$|x-a|&lt;R-|a|$中收敛，且</li>
+<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n$</li>
+<li>也就是 幂级数，可以在收敛半径内的点a, 新的半径内 展开</li>
+<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_{n}[(x-a)+a]^n$</li>
+<li>$&#x3D;\sum_{n&#x3D;0}^{\infty}c_{n} \sum_{m&#x3D;0}^{n} \binom{n}{m}a^{n-m}(x-a)^m$</li>
+<li>$&#x3D;\sum_{m&#x3D;0}^{\infty}<a href="x-a"> \sum_{n&#x3D;m}^{\infty} \binom{n}{m}c_{n}a^{n-m}</a>^m$</li>
+<li>这里 要证明 顺序变换是 正当的validity</li>
+<li>根据8.3 要证明$\sum_{n&#x3D;0}^{\infty} \sum_{m&#x3D;0}^{n}|c_{n} \binom{n}{m}a^{n-m}(x-a)^m|$ 收敛<ul>
+<li>$&#x3D;\sum_{n&#x3D;0}^{\infty} |c_{n}|(|x-a|+|a|)^n$ 是收敛</li>
+</ul>
+</li>
+</ul>
+<p>8.5 级数$\sum a_{n}x^n, \sum b_{n}x^n$在开区间$S&#x3D;(-R,R)$中收敛，S里有些x使得 $\sum_{n&#x3D;0}^{\infty}a_{n}x^n&#x3D;\sum_{n&#x3D;0}^{\infty}b_{n}x^n$</p>
+<ul>
+<li>这样的所有x的集合是E,若E有极限点 属于 S,则$a_{n}&#x3D;b_{n}$</li>
+<li>证明:<ul>
+<li>$c_{n}&#x3D;a_{n}-b_{n}$令$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}c_{n}x^n, x\in S$</li>
+<li>E上$f(x)&#x3D;0$</li>
+<li>A&#x3D;E的极限点集</li>
+<li>B&#x3D;S-A</li>
+<li>因为极限点性质，B是开集</li>
+<li>对于任意A中的点$x_0$ , 根据8.4 在此点展开，那么若有非零系数，设非零系数最小幂次是k次，记作$d_k$，那么 $\frac{f(x)}{(x-x_{0})^k}(x_{0})&#x3D;d_{k}$, 从而f的一个去心邻域内 全非零$f(x_{1}\in x_{0}邻域) (x_{1}-x_0)^k \cdot d_k邻域$ 和极限点 矛盾</li>
+<li>说明 每个A中点$x_0$的一个邻域 $f(x)&#x3D;0$,从而 这个邻域 属于A, 所以A是开集，而S&#x3D;A并B, A和B均开，S是连通的，那么B为空，所以S&#x3D;A&#x3D;E，得证</li>
+</ul>
+</li>
+</ul>
+<h3 id="指数函数与对数函数-the-exponential-and-logarithmic-functions"><a href="#指数函数与对数函数-the-exponential-and-logarithmic-functions" class="headerlink" title="指数函数与对数函数 the exponential and logarithmic functions"></a>指数函数与对数函数 the exponential and logarithmic functions</h3><p>$E(z)&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{z^n}{n!}\dots(25)$</p>
+<p>比值判敛法说明这个级数对于一切复数z收敛， </p>
+<p>用3.50</p>
+<p>$E(z)E(w)&#x3D;\sum \frac{z^n}{n!} \sum \frac{w^m}{m!}&#x3D; \sum_{n&#x3D;0}^{\infty} \sum_{k&#x3D;0}^{n} \frac{z^kw^{n-k}}{k!(n-k)!}$ 考虑 n+m的和的角度来统计</p>
+<p>$&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{1}{n!} \sum_{k&#x3D;0}^{n} \binom{n}{k} z^kw^{n-k} &#x3D; \sum_{n&#x3D;0}^{\infty} \frac{(z+w)^n}{n!}$</p>
+<p>也就是 $E(z)E(w)&#x3D;E(z+w)$, 这个 在不加严格适用范围的角度看就是 $e^ze^w&#x3D;e^{z+w}$, 所以章节里是指数函数</p>
+<ul>
+<li>$E(z)E(-z)&#x3D;E(z-z)&#x3D;E(0)&#x3D;1$ emmm这不是带入0,而是 上面过程中 倒数第二个式子，注意对z+w的结果&#x3D;0时的特殊讨论？ 还是在这个情况下$(\epsilon)^0&#x3D;1$ </li>
+<li>一切z,有$E(z) &gt;0$, </li>
+<li>$E(+\infty)\to +\infty$</li>
+<li>$E(-\infty)\to 0$</li>
+<li>在$[0,\infty)$单调 $\to$ 在$(-\infty,0]$单增，全单增， 由E的定义</li>
+<li>$E’(z)&#x3D;E(z)$</li>
+<li>$E( \sum z_{i} )&#x3D;\prod E(z_{i})$</li>
+<li>$E(1)&#x3D;e$ 前面e的定义</li>
+<li>$E(n)&#x3D;e^n$ 加法扩展</li>
+<li>$E(p&#x2F;q)&#x3D;e^{p&#x2F;q}$ , 到正有理数</li>
+<li>$E(-p&#x2F;q)&#x3D;e^{-p&#x2F;q}$ 到全体有理数</li>
+<li>$e^x&#x3D;\sup e^p,p &lt; x,p\in \mathbb{Q}&#x3D;E(x)$ 到实数…(35)</li>
+</ul>
+<p>8.6 $R^1$上 按照 (25)（35定义了$e^x$</p>
+<ul>
+<li>一切x 连续且可微</li>
+<li>$(e^x)’&#x3D;e^x$</li>
+<li>$e^x &gt; 0$ 严格递增</li>
+<li>$e^{x+y}&#x3D;e^xe^y$</li>
+<li>$e^{+\infty }&#x3D;+\infty,e^{-\infty}&#x3D;0$</li>
+<li>任何n, $\lim_{ x \to \infty }x^ne^{-x}&#x3D;0$<ul>
+<li>$e^x&gt; \frac{x^{n+1}}{(n+1)!}$</li>
+<li>$x^ne^{-x}&lt; \frac{(n+1)!}{x}$</li>
+<li>指数比x的任意幂次都更快趋于 $+\infty$</li>
+</ul>
+</li>
+<li>严格递增 且可微，存在反函数L（严格递增且可微）<ul>
+<li>$E(L(y))&#x3D;y, L(E(x))&#x3D;x$</li>
+<li>$L’(E(x))E(x)&#x3D;1$<ul>
+<li>$L’(y)&#x3D;\frac{1}{y}$</li>
+<li>$L(1)&#x3D;0$</li>
+<li>$L(y)&#x3D;\int_{1}^y \frac{1}{x} dx$</li>
+</ul>
+</li>
+<li>$L(uv)&#x3D;L(u)+L(v)$</li>
+<li>$x^n&#x3D;E(nL(x))$<ul>
+<li>同样是 整数&#x3D;&gt;有理数&#x3D;&gt;实数</li>
+</ul>
+</li>
+<li>$x^a&#x3D;e^{a\log x}$</li>
+<li>$(x^a)’&#x3D;ax^{a-1}$</li>
+<li>$\lim_{ x \to +\infty }x^{-a}\log x&#x3D;0$  比任何正数次幂增长都慢，</li>
+</ul>
+</li>
+</ul>
+<p>	</p>
+<h3 id="三角函数-the-trigonometric-functions"><a href="#三角函数-the-trigonometric-functions" class="headerlink" title="三角函数 the trigonometric functions"></a>三角函数 the trigonometric functions</h3><p>$C(x)&#x3D;\frac{1}{2}[E(ix)+E(-ix)]$</p>
+<p>$S(x)&#x3D;\frac{1}{2i}[E(ix)-E(-ix)]$</p>
+<p>证明分别和 $\cos x,\sin x$一致</p>
+<ul>
+<li>$E(\bar{x})&#x3D;\bar{E(x)}$</li>
+<li>$E(ix)&#x3D;C(x)+iS(x)$ 这一切都建立在E的对于一切复数z收敛的前提下</li>
+<li>$x$实数时，C,S分别为实部和虚部$|E(ix)|^2&#x3D;E(ix)\overline{E(ix)}&#x3D;E(ix)E(-ix)&#x3D;1$</li>
+<li>$|E(ix)|&#x3D;1$, 即$C^2+S^2&#x3D;1$</li>
+<li>$C(0)&#x3D;1,S(0)&#x3D;0$</li>
+<li>$C’(x)&#x3D;-S(x),S’(x)&#x3D;C(x)$</li>
+<li>存在$C(x)&#x3D;0$</li>
+<li>$x_{0}$是使得$C(x_{0})&#x3D;0$最小正数, 定义$\pi &#x3D; 2x_{0}$??????这……..那就是看成首次定义这个常数值，圆周率，也挺好，从数分里面，e和pi都被 更数学化的定义了</li>
+<li>能得到 关于$2x_{0}&#x3D;\pi$ 的一些表达式</li>
+<li>$E(\pi i)&#x3D;-1,E(2\pi i)&#x3D;1$</li>
+<li>$E(z+2\pi i)&#x3D;E(z)$</li>
+<li>研究顺序 定义，端点，范数，导数，零点，周期</li>
+</ul>
+<p>8.7 </p>
+<ul>
+<li>$E$ 是以$2\pi i$为周期的周期函数, wow！！！</li>
+<li>C,S是以$2\pi$为周期的周期函数</li>
+<li>$0&lt;t&lt;2\pi$ ,$E(it)\neq 1$<ul>
+<li>证明: $0&lt; t &lt; \frac{\pi}{2}$<ul>
+<li>$E(it)&#x3D;x+iy$说明$0 &lt; x &lt;1,0 &lt; y &lt; 1$</li>
+<li>$E(4it)&#x3D;(x+iy)^4&#x3D;x^4-6x^2y^2+y^4+4ixy(x^2-y^2)$</li>
+<li>若为实数，则$x^2-y^2&#x3D;1$,由$C^2+S^2&#x3D;1$所以$x^2+y^2&#x3D;\frac{1}{2}$, $E(4it)&#x3D;-1$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>z是复数, $|z|&#x3D;1$, 在$[0,2\pi)$存在着唯一t,使得$E(it)&#x3D;z$<ul>
+<li>唯一: $E(it_{1})(E(it_{2}))^{-1}\neq 1$</li>
+<li>存在$z&#x3D;x+iy$, 而$C$在$[0,2\pi)$连续可取得，且$C^2+S^2&#x3D;1$</li>
+</ul>
+</li>
+<li>推论<ul>
+<li>$\gamma(t)&#x3D;E(it),0\leq t\leq 2\pi$简单闭合曲线，是平面上单位圆$\gamma’(t)&#x3D;iE(it)$</li>
+<li>长度$\int_{0}^{2\pi} |\gamma ‘(t)|dt&#x3D;2\pi$ 单位圆周长</li>
+</ul>
+</li>
+<li>这些 性质 都是E的定义和C,S的定义而没有直接几何概念</li>
+</ul>
+<h3 id="复数域的代数完备性-the-algebraic-completeness-of-the-complex-field"><a href="#复数域的代数完备性-the-algebraic-completeness-of-the-complex-field" class="headerlink" title="复数域的代数完备性 the algebraic completeness of the complex field"></a>复数域的代数完备性 the algebraic completeness of the complex field</h3><p>代数上复数域是完备的：任何复系数，不是常数多项式，必有复数根</p>
+<p>complex field is algebraically complete: every nonconstant polynomial with complex coefficients has a complex root</p>
+<p>8.8 $P(z)&#x3D;\sum_{k&#x3D;0}^{n}a_{k}z^k$, 必有某个复数z使 $P(z)&#x3D;0$</p>
+<ul>
+<li>不妨设最高次系数&#x3D;1(否则全部系数除以最高次系数), $a_{n}&#x3D;1$</li>
+<li>$\mu&#x3D;\inf |P(z)|$</li>
+<li>若$|z|&#x3D;R$ 那么<ul>
+<li>$|P(z)| \ge R^n[1-|a_{n-1}R^{-1}-\dots-|a_{0}|R^{-n}]$ 三角不等式 和 范数</li>
+<li>随着$R\to +\infty$ 右侧 $\to +\infty$, 也就是 $|z|&gt;R_{0}$ 右侧$|P(z)|&gt;\mu$ ， 因为$|P|$在以0为圆形$R_0$为半径圆面上连续，这里是圆面也就是$|z|\le R_{0}$的所有点</li>
+<li>4.16 紧度量空间 连续是函数（这里是|P|) 存在点 取到 sup和inf,所以 能有$P(z_{0})&#x3D;\mu$</li>
+<li>接下来证明$\mu &#x3D; 0$</li>
+<li>反证 $Q(z)&#x3D;\frac{P(z+z_{0})}{P(z_{0})}$ ，Q是（非 常数多项式），$Q(0)&#x3D;1$，且一切z有$|Q(z)|\ge_{1}$</li>
+<li>$Q(z)&#x3D;1+\sum_{i&#x3D;k}^n b_{i}z^i$其中$b_{k}\neq {0},b_{n}\neq {0}$</li>
+<li>根据8.7 存在实数$\theta$使得$e^{ik\theta}&#x3D;- \frac{|b_{k}|}{b_{k}}$ 这个作用是扭到实数轴上</li>
+<li>取$r&gt;0$且$r^k|b_{k}|&lt;1$<ul>
+<li>有$|1+b_{k}r^ke^{ik\theta}|&#x3D;1-r^k|b_{k}|$</li>
+<li>$|Q(re^{i\theta})|\le 1-r^k(|b_{k}|-r|b_{k+1}|-\dots-r^{n-k}|b_{n}|)$<ul>
+<li>r足够小时且可取到，右侧 括号内可以为正，从而 严格小于1,矛盾</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Fourier级数-fourier-series"><a href="#Fourier级数-fourier-series" class="headerlink" title="Fourier级数 fourier series"></a>Fourier级数 fourier series</h3><p>8.9 三角多项式是形如 $f(x)&#x3D;a_{0}+\sum_{n&#x3D;1}^{N}(a_{n}\cos nx+b_{n}\sin nx)$, x为实数的有限和，其中$a_{i},b_{i}$都是复数</p>
+<ul>
+<li>也可以写作$f(x)&#x3D;\sum_{n&#x3D;-N}^{N}c_{n}e^{inx}$, 显然每个三角多项式以$2\pi$为周期<ul>
+<li>是实多线式当且$c_{-n}&#x3D;\overline{c_{n}}$</li>
+</ul>
+</li>
+<li>$\frac{1}{2\pi} \int_{-\pi}^{\pi} e^{inx} dx$ 在$n&#x3D;0$时为1,其它整数时为0</li>
+<li>$c_{m}&#x3D;\frac{1}{2\pi} \int_{-\pi}^{\pi} f(x)e^{-imx} dx$ 或者从正交性理解, 当$|m| \ge N$时 结果为0， 称作Fourier系数</li>
+<li>定义三角级数形如 $\sum_{-\infty}^{\infty}c_{n}e^{inx}$, 部分和是上面$\sum_{-N}^{N}$的形式</li>
+<li>称作 f的傅里叶级数</li>
+<li>研究这样级数与f的关系</li>
+<li>起源于物理问题，振动理论和热传导理论，Fourier所写的 热的解析理论</li>
+</ul>
+<p>8.10  正规正交系 orthonormal</p>
+<ul>
+<li>$[a,b]$上$\phi_{n}$ 列 满足</li>
+<li>$\int_{a}^b \phi_{n}(x)\overline{\phi_{m}(x)} , dx&#x3D;0,n\neq m$ 正交， 称作正交系 orthogonal system of functions on $[a,b]$</li>
+<li>加上$\int_{a}^b \phi_{n}\overline{\phi_{n}}, dx&#x3D;1$ 也就是normal, 一起就是orthonormal</li>
+<li>例如 $[-\pi,\pi]$上函数 $(2\pi)^{- 1&#x2F;2}e^{inx}$</li>
+<li>若$\phi_{n}$是$[a,b]$上正规正交系，且 $c_n&#x3D;\int_{a}^b f(t)\overline{\phi_{n}(t)} dt$ 称作 f关于$\phi_{n}$的第n个Fourier系数<ul>
+<li>$f(x)\sim \sum_{n&#x3D;1}^{\infty}c_{n}\phi_{n}(x)$ 称作f关于$\phi$的傅里叶级数</li>
+<li>这里$\sim$仅表示按照上述计算的，并不蕴含 级数收敛的任何性质</li>
+</ul>
+</li>
+<li>另外注意8.9的形式 下标有正负，而这里 作为函数列，下标没有负，甚至没有规定 具体的函数列内的顺序</li>
+</ul>
+<p>8.11 $\phi_{n}$是$[a,b]$上的正规正交系，令$s_{n}(x)&#x3D;\sum_{m&#x3D;1}^{n}c_{m}\phi_{m}(x)$ 是f的Fourier级数的第n个部分和</p>
+<ul>
+<li>$t_{n}(x)&#x3D;\sum_{m&#x3D;1}^{n}\gamma_{m}\phi_{m}(x)$</li>
+<li>有 $\int_{a}^b |f-s_{n}|^2 , dx \leq \int_{a}^b |f-t_{n}|^2 , dx$ 这里是我们建立的 评价函数，评价逼近的最佳，越小越佳，而用的是均方 也就是差值平方的均值</li>
+<li>当且仅当$\gamma_{m}&#x3D;c_{m}$时 等号 才成立</li>
+<li>也就是说 所有$t_{n}$ 中$s_n$是 对于f的最佳均方逼近 gives the best possible mean square approximation to f</li>
+<li>也就是要证明 在上述给定评价下，$s_n$ 最好，而$t_{n}$是 和 $s_{n}$的 级数的元素结构相同，但系数不同的方案</li>
+<li>证明: <ul>
+<li>有$\int f \bar{t_{n}}&#x3D;\int f \sum \bar{\gamma_{m}}\bar{\phi_{m}}&#x3D;\sum c_{m}\bar{\gamma_{m}}$</li>
+<li>有$\int |t_{n}|^2&#x3D;\int t_{n}\bar{t_{n}}&#x3D;\int \sum \gamma_{m}\phi_{m}\sum \bar{\gamma_{k}}\bar{\phi_{k}}&#x3D;\sum |\gamma_{m}|^2$</li>
+<li>$\int |f-t_{n}|^2&#x3D;\int |f|^2-\int f \bar{t_{n}}-\int \bar{f}t_{n}+\int |t_{n}|^2$</li>
+<li>$&#x3D;\int |f|^2 -\sum c_{m}\bar{\gamma}<em>{m} - \sum \bar{c}</em>{m}\gamma_{m}+\sum \gamma_{m}\bar{\gamma}_{m}$ 带入上面的</li>
+<li>$&#x3D;\int |f|^2 - \sum |c_{m}|^2 + \sum |\gamma_{m}-c_{m}|^2$<ul>
+<li>那么 最后这个 $\ge 0$ 在$\gamma_{m}&#x3D;c_{m}$时取到</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>也有$\int |f-s_{n}|^2&#x3D;\int |f|^2 - \sum |c_{m}|^2 \ge 0$<ul>
+<li>即$\int_{a}^b|s_{n}(x)|^2 dx&#x3D;\sum |c_{m}|^2 \leq \int_{a}^b |f(x)|^2dx$</li>
+<li>前面是 $\phi$正规正交性 和 $s_n$定义得到的</li>
+</ul>
+</li>
+</ul>
+<p>8.12 上面最后式子中是$\sum_{1}^n$</p>
+<ul>
+<li>现在把n趋于$+\infty$</li>
+<li>Bessel不等式 $\sum_{n&#x3D;1}^{\infty}|c_{n}| \le \int_{a}^b |f(x)|^2 , dx$</li>
+<li>其中$c_{n}$是 上面方式得到的，</li>
+<li>特别的$\lim_{ n \to \infty } c_{n}&#x3D;0$</li>
+</ul>
+<p>8.13 三角级数Trigonometric serires，将要考虑函数以$2\pi$为周期,在$[-\pi,\pi]$上 Riemann可积分，因此在每个有界闭 上科技，那么f的Fourier级数便是</p>
+<ul>
+<li>$\sum_{-\infty}^{\infty} c_{n}e^{inx}$ 或者说关于 $e^{inx}$的正交系的 Fourier级数, 注意不normal, 乘上$\frac{1}{\sqrt{ 2\pi }}$才normal</li>
+<li>其中N项是$s_{N}(x)&#x3D;\sum_{-N}^Nc_{n}e^{inx}$</li>
+<li>$\sum_{-N}^N |c_{n}|^2\le \frac{1}{2\pi}\int_{-\pi}^\pi |f(x)|^2 , dx$</li>
+</ul>
+<p>Dirichlet 核kernel</p>
+<ul>
+<li>$\displaystyle D_N(x)&#x3D;\sum_{n&#x3D;-N}^{N}e^{inx}&#x3D;\frac{\sin(( N+ \frac{1}{2} )x ） }{\sin\left( \frac{x}{2} \right)}$<ul>
+<li>后面通过 $(e^{ix}-1)D_{N}(x)&#x3D;e^{i(N+1)x}-e^{-iNx}$两边同时乘以$e^{- ix&#x2F;2}$ 得到</li>
+</ul>
+</li>
+<li>$s_{N}(x)&#x3D;\sum_{-N}^{N} \frac{1}{2\pi}\int_{-\pi}^\pi f(t)e^{-int}dte^{inx}$</li>
+<li>$&#x3D;\frac{1}{2\pi}\int_{-\pi}^\pi f(t) \sum_{-N}^{N} e^{in(x-t)} , dt$</li>
+<li>$&#x3D;\frac{1}{2\pi}\int_{-\pi}^\pi f(t) D_{N}(x-t) , dt$</li>
+<li>$&#x3D;\frac{1}{2\pi}\int_{-\pi}^\pi f(x-t) D_{N}(t) , dt$</li>
+</ul>
+<p>8.14 Fourier逐点收敛</p>
+<ul>
+<li>如果对于点x, 有常数$\delta &gt;0, M &lt; \infty$ 对于所有$t\in (-\delta,\delta)$</li>
+<li>$|f(x+t)-f(x)|\le M|t|$</li>
+<li>便一定有 $\lim_{ N \to \infty } s_{N}(f;x)&#x3D;f(x)$</li>
+<li>证明:<ul>
+<li>$g(t)&#x3D; \frac{f(x-t)-f(x)}{\sin\left( \frac{t}{2} \right)}$<ul>
+<li>补充定义$g(0)&#x3D;0$</li>
+</ul>
+</li>
+<li>$\frac{1}{2\pi}\int <em>{-\pi}^\pi D</em>{N}(x) , dx &#x3D;1$</li>
+<li>$s_{N}(f;x)-f(x)&#x3D;\frac{1}{2\pi}\int <em>{-\pi}^\pi (f(x-t)-f(x))D</em>{N}(t)  , dt$<ul>
+<li>$&#x3D;\frac{1}{2\pi}\int_{-\pi}^\pi g(t) \sin\left( \left( N+\frac{1}{2} \right)t \right) , dt$</li>
+<li>$&#x3D;\frac{1}{2\pi}(\int [g(t)\cos\left( \frac{t}{2} \right)]\sin(Nt)dt+\int [g(t)\sin\left( \frac{t}{2} \right)]\cos(Nt)dt )$ </li>
+<li>左边方括号里 $\le \frac{M| t|}{\tan \frac{t}{2}}$ 有界</li>
+<li>右边方括号里 $\le M| t|$ 有界</li>
+<li>而这两个积分 可以看成8.12 中 方括号中关于，sinNt,cosNt 的取系数，所以会趋于0（注意并不是因为N 变大而趋于0（虽然也是），而是因为列趋于无穷而趋于0）</li>
+</ul>
+</li>
+<li>所以 逐点收敛到f</li>
+</ul>
+</li>
+<li>推论： 某个some segment J 区间内J内一切x, f(x)&#x3D;0,那么每个$x\in J$ ,$\lim s_{N}(f;x)&#x3D;0$<br>  - 另一个表述，x邻域neighborhood的一切t, $f(t)&#x3D;g(t)$ 那么$N\to \infty$时<br>  - $s_{N}(f;x)-s_{N}(g;x)&#x3D;s_{N}(f-g;x)\to 0$<br>  - 局部化定理 localization theorem<br>      - {$s_{N}(f;x)$}序列 的behaviour, as far as convergence is concerned, depends only on the values of f in some (arbitrarily small)neighborhood of x<br>      - 两个Fourier series 可能在one interval有相同的 behavior,但是 在other interval 完全不同的behave<br>      - 而幂级数 8.5 开区间中 两个幂级数相等的点还有极限点会让两个幂级数相等<br>          - 而 Fourier级数没有这个性质</li>
+</ul>
+<p>8.15 f连续 以$2\pi$为周期，且$\epsilon &gt;0$那么便有一个三角多项式P,对一切实数x 有$|P(x)-f(x)|&lt;\epsilon$</p>
+<ul>
+<li>$x\to e^{ix}$ 把$R^1$上的f映射到 单位圆T上的函数</li>
+<li>三角多项式，形成一个复数自伴代数$\mathscr{A}$ 能分离T上的点，不在T的点消失，T紧，那么$\mathscr{A}$在$\mathscr{C}(T)$内稠密，得证</li>
+</ul>
+<p>8.16 Parseval 定理 f,g都是 Riemann可积 且周期为$2\pi$的函数</p>
+<ul>
+<li>$f(x)\sim \sum c_{n}e^{inx},g(x) \sim \sum \gamma_{n}e^{inx}$</li>
+<li>那么 $\lim_{ N \to \infty } \frac{1}{2\pi}\int_{-\pi}^{\pi} |f(x)-s_{N}(f;x)|^2dx&#x3D;0$ 书上勘误s好几个写成大写了<ul>
+<li>均平方 趋于0</li>
+</ul>
+</li>
+<li>令 $||h||_{2}&#x3D;(\frac{1}{2\pi}\int _{-\pi}^\pi |f(x)|^2 dx)^{1&#x2F;2}$<ul>
+<li>勘误 中文书 这里开始$\epsilon &lt;0$了</li>
+<li>$||f-s_N(f)||<em>2$ 拆成$f-h,h-s</em>{N}(h),s_{N}(h)-s_{N}(f)$<ul>
+<li>第一个 对于 f黎曼可积，那么根据6章习题12 有，一个合适的分法下 有连续函数h(在该分法下每段变成首位不变线段)，g在上下和在f上下和之间，那么$||f-h||_{2} &lt; \epsilon$</li>
+<li>第二个 根据8.15 存在三角多项式P 和$||P-h||_2 &lt; \epsilon$<ul>
+<li>8.11 $s_N$是最优 均方，那么能找到更优的 幂次比P更大的 $s_{N}(h)$, 使得$||h-s_{N}(h)||<em>{2} \leq ||h-P||</em>{2} &lt; \epsilon$</li>
+</ul>
+</li>
+<li>第三个$&#x3D;||s_{N}(h-f)||<em>{2}$ 根据8.11 $\le ||h-f||</em>{2} &lt;\epsilon$</li>
+<li>再加上三角不等式6章练习11</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$\frac{1}{2\pi}\int <em>{-\pi}^\pi f(x)\overline{g(x)} dx &#x3D; \sum</em>{-\infty}^{\infty} c_{n}\bar{\gamma}_{n}$<ul>
+<li>$\frac{1}{2\pi}\int <em>{-\pi}^\pi |f(x)|^2 dx &#x3D; \sum</em>{-\infty}^{\infty} |c_{n}|^2$</li>
+<li>这两个也就是上面的 方法 不过用$s_{N}(f)$来替换f,最后schwarz不等式</li>
+<li>$|\int f \bar{g}-\int s_{N}(f)\bar{g}|\leq \int |f-s_{N}(f)||g| \leq \left( \int |f-s_{N}|^2 \int |g|^2 \right)^{1&#x2F;2}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="Gamma函数-the-gamma-functions"><a href="#Gamma函数-the-gamma-functions" class="headerlink" title="Gamma函数 the gamma functions"></a>Gamma函数 the gamma functions</h3><p>与阶乘有密切的关系，时常在分析学的医疗不道德地方出现。 </p>
+<ul>
+<li>延伸阅读 P.J.Davis: Amer.Math.Monthly 1959年</li>
+<li>Artin的书</li>
+</ul>
+<p>以下也可以看作习题</p>
+<p>8.17 定义 $0 &lt; x &lt; \infty$时</p>
+<ul>
+<li>$\Gamma(x)&#x3D;\int_{0}^{\infty}t^{x-1}e^{-t} , dx$</li>
+<li>对于这些x,该积分收敛</li>
+<li>有几个玩法<ul>
+<li>$\int_{0}^1 x^n \log xdx$ 用分部积分 最后换元</li>
+<li>$\int_{0}^\infty e^{-ct}dt&#x3D;\frac{1}{c}$ 对于常数成立，现在把c换成y 然后n次导，最后取点1</li>
+<li>还是上面式子, c用1-x代换，右边&#x3D;$\sum x^i$，然后 与x相关展开称幂级数，认为 同幂次的 系数相等，而系数就是这个表达式</li>
+</ul>
+</li>
+</ul>
+<p>8.18 定理 $(0,\infty)$ 定义域上</p>
+<ul>
+<li>$\Gamma(x+1)&#x3D;x\Gamma(x)$ 分部积分可证明</li>
+<li>$\Gamma(n+1)&#x3D;n!$, 根据$\Gamma(1)&#x3D;1$归纳法可证明</li>
+<li>$\log\Gamma$ 是凸的<ul>
+<li>6.章习题10 Holder不等式</li>
+<li>$\Gamma\left( \frac{x}{p}+ \frac{x}{q} \right)\leq \Gamma(x)^{1&#x2F;p}\Gamma(y)^{1&#x2F;q}$<br>8.19 Bohr与Mollerup发现, these 3 properties characterize $\Gamma$ completely</li>
+</ul>
+</li>
+<li>即 如果满足上述性质 正值函数，那么 这样的函数 $f&#x3D;\Gamma$</li>
+<li>也就是证明是满足上述性质的唯一函数</li>
+<li>证明：<ul>
+<li>注意到 第一条，所以只用关心(0,1)上的性质</li>
+<li>$\varphi&#x3D;\log f$<ul>
+<li>有 $\varphi(x+1)&#x3D;\varphi(x)+\log x$<ul>
+<li>对于$x\in(0,1)有 $\varphi(n+1+x)&#x3D;var(x)+\log[x(x+1)\dots(x+n)]$</li>
+</ul>
+<p>		</p>
+</li>
+<li>$\varphi(1)&#x3D;0$ 且$\varphi$是凸的<ul>
+<li>对于正整数 $\varphi(n+1)&#x3D;\log(n!)$</li>
+</ul>
+</li>
+<li>凸的: 对于$x\in(0,1)$<ul>
+<li>$\frac{\varphi(n+1)-\varphi(n)}{(n+1)-n}\le \frac{\varphi(n+1+x)-\varphi(n+1)}{(n+1+x)-(n+1)} \le \frac{\varphi(n+2)-\varphi(n+1)}{(n+2)-(n+1)}$</li>
+<li>$\log n\le \frac{\varphi(n+1+x)-\varphi(n+1)}{x} \le \log(n+1)$</li>
+<li>乘x减去$\log n$</li>
+<li>$0 \leq \varphi(x)-\log\left[  \frac{n!n^x}{x(x+1)\dots(x+n)} \right] \leq x \log\left( 1+ \frac{1}{n} \right)$<ul>
+<li>最右，n趋于无穷时趋于0 证明了唯一性？</li>
+<li>得到了$\Gamma(x)&#x3D;\lim_{ n \to \infty } \frac{n!n^x}{x(x+1)\dots(x+n)}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>好吧 这是证明唯一性了，还是想说如果没有定义式有办法得到吗</li>
+</ul>
+<p>8.20 这中文翻译beta就翻译了个B，离谱。Beta函数,第一欧拉积分</p>
+<ul>
+<li>$Beta(x,y)&#x3D;\int_{0}^1 t^{x-1}(1-t)^{y-1}dt&#x3D;\frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$ 这里 也一定程度上 说明为了好看，那更需要委屈一下上面的$\Gamma(n+1)&#x3D;n$而不是$\Gamma(n)&#x3D;n$</li>
+<li>$B(1,y)&#x3D;\frac{1}{y}$</li>
+<li>对于每个固定y是x的凸函数</li>
+<li>$B(x+1,y)&#x3D;\frac{x}{x+y}B(x,y)$<ul>
+<li>证明分部积分</li>
+</ul>
+</li>
+<li>$\Gamma(x)&#x3D;\frac{\Gamma(x+y)}{\Gamma(y)}B(x,y)$</li>
+</ul>
+<p>8.21 一些推论 $t&#x3D;\sin^2\theta$</p>
+<ul>
+<li>$2\int_{0}^{\pi&#x2F;2} (\sin\theta)^{2x-1}(\cos\theta)^{2y-1}&#x3D;\frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$</li>
+<li>特别的$\Gamma\left( \frac{1}{2} \right)&#x3D;\sqrt{ \pi }$</li>
+<li>另一方面 $\Gamma(x)&#x3D;2\int_{0}^{\infty}s^{2x-1}e^{-s^2}ds$<ul>
+<li>$\int_{-\infty}^{\infty}e^{-s^2}ds&#x3D;\Gamma\left( \frac{1}{2} \right)&#x3D;\sqrt{ \pi }$</li>
+</ul>
+</li>
+<li>$\displaystyle \Gamma(x)&#x3D;\frac{2^{x-1}\left( \Gamma\left( \frac{x}{2} \right) \Gamma\left( \frac{x+1}{2} \right) \right)}{\Gamma\left( \frac{1}{2} \right)}$ …… ???? how</li>
+</ul>
+<p>8.22 stirling 公式</p>
+<ul>
+<li>$\displaystyle \lim_{ x \to \infty } \frac{\Gamma(x+1)}{\left( \frac{x}{e} \right)^x \sqrt{ 2\pi x }}&#x3D;1$</li>
+<li>对于很大的x可以估算</li>
+<li>证明 令u&#x3D;t&#x2F;x-1<ul>
+<li>$\Gamma(x+1)&#x3D;x^{x+1}e^{-x}\int_{-1}^{\infty} [(1+u)e^{-u}]^x , dx$</li>
+<li>$(1+u)e^{-u}&#x3D;e^{-\frac{u^2}{2} h(u)}$</li>
+<li>$h(u)&#x3D;\frac{2}{u^2}[u-\log (1+u)]$<ul>
+<li>$h(0)&#x3D;1$定义</li>
+<li>h连续函数，从无穷递降到0</li>
+</ul>
+</li>
+<li>$s&#x3D;\frac{u}{\sqrt{ \frac{2}{x} }}$</li>
+<li>$\Gamma(x+1)&#x3D;x^xe^{-x}\sqrt{ 2x }\int_{-\infty}^\infty g_{x}(s) ds$<ul>
+<li>$g_{x}(s)&#x3D;e^{-s^2h(s \sqrt{ x&#x2F;2 })}$当$s &gt; -\sqrt{ \frac{x}{2} }$</li>
+<li>$g_{x \to \infty}(s)\to e^{-s^2}$逐点收敛</li>
+<li>$[-A,A]$中上面收敛是一致的</li>
+<li>s &lt; 0 时 $0 &lt; g_x(s) &lt; e^{-x^2}$</li>
+<li>s &gt; 0且x &gt; 1时, $0 &lt; g_x(s) &lt; g_1(s)$</li>
+<li>$\int_{0}^\infty g_{1}(s) , ds &lt; \infty$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/" title="Walter Rudin 数学分析原理 8 一些特殊函数">https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 数学分析</a>
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"><i class="fa fa-tag"></i> 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_7/" rel="prev" title="Walter Rudin 数学分析原理 7 函数序列与函数项极限">
+                  <i class="fa fa-chevron-left"></i> Walter Rudin 数学分析原理 7 函数序列与函数项极限
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_9/" rel="next" title="Walter Rudin 数学分析原理 9 多元函数">
+                  Walter Rudin 数学分析原理 9 多元函数 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">491k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">7:26</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/Math/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/Math/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/"}</script>
+  <script src="/Math/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yexiaorain","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/Math/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>

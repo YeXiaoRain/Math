@@ -6,7 +6,7 @@
   <link href="https://yexiaorain.github.io/Math/atom.xml" rel="self"/>
   
   <link href="https://yexiaorain.github.io/Math/"/>
-  <updated>2024-12-30T01:53:15.578Z</updated>
+  <updated>2025-03-30T07:28:50.961Z</updated>
   <id>https://yexiaorain.github.io/Math/</id>
   
   <author>
@@ -17,11 +17,380 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Walter Rudin 数学分析原理 11 Lebesgue理论</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/</id>
+    <published>2025-03-30T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;Lebesgue理论&quot;&gt;&lt;a href=&quot;#Lebesgue理论&quot; class=&quot;headerlink&quot; title=&quot;Lebesgue理论&quot;&gt;&lt;/a&gt;Lebesgue理论&lt;/h2&gt;&lt;h3 id=&quot;集函数&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 10 微分形式的积分</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/</id>
+    <published>2025-03-23T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 9 多元函数</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/</id>
+    <published>2025-03-16T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;多元函数-functions-of-several-variables&quot;&gt;&lt;a href=&quot;#多元函数-functions-of-several-variables&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 8 一些特殊函数</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/</id>
+    <published>2025-03-09T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;一些特殊函数-some-special-functions&quot;&gt;&lt;a href=&quot;#一些特殊函数-some-special-functions&quot; class=&quot;headerlink&quot; title=&quot;一些特殊函数</summary>
+        
+      
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 7 函数序列与函数项极限</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/</id>
+    <published>2025-03-02T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>韦达跳跃Vieta jumping</title>
+    <link href="https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/"/>
+    <id>https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/</id>
+    <published>2025-02-28T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.958Z</updated>
+    
+    
+    <summary type="html">1988imop6</summary>
+    
+    
+    
+    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+    <category term="数论" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/</id>
+    <published>2025-02-23T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 5 微分法</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/</id>
+    <published>2025-02-16T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 4 连续性</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/</id>
+    <published>2025-02-09T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;span id=&quot;more&quot;&gt;&lt;/span&gt;
+
+&lt;h2 id=&quot;连续性-continuity&quot;&gt;&lt;a href=&quot;#连续性-continuity&quot; class=&quot;headerlink&quot; title=&quot;连续性 continuity&quot;&gt;&lt;/a&gt;连续性</summary>
+        
+      
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 3 数列与级数</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/</id>
+    <published>2025-02-02T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 2 基础拓扑</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/</id>
+    <published>2025-01-26T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.961Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Walter Rudin 数学分析原理 1 实数系与复数系</title>
+    <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/"/>
+    <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/</id>
+    <published>2025-01-19T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.960Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文 9787111134176&lt;/li&gt;
+&lt;li&gt;英文 9787111619543&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率论基础教程</title>
+    <link href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/"/>
+    <id>https://yexiaorain.github.io/Math/A_First_Course_in_Probability/</id>
+    <published>2025-01-06T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.959Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前置知识：微积分&lt;/p&gt;
+&lt;p&gt;9版&lt;/p&gt;
+&lt;p&gt;isbn 9787111447894&lt;/p&gt;
+&lt;p&gt;推荐：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;专业名词出现时有对应英文&lt;/li&gt;
+&lt;li&gt;有小结&lt;/li&gt;
+&lt;li&gt;例题, 感觉选得也挺好的&lt;/li&gt;
+&lt;li&gt;习题 （部分有答案，感觉选题不算紧凑偏题海）&lt;/li&gt;
+&lt;li&gt;理论习题 (有提示)&lt;/li&gt;
+&lt;li&gt;自检习题 （部分有答案，感觉选题不算紧凑偏题海）&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="概率论" scheme="https://yexiaorain.github.io/Math/categories/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+    <category term="概率论" scheme="https://yexiaorain.github.io/Math/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>普林斯顿 概率论读本</title>
+    <link href="https://yexiaorain.github.io/Math/the_probability_lifesaver/"/>
+    <id>https://yexiaorain.github.io/Math/the_probability_lifesaver/</id>
+    <published>2024-12-31T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.963Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前置知识：微积分， 看了下有些结论需要依赖复分析的结果&lt;/p&gt;
+&lt;p&gt;isbn 9787115543776&lt;/p&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脉络很好，非常喜欢整体性，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有习题 无直接的答案，好像也没有答案书&lt;/li&gt;
+&lt;li&gt;很多专业名词出现时没有对应英文&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="概率论" scheme="https://yexiaorain.github.io/Math/categories/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+    <category term="概率论" scheme="https://yexiaorain.github.io/Math/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>普林斯顿 微积分读本</title>
     <link href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_calculus_lifesaver/</id>
     <published>2024-12-19T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.578Z</updated>
+    <updated>2025-03-30T07:28:50.963Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn 978711543559&lt;/p&gt;
@@ -29,6 +398,31 @@
     
     
     
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>普林斯顿 数学分析读本</title>
+    <link href="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/"/>
+    <id>https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/</id>
+    <published>2024-12-19T16:00:00.000Z</published>
+    <updated>2025-03-30T07:28:50.963Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;isbn 9787115543844&lt;/p&gt;
+&lt;p&gt;这英文是 real analysis, 后缀是 all the tools you need to understand proofs&lt;/p&gt;
+&lt;p&gt;据说有视频课 calclifesaver.com&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="数学分析" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/"/>
     
     <category term="微积分" scheme="https://yexiaorain.github.io/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
@@ -39,7 +433,7 @@
     <link href="https://yexiaorain.github.io/Math/newton_identities/"/>
     <id>https://yexiaorain.github.io/Math/newton_identities/</id>
     <published>2024-10-20T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.577Z</updated>
+    <updated>2025-03-30T07:28:50.962Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式&lt;/p&gt;
@@ -90,7 +484,7 @@
     <link href="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/"/>
     <id>https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/</id>
     <published>2024-08-13T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.575Z</updated>
+    <updated>2025-03-30T07:28:50.958Z</updated>
     
     
     <summary type="html">来自2009年初中数学竞赛的一道题</summary>
@@ -111,7 +505,7 @@
     <link href="https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/"/>
     <id>https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/</id>
     <published>2024-03-22T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.577Z</updated>
+    <updated>2025-03-30T07:28:50.960Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;MIT-线性代数公开课&quot;&gt;&lt;a href=&quot;#MIT-线性代数公开课&quot; class=&quot;headerlink&quot; title=&quot;MIT 线性代数公开课&quot;&gt;&lt;/a&gt;MIT 线性代数公开课&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/18.06&quot;&gt;http://web.mit.edu/18.06&lt;/a&gt;&lt;/p&gt;
@@ -134,7 +528,7 @@
     <link href="https://yexiaorain.github.io/Math/rubicks_cube/"/>
     <id>https://yexiaorain.github.io/Math/rubicks_cube/</id>
     <published>2023-08-30T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.578Z</updated>
+    <updated>2025-03-30T07:28:50.962Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;魔方&quot;&gt;&lt;a href=&quot;#魔方&quot; class=&quot;headerlink&quot; title=&quot;魔方&quot;&gt;&lt;/a&gt;魔方&lt;/h1&gt;&lt;p&gt;不知道魔方公式的情况下,用数学解决魔方&lt;/p&gt;</summary>
@@ -145,402 +539,6 @@
     
     
     <category term="魔方" scheme="https://yexiaorain.github.io/Math/tags/%E9%AD%94%E6%96%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>立直麻将 麻雀（マージャン）</title>
-    <link href="https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/"/>
-    <id>https://yexiaorain.github.io/Math/2023-07-23-Japanese_Mahjong/</id>
-    <published>2023-07-22T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.575Z</updated>
-    
-    
-    <summary type="html">1.基本概念 2.初级进阶 3.概率分析</summary>
-    
-    
-    
-    <category term="游戏" scheme="https://yexiaorain.github.io/Math/categories/%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="立直麻将" scheme="https://yexiaorain.github.io/Math/categories/%E6%B8%B8%E6%88%8F/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/"/>
-    
-    
-    <category term="游戏" scheme="https://yexiaorain.github.io/Math/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="立直麻将" scheme="https://yexiaorain.github.io/Math/tags/%E7%AB%8B%E7%9B%B4%E9%BA%BB%E5%B0%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数论基础 四 同余</title>
-    <link href="https://yexiaorain.github.io/Math/number_theory_4/"/>
-    <id>https://yexiaorain.github.io/Math/number_theory_4/</id>
-    <published>2023-03-22T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.578Z</updated>
-    
-    
-    <summary type="html">1.概念及基本性质, 2.剩余类及剩余系 3. 同余方程的一般概念，一次同余方程 4. 孙子定理 5. 多项式的恒等同余 6. 模p的高次同余方程</summary>
-    
-    
-    
-    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="欧拉定理" scheme="https://yexiaorain.github.io/Math/tags/%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86/"/>
-    
-    <category term="费马小定理" scheme="https://yexiaorain.github.io/Math/tags/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数论基础 三 素数分布的一些初等结果</title>
-    <link href="https://yexiaorain.github.io/Math/number_theory_3/"/>
-    <id>https://yexiaorain.github.io/Math/number_theory_3/</id>
-    <published>2023-03-16T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.578Z</updated>
-    
-    
-    <summary type="html">1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)</summary>
-    
-    
-    
-    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="$\pi(x)$" scheme="https://yexiaorain.github.io/Math/tags/pi-x/"/>
-    
-    <category term="Chebyshev定理" scheme="https://yexiaorain.github.io/Math/tags/Chebyshev%E5%AE%9A%E7%90%86/"/>
-    
-    <category term="$\Omega(n)$" scheme="https://yexiaorain.github.io/Math/tags/Omega-n/"/>
-    
-    <category term="$\omega(n)$" scheme="https://yexiaorain.github.io/Math/tags/omega-n/"/>
-    
-    <category term="Bertrand 假设" scheme="https://yexiaorain.github.io/Math/tags/Bertrand-%E5%81%87%E8%AE%BE/"/>
-    
-    <category term="M(x)" scheme="https://yexiaorain.github.io/Math/tags/M-x/"/>
-    
-    <category term="L(x)" scheme="https://yexiaorain.github.io/Math/tags/L-x/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数论基础 二 数论函数</title>
-    <link href="https://yexiaorain.github.io/Math/number_theory_2/"/>
-    <id>https://yexiaorain.github.io/Math/number_theory_2/</id>
-    <published>2023-03-15T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.578Z</updated>
-    
-    
-    <summary type="html">1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积</summary>
-    
-    
-    
-    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="Dirichlet乘积" scheme="https://yexiaorain.github.io/Math/tags/Dirichlet%E4%B9%98%E7%A7%AF/"/>
-    
-    <category term="Dirichlet逆" scheme="https://yexiaorain.github.io/Math/tags/Dirichlet%E9%80%86/"/>
-    
-    <category term="可乘函数" scheme="https://yexiaorain.github.io/Math/tags/%E5%8F%AF%E4%B9%98%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="完全可乘函数" scheme="https://yexiaorain.github.io/Math/tags/%E5%AE%8C%E5%85%A8%E5%8F%AF%E4%B9%98%E5%87%BD%E6%95%B0/"/>
-    
-    <category term="Mobius变换" scheme="https://yexiaorain.github.io/Math/tags/Mobius%E5%8F%98%E6%8D%A2/"/>
-    
-    <category term="Mobius反演" scheme="https://yexiaorain.github.io/Math/tags/Mobius%E5%8F%8D%E6%BC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数论基础 一 整数的可除性</title>
-    <link href="https://yexiaorain.github.io/Math/number_theory_1/"/>
-    <id>https://yexiaorain.github.io/Math/number_theory_1/</id>
-    <published>2023-03-14T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.577Z</updated>
-    
-    
-    <summary type="html">1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}</summary>
-    
-    
-    
-    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="数论基础" scheme="https://yexiaorain.github.io/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="辗转相除" scheme="https://yexiaorain.github.io/Math/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4/"/>
-    
-    <category term="gcd" scheme="https://yexiaorain.github.io/Math/tags/gcd/"/>
-    
-    <category term="lcm" scheme="https://yexiaorain.github.io/Math/tags/lcm/"/>
-    
-    <category term="归纳法" scheme="https://yexiaorain.github.io/Math/tags/%E5%BD%92%E7%BA%B3%E6%B3%95/"/>
-    
-    <category term="exgcd" scheme="https://yexiaorain.github.io/Math/tags/exgcd/"/>
-    
-    <category term="Beatty’s theorem" scheme="https://yexiaorain.github.io/Math/tags/Beatty%E2%80%99s-theorem/"/>
-    
-    <category term="Legendre’s formula" scheme="https://yexiaorain.github.io/Math/tags/Legendre%E2%80%99s-formula/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fermat&#39;s two square theorem</title>
-    <link href="https://yexiaorain.github.io/Math/Fermat_s_two_square_theorem/"/>
-    <id>https://yexiaorain.github.io/Math/Fermat_s_two_square_theorem/</id>
-    <published>2023-03-12T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.577Z</updated>
-    
-    
-    <summary type="html">Fermat&#39;s 两平方数定理:能被表示成平方和的奇素数是所有形如4k+1的奇素数</summary>
-    
-    
-    
-    <category term="数论" scheme="https://yexiaorain.github.io/Math/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-    <category term="Fermat" scheme="https://yexiaorain.github.io/Math/tags/Fermat/"/>
-    
-    <category term="平方和定理" scheme="https://yexiaorain.github.io/Math/tags/%E5%B9%B3%E6%96%B9%E5%92%8C%E5%AE%9A%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 十 具有度量的线性空间</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_11/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_11/</id>
-    <published>2022-08-20T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;视频 p145 - 151 （最后有一个整个学期回顾）&lt;/p&gt;
-&lt;h1 id=&quot;多重线性代数&quot;&gt;&lt;a href=&quot;#多重线性代数&quot; class=&quot;headerlink&quot; title=&quot;多重线性代数&quot;&gt;&lt;/a&gt;多重线性代数&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 十 具有度量的线性空间</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_10/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_10/</id>
-    <published>2022-08-19T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;视频121-144&lt;/p&gt;
-&lt;h1 id=&quot;具有度量的线性空间&quot;&gt;&lt;a href=&quot;#具有度量的线性空间&quot; class=&quot;headerlink&quot; title=&quot;具有度量的线性空间&quot;&gt;&lt;/a&gt;具有度量的线性空间&lt;/h1&gt;&lt;p&gt;考虑在线性空间中 增加长度而概念&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 九 线性空间</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_9/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_9/</id>
-    <published>2022-08-18T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.577Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;视频 86-120&lt;/p&gt;
-&lt;h1 id=&quot;线性映射&quot;&gt;&lt;a href=&quot;#线性映射&quot; class=&quot;headerlink&quot; title=&quot;线性映射&quot;&gt;&lt;/a&gt;线性映射&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;研究 线性映射的运算： 线性映射作为映射，可以做乘法运算，乘积仍是线性映射，还可以定义线性映射的加法和纯法&lt;/li&gt;
-&lt;li&gt;研究 线 线性映射的整体结构： 线性映射的运算，域F上 V到V’的所有线性映射组成的集合，记作Hom(V,V’), 对于线性映射的加法和纯量乘法，成为域F上的一个线性空间，V上所有线性变换组成的集合Hom(V,V) （自身到自身） 即是域F上的线性空间，又是一个有单位元的环&lt;/li&gt;
-&lt;li&gt;研究线性映射的 核 与 象， V到V’的线性映射A的核 Ker A是一V的一个子空间，A的象Im A是V’的一个子空间. 线性映射A的核Ker A可以用来研究线性空间V的结构&lt;/li&gt;
-&lt;li&gt;研究线性映射和线性变换的矩阵表示。&lt;/li&gt;
-&lt;li&gt;V上的线性函数以及V的对偶空间V’ (他是V上所有线性函数组成的线性空间)&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 八 线性空间</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_8/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_8/</id>
-    <published>2022-08-17T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;视频 42-54 &lt;/p&gt;
-&lt;h1 id=&quot;线性空间&quot;&gt;&lt;a href=&quot;#线性空间&quot; class=&quot;headerlink&quot; title=&quot;线性空间&quot;&gt;&lt;/a&gt;线性空间&lt;/h1&gt;&lt;p&gt;上来就是我非常讨厌的表达式</summary>
-        
-      
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 七 多项式环</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_7/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_7/</id>
-    <published>2022-08-16T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;视频066-085&lt;/p&gt;
-&lt;h1 id=&quot;多项式环&quot;&gt;&lt;a href=&quot;#多项式环&quot; class=&quot;headerlink&quot; title=&quot;多项式环&quot;&gt;&lt;/a&gt;多项式环&lt;/h1&gt;&lt;p&gt;半群, 集合G,运算$\oplus$， 例如: 正整数 与</summary>
-        
-      
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 六 二次型 矩阵的合同</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_6/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_6/</id>
-    <published>2022-08-15T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;二次型，矩阵的合同&quot;&gt;&lt;a href=&quot;#二次型，矩阵的合同&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 五 矩阵的相抵与相似</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_5/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_5/</id>
-    <published>2022-08-14T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;矩阵的相抵与相似&quot;&gt;&lt;a href=&quot;#矩阵的相抵与相似&quot; class=&quot;headerlink&quot; title=&quot;矩阵的相抵与相似&quot;&gt;&lt;/a&gt;矩阵的相抵与相似&lt;/h1&gt;&lt;p&gt;没有视频课？？？&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;希望把矩阵分类&lt;/p&gt;
-&lt;p&gt;定义1,</summary>
-        
-      
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 四 矩阵的运算</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_4/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_4/</id>
-    <published>2022-08-13T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;矩阵的运算&quot;&gt;&lt;a href=&quot;#矩阵的运算&quot; class=&quot;headerlink&quot; title=&quot;矩阵的运算&quot;&gt;&lt;/a&gt;矩阵的运算&lt;/h1&gt;&lt;p&gt;P55-65&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等代数 三 n维向量空间$K^n$</title>
-    <link href="https://yexiaorain.github.io/Math/Advanced_algebra_3/"/>
-    <id>https://yexiaorain.github.io/Math/Advanced_algebra_3/</id>
-    <published>2022-08-12T16:00:00.000Z</published>
-    <updated>2024-12-30T01:53:15.576Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;n维向量空间-K-n&quot;&gt;&lt;a href=&quot;#n维向量空间-K-n&quot; class=&quot;headerlink&quot; title=&quot;n维向量空间$K^n$&quot;&gt;&lt;/a&gt;n维向量空间$K^n$&lt;/h1&gt;&lt;p&gt;P19-P55&lt;/p&gt;
-&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt; $K^n:&amp;#x3D;\lbrace (a_1,a_2,\cdots,a_n) | a_i\in K,i&amp;#x3D;1,2,\cdots,n \rbrace$&lt;/p&gt;
-&lt;p&gt;其中$K$是数域&lt;/p&gt;
-&lt;p&gt;规定: &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;向量相等:对应位置元素相等&lt;/li&gt;
-&lt;li&gt;向量相加:对应位置元素相加&lt;/li&gt;
-&lt;li&gt;数量乘法:所有元素乘上k倍&lt;/li&gt;
-&lt;li&gt;零向量:所有元素都为0&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;对应映射$f: A\to B$ , $a$ 在$f$下的像$f(a)$, $a$是$f(a)$的一个原像&lt;/p&gt;
-&lt;p&gt;满射:$f(A) &amp;#x3D; B$ &lt;/p&gt;
-&lt;p&gt;单射:不同$a$的$f(a)$不同&lt;/p&gt;
-&lt;p&gt;双射(一一对应): 单射+满射&lt;/p&gt;
-&lt;p&gt;笛卡尔积: $A\times B &amp;#x3D; ((a_1,b_1),(a_2,b_2),\cdots,(a_n,b_n))$, $A$,$B$等长&lt;/p&gt;
-&lt;h2 id=&quot;线性空间&quot;&gt;&lt;a href=&quot;#线性空间&quot; class=&quot;headerlink&quot; title=&quot;线性空间&quot;&gt;&lt;/a&gt;线性空间&lt;/h2&gt;&lt;p&gt;线性空间 &amp;#x3D; 4条加法法则+4条数乘法则&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/categories/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
-    
-    
-    <category term="高等代数" scheme="https://yexiaorain.github.io/Math/tags/%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
