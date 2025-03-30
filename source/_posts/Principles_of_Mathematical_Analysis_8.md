@@ -11,7 +11,6 @@ tags:
 
 ## 一些特殊函数 some special functions
 
-<!--more-->
 
 ### 幂级数 power series
 
@@ -41,6 +40,8 @@ $f(x)=\sum_{n=0}^{\infty}c_n x^n$， 在0点展开
 - 补充 在一个端点 例如x=R 如果也收敛，那么也连续
 
 这类的东西好想画2x2的方格，每次都是“冂”形状的证明路径
+
+<!--more-->
 
 8.2 $\sum c_n$收敛, 令$f(x)=\sum_{n=0}^{\infty}c_n x^n, x\in(-1,1)$
 - Abel 定理

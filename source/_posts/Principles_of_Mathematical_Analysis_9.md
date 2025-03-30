@@ -13,7 +13,6 @@ tags:
 
 主要讨论 euclidean n-space $R^n$ 中
 
-<!--more-->
 
 ### 线性变换 linear transformations
 
@@ -25,6 +24,8 @@ tags:
 - 空间X 含有由r个向量，组成无关集，不含r+1个向量的无关集，X是r维， dim X = r
 - X的一个无关子集 能 span X,那么 这个子集称作一个基
 - {$e_1,\dots,e_{n}$称作$\mathbb{R}^n$的标准基 standard basis
+
+<!--more-->
 
 9.2 dim span{$x_1,...,x_r$} $\le r$
 - 生成空间dim <= 向量个数

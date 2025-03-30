@@ -14,6 +14,8 @@ $a,b \in\mathbb{Z}^+, ab+1|a^2+b^2$
 
 证明$\frac{a^2+b^2}{ab+1}$是平方数
 
+<!--more-->
+
 ## vieta_jumping
 
 韦达跳跃：韦达定理+无穷递降

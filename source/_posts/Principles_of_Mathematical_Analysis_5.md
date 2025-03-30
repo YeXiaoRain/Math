@@ -11,7 +11,6 @@ tags:
 
 ## 微分法 differentiation
 
-<!--more-->
 
 ### 实函数中的导数 the derivative of a real function
 
@@ -20,6 +19,8 @@ tags:
 - define: $f'(x)=\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f 
 - 如果 $f'(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable
 - 类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数
+
+<!--more-->
 
 5.2 f定义在`[a,b]`上, 如果f在点$x\in[a,b]$可微, 那么f在x点连续
 - f(t)-f(x)=f'(x) (t-x), 可微左边f'(x)对于给定x是常数，所以 趋于0

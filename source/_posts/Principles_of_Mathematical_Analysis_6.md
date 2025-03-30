@@ -16,7 +16,6 @@ tags:
 - 后面推广到区间上的复值和向量值函数的积分
 - 10～11章 再讨论在不是区间上的积分
 
-<!--more-->
 
 ### 积分的定义和存在性 definition and existence of the integral
 
@@ -36,6 +35,8 @@ tags:
 		- 因为假设 $f$ is a bounded real function, 所以存在$m,M$, 使得$m \le f([a,b])\le M$
 		- $m(b-a)\le L(P,f)\le U(P,f) \le M(b-a)$ 注意的是，这个条件 并不要求 黎曼积分存在，这是描述f上下界与 下和 上和 的大小关系
 			- 也就是有界函数f,上积分和下积分都有定义
+
+<!--more-->
 
 6.2 设g是`[a,b]` 上一个单调递增函数，g(a),g(b)有限，所以g在[a,b]上有界, 对于a,b的每个分割法P
 - $\Delta g_i=g(x_i)-g(x_{i-1}) \ge 0$

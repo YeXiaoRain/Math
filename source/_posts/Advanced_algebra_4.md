@@ -15,13 +15,11 @@ tags:
 
 P55-65
 
-
-<!--more-->
-
 矩阵和 $C=A+B, C_{ij}=A_{ij}+B_{ij}$
 
 矩阵乘 $C=AB, C_{ij}=\sum_{k} A_{ik}B_{kj}$
 
+<!--more-->
 
 特殊矩阵
 - 对角矩阵

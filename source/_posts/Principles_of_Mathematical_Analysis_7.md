@@ -15,7 +15,6 @@ tags:
 
 注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）
 
-<!--more-->
 
 ### 主要问题的讨论 discussion of main problem
 
@@ -28,6 +27,8 @@ tags:
 	- 例如连续性: 
 		- 点连续 $\lim_{t\to x}f(t)=f(x)$
 		- 是否保持连续性 $\lim_{t\to x}\lim_{n\to \infty}f_n(t)=?=\lim_{n\to\infty} \lim_{t \to x}f_n(t)$  或者说这个次序是否影响结果
+
+<!--more-->
 
 7.2 一些极限的次序是不能交换的，一些是与极限顺序无关的
 - $s_{m,n}=\frac{m}{m+n}$

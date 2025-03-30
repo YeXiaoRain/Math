@@ -11,13 +11,14 @@ tags:
 
 ## 基础拓扑 Basic topology
 
-<!--more-->
 
 ### 有限集、可数集和不可数集
 
 2.1 A,B 都是 sets, A中x和B中一个元素关联associated, f(x)表示，f is said to be a function from A to B(or mapping of A into B).
 - the set A is called the `domain` of f(we also say f is defined on A)
 - and the elements f(x) are called the values of f. the set of all values of f is called the `range` of f
+
+<!--more-->
 
 2.2 $E\subset A$, f(E) is defined to be the set of all elements f(x),for x in E. we call f(E) the `image` of E under f.
 - f(A) is the `range` of f

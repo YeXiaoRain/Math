@@ -26,6 +26,8 @@ tags:
 
 定义1, S非空集合, $W$是$S\times S$的一个子集,叫做二元关系, $(a,b)\in W$,那么称它们有该二元关系$aWb,a\sim b$
 
+<!--more-->
+
 定义2, 等价关系
 - $a\sim a$ 反身性
 - $a\sim b\rightarrow b\sim a$ 对成性

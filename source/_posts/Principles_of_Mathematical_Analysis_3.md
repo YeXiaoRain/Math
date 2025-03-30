@@ -12,12 +12,13 @@ tags:
 
 ## 数列与级数 numerical sequences and series
 
-<!--more-->
 
 ### 收敛序列 convergent sequences
 
 3.1 数列收敛converge，能找到p，对于任意给定距离需求，可以通过N来控制 $|a_{n>N}-p|<$距离需求
 - 否则  diverge
+
+<!--more-->
 
 3.2 度量空间X中的序列{p_n}
 - p的任意邻域，可以通过p_n从某处截断 以后的序列全在邻域中

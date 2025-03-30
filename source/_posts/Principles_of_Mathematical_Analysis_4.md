@@ -8,9 +8,9 @@ tags:
   - 数学分析
 ---
 
-<!--more-->
 
 ## 连续性 continuity
+
 
 ### 函数的极限 limit of functions
 
@@ -19,6 +19,8 @@ tags:
 - 这里是 可以在度量空间X通过控制p的距离（邻域）$0<d_X(x,p) < \delta$，来控制在度量空间Y中$d_Y(f(x),q) < \epsilon$的距离
 - 注意1: $p\in X$ 不一定$p\in E$, 
 - 注意2: 关注的是邻域 不含中心点的 $0 < d_X(x,p)$, 所以 $f(p)\neq \lim_{x\to p}f(x)$ 也是可能的
+
+<!--more-->
 
 4.2 极限点的函数极限值 与 数列
 - $\lim_{x\to p}f(x)=q$ 当且仅当 $\lim_{n\to\infty} f(p_n)=q$ 对于E中每个趋于q且$q_n\neq q$的序列成立
