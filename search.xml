@@ -5396,70 +5396,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 一 分析基础</title>
-    <url>/Math/Mathematical_analysis_problems_1/</url>
-    <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
-<p>(1) 求证: $$x_n$$单调下降且有下界</p>
-<p>(2) 求$$lim_{n-&gt;\infty}x_n$$</p>
-<span id="more"></span>
-
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>(1) 显然 $$x_n \geq \sqrt A (n\geq2)$$</p>
-<p>有 $$x_{n+1}-x_n &#x3D; \frac12(\frac A{x_n}-x_n) &#x3D; \frac12 \cdot \frac {(\sqrt A - x_n)(\sqrt A + x_n)}{x_n} \leq 0 (n\geq2)$$</p>
-<p>(2) 设极限为<code>a</code>,带入原式子,则 推出$$a&#x3D;\sqrt A$$</p>
-<h3 id="题目-1-3-9"><a href="#题目-1-3-9" class="headerlink" title="题目 1.3.9"></a>题目 1.3.9</h3><p>求证 $$lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}$$极限存在</p>
-<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>$$a_n &#x3D; lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}  &gt; 0$$</p>
-<p>$$ \frac{a_{n+1}}{a_n} &#x3D; \frac{(2n+1)^3}{(2n+2)^2\cdot (2n+3)} &lt; 1$$</p>
-<p>单调递减 有下界限</p>
-<p>从 $$ln a_{n+1} - ln a_n$$ 上看 说明 $$ln a_{n}$$ 趋于 $$-\infty$$ , $$a_n$$极限为$$0$$</p>
-<p>总感觉有地方没有说清楚</p>
-<h2 id="函数极限与连续概念-1-4"><a href="#函数极限与连续概念-1-4" class="headerlink" title="函数极限与连续概念 1.4"></a>函数极限与连续概念 1.4</h2><h3 id="题目-1-4-3"><a href="#题目-1-4-3" class="headerlink" title="题目 1.4.3"></a>题目 1.4.3</h3><p>设 $$ 0&lt;x_n&lt;+\infty $$,且满足 $$ x_n+\frac 4 {x_{n+1}^2} &lt; 3 $$, 求出此极限值。</p>
-<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>由题目显然有 $$\frac{2\sqrt3}3 &lt; x_n  &lt; 3$$</p>
-<p>$$x_{n+1}-x_n &gt; \frac {x_{n+1}^3-3_{n+1}^2+4}{x_{n+1}^2} &#x3D; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} \ge 0 $$</p>
-<p>单调递增 有上界</p>
-<p>如果 $x_n &gt; 2$ 令 $x_n &#x3D; 2+y_n,1 &gt; y_n &gt; 0$ , $y_n$单调递增</p>
-<p>如果 $$x_n &#x3D; 2$$ 有 $x_{n+1} &gt; 2$ 取 $ n &#x3D; n+1$</p>
-<p>$$x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {(2+1)y_{n+1}^2}{3^2} $$</p>
-<p>$m-n &gt; \frac{3}{y_{n+1}^2}$时, 存在 $y_m &gt; 3$</p>
-<p>$$\therefore \frac{2\sqrt3}3 &lt; x_n  &lt; 2$$</p>
-<p>如果 $x_n &lt; 2$ 令 $x_n &#x3D; 2-y_n,2-\frac{2\sqrt3}3 &gt; y_n &gt; 0$ , $y_n$也单调递减</p>
-<p>$$(-y_{n+1}) - (-y_{n}) &gt; x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {2 y_{n+1}^2}{2^2} $$</p>
-<p>$$ y_n &gt; y_{n+1} + \frac{y_{n+1}^2}{2} $$</p>
-<p>$$ y_{n+1} &lt; \sqrt{2y_n+1} -1 &#x3D; \frac {2y_n}{\sqrt{2y_n+1}+1} &lt;  $$</p>
-<p>然后呢????</p>
-<p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
-<hr>
-<p>数列有极限</p>
-<p>所以 不等式也有极限 $$lim$$</p>
-<h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列$${x_n}$$由如下迭代产生:</p>
-<p>$$x_1&#x3D;\frac12,x_{n+1} &#x3D; x_n^2 + x_n (n&#x3D;1,2,\dots)$$</p>
-<p>求证 $$lim_{n-&gt;\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})&#x3D;2$$</p>
-<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解 ???"></a>题解 ???</h3><h2 id="比区间上连续函数的性质-1-5"><a href="#比区间上连续函数的性质-1-5" class="headerlink" title="比区间上连续函数的性质 1.5"></a>比区间上连续函数的性质 1.5</h2><h3 id="题目-1-5-3"><a href="#题目-1-5-3" class="headerlink" title="题目 1.5.3"></a>题目 1.5.3</h3><p>设 $$f_n(x)&#x3D;x^n+x$$</p>
-<p>求证</p>
-<p>(1) 对任意自然数 $$n&gt;1$$,方程 $$f_n(x) &#x3D; 1$$在$$(\frac12,1)$$内有且仅有一个根</p>
-<p>(2) 若$$c_n \in (\frac12,1)$$是$$f_n(x)&#x3D;1$$的根,则$$lim_{n-&gt;infty}c_n$$存在，并求此极限</p>
-<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解 ???"></a>题解 ???</h3><p>(1)</p>
-<p>求导$$nx^{n-1}+1&gt;0$$,严格单调</p>
-<p>所以 $$ (f_n(\frac12)-1) \cdot (f_n(1)-1) &lt; 0, x \in (\frac12,1)$$ 有根,得证</p>
-<p>(2) ???</p>
-<p>2.6 例22?</p>
-<h3 id="题目-1-5-4"><a href="#题目-1-5-4" class="headerlink" title="题目 1.5.4"></a>题目 1.5.4</h3><p>设置$$f(x)$$在 $[a,b]$ 上无界,求证: $$\exists c \in [a,b]$$,使得 $$\forall \delta &gt; 0$$ 函数 $$f(x)$$在 $$[c-\delta,c+\delta]\bigcap [a,b]$$上无界</p>
-<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-5"><a href="#题目-1-5-5" class="headerlink" title="题目 1.5.5"></a>题目 1.5.5</h3><p>设 $${x_n}$$ 为有界序列。求证: $x_n$ 以 $a$为极限的充分必要条件是: ${x_n}$的任一收敛子序列都有相同的极限值$a$.</p>
-<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-7"><a href="#题目-1-5-7" class="headerlink" title="题目 1.5.7"></a>题目 1.5.7</h3><p>设 $f(x) \in \mathbb{C}[a,b]$ 且有唯一的取到$f(x)$最大值的点$x^ * $ 又设 $x_n \in [a,b] (n&#x3D;1,2,\dots)$</p>
-<p>使得$$ lim_{n-&gt;\infty} f(x_n) &#x3D; f(x^*), 求证 lim_{n-&gt;\infty} x_n &#x3D; x^*$$</p>
-<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-8"><a href="#题目-1-5-8" class="headerlink" title="题目 1.5.8"></a>题目 1.5.8</h3><p>设$$ f(x) \in \mathbb{C}[0,+\infty) $$又设对 $$\forall l \in \mathbb{R}$$ 方程 $$f(x) &#x3D; l$$在 $$[0,+\infty)$$ 上只有有限个解或无解,求证:</p>
-<p>(1) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上有界,则极限 $$lim_{x-&gt;+\infty}f(x)$$存在;</p>
-<p>(2) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上无上界,则 $$lim_{x-&gt;+\infty}f(x) &#x3D; + \infty$$</p>
-<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-10"><a href="#题目-1-5-10" class="headerlink" title="题目 1.5.10"></a>题目 1.5.10</h3><p>设$f(x)$在$[a,b]$上定义,$x_0\in [a,b]$如果对 $\forall \epsilon &gt; 0,\exists \delta &gt; 0$ 当 $|x-x_0|&lt;\delta$时, 有 $f(x) &lt; f(x_0)+\epsilon$, 那么称$f(x)$在点$x_0$处<strong>上半连续</strong>,如果$f(x)$在$[a,b]$上的没一点都上半连续,则称$f(x)$为$[a,b]$上的一个<strong>上半连续函数</strong>.求证: $[a,b]$上的<strong>上半连续函数</strong>一定有上界.</p>
-<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解 ???"></a>题解 ???</h3>]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MIT18.06线性代数</title>
     <url>/Math/MIT_18.06_linear_algebra/</url>
     <content><![CDATA[<h1 id="MIT-线性代数公开课"><a href="#MIT-线性代数公开课" class="headerlink" title="MIT 线性代数公开课"></a>MIT 线性代数公开课</h1><p><a href="http://web.mit.edu/18.06">http://web.mit.edu/18.06</a></p>
@@ -6693,6 +6629,70 @@
       </tags>
   </entry>
   <entry>
+    <title>数学分析 一 分析基础</title>
+    <url>/Math/Mathematical_analysis_problems_1/</url>
+    <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
+<p>(1) 求证: $$x_n$$单调下降且有下界</p>
+<p>(2) 求$$lim_{n-&gt;\infty}x_n$$</p>
+<span id="more"></span>
+
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>(1) 显然 $$x_n \geq \sqrt A (n\geq2)$$</p>
+<p>有 $$x_{n+1}-x_n &#x3D; \frac12(\frac A{x_n}-x_n) &#x3D; \frac12 \cdot \frac {(\sqrt A - x_n)(\sqrt A + x_n)}{x_n} \leq 0 (n\geq2)$$</p>
+<p>(2) 设极限为<code>a</code>,带入原式子,则 推出$$a&#x3D;\sqrt A$$</p>
+<h3 id="题目-1-3-9"><a href="#题目-1-3-9" class="headerlink" title="题目 1.3.9"></a>题目 1.3.9</h3><p>求证 $$lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}$$极限存在</p>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>$$a_n &#x3D; lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}  &gt; 0$$</p>
+<p>$$ \frac{a_{n+1}}{a_n} &#x3D; \frac{(2n+1)^3}{(2n+2)^2\cdot (2n+3)} &lt; 1$$</p>
+<p>单调递减 有下界限</p>
+<p>从 $$ln a_{n+1} - ln a_n$$ 上看 说明 $$ln a_{n}$$ 趋于 $$-\infty$$ , $$a_n$$极限为$$0$$</p>
+<p>总感觉有地方没有说清楚</p>
+<h2 id="函数极限与连续概念-1-4"><a href="#函数极限与连续概念-1-4" class="headerlink" title="函数极限与连续概念 1.4"></a>函数极限与连续概念 1.4</h2><h3 id="题目-1-4-3"><a href="#题目-1-4-3" class="headerlink" title="题目 1.4.3"></a>题目 1.4.3</h3><p>设 $$ 0&lt;x_n&lt;+\infty $$,且满足 $$ x_n+\frac 4 {x_{n+1}^2} &lt; 3 $$, 求出此极限值。</p>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>由题目显然有 $$\frac{2\sqrt3}3 &lt; x_n  &lt; 3$$</p>
+<p>$$x_{n+1}-x_n &gt; \frac {x_{n+1}^3-3_{n+1}^2+4}{x_{n+1}^2} &#x3D; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} \ge 0 $$</p>
+<p>单调递增 有上界</p>
+<p>如果 $x_n &gt; 2$ 令 $x_n &#x3D; 2+y_n,1 &gt; y_n &gt; 0$ , $y_n$单调递增</p>
+<p>如果 $$x_n &#x3D; 2$$ 有 $x_{n+1} &gt; 2$ 取 $ n &#x3D; n+1$</p>
+<p>$$x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {(2+1)y_{n+1}^2}{3^2} $$</p>
+<p>$m-n &gt; \frac{3}{y_{n+1}^2}$时, 存在 $y_m &gt; 3$</p>
+<p>$$\therefore \frac{2\sqrt3}3 &lt; x_n  &lt; 2$$</p>
+<p>如果 $x_n &lt; 2$ 令 $x_n &#x3D; 2-y_n,2-\frac{2\sqrt3}3 &gt; y_n &gt; 0$ , $y_n$也单调递减</p>
+<p>$$(-y_{n+1}) - (-y_{n}) &gt; x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {2 y_{n+1}^2}{2^2} $$</p>
+<p>$$ y_n &gt; y_{n+1} + \frac{y_{n+1}^2}{2} $$</p>
+<p>$$ y_{n+1} &lt; \sqrt{2y_n+1} -1 &#x3D; \frac {2y_n}{\sqrt{2y_n+1}+1} &lt;  $$</p>
+<p>然后呢????</p>
+<p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
+<hr>
+<p>数列有极限</p>
+<p>所以 不等式也有极限 $$lim$$</p>
+<h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列$${x_n}$$由如下迭代产生:</p>
+<p>$$x_1&#x3D;\frac12,x_{n+1} &#x3D; x_n^2 + x_n (n&#x3D;1,2,\dots)$$</p>
+<p>求证 $$lim_{n-&gt;\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})&#x3D;2$$</p>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解 ???"></a>题解 ???</h3><h2 id="比区间上连续函数的性质-1-5"><a href="#比区间上连续函数的性质-1-5" class="headerlink" title="比区间上连续函数的性质 1.5"></a>比区间上连续函数的性质 1.5</h2><h3 id="题目-1-5-3"><a href="#题目-1-5-3" class="headerlink" title="题目 1.5.3"></a>题目 1.5.3</h3><p>设 $$f_n(x)&#x3D;x^n+x$$</p>
+<p>求证</p>
+<p>(1) 对任意自然数 $$n&gt;1$$,方程 $$f_n(x) &#x3D; 1$$在$$(\frac12,1)$$内有且仅有一个根</p>
+<p>(2) 若$$c_n \in (\frac12,1)$$是$$f_n(x)&#x3D;1$$的根,则$$lim_{n-&gt;infty}c_n$$存在，并求此极限</p>
+<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解 ???"></a>题解 ???</h3><p>(1)</p>
+<p>求导$$nx^{n-1}+1&gt;0$$,严格单调</p>
+<p>所以 $$ (f_n(\frac12)-1) \cdot (f_n(1)-1) &lt; 0, x \in (\frac12,1)$$ 有根,得证</p>
+<p>(2) ???</p>
+<p>2.6 例22?</p>
+<h3 id="题目-1-5-4"><a href="#题目-1-5-4" class="headerlink" title="题目 1.5.4"></a>题目 1.5.4</h3><p>设置$$f(x)$$在 $[a,b]$ 上无界,求证: $$\exists c \in [a,b]$$,使得 $$\forall \delta &gt; 0$$ 函数 $$f(x)$$在 $$[c-\delta,c+\delta]\bigcap [a,b]$$上无界</p>
+<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-5"><a href="#题目-1-5-5" class="headerlink" title="题目 1.5.5"></a>题目 1.5.5</h3><p>设 $${x_n}$$ 为有界序列。求证: $x_n$ 以 $a$为极限的充分必要条件是: ${x_n}$的任一收敛子序列都有相同的极限值$a$.</p>
+<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-7"><a href="#题目-1-5-7" class="headerlink" title="题目 1.5.7"></a>题目 1.5.7</h3><p>设 $f(x) \in \mathbb{C}[a,b]$ 且有唯一的取到$f(x)$最大值的点$x^ * $ 又设 $x_n \in [a,b] (n&#x3D;1,2,\dots)$</p>
+<p>使得$$ lim_{n-&gt;\infty} f(x_n) &#x3D; f(x^*), 求证 lim_{n-&gt;\infty} x_n &#x3D; x^*$$</p>
+<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-8"><a href="#题目-1-5-8" class="headerlink" title="题目 1.5.8"></a>题目 1.5.8</h3><p>设$$ f(x) \in \mathbb{C}[0,+\infty) $$又设对 $$\forall l \in \mathbb{R}$$ 方程 $$f(x) &#x3D; l$$在 $$[0,+\infty)$$ 上只有有限个解或无解,求证:</p>
+<p>(1) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上有界,则极限 $$lim_{x-&gt;+\infty}f(x)$$存在;</p>
+<p>(2) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上无上界,则 $$lim_{x-&gt;+\infty}f(x) &#x3D; + \infty$$</p>
+<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-10"><a href="#题目-1-5-10" class="headerlink" title="题目 1.5.10"></a>题目 1.5.10</h3><p>设$f(x)$在$[a,b]$上定义,$x_0\in [a,b]$如果对 $\forall \epsilon &gt; 0,\exists \delta &gt; 0$ 当 $|x-x_0|&lt;\delta$时, 有 $f(x) &lt; f(x_0)+\epsilon$, 那么称$f(x)$在点$x_0$处<strong>上半连续</strong>,如果$f(x)$在$[a,b]$上的没一点都上半连续,则称$f(x)$为$[a,b]$上的一个<strong>上半连续函数</strong>.求证: $[a,b]$上的<strong>上半连续函数</strong>一定有上界.</p>
+<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解 ???"></a>题解 ???</h3>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学分析 二 一元函数微分学</title>
     <url>/Math/Mathematical_analysis_problems_2/</url>
     <content><![CDATA[<h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
@@ -7236,20 +7236,6 @@
 <li>而且另一方面，的问题是，和中小学学的：有理数（可以表示成 m&#x2F;n 或者 有限，循环小数），无理数（无限不循环），或者连分数，有理数：有限，无理数：无限。 那这样 A的上确界不在A中，如何能保证取完所有 无理数</li>
 </ul>
 ]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 11 Lebesgue理论</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_11/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<h2 id="Lebesgue理论"><a href="#Lebesgue理论" class="headerlink" title="Lebesgue理论"></a>Lebesgue理论</h2><h3 id="集函数"><a href="#集函数" class="headerlink" title="集函数"></a>集函数</h3><h3 id="Lebesgue测度的建立"><a href="#Lebesgue测度的建立" class="headerlink" title="Lebesgue测度的建立"></a>Lebesgue测度的建立</h3><h3 id="测度空间"><a href="#测度空间" class="headerlink" title="测度空间"></a>测度空间</h3><h3 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h3><h3 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h3><h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><h3 id="与Riemann积分的比较"><a href="#与Riemann积分的比较" class="headerlink" title="与Riemann积分的比较"></a>与Riemann积分的比较</h3><h3 id="复函数的积分"><a href="#复函数的积分" class="headerlink" title="复函数的积分"></a>复函数的积分</h3><h3 id="mathcal-L-2-类的函数"><a href="#mathcal-L-2-类的函数" class="headerlink" title="$\mathcal{L}^2$类的函数"></a>$\mathcal{L}^2$类的函数</h3>]]></content>
       <categories>
         <category>数学分析</category>
       </categories>
@@ -8065,6 +8051,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Walter Rudin 数学分析原理 11 Lebesgue理论</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_11/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<h2 id="Lebesgue理论"><a href="#Lebesgue理论" class="headerlink" title="Lebesgue理论"></a>Lebesgue理论</h2><h3 id="集函数"><a href="#集函数" class="headerlink" title="集函数"></a>集函数</h3><h3 id="Lebesgue测度的建立"><a href="#Lebesgue测度的建立" class="headerlink" title="Lebesgue测度的建立"></a>Lebesgue测度的建立</h3><h3 id="测度空间"><a href="#测度空间" class="headerlink" title="测度空间"></a>测度空间</h3><h3 id="可测函数"><a href="#可测函数" class="headerlink" title="可测函数"></a>可测函数</h3><h3 id="简单函数"><a href="#简单函数" class="headerlink" title="简单函数"></a>简单函数</h3><h3 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h3><h3 id="与Riemann积分的比较"><a href="#与Riemann积分的比较" class="headerlink" title="与Riemann积分的比较"></a>与Riemann积分的比较</h3><h3 id="复函数的积分"><a href="#复函数的积分" class="headerlink" title="复函数的积分"></a>复函数的积分</h3><h3 id="mathcal-L-2-类的函数"><a href="#mathcal-L-2-类的函数" class="headerlink" title="$\mathcal{L}^2$类的函数"></a>$\mathcal{L}^2$类的函数</h3>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Walter Rudin 数学分析原理 2 基础拓扑</title>
     <url>/Math/Principles_of_Mathematical_Analysis_2/</url>
     <content><![CDATA[<p>isbn</p>
@@ -8639,6 +8639,205 @@
       </tags>
   </entry>
   <entry>
+    <title>Walter Rudin 数学分析原理 5 微分法</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_5/</url>
+    <content><![CDATA[<p>isbn</p>
+<ul>
+<li>中文 9787111134176</li>
+<li>英文 9787111619543</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="微分法-differentiation"><a href="#微分法-differentiation" class="headerlink" title="微分法 differentiation"></a>微分法 differentiation</h2><h3 id="实函数中的导数-the-derivative-of-a-real-function"><a href="#实函数中的导数-the-derivative-of-a-real-function" class="headerlink" title="实函数中的导数 the derivative of a real function"></a>实函数中的导数 the derivative of a real function</h3><p>5.1 Let f be defined (and real-valued) on <code>[a,b]</code>, For any x in <code>[a,b]</code> form the quotient</p>
+<ul>
+<li>$\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,t\neq x$</li>
+<li>define: $f’(x)&#x3D;\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f </li>
+<li>如果 $f’(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable</li>
+<li>类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数</li>
+</ul>
+<p>5.2 f定义在<code>[a,b]</code>上, 如果f在点$x\in[a,b]$可微, 那么f在x点连续</p>
+<ul>
+<li>f(t)-f(x)&#x3D;f’(x) (t-x), 可微左边f’(x)对于给定x是常数，所以 趋于0</li>
+</ul>
+<p>5.3 定理 f和g定义在$[a,b]$上，并且都在点$x\in[a,b]$可微，那么 加法，乘法，除法 也可微并且有</p>
+<ul>
+<li>(f+g)’&#x3D;f’+g’</li>
+<li>(fg)’&#x3D;f’g+fg’</li>
+<li>(f&#x2F;g)’&#x3D;f’&#x2F;g-fg’&#x2F;g^2</li>
+</ul>
+<p>5.5 链式</p>
+<ul>
+<li>(f(g(x)))’&#x3D;f’(g(x)) g’(x)</li>
+<li>这里前面是 f的导函数，在点g(x)处的导数值</li>
+</ul>
+<h3 id="中值定理-mean-value-theorems"><a href="#中值定理-mean-value-theorems" class="headerlink" title="中值定理 mean value theorems"></a>中值定理 mean value theorems</h3><p>5.7 f是定义在度量空间X上的实值函数，称f在点$p\in X$取得局部极大值，如果存在着$\delta &gt; 0$</p>
+<ul>
+<li>当$d(p,q) &lt; \delta$时,且$q\in X$时，有$f(q)\le f(p)$</li>
+<li>类似的定义局部极小值</li>
+</ul>
+<p>5.8 f定义在$[a,b]$上, $x\in [a,b]$如果f在x点取得局部极大值,$f’(x)$存在,$f’(x)&#x3D;0$,</p>
+<ul>
+<li>proof 也就是左导数 &lt;&#x3D;0, 右导数&gt;&#x3D;0,要相等只能&#x3D;0</li>
+</ul>
+<p>这里中文原书第3版,2004.1(2024.4 重印 第一版)，有错误，漏掉了g（勘误），英文版是对的</p>
+<p>5.9 f和g是<code>[a,b]</code>上连续实函数，在(a,b)中可微，那么便有一点$x\in(a,b)$ 使得</p>
+<ul>
+<li>$[f(b)-f(a)]g’(x)&#x3D;[g(b)-g(a)]f’(x)$</li>
+<li>并不要求在断电上可微</li>
+<li>$h(t)&#x3D;[f(b)-f(a)]g(t)-[g(b)-g(a)]f(t)$,</li>
+<li>h在 闭区间上连续，在开区间上可微，且 $h(a)&#x3D;h(b)$<ul>
+<li>只需要证明存在一点 $h’(t)&#x3D;0$, 若为常数则每点满足</li>
+<li>若有点 大于端点，4.16（紧度量空间上连续函数 存在点使f能取到最大值），所以最大值点能取到，且导数为0</li>
+<li>若有点 小于端点 类似的</li>
+<li>这叫 一般中值定理generalized mean value theorem</li>
+</ul>
+</li>
+<li>注意 在值域是复数域时会失效 稍后的 5.17</li>
+</ul>
+<p>5.10 更常用的退化中值定理</p>
+<ul>
+<li>f(b)-f(a)&#x3D;(b-a)f’(x), 也就是g(x)&#x3D;x</li>
+</ul>
+<p>5.11 f在(a,b)可微</p>
+<ul>
+<li>f’(x) &gt;&#x3D;0 单调递增</li>
+<li>f’(x) &#x3D;0 常函数</li>
+<li>f’(x) &lt;&#x3D;0 单调递减</li>
+</ul>
+<h3 id="导数的连续性-the-continuity-of-derivatives"><a href="#导数的连续性-the-continuity-of-derivatives" class="headerlink" title="导数的连续性 the continuity of derivatives"></a>导数的连续性 the continuity of derivatives</h3><p>$f(x)&#x3D;x^2sin(1&#x2F;x),f(0)&#x3D;0$是 处处导数存在，但导函数不连续的函数</p>
+<p>5.12 f是<code>[a,b]</code>上的实值可微函数，再设 $f’(a) &lt; \lambda &lt; f’(b)$, 那必有一点 $f’(x)&#x3D;\lambda$</p>
+<ul>
+<li>$g(t)&#x3D;f(t)-\lambda t$</li>
+<li>g’(a) &lt; 0 , g’(b) &gt; 0,所以 分别存在$g(t_1) &lt; g(a),g(t_2) &lt; g(b)$, 也就是存在点 小于左端点，存在点小于右端点</li>
+<li>所以在极小值点x（4.16可达到）， g’(x)&#x3D;0,从而可以取到</li>
+<li>而这个性质，并没有要求导函数连续，只需要f处处可微</li>
+<li>推论 f在<code>[a,b]</code>上可微，那么f’在<code>[a,b]</code>上便不能有<code>简单间断</code>, <ul>
+<li>但是 f’很可能有第二类间断</li>
+</ul>
+</li>
+</ul>
+<h3 id="L’Hospital-法则-rule"><a href="#L’Hospital-法则-rule" class="headerlink" title="L’Hospital 法则 rule"></a>L’Hospital 法则 rule</h3><p>洛必达法则, 在求极限时时常用到</p>
+<p>5.13 假设是函数f和g在(a,b)内可微，而且对于所有$x\in(a,b),g’(x)\neq 0$,这里 $-\infty \le a &lt; b \le \infty$ </p>
+<ul>
+<li>已知 $x\to a$时, $\frac{f’(x)}{g’(x)}\to A$</li>
+<li>如果$x\to a$时, $f(x)\to 0,g(x)\to 0$</li>
+<li>那么 $x\to a$时, $\frac{f(x)}{g(x)}\to A$</li>
+<li>也就是 在某点，函数导数之比有极限，且原函数均趋于0,那么原函数之比也趋于这个极限<ul>
+<li>对于 原函数 均趋于无穷时，也有这个</li>
+</ul>
+</li>
+<li>proof, 证明思路: <ul>
+<li>任意q_1满足 A &lt; q_1，能找到c_1, 使得所有x满足  a &lt; x &lt; c_1 有 f(x)&#x2F;g(x) &lt; q_1, 这里通过5.9找存在点</li>
+<li>从另一侧 , q_2 &lt; A,也能 a &lt; x &lt; c_2 使得 q_2 &lt; f(x)&#x2F;g(x)</li>
+<li>从而 可以控制 x与a的距离 来 控制 f(x)&#x2F;g(x)与A的距离，也就是趋于A</li>
+</ul>
+</li>
+</ul>
+<h3 id="高阶导数-Derivatives-of-higher-order"><a href="#高阶导数-Derivatives-of-higher-order" class="headerlink" title="高阶导数 Derivatives of higher order"></a>高阶导数 Derivatives of higher order</h3><p>5.14 导数本身是一种函数，直接导数定义为1阶导数，n阶导数是对于n-1阶导数的 求导函数，</p>
+<ul>
+<li>需要注意 求的时候，需要 上一阶在那一点可微</li>
+<li>记作 $f^{(n)}$</li>
+</ul>
+<h3 id="Taylor定理-Taylor’s-theorem"><a href="#Taylor定理-Taylor’s-theorem" class="headerlink" title="Taylor定理 Taylor’s theorem"></a>Taylor定理 Taylor’s theorem</h3><p>5.15 suppose f is a real function on <code>[a,b]</code>, n是正整数, $f^{(n-1)}$在$[a,b]$上连续， $f^{(n)}$在$(a,b)$出处存在,$\alpha,\beta$在$[a,b]$是不同的点</p>
+<ul>
+<li>$P(t)&#x3D;\sum_{k&#x3D;0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(t-\alpha)^k$ </li>
+<li>那么存在处于$\alpha,\beta$之间的点x, $f(\beta)&#x3D;P(\beta)+\frac{f^{(n)}(x)}{n!}(\beta-\alpha)^n$ &lt;—要证明</li>
+<li>n&#x3D;1时是中值定理</li>
+<li>说明f能被 n-1次多项式逼近</li>
+<li>如果知道 $|f^{(n)}(x)|$上界，还能做误差估计</li>
+<li></li>
+<li>令$M&#x3D;\frac{f(\beta)-P(\beta)}{(\beta-\alpha)^n}$</li>
+<li>令$g(t)&#x3D;f(t)-P(t)-M(t-\alpha)^n$<ul>
+<li>$g^{(n)}(t)&#x3D;f^{(n)}(t)-n!M$</li>
+<li>这里 如果有x $g^{(n)}(x)&#x3D;0$,那么 $M&#x3D;\frac{f^{(n)}(x)}{n!}$, 再根据M的令，可以证明 上面要证明的存在性</li>
+<li>根据M定义，带入显然$g(\beta)&#x3D;0$</li>
+<li>根据P的定义，$g^{(m&#x3D;0\cdots n-1)}(\alpha)&#x3D;(f^{(m)}-P^{(m)})(x) - M((x-\alpha)^n)^{(m)} |_{x&#x3D;\alpha}$<ul>
+<li>$&#x3D;0-0&#x3D;0$</li>
+</ul>
+</li>
+<li>这里之间 ，因为不知道$\alpha,\beta$大小</li>
+<li>$\alpha,\beta$之间存在点$x_1,g’(x_1)&#x3D;0$</li>
+<li>$\alpha,x_1$之间存在点$x_2,g^{(2)}(x_2)&#x3D;0$</li>
+<li>如此</li>
+<li>$\alpha,x_{n-1}$之间存在点$x_n,g^{(n)}(x_n)&#x3D;0$</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量值函数的微分法-Differentiation-of-vector-valued-functions"><a href="#向量值函数的微分法-Differentiation-of-vector-valued-functions" class="headerlink" title="向量值函数的微分法 Differentiation of vector-valued functions"></a>向量值函数的微分法 Differentiation of vector-valued functions</h3><p>5.16 考虑f是在<code>[a,b]</code>上的复值函数</p>
+<ul>
+<li>5.1 导数定义一样</li>
+<li>5.2 导数存在 则连续 也类似</li>
+<li>5.3 导函数 四则运算的 也一样</li>
+<li>$f_1,f_2$分别是$f$的实部和虚部<ul>
+<li>$f(t)&#x3D;f_1(t)+f_2(t)$</li>
+<li>f在点x可微，当且仅当 $f_1,f_2$ 可微</li>
+<li>实值的极限是控制距离&#x2F;半径，复数里也是控制 半径，或者范数norm</li>
+</ul>
+</li>
+<li>更一般的，$f$把$[a,b]$映入into $\mathbb{R}^k$<ul>
+<li>5.1 同样定义$f’(x)$, 但注意$f’(x)$不是实数，而是$\mathbb{R}^k$中的一个点<ul>
+<li>$\lim_{t\to x} |\frac{f(t)-f(x)}{t-x}-f’(x)|&#x3D;0$, 这里的绝对值符号 用的是norm 范数</li>
+</ul>
+</li>
+<li>$f’&#x3D;(f’_1,\cdots,f’_k)$那么f可微，当且仅当 所有$f_i$可微</li>
+<li>5.2 存在连续也类似</li>
+<li>5.3 四则运算，其中函数的乘积 用内积替换，再多个数乘</li>
+</ul>
+</li>
+<li>而者也有 不满足 的 例如 中值定理，L’Hospital</li>
+</ul>
+<p>5.17 中值定理失效例子 $f(x)&#x3D;e^{ix}&#x3D;\cos x+i\sin x$</p>
+<ul>
+<li>作为复指数幂的定义</li>
+<li>$f(2\pi)-f(0)&#x3D;1-1&#x3D;0$<ul>
+<li>$f’(x)&#x3D;ie^{ix}$</li>
+<li>$|f’(x)|&#x3D;1$ 范数</li>
+<li>所以中值定理失效<ul>
+<li>回顾中值定理，的感觉是构造函数 两端&#x3D;0，中间连续可取到，而极值点的导数&#x3D;0,另外，极值点的导数&#x3D;0是通过，点左右导数 一侧 &gt;&#x3D;0, 另一侧 &lt;&#x3D;0</li>
+<li>而这里，值在复数上连续，首先没有所谓的极值点。</li>
+<li>这种甚至在3维中可以画图，正好输入是实数轴，复平面垂直实轴，看起来像弹簧的形状，而变换的感觉就是物理中绳子挂着小球转圈，绳子给小球的向心拉力，让小球做圆周运动，所以等大向心</li>
+<li>$(f(a)-f(b))&#x2F;(a-b)$ 如果要看到空间中,向一条直直向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>5.18 L’Hospital失效例子</p>
+<ul>
+<li>$(0,1)$, $f(x)&#x3D;x,g(x)&#x3D;x+x^2e^{i&#x2F;x^2}$</li>
+<li>$\lim_{x\to 0} \frac{f(x)}{g(x)}&#x3D;1$</li>
+<li>$\lim_{x\to 0} \frac{f’(x)}{g’(x)}&#x3D;0$ , $g’(x)_{x\to 0}\neq 0$</li>
+</ul>
+<p>5.19 $f: [a,b] \mapsto\mathbb{R}^k$ 连续映射, $(a,b)$内可微</p>
+<ul>
+<li>存在$x \in (a,b)$ , $|f(b)-f(a)|\le (b-a)|f’(x)|$</li>
+<li>proof $z&#x3D;f(b)-f(a)$<ul>
+<li>令$\phi(t)&#x3D;z \cdot f(t), a\le t\le b$, 这里 定义时用的 向量z 与 向量f(t)的点积</li>
+<li>这样$\phi(t)$是$[a,b]$上 连续的实值函数</li>
+<li>根据中值定理 存在 $\phi(b)-\phi(a)&#x3D;(b-a)\phi’(x)&#x3D;(b-a) z \cdot f’(x)$<ul>
+<li>另一方面$\phi(b)-\phi(a)&#x3D;z\cdot f(b)-z\cdot f(a)&#x3D;z \cdot(f(b)-f(a))&#x3D;z\cdot z&#x3D;|z|^2$</li>
+<li>$|z|^2&#x3D;(b-a)z\cdot f’(x)\le (b-a) |z| |f’(x)|$, 使用 Schwarz不等式</li>
+<li>证毕</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Riemann-Stieltjes-积分integral"><a href="#Riemann-Stieltjes-积分integral" class="headerlink" title="Riemann-Stieltjes 积分integral"></a>Riemann-Stieltjes 积分integral</h2><p>先讨论区间上实值函数的积分，</p>
+<ul>
+<li>后面推广到区间上的复值和向量值函数的积分</li>
+<li>10～11章 再讨论在不是区间上的积分</li>
+</ul>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Walter Rudin 数学分析原理 4 连续性</title>
     <url>/Math/Principles_of_Mathematical_Analysis_4/</url>
     <content><![CDATA[<span id="more"></span>
@@ -8869,205 +9068,6 @@
 <li>需要注意上面的 保持运算，要避开 无穷大相减 , 0 * 无穷大 这种 未定义的</li>
 </ul>
 </li>
-</ul>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 5 微分法</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_5/</url>
-    <content><![CDATA[<p>isbn</p>
-<ul>
-<li>中文 9787111134176</li>
-<li>英文 9787111619543</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="微分法-differentiation"><a href="#微分法-differentiation" class="headerlink" title="微分法 differentiation"></a>微分法 differentiation</h2><h3 id="实函数中的导数-the-derivative-of-a-real-function"><a href="#实函数中的导数-the-derivative-of-a-real-function" class="headerlink" title="实函数中的导数 the derivative of a real function"></a>实函数中的导数 the derivative of a real function</h3><p>5.1 Let f be defined (and real-valued) on <code>[a,b]</code>, For any x in <code>[a,b]</code> form the quotient</p>
-<ul>
-<li>$\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,t\neq x$</li>
-<li>define: $f’(x)&#x3D;\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f </li>
-<li>如果 $f’(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable</li>
-<li>类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数</li>
-</ul>
-<p>5.2 f定义在<code>[a,b]</code>上, 如果f在点$x\in[a,b]$可微, 那么f在x点连续</p>
-<ul>
-<li>f(t)-f(x)&#x3D;f’(x) (t-x), 可微左边f’(x)对于给定x是常数，所以 趋于0</li>
-</ul>
-<p>5.3 定理 f和g定义在$[a,b]$上，并且都在点$x\in[a,b]$可微，那么 加法，乘法，除法 也可微并且有</p>
-<ul>
-<li>(f+g)’&#x3D;f’+g’</li>
-<li>(fg)’&#x3D;f’g+fg’</li>
-<li>(f&#x2F;g)’&#x3D;f’&#x2F;g-fg’&#x2F;g^2</li>
-</ul>
-<p>5.5 链式</p>
-<ul>
-<li>(f(g(x)))’&#x3D;f’(g(x)) g’(x)</li>
-<li>这里前面是 f的导函数，在点g(x)处的导数值</li>
-</ul>
-<h3 id="中值定理-mean-value-theorems"><a href="#中值定理-mean-value-theorems" class="headerlink" title="中值定理 mean value theorems"></a>中值定理 mean value theorems</h3><p>5.7 f是定义在度量空间X上的实值函数，称f在点$p\in X$取得局部极大值，如果存在着$\delta &gt; 0$</p>
-<ul>
-<li>当$d(p,q) &lt; \delta$时,且$q\in X$时，有$f(q)\le f(p)$</li>
-<li>类似的定义局部极小值</li>
-</ul>
-<p>5.8 f定义在$[a,b]$上, $x\in [a,b]$如果f在x点取得局部极大值,$f’(x)$存在,$f’(x)&#x3D;0$,</p>
-<ul>
-<li>proof 也就是左导数 &lt;&#x3D;0, 右导数&gt;&#x3D;0,要相等只能&#x3D;0</li>
-</ul>
-<p>这里中文原书第3版,2004.1(2024.4 重印 第一版)，有错误，漏掉了g（勘误），英文版是对的</p>
-<p>5.9 f和g是<code>[a,b]</code>上连续实函数，在(a,b)中可微，那么便有一点$x\in(a,b)$ 使得</p>
-<ul>
-<li>$[f(b)-f(a)]g’(x)&#x3D;[g(b)-g(a)]f’(x)$</li>
-<li>并不要求在断电上可微</li>
-<li>$h(t)&#x3D;[f(b)-f(a)]g(t)-[g(b)-g(a)]f(t)$,</li>
-<li>h在 闭区间上连续，在开区间上可微，且 $h(a)&#x3D;h(b)$<ul>
-<li>只需要证明存在一点 $h’(t)&#x3D;0$, 若为常数则每点满足</li>
-<li>若有点 大于端点，4.16（紧度量空间上连续函数 存在点使f能取到最大值），所以最大值点能取到，且导数为0</li>
-<li>若有点 小于端点 类似的</li>
-<li>这叫 一般中值定理generalized mean value theorem</li>
-</ul>
-</li>
-<li>注意 在值域是复数域时会失效 稍后的 5.17</li>
-</ul>
-<p>5.10 更常用的退化中值定理</p>
-<ul>
-<li>f(b)-f(a)&#x3D;(b-a)f’(x), 也就是g(x)&#x3D;x</li>
-</ul>
-<p>5.11 f在(a,b)可微</p>
-<ul>
-<li>f’(x) &gt;&#x3D;0 单调递增</li>
-<li>f’(x) &#x3D;0 常函数</li>
-<li>f’(x) &lt;&#x3D;0 单调递减</li>
-</ul>
-<h3 id="导数的连续性-the-continuity-of-derivatives"><a href="#导数的连续性-the-continuity-of-derivatives" class="headerlink" title="导数的连续性 the continuity of derivatives"></a>导数的连续性 the continuity of derivatives</h3><p>$f(x)&#x3D;x^2sin(1&#x2F;x),f(0)&#x3D;0$是 处处导数存在，但导函数不连续的函数</p>
-<p>5.12 f是<code>[a,b]</code>上的实值可微函数，再设 $f’(a) &lt; \lambda &lt; f’(b)$, 那必有一点 $f’(x)&#x3D;\lambda$</p>
-<ul>
-<li>$g(t)&#x3D;f(t)-\lambda t$</li>
-<li>g’(a) &lt; 0 , g’(b) &gt; 0,所以 分别存在$g(t_1) &lt; g(a),g(t_2) &lt; g(b)$, 也就是存在点 小于左端点，存在点小于右端点</li>
-<li>所以在极小值点x（4.16可达到）， g’(x)&#x3D;0,从而可以取到</li>
-<li>而这个性质，并没有要求导函数连续，只需要f处处可微</li>
-<li>推论 f在<code>[a,b]</code>上可微，那么f’在<code>[a,b]</code>上便不能有<code>简单间断</code>, <ul>
-<li>但是 f’很可能有第二类间断</li>
-</ul>
-</li>
-</ul>
-<h3 id="L’Hospital-法则-rule"><a href="#L’Hospital-法则-rule" class="headerlink" title="L’Hospital 法则 rule"></a>L’Hospital 法则 rule</h3><p>洛必达法则, 在求极限时时常用到</p>
-<p>5.13 假设是函数f和g在(a,b)内可微，而且对于所有$x\in(a,b),g’(x)\neq 0$,这里 $-\infty \le a &lt; b \le \infty$ </p>
-<ul>
-<li>已知 $x\to a$时, $\frac{f’(x)}{g’(x)}\to A$</li>
-<li>如果$x\to a$时, $f(x)\to 0,g(x)\to 0$</li>
-<li>那么 $x\to a$时, $\frac{f(x)}{g(x)}\to A$</li>
-<li>也就是 在某点，函数导数之比有极限，且原函数均趋于0,那么原函数之比也趋于这个极限<ul>
-<li>对于 原函数 均趋于无穷时，也有这个</li>
-</ul>
-</li>
-<li>proof, 证明思路: <ul>
-<li>任意q_1满足 A &lt; q_1，能找到c_1, 使得所有x满足  a &lt; x &lt; c_1 有 f(x)&#x2F;g(x) &lt; q_1, 这里通过5.9找存在点</li>
-<li>从另一侧 , q_2 &lt; A,也能 a &lt; x &lt; c_2 使得 q_2 &lt; f(x)&#x2F;g(x)</li>
-<li>从而 可以控制 x与a的距离 来 控制 f(x)&#x2F;g(x)与A的距离，也就是趋于A</li>
-</ul>
-</li>
-</ul>
-<h3 id="高阶导数-Derivatives-of-higher-order"><a href="#高阶导数-Derivatives-of-higher-order" class="headerlink" title="高阶导数 Derivatives of higher order"></a>高阶导数 Derivatives of higher order</h3><p>5.14 导数本身是一种函数，直接导数定义为1阶导数，n阶导数是对于n-1阶导数的 求导函数，</p>
-<ul>
-<li>需要注意 求的时候，需要 上一阶在那一点可微</li>
-<li>记作 $f^{(n)}$</li>
-</ul>
-<h3 id="Taylor定理-Taylor’s-theorem"><a href="#Taylor定理-Taylor’s-theorem" class="headerlink" title="Taylor定理 Taylor’s theorem"></a>Taylor定理 Taylor’s theorem</h3><p>5.15 suppose f is a real function on <code>[a,b]</code>, n是正整数, $f^{(n-1)}$在$[a,b]$上连续， $f^{(n)}$在$(a,b)$出处存在,$\alpha,\beta$在$[a,b]$是不同的点</p>
-<ul>
-<li>$P(t)&#x3D;\sum_{k&#x3D;0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(t-\alpha)^k$ </li>
-<li>那么存在处于$\alpha,\beta$之间的点x, $f(\beta)&#x3D;P(\beta)+\frac{f^{(n)}(x)}{n!}(\beta-\alpha)^n$ &lt;—要证明</li>
-<li>n&#x3D;1时是中值定理</li>
-<li>说明f能被 n-1次多项式逼近</li>
-<li>如果知道 $|f^{(n)}(x)|$上界，还能做误差估计</li>
-<li></li>
-<li>令$M&#x3D;\frac{f(\beta)-P(\beta)}{(\beta-\alpha)^n}$</li>
-<li>令$g(t)&#x3D;f(t)-P(t)-M(t-\alpha)^n$<ul>
-<li>$g^{(n)}(t)&#x3D;f^{(n)}(t)-n!M$</li>
-<li>这里 如果有x $g^{(n)}(x)&#x3D;0$,那么 $M&#x3D;\frac{f^{(n)}(x)}{n!}$, 再根据M的令，可以证明 上面要证明的存在性</li>
-<li>根据M定义，带入显然$g(\beta)&#x3D;0$</li>
-<li>根据P的定义，$g^{(m&#x3D;0\cdots n-1)}(\alpha)&#x3D;(f^{(m)}-P^{(m)})(x) - M((x-\alpha)^n)^{(m)} |_{x&#x3D;\alpha}$<ul>
-<li>$&#x3D;0-0&#x3D;0$</li>
-</ul>
-</li>
-<li>这里之间 ，因为不知道$\alpha,\beta$大小</li>
-<li>$\alpha,\beta$之间存在点$x_1,g’(x_1)&#x3D;0$</li>
-<li>$\alpha,x_1$之间存在点$x_2,g^{(2)}(x_2)&#x3D;0$</li>
-<li>如此</li>
-<li>$\alpha,x_{n-1}$之间存在点$x_n,g^{(n)}(x_n)&#x3D;0$</li>
-</ul>
-</li>
-</ul>
-<h3 id="向量值函数的微分法-Differentiation-of-vector-valued-functions"><a href="#向量值函数的微分法-Differentiation-of-vector-valued-functions" class="headerlink" title="向量值函数的微分法 Differentiation of vector-valued functions"></a>向量值函数的微分法 Differentiation of vector-valued functions</h3><p>5.16 考虑f是在<code>[a,b]</code>上的复值函数</p>
-<ul>
-<li>5.1 导数定义一样</li>
-<li>5.2 导数存在 则连续 也类似</li>
-<li>5.3 导函数 四则运算的 也一样</li>
-<li>$f_1,f_2$分别是$f$的实部和虚部<ul>
-<li>$f(t)&#x3D;f_1(t)+f_2(t)$</li>
-<li>f在点x可微，当且仅当 $f_1,f_2$ 可微</li>
-<li>实值的极限是控制距离&#x2F;半径，复数里也是控制 半径，或者范数norm</li>
-</ul>
-</li>
-<li>更一般的，$f$把$[a,b]$映入into $\mathbb{R}^k$<ul>
-<li>5.1 同样定义$f’(x)$, 但注意$f’(x)$不是实数，而是$\mathbb{R}^k$中的一个点<ul>
-<li>$\lim_{t\to x} |\frac{f(t)-f(x)}{t-x}-f’(x)|&#x3D;0$, 这里的绝对值符号 用的是norm 范数</li>
-</ul>
-</li>
-<li>$f’&#x3D;(f’_1,\cdots,f’_k)$那么f可微，当且仅当 所有$f_i$可微</li>
-<li>5.2 存在连续也类似</li>
-<li>5.3 四则运算，其中函数的乘积 用内积替换，再多个数乘</li>
-</ul>
-</li>
-<li>而者也有 不满足 的 例如 中值定理，L’Hospital</li>
-</ul>
-<p>5.17 中值定理失效例子 $f(x)&#x3D;e^{ix}&#x3D;\cos x+i\sin x$</p>
-<ul>
-<li>作为复指数幂的定义</li>
-<li>$f(2\pi)-f(0)&#x3D;1-1&#x3D;0$<ul>
-<li>$f’(x)&#x3D;ie^{ix}$</li>
-<li>$|f’(x)|&#x3D;1$ 范数</li>
-<li>所以中值定理失效<ul>
-<li>回顾中值定理，的感觉是构造函数 两端&#x3D;0，中间连续可取到，而极值点的导数&#x3D;0,另外，极值点的导数&#x3D;0是通过，点左右导数 一侧 &gt;&#x3D;0, 另一侧 &lt;&#x3D;0</li>
-<li>而这里，值在复数上连续，首先没有所谓的极值点。</li>
-<li>这种甚至在3维中可以画图，正好输入是实数轴，复平面垂直实轴，看起来像弹簧的形状，而变换的感觉就是物理中绳子挂着小球转圈，绳子给小球的向心拉力，让小球做圆周运动，所以等大向心</li>
-<li>$(f(a)-f(b))&#x2F;(a-b)$ 如果要看到空间中,向一条直直向量</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>5.18 L’Hospital失效例子</p>
-<ul>
-<li>$(0,1)$, $f(x)&#x3D;x,g(x)&#x3D;x+x^2e^{i&#x2F;x^2}$</li>
-<li>$\lim_{x\to 0} \frac{f(x)}{g(x)}&#x3D;1$</li>
-<li>$\lim_{x\to 0} \frac{f’(x)}{g’(x)}&#x3D;0$ , $g’(x)_{x\to 0}\neq 0$</li>
-</ul>
-<p>5.19 $f: [a,b] \mapsto\mathbb{R}^k$ 连续映射, $(a,b)$内可微</p>
-<ul>
-<li>存在$x \in (a,b)$ , $|f(b)-f(a)|\le (b-a)|f’(x)|$</li>
-<li>proof $z&#x3D;f(b)-f(a)$<ul>
-<li>令$\phi(t)&#x3D;z \cdot f(t), a\le t\le b$, 这里 定义时用的 向量z 与 向量f(t)的点积</li>
-<li>这样$\phi(t)$是$[a,b]$上 连续的实值函数</li>
-<li>根据中值定理 存在 $\phi(b)-\phi(a)&#x3D;(b-a)\phi’(x)&#x3D;(b-a) z \cdot f’(x)$<ul>
-<li>另一方面$\phi(b)-\phi(a)&#x3D;z\cdot f(b)-z\cdot f(a)&#x3D;z \cdot(f(b)-f(a))&#x3D;z\cdot z&#x3D;|z|^2$</li>
-<li>$|z|^2&#x3D;(b-a)z\cdot f’(x)\le (b-a) |z| |f’(x)|$, 使用 Schwarz不等式</li>
-<li>证毕</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Riemann-Stieltjes-积分integral"><a href="#Riemann-Stieltjes-积分integral" class="headerlink" title="Riemann-Stieltjes 积分integral"></a>Riemann-Stieltjes 积分integral</h2><p>先讨论区间上实值函数的积分，</p>
-<ul>
-<li>后面推广到区间上的复值和向量值函数的积分</li>
-<li>10～11章 再讨论在不是区间上的积分</li>
 </ul>
 ]]></content>
       <categories>
@@ -9487,606 +9487,6 @@
 <p>小总结</p>
 </blockquote>
 <p>这积分 虽然是riemann引入，但是前面通过stieltjes的方法来研究，为后面特殊称Riemann也好，变量替换也好，分部积分也好，研究积分基本定理也好，提供了更好看的基础。</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>微积分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Walter Rudin 数学分析原理 7 函数序列与函数项极限</title>
-    <url>/Math/Principles_of_Mathematical_Analysis_7/</url>
-    <content><![CDATA[<p>isbn</p>
-<ul>
-<li>中文 9787111134176</li>
-<li>英文 9787111619543</li>
-</ul>
-<span id="more"></span>
-
-<h2 id="函数序列与函数项级数-sequences-and-series-of-functions"><a href="#函数序列与函数项级数-sequences-and-series-of-functions" class="headerlink" title="函数序列与函数项级数 sequences and series of functions"></a>函数序列与函数项级数 sequences and series of functions</h2><p>这一章里 只限于讨论复值函数。</p>
-<p>注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）</p>
-<h3 id="主要问题的讨论-discussion-of-main-problem"><a href="#主要问题的讨论-discussion-of-main-problem" class="headerlink" title="主要问题的讨论 discussion of main problem"></a>主要问题的讨论 discussion of main problem</h3><p>7.1, n&#x3D;1,2, {$f_n$}是一个定义在集E上的函数序列，再假设${f_n(x)}$对于每个$x\in E$收敛，可由</p>
-<ul>
-<li>$f(x)&#x3D;\lim_{n\to\infty} f_n(x)$确定一个函数f</li>
-<li>称$f_n$在$E$上收敛,f是{$f_n$}的极限limit 或 极限函数limit function</li>
-<li>{$f_n$} converges to f pointwise on E, 在E上逐点收敛到f</li>
-<li>类似的 $f(x)&#x3D;\sum_{n&#x3D;1}^{\infty} f_n(x), x\in E$, 说f是 级数$\sum f_n$的和. f is called the sum of the series $\sum f_n$</li>
-<li>那么研究什么呢，例如 连续性，可微性，可积 这些性质能否保持，导数的关系<ul>
-<li>例如连续性: <ul>
-<li>点连续 $\lim_{t\to x}f(t)&#x3D;f(x)$</li>
-<li>是否保持连续性 $\lim_{t\to x}\lim_{n\to \infty}f_n(t)&#x3D;?&#x3D;\lim_{n\to\infty} \lim_{t \to x}f_n(t)$  或者说这个次序是否影响结果</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>7.2 一些极限的次序是不能交换的，一些是与极限顺序无关的</p>
-<ul>
-<li>$s_{m,n}&#x3D;\frac{m}{m+n}$</li>
-<li>显然交换 极限顺序一个是0,一个是1,不等</li>
-<li>我在想 这个从感觉上的</li>
-</ul>
-<p>7.3 连续函数的收敛级数 可能不连续</p>
-<ul>
-<li>$f_n(x)&#x3D;\frac{x^2}{(1+x^2)^n}$</li>
-<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}f_n(x)$<ul>
-<li>在x&#x3D;0是f(x)&#x3D;0</li>
-<li>在其它点，逐点收敛到$f(x)&#x3D;1+x^2$</li>
-</ul>
-</li>
-</ul>
-<p>7.4 $f_m(x)&#x3D;\lim_{n\to\infty} (\cos m! \pi x)^{2n}$</p>
-<ul>
-<li>所以 $f_m(x)&#x3D;[m!x \in \mathbb{Z}]$ 也就是判定m!x是否为整数</li>
-<li>$f(x)&#x3D;\lim_{m\to \infty} f_m(x)$</li>
-<li>对于每个 无理数x, f(x)&#x3D;0</li>
-<li>对于每个有理数x&#x3D;p&#x2F;q, 当m&gt;&#x3D;q时， m!x是整数，所以f(x)&#x3D;1（逐点）</li>
-<li>哦，这样也构造出了 Dirichlet函数 ，有点意思</li>
-<li>处处间断，它不是黎曼可积的</li>
-</ul>
-<p>7.5 导数不同样收敛的例子</p>
-<ul>
-<li>x是实数, n&#x3D;1,2,3,…</li>
-<li>$f_n(x)&#x3D;\frac{\sin nx}{\sqrt{n}}$</li>
-<li>$f(x)&#x3D;\lim_{n\to \infty} f_n(x)&#x3D;0$</li>
-<li>$f’(x)&#x3D;0$</li>
-<li>$f’_n(x)&#x3D;\sqrt{n}\cos nx$ 而这个 不收敛到f’(例如点x&#x3D;0), 这个 $\sqrt{n}$ ，不为0</li>
-</ul>
-<p>7.6 积分不能保持的例子 极限和积分交换后结果不同 $0\le x\le 1$令$f_n(x)&#x3D;n^2x(1-x^2)^n$</p>
-<ul>
-<li>$\lim_{n\to \infty}f_n(x)&#x3D;0$</li>
-<li>$\lim_{n\to \infty} \int_0^1 f_n(x)dx&#x3D;\lim_{n\to \infty} \frac{n^2}{2n+1} \to +\infty$</li>
-<li>类似的<ul>
-<li>$\lim_{n\to \infty} nx(1-x^2)^n&#x3D;0$</li>
-<li>$\lim_{n\to \infty} \int_0^1 nx(1-x^2)^n dx&#x3D;\lim_{n\to \infty} \frac{n}{2n+1} \to 1&#x2F;2$</li>
-</ul>
-</li>
-</ul>
-<h3 id="一致收敛性-uniform-convergence"><a href="#一致收敛性-uniform-convergence" class="headerlink" title="一致收敛性 uniform convergence"></a>一致收敛性 uniform convergence</h3><p>上面这个例子的问题导致了 交换运算顺序受到了限制，我觉得从计算机的视角函数就是函数名和参数虽然上面写作$f_n(x)$在计算机的习惯上可以写成$f(n,x)$, 而这样变成二元函数以后，其实这种 顺序会导致不同，感觉上是更不容易相同的，$f(n,x)&#x3D;sign(\lfloor x\rfloor-n)$ 这样甚至可以对角线上是0,一种顺序是1,一种顺序是-1</p>
-<p>7.7 对于$\epsilon &gt; 0$有整数N,使得$n\ge N$时，对于一切$x\in E$ 有 $|f_n(x)-f(x)|\le \epsilon$</p>
-<ul>
-<li>这里 和 逐点的区别是，这里的N与点的选取是无关的，要所有点满足 结果的距离限制。</li>
-<li>而前面的逐点收敛，是先选点，关于点有$N(x,\epsilon)$ 来控制$f_n$和$f$的距离</li>
-<li>而显然 $N(x,\epsilon)$可以用$N(\epsilon)$表示，也就是说 一致收敛 一定 逐点收敛，</li>
-<li>哦  我写完这段，才看到书上也写了区别的讲解</li>
-</ul>
-<p>7.8 类似的，上面的定义是 半径形式，那么自然有直径形式也就是Cauchy准则</p>
-<ul>
-<li>当且仅当 任意$\epsilon &gt;0$存在$N$使得任意$n,m \ge N$，任意$x$有$|f_n(x)-f_m(x)| \le \epsilon$ </li>
-<li>有的时候 我好想用r和2r,是我的问题吗，这样的“感受会更舒服”，虽然不是更简洁</li>
-<li>证明<ul>
-<li>7.7 -&gt; 7.8 取epsilon&#x2F;2就好</li>
-<li>7.8 -&gt; 7.7 相对复杂，要用紧度量空间 cauchy列的性质 3.11 这里逐点收敛于一个具体值，那么这些逐点收敛的具体值串起来就是它逐点收敛于某个函数，记作$f(x)$, 再证明一致性就好</li>
-</ul>
-</li>
-</ul>
-<p>7.9 假设 $\lim_{n\to\infty} f_n(x)&#x3D;f(x),x\in E$</p>
-<ul>
-<li>令 $M_n&#x3D;\sup_{x\in E} |f_n(x)-f(x)|$</li>
-<li>当且仅当$n\to \infty$时$M_n\to 0$</li>
-<li>就是7.7换了个写法，还是能通过控制n来控制所有点 到 逐点收敛函数的距离最大值</li>
-</ul>
-<p>7.10 weierstrass</p>
-<ul>
-<li>{$f_n$}是定义在$E$上的函数序列, $f_n(x)\le M_n$, 如果$\sum M_n$收敛，那么$\sum f_n$便在$E$上一致收敛</li>
-<li>看起来的感觉像比较判别法，但比较判别法直接只能控制界限，而如果配合cauchy列（也就是直径），那么能控制直径的界限，也就能一致收敛了</li>
-</ul>
-<h3 id="一致收敛性与连续性-uniform-convergence-and-continuity"><a href="#一致收敛性与连续性-uniform-convergence-and-continuity" class="headerlink" title="一致收敛性与连续性 uniform convergence and continuity"></a>一致收敛性与连续性 uniform convergence and continuity</h3><p>7.3的例子 给到了连续函数 的逐点极限 可能不连续， </p>
-<p>7.11 定理 假设在度量空间内的集E上$f_n$一致收敛于f,</p>
-<ul>
-<li>设x是E的极限点， </li>
-<li>在假设$\lim_{t\to x}f_n(t)&#x3D;A_n$ (是$f_n$在x的极限)</li>
-<li>那么{$A_n$}收敛,并且 $\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n$ (上述极限随着n也收敛，且与逐点收敛函数f 在x点极限相同)</li>
-<li>也就是 在x点 保持点极限 $\lim_{t\to x}\lim_{n\to \infty} f_n(t)&#x3D;\lim_{n\to \infty}\lim_{t\to x} f_n(t)$<ul>
-<li>因为研究点连续 就是 极限&#x3D;点值，但点值容易研究，上面先抛开点研究点极限</li>
-<li>在此基础上，再有$f_n$点x连续,那就是$f_n(x)&#x3D;A_n$，那么就有  点连续</li>
-</ul>
-</li>
-<li>emmm 这里书上 $|f_n(t)-f_m(t)|&lt;\epsilon$到$|A_n-A_m|&lt;\epsilon$ 直接$t\to x$取到极限了?<ul>
-<li>感觉 给定epsilon, 控制N任意 $|f_n(t)-f_m(t)|&lt;\epsilon&#x2F;3$, 对于取得n,m ,可以控制t与x距离 $|A_n-A_m|\le |A_n-f_n|+|f_n-f_m|+|f_m-A_m| &lt; 3\epsilon&#x2F;3$ </li>
-<li>总之可以控制$A_i$的距离,从而{$A_i$}是Cauchy列 有极限 A</li>
-<li>$|f(t)-A| \le |f(t)-f_n(t)|+|f_n(t)-A_n|+|A_n-A|$， 这个表达式对任意n成立<ul>
-<li>一致连续 对于一切t 可以用N控制 第一段 $\epsilon&#x2F;3$</li>
-<li>$A_n$收敛 存在N 控制 第三段 $\epsilon&#x2F;3$</li>
-<li>在上述n选定后 得到 $|f(t)-A| \le 2\epsilon&#x2F;3 + |f_n(t)-A_n|$, 注意的是这里 右侧的里面的 函数和常数是被n固定了的</li>
-<li>最后 目标是证明 控制t和x距离能控制 $f(t)$和A的距离，那么 最后这个就是 控制t和x距离控制 中间段的 距离 ，从而控制了3段的距离</li>
-</ul>
-</li>
-<li>也就是 一致收敛 则 $\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n$<ul>
-<li>$\lim_{t\to x}(\lim_{n\to\infty}f_n(t))&#x3D;\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n&#x3D;\lim_{n\to \infty} (\lim_{t\to x}f_n(t))$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>7.3 的例子$f(x)&#x3D;\sum \frac{x^2}{(1+x^2)^n}$ 在点0邻域没有一致收敛，因为右边的值要逐点趋于1,但是如果先给定了n, x越趋于0,右侧值可以趋于0</li>
-</ul>
-<p>7.12 {$f_n$}在E上连续函数的序列，在E上$f_n$一致收敛到f,那么f在E上连续</p>
-<ul>
-<li>是7.11 的直接推论，</li>
-</ul>
-<p>7.13 K紧</p>
-<ul>
-<li>{$f_n$}是K上连续函数序列</li>
-<li>{$f_n$}是K上逐点收敛于连续函数f</li>
-<li>$f_n(x)\ge f_{n+1}(x)$， 单调性</li>
-<li>那么 $f_n\to f$是一致的</li>
-<li>证明:<ul>
-<li>$g_n&#x3D;f_n-f$连续的,</li>
-<li>$g_n\to 0$逐点收敛到0函数</li>
-<li>要证明一致收敛到0函数，</li>
-<li>$\epsilon &gt; 0$, 设$K_n \subset E$是使得$g_n(K_n)\ge \epsilon$ 的一切$x\in E$的集，$g_n(K_n)$连续，根据4.8(紧 的闭的 原像闭)，所以$K_n$闭</li>
-<li>$g_n$单调递减，所以$K_n \supset K_{n+1}$ 嵌套闭集，存在点或为空，对于任意x, 存在充分大的n使得 $x\not\in \cap K_n$ 所以 $\cap K_n$是空的，</li>
-<li>所以 存在 N使得 $\cap K_n$是空的 （因为对于紧集 嵌套闭集 任意有限交非空 会导致 可数交非空）</li>
-</ul>
-</li>
-<li>这里的 紧性 必不可少，$f_n(x)&#x3D;\frac{1}{nx+1}, x\in(0,1)$ 趋于0,但不是一致收敛<ul>
-<li>没有紧性，上面的$K_n$ 不一定是嵌套闭集，虽然$\cap K_n$无限交是空的，但是无法得到存在有限交是空的</li>
-</ul>
-</li>
-</ul>
-<p>7.14 X 是度量空间, $\mathscr{C}(X)$  就表示 以X为定义域的复值complex-valued连续continuous 有界bounded 函数的集 (mathscr{C})</p>
-<ul>
-<li>4.15 $f(X紧) \mapsto \mathbb{R}^k$, f连续则 $f(X)$ 闭+有界. 所以 如果X紧 上面 值域中有界性是多余的</li>
-<li>定义范数 $||f||&#x3D;\sup_{x\in X} |f(x)|$ 范数norm上确</li>
-<li>f有界,那么 $||f|| &lt; \infty$</li>
-<li>$f(x)&#x3D;0$时才有 $||f||&#x3D;0$</li>
-<li>若$h&#x3D;f+g$, $|h(x)|\le|f(x)|+|g(x)|\le ||f||+||g||$<ul>
-<li>$||f+g|| \le ||f||+||g||$</li>
-</ul>
-</li>
-<li>定义$d(f,g)&#x3D;||f-g||$, 为距离函数， 那么上面范数不等式 满足 度量空间3条件（只有自己到自己&#x3D;0，对称，任意c(X)都有 d(a,b) &lt;&#x3D; d(a,c)+f(c,b), 通过 f&#x3D; a-c, g&#x3D;c-b, 带入即可</li>
-<li>这样$\mathscr{C}(X)$是度量空间</li>
-<li>$\mathscr{C}(X)$的度量来说，序列{$f_n$} 收敛于f,当且仅当$f_n$在X上一致收敛于f</li>
-<li>$\mathscr{C}$的闭子集有时叫作 一致闭 的</li>
-<li>集$\mathscr{A}\subset \mathscr{C}(X)$的闭包叫作它的 一致闭包 等等</li>
-</ul>
-<p>7.15 上边说的 度量 使得$\mathscr{C}(X)$变成了完备度量空间complete metric space</p>
-<ul>
-<li>证明 设 {$f_n$} 是$\mathscr{C}(X)$里的Cauchy序列,<ul>
-<li>也就是 可以通过 N来控制 $||f_n-f_m||$的直径，根据7.8 它存在具体的f, 一致收敛于它。（一致收敛是因为|| ||的定义是 sup ||</li>
-<li>7.12 (连序函数列+一致收敛) ，收敛于连续的f</li>
-<li>一致收敛 存在n 使得$|f(x)-f_n(x)|&lt;1$ 对于所有x成立，$f_n$有界,从而 $f$有界</li>
-<li>所以$f\in\mathscr{C}(X)$</li>
-<li>因为一致收敛于f, $n\to \infty$时$||f-f_n||\to 0$</li>
-</ul>
-</li>
-<li>这里 就是要证明 complete ，什么是complete, 也就是 cauchy 收敛，且收敛于 空间中的元素<ul>
-<li>那么就是要证明 1. 元素在空间中，2收敛到该元素</li>
-<li>那么首先找到f,然后有 f的定义域+连续+有界，从而证明f在空间中，</li>
-<li>最后再（一致收敛 是 函数的定义）到 ($\mathscr{C}(X)$中的距离的收敛)</li>
-</ul>
-</li>
-</ul>
-<h3 id="一致收敛性与积分-uniform-convergence-and-integration"><a href="#一致收敛性与积分-uniform-convergence-and-integration" class="headerlink" title="一致收敛性与积分 uniform convergence and integration"></a>一致收敛性与积分 uniform convergence and integration</h3><p>7.16 $[a,b]$上$f_n\in\mathscr{R}(\alpha)$,一致收敛到f 那么</p>
-<ul>
-<li>$f\in\mathscr{R}(\alpha)$ 同样黎曼可积</li>
-<li>$\int_a^b f d\alpha &#x3D; \lim_{n\to\infty} \int_a^b f_n d\alpha$ 保持积分结果</li>
-<li>证明<ul>
-<li>令 $\epsilon_n&#x3D;\sup |f_n(x)-f(x)|$ 通过一致收敛保证</li>
-<li>有 $f_n-\epsilon_n \le f\le f_n+\epsilon_n$</li>
-<li>$\int_a^b (f_n-\epsilon_n)d\alpha \le L(f) \le U(f) \le \int_a^b (f_n+\epsilon_n)d\alpha$<ul>
-<li>因为任意划分P，$f_n-\epsilon_n$的下积分 小于等于 f的下积分，两边都取sup，左边是可积所以左边&#x3D;积分结果，右边则是f的下积分</li>
-<li>上积分类似</li>
-</ul>
-</li>
-<li>$0\le U(f)-L(f)\le 2\epsilon_n [\alpha(b)-\alpha(a)]$ 可以任意小，从而f上下积分相等，所以关于$\alpha$黎曼可积</li>
-<li>$|\int_a^b f d\alpha -\int_a^b f_nd\alpha|\le \epsilon_n[\alpha(b)-\alpha(a)]$ 证明积分距离任意小即相等</li>
-</ul>
-</li>
-<li>推论: $[a,b]$上<ul>
-<li>$f(x)&#x3D;\sum_{n&#x3D;1}^{\infty} f_n(x)$ 在$[a,b]$上一致收敛</li>
-<li>$\int_a^b fd\alpha&#x3D;\sum_{n&#x3D;1}^{\infty}\int_a^b f_n d\alpha$</li>
-<li>也就是 这个级数可以逐项积分, 上面的 积分和求和顺序在 有限项时可以交换的，而上面的性质是 $\sum_n \int f_i &#x3D; \int \sum_n f_i \to \int f$</li>
-</ul>
-</li>
-</ul>
-<h3 id="一致收敛性与微分-uniform-convergence-and-differentiation"><a href="#一致收敛性与微分-uniform-convergence-and-differentiation" class="headerlink" title="一致收敛性与微分 uniform convergence and differentiation"></a>一致收敛性与微分 uniform convergence and differentiation</h3><p>前面7.5 说明{f_n}一致收敛到f，并不能$f’_n\to f’$ 需要更强假设</p>
-<p>7.17 {$f_n$}是$[a,b]$上的可微函数序列，$[a,b]$上有某点$x_0$使得{$f_n(x_0)$} 收敛, 如果$f’_n$在$[a,b]$上一致收敛，那么</p>
-<ul>
-<li><p>{$f_n$}便在$[a,b]$上一致收敛于某函数f ,并且</p>
-</li>
-<li><p>$f’(x)&#x3D;\lim_{n\to\infty}f’_n(x)$</p>
-</li>
-<li><p>证明:</p>
-<ul>
-<li>$x_0$点f收敛，可以控制N, $|f_n(x_0)-f_m(x_0)|&lt;\epsilon&#x2F;2$</li>
-<li>$f’$一致收敛，可以控制N,任意t, 有$|f’_n(t)-f’_m(t)| &lt; \frac{\epsilon}{2(b-a)}$</li>
-<li>5.19 $f: [a,b] \mapsto \mathbb{R}^k$ 且可微 k则 $|f(b)-f(a)|\le (b-a) |f’(x)|$<ul>
-<li>$|(f_n(x)-f_m(x))-(f_n(t)-f_m(t))|\le |x-t|\cdot|f’_n(p)-f’_m(p)|, (其中(x-p)(t-p)&lt; 0) \le |x-t| \frac{\epsilon}{2(b-a)} \le \frac{\epsilon}{2}$ 对于任意$x,t \in[a,b]$</li>
-</ul>
-</li>
-<li>$|f_n(x)-f_m(x)|\le |(f_n(x)-f_m(x))-(f_n(x_0)-f_m(x_0))|+|f_n(x_0)-f_m(x_0)| \le \epsilon$ 可以被控制</li>
-<li>从而 证明了 {$f_n$}一致收敛</li>
-<li>接下来 证明导数 保持，也就是根据导数定义 任意接近</li>
-<li>对于定点x, 令 $\phi_n(t)&#x3D;\frac{f_n(t)-f_n(x)}{t-x}$, $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}$</li>
-<li>那么$\lim_{t\to x}\phi_n(t)&#x3D;f’_n(x)$</li>
-<li>$|\phi_n(t)-\phi_m(t)| \le \frac{\epsilon}{2(b-a)}$ 根据上面，说明收敛 且 $t\neq x$时一致收敛（能与点无关 的控制距离）</li>
-<li>根据$\phi$定义, $\lim_{n\to \infty} \phi_n\to \phi$ 一致的成立<ul>
-<li>7.11 $\lim_{t\to x}\lim_{n\to\infty}f_n(t)&#x3D;\lim_{n\to \infty} \lim_{t\to x}f_n(t)$</li>
-<li>$f’(x)&#x3D;\lim_{t\to x}\phi(t)&#x3D;\lim_{t\to x}\lim_{n\to\infty} \phi_n(t)&#x3D;\lim_{n\to\infty}\lim_{t\to x} \phi_n(t)&#x3D;\lim_{n\to \infty} f’_n(x)$</li>
-<li>细看这一串等号，两头的 是 导数的定义<ul>
-<li>第二个等号 需要 $f_n$收敛</li>
-<li>第三个等号 需要 $\phi_n$一致收敛到$\phi$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>注 如果$f’_n$连续，7.16 + 微积分基本定理，可以更容易证明</p>
-</li>
-</ul>
-<h3 id="7-18-实轴上确有处处不可微的实连续函数"><a href="#7-18-实轴上确有处处不可微的实连续函数" class="headerlink" title="7.18 实轴上确有处处不可微的实连续函数"></a>7.18 实轴上确有处处不可微的实连续函数</h3><p>there exists a real continuous function on the real line which is nowhere differentiable</p>
-<ul>
-<li>$\varphi(x)&#x3D;|x|, -1\le x\le 1$<ul>
-<li>$\varphi(x+2)&#x3D;\varphi(x)$</li>
-<li>$|\varphi(s)-\varphi(t)|\le |s-t|$ ，在$\mathbb{R}^1$上连续</li>
-</ul>
-</li>
-<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty} (\frac{3}{4})^n \varphi(4^nx)$<ul>
-<li>7.10 被 $M_n&#x3D;(3&#x2F;4)^n$ 控制，所以$f(x)$ 一致收敛</li>
-<li>7.12 连续+一致收敛 &#x3D;&gt; f连续</li>
-<li>固定实数x和正数m,令$\delta_m&#x3D;\pm \frac{1}{2}4^{-m}$<ul>
-<li>这里正负号选取使得 $4^mx$与$4^m(x+\delta_m)$ 之间没有整数 （因为 这是$4^mx$ 的1&#x2F;2半径的单侧邻域一定能做到</li>
-<li>令$\displaystyle \gamma_n&#x3D;\frac{\varphi(4^n(x+\delta_m))-\varphi(4^nx)}{\delta_m}$ <ul>
-<li>$n&gt;m$时，增量是偶数，所以分子为0</li>
-<li>$0\le n \le m$ 时, 分子变化 不大于增量， $|\gamma_n| \le 4^n$</li>
-<li>$|\frac{f(x+\delta_m)-f(x)}{\delta_m}|&#x3D;|\sum (3&#x2F;4)^n\gamma_n|$ 根据定义</li>
-<li>$&#x3D;|\sum_{n&#x3D;0}^m (3&#x2F;4)^n\gamma_n|$ 根据$\gamma性质$</li>
-<li>$\ge 3^m - \sum_{n&#x3D;0}^{m-1} 3^n$ 这里用 三角不等式，但是注意要证明 导数不被控制，所以希望是 &gt;&#x3D;, 那么 |a+b+c|+|-b|+|-c|&gt;&#x3D;|a| 这样去使用</li>
-<li>$&#x3D;\frac{1}{2}(3^m+1)$ </li>
-<li>也就是 $m \to \infty$时$\delta_m\to 0, \gamma_n \to \infty$  导数的判断函数趋于无穷</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>类似的 Weierstrass 函数。它由德国数学家卡尔·魏尔斯特拉斯（Karl Weierstrass）于1872年构造，用来证明连续性和可微性并不等价。其形式通常如下：$W(x)&#x3D;\sum_{n&#x3D;0}^{\infty} a^n \cos(b^n\pi x)$ 同样是 幂次 与 周期 的级数和<ul>
-<li>$0 &lt; a &lt; 1$控制振幅衰减</li>
-<li>$b$正奇数控制频率</li>
-<li>$ab &gt; 1+\frac{3}{2}\pi$ 保证函数不可微</li>
-<li>连续性: 一致收敛 -&gt; 连续</li>
-<li>不可微性：$b^n$导致震荡频率的快速增加，振幅衰减不足以抵消频率的增长，任何点的差的商会剧烈振荡，无法趋于确定的极限</li>
-</ul>
-</li>
-</ul>
-<h3 id="等度连续的函数族-equicontinuous-families-of-functions"><a href="#等度连续的函数族-equicontinuous-families-of-functions" class="headerlink" title="等度连续的函数族 equicontinuous families of functions"></a>等度连续的函数族 equicontinuous families of functions</h3><p>从3.6 每个有界complex numbers序列，必有收敛的子序列，关于函数序列是否同样类似结论</p>
-<p>7.19 {$f_n$} 定义在$E$上的函数序列，</p>
-<ul>
-<li>逐点有界：对于每个给定$x\in E$, {$f_n(x)$}是有界的，也就是说：如果存在着 一个定义在E上的有限值函数$\phi$使得$|f_n(x)| &lt; \phi(x)$</li>
-<li>一致有界：存在M, $|f_n(x)| &lt; M$</li>
-<li>逐点有界，$E_1\subset E$,且$E_1$可数, 存在子序列{$f_{n_k}$} 对于每个$x\in E_1$收敛</li>
-</ul>
-<p>7.20 例 $f_n(x)&#x3D;\sin nx, x\in[0,2\pi]$</p>
-<ul>
-<li>设数列{$n_k$}使得{$\sin n_k x$}对于每个$x\in[0,2\pi]$收敛，这时候，必然</li>
-<li>$\lim_{k\to \infty} (\sin n_kx-\sin n_{k+1}x)&#x3D;0, x\in[0,2\pi]$ </li>
-<li>$\lim_{k\to \infty} (\sin n_kx-\sin n_{k+1}x)^2&#x3D;0, x\in[0,2\pi]$ </li>
-<li>根据11.23 有界收敛序列积分的Lebesgue定理，<ul>
-<li>$\lim_{k\to \infty} \int_0^{2\pi} (\sin n_k x-\sin n_{k+1} x)^2dx &#x3D;0$</li>
-<li>但是 $\int_0^{2\pi} (\sin n_k x-\sin n_{k+1} x)^2dx &#x3D;2\pi$ 矛盾</li>
-</ul>
-</li>
-</ul>
-<p>7.21 即使序列在一个紧集上一致有界，收敛序列 不一定 有一致收敛的子序列。</p>
-<ul>
-<li>7.6 表明 有界函数序列可以收敛 而 不一致有界。但是有界函数序列的一致收敛性包着一致有界性</li>
-<li>$x\in[0,1] f_n(x)&#x3D;\frac{x^2}{x^2+(1-nx)^2}$</li>
-<li>$|f_n(x)| \le 1$ 在$[0,1]$上一致有界</li>
-<li>$\lim_{n\to\infty} f_n(x)&#x3D;0$ 收敛到0函数</li>
-<li>但是 $f_n(1&#x2F;n)&#x3D;1$， 所以没有子序列能在$[0,1]$上一致收敛</li>
-<li>紧+一致有界+收敛序列 依然不一定找到 一致收敛子序列</li>
-</ul>
-<p>7.22 等度连续： f定义在度量空间X内集合E上的函数, $\mathscr{F}$是f的族. 说$\mathscr{F}$在E上等度连续，就是说对于每个$\epsilon &gt; 0$存在一个$\delta &gt; 0$只要$d(x,y) &lt; \delta$, $x\in E,y\in E,f\in \mathscr{F}$ 就能使得</p>
-<ul>
-<li>$|f(x)-f(y)|&lt;\epsilon$</li>
-<li>这里$d$表示$X$的度量</li>
-<li>回顾一下<ul>
-<li>点连续，对于函数，给定定义域中的点，能控制点邻域半径，控制值域变化</li>
-<li>一致连续，对于函数，能控制邻域半径，对于任意点，控制值域变化</li>
-<li>等度连续，能控制邻域半径，对于任意 点 和 函数族中的函数，控制值域变化。 根据顺序，显然等度连续在具体的f上是一致连续的</li>
-<li>或者 全部加上$\mathscr{F}$中讨论<ul>
-<li>点连续的控制函数是$\delta(f,x,\epsilon)$</li>
-<li>一致连续的控制函数是$\delta(f,\epsilon)$</li>
-<li>等度连续的控制函数是$\delta(\epsilon)$</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>7.23 {$f_n$}是在 可数集E 上逐点有界的复值函数序列，那么{$f_n$}便有子序列{$f_{n_k}$}使得{$f_{n_k}(x)$}对于每个$x\in E$收敛</p>
-<ul>
-<li>设 {$x_i$} 是E的点排列成的序列，(用到了可数集的性质)</li>
-<li>{$f_n(x_1)$} 有界，便存在着一个子序列 使得 $f_{1,k} (x_1)$ 收敛</li>
-<li>$S_i: f_{i,1\cdots\infty}$ 的序列，满足性质<ul>
-<li>$S_i$是$S_{i-1}$的子序列，保持顺序</li>
-<li>满足上面的 收敛，即{$f_{i,k\to \infty}(x_i)$ }收敛</li>
-</ul>
-</li>
-<li>$S: f_{i,i}$ 构成的序列，那么 S的后缀 是$S_n$的子序列 （对角线方法）<ul>
-<li>所以$n\to \infty$时{$f_{n,n}(x_i)$}对于每个$x_i$都收敛</li>
-</ul>
-</li>
-</ul>
-<p>7.24 K紧度量空间, $f_n\in \mathscr{L}(K)$ 且{$f_n$}在K上一致收敛，那么{$f_n$}在K上等度连续</p>
-<ul>
-<li>要证明 控制$d(x,y)$能控制 $|f_i(x)-f_i(y)|$</li>
-<li>如果 i在有限集里，因为$f_i$紧+连续&#x3D;&gt; 一致连续，每个函数可以控制 d来控制f变化，有限集里可以取min</li>
-<li>而对于 i 在无限集里，因为$f_i$ 一致收敛，考虑cauchy列, 可以控制 N 控制 $||f_n-f_m||$的距离<ul>
-<li>$|f_n(x)-f_n(y)|\le |f_n(x)-f_m(x)|+|f_m(x)-f_m(y)|+|f_m(y)-f_n(y)|$<ul>
-<li>而中间的 又不可控制了，而m如果钦定成N也成立</li>
-<li>$|f_n(x)-f_n(y)|\le |f_n(x)-f_N(x)|+|f_N(x)-f_N(y)|+|f_N(y)-f_n(y)|$</li>
-<li>这样两边是 一致收敛产生的控制，中间是 一致连续产生的控制，从而 都可被控制，等度连续</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>紧+一致收敛 &#x3D;&gt; 等度连续</li>
-</ul>
-<p>7.25 K紧, $f_n\in\mathscr{L}(K)$ 而且{$f_n$}在K上逐点有界 又 等度连续，那么</p>
-<ul>
-<li>{$f_n$}在K上一致有界<ul>
-<li>等度连续，控制$d(x,y) &lt; \delta$ 使得 $|f_n(x)-f_n(y)|&lt;\epsilon$ , 有的时候右边也想写成d, $D(f_n(x),f_n(y))$</li>
-<li>K紧，所有点的$(p_i,\delta)$邻域组成的覆盖 有 有限子覆盖，所以有有限各点$p_1,\cdots,p_r$  每个x至少被一个$p_i$邻域覆盖</li>
-<li>逐点有界，$p_i$ 有限个数，$|f_n(p_i)| &lt; M &#x3D; \max(M_i)$, 三角不等式一下每个$x$到$p_i$距离，$|f_n(x)|&lt;M+\epsilon$ 即一致有界</li>
-</ul>
-</li>
-<li>{$f_n$}含有一致收敛的子序列<ul>
-<li>2习题25, E是K的可数稠密子集</li>
-<li>7.23 说明 存在子序列$f_{n_k}$使得 对于每个$x\in E$收敛，记作$g_i&#x3D;f_{n_i}$</li>
-<li>证明 $g_i$在K上一致收敛<ul>
-<li>所有邻域$V(x,\delta)$是$K$的一个开覆盖（因为稠密）,其中$\delta$的选取和上面一样 是等度连续控制所有$|f_n(x)-f_n(y)|&lt;\epsilon$</li>
-<li>因为紧，可以有限个邻域$V(x_i,\delta)$完成K的覆盖</li>
-<li>$g_i$对于x收敛，可以控制N,$|g_i(x_s)-g_j(x_s)|&lt;\epsilon$</li>
-<li>$|g_i(x)-g_j(x)|\le|g_i(x)-g_i(x_s)|+|g_i(x_s)-g_j(x_s)|+|g_j(x_s)-g_j(x)|$<ul>
-<li>中间被 可数集E中 的函数子序列 控制</li>
-<li>两边是 等度连续的控制</li>
-<li>从而$g_i$ 一致收敛</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>也就是：紧+逐点有界+等度连续 &#x3D;&gt; 一致有界+一致收敛的子序列<ul>
-<li>和7.21 相比 一致有界+收敛 都完成不了的，这里可以了，怎么说呢，其实我挺喜欢 这个 三角，或者说距离不等式的<ul>
-<li>$|g_i(x)-g_j(x)|\le|g_i(x)-g_i(x_s)|+|g_i(x_s)-g_j(x_s)|+|g_j(x_s)-g_j(x)|$</li>
-<li>本质上就是希望能被控制，而变成分析每一部分被控制所需要的条件，因为这里也不是充要，只是充分性，我觉得可以把问题前移，再来依次满足每个被控制的要求</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Stone-Weierstrass定理-theorem"><a href="#Stone-Weierstrass定理-theorem" class="headerlink" title="Stone-Weierstrass定理 theorem"></a>Stone-Weierstrass定理 theorem</h3><p>7.26 f是$[a,b]$上的一个连续复函数，那么便有多项式$P_n$的序列使得$\lim_{n\to\infty}P_n(x)&#x3D;f(x)$</p>
-<ul>
-<li>在$[a,b]$ 一致的成立，f如果是实函数，$P_n$可以是实多项式</li>
-<li>Weierstrass最初发现的定理的形式</li>
-<li>不是一般性 设f在$[0,1]$ 上, $f(0)&#x3D;f(1)&#x3D;0$ 因为，如果不满足只需要缩放空间，和减去一个 直线 即可变形<ul>
-<li>在$[0,1]$外 f(x)&#x3D;0</li>
-</ul>
-</li>
-<li>那么 要证明这样的f能作为一致收敛的极限</li>
-<li>$Q_n(x)&#x3D;c_n(1-x^2)^n \ge 0$, 其中$c_n$是常数 使得$\int_{-1}^1Q_n(x)dx&#x3D;1$ 或者说$c_n&#x3D;\frac{1}{\int_{-1}^1 (1-x^2)^n dx}$<ul>
-<li>$\int_{-1}^1 (1-x^2)^n dx&#x3D;2\int_{0}^1 (1-x^2)^n dx$</li>
-<li>$\ge 2\int_{0}^{1&#x2F;\sqrt{n}} (1-x^2)^n dx$</li>
-<li>$\ge 2\int_{0}^{1&#x2F;\sqrt{n}} (1-nx^2) dx$ 邻域性质(导数分析都可以证明)</li>
-<li>$&#x3D;\frac{4}{3\sqrt{n}} &gt; \frac{1}{\sqrt{n}}$</li>
-<li>即$c_n &lt;\sqrt{n}$</li>
-</ul>
-</li>
-<li>对于 任意 $\delta &gt; 0$ 当$x\in[\delta,1]$时 $Q_n(x)\le \sqrt{n}(1-x^2)^n\le \sqrt{n}(1-\delta^2)^n$ 所以 右侧与x无关，$Q_{n\to \infty}\to 0$一致的成立<ul>
-<li>$P_n(x)&#x3D;\int_{-1}^1 f(x+t)Q_n(t)dt, x\in[0,1]$<ul>
-<li>$&#x3D;\int_{-x}^{1-x}f(x+t)Q_n(t)dt$ 利用f(x)在$[0,1]$值为0</li>
-<li>$&#x3D;\int_0^1 f(t)Q_n(t-x) dt$</li>
-<li>是关于 x的多项式，所以{$P_n$} 是关于x的多项式序列，如果f是实的，那么它也是实的</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>$\epsilon &gt; 0$然后取$\delta &gt;0$使得$|y-x| &lt; \delta$时有$|f(y)-f(x)|&lt;\frac{\epsilon}{2}$</li>
-<li>令 $M&#x3D;\sup |f(x)|$</li>
-<li>$|P_n(x)-f(x)|&#x3D;|\int_{-1}^1 [f(x+t)-f(x)]Q_n(t)dt|$, 注意这里t是积分变量所以f(x)在积分中是常数角色</li>
-<li>$\le \int_{-1}^1 |f(x+t)-f(x)|Q_n(t)dt$</li>
-<li>这里怎么切分，切分称积分段$[-1,-\delta,\delta,1]$<ul>
-<li>那么中间的，控制$\delta$ 能控制 $\le \int_{-\delta}^{\delta} (&lt;\epsilon&#x2F;2) Q_n dt \le \epsilon&#x2F;2 (0,1) \le \epsilon&#x2F;2$</li>
-<li>那么两端的利用 2M控制 $|f-f|$, 而n趋于无穷大时，上面$Q_{n\to \infty}\to 0$ 一致成立 来控制</li>
-</ul>
-</li>
-</ul>
-<p>7.27 实例，引理</p>
-<ul>
-<li>在每个闭区间$[-a,a]$上，必有实多项式$P_n$的序列, such that $P_n(0)&#x3D;0$ and such that $\lim_{n\to \infty} P_n(x)&#x3D;|x|$ 在$[-a,a]$上一致uniformly的成立</li>
-<li>根据7.26 有 $P^*_n(x)$ 满足一致收敛于|x|<ul>
-<li>要达到 函数列所有 $P_n(0)&#x3D;0$</li>
-<li>那么 取$P_n&#x3D;P^*_n-P^*_n(0)$</li>
-</ul>
-</li>
-</ul>
-<p>7.28  a family $\mathscr{A}$ of complex functions defined on a set E is said to be an algebra(代数) ，如果满足以下</p>
-<ul>
-<li>加法封闭 $f+g\in\mathscr{A}$</li>
-<li>乘法封闭 $fg\in\mathscr{A}$</li>
-<li>数乘封闭 $cf\in \mathscr{A},c\in \mathbb{C}$, scalar multiplication</li>
-<li>类似可以定义 实函数 的 代数</li>
-<li>一致闭 的代数：<ul>
-<li>如果满足 $f_n\in \mathscr{A}$ 在E上$f_n\to f$一致收敛， 则 $f\in \mathscr{A}$, 也就是 对于一致收敛封闭，</li>
-</ul>
-</li>
-<li>例如<ul>
-<li>所有多项式的集是一个代数</li>
-<li>Weierstrass定理可以叙述为$[a,b]$上的连函数的集是$[a,b]$上多项式集的一致闭包，（因为上面证明的就是人连续函数能找到多项式序列 来一致收敛</li>
-</ul>
-</li>
-</ul>
-<p>7.29 设$\mathscr{B}$是有界函数的代数$\mathscr{A}$的一致闭包，那么$\mathscr{B}$是 一致闭 的代数</p>
-<ul>
-<li>$f,g\in\mathscr{B}$  因为一致闭包，分别有 一致收敛序列 $f_n,g_n \in \mathscr{A}$ ??? 代数闭包的某个性质？</li>
-<li>$f_n,g_n$有界函数 所以满足 加法 乘法 数乘 还是有界函数，并且 收敛于 对应的f+g,fg,cf, 且一致收敛，从而$\mathscr{B}$是一致 闭的</li>
-</ul>
-<p>7.30 $\mathscr{A}$是集E上的函数族，</p>
-<ul>
-<li>说$\mathscr{A}$能分离E的点separate points on E，就是说对应于每对不同的点$x_1,x_2\in E$总有一个函数$f\in\mathscr{A}$使得$f(x_1)\neq f(x_2)$<ul>
-<li>这里并不是一一映射，而是 任给不同的点，总能找到 函数 使这两点结果不同</li>
-<li>例如下面偶多项式集合 任意-x,x “总”是相同</li>
-<li>作为另一个例子 $f_{m,n}(x)&#x3D; m|x|当 x \ge 0,n|x| 当x \le 0$, 看起来 除了0,所有y都有两个x,但 根据上面的顺序，先任意$x_1,x_2$,  总能找到使之不同的函数</li>
-<li>但这个例子 点0是消失的</li>
-</ul>
-</li>
-<li>if to each $x\in E$ there corresponds a function $g\in \mathscr{A}$ such that $g(x)\neq 0$ we say that $\mathscr{A}$ vanishes at no point of E<ul>
-<li>也就是每个x,能找到g,使得g(x)非0,（逆命题就是存在x 所有g,都是g(x)&#x3D;0)</li>
-</ul>
-</li>
-<li>The algebra of 所有多项式 in 一元变量 在$R^1$上显然有这些性质</li>
-<li>作为 反例 所有偶多项式的集合，不能分离点因为 f(-x)&#x3D;f(x)</li>
-</ul>
-<p>7.31 E上函数的代数$\mathscr{A}$能分离E的点+不在E的点消失。$x_1,x_2\in E$且不等,$c_1,c_2$是常数</p>
-<ul>
-<li>那么$\mathscr{A}$ 含有一个f, $f(x_1)&#x3D;c_1,f(x_2)&#x3D;c_2$</li>
-<li>证明:<ul>
-<li>能分离点 取g</li>
-<li>不消失取 h,k</li>
-<li>$u&#x3D;gk-g(x_1)k$</li>
-<li>$v&#x3D;gh-g(x_2)h$</li>
-<li>显然<ul>
-<li>$u(x_1)&#x3D;v(x_2)\neq 0$</li>
-<li>$u(x_2)\neq 0,v(x_1)\neq 0$</li>
-<li>$f&#x3D;\frac{c_1v}{v(x_1)}+\frac{c_2u}{u(x_2)}$ 有需要的性质</li>
-<li>其实还是待定系数法的感觉 f &#x3D; c_1(x_1点&#x3D;1,x_2点&#x3D;0的函数)+c_2(x_2点&#x3D;1,x_1点&#x3D;0的函数) 反过去构造</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>7.32 $\mathscr{A}$紧K上的实连续函数的代数。$\mathscr{A}$能分离K,不在K的点消失，那么</p>
-<ul>
-<li>$\mathscr{A}$的 uniform closure一致闭包 $\mathscr{B}$由K上的所有实连续函数组成</li>
-<li>证明：<ul>
-<li>第一步， $f\in\mathscr{B}$则$|f|\in\mathscr{B}$<ul>
-<li>证明：</li>
-<li>令$a&#x3D;\sup |f(K)|$</li>
-<li>再给定$\epsilon &gt; 0$，根据7.27(可以0次幂系数为0 多项式一致收敛 到|x|),存在$c_1,\cdots,c_n$使得<ul>
-<li>$|\sum_{i&#x3D;1}^n c_iy^i -|y|| &lt; \epsilon, -a\le y\le a$ ， 这里的y表示 取遍$[-a,a]$所有值成立，因为$7.27$</li>
-</ul>
-</li>
-<li>因为$\mathscr{B}$是代数 所以$g&#x3D;\sum_{i&#x3D;1}^n c_i f^i \in \mathscr{B}$, 代数中的运算封闭性<ul>
-<li>这里要注意的是， 虽然列了n项但并不表示 $g_n$, 因为7.27 证明的多项式序列中没有对项数进行讨论，这里表示的只是某个$g_i$ 有n项</li>
-<li>另一个注意的是$c_i$的值是在不同的g中是不同的$c_{i,g_k}\neq c_{j,g_k}$</li>
-<li>写得再 具体一点是 $g_i&#x3D;\sum_{j&#x3D;1}^{n_i} c_{i,j} f^j$</li>
-</ul>
-</li>
-<li>$|g-|f||&lt;\epsilon$ 这里 $f$的每个值 都是$[-a,a]$ 中的点，所以 成立 且 一致成立<ul>
-<li>这里说明$|f|$是 可以被一致收敛</li>
-<li>而$\mathscr{B}$是一致闭的，所以$|f|\in\mathscr{B}$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>第二步, 感觉这些步骤可以单独提出来变成推论<ul>
-<li>$\max(f,g)\in \mathscr{B},\min(f,g)\in \mathscr{B}$</li>
-<li>$\max(f,g)&#x3D;(f+g)&#x2F;2+|f-g|&#x2F;2$</li>
-<li>$\min(f,g)&#x3D;(f+g)&#x2F;2-|f-g|&#x2F;2$</li>
-<li>更一般的 $\max(f_n,\cdots,f_n) \in \mathscr{B}$</li>
-</ul>
-</li>
-<li>第三步 这里用到了 能分离 和 点消失<ul>
-<li>对于任意 给定 K上连续f, $x_0 \in K$, $\epsilon &gt; 0$,便存在着一个函数$g_x\in \mathscr{B}$满足$g_x(x_0)&#x3D;f(x_0)$且$g_x(t) &gt;f(t)-\epsilon, t\in K$</li>
-<li>也就是 指定点相等，所有位置大于 下邻域</li>
-<li>7.31 对于每个点 $y\in E$, $h_y\in \mathscr{B}$ 使得它和f在x,y点相等<ul>
-<li>$h_y$是连续的，存在 y的邻域 $h_y(y) &gt; f(x)-\epsilon$</li>
-<li>K紧， 所有y的邻域构成的开覆盖，有限子覆盖，有限了，就可以对这些$h_y$取max,从而构造出了，x点相等其它点$&gt; f(t)-\epsilon$的$\mathscr{B}$中的函数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>第四步<ul>
-<li>给定K上连续实函数f, $\epsilon &gt; 0$，存在$h\in \mathscr{B}$ 使得 $|h(x)-f(x)|&lt;\epsilon$ <ul>
-<li>也就是 f可以找到 函数列{h} 一致收敛到，也就是f 属于$\mathscr{B}$ 一致闭，也就和命题一致</li>
-</ul>
-</li>
-<li>证明：<ul>
-<li>类似第3步，不过这次是x的邻域，能$g_x(x) &lt; f(x)+\epsilon$</li>
-<li>同样利用 紧和覆盖，把上面 满足$g(t) &gt; f(t)-\epsilon$的 这次用 min来构造出一个新的 连续的 在 $(f(x)-\epsilon,f(x)+\epsilon)$之间的函数</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>7.33 这个在复代数 complex algebras中不成立, </p>
-<ul>
-<li>习题21，反例counterexample<ul>
-<li>$K$是复平面单位圆，也就是 所有$|z|&#x3D;1$的$z$</li>
-<li>$\mathscr{A}$是$f(e^{i\theta})&#x3D;\sum_{n&#x3D;0}^N c_ne^{in\theta}$ 其中$\theta$是实数</li>
-<li>仍有K上的连续函数不属于$\mathscr{A}$的一致闭包</li>
-<li>这个复分析和函数代数的经典问题 经典反例，丢给grok3,tongyi,deepseek都有不错的结果<ul>
-<li>证明：<ul>
-<li>能分离点, f(x)&#x3D;x 可证</li>
-<li>不在K的点消失, $|f(x)&#x3D;x| &#x3D; 1 \neq 0$</li>
-</ul>
-</li>
-<li>理解一下，首先这是傅里叶项，但是缺少负n，另外也是上面条件中需要共轭闭包没有满足</li>
-<li>构造反例：其实直接就是构造一个共轭，负频率<ul>
-<li>$f(x)&#x3D;\bar{x}$ 即 $f(e^{i\theta})&#x3D;e^{-i\theta}$ 证明它K上连续的</li>
-<li>$P_n\to \bar{x}$</li>
-<li>$\sup_{\theta} |P_n-\bar{x}| &lt; \epsilon$</li>
-<li>$\int_0^{2\pi} P_n(e^{i\theta})e^{i\theta} d\theta &#x3D; 0\neq 2\pi &#x3D; \int_0^{2\pi} e^{-i\theta}e^{i\theta} d\theta$</li>
-<li>不存在 一致收敛的函数列</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>增加性质 A self-adjoint 自伴的，那么在 复代数 也成立</li>
-<li>自伴的: $f\in \mathscr{A}$则$\bar{f} \in \mathscr{A}$</li>
-<li>紧K,复连续，自伴，能分离K的点，不在K点消失的代数$\mathscr{A}$，那么它的一致闭包$\mathscr{B}$ 由$K$上的所有复连续函数组成</li>
-<li>也就是说 $\mathscr{A}$在$\mathscr{C}(K)$中稠密<ul>
-<li>$\mathscr{A}_R$是K上 属于$\mathscr{A}$的所有实函数的集</li>
-<li>$f&#x3D;u+iv \in \mathscr{A}$其中$u,v$ 是实的, $\mathscr{A}$是自伴的, $u&#x3D;\frac{f+\bar{f}}{2} \in \mathscr{A}_R$</li>
-<li>$\mathscr{A}_R$可分离K的点： 对于$x_1\neq x_2$,存在f,使得$f(x_1)&#x3D;1,f(x_2)&#x3D;0$, u在这两点也不等</li>
-<li>$\mathscr{A}_R$不在K的点消失：$x\in K$, 不消失, 有g,使得$g(x)\neq 0$, 有复数$\lambda$使得$\lambda g(x) &gt; 0$, 令$f&#x3D;\lambda g$, 对应$u(x)&gt;0$, 也就满足任意x存在u，$u(x)\neq 0$</li>
-<li>$\mathscr{A}_R$ 满足 7.32 说明 K上的每个实连续函数 必定在$\mathscr{A}_R$的一致闭包中，进而在$\mathscr{B}$中,<ul>
-<li>f是K上复连续函数,$f&#x3D;u+iv$</li>
-<li>因为$u,v\in\mathscr{B}$所以$f\in\mathscr{B}$</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>这里中文书的“合于”听起好绕口，英文书上就是 then (性质) for some (条件)</li>
-</ul>
-<p>回顾</p>
-<ul>
-<li>最开始 对于$[a,b]$上任意 复连续函数， 希望用多项式列，一致收敛</li>
-<li>接下来希望讨论 连续函数之间的结构，于是建立连续函数代数（加法封闭，乘法封闭，数乘封闭）</li>
-<li>增加 能分离（给任意不同点 存在函数 使对应点值不同），不消失（给任意点，存在函数 对应点值非0）两个条件</li>
-<li>从而 紧K + 连续函数的代数的一致闭包 由所有实连续函数组成</li>
-<li>而对于复函数，需要多一个共轭封闭的前提条件</li>
-</ul>
 ]]></content>
       <categories>
         <category>数学分析</category>
@@ -10554,6 +9954,32 @@
       <tags>
         <tag>数学分析</tag>
         <tag>微积分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>(p-1)!+1 = 0 (mod p) Wilson&#39;s theorem 威尔逊定理</title>
+    <url>/Math/Wilson_s_theorem/</url>
+    <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
+<h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
+<p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
+<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><span id="more"></span>
+
+<p>首先 1..p-1 是 模p的所有余项</p>
+<p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
+<p>任意$i \in A$ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
+<p>令 $x &#x3D; (p-1)!$</p>
+<p>那么 $x^2 &#x3D; 1(\bmod p)$</p>
+<p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
+<p>可得$x &#x3D; 1(\bmod p)$或 $x&#x3D;p-1 (\bmod p)$ , 可以假设 $x &#x3D; p - a$ 然后 $(p-a-1)(p-a+1) &#x3D; 0 (\bmod p)$ 得到</p>
+<p>我们也能得到只有 $1^2 &#x3D; 1 (\bmod p), (p-1)^2 &#x3D; 1 (\bmod p)$</p>
+<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p)$, 因为除了p-1, 其它的两两配对</p>
+<p>得证</p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>数论</tag>
       </tags>
   </entry>
   <entry>
@@ -11399,29 +10825,603 @@
       </tags>
   </entry>
   <entry>
-    <title>(p-1)!+1 = 0 (mod p) Wilson&#39;s theorem 威尔逊定理</title>
-    <url>/Math/Wilson_s_theorem/</url>
-    <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
-<h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
-<p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
-<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><span id="more"></span>
+    <title>Walter Rudin 数学分析原理 7 函数序列与函数项极限</title>
+    <url>/Math/Principles_of_Mathematical_Analysis_7/</url>
+    <content><![CDATA[<p>isbn</p>
+<ul>
+<li>中文 9787111134176</li>
+<li>英文 9787111619543</li>
+</ul>
+<span id="more"></span>
 
-<p>首先 1..p-1 是 模p的所有余项</p>
-<p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
-<p>任意$i \in A$ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
-<p>令 $x &#x3D; (p-1)!$</p>
-<p>那么 $x^2 &#x3D; 1(\bmod p)$</p>
-<p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
-<p>可得$x &#x3D; 1(\bmod p)$或 $x&#x3D;p-1 (\bmod p)$ , 可以假设 $x &#x3D; p - a$ 然后 $(p-a-1)(p-a+1) &#x3D; 0 (\bmod p)$ 得到</p>
-<p>我们也能得到只有 $1^2 &#x3D; 1 (\bmod p), (p-1)^2 &#x3D; 1 (\bmod p)$</p>
-<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p)$, 因为除了p-1, 其它的两两配对</p>
-<p>得证</p>
+<h2 id="函数序列与函数项级数-sequences-and-series-of-functions"><a href="#函数序列与函数项级数-sequences-and-series-of-functions" class="headerlink" title="函数序列与函数项级数 sequences and series of functions"></a>函数序列与函数项级数 sequences and series of functions</h2><p>这一章里 只限于讨论复值函数。</p>
+<p>注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）</p>
+<h3 id="主要问题的讨论-discussion-of-main-problem"><a href="#主要问题的讨论-discussion-of-main-problem" class="headerlink" title="主要问题的讨论 discussion of main problem"></a>主要问题的讨论 discussion of main problem</h3><p>7.1, n&#x3D;1,2, {$f_n$}是一个定义在集E上的函数序列，再假设${f_n(x)}$对于每个$x\in E$收敛，可由</p>
+<ul>
+<li>$f(x)&#x3D;\lim_{n\to\infty} f_n(x)$确定一个函数f</li>
+<li>称$f_n$在$E$上收敛,f是{$f_n$}的极限limit 或 极限函数limit function</li>
+<li>{$f_n$} converges to f pointwise on E, 在E上逐点收敛到f</li>
+<li>类似的 $f(x)&#x3D;\sum_{n&#x3D;1}^{\infty} f_n(x), x\in E$, 说f是 级数$\sum f_n$的和. f is called the sum of the series $\sum f_n$</li>
+<li>那么研究什么呢，例如 连续性，可微性，可积 这些性质能否保持，导数的关系<ul>
+<li>例如连续性: <ul>
+<li>点连续 $\lim_{t\to x}f(t)&#x3D;f(x)$</li>
+<li>是否保持连续性 $\lim_{t\to x}\lim_{n\to \infty}f_n(t)&#x3D;?&#x3D;\lim_{n\to\infty} \lim_{t \to x}f_n(t)$  或者说这个次序是否影响结果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.2 一些极限的次序是不能交换的，一些是与极限顺序无关的</p>
+<ul>
+<li>$s_{m,n}&#x3D;\frac{m}{m+n}$</li>
+<li>显然交换 极限顺序一个是0,一个是1,不等</li>
+<li>我在想 这个从感觉上的</li>
+</ul>
+<p>7.3 连续函数的收敛级数 可能不连续</p>
+<ul>
+<li>$f_n(x)&#x3D;\frac{x^2}{(1+x^2)^n}$</li>
+<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty}f_n(x)$<ul>
+<li>在x&#x3D;0是f(x)&#x3D;0</li>
+<li>在其它点，逐点收敛到$f(x)&#x3D;1+x^2$</li>
+</ul>
+</li>
+</ul>
+<p>7.4 $f_m(x)&#x3D;\lim_{n\to\infty} (\cos m! \pi x)^{2n}$</p>
+<ul>
+<li>所以 $f_m(x)&#x3D;[m!x \in \mathbb{Z}]$ 也就是判定m!x是否为整数</li>
+<li>$f(x)&#x3D;\lim_{m\to \infty} f_m(x)$</li>
+<li>对于每个 无理数x, f(x)&#x3D;0</li>
+<li>对于每个有理数x&#x3D;p&#x2F;q, 当m&gt;&#x3D;q时， m!x是整数，所以f(x)&#x3D;1（逐点）</li>
+<li>哦，这样也构造出了 Dirichlet函数 ，有点意思</li>
+<li>处处间断，它不是黎曼可积的</li>
+</ul>
+<p>7.5 导数不同样收敛的例子</p>
+<ul>
+<li>x是实数, n&#x3D;1,2,3,…</li>
+<li>$f_n(x)&#x3D;\frac{\sin nx}{\sqrt{n}}$</li>
+<li>$f(x)&#x3D;\lim_{n\to \infty} f_n(x)&#x3D;0$</li>
+<li>$f’(x)&#x3D;0$</li>
+<li>$f’_n(x)&#x3D;\sqrt{n}\cos nx$ 而这个 不收敛到f’(例如点x&#x3D;0), 这个 $\sqrt{n}$ ，不为0</li>
+</ul>
+<p>7.6 积分不能保持的例子 极限和积分交换后结果不同 $0\le x\le 1$令$f_n(x)&#x3D;n^2x(1-x^2)^n$</p>
+<ul>
+<li>$\lim_{n\to \infty}f_n(x)&#x3D;0$</li>
+<li>$\lim_{n\to \infty} \int_0^1 f_n(x)dx&#x3D;\lim_{n\to \infty} \frac{n^2}{2n+1} \to +\infty$</li>
+<li>类似的<ul>
+<li>$\lim_{n\to \infty} nx(1-x^2)^n&#x3D;0$</li>
+<li>$\lim_{n\to \infty} \int_0^1 nx(1-x^2)^n dx&#x3D;\lim_{n\to \infty} \frac{n}{2n+1} \to 1&#x2F;2$</li>
+</ul>
+</li>
+</ul>
+<h3 id="一致收敛性-uniform-convergence"><a href="#一致收敛性-uniform-convergence" class="headerlink" title="一致收敛性 uniform convergence"></a>一致收敛性 uniform convergence</h3><p>上面这个例子的问题导致了 交换运算顺序受到了限制，我觉得从计算机的视角函数就是函数名和参数虽然上面写作$f_n(x)$在计算机的习惯上可以写成$f(n,x)$, 而这样变成二元函数以后，其实这种 顺序会导致不同，感觉上是更不容易相同的，$f(n,x)&#x3D;sign(\lfloor x\rfloor-n)$ 这样甚至可以对角线上是0,一种顺序是1,一种顺序是-1</p>
+<p>7.7 对于$\epsilon &gt; 0$有整数N,使得$n\ge N$时，对于一切$x\in E$ 有 $|f_n(x)-f(x)|\le \epsilon$</p>
+<ul>
+<li>这里 和 逐点的区别是，这里的N与点的选取是无关的，要所有点满足 结果的距离限制。</li>
+<li>而前面的逐点收敛，是先选点，关于点有$N(x,\epsilon)$ 来控制$f_n$和$f$的距离</li>
+<li>而显然 $N(x,\epsilon)$可以用$N(\epsilon)$表示，也就是说 一致收敛 一定 逐点收敛，</li>
+<li>哦  我写完这段，才看到书上也写了区别的讲解</li>
+</ul>
+<p>7.8 类似的，上面的定义是 半径形式，那么自然有直径形式也就是Cauchy准则</p>
+<ul>
+<li>当且仅当 任意$\epsilon &gt;0$存在$N$使得任意$n,m \ge N$，任意$x$有$|f_n(x)-f_m(x)| \le \epsilon$ </li>
+<li>有的时候 我好想用r和2r,是我的问题吗，这样的“感受会更舒服”，虽然不是更简洁</li>
+<li>证明<ul>
+<li>7.7 -&gt; 7.8 取epsilon&#x2F;2就好</li>
+<li>7.8 -&gt; 7.7 相对复杂，要用紧度量空间 cauchy列的性质 3.11 这里逐点收敛于一个具体值，那么这些逐点收敛的具体值串起来就是它逐点收敛于某个函数，记作$f(x)$, 再证明一致性就好</li>
+</ul>
+</li>
+</ul>
+<p>7.9 假设 $\lim_{n\to\infty} f_n(x)&#x3D;f(x),x\in E$</p>
+<ul>
+<li>令 $M_n&#x3D;\sup_{x\in E} |f_n(x)-f(x)|$</li>
+<li>当且仅当$n\to \infty$时$M_n\to 0$</li>
+<li>就是7.7换了个写法，还是能通过控制n来控制所有点 到 逐点收敛函数的距离最大值</li>
+</ul>
+<p>7.10 weierstrass</p>
+<ul>
+<li>{$f_n$}是定义在$E$上的函数序列, $f_n(x)\le M_n$, 如果$\sum M_n$收敛，那么$\sum f_n$便在$E$上一致收敛</li>
+<li>看起来的感觉像比较判别法，但比较判别法直接只能控制界限，而如果配合cauchy列（也就是直径），那么能控制直径的界限，也就能一致收敛了</li>
+</ul>
+<h3 id="一致收敛性与连续性-uniform-convergence-and-continuity"><a href="#一致收敛性与连续性-uniform-convergence-and-continuity" class="headerlink" title="一致收敛性与连续性 uniform convergence and continuity"></a>一致收敛性与连续性 uniform convergence and continuity</h3><p>7.3的例子 给到了连续函数 的逐点极限 可能不连续， </p>
+<p>7.11 定理 假设在度量空间内的集E上$f_n$一致收敛于f,</p>
+<ul>
+<li>设x是E的极限点， </li>
+<li>在假设$\lim_{t\to x}f_n(t)&#x3D;A_n$ (是$f_n$在x的极限)</li>
+<li>那么{$A_n$}收敛,并且 $\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n$ (上述极限随着n也收敛，且与逐点收敛函数f 在x点极限相同)</li>
+<li>也就是 在x点 保持点极限 $\lim_{t\to x}\lim_{n\to \infty} f_n(t)&#x3D;\lim_{n\to \infty}\lim_{t\to x} f_n(t)$<ul>
+<li>因为研究点连续 就是 极限&#x3D;点值，但点值容易研究，上面先抛开点研究点极限</li>
+<li>在此基础上，再有$f_n$点x连续,那就是$f_n(x)&#x3D;A_n$，那么就有  点连续</li>
+</ul>
+</li>
+<li>emmm 这里书上 $|f_n(t)-f_m(t)|&lt;\epsilon$到$|A_n-A_m|&lt;\epsilon$ 直接$t\to x$取到极限了?<ul>
+<li>感觉 给定epsilon, 控制N任意 $|f_n(t)-f_m(t)|&lt;\epsilon&#x2F;3$, 对于取得n,m ,可以控制t与x距离 $|A_n-A_m|\le |A_n-f_n|+|f_n-f_m|+|f_m-A_m| &lt; 3\epsilon&#x2F;3$ </li>
+<li>总之可以控制$A_i$的距离,从而{$A_i$}是Cauchy列 有极限 A</li>
+<li>$|f(t)-A| \le |f(t)-f_n(t)|+|f_n(t)-A_n|+|A_n-A|$， 这个表达式对任意n成立<ul>
+<li>一致连续 对于一切t 可以用N控制 第一段 $\epsilon&#x2F;3$</li>
+<li>$A_n$收敛 存在N 控制 第三段 $\epsilon&#x2F;3$</li>
+<li>在上述n选定后 得到 $|f(t)-A| \le 2\epsilon&#x2F;3 + |f_n(t)-A_n|$, 注意的是这里 右侧的里面的 函数和常数是被n固定了的</li>
+<li>最后 目标是证明 控制t和x距离能控制 $f(t)$和A的距离，那么 最后这个就是 控制t和x距离控制 中间段的 距离 ，从而控制了3段的距离</li>
+</ul>
+</li>
+<li>也就是 一致收敛 则 $\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n$<ul>
+<li>$\lim_{t\to x}(\lim_{n\to\infty}f_n(t))&#x3D;\lim_{t\to x}f(t)&#x3D;\lim_{n\to \infty} A_n&#x3D;\lim_{n\to \infty} (\lim_{t\to x}f_n(t))$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>7.3 的例子$f(x)&#x3D;\sum \frac{x^2}{(1+x^2)^n}$ 在点0邻域没有一致收敛，因为右边的值要逐点趋于1,但是如果先给定了n, x越趋于0,右侧值可以趋于0</li>
+</ul>
+<p>7.12 {$f_n$}在E上连续函数的序列，在E上$f_n$一致收敛到f,那么f在E上连续</p>
+<ul>
+<li>是7.11 的直接推论，</li>
+</ul>
+<p>7.13 K紧</p>
+<ul>
+<li>{$f_n$}是K上连续函数序列</li>
+<li>{$f_n$}是K上逐点收敛于连续函数f</li>
+<li>$f_n(x)\ge f_{n+1}(x)$， 单调性</li>
+<li>那么 $f_n\to f$是一致的</li>
+<li>证明:<ul>
+<li>$g_n&#x3D;f_n-f$连续的,</li>
+<li>$g_n\to 0$逐点收敛到0函数</li>
+<li>要证明一致收敛到0函数，</li>
+<li>$\epsilon &gt; 0$, 设$K_n \subset E$是使得$g_n(K_n)\ge \epsilon$ 的一切$x\in E$的集，$g_n(K_n)$连续，根据4.8(紧 的闭的 原像闭)，所以$K_n$闭</li>
+<li>$g_n$单调递减，所以$K_n \supset K_{n+1}$ 嵌套闭集，存在点或为空，对于任意x, 存在充分大的n使得 $x\not\in \cap K_n$ 所以 $\cap K_n$是空的，</li>
+<li>所以 存在 N使得 $\cap K_n$是空的 （因为对于紧集 嵌套闭集 任意有限交非空 会导致 可数交非空）</li>
+</ul>
+</li>
+<li>这里的 紧性 必不可少，$f_n(x)&#x3D;\frac{1}{nx+1}, x\in(0,1)$ 趋于0,但不是一致收敛<ul>
+<li>没有紧性，上面的$K_n$ 不一定是嵌套闭集，虽然$\cap K_n$无限交是空的，但是无法得到存在有限交是空的</li>
+</ul>
+</li>
+</ul>
+<p>7.14 X 是度量空间, $\mathscr{C}(X)$  就表示 以X为定义域的复值complex-valued连续continuous 有界bounded 函数的集 (mathscr{C})</p>
+<ul>
+<li>4.15 $f(X紧) \mapsto \mathbb{R}^k$, f连续则 $f(X)$ 闭+有界. 所以 如果X紧 上面 值域中有界性是多余的</li>
+<li>定义范数 $||f||&#x3D;\sup_{x\in X} |f(x)|$ 范数norm上确</li>
+<li>f有界,那么 $||f|| &lt; \infty$</li>
+<li>$f(x)&#x3D;0$时才有 $||f||&#x3D;0$</li>
+<li>若$h&#x3D;f+g$, $|h(x)|\le|f(x)|+|g(x)|\le ||f||+||g||$<ul>
+<li>$||f+g|| \le ||f||+||g||$</li>
+</ul>
+</li>
+<li>定义$d(f,g)&#x3D;||f-g||$, 为距离函数， 那么上面范数不等式 满足 度量空间3条件（只有自己到自己&#x3D;0，对称，任意c(X)都有 d(a,b) &lt;&#x3D; d(a,c)+f(c,b), 通过 f&#x3D; a-c, g&#x3D;c-b, 带入即可</li>
+<li>这样$\mathscr{C}(X)$是度量空间</li>
+<li>$\mathscr{C}(X)$的度量来说，序列{$f_n$} 收敛于f,当且仅当$f_n$在X上一致收敛于f</li>
+<li>$\mathscr{C}$的闭子集有时叫作 一致闭 的</li>
+<li>集$\mathscr{A}\subset \mathscr{C}(X)$的闭包叫作它的 一致闭包 等等</li>
+</ul>
+<p>7.15 上边说的 度量 使得$\mathscr{C}(X)$变成了完备度量空间complete metric space</p>
+<ul>
+<li>证明 设 {$f_n$} 是$\mathscr{C}(X)$里的Cauchy序列,<ul>
+<li>也就是 可以通过 N来控制 $||f_n-f_m||$的直径，根据7.8 它存在具体的f, 一致收敛于它。（一致收敛是因为|| ||的定义是 sup ||</li>
+<li>7.12 (连序函数列+一致收敛) ，收敛于连续的f</li>
+<li>一致收敛 存在n 使得$|f(x)-f_n(x)|&lt;1$ 对于所有x成立，$f_n$有界,从而 $f$有界</li>
+<li>所以$f\in\mathscr{C}(X)$</li>
+<li>因为一致收敛于f, $n\to \infty$时$||f-f_n||\to 0$</li>
+</ul>
+</li>
+<li>这里 就是要证明 complete ，什么是complete, 也就是 cauchy 收敛，且收敛于 空间中的元素<ul>
+<li>那么就是要证明 1. 元素在空间中，2收敛到该元素</li>
+<li>那么首先找到f,然后有 f的定义域+连续+有界，从而证明f在空间中，</li>
+<li>最后再（一致收敛 是 函数的定义）到 ($\mathscr{C}(X)$中的距离的收敛)</li>
+</ul>
+</li>
+</ul>
+<h3 id="一致收敛性与积分-uniform-convergence-and-integration"><a href="#一致收敛性与积分-uniform-convergence-and-integration" class="headerlink" title="一致收敛性与积分 uniform convergence and integration"></a>一致收敛性与积分 uniform convergence and integration</h3><p>7.16 $[a,b]$上$f_n\in\mathscr{R}(\alpha)$,一致收敛到f 那么</p>
+<ul>
+<li>$f\in\mathscr{R}(\alpha)$ 同样黎曼可积</li>
+<li>$\int_a^b f d\alpha &#x3D; \lim_{n\to\infty} \int_a^b f_n d\alpha$ 保持积分结果</li>
+<li>证明<ul>
+<li>令 $\epsilon_n&#x3D;\sup |f_n(x)-f(x)|$ 通过一致收敛保证</li>
+<li>有 $f_n-\epsilon_n \le f\le f_n+\epsilon_n$</li>
+<li>$\int_a^b (f_n-\epsilon_n)d\alpha \le L(f) \le U(f) \le \int_a^b (f_n+\epsilon_n)d\alpha$<ul>
+<li>因为任意划分P，$f_n-\epsilon_n$的下积分 小于等于 f的下积分，两边都取sup，左边是可积所以左边&#x3D;积分结果，右边则是f的下积分</li>
+<li>上积分类似</li>
+</ul>
+</li>
+<li>$0\le U(f)-L(f)\le 2\epsilon_n [\alpha(b)-\alpha(a)]$ 可以任意小，从而f上下积分相等，所以关于$\alpha$黎曼可积</li>
+<li>$|\int_a^b f d\alpha -\int_a^b f_nd\alpha|\le \epsilon_n[\alpha(b)-\alpha(a)]$ 证明积分距离任意小即相等</li>
+</ul>
+</li>
+<li>推论: $[a,b]$上<ul>
+<li>$f(x)&#x3D;\sum_{n&#x3D;1}^{\infty} f_n(x)$ 在$[a,b]$上一致收敛</li>
+<li>$\int_a^b fd\alpha&#x3D;\sum_{n&#x3D;1}^{\infty}\int_a^b f_n d\alpha$</li>
+<li>也就是 这个级数可以逐项积分, 上面的 积分和求和顺序在 有限项时可以交换的，而上面的性质是 $\sum_n \int f_i &#x3D; \int \sum_n f_i \to \int f$</li>
+</ul>
+</li>
+</ul>
+<h3 id="一致收敛性与微分-uniform-convergence-and-differentiation"><a href="#一致收敛性与微分-uniform-convergence-and-differentiation" class="headerlink" title="一致收敛性与微分 uniform convergence and differentiation"></a>一致收敛性与微分 uniform convergence and differentiation</h3><p>前面7.5 说明{f_n}一致收敛到f，并不能$f’_n\to f’$ 需要更强假设</p>
+<p>7.17 {$f_n$}是$[a,b]$上的可微函数序列，$[a,b]$上有某点$x_0$使得{$f_n(x_0)$} 收敛, 如果$f’_n$在$[a,b]$上一致收敛，那么</p>
+<ul>
+<li><p>{$f_n$}便在$[a,b]$上一致收敛于某函数f ,并且</p>
+</li>
+<li><p>$f’(x)&#x3D;\lim_{n\to\infty}f’_n(x)$</p>
+</li>
+<li><p>证明:</p>
+<ul>
+<li>$x_0$点f收敛，可以控制N, $|f_n(x_0)-f_m(x_0)|&lt;\epsilon&#x2F;2$</li>
+<li>$f’$一致收敛，可以控制N,任意t, 有$|f’_n(t)-f’_m(t)| &lt; \frac{\epsilon}{2(b-a)}$</li>
+<li>5.19 $f: [a,b] \mapsto \mathbb{R}^k$ 且可微 k则 $|f(b)-f(a)|\le (b-a) |f’(x)|$<ul>
+<li>$|(f_n(x)-f_m(x))-(f_n(t)-f_m(t))|\le |x-t|\cdot|f’_n(p)-f’_m(p)|, (其中(x-p)(t-p)&lt; 0) \le |x-t| \frac{\epsilon}{2(b-a)} \le \frac{\epsilon}{2}$ 对于任意$x,t \in[a,b]$</li>
+</ul>
+</li>
+<li>$|f_n(x)-f_m(x)|\le |(f_n(x)-f_m(x))-(f_n(x_0)-f_m(x_0))|+|f_n(x_0)-f_m(x_0)| \le \epsilon$ 可以被控制</li>
+<li>从而 证明了 {$f_n$}一致收敛</li>
+<li>接下来 证明导数 保持，也就是根据导数定义 任意接近</li>
+<li>对于定点x, 令 $\phi_n(t)&#x3D;\frac{f_n(t)-f_n(x)}{t-x}$, $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}$</li>
+<li>那么$\lim_{t\to x}\phi_n(t)&#x3D;f’_n(x)$</li>
+<li>$|\phi_n(t)-\phi_m(t)| \le \frac{\epsilon}{2(b-a)}$ 根据上面，说明收敛 且 $t\neq x$时一致收敛（能与点无关 的控制距离）</li>
+<li>根据$\phi$定义, $\lim_{n\to \infty} \phi_n\to \phi$ 一致的成立<ul>
+<li>7.11 $\lim_{t\to x}\lim_{n\to\infty}f_n(t)&#x3D;\lim_{n\to \infty} \lim_{t\to x}f_n(t)$</li>
+<li>$f’(x)&#x3D;\lim_{t\to x}\phi(t)&#x3D;\lim_{t\to x}\lim_{n\to\infty} \phi_n(t)&#x3D;\lim_{n\to\infty}\lim_{t\to x} \phi_n(t)&#x3D;\lim_{n\to \infty} f’_n(x)$</li>
+<li>细看这一串等号，两头的 是 导数的定义<ul>
+<li>第二个等号 需要 $f_n$收敛</li>
+<li>第三个等号 需要 $\phi_n$一致收敛到$\phi$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>注 如果$f’_n$连续，7.16 + 微积分基本定理，可以更容易证明</p>
+</li>
+</ul>
+<h3 id="7-18-实轴上确有处处不可微的实连续函数"><a href="#7-18-实轴上确有处处不可微的实连续函数" class="headerlink" title="7.18 实轴上确有处处不可微的实连续函数"></a>7.18 实轴上确有处处不可微的实连续函数</h3><p>there exists a real continuous function on the real line which is nowhere differentiable</p>
+<ul>
+<li>$\varphi(x)&#x3D;|x|, -1\le x\le 1$<ul>
+<li>$\varphi(x+2)&#x3D;\varphi(x)$</li>
+<li>$|\varphi(s)-\varphi(t)|\le |s-t|$ ，在$\mathbb{R}^1$上连续</li>
+</ul>
+</li>
+<li>$f(x)&#x3D;\sum_{n&#x3D;0}^{\infty} (\frac{3}{4})^n \varphi(4^nx)$<ul>
+<li>7.10 被 $M_n&#x3D;(3&#x2F;4)^n$ 控制，所以$f(x)$ 一致收敛</li>
+<li>7.12 连续+一致收敛 &#x3D;&gt; f连续</li>
+<li>固定实数x和正数m,令$\delta_m&#x3D;\pm \frac{1}{2}4^{-m}$<ul>
+<li>这里正负号选取使得 $4^mx$与$4^m(x+\delta_m)$ 之间没有整数 （因为 这是$4^mx$ 的1&#x2F;2半径的单侧邻域一定能做到</li>
+<li>令$\displaystyle \gamma_n&#x3D;\frac{\varphi(4^n(x+\delta_m))-\varphi(4^nx)}{\delta_m}$ <ul>
+<li>$n&gt;m$时，增量是偶数，所以分子为0</li>
+<li>$0\le n \le m$ 时, 分子变化 不大于增量， $|\gamma_n| \le 4^n$</li>
+<li>$|\frac{f(x+\delta_m)-f(x)}{\delta_m}|&#x3D;|\sum (3&#x2F;4)^n\gamma_n|$ 根据定义</li>
+<li>$&#x3D;|\sum_{n&#x3D;0}^m (3&#x2F;4)^n\gamma_n|$ 根据$\gamma性质$</li>
+<li>$\ge 3^m - \sum_{n&#x3D;0}^{m-1} 3^n$ 这里用 三角不等式，但是注意要证明 导数不被控制，所以希望是 &gt;&#x3D;, 那么 |a+b+c|+|-b|+|-c|&gt;&#x3D;|a| 这样去使用</li>
+<li>$&#x3D;\frac{1}{2}(3^m+1)$ </li>
+<li>也就是 $m \to \infty$时$\delta_m\to 0, \gamma_n \to \infty$  导数的判断函数趋于无穷</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>类似的 Weierstrass 函数。它由德国数学家卡尔·魏尔斯特拉斯（Karl Weierstrass）于1872年构造，用来证明连续性和可微性并不等价。其形式通常如下：$W(x)&#x3D;\sum_{n&#x3D;0}^{\infty} a^n \cos(b^n\pi x)$ 同样是 幂次 与 周期 的级数和<ul>
+<li>$0 &lt; a &lt; 1$控制振幅衰减</li>
+<li>$b$正奇数控制频率</li>
+<li>$ab &gt; 1+\frac{3}{2}\pi$ 保证函数不可微</li>
+<li>连续性: 一致收敛 -&gt; 连续</li>
+<li>不可微性：$b^n$导致震荡频率的快速增加，振幅衰减不足以抵消频率的增长，任何点的差的商会剧烈振荡，无法趋于确定的极限</li>
+</ul>
+</li>
+</ul>
+<h3 id="等度连续的函数族-equicontinuous-families-of-functions"><a href="#等度连续的函数族-equicontinuous-families-of-functions" class="headerlink" title="等度连续的函数族 equicontinuous families of functions"></a>等度连续的函数族 equicontinuous families of functions</h3><p>从3.6 每个有界complex numbers序列，必有收敛的子序列，关于函数序列是否同样类似结论</p>
+<p>7.19 {$f_n$} 定义在$E$上的函数序列，</p>
+<ul>
+<li>逐点有界：对于每个给定$x\in E$, {$f_n(x)$}是有界的，也就是说：如果存在着 一个定义在E上的有限值函数$\phi$使得$|f_n(x)| &lt; \phi(x)$</li>
+<li>一致有界：存在M, $|f_n(x)| &lt; M$</li>
+<li>逐点有界，$E_1\subset E$,且$E_1$可数, 存在子序列{$f_{n_k}$} 对于每个$x\in E_1$收敛</li>
+</ul>
+<p>7.20 例 $f_n(x)&#x3D;\sin nx, x\in[0,2\pi]$</p>
+<ul>
+<li>设数列{$n_k$}使得{$\sin n_k x$}对于每个$x\in[0,2\pi]$收敛，这时候，必然</li>
+<li>$\lim_{k\to \infty} (\sin n_kx-\sin n_{k+1}x)&#x3D;0, x\in[0,2\pi]$ </li>
+<li>$\lim_{k\to \infty} (\sin n_kx-\sin n_{k+1}x)^2&#x3D;0, x\in[0,2\pi]$ </li>
+<li>根据11.23 有界收敛序列积分的Lebesgue定理，<ul>
+<li>$\lim_{k\to \infty} \int_0^{2\pi} (\sin n_k x-\sin n_{k+1} x)^2dx &#x3D;0$</li>
+<li>但是 $\int_0^{2\pi} (\sin n_k x-\sin n_{k+1} x)^2dx &#x3D;2\pi$ 矛盾</li>
+</ul>
+</li>
+</ul>
+<p>7.21 即使序列在一个紧集上一致有界，收敛序列 不一定 有一致收敛的子序列。</p>
+<ul>
+<li>7.6 表明 有界函数序列可以收敛 而 不一致有界。但是有界函数序列的一致收敛性包着一致有界性</li>
+<li>$x\in[0,1] f_n(x)&#x3D;\frac{x^2}{x^2+(1-nx)^2}$</li>
+<li>$|f_n(x)| \le 1$ 在$[0,1]$上一致有界</li>
+<li>$\lim_{n\to\infty} f_n(x)&#x3D;0$ 收敛到0函数</li>
+<li>但是 $f_n(1&#x2F;n)&#x3D;1$， 所以没有子序列能在$[0,1]$上一致收敛</li>
+<li>紧+一致有界+收敛序列 依然不一定找到 一致收敛子序列</li>
+</ul>
+<p>7.22 等度连续： f定义在度量空间X内集合E上的函数, $\mathscr{F}$是f的族. 说$\mathscr{F}$在E上等度连续，就是说对于每个$\epsilon &gt; 0$存在一个$\delta &gt; 0$只要$d(x,y) &lt; \delta$, $x\in E,y\in E,f\in \mathscr{F}$ 就能使得</p>
+<ul>
+<li>$|f(x)-f(y)|&lt;\epsilon$</li>
+<li>这里$d$表示$X$的度量</li>
+<li>回顾一下<ul>
+<li>点连续，对于函数，给定定义域中的点，能控制点邻域半径，控制值域变化</li>
+<li>一致连续，对于函数，能控制邻域半径，对于任意点，控制值域变化</li>
+<li>等度连续，能控制邻域半径，对于任意 点 和 函数族中的函数，控制值域变化。 根据顺序，显然等度连续在具体的f上是一致连续的</li>
+<li>或者 全部加上$\mathscr{F}$中讨论<ul>
+<li>点连续的控制函数是$\delta(f,x,\epsilon)$</li>
+<li>一致连续的控制函数是$\delta(f,\epsilon)$</li>
+<li>等度连续的控制函数是$\delta(\epsilon)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.23 {$f_n$}是在 可数集E 上逐点有界的复值函数序列，那么{$f_n$}便有子序列{$f_{n_k}$}使得{$f_{n_k}(x)$}对于每个$x\in E$收敛</p>
+<ul>
+<li>设 {$x_i$} 是E的点排列成的序列，(用到了可数集的性质)</li>
+<li>{$f_n(x_1)$} 有界，便存在着一个子序列 使得 $f_{1,k} (x_1)$ 收敛</li>
+<li>$S_i: f_{i,1\cdots\infty}$ 的序列，满足性质<ul>
+<li>$S_i$是$S_{i-1}$的子序列，保持顺序</li>
+<li>满足上面的 收敛，即{$f_{i,k\to \infty}(x_i)$ }收敛</li>
+</ul>
+</li>
+<li>$S: f_{i,i}$ 构成的序列，那么 S的后缀 是$S_n$的子序列 （对角线方法）<ul>
+<li>所以$n\to \infty$时{$f_{n,n}(x_i)$}对于每个$x_i$都收敛</li>
+</ul>
+</li>
+</ul>
+<p>7.24 K紧度量空间, $f_n\in \mathscr{L}(K)$ 且{$f_n$}在K上一致收敛，那么{$f_n$}在K上等度连续</p>
+<ul>
+<li>要证明 控制$d(x,y)$能控制 $|f_i(x)-f_i(y)|$</li>
+<li>如果 i在有限集里，因为$f_i$紧+连续&#x3D;&gt; 一致连续，每个函数可以控制 d来控制f变化，有限集里可以取min</li>
+<li>而对于 i 在无限集里，因为$f_i$ 一致收敛，考虑cauchy列, 可以控制 N 控制 $||f_n-f_m||$的距离<ul>
+<li>$|f_n(x)-f_n(y)|\le |f_n(x)-f_m(x)|+|f_m(x)-f_m(y)|+|f_m(y)-f_n(y)|$<ul>
+<li>而中间的 又不可控制了，而m如果钦定成N也成立</li>
+<li>$|f_n(x)-f_n(y)|\le |f_n(x)-f_N(x)|+|f_N(x)-f_N(y)|+|f_N(y)-f_n(y)|$</li>
+<li>这样两边是 一致收敛产生的控制，中间是 一致连续产生的控制，从而 都可被控制，等度连续</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>紧+一致收敛 &#x3D;&gt; 等度连续</li>
+</ul>
+<p>7.25 K紧, $f_n\in\mathscr{L}(K)$ 而且{$f_n$}在K上逐点有界 又 等度连续，那么</p>
+<ul>
+<li>{$f_n$}在K上一致有界<ul>
+<li>等度连续，控制$d(x,y) &lt; \delta$ 使得 $|f_n(x)-f_n(y)|&lt;\epsilon$ , 有的时候右边也想写成d, $D(f_n(x),f_n(y))$</li>
+<li>K紧，所有点的$(p_i,\delta)$邻域组成的覆盖 有 有限子覆盖，所以有有限各点$p_1,\cdots,p_r$  每个x至少被一个$p_i$邻域覆盖</li>
+<li>逐点有界，$p_i$ 有限个数，$|f_n(p_i)| &lt; M &#x3D; \max(M_i)$, 三角不等式一下每个$x$到$p_i$距离，$|f_n(x)|&lt;M+\epsilon$ 即一致有界</li>
+</ul>
+</li>
+<li>{$f_n$}含有一致收敛的子序列<ul>
+<li>2习题25, E是K的可数稠密子集</li>
+<li>7.23 说明 存在子序列$f_{n_k}$使得 对于每个$x\in E$收敛，记作$g_i&#x3D;f_{n_i}$</li>
+<li>证明 $g_i$在K上一致收敛<ul>
+<li>所有邻域$V(x,\delta)$是$K$的一个开覆盖（因为稠密）,其中$\delta$的选取和上面一样 是等度连续控制所有$|f_n(x)-f_n(y)|&lt;\epsilon$</li>
+<li>因为紧，可以有限个邻域$V(x_i,\delta)$完成K的覆盖</li>
+<li>$g_i$对于x收敛，可以控制N,$|g_i(x_s)-g_j(x_s)|&lt;\epsilon$</li>
+<li>$|g_i(x)-g_j(x)|\le|g_i(x)-g_i(x_s)|+|g_i(x_s)-g_j(x_s)|+|g_j(x_s)-g_j(x)|$<ul>
+<li>中间被 可数集E中 的函数子序列 控制</li>
+<li>两边是 等度连续的控制</li>
+<li>从而$g_i$ 一致收敛</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>也就是：紧+逐点有界+等度连续 &#x3D;&gt; 一致有界+一致收敛的子序列<ul>
+<li>和7.21 相比 一致有界+收敛 都完成不了的，这里可以了，怎么说呢，其实我挺喜欢 这个 三角，或者说距离不等式的<ul>
+<li>$|g_i(x)-g_j(x)|\le|g_i(x)-g_i(x_s)|+|g_i(x_s)-g_j(x_s)|+|g_j(x_s)-g_j(x)|$</li>
+<li>本质上就是希望能被控制，而变成分析每一部分被控制所需要的条件，因为这里也不是充要，只是充分性，我觉得可以把问题前移，再来依次满足每个被控制的要求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Stone-Weierstrass定理-theorem"><a href="#Stone-Weierstrass定理-theorem" class="headerlink" title="Stone-Weierstrass定理 theorem"></a>Stone-Weierstrass定理 theorem</h3><p>7.26 f是$[a,b]$上的一个连续复函数，那么便有多项式$P_n$的序列使得$\lim_{n\to\infty}P_n(x)&#x3D;f(x)$</p>
+<ul>
+<li>在$[a,b]$ 一致的成立，f如果是实函数，$P_n$可以是实多项式</li>
+<li>Weierstrass最初发现的定理的形式</li>
+<li>不是一般性 设f在$[0,1]$ 上, $f(0)&#x3D;f(1)&#x3D;0$ 因为，如果不满足只需要缩放空间，和减去一个 直线 即可变形<ul>
+<li>在$[0,1]$外 f(x)&#x3D;0</li>
+</ul>
+</li>
+<li>那么 要证明这样的f能作为一致收敛的极限</li>
+<li>$Q_n(x)&#x3D;c_n(1-x^2)^n \ge 0$, 其中$c_n$是常数 使得$\int_{-1}^1Q_n(x)dx&#x3D;1$ 或者说$c_n&#x3D;\frac{1}{\int_{-1}^1 (1-x^2)^n dx}$<ul>
+<li>$\int_{-1}^1 (1-x^2)^n dx&#x3D;2\int_{0}^1 (1-x^2)^n dx$</li>
+<li>$\ge 2\int_{0}^{1&#x2F;\sqrt{n}} (1-x^2)^n dx$</li>
+<li>$\ge 2\int_{0}^{1&#x2F;\sqrt{n}} (1-nx^2) dx$ 邻域性质(导数分析都可以证明)</li>
+<li>$&#x3D;\frac{4}{3\sqrt{n}} &gt; \frac{1}{\sqrt{n}}$</li>
+<li>即$c_n &lt;\sqrt{n}$</li>
+</ul>
+</li>
+<li>对于 任意 $\delta &gt; 0$ 当$x\in[\delta,1]$时 $Q_n(x)\le \sqrt{n}(1-x^2)^n\le \sqrt{n}(1-\delta^2)^n$ 所以 右侧与x无关，$Q_{n\to \infty}\to 0$一致的成立<ul>
+<li>$P_n(x)&#x3D;\int_{-1}^1 f(x+t)Q_n(t)dt, x\in[0,1]$<ul>
+<li>$&#x3D;\int_{-x}^{1-x}f(x+t)Q_n(t)dt$ 利用f(x)在$[0,1]$值为0</li>
+<li>$&#x3D;\int_0^1 f(t)Q_n(t-x) dt$</li>
+<li>是关于 x的多项式，所以{$P_n$} 是关于x的多项式序列，如果f是实的，那么它也是实的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$\epsilon &gt; 0$然后取$\delta &gt;0$使得$|y-x| &lt; \delta$时有$|f(y)-f(x)|&lt;\frac{\epsilon}{2}$</li>
+<li>令 $M&#x3D;\sup |f(x)|$</li>
+<li>$|P_n(x)-f(x)|&#x3D;|\int_{-1}^1 [f(x+t)-f(x)]Q_n(t)dt|$, 注意这里t是积分变量所以f(x)在积分中是常数角色</li>
+<li>$\le \int_{-1}^1 |f(x+t)-f(x)|Q_n(t)dt$</li>
+<li>这里怎么切分，切分称积分段$[-1,-\delta,\delta,1]$<ul>
+<li>那么中间的，控制$\delta$ 能控制 $\le \int_{-\delta}^{\delta} (&lt;\epsilon&#x2F;2) Q_n dt \le \epsilon&#x2F;2 (0,1) \le \epsilon&#x2F;2$</li>
+<li>那么两端的利用 2M控制 $|f-f|$, 而n趋于无穷大时，上面$Q_{n\to \infty}\to 0$ 一致成立 来控制</li>
+</ul>
+</li>
+</ul>
+<p>7.27 实例，引理</p>
+<ul>
+<li>在每个闭区间$[-a,a]$上，必有实多项式$P_n$的序列, such that $P_n(0)&#x3D;0$ and such that $\lim_{n\to \infty} P_n(x)&#x3D;|x|$ 在$[-a,a]$上一致uniformly的成立</li>
+<li>根据7.26 有 $P^*_n(x)$ 满足一致收敛于|x|<ul>
+<li>要达到 函数列所有 $P_n(0)&#x3D;0$</li>
+<li>那么 取$P_n&#x3D;P^*_n-P^*_n(0)$</li>
+</ul>
+</li>
+</ul>
+<p>7.28  a family $\mathscr{A}$ of complex functions defined on a set E is said to be an algebra(代数) ，如果满足以下</p>
+<ul>
+<li>加法封闭 $f+g\in\mathscr{A}$</li>
+<li>乘法封闭 $fg\in\mathscr{A}$</li>
+<li>数乘封闭 $cf\in \mathscr{A},c\in \mathbb{C}$, scalar multiplication</li>
+<li>类似可以定义 实函数 的 代数</li>
+<li>一致闭 的代数：<ul>
+<li>如果满足 $f_n\in \mathscr{A}$ 在E上$f_n\to f$一致收敛， 则 $f\in \mathscr{A}$, 也就是 对于一致收敛封闭，</li>
+</ul>
+</li>
+<li>例如<ul>
+<li>所有多项式的集是一个代数</li>
+<li>Weierstrass定理可以叙述为$[a,b]$上的连函数的集是$[a,b]$上多项式集的一致闭包，（因为上面证明的就是人连续函数能找到多项式序列 来一致收敛</li>
+</ul>
+</li>
+</ul>
+<p>7.29 设$\mathscr{B}$是有界函数的代数$\mathscr{A}$的一致闭包，那么$\mathscr{B}$是 一致闭 的代数</p>
+<ul>
+<li>$f,g\in\mathscr{B}$  因为一致闭包，分别有 一致收敛序列 $f_n,g_n \in \mathscr{A}$ ??? 代数闭包的某个性质？</li>
+<li>$f_n,g_n$有界函数 所以满足 加法 乘法 数乘 还是有界函数，并且 收敛于 对应的f+g,fg,cf, 且一致收敛，从而$\mathscr{B}$是一致 闭的</li>
+</ul>
+<p>7.30 $\mathscr{A}$是集E上的函数族，</p>
+<ul>
+<li>说$\mathscr{A}$能分离E的点separate points on E，就是说对应于每对不同的点$x_1,x_2\in E$总有一个函数$f\in\mathscr{A}$使得$f(x_1)\neq f(x_2)$<ul>
+<li>这里并不是一一映射，而是 任给不同的点，总能找到 函数 使这两点结果不同</li>
+<li>例如下面偶多项式集合 任意-x,x “总”是相同</li>
+<li>作为另一个例子 $f_{m,n}(x)&#x3D; m|x|当 x \ge 0,n|x| 当x \le 0$, 看起来 除了0,所有y都有两个x,但 根据上面的顺序，先任意$x_1,x_2$,  总能找到使之不同的函数</li>
+<li>但这个例子 点0是消失的</li>
+</ul>
+</li>
+<li>if to each $x\in E$ there corresponds a function $g\in \mathscr{A}$ such that $g(x)\neq 0$ we say that $\mathscr{A}$ vanishes at no point of E<ul>
+<li>也就是每个x,能找到g,使得g(x)非0,（逆命题就是存在x 所有g,都是g(x)&#x3D;0)</li>
+</ul>
+</li>
+<li>The algebra of 所有多项式 in 一元变量 在$R^1$上显然有这些性质</li>
+<li>作为 反例 所有偶多项式的集合，不能分离点因为 f(-x)&#x3D;f(x)</li>
+</ul>
+<p>7.31 E上函数的代数$\mathscr{A}$能分离E的点+不在E的点消失。$x_1,x_2\in E$且不等,$c_1,c_2$是常数</p>
+<ul>
+<li>那么$\mathscr{A}$ 含有一个f, $f(x_1)&#x3D;c_1,f(x_2)&#x3D;c_2$</li>
+<li>证明:<ul>
+<li>能分离点 取g</li>
+<li>不消失取 h,k</li>
+<li>$u&#x3D;gk-g(x_1)k$</li>
+<li>$v&#x3D;gh-g(x_2)h$</li>
+<li>显然<ul>
+<li>$u(x_1)&#x3D;v(x_2)\neq 0$</li>
+<li>$u(x_2)\neq 0,v(x_1)\neq 0$</li>
+<li>$f&#x3D;\frac{c_1v}{v(x_1)}+\frac{c_2u}{u(x_2)}$ 有需要的性质</li>
+<li>其实还是待定系数法的感觉 f &#x3D; c_1(x_1点&#x3D;1,x_2点&#x3D;0的函数)+c_2(x_2点&#x3D;1,x_1点&#x3D;0的函数) 反过去构造</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.32 $\mathscr{A}$紧K上的实连续函数的代数。$\mathscr{A}$能分离K,不在K的点消失，那么</p>
+<ul>
+<li>$\mathscr{A}$的 uniform closure一致闭包 $\mathscr{B}$由K上的所有实连续函数组成</li>
+<li>证明：<ul>
+<li>第一步， $f\in\mathscr{B}$则$|f|\in\mathscr{B}$<ul>
+<li>证明：</li>
+<li>令$a&#x3D;\sup |f(K)|$</li>
+<li>再给定$\epsilon &gt; 0$，根据7.27(可以0次幂系数为0 多项式一致收敛 到|x|),存在$c_1,\cdots,c_n$使得<ul>
+<li>$|\sum_{i&#x3D;1}^n c_iy^i -|y|| &lt; \epsilon, -a\le y\le a$ ， 这里的y表示 取遍$[-a,a]$所有值成立，因为$7.27$</li>
+</ul>
+</li>
+<li>因为$\mathscr{B}$是代数 所以$g&#x3D;\sum_{i&#x3D;1}^n c_i f^i \in \mathscr{B}$, 代数中的运算封闭性<ul>
+<li>这里要注意的是， 虽然列了n项但并不表示 $g_n$, 因为7.27 证明的多项式序列中没有对项数进行讨论，这里表示的只是某个$g_i$ 有n项</li>
+<li>另一个注意的是$c_i$的值是在不同的g中是不同的$c_{i,g_k}\neq c_{j,g_k}$</li>
+<li>写得再 具体一点是 $g_i&#x3D;\sum_{j&#x3D;1}^{n_i} c_{i,j} f^j$</li>
+</ul>
+</li>
+<li>$|g-|f||&lt;\epsilon$ 这里 $f$的每个值 都是$[-a,a]$ 中的点，所以 成立 且 一致成立<ul>
+<li>这里说明$|f|$是 可以被一致收敛</li>
+<li>而$\mathscr{B}$是一致闭的，所以$|f|\in\mathscr{B}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第二步, 感觉这些步骤可以单独提出来变成推论<ul>
+<li>$\max(f,g)\in \mathscr{B},\min(f,g)\in \mathscr{B}$</li>
+<li>$\max(f,g)&#x3D;(f+g)&#x2F;2+|f-g|&#x2F;2$</li>
+<li>$\min(f,g)&#x3D;(f+g)&#x2F;2-|f-g|&#x2F;2$</li>
+<li>更一般的 $\max(f_n,\cdots,f_n) \in \mathscr{B}$</li>
+</ul>
+</li>
+<li>第三步 这里用到了 能分离 和 点消失<ul>
+<li>对于任意 给定 K上连续f, $x_0 \in K$, $\epsilon &gt; 0$,便存在着一个函数$g_x\in \mathscr{B}$满足$g_x(x_0)&#x3D;f(x_0)$且$g_x(t) &gt;f(t)-\epsilon, t\in K$</li>
+<li>也就是 指定点相等，所有位置大于 下邻域</li>
+<li>7.31 对于每个点 $y\in E$, $h_y\in \mathscr{B}$ 使得它和f在x,y点相等<ul>
+<li>$h_y$是连续的，存在 y的邻域 $h_y(y) &gt; f(x)-\epsilon$</li>
+<li>K紧， 所有y的邻域构成的开覆盖，有限子覆盖，有限了，就可以对这些$h_y$取max,从而构造出了，x点相等其它点$&gt; f(t)-\epsilon$的$\mathscr{B}$中的函数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>第四步<ul>
+<li>给定K上连续实函数f, $\epsilon &gt; 0$，存在$h\in \mathscr{B}$ 使得 $|h(x)-f(x)|&lt;\epsilon$ <ul>
+<li>也就是 f可以找到 函数列{h} 一致收敛到，也就是f 属于$\mathscr{B}$ 一致闭，也就和命题一致</li>
+</ul>
+</li>
+<li>证明：<ul>
+<li>类似第3步，不过这次是x的邻域，能$g_x(x) &lt; f(x)+\epsilon$</li>
+<li>同样利用 紧和覆盖，把上面 满足$g(t) &gt; f(t)-\epsilon$的 这次用 min来构造出一个新的 连续的 在 $(f(x)-\epsilon,f(x)+\epsilon)$之间的函数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>7.33 这个在复代数 complex algebras中不成立, </p>
+<ul>
+<li>习题21，反例counterexample<ul>
+<li>$K$是复平面单位圆，也就是 所有$|z|&#x3D;1$的$z$</li>
+<li>$\mathscr{A}$是$f(e^{i\theta})&#x3D;\sum_{n&#x3D;0}^N c_ne^{in\theta}$ 其中$\theta$是实数</li>
+<li>仍有K上的连续函数不属于$\mathscr{A}$的一致闭包</li>
+<li>这个复分析和函数代数的经典问题 经典反例，丢给grok3,tongyi,deepseek都有不错的结果<ul>
+<li>证明：<ul>
+<li>能分离点, f(x)&#x3D;x 可证</li>
+<li>不在K的点消失, $|f(x)&#x3D;x| &#x3D; 1 \neq 0$</li>
+</ul>
+</li>
+<li>理解一下，首先这是傅里叶项，但是缺少负n，另外也是上面条件中需要共轭闭包没有满足</li>
+<li>构造反例：其实直接就是构造一个共轭，负频率<ul>
+<li>$f(x)&#x3D;\bar{x}$ 即 $f(e^{i\theta})&#x3D;e^{-i\theta}$ 证明它K上连续的</li>
+<li>$P_n\to \bar{x}$</li>
+<li>$\sup_{\theta} |P_n-\bar{x}| &lt; \epsilon$</li>
+<li>$\int_0^{2\pi} P_n(e^{i\theta})e^{i\theta} d\theta &#x3D; 0\neq 2\pi &#x3D; \int_0^{2\pi} e^{-i\theta}e^{i\theta} d\theta$</li>
+<li>不存在 一致收敛的函数列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>增加性质 A self-adjoint 自伴的，那么在 复代数 也成立</li>
+<li>自伴的: $f\in \mathscr{A}$则$\bar{f} \in \mathscr{A}$</li>
+<li>紧K,复连续，自伴，能分离K的点，不在K点消失的代数$\mathscr{A}$，那么它的一致闭包$\mathscr{B}$ 由$K$上的所有复连续函数组成</li>
+<li>也就是说 $\mathscr{A}$在$\mathscr{C}(K)$中稠密<ul>
+<li>$\mathscr{A}_R$是K上 属于$\mathscr{A}$的所有实函数的集</li>
+<li>$f&#x3D;u+iv \in \mathscr{A}$其中$u,v$ 是实的, $\mathscr{A}$是自伴的, $u&#x3D;\frac{f+\bar{f}}{2} \in \mathscr{A}_R$</li>
+<li>$\mathscr{A}_R$可分离K的点： 对于$x_1\neq x_2$,存在f,使得$f(x_1)&#x3D;1,f(x_2)&#x3D;0$, u在这两点也不等</li>
+<li>$\mathscr{A}_R$不在K的点消失：$x\in K$, 不消失, 有g,使得$g(x)\neq 0$, 有复数$\lambda$使得$\lambda g(x) &gt; 0$, 令$f&#x3D;\lambda g$, 对应$u(x)&gt;0$, 也就满足任意x存在u，$u(x)\neq 0$</li>
+<li>$\mathscr{A}_R$ 满足 7.32 说明 K上的每个实连续函数 必定在$\mathscr{A}_R$的一致闭包中，进而在$\mathscr{B}$中,<ul>
+<li>f是K上复连续函数,$f&#x3D;u+iv$</li>
+<li>因为$u,v\in\mathscr{B}$所以$f\in\mathscr{B}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>这里中文书的“合于”听起好绕口，英文书上就是 then (性质) for some (条件)</li>
+</ul>
+<p>回顾</p>
+<ul>
+<li>最开始 对于$[a,b]$上任意 复连续函数， 希望用多项式列，一致收敛</li>
+<li>接下来希望讨论 连续函数之间的结构，于是建立连续函数代数（加法封闭，乘法封闭，数乘封闭）</li>
+<li>增加 能分离（给任意不同点 存在函数 使对应点值不同），不消失（给任意点，存在函数 对应点值非0）两个条件</li>
+<li>从而 紧K + 连续函数的代数的一致闭包 由所有实连续函数组成</li>
+<li>而对于复函数，需要多一个共轭封闭的前提条件</li>
+</ul>
 ]]></content>
       <categories>
-        <category>数论</category>
+        <category>数学分析</category>
       </categories>
       <tags>
-        <tag>数论</tag>
+        <tag>数学分析</tag>
+        <tag>微积分</tag>
       </tags>
   </entry>
   <entry>
@@ -11941,6 +11941,69 @@
       </tags>
   </entry>
   <entry>
+    <title>数论基础 四 同余</title>
+    <url>/Math/number_theory_4/</url>
+    <content><![CDATA[<p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="1-概念及基本性质"><a href="#1-概念及基本性质" class="headerlink" title="1.概念及基本性质"></a>1.概念及基本性质</h1><p>定义1: 正整数$m$称为模,$a,b$为任意两个整数, 若它们被$m$除后所得余数相同,则称作同余,记作$a\equiv b\pmod m$,否则$a\not \equiv b\pmod p$</p>
+<p>定理1: 上式等价于$m|(a-b)$, 根据第一章除法性质唯一余数</p>
+<p>基本性质:</p>
+<ul>
+<li>$a\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m \Leftrightarrow b\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m,b\equiv c\pmod m\Rightarrow a\equiv c\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \sum {a_i}\equiv \sum b_i\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \prod {a_i}\equiv \prod b_i\pmod m$</li>
+<li>$ab\equiv bd\pmod m,c\equiv d\pmod m,\gcd(c,m)&#x3D;1 \Rightarrow a\equiv b\pmod m$</li>
+</ul>
+<p>定理2: $A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\pmod m,x_i\equiv y_i\pmod m\Rightarrow \sum A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod x_i^{\alpha_i}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod y_i^{\alpha_i}\pmod m$<br>例1: $K$为正整数, 试着求为9的整除判别法</p>
+<p>$K&#x3D;\sum_{i\in[0,l]}10^i a_i,10^i\equiv 1 \pmod 9$</p>
+<p>由定理2: $K &#x3D; \sum_{i\in [0,l]}a_i\pmod 9$</p>
+<p>定理3: $K\ne 0$, $a\equiv b\pmod m \Leftrightarrow aK\equiv bK \pmod {Km}$</p>
+<p>定理4: 社$aC\equiv bC \pmod m, d&#x3D;\gcd(m,C)$则 $a\equiv b \pmod{\frac{m}{d}}$ </p>
+<p>$m|C(a-b) \Rightarrow \frac{m}{d} | \frac{C}{d}(a-b) \Rightarrow \frac{m}{d}|(a-b)$</p>
+<p>定理5: $d\ne 0, d|m , a\equiv b\pmod m \Rightarrow a\equiv b \pmod d$</p>
+<p>定理6: $a\equiv b\pmod {m_1},a\equiv b\pmod {m_2} \Leftrightarrow a\equiv b \pmod{\mathrm{lcm}(m_1,m_2)}$</p>
+<p>定理7: $a\equiv b\pmod m \Rightarrow \gcd(a,m)&#x3D;\gcd(b,m)$</p>
+<h1 id="2-剩余类及剩余系"><a href="#2-剩余类及剩余系" class="headerlink" title="2.剩余类及剩余系"></a>2.剩余类及剩余系</h1><p>定义2: 对$m$同余的整数的集合 剩余类（同余类）,（如果和$m$互素,则互素剩余类）, 可以分成$m$个剩余类</p>
+<p>定义3: 每个剩余类中任取一个数,组成的叫做模$m$的完全剩余系, (在每个和$m$互素的剩余类中任取一个,叫做简化(互素)剩余系)</p>
+<p>$0,1,\cdots,m-1$称作模$m$的最小非负完全剩余系</p>
+<p>把大于$\frac{m}{2}$的变成负的，则称作模$m$的绝对最小完全系</p>
+<p>素数的常用简化系$1,2,\cdots,p-1$</p>
+<p>定理8: $m$个整数组成模$m$的一个完全系的充要条件是这$m$个数两两对模$m$不同余</p>
+<p>定理9: $\phi(m)$个整数组成模$m$的一个简化系的充要条件是,这些数与$m$互素,且它们对模$m$两两不同余</p>
+<p>定理10: $m$自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的完全系时,$Kx+l$也通过$m$的完全系, (通过$x$不同余得到$Kx+l$不同余可证明</p>
+<p>定理11: $m$为自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的简化系时,$Kx+lm$也通过$m$的简化系,(同样，多证明一个和$m$的$\gcd$即可)</p>
+<p>定理12: $m_1,m_2$为自然数$(m_1,m_2)&#x3D;1$,当$x,y$分别通过模$m_1,m_2$的完全(简化)系时,$m_2x+m_1y$通过模$m&#x3D;m_1m_2$的完全(简化)系</p>
+<p>定理13(Euler): 设$m &gt; 1,\gcd(a,m)&#x3D;1$则$a^{\phi(m)}\equiv 1\pmod m$</p>
+<p>证明:</p>
+<p>$x_1,x_2,\cdots,x_{\phi(m)}$为一个简化系, </p>
+<p>$ax_1,ax_2,\cdots,ax_{\phi(m)}$为一个简化系, 定理11</p>
+<p>$\prod x_i\equiv \prod ax_i \pmod m$</p>
+<p>$\prod x_i\equiv a^{\phi(m)}\prod x_i \pmod m$</p>
+<p>$1 \equiv a^{\phi(m)} \pmod m$</p>
+<p>定理14(Fermat): 若$m&#x3D;p$为素数,则$a^{p-1}\equiv 1 \pmod p$</p>
+<p>重要应用, $f(n)$为模$m$为周期的数论函数</p>
+<p>$\displaystyle F(m)&#x3D;\sum_{x\pmod m} f(x)$ 表示对模$m$的一个完全系求和</p>
+<p>$\displaystyle G(m)&#x3D;\sum_{x\pmod m}’ f(x)$ 表示对模$m$的一个简化系求和</p>
+<p>定理15: $\displaystyle \sum_{x\pmod m} f(x)&#x3D;\sum_{x\pmod m} f(Kx+l),\gcd(K,m)&#x3D;1$,$\displaystyle \sum_{x\pmod m}’ f(x)&#x3D;\sum_{x\pmod m}’ f(Kx+l),\gcd(K,m)&#x3D;1$</p>
+<p>定理16: 设$f(n)&#x3D;e^{2\pi i\frac{n}{m}}$,则$F(m),G(m)$均为可乘函数</p>
+<h1 id="3-同余方程的一般概念，一次同余方程"><a href="#3-同余方程的一般概念，一次同余方程" class="headerlink" title="3. 同余方程的一般概念，一次同余方程"></a>3. 同余方程的一般概念，一次同余方程</h1><h1 id="4-孙子定理"><a href="#4-孙子定理" class="headerlink" title="4. 孙子定理"></a>4. 孙子定理</h1><h1 id="5-多项式的恒等同余"><a href="#5-多项式的恒等同余" class="headerlink" title="5. 多项式的恒等同余"></a>5. 多项式的恒等同余</h1><h1 id="6-模p的高次同余方程"><a href="#6-模p的高次同余方程" class="headerlink" title="6. 模p的高次同余方程"></a>6. 模p的高次同余方程</h1><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-xxxx"><a href="#2-xxxx" class="headerlink" title="2. xxxx"></a>2. xxxx</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+
+</details>]]></content>
+      <categories>
+        <category>数论</category>
+        <category>数论基础</category>
+      </categories>
+      <tags>
+        <tag>数论基础</tag>
+        <tag>欧拉定理</tag>
+        <tag>费马小定理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数论基础 三 素数分布的一些初等结果</title>
     <url>/Math/number_theory_3/</url>
     <content><![CDATA[<p>ISBN 9787040364729</p>
@@ -12306,69 +12369,6 @@
         <tag>Bertrand 假设</tag>
         <tag>M(x)</tag>
         <tag>L(x)</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数论基础 四 同余</title>
-    <url>/Math/number_theory_4/</url>
-    <content><![CDATA[<p>ISBN 9787040364729</p>
-<span id="more"></span>
-
-<h1 id="1-概念及基本性质"><a href="#1-概念及基本性质" class="headerlink" title="1.概念及基本性质"></a>1.概念及基本性质</h1><p>定义1: 正整数$m$称为模,$a,b$为任意两个整数, 若它们被$m$除后所得余数相同,则称作同余,记作$a\equiv b\pmod m$,否则$a\not \equiv b\pmod p$</p>
-<p>定理1: 上式等价于$m|(a-b)$, 根据第一章除法性质唯一余数</p>
-<p>基本性质:</p>
-<ul>
-<li>$a\equiv a\pmod m$</li>
-<li>$a\equiv b\pmod m \Leftrightarrow b\equiv a\pmod m$</li>
-<li>$a\equiv b\pmod m,b\equiv c\pmod m\Rightarrow a\equiv c\pmod m$</li>
-<li>$a_i\equiv b_i\pmod m \Rightarrow \sum {a_i}\equiv \sum b_i\pmod m$</li>
-<li>$a_i\equiv b_i\pmod m \Rightarrow \prod {a_i}\equiv \prod b_i\pmod m$</li>
-<li>$ab\equiv bd\pmod m,c\equiv d\pmod m,\gcd(c,m)&#x3D;1 \Rightarrow a\equiv b\pmod m$</li>
-</ul>
-<p>定理2: $A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\pmod m,x_i\equiv y_i\pmod m\Rightarrow \sum A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod x_i^{\alpha_i}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod y_i^{\alpha_i}\pmod m$<br>例1: $K$为正整数, 试着求为9的整除判别法</p>
-<p>$K&#x3D;\sum_{i\in[0,l]}10^i a_i,10^i\equiv 1 \pmod 9$</p>
-<p>由定理2: $K &#x3D; \sum_{i\in [0,l]}a_i\pmod 9$</p>
-<p>定理3: $K\ne 0$, $a\equiv b\pmod m \Leftrightarrow aK\equiv bK \pmod {Km}$</p>
-<p>定理4: 社$aC\equiv bC \pmod m, d&#x3D;\gcd(m,C)$则 $a\equiv b \pmod{\frac{m}{d}}$ </p>
-<p>$m|C(a-b) \Rightarrow \frac{m}{d} | \frac{C}{d}(a-b) \Rightarrow \frac{m}{d}|(a-b)$</p>
-<p>定理5: $d\ne 0, d|m , a\equiv b\pmod m \Rightarrow a\equiv b \pmod d$</p>
-<p>定理6: $a\equiv b\pmod {m_1},a\equiv b\pmod {m_2} \Leftrightarrow a\equiv b \pmod{\mathrm{lcm}(m_1,m_2)}$</p>
-<p>定理7: $a\equiv b\pmod m \Rightarrow \gcd(a,m)&#x3D;\gcd(b,m)$</p>
-<h1 id="2-剩余类及剩余系"><a href="#2-剩余类及剩余系" class="headerlink" title="2.剩余类及剩余系"></a>2.剩余类及剩余系</h1><p>定义2: 对$m$同余的整数的集合 剩余类（同余类）,（如果和$m$互素,则互素剩余类）, 可以分成$m$个剩余类</p>
-<p>定义3: 每个剩余类中任取一个数,组成的叫做模$m$的完全剩余系, (在每个和$m$互素的剩余类中任取一个,叫做简化(互素)剩余系)</p>
-<p>$0,1,\cdots,m-1$称作模$m$的最小非负完全剩余系</p>
-<p>把大于$\frac{m}{2}$的变成负的，则称作模$m$的绝对最小完全系</p>
-<p>素数的常用简化系$1,2,\cdots,p-1$</p>
-<p>定理8: $m$个整数组成模$m$的一个完全系的充要条件是这$m$个数两两对模$m$不同余</p>
-<p>定理9: $\phi(m)$个整数组成模$m$的一个简化系的充要条件是,这些数与$m$互素,且它们对模$m$两两不同余</p>
-<p>定理10: $m$自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的完全系时,$Kx+l$也通过$m$的完全系, (通过$x$不同余得到$Kx+l$不同余可证明</p>
-<p>定理11: $m$为自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的简化系时,$Kx+lm$也通过$m$的简化系,(同样，多证明一个和$m$的$\gcd$即可)</p>
-<p>定理12: $m_1,m_2$为自然数$(m_1,m_2)&#x3D;1$,当$x,y$分别通过模$m_1,m_2$的完全(简化)系时,$m_2x+m_1y$通过模$m&#x3D;m_1m_2$的完全(简化)系</p>
-<p>定理13(Euler): 设$m &gt; 1,\gcd(a,m)&#x3D;1$则$a^{\phi(m)}\equiv 1\pmod m$</p>
-<p>证明:</p>
-<p>$x_1,x_2,\cdots,x_{\phi(m)}$为一个简化系, </p>
-<p>$ax_1,ax_2,\cdots,ax_{\phi(m)}$为一个简化系, 定理11</p>
-<p>$\prod x_i\equiv \prod ax_i \pmod m$</p>
-<p>$\prod x_i\equiv a^{\phi(m)}\prod x_i \pmod m$</p>
-<p>$1 \equiv a^{\phi(m)} \pmod m$</p>
-<p>定理14(Fermat): 若$m&#x3D;p$为素数,则$a^{p-1}\equiv 1 \pmod p$</p>
-<p>重要应用, $f(n)$为模$m$为周期的数论函数</p>
-<p>$\displaystyle F(m)&#x3D;\sum_{x\pmod m} f(x)$ 表示对模$m$的一个完全系求和</p>
-<p>$\displaystyle G(m)&#x3D;\sum_{x\pmod m}’ f(x)$ 表示对模$m$的一个简化系求和</p>
-<p>定理15: $\displaystyle \sum_{x\pmod m} f(x)&#x3D;\sum_{x\pmod m} f(Kx+l),\gcd(K,m)&#x3D;1$,$\displaystyle \sum_{x\pmod m}’ f(x)&#x3D;\sum_{x\pmod m}’ f(Kx+l),\gcd(K,m)&#x3D;1$</p>
-<p>定理16: 设$f(n)&#x3D;e^{2\pi i\frac{n}{m}}$,则$F(m),G(m)$均为可乘函数</p>
-<h1 id="3-同余方程的一般概念，一次同余方程"><a href="#3-同余方程的一般概念，一次同余方程" class="headerlink" title="3. 同余方程的一般概念，一次同余方程"></a>3. 同余方程的一般概念，一次同余方程</h1><h1 id="4-孙子定理"><a href="#4-孙子定理" class="headerlink" title="4. 孙子定理"></a>4. 孙子定理</h1><h1 id="5-多项式的恒等同余"><a href="#5-多项式的恒等同余" class="headerlink" title="5. 多项式的恒等同余"></a>5. 多项式的恒等同余</h1><h1 id="6-模p的高次同余方程"><a href="#6-模p的高次同余方程" class="headerlink" title="6. 模p的高次同余方程"></a>6. 模p的高次同余方程</h1><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-xxxx"><a href="#2-xxxx" class="headerlink" title="2. xxxx"></a>2. xxxx</h2><details class="note info no-icon"><summary><p>Proof</p>
-</summary>
-
-</details>]]></content>
-      <categories>
-        <category>数论</category>
-        <category>数论基础</category>
-      </categories>
-      <tags>
-        <tag>数论基础</tag>
-        <tag>欧拉定理</tag>
-        <tag>费马小定理</tag>
       </tags>
   </entry>
   <entry>
