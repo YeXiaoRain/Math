@@ -8,9 +8,10 @@ tags:
   - 数学分析
 ---
 
-<!--more-->
 
 ## 一些特殊函数 some special functions
+
+<!--more-->
 
 ### 幂级数 power series
 

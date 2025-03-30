@@ -8,14 +8,11 @@ tags:
   - 数学分析
 ---
 
-isbn
-- 中文 9787111134176
-- 英文 9787111619543
 
-
-<!--more-->
 
 ## 数列与级数 numerical sequences and series
+
+<!--more-->
 
 ### 收敛序列 convergent sequences
 

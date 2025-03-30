@@ -8,14 +8,10 @@ tags:
   - 数学分析
 ---
 
-isbn
-- 中文 9787111134176
-- 英文 9787111619543
-
-
-<!--more-->
 
 ## 微分法 differentiation
+
+<!--more-->
 
 ### 实函数中的导数 the derivative of a real function
 

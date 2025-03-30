@@ -8,18 +8,14 @@ tags:
   - 数学分析
 ---
 
-isbn
-- 中文 9787111134176
-- 英文 9787111619543
-
-
-<!--more-->
 
 ## 函数序列与函数项级数 sequences and series of functions
 
 这一章里 只限于讨论复值函数。
 
 注意力：调换两个极限过程时出现的若干问题（when limit processes are interchanged）
+
+<!--more-->
 
 ### 主要问题的讨论 discussion of main problem
 

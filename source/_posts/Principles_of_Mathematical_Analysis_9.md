@@ -8,11 +8,12 @@ tags:
   - 数学分析
 ---
 
-<!--more-->
 
 ## 多元函数 functions of several variables
 
 主要讨论 euclidean n-space $R^n$ 中
+
+<!--more-->
 
 ### 线性变换 linear transformations
 

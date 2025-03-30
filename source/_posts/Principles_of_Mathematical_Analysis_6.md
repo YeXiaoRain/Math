@@ -8,18 +8,15 @@ tags:
   - 数学分析
 ---
 
-isbn
-- 中文 9787111134176
-- 英文 9787111619543
 
-
-<!--more-->
 
 ## Riemann-Stieltjes 积分integral
 
 先讨论区间上实值函数的积分，
 - 后面推广到区间上的复值和向量值函数的积分
 - 10～11章 再讨论在不是区间上的积分
+
+<!--more-->
 
 ### 积分的定义和存在性 definition and existence of the integral
 
