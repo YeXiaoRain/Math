@@ -1,17 +1,12 @@
 ---
-title: Walter Rudin 数学分析原理
-date: 2025-02-01
+title: Walter Rudin 数学分析原理 9 多元函数
+date: 2025-03-17
 categories:
   - 数学分析
 tags:
   - 微积分
   - 数学分析
 ---
-
-isbn
-- 中文 9787111134176
-- 英文 9787111619543
-
 
 <!--more-->
 
@@ -403,55 +398,233 @@ isbn
 9.32 m,n,r 非负整数  $m \ge r$ , $n \ge r$, F把开集$E \subset R^n$ 映入 $R^m$ 内的 $\mathscr{C}'$ 映射, 对于每个$x \in E$ , $F'(x)$的秩是$r$
 - 固定$a \in E$, 令$A=F'(a)$, 设A的值域是$Y_1$, P是$R^m$中的射影，其值域也是$Y_{1}$, $Y_{2}$是P的零空间
 - 那么 $R^n$中存在着 开集 U及V, $a \in U \subset E$, 并且存在着把映满U的1-1 $\mathscr{C}'$映射H(onto 逆也是 $\mathscr{C}'$), 使得
-	- $F(H(x))=Ax+\varphi(Ax)$ 其中$\varphi$是把 $A(V) \subset Y_1, x \in V$映入 $Y_2$内的 $\mathscr{C}'$映射
+	- $F(H(x))=Ax+\varphi(Ax), x \in V$ 其中$\varphi$是把 $A(V) \subset Y_1$映入 $Y_2$内的 $\mathscr{C}'$映射
+
+证明:
+- 若 r=0, 那么 $F'(x)=0$对一切x成立，那么F是常函数，显然
+  - a的某领域U内
+  - 这时 V=U, H(x)=x, $\varphi(0)=F(a)$
+  - $F(H(x))=F(x)=0+\varphi(0)=F(a)$
+- 若 r>0, $\dim Y_1 = r$, $Y_1$有基 {$y_1,...,y_r$}, A可逆,因此选$R^n$中的r个基$z_1,...,z_r$使得$Az_i=y_i$
+  - 因此 A的'逆'有 $A^{-1}(\sum c_i y_i)=\sum c_i z_i$
+    - 书上这里是S，来表示这个逆运算，需要注意的是A这里是f'(a) 它甚至可能不是方阵，然后我们这里$S=A^{-1}$, 而我们能做的是什么，其实就是秩为r的矩阵，完成了 行空间 到 列空间的 1-1 的r维映射，所以这里S我们只是这个1-1映射的逆向而已，那么
+    - $A^{-1}$的 接受的参数 只有列空间$Y_1$中的！！！
+    - 再细致的
+      - $AA^{-1}y=y,y\in Y_1$, 这是成立的
+      - $A^{-1}Ax =?=x , Ax\in Y_1$, 这是不一定的, 因为x可能不在行空间里
+  - $G(x)=x+A^{-1}P[F(x)-Ax],x\in E$, 这是一个E到$R^n$内的$\mathscr{C}'$映射
+    - $G'(x)=I+A^{-1}P[F'(x)-A]$
+    - $G'(a)=I+A^{-1}P[F'(a)-A]=I+A^{-1}P[0]=I$ 恒等算子
+    - 由于G是1-1的，根据反函数定理 所以G是U到$R^n$内V的1-1 $\mathscr{C}'$映射, G的逆$H=G^{-1}$也是$\mathscr{C}'$
+  - 因为PA=A,所以 $AA^{-1}PA=A$
+  - $AG(x)=Ax+P[F(x)-Ax]=PF(x),x \in E$
+  - $PF(H(x))=AG(H(x))=Ax,x\in V$
+  - 定义$\Psi(x)=F(H(x))-Ax,x \in V$
+    - $P\Psi(x)=0$ 所以$\Psi(x) \in Y_2$
+    - 因为V是开集，显然A(V)是它的值域 $R(A)=Y_1$的开子集    
+  - 下面要证明 存在$A(V)$到$Y_2$的$\mathscr{C}'$映射$\varphi$
+    - $\varphi(Ax)=\Psi(x),x\in V$
+    - 若$x_1,x_2\in V, Ax_1=Ax_2$ 那么 $\Psi(x_1)=\Psi(x_2)$
+      - 证明
+      - $\Phi(x)=F(H(x)),x \in V$ 因为对于每个$x \in V$, $H'(x)$的秩是n, 对于每个$x \in U$, $F'(x)$的秩是r
+      - $\Phi'(x)$的秩 = $F'(H(x))H'(x)的秩=r$
+      - 固定$x \in V$, 令$M$是$\Phi'(x)$的值域, 那么$M \subset R^m,\dim M=r$, 
+      - 根据上面 $P\Phi'(x)=A$
+      - 因此P把M 映满 $\mathscr{R}(A)=Y_1$, 因为M与$Y_1$同维，所以P（在M上时）是1-1的
+      - 设$Ah=0$, 于是 $P\Phi'(x)h=0$, 但$\Phi'(x) h \in M$且P在M上是1-1的,所以$\Phi'(x)h=0$
+      - 即 如果$x\in V$且$Ah=0$那么$\Psi'(x)h=0$
+      - 令$h=x_2-x_1$，且定义$g(t)=\Psi(x_1+th), 0\le t \le 1$
+      - V凸的（如果不是可以缩小成凸的），所以$g'(t)=\Psi'(x_1+th)h=0, x_1+th\in V$
+      - 所以$\Psi(x_1)=g(0)=g(1)=\Psi(x_2)$
+    - 上面的性质说明 $\Psi(x)$的值 可以只依赖于$Ax$ 因此定义$\varphi(Ax)=\Psi(x)$ 是函数
+  - 接下来证明$\varphi$是$\mathscr{C}'$
+  - 固定$y_0\in A(V)$再固定$x_0\in V$使$Ax_0=y_0$ 因为V是开集, $y_0$必在$Y_1$中有邻域W,凡是$y\in W$时 $x=x_0+A^{-1}(y-y_0) \in V$
+    - $Ax=Ax_0+AA^{-1}(y-y_0)=y$
+    - $\varphi(y)=\varphi(Ax)=\Psi(x)=\Psi(x_0+A^{-1}(y-y_0)), y \in W$
+    - 这说明W中$\varphi \in \mathscr{C}'$
+    - 由于$y_0$是任意的，所以$\varphi$是$\mathscr{C}'$
+    - 证毕
+  
+知乎: https://zhuanlan.zhihu.com/p/694698914
+
+![](https://pic1.zhimg.com/v2-936b201950593b84de42ffbe6feb5eae_1440w.jpg)
+
+图感觉不完全对
+- G，H是互逆的，G: U->V, H: V->U
+- $A=F'(a)$,但是映射的是$R^n$ 到$Y_1$,
+  - 其中 A的逆$S=A^{-1}$ 是 $Y_1 \to R^n$中的r维A的行空间
+  - $Y_1,Y_2$应该画成正交形式的
 
 
+来说一说 关于映射F的几何意义
+- 如果$y \in F(U)$那么有某个$x\in V$,使得$y=F(H(x))$
+- $Py=Ax$
+- $y=Py+\varphi(Py), y\in F(U)$
+  - 说明y被它的投影所确定
+  - 如果把P限制在F(U)内，P就是把F(U)映满A(V)的1-1映射
+- 因此$F(U)$是r维曲面surface，在A(V)的每个点的 上面 恰好有一个F(U)的一个点，也可以把F(U)当成$\varphi$的图像
+- 如果像证明中那样$\Phi(x)=F(H(x))$那么说明$\phi$的水平集 level sets（在这个集上，Phi的值是一个给定的值attains a given value）恰好是A在V中的水平集,这些集（A的水平集）都是平坦flat的，因为他们都是向量空间Nullspace(A)的平移与V的交
+  - dim N(A)=n-r
+- F在U中的水平集level sets,是Phi在V中的平坦水平集在H之下的像，于是它们是U中的n-r维曲面
 
+---
 
+$F(x)=AG(x)+\varphi(AG(x)), x \in U$
+- G: U到V的1-1映射, E到$R^n$内的$\mathscr{C}'$映射
+- $\varphi$是$A(V)$到$Y_2$的$\mathscr{C}'$映射
+- G怎么来的:
+  - 这样想, $F:E\to R^m$, 那么拆解值域成 正交结构
+    - $F(x)=PF(x)+(F(x)-PF(x))$
+    - 左边 PF(x)在$Y_1$中，右边的括号在$Y_2$中
+    - 另一方面希望 $F(x)=F(a)+F'(a)(x-a)+r(x-a)$ 同样按照正交拆解
+    - $F(x)=A(x-a+A^{-1}PF(a))+(F(a)-PF(a)) + r(x-a)$
+      - 这里出现了A的逆，要合理化就是 去找对应的1-1的r维映射的逆
+      - 注意同上，$A^{-1}$只能接受$Y_1$中的元素
+    - 所以$G(x)=x-a+A^{-1}PF(a)$这样的形式, 一方面我们希望$AG(x)=PF(x)$ 同样的正交分解部分相等
+      - 这里神奇的一点就是 $Aa = AA^{-1}PAa$
+      - $G(x)=x-A^{-1}PAa+A^{-1}PF(a)$
+      - $G(x)=x+A^{-1}P(F(a)-Aa)$ 结构上就和上面一样了, 而这里a换成x满足 $AG(x)=PF(x)$,
+- $\varphi$的部分
+  - 根据拆解 $F(x)-PF(x)=\varphi(AG(x))$，希望这个成立
+  - 到 nullspace(P)的 $Y_2$是显然的，因为 拆解就是 正交拆解
+  - 那么 只和 $AG(x)$有关，和$\mathscr{C}'$这两个证明，
+    - 后一个的感官上更显然，F,P,A,G 都是 ，这里是复合运算
+    - 前一个,$F(x)-PF(x)$,注意到$PF(x)=AG(x)$,所以需要证明的是 $F(x)$只和$AG(x)$有关, F(x)只和x有关，A可逆，G可逆，所以F只和AG(x)
+      - 其中G可逆，需要反函数定理
 
 ### 行列式 determinants
 
+行列式与方阵有关的数，行列式是0的充要条件是相应的算子不可逆
+
+9.33 如果($j_1,...,j_n$)是正整数的有序n元组（有序的n个正整数
+- $s(j_1,...,j_n)=\prod_{p<q} sgn(j_q-j_p)$
+  - 右边是符号函数
+  - 换句话说 是 -1的 逆序对个数的幂次
+- 设[A]是$R^n$上线性算子A关于标准基的矩阵, i行j列 阵元是 $a(i,j)$,
+- 定义 $\det[A]=\sum s(j_1,\cdots,j_n)\prod a(i,j_i)$
+  - 遍历所有$j_i$的排列方法
+- 把[A]表示成列向量 $[A]=(x_1,\cdots,x_n)$
+  - 那么$\det [A]=\det(x_1,\cdots,x_n)$ 是一个实函数
+  - 定义域是 $R^n$中一切有序n元组所组成的集
+
+9.34 
+- I是恒等算子,$det[I]=det(e_1,\cdots,e_n)=1$
+- 如果$x_j$外其它列向量保持不变， det便是$x_j$的线性函数
+- det[A]=-det[A交换某两列]
+- [A]如果两列相等那么 det[A]=0
+- 这个在MIT的线代课程里面，前三条是定义，而9.33是靠这三条推出的公式,这里第4条 完全可以由2,3 条得到
+- 这里是9.33 是定义，而要推这些性质，这个两个角度看，前三条也是可以看做核心性质了
+
+9.35
+- $\det([B][A])=\det[B]\det[A]$
+- 证明:
+- 定义 $\Delta_B(a_1,\cdots,a_n)=\Delta_B[A]=\det([B][A])=\det(Ba_1,\cdots,Ba_n)$
+- 因此$\Delta_B$也有9.34的2-4条性质,可以把$a_i$拆解成标准基的表示,并利用线性性拆出
+- $\Delta_B[A]=\sum (\prod a(i_j,j)) \Delta_B(e_{i_1},\cdots,e_{i_n})$
+- 其中右侧 $\Delta_B(e_{i_1},\cdots,e_{i_n})=t(i_1,\cdots,i_n)\Delta_B(e_1,\cdots,e_n)=t(i_1,\cdots,i_n)\det[B]$
+  - 这里t需要 里面是1~n的某个排列 才非零，是1或-1, 而当非0时，对应的是$s(i_1,\cdots,i_n)$
+  - 和前面结合即是 $\det[A]$
+
+9.36 定理 $R^n$上的线性算子A可逆的充要条件是 $\det[A]\neq 0$
+- 可逆 $\det[A]\det[A^{-1}]=\det[AA^{-1}]=\det[I]=1$ 所以一定不为0
+- 不可逆, 列线性相关(定理9.5), 因此有一列可被其它列表示，构造变换值不变 = 0
+
+9.37 评注, e,u都是基, 每个线性算子（MIT叫线性变换），能确定两个方阵$[A],[A]_U$,
+- $Ae_j=\sum_i a_{ij}e_i$
+- $Au_j=\sum_i c_{ij}u_i$
+- 来确定它们的阵的元素 $a_{ij},c_{ij}$
+- 如果$u_j=Be_j=\sum_i b_{ij}e_i$, 那么
+- $Au_j=\sum_k c_{kj}u_k=\sum_k c_{kj}Be_k=\sum_k c_{kj}\sum_i b_{ik}e_i=\sum_i (\sum_k b_{ik}c_{kj})e_i$
+- $Au_j=ABe_j=A\sum_k b_{kj}e_k=\sum_i (\sum_k a_{ik}b_{kj})e_i$
+- 所以 $\sum_{k} b_{ik}c_{kj}=\sum_k a_{ik}b_{kj}$ 因为上面是分解的正交基
+  - 即 $[B][A]_U=[A][B]$
+  - B可逆, $\det[B]\neq 0$,
+  - $\det[A]_U=\det[A]$
+- 因此 线性算子 的矩阵 的行列式，与构成的基无关，所以可以称作线性算子的行列式
+  - 这里MIT里的 一个是变换，而一个变换的指定基下的矩阵 的行列式，还是在描绘 这个基下各个 基向量的拉伸放缩翻转的整体情况
+
+9.38 函数行列式, f把开集$E\subset R^n$映入$R^n$内，并且f在点$x\in E$ 可微, 线性算子 f'(x) 的行列式，叫做f在x的函数行列式 记作
+- $J_f(x)=\det f'(x)$
+- 若 $(y_1,\cdots,y_n)=f(x_1,\cdots,x_n)$ 又可以用记号
+  - $\frac{\partial(y_1,\cdots,y_n)}{\partial(x_1,\cdots,x_n)}$
+- 在反函数定理中, 需要的就是$J_f(x)\neq 0$
+
 ### 高阶导数 derivatives of higher order
+
+9.39 定义 f是定义在开集 $E\subset R^n$的实函数, 其偏导数是$D_1f,\cdots,D_nf$如果, 每个$D_jf$也可微,那么f的二阶偏导数定义为
+- $D_{ij}f=D_iD_jf$
+- 如果所有这些$D_{ij}f$都在E内连续, 就说 f在 E内属于 $\mathscr{C}''$ 类，或者$f\in \mathscr{C}''(E)$
+- 对于向量映射，如果$f:R^n\mapsto R^m$ 每个分量都是$\mathscr{C}''$类的，就说$f$属于$\mathscr{C}''$类的
+- 注意的是，习题27，即使$D_{ij}f$和$D_{ji}f$都存在，也不一定相等，但是如果它们都连续，那么它们一定相等
+  - 习题27: $f(x,y)=\frac{xy(x^2-y^2)}{x^2+y^2}$, 其中在(0,0)补充定义为0
+ 
+
+9.40 定理 设f定义在开集 $E\subset R^2$中，并且$D_1f$及$D_{21}f$在E的每个点处存在，设$Q\subset E$是闭矩形，它的边与坐标轴平行，并且$(a,b)$及$(a+h,b+k)$是它的opposite vertices, $h\neq 0,k \neq 0$
+- 令 $\Delta(f,Q)=f(a+h,b+k)-f(a+h,b)-f(a,b+k)+f(a,b)$
+- 那么Q内存在一点$(x,y)$使 $\Delta(f,Q)=hk(D_{21}f)(x,y)$
+- 注意到 hk = Q的面积，而上面定义的意义是 x=a+h位置的值变化 减去 x=a位置的值变化？或者是y=b+k位置的值变化 减去 y=b位置的值变化
+- 证明:
+  - 令 $u(t)=f(t,b+k)-f(t,b)$ 也就是在x=t位置的值变化
+  - $\Delta(f,Q)=u(a+h)-u(a)$
+  - $=hu'(x)$ 因为 $D_1$存在，以及中值原理
+  - $=h[(D_1f)(x,b+k)-(D_1f)(x,b)]$
+  - $=h[k(D_{21}f)(x,y)]$
+
+9.41 设f定义在开集 $E\subset R^2$上,又设$D_1f,D_2f,D_{21}f$在E的每个点上存在，且$D_{21}f$在 点(a,b)连续，那么$D_{12}f$在(a,b)上存在且等
+- 证明:
+  - 令 $A=(D_{21}f)(a,b)$
+  - 对于任意$\epsilon > 0$如果$Q$是像在定理9.40中那样的矩形, h及k充分小, 那么一切$(x,y)\in Q$有
+    - $|A-(D_{21}f)(x,y)| < \epsilon$
+    - $|A-\frac{\Delta(f,Q)}{hk}| < \epsilon$
+    - 固定h，令$k\to 0$,因为$D_2f$在E中存在, 由上面这个不等式有
+    - $|\frac{(D_2f)(a+h,b)-(D_2f)(a,b)}{h} - A|\le \epsilon$
+    - 因为$\epsilon$是任意的, 足够小$h\neq 0$成立的，得证
+- 推论  $f\in \mathscr{C}''(E)$则$D_{21}f=D_{12}f$
 
 ### 积分的微分法 differentiation of integrals
 
-## 微分形式的积分
+$\varphi$是二元函数, 它对其中一变元可积分，另一个变元可微分，问题是能否交换顺序保持结果相等
+- $\frac{d}{dt} \int_a^b \varphi(x,y)dx = \int_a^b \frac{\partial}{\partial t}(\varphi) (x,t) dx$
+- 习题28有不等的反例
+- $\varphi_t(x)=\varphi(x,t)$记作固定t后的关于x的一元函数
 
-### 积分
+9.42  设
+- $a\le x \le b, c\le t \le d$, $\varphi(x,t)$有定义
+  - 矩形内有定义
+- $\alpha$是$[a,b]$上的递增函数
+  - 相对黎曼可积的前提条件
+- 对于$t\in[c,d]$, $\varphi_t \in \mathscr{R}(\alpha)$
+  - 每个第二个变量固定，第一个变量黎曼可积
+- $c < s <d$每个$\epsilon > 0$有$\delta > 0$使得一切$x\in [a,b]$及一切$t \in (s-\delta,s+\delta)$ 有$|(D_2\varphi)(x,t)-(D_2\varphi)(x,s)| < \epsilon$
+  - 第二个变量的偏导 在 矩形上固定第一个变量后，逐点连续
+  - 只要$D_2\varphi$在定义$\varphi$的那个矩形上连续，这个就一定成立
+- 定义 $f(t)=\int_a^b \varphi(x,t) d\alpha(x), c\le t\le d$
+  - 第三条 断言一切t，这个积分都存在
+- 那么 $(D_2\varphi)_s \in \mathscr{R}(\alpha), f'(s)$存在 并且 $f'(s)=\int_a^b (D_2\varphi)(x,s)d\alpha(x)$
+- 证明:
+  - $\Psi(x,t)=\frac{\varphi(x,t)-\varphi(x,s)}{t-s}$
+  - 其中$0 < |t-s| < \delta$ 据定理 5.10, 对应于每个$(x,t)$在s与t之间有数u，使得$\Psi(x,t)=(D_2\varphi)(x,u)$
+  - $|\Psi(x,t)-(D_2\varphi)(x,s)|<\epsilon$
+    - $t\to s$时， $[a,b]$上有一致地有 $\Psi_t \to (D_2\varphi)_s$, 
+  - 注意 $\frac{f(t)-f(s)}{t-s}=\int_a^b \Psi(x,t) d\alpha(x)$
+  - 因为每个$\Psi_t \in \mathscr{R}(\alpha)$
+  - 所以这里核心还是 直接展开 $f'$和$D_2\varphi$ 也就是两个 导的表达来完成证明
 
-### 本原映射
-
-### 单位的分割
-
-### 变量代换
-
-### 微分形式
-
-### 单形与链
-
-### Stokes定理
-
-### 闭形式与恰当形式
-
-### 向量分析
-
-## Lebesgue理论
-
-### 集函数
-
-### Lebesgue测度的建立
-
-### 测度空间
-
-### 可测函数
-
-### 简单函数
-
-### 积分
-
-### 与Riemann积分的比较
-
-### 复函数的积分
-
-### $\mathcal{L}^2$类的函数
-
+9.43 当然也能证明把9.42中 $[a,b]$换成 $(-\infty,\infty)$时所得的类似的定理，只是看个例子
+- $f(t)=\int_{-\infty}^{\infty} e^{-x^2} \cos(xt)dx$
+- $g(t)=-\int_{-\infty}^{\infty} xe^{-x^2} \sin(xt)dx$
+- 其中$-\infty < t \infty$ 两个积分都存在（绝对收敛）
+- 注意g是从f把被积式对t微分得来的，我们断定f可微小且 f'(t)=g(t)
+  - 证明:
+  - $\beta > 0$那么 $\frac{\cos(\alpha+\beta)-\cos \alpha}{\beta} + \sin \alpha =\frac{1}{\beta} \int_{\alpha}^{\alpha+\beta} (\sin \alpha - \sin t) dt$
+    - 因为$|\sin \alpha - \sin t | \le |t-\alpha|$,右端绝对值 最大是$\beta / 2$,
+    - $\beta < 0$时类似处理
+    - 因此 所有$\beta$, 有$|\frac{\cos(\alpha+\beta)-\cos \alpha}{\beta} + \sin \alpha| \le |beta|$
+    - 等于0时左侧补充定义为0
+  - 固定t且固定h, $\alpha = xt,\beta =xh$
+  - $|\frac{f(t+h)-f(t)}{h}-g(t)|\le |h|\int_{-\infty}^{\infty} x^2 e^{-x^2} dx$, h趋于0时 证明了 $f'(t)=g(t)$
+- 再前进一步，f分部积分
+  - $f(t)=2\int_{-\infty}^{\infty} xe^{-x^2} \frac{\sin(xt)}{t}dx$
+  - 于是$tf(t)=-2g(t)$也就有微分方程
+  - $2f'(t)+tf(t)=0$
+  - 解微分方程以及$f(0)=\sqrt{\pi}$ 有$f(t)=\sqrt{\pi} exp(-\frac{t^2}{4})$
