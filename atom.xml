@@ -6,7 +6,7 @@
   <link href="https://yexiaorain.github.io/Math/atom.xml" rel="self"/>
   
   <link href="https://yexiaorain.github.io/Math/"/>
-  <updated>2025-03-31T16:44:23.946Z</updated>
+  <updated>2025-03-31T16:45:26.785Z</updated>
   <id>https://yexiaorain.github.io/Math/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_11/</id>
     <published>2025-03-30T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Lebesgue理论-the-lebesgue-theory&quot;&gt;&lt;a href=&quot;#Lebesgue理论-the-lebesgue-theory&quot; class=&quot;headerlink&quot; title=&quot;Lebesgue理论 the lebesgue theory&quot;&gt;&lt;/a&gt;Lebesgue理论 the lebesgue theory&lt;/h2&gt;&lt;p&gt;在相当广泛的条件下证明某些关键定理，只有若干主干清醒做了简略的证明&lt;/p&gt;
@@ -61,7 +61,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_10/</id>
     <published>2025-03-23T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.784Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;微分形式的积分-integration-of-differential-forms&quot;&gt;&lt;a href=&quot;#微分形式的积分-integration-of-differential-forms&quot; class=&quot;headerlink&quot; title=&quot;微分形式的积分 integration of differential forms&quot;&gt;&lt;/a&gt;微分形式的积分 integration of differential forms&lt;/h2&gt;&lt;p&gt;本章致力于积分理论中的欧几里得空间 的几何紧密相关的各方面，&lt;/p&gt;
@@ -94,7 +94,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_9/</id>
     <published>2025-03-16T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.947Z</updated>
+    <updated>2025-03-31T16:45:26.786Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;多元函数-functions-of-several-variables&quot;&gt;&lt;a href=&quot;#多元函数-functions-of-several-variables&quot; class=&quot;headerlink&quot; title=&quot;多元函数 functions of several variables&quot;&gt;&lt;/a&gt;多元函数 functions of several variables&lt;/h2&gt;&lt;p&gt;主要讨论 euclidean n-space $R^n$ 中&lt;/p&gt;
@@ -127,7 +127,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_8/</id>
     <published>2025-03-09T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.947Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;一些特殊函数-some-special-functions&quot;&gt;&lt;a href=&quot;#一些特殊函数-some-special-functions&quot; class=&quot;headerlink&quot; title=&quot;一些特殊函数 some special functions&quot;&gt;&lt;/a&gt;一些特殊函数 some special functions&lt;/h2&gt;&lt;h3 id=&quot;幂级数-power-series&quot;&gt;&lt;a href=&quot;#幂级数-power-series&quot; class=&quot;headerlink&quot; title=&quot;幂级数 power series&quot;&gt;&lt;/a&gt;幂级数 power series&lt;/h3&gt;&lt;p&gt;$f(x)&amp;#x3D;\sum_{n&amp;#x3D;0}^{\infty}c_n x^n$， 在0点展开&lt;/p&gt;
@@ -181,7 +181,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_7/</id>
     <published>2025-03-02T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.947Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;函数序列与函数项级数-sequences-and-series-of-functions&quot;&gt;&lt;a href=&quot;#函数序列与函数项级数-sequences-and-series-of-functions&quot; class=&quot;headerlink&quot; title=&quot;函数序列与函数项级数 sequences and series of functions&quot;&gt;&lt;/a&gt;函数序列与函数项级数 sequences and series of functions&lt;/h2&gt;&lt;p&gt;这一章里 只限于讨论复值函数。&lt;/p&gt;
@@ -218,7 +218,7 @@
     <link href="https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/"/>
     <id>https://yexiaorain.github.io/Math/2025-03-01-Vieta_jumping/</id>
     <published>2025-02-28T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.943Z</updated>
+    <updated>2025-03-31T16:45:26.782Z</updated>
     
     
     <summary type="html">1988imop6</summary>
@@ -237,7 +237,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/</id>
     <published>2025-02-23T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;Riemann-Stieltjes-积分integral&quot;&gt;&lt;a href=&quot;#Riemann-Stieltjes-积分integral&quot; class=&quot;headerlink&quot; title=&quot;Riemann-Stieltjes 积分integral&quot;&gt;&lt;/a&gt;Riemann-Stieltjes 积分integral&lt;/h2&gt;&lt;p&gt;先讨论区间上实值函数的积分，&lt;/p&gt;
@@ -286,7 +286,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/</id>
     <published>2025-02-16T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;微分法-differentiation&quot;&gt;&lt;a href=&quot;#微分法-differentiation&quot; class=&quot;headerlink&quot; title=&quot;微分法 differentiation&quot;&gt;&lt;/a&gt;微分法 differentiation&lt;/h2&gt;&lt;h3 id=&quot;实函数中的导数-the-derivative-of-a-real-function&quot;&gt;&lt;a href=&quot;#实函数中的导数-the-derivative-of-a-real-function&quot; class=&quot;headerlink&quot; title=&quot;实函数中的导数 the derivative of a real function&quot;&gt;&lt;/a&gt;实函数中的导数 the derivative of a real function&lt;/h3&gt;&lt;p&gt;5.1 Let f be defined (and real-valued) on &lt;code&gt;[a,b]&lt;/code&gt;, For any x in &lt;code&gt;[a,b]&lt;/code&gt; form the quotient&lt;/p&gt;
@@ -313,7 +313,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_4/</id>
     <published>2025-02-09T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;连续性-continuity&quot;&gt;&lt;a href=&quot;#连续性-continuity&quot; class=&quot;headerlink&quot; title=&quot;连续性 continuity&quot;&gt;&lt;/a&gt;连续性 continuity&lt;/h2&gt;&lt;h3 id=&quot;函数的极限-limit-of-functions&quot;&gt;&lt;a href=&quot;#函数的极限-limit-of-functions&quot; class=&quot;headerlink&quot; title=&quot;函数的极限 limit of functions&quot;&gt;&lt;/a&gt;函数的极限 limit of functions&lt;/h3&gt;&lt;p&gt;4.1 X,Y是度量空间, $E\subset X$,f maps E into Y，p是E的极限点. We write $f(x) \to q$ as $x \to p$, or &lt;/p&gt;
@@ -340,7 +340,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_3/</id>
     <published>2025-02-02T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;数列与级数-numerical-sequences-and-series&quot;&gt;&lt;a href=&quot;#数列与级数-numerical-sequences-and-series&quot; class=&quot;headerlink&quot; title=&quot;数列与级数 numerical sequences and series&quot;&gt;&lt;/a&gt;数列与级数 numerical sequences and series&lt;/h2&gt;&lt;h3 id=&quot;收敛序列-convergent-sequences&quot;&gt;&lt;a href=&quot;#收敛序列-convergent-sequences&quot; class=&quot;headerlink&quot; title=&quot;收敛序列 convergent sequences&quot;&gt;&lt;/a&gt;收敛序列 convergent sequences&lt;/h3&gt;&lt;p&gt;3.1 数列收敛converge，能找到p，对于任意给定距离需求，可以通过N来控制 $|a_{n&amp;gt;N}-p|&amp;lt;$距离需求&lt;/p&gt;
@@ -364,7 +364,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_2/</id>
     <published>2025-01-26T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.946Z</updated>
+    <updated>2025-03-31T16:45:26.785Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;基础拓扑-Basic-topology&quot;&gt;&lt;a href=&quot;#基础拓扑-Basic-topology&quot; class=&quot;headerlink&quot; title=&quot;基础拓扑 Basic topology&quot;&gt;&lt;/a&gt;基础拓扑 Basic topology&lt;/h2&gt;&lt;h3 id=&quot;有限集、可数集和不可数集&quot;&gt;&lt;a href=&quot;#有限集、可数集和不可数集&quot; class=&quot;headerlink&quot; title=&quot;有限集、可数集和不可数集&quot;&gt;&lt;/a&gt;有限集、可数集和不可数集&lt;/h3&gt;&lt;p&gt;2.1 A,B 都是 sets, A中x和B中一个元素关联associated, f(x)表示，f is said to be a function from A to B(or mapping of A into B).&lt;/p&gt;
@@ -389,7 +389,7 @@
     <link href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/"/>
     <id>https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/</id>
     <published>2025-01-19T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.945Z</updated>
+    <updated>2025-03-31T16:45:26.784Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn&lt;/p&gt;
@@ -415,7 +415,7 @@
     <link href="https://yexiaorain.github.io/Math/A_First_Course_in_Probability/"/>
     <id>https://yexiaorain.github.io/Math/A_First_Course_in_Probability/</id>
     <published>2025-01-06T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.943Z</updated>
+    <updated>2025-03-31T16:45:26.782Z</updated>
     
     
     <summary type="html">&lt;p&gt;前置知识：微积分&lt;/p&gt;
@@ -445,7 +445,7 @@
     <link href="https://yexiaorain.github.io/Math/the_probability_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_probability_lifesaver/</id>
     <published>2024-12-31T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.948Z</updated>
+    <updated>2025-03-31T16:45:26.787Z</updated>
     
     
     <summary type="html">&lt;p&gt;前置知识：微积分， 看了下有些结论需要依赖复分析的结果&lt;/p&gt;
@@ -474,7 +474,7 @@
     <link href="https://yexiaorain.github.io/Math/the_calculus_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_calculus_lifesaver/</id>
     <published>2024-12-19T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.948Z</updated>
+    <updated>2025-03-31T16:45:26.786Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn 978711543559&lt;/p&gt;
@@ -494,7 +494,7 @@
     <link href="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/"/>
     <id>https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/</id>
     <published>2024-12-19T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.948Z</updated>
+    <updated>2025-03-31T16:45:26.787Z</updated>
     
     
     <summary type="html">&lt;p&gt;isbn 9787115543844&lt;/p&gt;
@@ -517,7 +517,7 @@
     <link href="https://yexiaorain.github.io/Math/newton_identities/"/>
     <id>https://yexiaorain.github.io/Math/newton_identities/</id>
     <published>2024-10-20T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.947Z</updated>
+    <updated>2025-03-31T16:45:26.786Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h1&gt;&lt;p&gt;TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式&lt;/p&gt;
@@ -568,7 +568,7 @@
     <link href="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/"/>
     <id>https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/</id>
     <published>2024-08-13T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.943Z</updated>
+    <updated>2025-03-31T16:45:26.782Z</updated>
     
     
     <summary type="html">来自2009年初中数学竞赛的一道题</summary>
@@ -589,7 +589,7 @@
     <link href="https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/"/>
     <id>https://yexiaorain.github.io/Math/MIT_18.06_linear_algebra/</id>
     <published>2024-03-22T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.945Z</updated>
+    <updated>2025-03-31T16:45:26.784Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;MIT-线性代数公开课&quot;&gt;&lt;a href=&quot;#MIT-线性代数公开课&quot; class=&quot;headerlink&quot; title=&quot;MIT 线性代数公开课&quot;&gt;&lt;/a&gt;MIT 线性代数公开课&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;http://web.mit.edu/18.06&quot;&gt;http://web.mit.edu/18.06&lt;/a&gt;&lt;/p&gt;
@@ -612,7 +612,7 @@
     <link href="https://yexiaorain.github.io/Math/rubicks_cube/"/>
     <id>https://yexiaorain.github.io/Math/rubicks_cube/</id>
     <published>2023-08-30T16:00:00.000Z</published>
-    <updated>2025-03-31T16:44:23.948Z</updated>
+    <updated>2025-03-31T16:45:26.786Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;魔方&quot;&gt;&lt;a href=&quot;#魔方&quot; class=&quot;headerlink&quot; title=&quot;魔方&quot;&gt;&lt;/a&gt;魔方&lt;/h1&gt;&lt;p&gt;不知道魔方公式的情况下,用数学解决魔方&lt;/p&gt;</summary>
