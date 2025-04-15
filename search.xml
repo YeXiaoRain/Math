@@ -1584,6 +1584,147 @@
   </entry>
   <entry>
     <title>高等代数 十 具有度量的线性空间</title>
+    <url>/Math/Advanced_algebra_11/</url>
+    <content><![CDATA[<p>视频 p145 - 151 （最后有一个整个学期回顾）</p>
+<h1 id="多重线性代数"><a href="#多重线性代数" class="headerlink" title="多重线性代数"></a>多重线性代数</h1><span id="more"></span>
+
+<h2 id="11-1-多重线性映射"><a href="#11-1-多重线性映射" class="headerlink" title="11.1 多重线性映射"></a>11.1 多重线性映射</h2><p>一个对称双线性函数，一个基下度量矩阵为A</p>
+<p>$f(a,b)&#x3D;x^TAy$</p>
+<p>$q(a)&#x3D;f(a,a)&#x3D;x^TAx$</p>
+<p>$q$上是V上的一个 二次函数</p>
+<p>&#x3D;&gt; n元多项式</p>
+<hr>
+<p>定义1. F是一个域，$x_1,\cdots,x_n$是n个符号，形如下述的表达式</p>
+<p>$\sum a_{l_1l_2\cdots l_n}x_1^{l_1}x_2^{l_2}\cdots x_n^{l_i}$, 其中 幂次都是自然数，a是F中元素称为系数</p>
+<ul>
+<li>有限多系数不为零</li>
+<li>相等定义： 系数对应相等</li>
+<li>则称 表达式是 域F上的一个n元多项式</li>
+<li>$x_1,\cdots,x_n$是n个无关不定元</li>
+</ul>
+<p>定义加法，乘法</p>
+<ul>
+<li>可验证，有 单位元 的交换环</li>
+<li>n元 多项式环</li>
+</ul>
+<p>定义2，若每个系数不为的单项式次数都&#x3D;m,则称它为m次齐次多项式</p>
+<ul>
+<li>所有m次齐次多项式的集合，是域F上的一个线性空间</li>
+</ul>
+<p>定理1. （n元多项式环的通用性质）设F是一个域，R是一个有单位元的交换环，且域F到R的一个子环R_1（含有R的单位元）有一个同构映射</p>
+<ul>
+<li>$\sigma$ a到$\tau(a)$, xi -&gt; ti<ul>
+<li>保持加法 乘法运算</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>这里只关心 n元，二次齐次多项式</p>
+<ul>
+<li>加上 aij&#x3D;aji的限制， 即对称矩阵</li>
+<li>称为n元二次型<ul>
+<li>对于给定表达式，二次型矩阵是唯一的</li>
+</ul>
+</li>
+</ul>
+<p>$f(x) &#x3D; x^TAx$, 注意输入的x是n维向量</p>
+<p>$f(Cx)&#x3D;(Cx)^TA(Cx)$, 于是$x^T(C^TAC)x$, 中间的和A合同</p>
+<ul>
+<li>如果C可逆，那么意味着 选取不同的x的组合，希望让对称矩阵合同（一定是对称矩阵），形式尽量简单，引出正定性<ul>
+<li>这里x用Cx带入，是一种非退化的线性替换（也就是C要可逆）</li>
+<li>如果C是正交矩阵，那么叫正交替换</li>
+</ul>
+</li>
+</ul>
+<p>定义3 域F上 两个n元二次型，存在一个非退化（降秩）线性替换，使得$x^TAx$变为$x^TBx$. 那么称这两个二次型等价（不相等但等价）</p>
+<ul>
+<li>也就是A和B合同时</li>
+<li>自反，传递性，是一个等价关系，存在等价类<ul>
+<li>希望找等价类中最简形式</li>
+</ul>
+</li>
+<li>7.2节， 合同于一个对角矩阵</li>
+<li>特征不为2的域F上的n元二次型 一定等价于 $\sum d_ix_i^2$ 只有平方项<ul>
+<li>$x^TDx$, D是对角矩阵</li>
+</ul>
+</li>
+<li>最简形称作标准型<ul>
+<li>系数不为0的平方项的个数</li>
+<li>rank(A)&#x3D;系数不为0的平方项的个数</li>
+</ul>
+</li>
+</ul>
+<p>定理2,实数域上的n元二次型 $x^TAx$有一个标准型</p>
+<ul>
+<li><p>实对称矩阵 &#x3D;&gt; 存在正交矩阵$Q$, $Q^{-1}AQ&#x3D;\Lambda$, 其中$Q^T&#x3D;Q^{-1}$</p>
+</li>
+<li><p>所以，是对称矩阵 合同于 $\Lambda$</p>
+</li>
+<li><p>对于每个 x_i可以再变化$\frac{1}{\sqrt{d_i}}x^i$ 可以让系数只有1,-1,0</p>
+</li>
+<li><p>只有 1,-1,0系数的称作 规范型</p>
+</li>
+<li><p>更精细的结论：正系数个数 和 负系数个数是固定的</p>
+<ul>
+<li>规范型是唯一的：惯性定理</li>
+<li>证明 前面章节好像证明过，两个规范型 通过过渡矩阵，去想办法一个正一个负，</li>
+<li>规范型中：<ul>
+<li>正的个数 叫做正惯性指数</li>
+<li>负的个数 叫做负惯性指数</li>
+<li>正惯性指数-负惯性指数 称作符号差</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>命题1. n元实二次型 $x^TAx$的任一【标准型】中</p>
+<ul>
+<li>同样 对应 称作 正负惯性指数</li>
+</ul>
+<p>定理2. 等价的$x^TAx$和$x^TBx$的</p>
+<ul>
+<li>&lt;&#x3D;&gt; 规范型相同</li>
+<li>&lt;&#x3D;&gt; 正负惯性指数 相同，或者 rank相同+正惯性指数相同</li>
+</ul>
+<p>定理3. 两个n级实对称矩阵 A与B 合同</p>
+<ul>
+<li>合同规范型 &#x3D; <code>diag &#123;1*,-1 *,0 *&#125;</code></li>
+</ul>
+<p>这表明，秩，正惯性指数，是 【n级实对称矩阵】在合同关系下的一个组 完全不变量</p>
+<hr>
+<p>正定二次型：</p>
+<p>定义1. n元二次型 $x^TAx$如果 任意$x\neq 0$,$x^TAx &gt;0$</p>
+<ul>
+<li>正定的 &lt;&#x3D;&gt; 规范型 rank &#x3D; 正惯性指数 &#x3D; n</li>
+<li>合同于 I</li>
+<li>A的特征值全大于0<ul>
+<li>因为 正交相似&#x2F;正交合同 于$\Lambda$</li>
+</ul>
+</li>
+</ul>
+<p>类似的</p>
+<ul>
+<li>定义矩阵的正定矩阵</li>
+<li>实二次型是正定的</li>
+<li>所有 顺势 主 子式 的 行列式 为正</li>
+</ul>
+<p>半正定：非负</p>
+<p>负定：所有负</p>
+<p>半负定：非正</p>
+<p>多元函数极值</p>
+<h2 id="11-2-线性空间的张量积"><a href="#11-2-线性空间的张量积" class="headerlink" title="11.2 线性空间的张量积"></a>11.2 线性空间的张量积</h2><p>2,3,4都没有视频课</p>
+<h2 id="11-3-张量代数"><a href="#11-3-张量代数" class="headerlink" title="11.3 张量代数"></a>11.3 张量代数</h2><h2 id="11-4-外代数"><a href="#11-4-外代数" class="headerlink" title="11.4 外代数"></a>11.4 外代数</h2>]]></content>
+      <categories>
+        <category>高等代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+        <tag>多重线性映射</tag>
+        <tag>正惯性指数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>高等代数 十 具有度量的线性空间</title>
     <url>/Math/Advanced_algebra_10/</url>
     <content><![CDATA[<p>视频121-144</p>
 <h1 id="具有度量的线性空间"><a href="#具有度量的线性空间" class="headerlink" title="具有度量的线性空间"></a>具有度量的线性空间</h1><p>考虑在线性空间中 增加长度而概念</p>
@@ -2107,147 +2248,6 @@
         <tag>酉空间</tag>
         <tag>酉变换</tag>
         <tag>Hermite变换</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>高等代数 十 具有度量的线性空间</title>
-    <url>/Math/Advanced_algebra_11/</url>
-    <content><![CDATA[<p>视频 p145 - 151 （最后有一个整个学期回顾）</p>
-<h1 id="多重线性代数"><a href="#多重线性代数" class="headerlink" title="多重线性代数"></a>多重线性代数</h1><span id="more"></span>
-
-<h2 id="11-1-多重线性映射"><a href="#11-1-多重线性映射" class="headerlink" title="11.1 多重线性映射"></a>11.1 多重线性映射</h2><p>一个对称双线性函数，一个基下度量矩阵为A</p>
-<p>$f(a,b)&#x3D;x^TAy$</p>
-<p>$q(a)&#x3D;f(a,a)&#x3D;x^TAx$</p>
-<p>$q$上是V上的一个 二次函数</p>
-<p>&#x3D;&gt; n元多项式</p>
-<hr>
-<p>定义1. F是一个域，$x_1,\cdots,x_n$是n个符号，形如下述的表达式</p>
-<p>$\sum a_{l_1l_2\cdots l_n}x_1^{l_1}x_2^{l_2}\cdots x_n^{l_i}$, 其中 幂次都是自然数，a是F中元素称为系数</p>
-<ul>
-<li>有限多系数不为零</li>
-<li>相等定义： 系数对应相等</li>
-<li>则称 表达式是 域F上的一个n元多项式</li>
-<li>$x_1,\cdots,x_n$是n个无关不定元</li>
-</ul>
-<p>定义加法，乘法</p>
-<ul>
-<li>可验证，有 单位元 的交换环</li>
-<li>n元 多项式环</li>
-</ul>
-<p>定义2，若每个系数不为的单项式次数都&#x3D;m,则称它为m次齐次多项式</p>
-<ul>
-<li>所有m次齐次多项式的集合，是域F上的一个线性空间</li>
-</ul>
-<p>定理1. （n元多项式环的通用性质）设F是一个域，R是一个有单位元的交换环，且域F到R的一个子环R_1（含有R的单位元）有一个同构映射</p>
-<ul>
-<li>$\sigma$ a到$\tau(a)$, xi -&gt; ti<ul>
-<li>保持加法 乘法运算</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>这里只关心 n元，二次齐次多项式</p>
-<ul>
-<li>加上 aij&#x3D;aji的限制， 即对称矩阵</li>
-<li>称为n元二次型<ul>
-<li>对于给定表达式，二次型矩阵是唯一的</li>
-</ul>
-</li>
-</ul>
-<p>$f(x) &#x3D; x^TAx$, 注意输入的x是n维向量</p>
-<p>$f(Cx)&#x3D;(Cx)^TA(Cx)$, 于是$x^T(C^TAC)x$, 中间的和A合同</p>
-<ul>
-<li>如果C可逆，那么意味着 选取不同的x的组合，希望让对称矩阵合同（一定是对称矩阵），形式尽量简单，引出正定性<ul>
-<li>这里x用Cx带入，是一种非退化的线性替换（也就是C要可逆）</li>
-<li>如果C是正交矩阵，那么叫正交替换</li>
-</ul>
-</li>
-</ul>
-<p>定义3 域F上 两个n元二次型，存在一个非退化（降秩）线性替换，使得$x^TAx$变为$x^TBx$. 那么称这两个二次型等价（不相等但等价）</p>
-<ul>
-<li>也就是A和B合同时</li>
-<li>自反，传递性，是一个等价关系，存在等价类<ul>
-<li>希望找等价类中最简形式</li>
-</ul>
-</li>
-<li>7.2节， 合同于一个对角矩阵</li>
-<li>特征不为2的域F上的n元二次型 一定等价于 $\sum d_ix_i^2$ 只有平方项<ul>
-<li>$x^TDx$, D是对角矩阵</li>
-</ul>
-</li>
-<li>最简形称作标准型<ul>
-<li>系数不为0的平方项的个数</li>
-<li>rank(A)&#x3D;系数不为0的平方项的个数</li>
-</ul>
-</li>
-</ul>
-<p>定理2,实数域上的n元二次型 $x^TAx$有一个标准型</p>
-<ul>
-<li><p>实对称矩阵 &#x3D;&gt; 存在正交矩阵$Q$, $Q^{-1}AQ&#x3D;\Lambda$, 其中$Q^T&#x3D;Q^{-1}$</p>
-</li>
-<li><p>所以，是对称矩阵 合同于 $\Lambda$</p>
-</li>
-<li><p>对于每个 x_i可以再变化$\frac{1}{\sqrt{d_i}}x^i$ 可以让系数只有1,-1,0</p>
-</li>
-<li><p>只有 1,-1,0系数的称作 规范型</p>
-</li>
-<li><p>更精细的结论：正系数个数 和 负系数个数是固定的</p>
-<ul>
-<li>规范型是唯一的：惯性定理</li>
-<li>证明 前面章节好像证明过，两个规范型 通过过渡矩阵，去想办法一个正一个负，</li>
-<li>规范型中：<ul>
-<li>正的个数 叫做正惯性指数</li>
-<li>负的个数 叫做负惯性指数</li>
-<li>正惯性指数-负惯性指数 称作符号差</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>命题1. n元实二次型 $x^TAx$的任一【标准型】中</p>
-<ul>
-<li>同样 对应 称作 正负惯性指数</li>
-</ul>
-<p>定理2. 等价的$x^TAx$和$x^TBx$的</p>
-<ul>
-<li>&lt;&#x3D;&gt; 规范型相同</li>
-<li>&lt;&#x3D;&gt; 正负惯性指数 相同，或者 rank相同+正惯性指数相同</li>
-</ul>
-<p>定理3. 两个n级实对称矩阵 A与B 合同</p>
-<ul>
-<li>合同规范型 &#x3D; <code>diag &#123;1*,-1 *,0 *&#125;</code></li>
-</ul>
-<p>这表明，秩，正惯性指数，是 【n级实对称矩阵】在合同关系下的一个组 完全不变量</p>
-<hr>
-<p>正定二次型：</p>
-<p>定义1. n元二次型 $x^TAx$如果 任意$x\neq 0$,$x^TAx &gt;0$</p>
-<ul>
-<li>正定的 &lt;&#x3D;&gt; 规范型 rank &#x3D; 正惯性指数 &#x3D; n</li>
-<li>合同于 I</li>
-<li>A的特征值全大于0<ul>
-<li>因为 正交相似&#x2F;正交合同 于$\Lambda$</li>
-</ul>
-</li>
-</ul>
-<p>类似的</p>
-<ul>
-<li>定义矩阵的正定矩阵</li>
-<li>实二次型是正定的</li>
-<li>所有 顺势 主 子式 的 行列式 为正</li>
-</ul>
-<p>半正定：非负</p>
-<p>负定：所有负</p>
-<p>半负定：非正</p>
-<p>多元函数极值</p>
-<h2 id="11-2-线性空间的张量积"><a href="#11-2-线性空间的张量积" class="headerlink" title="11.2 线性空间的张量积"></a>11.2 线性空间的张量积</h2><p>2,3,4都没有视频课</p>
-<h2 id="11-3-张量代数"><a href="#11-3-张量代数" class="headerlink" title="11.3 张量代数"></a>11.3 张量代数</h2><h2 id="11-4-外代数"><a href="#11-4-外代数" class="headerlink" title="11.4 外代数"></a>11.4 外代数</h2>]]></content>
-      <categories>
-        <category>高等代数</category>
-      </categories>
-      <tags>
-        <tag>高等代数</tag>
-        <tag>多重线性映射</tag>
-        <tag>正惯性指数</tag>
       </tags>
   </entry>
   <entry>
@@ -6299,157 +6299,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 CheatSheet</title>
-    <url>/Math/Mathematical_analysis-cheatsheet/</url>
-    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
-<p>$\tan^2x+1&#x3D;\sec^2x$</p>
-<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
-<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
-<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
-<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
-<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
-<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
-<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
-<span id="more"></span>
-
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
-<p>$\cos’x &#x3D; - \sin x$</p>
-<p>$\tan’x &#x3D; \sec^2x$</p>
-<p>$\cot’x &#x3D; - \csc^2x$</p>
-<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
-<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
-<p>$\cosh’ x &#x3D; \sinh x$</p>
-<p>$\sinh’ x &#x3D; \cosh x$</p>
-<p>$\tanh’ x &#x3D; sech^2 x$</p>
-<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
-<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
-<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
-<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
-<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
-<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
-<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>CheatSheet</tag>
-        <tag>数学分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 一 分析基础</title>
-    <url>/Math/Mathematical_analysis_problems_1/</url>
-    <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
-<p>(1) 求证: $$x_n$$单调下降且有下界</p>
-<p>(2) 求$$lim_{n-&gt;\infty}x_n$$</p>
-<span id="more"></span>
-
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>(1) 显然 $$x_n \geq \sqrt A (n\geq2)$$</p>
-<p>有 $$x_{n+1}-x_n &#x3D; \frac12(\frac A{x_n}-x_n) &#x3D; \frac12 \cdot \frac {(\sqrt A - x_n)(\sqrt A + x_n)}{x_n} \leq 0 (n\geq2)$$</p>
-<p>(2) 设极限为<code>a</code>,带入原式子,则 推出$$a&#x3D;\sqrt A$$</p>
-<h3 id="题目-1-3-9"><a href="#题目-1-3-9" class="headerlink" title="题目 1.3.9"></a>题目 1.3.9</h3><p>求证 $$lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}$$极限存在</p>
-<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>$$a_n &#x3D; lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}  &gt; 0$$</p>
-<p>$$ \frac{a_{n+1}}{a_n} &#x3D; \frac{(2n+1)^3}{(2n+2)^2\cdot (2n+3)} &lt; 1$$</p>
-<p>单调递减 有下界限</p>
-<p>从 $$ln a_{n+1} - ln a_n$$ 上看 说明 $$ln a_{n}$$ 趋于 $$-\infty$$ , $$a_n$$极限为$$0$$</p>
-<p>总感觉有地方没有说清楚</p>
-<h2 id="函数极限与连续概念-1-4"><a href="#函数极限与连续概念-1-4" class="headerlink" title="函数极限与连续概念 1.4"></a>函数极限与连续概念 1.4</h2><h3 id="题目-1-4-3"><a href="#题目-1-4-3" class="headerlink" title="题目 1.4.3"></a>题目 1.4.3</h3><p>设 $$ 0&lt;x_n&lt;+\infty $$,且满足 $$ x_n+\frac 4 {x_{n+1}^2} &lt; 3 $$, 求出此极限值。</p>
-<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>由题目显然有 $$\frac{2\sqrt3}3 &lt; x_n  &lt; 3$$</p>
-<p>$$x_{n+1}-x_n &gt; \frac {x_{n+1}^3-3_{n+1}^2+4}{x_{n+1}^2} &#x3D; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} \ge 0 $$</p>
-<p>单调递增 有上界</p>
-<p>如果 $x_n &gt; 2$ 令 $x_n &#x3D; 2+y_n,1 &gt; y_n &gt; 0$ , $y_n$单调递增</p>
-<p>如果 $$x_n &#x3D; 2$$ 有 $x_{n+1} &gt; 2$ 取 $ n &#x3D; n+1$</p>
-<p>$$x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {(2+1)y_{n+1}^2}{3^2} $$</p>
-<p>$m-n &gt; \frac{3}{y_{n+1}^2}$时, 存在 $y_m &gt; 3$</p>
-<p>$$\therefore \frac{2\sqrt3}3 &lt; x_n  &lt; 2$$</p>
-<p>如果 $x_n &lt; 2$ 令 $x_n &#x3D; 2-y_n,2-\frac{2\sqrt3}3 &gt; y_n &gt; 0$ , $y_n$也单调递减</p>
-<p>$$(-y_{n+1}) - (-y_{n}) &gt; x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {2 y_{n+1}^2}{2^2} $$</p>
-<p>$$ y_n &gt; y_{n+1} + \frac{y_{n+1}^2}{2} $$</p>
-<p>$$ y_{n+1} &lt; \sqrt{2y_n+1} -1 &#x3D; \frac {2y_n}{\sqrt{2y_n+1}+1} &lt;  $$</p>
-<p>然后呢????</p>
-<p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
-<hr>
-<p>数列有极限</p>
-<p>所以 不等式也有极限 $$lim$$</p>
-<h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列$${x_n}$$由如下迭代产生:</p>
-<p>$$x_1&#x3D;\frac12,x_{n+1} &#x3D; x_n^2 + x_n (n&#x3D;1,2,\dots)$$</p>
-<p>求证 $$lim_{n-&gt;\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})&#x3D;2$$</p>
-<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解 ???"></a>题解 ???</h3><h2 id="比区间上连续函数的性质-1-5"><a href="#比区间上连续函数的性质-1-5" class="headerlink" title="比区间上连续函数的性质 1.5"></a>比区间上连续函数的性质 1.5</h2><h3 id="题目-1-5-3"><a href="#题目-1-5-3" class="headerlink" title="题目 1.5.3"></a>题目 1.5.3</h3><p>设 $$f_n(x)&#x3D;x^n+x$$</p>
-<p>求证</p>
-<p>(1) 对任意自然数 $$n&gt;1$$,方程 $$f_n(x) &#x3D; 1$$在$$(\frac12,1)$$内有且仅有一个根</p>
-<p>(2) 若$$c_n \in (\frac12,1)$$是$$f_n(x)&#x3D;1$$的根,则$$lim_{n-&gt;infty}c_n$$存在，并求此极限</p>
-<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解 ???"></a>题解 ???</h3><p>(1)</p>
-<p>求导$$nx^{n-1}+1&gt;0$$,严格单调</p>
-<p>所以 $$ (f_n(\frac12)-1) \cdot (f_n(1)-1) &lt; 0, x \in (\frac12,1)$$ 有根,得证</p>
-<p>(2) ???</p>
-<p>2.6 例22?</p>
-<h3 id="题目-1-5-4"><a href="#题目-1-5-4" class="headerlink" title="题目 1.5.4"></a>题目 1.5.4</h3><p>设置$$f(x)$$在 $[a,b]$ 上无界,求证: $$\exists c \in [a,b]$$,使得 $$\forall \delta &gt; 0$$ 函数 $$f(x)$$在 $$[c-\delta,c+\delta]\bigcap [a,b]$$上无界</p>
-<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-5"><a href="#题目-1-5-5" class="headerlink" title="题目 1.5.5"></a>题目 1.5.5</h3><p>设 $${x_n}$$ 为有界序列。求证: $x_n$ 以 $a$为极限的充分必要条件是: ${x_n}$的任一收敛子序列都有相同的极限值$a$.</p>
-<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-7"><a href="#题目-1-5-7" class="headerlink" title="题目 1.5.7"></a>题目 1.5.7</h3><p>设 $f(x) \in \mathbb{C}[a,b]$ 且有唯一的取到$f(x)$最大值的点$x^ * $ 又设 $x_n \in [a,b] (n&#x3D;1,2,\dots)$</p>
-<p>使得$$ lim_{n-&gt;\infty} f(x_n) &#x3D; f(x^*), 求证 lim_{n-&gt;\infty} x_n &#x3D; x^*$$</p>
-<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-8"><a href="#题目-1-5-8" class="headerlink" title="题目 1.5.8"></a>题目 1.5.8</h3><p>设$$ f(x) \in \mathbb{C}[0,+\infty) $$又设对 $$\forall l \in \mathbb{R}$$ 方程 $$f(x) &#x3D; l$$在 $$[0,+\infty)$$ 上只有有限个解或无解,求证:</p>
-<p>(1) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上有界,则极限 $$lim_{x-&gt;+\infty}f(x)$$存在;</p>
-<p>(2) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上无上界,则 $$lim_{x-&gt;+\infty}f(x) &#x3D; + \infty$$</p>
-<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-10"><a href="#题目-1-5-10" class="headerlink" title="题目 1.5.10"></a>题目 1.5.10</h3><p>设$f(x)$在$[a,b]$上定义,$x_0\in [a,b]$如果对 $\forall \epsilon &gt; 0,\exists \delta &gt; 0$ 当 $|x-x_0|&lt;\delta$时, 有 $f(x) &lt; f(x_0)+\epsilon$, 那么称$f(x)$在点$x_0$处<strong>上半连续</strong>,如果$f(x)$在$[a,b]$上的没一点都上半连续,则称$f(x)$为$[a,b]$上的一个<strong>上半连续函数</strong>.求证: $[a,b]$上的<strong>上半连续函数</strong>一定有上界.</p>
-<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解 ???"></a>题解 ???</h3>]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数学分析 二 一元函数微分学</title>
-    <url>/Math/Mathematical_analysis_problems_2/</url>
-    <content><![CDATA[<h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
-<p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} &#x3D; f’(x_0)$</p>
-<span id="more"></span>
-
-<h3 id="题目-2-1-7"><a href="#题目-2-1-7" class="headerlink" title="题目 2.1.7"></a>题目 2.1.7</h3><p>设曲线由隐式方程 $\sqrt[3]{x^2}+\sqrt[3]{y^2}&#x3D;\sqrt[3]{a^2} (a&gt;0)$给出</p>
-<p>(1) 求证: 曲线的切线被坐标轴所截的长度为一常数</p>
-<p>(2)写出曲线的参数形式，利用参数式求导给出上一小提的另一证法</p>
-<h3 id="题目-2-1-8"><a href="#题目-2-1-8" class="headerlink" title="题目 2.1.8"></a>题目 2.1.8</h3><p>已知 参数方程 $x&#x3D;a[ln(tan\frac{t}{2})+cos(t)],y&#x3D;a\cdot sin(t) (a&gt;0,0 &lt; t &lt;\pi)$</p>
-<p>求证，任意切线上，自切点至该切线与x轴交点之间的切线段为定长</p>
-<h3 id="题目-2-1-13"><a href="#题目-2-1-13" class="headerlink" title="题目 2.1.13"></a>题目 2.1.13</h3><p>设 $y&#x3D;x^{n-1}ln(x)$ 求证$y^{(n)}&#x3D;\frac{(n-1)!}{x}$</p>
-<h3 id="题目-2-1-14"><a href="#题目-2-1-14" class="headerlink" title="题目 2.1.14"></a>题目 2.1.14</h3><p>求证：双纽线$r^2&#x3D;a^2 cos 2\theta$的向径与切线的夹角等于极角的两倍加$\frac{\pi}{2}$</p>
-<h2 id="微分中值定理-2-2"><a href="#微分中值定理-2-2" class="headerlink" title="微分中值定理 2.2"></a>微分中值定理 2.2</h2><h3 id="题目-2-2-5"><a href="#题目-2-2-5" class="headerlink" title="题目 2.2.5"></a>题目 2.2.5</h3><p>设f(x)在(a,b)内二阶可导，且$x_0 \in (a,b)$使得$f’’(x_0)\neq 0$求证:</p>
-<p>(1) 如果$f’(x_0)&#x3D;0$，则存在$x_1,x_2\in(a,b)$使得$f(x_1)-f(x_2)&#x3D;0$</p>
-<p>(2) 如果$f’(x_0)\neq0$，则存在$x_1,x_2\in(a,b)$，使得$\frac{f(x_1)-f(x_2)}{x_1-x_2}&#x3D;f’(x_0)$</p>
-<h3 id="题目-2-2-9"><a href="#题目-2-2-9" class="headerlink" title="题目 2.2.9"></a>题目 2.2.9</h3><p>设函数f(x)在$[a,b]$上可导，且$f’(a)&#x3D;f’(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)&#x3D;(c-a)f’(c)$</p>
-<p>和例12比，把$&#x3D;0$去掉</p>
-<h3 id="题目-2-2-10"><a href="#题目-2-2-10" class="headerlink" title="题目 2.2.10"></a>题目 2.2.10</h3><p>设$f(x)$在$(0,1]$上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf’(x)$,求证f(x)在(0,1]上一致连续</p>
-<h3 id="例17"><a href="#例17" class="headerlink" title="例17"></a>例17</h3><p>设f(x)在$[-2,2]$上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f’(0) &gt; 1$,求证:存在 $\epsilon \in (-2,2)$使得$f’’(\epsilon) &#x3D; 0$</p>
-<h2 id="函数的升降、极值、最值问题-2-3"><a href="#函数的升降、极值、最值问题-2-3" class="headerlink" title="函数的升降、极值、最值问题 2.3"></a>函数的升降、极值、最值问题 2.3</h2><h3 id="题目-2-3-3"><a href="#题目-2-3-3" class="headerlink" title="题目 2.3.3"></a>题目 2.3.3</h3><h3 id="题目-2-3-6"><a href="#题目-2-3-6" class="headerlink" title="题目 2.3.6"></a>题目 2.3.6</h3><h3 id="题目-2-3-9"><a href="#题目-2-3-9" class="headerlink" title="题目 2.3.9"></a>题目 2.3.9</h3><h2 id="函数的图形、拐点及函数作图-2-4"><a href="#函数的图形、拐点及函数作图-2-4" class="headerlink" title="函数的图形、拐点及函数作图 2.4"></a>函数的图形、拐点及函数作图 2.4</h2><h3 id="题目-2-4-4"><a href="#题目-2-4-4" class="headerlink" title="题目 2.4.4"></a>题目 2.4.4</h3><h2 id="洛必达法则与泰勒公式-2-5"><a href="#洛必达法则与泰勒公式-2-5" class="headerlink" title="洛必达法则与泰勒公式 2.5"></a>洛必达法则与泰勒公式 2.5</h2><h3 id="题目-2-5-4"><a href="#题目-2-5-4" class="headerlink" title="题目 2.5.4"></a>题目 2.5.4</h3><h3 id="题目-2-5-7"><a href="#题目-2-5-7" class="headerlink" title="题目 2.5.7"></a>题目 2.5.7</h3><h3 id="题目-2-5-10"><a href="#题目-2-5-10" class="headerlink" title="题目 2.5.10"></a>题目 2.5.10</h3><h2 id="一元函数微分学的综合应用-2-6"><a href="#一元函数微分学的综合应用-2-6" class="headerlink" title="一元函数微分学的综合应用 2.6"></a>一元函数微分学的综合应用 2.6</h2><p>P121 132&#x2F;473</p>
-<h3 id="题目-2-6-5"><a href="#题目-2-6-5" class="headerlink" title="题目 2.6.5"></a>题目 2.6.5</h3><p>$ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) &gt; 1$</p>
-<p>$&#x3D; 1&#x2F;(2n+1) - 1&#x2F;(2n) + ln(n+1)-ln(n) - 1&#x2F;(n+1) &gt; 0$</p>
-<p>单增</p>
-<p>$1&#x2F;3 - 1&#x2F;2 + ln2 - 1&#x2F;2 &#x3D; ln2 - 2&#x2F;3 &lt; 0$</p>
-<p>??</p>
-<h3 id="题目-2-6-7"><a href="#题目-2-6-7" class="headerlink" title="题目 2.6.7"></a>题目 2.6.7</h3><p>$&#x3D; 2a - e^x$ 单减</p>
-<p>$x&#x3D; ln(2a)$ 时 为 0</p>
-<p>$&#x3D; 2ax-e^x$</p>
-<p>$(0,ln(2a)) $单增 , $(ln(2a),+\infty)$ 单减</p>
-<p>极大值 $2aln(2a) - 2a &#x3D; 2a(ln(2a&#x2F;e))$</p>
-<p>$ax^2-e^x &#x3D; 0$</p>
-<p>$x \to -\infty , +\infty$</p>
-<p>$x \to +\infty , -\infty$</p>
-<p>$a &lt; e&#x2F;2$ ，单减 1根</p>
-<p>$a \ge e&#x2F;2$, 减 增 减??</p>
-]]></content>
-      <categories>
-        <category>数学分析</category>
-      </categories>
-      <tags>
-        <tag>数学分析</tag>
-        <tag>题目</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MIT18.06线性代数</title>
     <url>/Math/MIT_18.06_linear_algebra/</url>
     <content><![CDATA[<h1 id="MIT-线性代数公开课"><a href="#MIT-线性代数公开课" class="headerlink" title="MIT 线性代数公开课"></a>MIT 线性代数公开课</h1><p><a href="http://web.mit.edu/18.06">http://web.mit.edu/18.06</a></p>
@@ -7683,49 +7532,102 @@
       </tags>
   </entry>
   <entry>
-    <title>数学分析 三 一元函数积分学</title>
-    <url>/Math/Mathematical_analysis_problems_3/</url>
-    <content><![CDATA[<h1 id="一元函数积分学-3"><a href="#一元函数积分学-3" class="headerlink" title="一元函数积分学 3"></a>一元函数积分学 3</h1><h2 id="不定积分和可积函数类-3-1"><a href="#不定积分和可积函数类-3-1" class="headerlink" title="不定积分和可积函数类 3.1"></a>不定积分和可积函数类 3.1</h2><p>5.可积函数类 P124</p>
-<p>(1) 有理函数可分解成多项式和若干项最简真分式之和，因此有理函数一定可积分</p>
-<p>(2) 三角函数 总可用<code>t=tan(pi/2)</code>将其化为有理函数积分</p>
-<p>(3) 积分 <code>R[x, ((ax+b)/(cx+d))^(1/m)]</code>,其中 (ad-bc!&#x3D;0,m正整数)，令右侧为t可以代换化为有理函数积分</p>
-<p>(4) 若 积分 <code>x^m (a+bx^n)^p</code>,只有<code>p,(m+1)/n,(m+1)/n+p</code>中有一个为整数时才可积分否则不可</p>
-<p>(5) <code>R[x,sqrt(ax^2+bx+c)]</code>的代换</p>
-<p><code>a&gt;0 -&gt; 右侧 = +-x+t</code></p>
-<p><code>c&gt;0 -&gt; 右侧 = xt+-sqrt(c)</code></p>
-<p><code>b^2-4ac&gt;0 -&gt; 右侧 = t(x-根)</code></p>
-<p>例22</p>
-<p><a href="https://www.wolframalpha.com/input/?i=int+sqrt(x+1/x)+dx">https://www.wolframalpha.com/input/?i=int+sqrt%28x%2B1%2Fx%29+dx</a></p>
-<p>常见方法和知识点 三角函数变形吃常数字，看特征，根据上面的方法进行替换，三角函数有<code>tan(x/2)</code>可以替换</p>
+    <title>数学分析 CheatSheet</title>
+    <url>/Math/Mathematical_analysis-cheatsheet/</url>
+    <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p><a href="https://zh.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E6%81%92%E7%AD%89%E5%BC%8F">三角横等式</a></p>
+<p>$\tan^2x+1&#x3D;\sec^2x$</p>
+<p>$\sinh x &#x3D; \frac{e^x}{2} - \frac{e^{-x}}{2}$</p>
+<p>$\cosh x &#x3D; \frac{e^x}{2} + \frac{e^{-x}}{2} &#x3D; \sqrt{1+\sinh^2x}$</p>
+<p>$sech(x) &#x3D; \frac{2}{e^x + e^{-x}}$</p>
+<p>$sin(x)cos(y) &#x3D; \frac{sin(x+y) + sin(x-y)}{2}$</p>
+<p>$sin(x)sin(y) &#x3D; \frac{cos(x-y) - cos(x+y)}{2}$</p>
+<p>$cos(x)cos(y) &#x3D; \frac{cos(x-y) + cos(x+y)}{2}$</p>
+<p>$sin(x) + sin(y) &#x3D; 2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) + cos(y) &#x3D; 2cos(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
+<p>$cos(x) - cos(y) &#x3D; -2sin(\frac{x+y}{2})cos(\frac{x-y}{2})$</p>
 <span id="more"></span>
 
-<h3 id="题目-3-1-5-10"><a href="#题目-3-1-5-10" class="headerlink" title="题目 3.1.5 (10)"></a>题目 3.1.5 (10)</h3><h3 id="题目-3-1-8-3-4"><a href="#题目-3-1-8-3-4" class="headerlink" title="题目 3.1.8 (3,4)"></a>题目 3.1.8 (3,4)</h3><h3 id="题目-3-1-13-4-5-6"><a href="#题目-3-1-13-4-5-6" class="headerlink" title="题目 3.1.13 (4,5,6)"></a>题目 3.1.13 (4,5,6)</h3><h3 id="题目-3-1-13-3-4"><a href="#题目-3-1-13-3-4" class="headerlink" title="题目 3.1.13 (3,4)"></a>题目 3.1.13 (3,4)</h3><h2 id="定积分概念、可积条件与定积分性质-3-2"><a href="#定积分概念、可积条件与定积分性质-3-2" class="headerlink" title="定积分概念、可积条件与定积分性质 3.2"></a>定积分概念、可积条件与定积分性质 3.2</h2><p>R[a,b] 在 [a,b]上可积</p>
-<p>任意划分 zhengfu 趋近0,大和 &#x3D; 小和</p>
-<p>乘积可积性</p>
-<p>方法: 二次不等式判别公式, 积分中值定理</p>
-<h3 id="题目-3-2-10"><a href="#题目-3-2-10" class="headerlink" title="题目 3.2.10"></a>题目 3.2.10</h3><h2 id="变限定积分、微积分基本定理、定积分的换元法-3-3"><a href="#变限定积分、微积分基本定理、定积分的换元法-3-3" class="headerlink" title="变限定积分、微积分基本定理、定积分的换元法 3.3"></a>变限定积分、微积分基本定理、定积分的换元法 3.3</h2><p>P161&#x2F;473</p>
-<p>连续函数一定可积,积分后一定可微</p>
-<p>[a,b]上</p>
-<p>f(x)可积分,F(x)连续 有限个点外 F’(x) &#x3D; f(x)</p>
-<p>有 积分 &#x3D; F(b)-f(a)</p>
-<p>换元积分法的前提是？？？？TODO 反函数存在? 一一映射? 导函数也存在?</p>
-<p>3.3.6 带积分余项的泰勒公式</p>
-<p>3.3.7 积分第二中值定理</p>
-<p>例3 函数可积 并不保证 其积分的任意点可导</p>
-<p>例11 绝对值积分不等式 变换 为 |(v(x)f(x))’|</p>
-<p>泰勒展开 再积分 常数积分&#x3D; 常数×积分长度 和 变量式子积分相等 抵消为0,其实是靠中值展开</p>
-<p>方法有 中值定理进行替换</p>
-<p>假设 最值点坐标 进行推导</p>
-<p>!! 注意 一定要记住一些 特殊点 端点是否可行，可能是 “错误”的证明， 能找到不符合条件的情况</p>
-<p>粗略看过了 实变后, 这个例25 看着就好怪啊 这个连续性质的使用？</p>
-<p>例34 证明 pi是 无理数</p>
-<h3 id="题目-3-3-19"><a href="#题目-3-3-19" class="headerlink" title="题目 3.3.19"></a>题目 3.3.19</h3><h3 id="题目-3-3-20"><a href="#题目-3-3-20" class="headerlink" title="题目 3.3.20"></a>题目 3.3.20</h3><h2 id="定积分的应用-3-4"><a href="#定积分的应用-3-4" class="headerlink" title="定积分的应用 3.4"></a>定积分的应用 3.4</h2><p>面积微元,弧长微元</p>
-<p>参数的面积公式为什么 1&#x2F;2 * (xdy-ydx) 表示什么</p>
-<p>古鲁金 第一第二定理</p>
-<p>曲率公式</p>
-<p>辛卜森公式, <a href="https://en.wikipedia.org/wiki/Simpson%27s_rule">https://en.wikipedia.org/wiki/Simpson%27s_rule</a></p>
-<h2 id="广义积分-3-5"><a href="#广义积分-3-5" class="headerlink" title="广义积分 3.5"></a>广义积分 3.5</h2><p>3.广义积分收敛判别法</p>
-<h3 id="题目-3-5-5"><a href="#题目-3-5-5" class="headerlink" title="题目 3.5.5"></a>题目 3.5.5</h3>]]></content>
+<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><p>$\sin’x &#x3D; \cos x$</p>
+<p>$\cos’x &#x3D; - \sin x$</p>
+<p>$\tan’x &#x3D; \sec^2x$</p>
+<p>$\cot’x &#x3D; - \csc^2x$</p>
+<p>$\sec’x &#x3D; \tan x \cdot \sec x$</p>
+<p>$\csc’x &#x3D; - \cot x \cdot \csc x$</p>
+<p>$\cosh’ x &#x3D; \sinh x$</p>
+<p>$\sinh’ x &#x3D; \cosh x$</p>
+<p>$\tanh’ x &#x3D; sech^2 x$</p>
+<p>$arctanh(x)’ &#x3D; \frac{1}{1-x^2}$</p>
+<p>$arcsinh(x)’ &#x3D; \frac{1}{\sqrt{1+x^2}}$</p>
+<p>$arccosh(x)’ &#x3D; \frac{1}{\sqrt{x-1}\sqrt{x+1}}$</p>
+<p>有些地方<code>^(-1)</code>表示不是<code>-1</code>次方而是逆函数 $\tan^{-1} x &#x3D; \arctan x$</p>
+<p>$\arctan’x &#x3D; \frac{1}{1+x^2}$</p>
+<p>$arccot’x &#x3D; -\frac{1}{1+x^2}$</p>
+<p>$\arcsin’x &#x3D; \frac{1}{\sqrt{1-x^2}}$</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>CheatSheet</tag>
+        <tag>数学分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 一 分析基础</title>
+    <url>/Math/Mathematical_analysis_problems_1/</url>
+    <content><![CDATA[<h1 id="分析基础-1"><a href="#分析基础-1" class="headerlink" title="分析基础 1"></a>分析基础 1</h1><h2 id="序列极限-1-3"><a href="#序列极限-1-3" class="headerlink" title="序列极限 1.3"></a>序列极限 1.3</h2><h3 id="题目-1-3-4"><a href="#题目-1-3-4" class="headerlink" title="题目 1.3.4"></a>题目 1.3.4</h3><p>设 $$A&gt;0,x_1&gt;0,x_{n+1}&#x3D;\frac12(x_n+\frac A{x_n}) (n&#x3D;1,2,\dots)$$</p>
+<p>(1) 求证: $$x_n$$单调下降且有下界</p>
+<p>(2) 求$$lim_{n-&gt;\infty}x_n$$</p>
+<span id="more"></span>
+
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>(1) 显然 $$x_n \geq \sqrt A (n\geq2)$$</p>
+<p>有 $$x_{n+1}-x_n &#x3D; \frac12(\frac A{x_n}-x_n) &#x3D; \frac12 \cdot \frac {(\sqrt A - x_n)(\sqrt A + x_n)}{x_n} \leq 0 (n\geq2)$$</p>
+<p>(2) 设极限为<code>a</code>,带入原式子,则 推出$$a&#x3D;\sqrt A$$</p>
+<h3 id="题目-1-3-9"><a href="#题目-1-3-9" class="headerlink" title="题目 1.3.9"></a>题目 1.3.9</h3><p>求证 $$lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}$$极限存在</p>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h3><p>$$a_n &#x3D; lim_{n-&gt;\infty}[\frac{(2n-1)!!}{(2n)!!}]^2\cdot\frac1{2n+1}  &gt; 0$$</p>
+<p>$$ \frac{a_{n+1}}{a_n} &#x3D; \frac{(2n+1)^3}{(2n+2)^2\cdot (2n+3)} &lt; 1$$</p>
+<p>单调递减 有下界限</p>
+<p>从 $$ln a_{n+1} - ln a_n$$ 上看 说明 $$ln a_{n}$$ 趋于 $$-\infty$$ , $$a_n$$极限为$$0$$</p>
+<p>总感觉有地方没有说清楚</p>
+<h2 id="函数极限与连续概念-1-4"><a href="#函数极限与连续概念-1-4" class="headerlink" title="函数极限与连续概念 1.4"></a>函数极限与连续概念 1.4</h2><h3 id="题目-1-4-3"><a href="#题目-1-4-3" class="headerlink" title="题目 1.4.3"></a>题目 1.4.3</h3><p>设 $$ 0&lt;x_n&lt;+\infty $$,且满足 $$ x_n+\frac 4 {x_{n+1}^2} &lt; 3 $$, 求出此极限值。</p>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h3><p>由题目显然有 $$\frac{2\sqrt3}3 &lt; x_n  &lt; 3$$</p>
+<p>$$x_{n+1}-x_n &gt; \frac {x_{n+1}^3-3_{n+1}^2+4}{x_{n+1}^2} &#x3D; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} \ge 0 $$</p>
+<p>单调递增 有上界</p>
+<p>如果 $x_n &gt; 2$ 令 $x_n &#x3D; 2+y_n,1 &gt; y_n &gt; 0$ , $y_n$单调递增</p>
+<p>如果 $$x_n &#x3D; 2$$ 有 $x_{n+1} &gt; 2$ 取 $ n &#x3D; n+1$</p>
+<p>$$x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {(2+1)y_{n+1}^2}{3^2} $$</p>
+<p>$m-n &gt; \frac{3}{y_{n+1}^2}$时, 存在 $y_m &gt; 3$</p>
+<p>$$\therefore \frac{2\sqrt3}3 &lt; x_n  &lt; 2$$</p>
+<p>如果 $x_n &lt; 2$ 令 $x_n &#x3D; 2-y_n,2-\frac{2\sqrt3}3 &gt; y_n &gt; 0$ , $y_n$也单调递减</p>
+<p>$$(-y_{n+1}) - (-y_{n}) &gt; x_{n+1}-x_n &gt; \frac {(x_{n+1}+1)(x_{n+1}-2)^2}{x_{n+1}^2} &gt; \frac {2 y_{n+1}^2}{2^2} $$</p>
+<p>$$ y_n &gt; y_{n+1} + \frac{y_{n+1}^2}{2} $$</p>
+<p>$$ y_{n+1} &lt; \sqrt{2y_n+1} -1 &#x3D; \frac {2y_n}{\sqrt{2y_n+1}+1} &lt;  $$</p>
+<p>然后呢????</p>
+<p>还是说 简单说 所有 小于2 都不是定点都会增大,但所有增大的结果都小于2 ?,或者说 假设一个小于2的为 极致 用反证 唯一？</p>
+<hr>
+<p>数列有极限</p>
+<p>所以 不等式也有极限 $$lim$$</p>
+<h3 id="题目-1-4-12"><a href="#题目-1-4-12" class="headerlink" title="题目 1.4.12"></a>题目 1.4.12</h3><p>设序列$${x_n}$$由如下迭代产生:</p>
+<p>$$x_1&#x3D;\frac12,x_{n+1} &#x3D; x_n^2 + x_n (n&#x3D;1,2,\dots)$$</p>
+<p>求证 $$lim_{n-&gt;\infty}(\frac1{1+x_1}+\frac1{1+x_2}+\cdot+\frac1{1+x_n})&#x3D;2$$</p>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解 ???"></a>题解 ???</h3><h2 id="比区间上连续函数的性质-1-5"><a href="#比区间上连续函数的性质-1-5" class="headerlink" title="比区间上连续函数的性质 1.5"></a>比区间上连续函数的性质 1.5</h2><h3 id="题目-1-5-3"><a href="#题目-1-5-3" class="headerlink" title="题目 1.5.3"></a>题目 1.5.3</h3><p>设 $$f_n(x)&#x3D;x^n+x$$</p>
+<p>求证</p>
+<p>(1) 对任意自然数 $$n&gt;1$$,方程 $$f_n(x) &#x3D; 1$$在$$(\frac12,1)$$内有且仅有一个根</p>
+<p>(2) 若$$c_n \in (\frac12,1)$$是$$f_n(x)&#x3D;1$$的根,则$$lim_{n-&gt;infty}c_n$$存在，并求此极限</p>
+<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解 ???"></a>题解 ???</h3><p>(1)</p>
+<p>求导$$nx^{n-1}+1&gt;0$$,严格单调</p>
+<p>所以 $$ (f_n(\frac12)-1) \cdot (f_n(1)-1) &lt; 0, x \in (\frac12,1)$$ 有根,得证</p>
+<p>(2) ???</p>
+<p>2.6 例22?</p>
+<h3 id="题目-1-5-4"><a href="#题目-1-5-4" class="headerlink" title="题目 1.5.4"></a>题目 1.5.4</h3><p>设置$$f(x)$$在 $[a,b]$ 上无界,求证: $$\exists c \in [a,b]$$,使得 $$\forall \delta &gt; 0$$ 函数 $$f(x)$$在 $$[c-\delta,c+\delta]\bigcap [a,b]$$上无界</p>
+<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-5"><a href="#题目-1-5-5" class="headerlink" title="题目 1.5.5"></a>题目 1.5.5</h3><p>设 $${x_n}$$ 为有界序列。求证: $x_n$ 以 $a$为极限的充分必要条件是: ${x_n}$的任一收敛子序列都有相同的极限值$a$.</p>
+<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-7"><a href="#题目-1-5-7" class="headerlink" title="题目 1.5.7"></a>题目 1.5.7</h3><p>设 $f(x) \in \mathbb{C}[a,b]$ 且有唯一的取到$f(x)$最大值的点$x^ * $ 又设 $x_n \in [a,b] (n&#x3D;1,2,\dots)$</p>
+<p>使得$$ lim_{n-&gt;\infty} f(x_n) &#x3D; f(x^*), 求证 lim_{n-&gt;\infty} x_n &#x3D; x^*$$</p>
+<h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-8"><a href="#题目-1-5-8" class="headerlink" title="题目 1.5.8"></a>题目 1.5.8</h3><p>设$$ f(x) \in \mathbb{C}[0,+\infty) $$又设对 $$\forall l \in \mathbb{R}$$ 方程 $$f(x) &#x3D; l$$在 $$[0,+\infty)$$ 上只有有限个解或无解,求证:</p>
+<p>(1) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上有界,则极限 $$lim_{x-&gt;+\infty}f(x)$$存在;</p>
+<p>(2) 如果 $f(x)$ 在 $$[0,+\infty)$$ 上无上界,则 $$lim_{x-&gt;+\infty}f(x) &#x3D; + \infty$$</p>
+<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解 ???"></a>题解 ???</h3><h3 id="题目-1-5-10"><a href="#题目-1-5-10" class="headerlink" title="题目 1.5.10"></a>题目 1.5.10</h3><p>设$f(x)$在$[a,b]$上定义,$x_0\in [a,b]$如果对 $\forall \epsilon &gt; 0,\exists \delta &gt; 0$ 当 $|x-x_0|&lt;\delta$时, 有 $f(x) &lt; f(x_0)+\epsilon$, 那么称$f(x)$在点$x_0$处<strong>上半连续</strong>,如果$f(x)$在$[a,b]$上的没一点都上半连续,则称$f(x)$为$[a,b]$上的一个<strong>上半连续函数</strong>.求证: $[a,b]$上的<strong>上半连续函数</strong>一定有上界.</p>
+<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解 ???"></a>题解 ???</h3>]]></content>
       <categories>
         <category>数学分析</category>
       </categories>
@@ -8893,7 +8795,7 @@
 <ol start="7">
 <li>[TODO]一族变换以明显的方式（我们不准备精确叙述）依赖于某一数量的实参数。在所有线性变换的族中，试问一共有多少个实参数？在椭圆、双曲、抛物型变换族中各有多少？有多少线性变换可以把一给定的圆$C$保持不变？</li>
 </ol>
-<h3 id="3-4-初等共形映射-Elmentary-Confomal-Mappings"><a href="#3-4-初等共形映射-Elmentary-Confomal-Mappings" class="headerlink" title="3.4 初等共形映射 Elmentary Confomal Mappings"></a>3.4 初等共形映射 Elmentary Confomal Mappings</h3><p>与解析函数相联系的共形映射为解析函数的性质提供了一个极好的形象化表示，这与实际数用图像来形象化的情形十分相似。因此，一切与共形映射有关的问题自然应受到特别重视。在这一方面的进展大大增加了我们对解析函数的知识。此外，共形映射还自然地出现在数学物理的许多分支中，这正是直接用到复变函数论的原因。</p>
+<h2 id="3-4-初等共形映射-Elmentary-Confomal-Mappings"><a href="#3-4-初等共形映射-Elmentary-Confomal-Mappings" class="headerlink" title="3.4 初等共形映射 Elmentary Confomal Mappings"></a>3.4 初等共形映射 Elmentary Confomal Mappings</h2><p>与解析函数相联系的共形映射为解析函数的性质提供了一个极好的形象化表示，这与实际数用图像来形象化的情形十分相似。因此，一切与共形映射有关的问题自然应受到特别重视。在这一方面的进展大大增加了我们对解析函数的知识。此外，共形映射还自然地出现在数学物理的许多分支中，这正是直接用到复变函数论的原因。</p>
 <p>这里最重要的问题之一就是要确定一个域映成另一个域的共形映射。在这一节里，我们将研究一些可以由初等函数来定义的映射。</p>
 <h3 id="3-4-1-阶层曲线的应用-The-Use-of-Level-Curves"><a href="#3-4-1-阶层曲线的应用-The-Use-of-Level-Curves" class="headerlink" title="3.4.1 阶层曲线的应用 The Use of Level Curves"></a>3.4.1 阶层曲线的应用 The Use of Level Curves</h3><p>当一个共形映射由一个解析的显函数$w&#x3D;f(z)$来定义时，我们自然想得到映射的特殊几何性质。要做到这一点，最有效的方法之一就是研究由点的变换所引起的曲线之间的对应关系。由于某些简单曲线可变换为具有熟知特性的曲线族中的曲线，所以函数$f(z)$的特性可自行表达出来。任何这样的知识都将加强我们关于映射的具体概念。</p>
 <p>用线性变换所做的映射就是这种情形。在3.3节中我们曾证明，只要把直线作为圆的一个特殊情形来看，那么线性变换就把圆变为圆。通过对施泰纳图的研究，就可能得到关于对应关系的一个完整的图像。</p>
@@ -9127,6 +9029,104 @@
       <tags>
         <tag>复分析</tag>
         <tag>作为映射的解析函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 二 一元函数微分学</title>
+    <url>/Math/Mathematical_analysis_problems_2/</url>
+    <content><![CDATA[<h1 id="一元函数微分学-2"><a href="#一元函数微分学-2" class="headerlink" title="一元函数微分学 2"></a>一元函数微分学 2</h1><h2 id="导数与微分-2-1"><a href="#导数与微分-2-1" class="headerlink" title="导数与微分 2.1"></a>导数与微分 2.1</h2><h3 id="题目-2-1-3"><a href="#题目-2-1-3" class="headerlink" title="题目 2.1.3"></a>题目 2.1.3</h3><p>设$f(x)$在点$x_0$处可导,$\alpha_n$,$\beta_n$为趋于零的正数序列，求证:</p>
+<p>$\lim\limits_{\substack{n\rightarrow \infty }}\frac{f(x_0+\alpha_n)-f(x_0+\beta_n)}{\alpha_n-\beta_n} &#x3D; f’(x_0)$</p>
+<span id="more"></span>
+
+<h3 id="题目-2-1-7"><a href="#题目-2-1-7" class="headerlink" title="题目 2.1.7"></a>题目 2.1.7</h3><p>设曲线由隐式方程 $\sqrt[3]{x^2}+\sqrt[3]{y^2}&#x3D;\sqrt[3]{a^2} (a&gt;0)$给出</p>
+<p>(1) 求证: 曲线的切线被坐标轴所截的长度为一常数</p>
+<p>(2)写出曲线的参数形式，利用参数式求导给出上一小提的另一证法</p>
+<h3 id="题目-2-1-8"><a href="#题目-2-1-8" class="headerlink" title="题目 2.1.8"></a>题目 2.1.8</h3><p>已知 参数方程 $x&#x3D;a[ln(tan\frac{t}{2})+cos(t)],y&#x3D;a\cdot sin(t) (a&gt;0,0 &lt; t &lt;\pi)$</p>
+<p>求证，任意切线上，自切点至该切线与x轴交点之间的切线段为定长</p>
+<h3 id="题目-2-1-13"><a href="#题目-2-1-13" class="headerlink" title="题目 2.1.13"></a>题目 2.1.13</h3><p>设 $y&#x3D;x^{n-1}ln(x)$ 求证$y^{(n)}&#x3D;\frac{(n-1)!}{x}$</p>
+<h3 id="题目-2-1-14"><a href="#题目-2-1-14" class="headerlink" title="题目 2.1.14"></a>题目 2.1.14</h3><p>求证：双纽线$r^2&#x3D;a^2 cos 2\theta$的向径与切线的夹角等于极角的两倍加$\frac{\pi}{2}$</p>
+<h2 id="微分中值定理-2-2"><a href="#微分中值定理-2-2" class="headerlink" title="微分中值定理 2.2"></a>微分中值定理 2.2</h2><h3 id="题目-2-2-5"><a href="#题目-2-2-5" class="headerlink" title="题目 2.2.5"></a>题目 2.2.5</h3><p>设f(x)在(a,b)内二阶可导，且$x_0 \in (a,b)$使得$f’’(x_0)\neq 0$求证:</p>
+<p>(1) 如果$f’(x_0)&#x3D;0$，则存在$x_1,x_2\in(a,b)$使得$f(x_1)-f(x_2)&#x3D;0$</p>
+<p>(2) 如果$f’(x_0)\neq0$，则存在$x_1,x_2\in(a,b)$，使得$\frac{f(x_1)-f(x_2)}{x_1-x_2}&#x3D;f’(x_0)$</p>
+<h3 id="题目-2-2-9"><a href="#题目-2-2-9" class="headerlink" title="题目 2.2.9"></a>题目 2.2.9</h3><p>设函数f(x)在$[a,b]$上可导，且$f’(a)&#x3D;f’(b)$,求证$\exists c\in(a,b)$使得$f(c)-f(a)&#x3D;(c-a)f’(c)$</p>
+<p>和例12比，把$&#x3D;0$去掉</p>
+<h3 id="题目-2-2-10"><a href="#题目-2-2-10" class="headerlink" title="题目 2.2.10"></a>题目 2.2.10</h3><p>设$f(x)$在$(0,1]$上可导,且存在有限极限 $\lim\limits_{\substack{x\rightarrow 0+0 }}\sqrt xf’(x)$,求证f(x)在(0,1]上一致连续</p>
+<h3 id="例17"><a href="#例17" class="headerlink" title="例17"></a>例17</h3><p>设f(x)在$[-2,2]$上连续，在(-2,2)上二阶可导，且$|f(x)|\leq 1,f’(0) &gt; 1$,求证:存在 $\epsilon \in (-2,2)$使得$f’’(\epsilon) &#x3D; 0$</p>
+<h2 id="函数的升降、极值、最值问题-2-3"><a href="#函数的升降、极值、最值问题-2-3" class="headerlink" title="函数的升降、极值、最值问题 2.3"></a>函数的升降、极值、最值问题 2.3</h2><h3 id="题目-2-3-3"><a href="#题目-2-3-3" class="headerlink" title="题目 2.3.3"></a>题目 2.3.3</h3><h3 id="题目-2-3-6"><a href="#题目-2-3-6" class="headerlink" title="题目 2.3.6"></a>题目 2.3.6</h3><h3 id="题目-2-3-9"><a href="#题目-2-3-9" class="headerlink" title="题目 2.3.9"></a>题目 2.3.9</h3><h2 id="函数的图形、拐点及函数作图-2-4"><a href="#函数的图形、拐点及函数作图-2-4" class="headerlink" title="函数的图形、拐点及函数作图 2.4"></a>函数的图形、拐点及函数作图 2.4</h2><h3 id="题目-2-4-4"><a href="#题目-2-4-4" class="headerlink" title="题目 2.4.4"></a>题目 2.4.4</h3><h2 id="洛必达法则与泰勒公式-2-5"><a href="#洛必达法则与泰勒公式-2-5" class="headerlink" title="洛必达法则与泰勒公式 2.5"></a>洛必达法则与泰勒公式 2.5</h2><h3 id="题目-2-5-4"><a href="#题目-2-5-4" class="headerlink" title="题目 2.5.4"></a>题目 2.5.4</h3><h3 id="题目-2-5-7"><a href="#题目-2-5-7" class="headerlink" title="题目 2.5.7"></a>题目 2.5.7</h3><h3 id="题目-2-5-10"><a href="#题目-2-5-10" class="headerlink" title="题目 2.5.10"></a>题目 2.5.10</h3><h2 id="一元函数微分学的综合应用-2-6"><a href="#一元函数微分学的综合应用-2-6" class="headerlink" title="一元函数微分学的综合应用 2.6"></a>一元函数微分学的综合应用 2.6</h2><p>P121 132&#x2F;473</p>
+<h3 id="题目-2-6-5"><a href="#题目-2-6-5" class="headerlink" title="题目 2.6.5"></a>题目 2.6.5</h3><p>$ln(2n+1)-ln(2n)+n ln(n+1) - n ln(n) &gt; 1$</p>
+<p>$&#x3D; 1&#x2F;(2n+1) - 1&#x2F;(2n) + ln(n+1)-ln(n) - 1&#x2F;(n+1) &gt; 0$</p>
+<p>单增</p>
+<p>$1&#x2F;3 - 1&#x2F;2 + ln2 - 1&#x2F;2 &#x3D; ln2 - 2&#x2F;3 &lt; 0$</p>
+<p>??</p>
+<h3 id="题目-2-6-7"><a href="#题目-2-6-7" class="headerlink" title="题目 2.6.7"></a>题目 2.6.7</h3><p>$&#x3D; 2a - e^x$ 单减</p>
+<p>$x&#x3D; ln(2a)$ 时 为 0</p>
+<p>$&#x3D; 2ax-e^x$</p>
+<p>$(0,ln(2a)) $单增 , $(ln(2a),+\infty)$ 单减</p>
+<p>极大值 $2aln(2a) - 2a &#x3D; 2a(ln(2a&#x2F;e))$</p>
+<p>$ax^2-e^x &#x3D; 0$</p>
+<p>$x \to -\infty , +\infty$</p>
+<p>$x \to +\infty , -\infty$</p>
+<p>$a &lt; e&#x2F;2$ ，单减 1根</p>
+<p>$a \ge e&#x2F;2$, 减 增 减??</p>
+]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数学分析 三 一元函数积分学</title>
+    <url>/Math/Mathematical_analysis_problems_3/</url>
+    <content><![CDATA[<h1 id="一元函数积分学-3"><a href="#一元函数积分学-3" class="headerlink" title="一元函数积分学 3"></a>一元函数积分学 3</h1><h2 id="不定积分和可积函数类-3-1"><a href="#不定积分和可积函数类-3-1" class="headerlink" title="不定积分和可积函数类 3.1"></a>不定积分和可积函数类 3.1</h2><p>5.可积函数类 P124</p>
+<p>(1) 有理函数可分解成多项式和若干项最简真分式之和，因此有理函数一定可积分</p>
+<p>(2) 三角函数 总可用<code>t=tan(pi/2)</code>将其化为有理函数积分</p>
+<p>(3) 积分 <code>R[x, ((ax+b)/(cx+d))^(1/m)]</code>,其中 (ad-bc!&#x3D;0,m正整数)，令右侧为t可以代换化为有理函数积分</p>
+<p>(4) 若 积分 <code>x^m (a+bx^n)^p</code>,只有<code>p,(m+1)/n,(m+1)/n+p</code>中有一个为整数时才可积分否则不可</p>
+<p>(5) <code>R[x,sqrt(ax^2+bx+c)]</code>的代换</p>
+<p><code>a&gt;0 -&gt; 右侧 = +-x+t</code></p>
+<p><code>c&gt;0 -&gt; 右侧 = xt+-sqrt(c)</code></p>
+<p><code>b^2-4ac&gt;0 -&gt; 右侧 = t(x-根)</code></p>
+<p>例22</p>
+<p><a href="https://www.wolframalpha.com/input/?i=int+sqrt(x+1/x)+dx">https://www.wolframalpha.com/input/?i=int+sqrt%28x%2B1%2Fx%29+dx</a></p>
+<p>常见方法和知识点 三角函数变形吃常数字，看特征，根据上面的方法进行替换，三角函数有<code>tan(x/2)</code>可以替换</p>
+<span id="more"></span>
+
+<h3 id="题目-3-1-5-10"><a href="#题目-3-1-5-10" class="headerlink" title="题目 3.1.5 (10)"></a>题目 3.1.5 (10)</h3><h3 id="题目-3-1-8-3-4"><a href="#题目-3-1-8-3-4" class="headerlink" title="题目 3.1.8 (3,4)"></a>题目 3.1.8 (3,4)</h3><h3 id="题目-3-1-13-4-5-6"><a href="#题目-3-1-13-4-5-6" class="headerlink" title="题目 3.1.13 (4,5,6)"></a>题目 3.1.13 (4,5,6)</h3><h3 id="题目-3-1-13-3-4"><a href="#题目-3-1-13-3-4" class="headerlink" title="题目 3.1.13 (3,4)"></a>题目 3.1.13 (3,4)</h3><h2 id="定积分概念、可积条件与定积分性质-3-2"><a href="#定积分概念、可积条件与定积分性质-3-2" class="headerlink" title="定积分概念、可积条件与定积分性质 3.2"></a>定积分概念、可积条件与定积分性质 3.2</h2><p>R[a,b] 在 [a,b]上可积</p>
+<p>任意划分 zhengfu 趋近0,大和 &#x3D; 小和</p>
+<p>乘积可积性</p>
+<p>方法: 二次不等式判别公式, 积分中值定理</p>
+<h3 id="题目-3-2-10"><a href="#题目-3-2-10" class="headerlink" title="题目 3.2.10"></a>题目 3.2.10</h3><h2 id="变限定积分、微积分基本定理、定积分的换元法-3-3"><a href="#变限定积分、微积分基本定理、定积分的换元法-3-3" class="headerlink" title="变限定积分、微积分基本定理、定积分的换元法 3.3"></a>变限定积分、微积分基本定理、定积分的换元法 3.3</h2><p>P161&#x2F;473</p>
+<p>连续函数一定可积,积分后一定可微</p>
+<p>[a,b]上</p>
+<p>f(x)可积分,F(x)连续 有限个点外 F’(x) &#x3D; f(x)</p>
+<p>有 积分 &#x3D; F(b)-f(a)</p>
+<p>换元积分法的前提是？？？？TODO 反函数存在? 一一映射? 导函数也存在?</p>
+<p>3.3.6 带积分余项的泰勒公式</p>
+<p>3.3.7 积分第二中值定理</p>
+<p>例3 函数可积 并不保证 其积分的任意点可导</p>
+<p>例11 绝对值积分不等式 变换 为 |(v(x)f(x))’|</p>
+<p>泰勒展开 再积分 常数积分&#x3D; 常数×积分长度 和 变量式子积分相等 抵消为0,其实是靠中值展开</p>
+<p>方法有 中值定理进行替换</p>
+<p>假设 最值点坐标 进行推导</p>
+<p>!! 注意 一定要记住一些 特殊点 端点是否可行，可能是 “错误”的证明， 能找到不符合条件的情况</p>
+<p>粗略看过了 实变后, 这个例25 看着就好怪啊 这个连续性质的使用？</p>
+<p>例34 证明 pi是 无理数</p>
+<h3 id="题目-3-3-19"><a href="#题目-3-3-19" class="headerlink" title="题目 3.3.19"></a>题目 3.3.19</h3><h3 id="题目-3-3-20"><a href="#题目-3-3-20" class="headerlink" title="题目 3.3.20"></a>题目 3.3.20</h3><h2 id="定积分的应用-3-4"><a href="#定积分的应用-3-4" class="headerlink" title="定积分的应用 3.4"></a>定积分的应用 3.4</h2><p>面积微元,弧长微元</p>
+<p>参数的面积公式为什么 1&#x2F;2 * (xdy-ydx) 表示什么</p>
+<p>古鲁金 第一第二定理</p>
+<p>曲率公式</p>
+<p>辛卜森公式, <a href="https://en.wikipedia.org/wiki/Simpson%27s_rule">https://en.wikipedia.org/wiki/Simpson%27s_rule</a></p>
+<h2 id="广义积分-3-5"><a href="#广义积分-3-5" class="headerlink" title="广义积分 3.5"></a>广义积分 3.5</h2><p>3.广义积分收敛判别法</p>
+<h3 id="题目-3-5-5"><a href="#题目-3-5-5" class="headerlink" title="题目 3.5.5"></a>题目 3.5.5</h3>]]></content>
+      <categories>
+        <category>数学分析</category>
+      </categories>
+      <tags>
+        <tag>数学分析</tag>
+        <tag>题目</tag>
       </tags>
   </entry>
   <entry>
@@ -13796,132 +13796,6 @@
       </tags>
   </entry>
   <entry>
-    <title>(p-1)!+1 = 0 (mod p) Wilson&#39;s theorem 威尔逊定理</title>
-    <url>/Math/Wilson_s_theorem/</url>
-    <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
-<h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
-<p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
-<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><span id="more"></span>
-
-<p>首先 1..p-1 是 模p的所有余项</p>
-<p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
-<p>任意$i \in A$ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
-<p>令 $x &#x3D; (p-1)!$</p>
-<p>那么 $x^2 &#x3D; 1(\bmod p)$</p>
-<p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
-<p>可得$x &#x3D; 1(\bmod p)$或 $x&#x3D;p-1 (\bmod p)$ , 可以假设 $x &#x3D; p - a$ 然后 $(p-a-1)(p-a+1) &#x3D; 0 (\bmod p)$ 得到</p>
-<p>我们也能得到只有 $1^2 &#x3D; 1 (\bmod p), (p-1)^2 &#x3D; 1 (\bmod p)$</p>
-<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p)$, 因为除了p-1, 其它的两两配对</p>
-<p>得证</p>
-]]></content>
-      <categories>
-        <category>数论</category>
-      </categories>
-      <tags>
-        <tag>数论</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>牛顿恒等式</title>
-    <url>/Math/newton_identities/</url>
-    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式</p>
-<h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>$x&#x3D;1$</p>
-<p>$x^2&#x3D;?$</p>
-<p>$x^m&#x3D;?, m \ge 1, m \in \mathbb{Z}$</p>
-<h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>$x+y&#x3D;1$</p>
-<p>$x^2+y^2&#x3D;2$</p>
-<p>$x^3+y^3&#x3D;?$</p>
-<p>$x^m+y^m&#x3D;?, m \ge 2, m \in \mathbb{Z}$</p>
-<h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>$x+y+z&#x3D;1$</p>
-<p>$x^2+y^2+z^2&#x3D;2$</p>
-<p>$x^3+y^3+z^3&#x3D;3$</p>
-<p>$x^4+y^4+z^4&#x3D;?$</p>
-<p>$x^m+y^m+z^m&#x3D;?, m \ge 3, m \in \mathbb{Z}$</p>
-<h2 id="问题n"><a href="#问题n" class="headerlink" title="问题n"></a>问题n</h2><p>$\sum_{i&#x3D;0}^n x_i&#x3D;1$</p>
-<p>$\sum_{i&#x3D;0}^n x_i^2&#x3D;2$</p>
-<p>$\cdots$</p>
-<p>$\sum_{i&#x3D;0}^n x_i^n&#x3D;n$</p>
-<p>$\sum_{i&#x3D;0}^n x_i^{n+1}&#x3D;?$</p>
-<p>$\sum_{i&#x3D;0}^n x_i^{m}&#x3D;?, m \ge n, m \in \mathbb{Z}$</p>
-<hr>
-<p>TLDR</p>
-<p>例如3阶 已知</p>
-<p>$S_i&#x3D;x^i+y^i+z^i$</p>
-<p>$c_0&#x3D;n$</p>
-<p>$\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$</p>
-<p>例如 3阶 $X&#x3D;[-\frac{c_1}{c_0},-\frac{c_2}{c_0},-\frac{c_3}{c_0};1,0,0;0,1,0]$</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[V,D]=eig(X) % D是对角特征值矩阵，V是特征向量对应位置组成的矩阵</span><br></pre></td></tr></table></figure>
-
-<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
-<span id="more"></span>
-
-<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><p><a href="https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642">https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642</a></p>
-<p>$F(x)&#x3D;0$的$n$个根$x_1,\cdots,x_n$</p>
-<p>$S_k&#x3D;\sum_{i&#x3D;1}^n x_i^k$</p>
-<p>对于 $k &gt; n$, $\sum_{i&#x3D;0}^n C_iS_{k-n}&#x3D;0$ 也就是 按照幂次逐步上升的系数 是常系数</p>
-<p>对于 $k\in[1,n], (\sum_{i&#x3D;0}^{k-1}C_iS_{k-i})+kC_k&#x3D;0$ 表明和上面系数对应，且如果知道所有$C_{&lt;i}$可以这样求得$C_i$</p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>以上面的问题为例, 我们可以求得 $x+y+z,xy+yz+zx,xyz$的值</p>
-<p>也就意味着$0&#x3D;(x-a)(x-b)(x-c)&#x3D;x^3-(a+b+c)x^2+(ab+bc+ca)x-abc$ 这样对应到3次方程的3个根</p>
-<p>不妨写作 $C_0x^3+C_1x^2+C_2x+C_3&#x3D;0$</p>
-<p>那么同时乘上$x^k$ 有 $C_0x^{3+k}+C_1x^{2+k}+C_2x^{1+k}+C_3x^k&#x3D;0$</p>
-<p>$S_k&#x3D;x_0^k+x_1^k+x_2^k$ 是加和关系，所以 $S$也满足这个式子</p>
-<hr>
-<p>$f(x)&#x3D;\prod_{i}^n (x-a_i)&#x3D;\sum_{i&#x3D;0}^n c_ix^{n-i}$</p>
-<p>$f’(x)&#x3D;\sum_i^n \frac{f(x)}{x-a_i}$ 不展开求导</p>
-<p>分解 $x^{k+1}f’(x)&#x3D;(\sum_{i&#x3D;0}^k s_ix^{k-i})f(x)+g(x)$ , 这里是按 多项式除法，左边是被除，<code>f(x)</code>是除，f左边是商(系数), g(x)是余数,所以g(x)的最高幂次小于n</p>
-<p>$x^{k+1}f’(x)&#x3D;x^{k+1}\sum_{i&#x3D;0}^n \frac{f(x)}{x-a_i}$</p>
-<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}f(x)}{x-a_i}$</p>
-<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}+a_i^{k+1}}{x-a_i}f(x)$</p>
-<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i}f(x)+\sum_{i&#x3D;0}^n \frac{a_i^{k+1}}{x-a_i}f(x)$  这里对应了上面的多项式除法表达式</p>
-<p>对于商 $\displaystyle \sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i} &#x3D; \sum_{i&#x3D;0}^n \sum_{j&#x3D;0}^k a_i^jx^{k-j}$</p>
-<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k \sum_{i&#x3D;0}^n  a_i^jx^{k-j}$ 交换积分顺序</p>
-<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k S_j x^{k-j}$ </p>
-<p>综上 $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
-<hr>
-<p>根据  $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
-<p>研究$x^n$的系数</p>
-<p>对于 $k\le n-1$, </p>
-<p>左边 $x^{k+1}(c_{k}x^{n-k})’ &#x3D; (n-k)c_kx^{n}$</p>
-<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;0}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
-<p> $\displaystyle &#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}x^{n}$</p>
-<p> $\displaystyle (n-k)c_k&#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}$</p>
-<p>注意到 $S_0&#x3D;\sum x_i^0 &#x3D; \sum 1&#x3D;n$,所以右侧$\displaystyle &#x3D; (\sum_{i&#x3D;1}^k S_i c_{k-i}) + nc_k$</p>
-<p>综上 $\displaystyle -kc_k&#x3D;\sum_{i&#x3D;1}^k S_i c_{k-i}$</p>
-<p>综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n-1$</p>
-<hr>
-<p>类似的$k\ge n$ 同样研究$x^n$的系数</p>
-<p>左边&#x3D;0</p>
-<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;k-n}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
-<p> $\displaystyle &#x3D;\sum_{i&#x3D;k-n}^k S_i c_{k-i}x^{n}$, 也就是上面的不变的结论</p>
-<p>取$k&#x3D;n$有</p>
-<p> $\displaystyle \sum_{i&#x3D;0}^n S_i c_{n-i}&#x3D;0$, </p>
-<p>注意到$S_0&#x3D;n$,同样满足上面的公式，综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$ 可以算出所有$c_{0\to n}$, (注$(c_{n-0}x^0)’&#x3D;0$ 所以也很自然)</p>
-<hr>
-<p>回到题目</p>
-<p>$c_0&#x3D;n&#x3D;3$</p>
-<p>$\displaystyle c_1&#x3D;-\frac{\sum_{i&#x3D;1}^1S_1c_{1-i}}{1}&#x3D;-\frac{1*3}{1}&#x3D;-3$</p>
-<p>$\displaystyle c_2&#x3D;-\frac{\sum_{i&#x3D;1}^2S_1c_{2-i}}{2}&#x3D;-\frac{1*(-3)+2*3}{2}&#x3D;-\frac{3}{2}$</p>
-<p>$\displaystyle c_3&#x3D;-\frac{\sum_{i&#x3D;1}^3S_1c_{3-i}}{3}&#x3D;-\frac{1*(-3&#x2F;2)+2*(-3)+3*3}{3}&#x3D;-\frac{1}{2}$</p>
-<p>$c_0S_k+c_1S_{k-1}+c_2S_{k-2}+c_3S_{k-3}&#x3D;0$</p>
-<p>$S_k&#x3D;S_{k-1}+\frac{1}{2}S_{k-2}+\frac{1}{6}S_{k-3}$</p>
-<p>$x^4+y^4+z^4&#x3D;1 * 3+ \frac{1}{2} * 2 +\frac{1}{6} * 1 &#x3D; \frac{25}{6}$</p>
-<p>$x^5+y^5+z^5&#x3D;1 * \frac{25}{6}+ \frac{1}{2} * 3 +\frac{1}{6} * 2 &#x3D; 6$</p>
-<p>$[S_k;S_{k-1};S_{k-2}] &#x3D; [1,1&#x2F;2,1&#x2F;6;1,0,0;0,1,0] * [S_{k-1};S_{k-2};S_{k-3}]$</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">X=[1,1/2,1/6;1,0,0;0,1,0];</span><br><span class="line">[V,D] = eig(X)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">D =</span><br><span class="line"></span><br><span class="line">   1.4308 + 0.0000i   0.0000 + 0.0000i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i  -0.2154 + 0.2647i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i   0.0000 + 0.0000i  -0.2154 - 0.2647i</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">V = 这里V不是正交矩阵，但是 是特征向量矩阵</span><br><span class="line"></span><br><span class="line">   0.7609 + 0.0000i   0.0223 + 0.1073i   0.0223 - 0.1073i</span><br><span class="line">   0.5318 + 0.0000i   0.2027 - 0.2490i   0.2027 + 0.2490i</span><br><span class="line">   0.3717 + 0.0000i  -0.9407 + 0.0000i  -0.9407 + 0.0000i</span><br><span class="line"></span><br><span class="line">[S_k;S_&#123;k-1&#125;;S_&#123;k-2&#125;]  = V * D^&#123;k-3&#125; * V^&#123;-1&#125; * [3;2;1]</span><br></pre></td></tr></table></figure>
-
-
-<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
-]]></content>
-      <categories>
-        <category>代数</category>
-      </categories>
-      <tags>
-        <tag>高等代数</tag>
-        <tag>线性代数</tag>
-        <tag>newton_identities</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Walter Rudin 数学分析原理 9 多元函数</title>
     <url>/Math/Principles_of_Mathematical_Analysis_9/</url>
     <content><![CDATA[<h2 id="多元函数-functions-of-several-variables"><a href="#多元函数-functions-of-several-variables" class="headerlink" title="多元函数 functions of several variables"></a>多元函数 functions of several variables</h2><p>主要讨论 euclidean n-space $R^n$ 中</p>
@@ -14773,6 +14647,132 @@
       </tags>
   </entry>
   <entry>
+    <title>(p-1)!+1 = 0 (mod p) Wilson&#39;s theorem 威尔逊定理</title>
+    <url>/Math/Wilson_s_theorem/</url>
+    <content><![CDATA[<h1 id="威尔逊定理"><a href="#威尔逊定理" class="headerlink" title="威尔逊定理"></a>威尔逊定理</h1><p>Wilson’s theorem</p>
+<h1 id="显然"><a href="#显然" class="headerlink" title="显然"></a>显然</h1><p>当然如果要</p>
+<p>(x-1)!+1 是 x 的倍数,那么x一定是质数, 否则, 阶乘部分就是x的倍数</p>
+<h1 id="下证-如果是质数-则成立"><a href="#下证-如果是质数-则成立" class="headerlink" title="下证 如果是质数 则成立"></a>下证 如果是质数 则成立</h1><span id="more"></span>
+
+<p>首先 1..p-1 是 模p的所有余项</p>
+<p>集合$A &#x3D; {1,2,\cdots,p-1}$</p>
+<p>任意$i \in A$ 存在唯一$j \in A, i \cdot j &#x3D; 1 (\bmod p)$ ,j 是 i 的逆元 ( 通过 相同的i,不同的j的乘积不同,又乘积以后也是所有余项,可得存在唯一i的逆元)</p>
+<p>令 $x &#x3D; (p-1)!$</p>
+<p>那么 $x^2 &#x3D; 1(\bmod p)$</p>
+<p>因为 对于任意i, 不论i的逆元是 i本身,还是与i不同,都是唯一存在的,且i不同则j不同,所以 i(1~p-1)与i的逆元两两配对</p>
+<p>可得$x &#x3D; 1(\bmod p)$或 $x&#x3D;p-1 (\bmod p)$ , 可以假设 $x &#x3D; p - a$ 然后 $(p-a-1)(p-a+1) &#x3D; 0 (\bmod p)$ 得到</p>
+<p>我们也能得到只有 $1^2 &#x3D; 1 (\bmod p), (p-1)^2 &#x3D; 1 (\bmod p)$</p>
+<p>$(p-1)! &#x3D; 1\cdot 1 \cdot (p-1) &#x3D; p-1  &#x3D; -1 (mod p)$, 因为除了p-1, 其它的两两配对</p>
+<p>得证</p>
+]]></content>
+      <categories>
+        <category>数论</category>
+      </categories>
+      <tags>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>牛顿恒等式</title>
+    <url>/Math/newton_identities/</url>
+    <content><![CDATA[<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>TLDR: 更系统的内容 在 高等代数 7.10 多项式环-对称多项式</p>
+<h2 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h2><p>$x&#x3D;1$</p>
+<p>$x^2&#x3D;?$</p>
+<p>$x^m&#x3D;?, m \ge 1, m \in \mathbb{Z}$</p>
+<h2 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h2><p>$x+y&#x3D;1$</p>
+<p>$x^2+y^2&#x3D;2$</p>
+<p>$x^3+y^3&#x3D;?$</p>
+<p>$x^m+y^m&#x3D;?, m \ge 2, m \in \mathbb{Z}$</p>
+<h2 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h2><p>$x+y+z&#x3D;1$</p>
+<p>$x^2+y^2+z^2&#x3D;2$</p>
+<p>$x^3+y^3+z^3&#x3D;3$</p>
+<p>$x^4+y^4+z^4&#x3D;?$</p>
+<p>$x^m+y^m+z^m&#x3D;?, m \ge 3, m \in \mathbb{Z}$</p>
+<h2 id="问题n"><a href="#问题n" class="headerlink" title="问题n"></a>问题n</h2><p>$\sum_{i&#x3D;0}^n x_i&#x3D;1$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^2&#x3D;2$</p>
+<p>$\cdots$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^n&#x3D;n$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^{n+1}&#x3D;?$</p>
+<p>$\sum_{i&#x3D;0}^n x_i^{m}&#x3D;?, m \ge n, m \in \mathbb{Z}$</p>
+<hr>
+<p>TLDR</p>
+<p>例如3阶 已知</p>
+<p>$S_i&#x3D;x^i+y^i+z^i$</p>
+<p>$c_0&#x3D;n$</p>
+<p>$\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$</p>
+<p>例如 3阶 $X&#x3D;[-\frac{c_1}{c_0},-\frac{c_2}{c_0},-\frac{c_3}{c_0};1,0,0;0,1,0]$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[V,D]=eig(X) % D是对角特征值矩阵，V是特征向量对应位置组成的矩阵</span><br></pre></td></tr></table></figure>
+
+<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
+<span id="more"></span>
+
+<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h2><p><a href="https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642">https://baike.baidu.com/item/%E7%89%9B%E9%A1%BF%E6%81%92%E7%AD%89%E5%BC%8F/1285642</a></p>
+<p>$F(x)&#x3D;0$的$n$个根$x_1,\cdots,x_n$</p>
+<p>$S_k&#x3D;\sum_{i&#x3D;1}^n x_i^k$</p>
+<p>对于 $k &gt; n$, $\sum_{i&#x3D;0}^n C_iS_{k-n}&#x3D;0$ 也就是 按照幂次逐步上升的系数 是常系数</p>
+<p>对于 $k\in[1,n], (\sum_{i&#x3D;0}^{k-1}C_iS_{k-i})+kC_k&#x3D;0$ 表明和上面系数对应，且如果知道所有$C_{&lt;i}$可以这样求得$C_i$</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>以上面的问题为例, 我们可以求得 $x+y+z,xy+yz+zx,xyz$的值</p>
+<p>也就意味着$0&#x3D;(x-a)(x-b)(x-c)&#x3D;x^3-(a+b+c)x^2+(ab+bc+ca)x-abc$ 这样对应到3次方程的3个根</p>
+<p>不妨写作 $C_0x^3+C_1x^2+C_2x+C_3&#x3D;0$</p>
+<p>那么同时乘上$x^k$ 有 $C_0x^{3+k}+C_1x^{2+k}+C_2x^{1+k}+C_3x^k&#x3D;0$</p>
+<p>$S_k&#x3D;x_0^k+x_1^k+x_2^k$ 是加和关系，所以 $S$也满足这个式子</p>
+<hr>
+<p>$f(x)&#x3D;\prod_{i}^n (x-a_i)&#x3D;\sum_{i&#x3D;0}^n c_ix^{n-i}$</p>
+<p>$f’(x)&#x3D;\sum_i^n \frac{f(x)}{x-a_i}$ 不展开求导</p>
+<p>分解 $x^{k+1}f’(x)&#x3D;(\sum_{i&#x3D;0}^k s_ix^{k-i})f(x)+g(x)$ , 这里是按 多项式除法，左边是被除，<code>f(x)</code>是除，f左边是商(系数), g(x)是余数,所以g(x)的最高幂次小于n</p>
+<p>$x^{k+1}f’(x)&#x3D;x^{k+1}\sum_{i&#x3D;0}^n \frac{f(x)}{x-a_i}$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}f(x)}{x-a_i}$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}+a_i^{k+1}}{x-a_i}f(x)$</p>
+<p>$\displaystyle &#x3D;\sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i}f(x)+\sum_{i&#x3D;0}^n \frac{a_i^{k+1}}{x-a_i}f(x)$  这里对应了上面的多项式除法表达式</p>
+<p>对于商 $\displaystyle \sum_{i&#x3D;0}^n \frac{x^{k+1}-a_i^{k+1}}{x-a_i} &#x3D; \sum_{i&#x3D;0}^n \sum_{j&#x3D;0}^k a_i^jx^{k-j}$</p>
+<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k \sum_{i&#x3D;0}^n  a_i^jx^{k-j}$ 交换积分顺序</p>
+<p> $\displaystyle &#x3D; \sum_{j&#x3D;0}^k S_j x^{k-j}$ </p>
+<p>综上 $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
+<hr>
+<p>根据  $\displaystyle x^{k+1}f’(x) &#x3D; (\sum_{j&#x3D;0}^k S_j x^{k-j})f(x) + g(x)$ </p>
+<p>研究$x^n$的系数</p>
+<p>对于 $k\le n-1$, </p>
+<p>左边 $x^{k+1}(c_{k}x^{n-k})’ &#x3D; (n-k)c_kx^{n}$</p>
+<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;0}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
+<p> $\displaystyle &#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}x^{n}$</p>
+<p> $\displaystyle (n-k)c_k&#x3D;\sum_{i&#x3D;0}^k S_i c_{k-i}$</p>
+<p>注意到 $S_0&#x3D;\sum x_i^0 &#x3D; \sum 1&#x3D;n$,所以右侧$\displaystyle &#x3D; (\sum_{i&#x3D;1}^k S_i c_{k-i}) + nc_k$</p>
+<p>综上 $\displaystyle -kc_k&#x3D;\sum_{i&#x3D;1}^k S_i c_{k-i}$</p>
+<p>综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n-1$</p>
+<hr>
+<p>类似的$k\ge n$ 同样研究$x^n$的系数</p>
+<p>左边&#x3D;0</p>
+<p>右侧 $\displaystyle &#x3D; \sum_{i&#x3D;k-n}^k S_i x^{k-i} c_{k-i}x^{n-(k-i)}$, $g(x)$中不含$x^n$的项</p>
+<p> $\displaystyle &#x3D;\sum_{i&#x3D;k-n}^k S_i c_{k-i}x^{n}$, 也就是上面的不变的结论</p>
+<p>取$k&#x3D;n$有</p>
+<p> $\displaystyle \sum_{i&#x3D;0}^n S_i c_{n-i}&#x3D;0$, </p>
+<p>注意到$S_0&#x3D;n$,同样满足上面的公式，综上 $\displaystyle c_k&#x3D;-\frac{\sum_{i&#x3D;1}^k S_i c_{k-i}}{k}, k\le n$ 可以算出所有$c_{0\to n}$, (注$(c_{n-0}x^0)’&#x3D;0$ 所以也很自然)</p>
+<hr>
+<p>回到题目</p>
+<p>$c_0&#x3D;n&#x3D;3$</p>
+<p>$\displaystyle c_1&#x3D;-\frac{\sum_{i&#x3D;1}^1S_1c_{1-i}}{1}&#x3D;-\frac{1*3}{1}&#x3D;-3$</p>
+<p>$\displaystyle c_2&#x3D;-\frac{\sum_{i&#x3D;1}^2S_1c_{2-i}}{2}&#x3D;-\frac{1*(-3)+2*3}{2}&#x3D;-\frac{3}{2}$</p>
+<p>$\displaystyle c_3&#x3D;-\frac{\sum_{i&#x3D;1}^3S_1c_{3-i}}{3}&#x3D;-\frac{1*(-3&#x2F;2)+2*(-3)+3*3}{3}&#x3D;-\frac{1}{2}$</p>
+<p>$c_0S_k+c_1S_{k-1}+c_2S_{k-2}+c_3S_{k-3}&#x3D;0$</p>
+<p>$S_k&#x3D;S_{k-1}+\frac{1}{2}S_{k-2}+\frac{1}{6}S_{k-3}$</p>
+<p>$x^4+y^4+z^4&#x3D;1 * 3+ \frac{1}{2} * 2 +\frac{1}{6} * 1 &#x3D; \frac{25}{6}$</p>
+<p>$x^5+y^5+z^5&#x3D;1 * \frac{25}{6}+ \frac{1}{2} * 3 +\frac{1}{6} * 2 &#x3D; 6$</p>
+<p>$[S_k;S_{k-1};S_{k-2}] &#x3D; [1,1&#x2F;2,1&#x2F;6;1,0,0;0,1,0] * [S_{k-1};S_{k-2};S_{k-3}]$</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">X=[1,1/2,1/6;1,0,0;0,1,0];</span><br><span class="line">[V,D] = eig(X)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">D =</span><br><span class="line"></span><br><span class="line">   1.4308 + 0.0000i   0.0000 + 0.0000i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i  -0.2154 + 0.2647i   0.0000 + 0.0000i</span><br><span class="line">   0.0000 + 0.0000i   0.0000 + 0.0000i  -0.2154 - 0.2647i</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">V = 这里V不是正交矩阵，但是 是特征向量矩阵</span><br><span class="line"></span><br><span class="line">   0.7609 + 0.0000i   0.0223 + 0.1073i   0.0223 - 0.1073i</span><br><span class="line">   0.5318 + 0.0000i   0.2027 - 0.2490i   0.2027 + 0.2490i</span><br><span class="line">   0.3717 + 0.0000i  -0.9407 + 0.0000i  -0.9407 + 0.0000i</span><br><span class="line"></span><br><span class="line">[S_k;S_&#123;k-1&#125;;S_&#123;k-2&#125;]  = V * D^&#123;k-3&#125; * V^&#123;-1&#125; * [3;2;1]</span><br></pre></td></tr></table></figure>
+
+
+<p>$x^k+y^k+z^k &#x3D; S_k  &#x3D; [1;0;0] * V * D^{k-3} * V^{-1} * [3;2;1]$</p>
+]]></content>
+      <categories>
+        <category>代数</category>
+      </categories>
+      <tags>
+        <tag>高等代数</tag>
+        <tag>线性代数</tag>
+        <tag>newton_identities</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数论基础 一 整数的可除性</title>
     <url>/Math/number_theory_1/</url>
     <content><![CDATA[<p>ISBN 9787040364729</p>
@@ -15189,69 +15189,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数论基础 四 同余</title>
-    <url>/Math/number_theory_4/</url>
-    <content><![CDATA[<p>ISBN 9787040364729</p>
-<span id="more"></span>
-
-<h1 id="1-概念及基本性质"><a href="#1-概念及基本性质" class="headerlink" title="1.概念及基本性质"></a>1.概念及基本性质</h1><p>定义1: 正整数$m$称为模,$a,b$为任意两个整数, 若它们被$m$除后所得余数相同,则称作同余,记作$a\equiv b\pmod m$,否则$a\not \equiv b\pmod p$</p>
-<p>定理1: 上式等价于$m|(a-b)$, 根据第一章除法性质唯一余数</p>
-<p>基本性质:</p>
-<ul>
-<li>$a\equiv a\pmod m$</li>
-<li>$a\equiv b\pmod m \Leftrightarrow b\equiv a\pmod m$</li>
-<li>$a\equiv b\pmod m,b\equiv c\pmod m\Rightarrow a\equiv c\pmod m$</li>
-<li>$a_i\equiv b_i\pmod m \Rightarrow \sum {a_i}\equiv \sum b_i\pmod m$</li>
-<li>$a_i\equiv b_i\pmod m \Rightarrow \prod {a_i}\equiv \prod b_i\pmod m$</li>
-<li>$ab\equiv bd\pmod m,c\equiv d\pmod m,\gcd(c,m)&#x3D;1 \Rightarrow a\equiv b\pmod m$</li>
-</ul>
-<p>定理2: $A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\pmod m,x_i\equiv y_i\pmod m\Rightarrow \sum A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod x_i^{\alpha_i}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod y_i^{\alpha_i}\pmod m$<br>例1: $K$为正整数, 试着求为9的整除判别法</p>
-<p>$K&#x3D;\sum_{i\in[0,l]}10^i a_i,10^i\equiv 1 \pmod 9$</p>
-<p>由定理2: $K &#x3D; \sum_{i\in [0,l]}a_i\pmod 9$</p>
-<p>定理3: $K\ne 0$, $a\equiv b\pmod m \Leftrightarrow aK\equiv bK \pmod {Km}$</p>
-<p>定理4: 社$aC\equiv bC \pmod m, d&#x3D;\gcd(m,C)$则 $a\equiv b \pmod{\frac{m}{d}}$ </p>
-<p>$m|C(a-b) \Rightarrow \frac{m}{d} | \frac{C}{d}(a-b) \Rightarrow \frac{m}{d}|(a-b)$</p>
-<p>定理5: $d\ne 0, d|m , a\equiv b\pmod m \Rightarrow a\equiv b \pmod d$</p>
-<p>定理6: $a\equiv b\pmod {m_1},a\equiv b\pmod {m_2} \Leftrightarrow a\equiv b \pmod{\mathrm{lcm}(m_1,m_2)}$</p>
-<p>定理7: $a\equiv b\pmod m \Rightarrow \gcd(a,m)&#x3D;\gcd(b,m)$</p>
-<h1 id="2-剩余类及剩余系"><a href="#2-剩余类及剩余系" class="headerlink" title="2.剩余类及剩余系"></a>2.剩余类及剩余系</h1><p>定义2: 对$m$同余的整数的集合 剩余类（同余类）,（如果和$m$互素,则互素剩余类）, 可以分成$m$个剩余类</p>
-<p>定义3: 每个剩余类中任取一个数,组成的叫做模$m$的完全剩余系, (在每个和$m$互素的剩余类中任取一个,叫做简化(互素)剩余系)</p>
-<p>$0,1,\cdots,m-1$称作模$m$的最小非负完全剩余系</p>
-<p>把大于$\frac{m}{2}$的变成负的，则称作模$m$的绝对最小完全系</p>
-<p>素数的常用简化系$1,2,\cdots,p-1$</p>
-<p>定理8: $m$个整数组成模$m$的一个完全系的充要条件是这$m$个数两两对模$m$不同余</p>
-<p>定理9: $\phi(m)$个整数组成模$m$的一个简化系的充要条件是,这些数与$m$互素,且它们对模$m$两两不同余</p>
-<p>定理10: $m$自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的完全系时,$Kx+l$也通过$m$的完全系, (通过$x$不同余得到$Kx+l$不同余可证明</p>
-<p>定理11: $m$为自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的简化系时,$Kx+lm$也通过$m$的简化系,(同样，多证明一个和$m$的$\gcd$即可)</p>
-<p>定理12: $m_1,m_2$为自然数$(m_1,m_2)&#x3D;1$,当$x,y$分别通过模$m_1,m_2$的完全(简化)系时,$m_2x+m_1y$通过模$m&#x3D;m_1m_2$的完全(简化)系</p>
-<p>定理13(Euler): 设$m &gt; 1,\gcd(a,m)&#x3D;1$则$a^{\phi(m)}\equiv 1\pmod m$</p>
-<p>证明:</p>
-<p>$x_1,x_2,\cdots,x_{\phi(m)}$为一个简化系, </p>
-<p>$ax_1,ax_2,\cdots,ax_{\phi(m)}$为一个简化系, 定理11</p>
-<p>$\prod x_i\equiv \prod ax_i \pmod m$</p>
-<p>$\prod x_i\equiv a^{\phi(m)}\prod x_i \pmod m$</p>
-<p>$1 \equiv a^{\phi(m)} \pmod m$</p>
-<p>定理14(Fermat): 若$m&#x3D;p$为素数,则$a^{p-1}\equiv 1 \pmod p$</p>
-<p>重要应用, $f(n)$为模$m$为周期的数论函数</p>
-<p>$\displaystyle F(m)&#x3D;\sum_{x\pmod m} f(x)$ 表示对模$m$的一个完全系求和</p>
-<p>$\displaystyle G(m)&#x3D;\sum_{x\pmod m}’ f(x)$ 表示对模$m$的一个简化系求和</p>
-<p>定理15: $\displaystyle \sum_{x\pmod m} f(x)&#x3D;\sum_{x\pmod m} f(Kx+l),\gcd(K,m)&#x3D;1$,$\displaystyle \sum_{x\pmod m}’ f(x)&#x3D;\sum_{x\pmod m}’ f(Kx+l),\gcd(K,m)&#x3D;1$</p>
-<p>定理16: 设$f(n)&#x3D;e^{2\pi i\frac{n}{m}}$,则$F(m),G(m)$均为可乘函数</p>
-<h1 id="3-同余方程的一般概念，一次同余方程"><a href="#3-同余方程的一般概念，一次同余方程" class="headerlink" title="3. 同余方程的一般概念，一次同余方程"></a>3. 同余方程的一般概念，一次同余方程</h1><h1 id="4-孙子定理"><a href="#4-孙子定理" class="headerlink" title="4. 孙子定理"></a>4. 孙子定理</h1><h1 id="5-多项式的恒等同余"><a href="#5-多项式的恒等同余" class="headerlink" title="5. 多项式的恒等同余"></a>5. 多项式的恒等同余</h1><h1 id="6-模p的高次同余方程"><a href="#6-模p的高次同余方程" class="headerlink" title="6. 模p的高次同余方程"></a>6. 模p的高次同余方程</h1><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-xxxx"><a href="#2-xxxx" class="headerlink" title="2. xxxx"></a>2. xxxx</h2><details class="note info no-icon"><summary><p>Proof</p>
-</summary>
-
-</details>]]></content>
-      <categories>
-        <category>数论</category>
-        <category>数论基础</category>
-      </categories>
-      <tags>
-        <tag>数论基础</tag>
-        <tag>欧拉定理</tag>
-        <tag>费马小定理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数论基础 三 素数分布的一些初等结果</title>
     <url>/Math/number_theory_3/</url>
     <content><![CDATA[<p>ISBN 9787040364729</p>
@@ -15617,6 +15554,69 @@
         <tag>Bertrand 假设</tag>
         <tag>M(x)</tag>
         <tag>L(x)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数论基础 四 同余</title>
+    <url>/Math/number_theory_4/</url>
+    <content><![CDATA[<p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="1-概念及基本性质"><a href="#1-概念及基本性质" class="headerlink" title="1.概念及基本性质"></a>1.概念及基本性质</h1><p>定义1: 正整数$m$称为模,$a,b$为任意两个整数, 若它们被$m$除后所得余数相同,则称作同余,记作$a\equiv b\pmod m$,否则$a\not \equiv b\pmod p$</p>
+<p>定理1: 上式等价于$m|(a-b)$, 根据第一章除法性质唯一余数</p>
+<p>基本性质:</p>
+<ul>
+<li>$a\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m \Leftrightarrow b\equiv a\pmod m$</li>
+<li>$a\equiv b\pmod m,b\equiv c\pmod m\Rightarrow a\equiv c\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \sum {a_i}\equiv \sum b_i\pmod m$</li>
+<li>$a_i\equiv b_i\pmod m \Rightarrow \prod {a_i}\equiv \prod b_i\pmod m$</li>
+<li>$ab\equiv bd\pmod m,c\equiv d\pmod m,\gcd(c,m)&#x3D;1 \Rightarrow a\equiv b\pmod m$</li>
+</ul>
+<p>定理2: $A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\pmod m,x_i\equiv y_i\pmod m\Rightarrow \sum A_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod x_i^{\alpha_i}\equiv B_{\alpha_1,\alpha_2,\cdots,\alpha_k}\prod y_i^{\alpha_i}\pmod m$<br>例1: $K$为正整数, 试着求为9的整除判别法</p>
+<p>$K&#x3D;\sum_{i\in[0,l]}10^i a_i,10^i\equiv 1 \pmod 9$</p>
+<p>由定理2: $K &#x3D; \sum_{i\in [0,l]}a_i\pmod 9$</p>
+<p>定理3: $K\ne 0$, $a\equiv b\pmod m \Leftrightarrow aK\equiv bK \pmod {Km}$</p>
+<p>定理4: 社$aC\equiv bC \pmod m, d&#x3D;\gcd(m,C)$则 $a\equiv b \pmod{\frac{m}{d}}$ </p>
+<p>$m|C(a-b) \Rightarrow \frac{m}{d} | \frac{C}{d}(a-b) \Rightarrow \frac{m}{d}|(a-b)$</p>
+<p>定理5: $d\ne 0, d|m , a\equiv b\pmod m \Rightarrow a\equiv b \pmod d$</p>
+<p>定理6: $a\equiv b\pmod {m_1},a\equiv b\pmod {m_2} \Leftrightarrow a\equiv b \pmod{\mathrm{lcm}(m_1,m_2)}$</p>
+<p>定理7: $a\equiv b\pmod m \Rightarrow \gcd(a,m)&#x3D;\gcd(b,m)$</p>
+<h1 id="2-剩余类及剩余系"><a href="#2-剩余类及剩余系" class="headerlink" title="2.剩余类及剩余系"></a>2.剩余类及剩余系</h1><p>定义2: 对$m$同余的整数的集合 剩余类（同余类）,（如果和$m$互素,则互素剩余类）, 可以分成$m$个剩余类</p>
+<p>定义3: 每个剩余类中任取一个数,组成的叫做模$m$的完全剩余系, (在每个和$m$互素的剩余类中任取一个,叫做简化(互素)剩余系)</p>
+<p>$0,1,\cdots,m-1$称作模$m$的最小非负完全剩余系</p>
+<p>把大于$\frac{m}{2}$的变成负的，则称作模$m$的绝对最小完全系</p>
+<p>素数的常用简化系$1,2,\cdots,p-1$</p>
+<p>定理8: $m$个整数组成模$m$的一个完全系的充要条件是这$m$个数两两对模$m$不同余</p>
+<p>定理9: $\phi(m)$个整数组成模$m$的一个简化系的充要条件是,这些数与$m$互素,且它们对模$m$两两不同余</p>
+<p>定理10: $m$自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的完全系时,$Kx+l$也通过$m$的完全系, (通过$x$不同余得到$Kx+l$不同余可证明</p>
+<p>定理11: $m$为自然数,$K,l$为任意整数,$\gcd(K,m)&#x3D;1$,则当$x$通过$m$的简化系时,$Kx+lm$也通过$m$的简化系,(同样，多证明一个和$m$的$\gcd$即可)</p>
+<p>定理12: $m_1,m_2$为自然数$(m_1,m_2)&#x3D;1$,当$x,y$分别通过模$m_1,m_2$的完全(简化)系时,$m_2x+m_1y$通过模$m&#x3D;m_1m_2$的完全(简化)系</p>
+<p>定理13(Euler): 设$m &gt; 1,\gcd(a,m)&#x3D;1$则$a^{\phi(m)}\equiv 1\pmod m$</p>
+<p>证明:</p>
+<p>$x_1,x_2,\cdots,x_{\phi(m)}$为一个简化系, </p>
+<p>$ax_1,ax_2,\cdots,ax_{\phi(m)}$为一个简化系, 定理11</p>
+<p>$\prod x_i\equiv \prod ax_i \pmod m$</p>
+<p>$\prod x_i\equiv a^{\phi(m)}\prod x_i \pmod m$</p>
+<p>$1 \equiv a^{\phi(m)} \pmod m$</p>
+<p>定理14(Fermat): 若$m&#x3D;p$为素数,则$a^{p-1}\equiv 1 \pmod p$</p>
+<p>重要应用, $f(n)$为模$m$为周期的数论函数</p>
+<p>$\displaystyle F(m)&#x3D;\sum_{x\pmod m} f(x)$ 表示对模$m$的一个完全系求和</p>
+<p>$\displaystyle G(m)&#x3D;\sum_{x\pmod m}’ f(x)$ 表示对模$m$的一个简化系求和</p>
+<p>定理15: $\displaystyle \sum_{x\pmod m} f(x)&#x3D;\sum_{x\pmod m} f(Kx+l),\gcd(K,m)&#x3D;1$,$\displaystyle \sum_{x\pmod m}’ f(x)&#x3D;\sum_{x\pmod m}’ f(Kx+l),\gcd(K,m)&#x3D;1$</p>
+<p>定理16: 设$f(n)&#x3D;e^{2\pi i\frac{n}{m}}$,则$F(m),G(m)$均为可乘函数</p>
+<h1 id="3-同余方程的一般概念，一次同余方程"><a href="#3-同余方程的一般概念，一次同余方程" class="headerlink" title="3. 同余方程的一般概念，一次同余方程"></a>3. 同余方程的一般概念，一次同余方程</h1><h1 id="4-孙子定理"><a href="#4-孙子定理" class="headerlink" title="4. 孙子定理"></a>4. 孙子定理</h1><h1 id="5-多项式的恒等同余"><a href="#5-多项式的恒等同余" class="headerlink" title="5. 多项式的恒等同余"></a>5. 多项式的恒等同余</h1><h1 id="6-模p的高次同余方程"><a href="#6-模p的高次同余方程" class="headerlink" title="6. 模p的高次同余方程"></a>6. 模p的高次同余方程</h1><h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-xxxx"><a href="#2-xxxx" class="headerlink" title="2. xxxx"></a>2. xxxx</h2><details class="note info no-icon"><summary><p>Proof</p>
+</summary>
+
+</details>]]></content>
+      <categories>
+        <category>数论</category>
+        <category>数论基础</category>
+      </categories>
+      <tags>
+        <tag>数论基础</tag>
+        <tag>欧拉定理</tag>
+        <tag>费马小定理</tag>
       </tags>
   </entry>
   <entry>
