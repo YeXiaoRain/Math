@@ -8,10 +8,6 @@ tags:
   - 复函数
 ---
 
-isbn
-- 中文 9787111703365
-- 英文 9787111701026
-
 
 # 复函数 complex functions
 
@@ -26,6 +22,8 @@ isbn
 - 实变量 复函数
 
 每个函数都定义在一个开集上
+
+<!--more-->
 
 ### 极限与连续性 limits and continuity
 
