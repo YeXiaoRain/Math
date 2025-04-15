@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"right","display":"hide","padding":18,"offset":12},"copycode":{"enable":true,"style":"flat"},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/Math/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="第3章 作为映射的解析函数 Analytic functions as mappings函数 $w&#x3D;f(z)$ 可以看成是一个映射，它把点 $z$ 用它的象 $w$ 表示。本章的目的是以初等方式研究解析函数所规定的映射的一些特殊性质。 为了实现这一计划，需要推导出一些具有普遍性的基础概念，否则势必被迫引入许多特定的定义，而它们之间的相互关系却是不易辨清的。由于现在的学生在早期阶段就接受抽">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LarsVAhlfors 复分析 3 作为映射的解析函数">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Complex_Analysis_3/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="第3章 作为映射的解析函数 Analytic functions as mappings函数 $w&#x3D;f(z)$ 可以看成是一个映射，它把点 $z$ 用它的象 $w$ 表示。本章的目的是以初等方式研究解析函数所规定的映射的一些特殊性质。 为了实现这一计划，需要推导出一些具有普遍性的基础概念，否则势必被迫引入许多特定的定义，而它们之间的相互关系却是不易辨清的。由于现在的学生在早期阶段就接受抽">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/28c916d58ef2afd68c15595b9421029d.png">
+<meta property="article:published_time" content="2025-04-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-15T23:21:01.188Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="复分析">
+<meta property="article:tag" content="作为映射的解析函数">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i-blog.csdnimg.cn/blog_migrate/28c916d58ef2afd68c15595b9421029d.png">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Complex_Analysis_3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Complex_Analysis_3/","path":"Complex_Analysis_3/","title":"LarsVAhlfors 复分析 3 作为映射的解析函数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LarsVAhlfors 复分析 3 作为映射的解析函数 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/Math/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-archives"><a href="/Math/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">52</span></a></li><li class="menu-item menu-item-categories"><a href="/Math/categories/" rel="section"><i class="fa fa-shapes fa-fw"></i>分類<span class="badge">12</span></a></li><li class="menu-item menu-item-tags"><a href="/Math/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">85</span></a></li><li class="menu-item menu-item-rss"><a href="/Math/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>rss</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC3%E7%AB%A0-%E4%BD%9C%E4%B8%BA%E6%98%A0%E5%B0%84%E7%9A%84%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0-Analytic-functions-as-mappings"><span class="nav-text">第3章 作为映射的解析函数 Analytic functions as mappings</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%88%9D%E7%AD%89%E7%82%B9%E9%9B%86%E6%8B%93%E6%89%91-Elementary-point-set-topology"><span class="nav-text">3.1 初等点集拓扑 Elementary point set topology</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-1-%E9%9B%86%E5%92%8C%E5%85%83%E7%B4%A0-Sets-and-elments"><span class="nav-text">3.1.1 集和元素 Sets and elments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-2-%E5%BA%A6%E9%87%8F%E7%A9%BA%E9%97%B4-Metric-spaces"><span class="nav-text">3.1.2 度量空间 Metric spaces</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.1.2 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-3-%E8%BF%9E%E9%80%9A%E6%80%A7-Connectedness"><span class="nav-text">3.1.3 连通性 Connectedness</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.1.3 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-4-%E7%B4%A7%E8%87%B4%E6%80%A7-Compactness"><span class="nav-text">3.1.4 紧致性 Compactness</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.1.4 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-5-%E8%BF%9E%E7%BB%AD%E5%87%BD%E6%95%B0-Continuous-Functions"><span class="nav-text">3.1.5 连续函数 Continuous Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E7%90%86-10"><span class="nav-text">定理 10</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-5-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.1.5 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-6-%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4-Topological-Spaces"><span class="nav-text">3.1.6 拓扑空间 Topological Spaces</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%85%B1%E5%BD%A2%E6%80%A7-conformality"><span class="nav-text">3.2 共形性 conformality</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-1-%E5%BC%A7%E4%B8%8E%E9%97%AD%E6%9B%B2%E7%BA%BF-Arcs-and-Closed-Curves"><span class="nav-text">3.2.1 弧与闭曲线 Arcs and Closed Curves</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E5%9F%9F%E5%86%85%E7%9A%84%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0-Analytic-Functions-in-Regions"><span class="nav-text">3.2.2 域内的解析函数 Analytic Functions in Regions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-2-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.2.2 练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-3-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84-Confomal-Mapping"><span class="nav-text">3.2.3 共形映射 Confomal Mapping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-4-%E9%95%BF%E5%BA%A6%E5%92%8C%E9%9D%A2%E7%A7%AF-Length-and-Area"><span class="nav-text">3.2.4 长度和面积 Length and Area</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%BA%BF%E6%80%A7%E5%8F%98%E6%8D%A2-Linear-Transformations"><span class="nav-text">3.3 线性变换 Linear Transformations</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-%E7%BA%BF%E6%80%A7%E7%BE%A4-The-Linear-Group"><span class="nav-text">3.3.1 线性群 The Linear Group</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.3.1 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E4%BA%A4%E6%AF%94-The-cross-ratio"><span class="nav-text">3.3.2 交比 The cross ratio</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.3.2 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E5%AF%B9%E7%A7%B0%E6%80%A7-Symmetry"><span class="nav-text">3.3.3 对称性 Symmetry</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.3.3 练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-%E6%9C%89%E5%90%91%E5%9C%86-Oriented-Circles"><span class="nav-text">3.3.4 有向圆 Oriented Circles</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-4-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.3.4 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-5-%E5%9C%86%E6%97%8F-Families-of-Circles"><span class="nav-text">3.3.5 圆族 Families of Circles</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-5-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.3.5 练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%88%9D%E7%AD%89%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84-Elmentary-Confomal-Mappings"><span class="nav-text">3.4 初等共形映射 Elmentary Confomal Mappings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-%E9%98%B6%E5%B1%82%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%BA%94%E7%94%A8-The-Use-of-Level-Curves"><span class="nav-text">3.4.1 阶层曲线的应用 The Use of Level Curves</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-%E5%88%9D%E7%AD%89%E6%98%A0%E5%B0%84%E6%A6%82%E8%BF%B0-A-Survey-of-Elementary-Mappings"><span class="nav-text">3.4.2 初等映射概述 A Survey of Elementary Mappings</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.4.2 练习</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-%E5%88%9D%E7%AD%89%E9%BB%8E%E6%9B%BC%E9%9D%A2-Elementary-Riemann-Surfaces"><span class="nav-text">3.4.3 初等黎曼面 Elementary Riemann Surfaces</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-3-%E7%BB%83%E4%B9%A0"><span class="nav-text">3.4.3 练习</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9A%8F%E6%83%B3"><span class="nav-text">随想</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="YeXiaoRain"
+      src="https://avatars.githubusercontent.com/u/7298239?v=4">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yexiaorain" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yexiaorain" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yexiaorain@gmail.com" title="E-Mail → mailto:yexiaorain@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://atcoder.jp/users/cromarmot" title="https:&#x2F;&#x2F;atcoder.jp&#x2F;users&#x2F;cromarmot" rel="noopener" target="_blank">AtCoder</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://codeforces.com/profile/YeXiaoRain" title="https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;YeXiaoRain" rel="noopener" target="_blank">Codeforces</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Complex_Analysis_3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars.githubusercontent.com/u/7298239?v=4">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LarsVAhlfors 复分析 3 作为映射的解析函数 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LarsVAhlfors 复分析 3 作为映射的解析函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-04-15 00:00:00" itemprop="dateCreated datePublished" datetime="2025-04-15T00:00:00+08:00">2025-04-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-04-16 07:21:01" itemprop="dateModified" datetime="2025-04-16T07:21:01+08:00">2025-04-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E5%A4%8D%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">复分析</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/Math/Complex_Analysis_3/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Complex_Analysis_3/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>69k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1:03</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="第3章-作为映射的解析函数-Analytic-functions-as-mappings"><a href="#第3章-作为映射的解析函数-Analytic-functions-as-mappings" class="headerlink" title="第3章 作为映射的解析函数 Analytic functions as mappings"></a>第3章 作为映射的解析函数 Analytic functions as mappings</h1><p>函数 $w&#x3D;f(z)$ 可以看成是一个映射，它把点 $z$ 用它的象 $w$ 表示。本章的目的是以初等方式研究解析函数所规定的映射的一些特殊性质。</p>
+<p>为了实现这一计划，需要推导出一些具有普遍性的基础概念，否则势必被迫引入许多特定的定义，而它们之间的相互关系却是不易辨清的。由于现在的学生在早期阶段就接受抽象和普遍性的教育，所以无须多说。但是，提出这样的警告可能较为恰当，即最大程度的普遍性不应当成为目的</p>
+<p>在3.1节，我们将介绍点集拓扑和度量空间的一些基础知识。由于我们只涉及研究解析函数所必需的一些基本性质，所以不需作更深入的讨论。如果读者认为自己已经完全熟悉了这部分内容，那就只需读一下专门术语就可以了。</p>
+<p>作者认为：要熟练地研究解析函数，既需要几何直觉，又需要计算技巧。为此，在与3.1节仅有较少联系的3.2、3.3节中，特意通过详细研究一些初等映射来讨论几何直觉。同时我们将几何图像作为推理的指南而不是推理的基础，由此尝试培养严密的几何思维。</p>
+<span id="more"></span>
+
+<h2 id="3-1-初等点集拓扑-Elementary-point-set-topology"><a href="#3-1-初等点集拓扑-Elementary-point-set-topology" class="headerlink" title="3.1 初等点集拓扑 Elementary point set topology"></a>3.1 初等点集拓扑 Elementary point set topology</h2><p>拓扑学是数学的一个分支，它所研究的是与连续性直接或间接有关的一切问题。传统上，这一术语是广义的，一般没有严格的限制。作拓扑的考察对解析函数论的基础有着极为重要的意义，我们对拓扑学作初步系统的研究就出于这样的需要。</p>
+<p>集合论的逻辑基础属于另一个学科。我们的讨论将是非常朴素的，所有的应用都针对大家熟悉的对象。在这样的限定框架内，不会出现逻辑上的矛盾。</p>
+<h3 id="3-1-1-集和元素-Sets-and-elments"><a href="#3-1-1-集和元素-Sets-and-elments" class="headerlink" title="3.1.1 集和元素 Sets and elments"></a>3.1.1 集和元素 Sets and elments</h3><p>所谓集set，是指一些可识别对象identifiable objects的一个集族collections，这些对象称为集的元素elements。读者应当熟悉记号 $x \in X$，它表示 $x$ 是 $X$ 的一个元素（我们约定用大写字母表示集，用小写字母表示元素）。两个集相等当且仅当它们有相同的元素。如果 $X$ 的每个元素也是 $Y$ 的元素，则说 $X$ 是 $Y$ 的一个子集，这个关系表示为 $X \subset Y$ 或 $Y \supset X$（我们并不排斥 $X&#x3D;Y$ 的可能性）。空集记为 $\varnothing$。</p>
+<p>一个集也可看成一个空间space，而把它的一个元素看成一点point。给定空间的各个子集通常叫作点集。这给语言增加了几何味，但不应当过分按字面理解。例如，我们考虑以函数为元素的空间，这时一个“点”就是一个函数。</p>
+<p>两个集 $X$ 与 $Y$ 的所有共同元素组成的集称为 $X$ 与 $Y$ 的交，记为 $X \cap Y$；由或者属于 $X$ 或者属于 $Y$ 的所有元素 (其中包括既属于 $X$ 又也属于 $Y$ 的那些元素) 组成的集称为 $X$ 与 $Y$ 的并，记为 $X \cup Y$。当然，我们可以作任意多个集的交和并，这里所说的 “任意多”，可以是有限，也可以是无穷。</p>
+<p>集 $X$ 的余集由不在 $X$ 中的所有点组成，记为 $\sim X$。注意余集与所讨论的点的总体有关。例如，一个实数集对于实轴来说有一个余集，而对于复平面来说有另一个余集。更一般地，如果 $X \subset Y$，可考虑相对余集 $Y \sim X$，它由在 $Y$ 中但不在 $X$ 中的所有点组成（可看到仅当 $X \subset Y$ 时用这种记法才更清楚一些）。</p>
+<p>记住下述分配律：</p>
+<p>$$X \cup (Y \cap Z) &#x3D; (X \cup Y) \cap (X \cup Z)$$<br>$$X \cap (Y \cup Z) &#x3D; (X \cap Y) \cup (X \cap Z)$$</p>
+<p>和德·摩根律De Morgan laws：</p>
+<p>$$\sim (X \cup Y) &#x3D; \sim X \cap \sim Y$$<br>$$\sim (X \cap Y) &#x3D; \sim X \cup \sim Y$$</p>
+<p>是有帮助的。这些纯粹是逻辑恒等式，把它们推广到任意多个集合可以轻易得到。</p>
+<h3 id="3-1-2-度量空间-Metric-spaces"><a href="#3-1-2-度量空间-Metric-spaces" class="headerlink" title="3.1.2 度量空间 Metric spaces"></a>3.1.2 度量空间 Metric spaces</h3><p>对于极限和连续性的所有考察中，本质的一点是要给出术语 “充分接近 sufficiently near” 和 “任意接近arbitrarily near” 的精确意义。在实数空间 $\mathbf{R}$ 和复数空间 $\mathbf{C}$ 中，这样的接近程度可以用一个定量关系quantitative condition $|x - y| &lt; \epsilon$ 来表达。</p>
+<ul>
+<li>例如，我们说集合 $X$ 包含充分接近 $y$ 的所有 $x$ 是指：存在一个 $\epsilon &gt; 0$ 使得只要 $|x - y| &lt; \epsilon$ 就有 $x \in X$。</li>
+<li>类似地，$X$ 包含任意接近 $y$ 的点，是指对任一 $\epsilon &gt; 0$ 存在一个 $x \in X$ 使得 $|x - y| &lt; \epsilon$。</li>
+</ul>
+<blockquote>
+<p>?????? 不是？？这区别不是 第一个多个一个“所有”吗？？？，第一个感觉是 某邻域是 X的子集，而第二个是y是X的极限点，这感觉是 拓扑的 开,闭 的基础相关的内容</p>
+</blockquote>
+<p>需要以定量的词汇来描述接近程度的显然是两点之间的距离 $d(x, y)$。集 $S$ 称为度量空间，是指对于每一对 $x \in S$, $y \in S$，定义了一个非负实数 $d(x, y)$ 使下面的条件得到满足：</p>
+<ol>
+<li>$d(x, y) &#x3D; 0$ 当且仅当 $x &#x3D; y$。</li>
+<li>$d(y, x) &#x3D; d(x, y)$。</li>
+<li>$d(x, z) \leq d(x, y) + d(y, z)$。</li>
+</ol>
+<p>最后一个条件是三角形不等式。</p>
+<p>例如，</p>
+<ul>
+<li>$\mathbf{R}$ 和 $\mathbf{C}$ 都是度量空间，具有距离 $d(y, x) &#x3D; |x - y|$。</li>
+<li>$n$ 维欧几里得空间 $\mathbf{R}^n$ 是实 $n$ 元组$x &#x3D; (x_1, \cdots, x_n)$的集合，其中距离定义为 $d(x, y)^2 &#x3D; \sum_{i&#x3D;1}^{n} (x_i - y_i)^2$。</li>
+<li>我们曾经定义过扩充复平面中的距离为$d(z, z’) &#x3D; \frac{2 |z - z’|}{\sqrt{(1 + |z|^2)(1 + |z’|^2)}}$ (见 1.2.4 节)。因为这表示黎曼球面上球极象之间的欧几里得距离，所以三角形不等式显然成立<ul>
+<li>当然也可以定义成 $|z-z’|$ , 但这太朴素了，这里用这个d是为了 表现距离函数 的基础三条性质。</li>
+</ul>
+</li>
+<li>函数空间的一个例子是 $C[a, b]$，即定义在区间 $a \leqslant x \leqslant b$ 上的所有连续函数的集合。如果定义其中的距离为 $d(f, g) &#x3D; \max |f(x) - g(x)|$，它就成为一个度量空间。</li>
+<li>另外的练习中的第1题例子也好，</li>
+<li>或者平面上定义 各坐标差的和，也是距离函数$d((x_0,y_0),(x_1,y_1))&#x3D;|x_0-x_1|+|y_0-y_1|$ 而这种的还有额外的特点，最短路径不唯一</li>
+</ul>
+<p>我们引入下面用距离表示的术语：对于任一 $\delta &gt; 0$ 和任一 $y \in S$，所有的 $x \in S$ 组成的集合 $B(y, \delta)$，其中的距离 $d(x, y) &lt; \delta$，称为中心为 $y$、半径为 $\delta$ 的球，又称为 $y$ 的 $\delta$ 邻域。</p>
+<p>邻域的一般定义如下：</p>
+<p><strong>定义1</strong> 集 $N \subseteq S$ 称为 $y \in S$ 的一个邻域neighborhood，如果它包含球 $B(y, \delta)$。</p>
+<ul>
+<li>换句话说，$y$ 的一个邻域是一个集合，由所有充分接近 $y$ 的点组成。我们用邻域的概念来定义开集：</li>
+<li>这里 和 其它书不一样，这里N更大，而有些书的邻域直接就是球$B(y,\delta)$, 特别的有些书会用$r$而不是$\delta$</li>
+<li>还是觉得好怪? 这样邻域只要包含开球，那么可以很大? (虽然按照开球定义也可以很大, 感觉对于”邻”的表现不足)</li>
+<li>“Neighborhood” 一词来源于中古英语 “neighbour” 加上后缀 “-hood”。”Neighbour” 源自古英语 “nēahgebūr”，它由两个部分组成：”nēah” 意为 “near”（近），与现代英语的 “nigh” 同源；”gebūr” 意为 “dweller” 或 “resident”（居民），这与现代英语的 “boor” 同源，在演变过程中，这个词经历了从古英语到中古英语的变化，并最终形成了现代英语中的 “neighbor”</li>
+</ul>
+<p><strong>定义2</strong> 一个集称为开集，如果它是其每一个元素的一个邻域。</p>
+<ul>
+<li>emmmmm, 数学分析原理的 邻域定义就不同，而按照数学分析原理的定义，这里应该是，E是开集，当x in E,则存在r, x的邻域 in E</li>
+</ul>
+<p>下面是三角形不等式的一个直接推论：</p>
+<p>每一个球是一个开集。</p>
+<ul>
+<li>类似的，数学分析原理的“邻域”的定义，这里就应该是邻域是开集</li>
+</ul>
+<p>事实上，如果 $z \in B(y, \delta)$，则 $\delta’ &#x3D; \delta - d(y, z) &gt; 0$。由于 $d(x, z) &lt; \delta’$ 给出 $d(x, y) &lt; \delta’ + d(y, z) &#x3D; \delta$，所以三角形不等式表明 $B(z, \delta’) \subseteq B(y, \delta)$。因此 $B(y, \delta)$ 是 $z$ 的一个邻域，又因为 $z$ 是 $B(y, \delta)$ 中的任一点，所以 $B(y, \delta)$ 是一个开集。为了强调，一个球有时称为开球，以区别于全体 $x \in S$ 组成的闭球，其中 $d(x, y) \leqslant \delta$。</p>
+<ul>
+<li>简单说 从二维的图像直觉上看, 开球任意点x, 半径$(r-x到圆心)&#x2F;2$总可以被包裹，因为有三角不等式, 然后公式化证明它</li>
+</ul>
+<p>在复平面上 $B(z_0, \delta)$ 是一个开圆盘，中心为 $z_0$，半径为 $\delta$，它由所有满足严格不等式 $|z - z_0| &lt; \delta$ 的复数 $z$ 组成。我们刚证明了它是一个开集，读者可用几何术语来解释该证明。</p>
+<p>开集的余集称为闭集。在任一度量空间中，空集和全空间是既开又闭的，可能还有其他集具有同样的性质。</p>
+<ul>
+<li>这里也不一样, 数学分析原理 用了更拓扑的定义，从极限点，E的所有极限点属于E来定义闭集，再证明开的余集是闭集，</li>
+<li>而且数学分析原理的这样的定义，可以去证明 (E的闭包) &#x3D; ((E的闭包) 的闭包)</li>
+</ul>
+<p>下列是开集和闭集的基本性质：</p>
+<ul>
+<li>有限多个开集的交是开的。</li>
+<li>任意多个开集的并是开的。</li>
+<li>有限多个闭集的并是闭的。</li>
+<li>任意多个闭集的交是闭的。</li>
+</ul>
+<p>证明是很明显的，留给读者。应当指出的是，后两个命题可用德·摩根律从前两个命题导出来。</p>
+<ul>
+<li>说真的 这我真不觉得明显，因为 任意多，有可数和不可数（虽然这里不影响，然后有 紧性，紧性到有限开覆盖，有限 和 确界 才有 $min(E) \in E$ , 好了 越说越爱rudin了</li>
+</ul>
+<p>有许多通常使用的名词术语与开集的概念直接有关，全部列出来会引起混乱，所以我们只限于使用下面一些：内部、闭包、边界、外部。</p>
+<p>（ⅰ）集 $X$ 的内部是包含在 $X$ 中的最大开集。它是存在的，因为它可以刻画成所有开集 $\sqsubset X$ 的并。也可以把它说成是以 $X$ 为邻域的所有点组成的集合。记为 Int$X$。</p>
+<ul>
+<li>数学分析原理 倒是没有这个</li>
+</ul>
+<p>（ⅱ）$X$ 的闭包是包含 $X$ 的最小闭集，或者所有闭集 $\sqsupset X$ 的交。一个点属于 $X$ 的闭包，当且仅当所有它的邻域都与 $X$ 相交。闭包常记为 $X^{-}$，有时记为 Cl$X$。</p>
+<ul>
+<li>数学分析原理 记号是$\bar{X}$</li>
+</ul>
+<p>（ⅲ）$X$ 的边界是闭包减去内部。一个点属于边界，当且仅当所有它的邻域与 $X$ 和 $\sim X$ 都相交。记为 BdX 或 $\partial X$.</p>
+<ul>
+<li>这也是感觉 数学分析原理 更好的地方，因为数学分析原理 抓出了 邻域 和 极限点的概念，所以感觉抽离出 <code>点</code> 和 <code>r</code>, 而不用套这么多层，这样边界的定义 也可以是: 极限点 且 邻域不属于E &#x3D; 闭包 - 内部</li>
+</ul>
+<p>(Ⅳ) $X$ 的外部是 $\sim X$ 的内部。它也是闭包的余集，记为 $\sim X^{-}$.</p>
+<p>注意 Int$X \subseteq X \subseteq X^{-}$，如果 Int$X &#x3D; X$，则 $X$ 是开的；如果 $X^{-} &#x3D; X$，则 $X$ 是闭的。又 $X \subseteq Y$ 蕴涵着 Int$X \subseteq$Int$Y$，$X^{-} \subseteq Y^{-}$. 为了方便，下面引进孤立点和聚点的概念：我们说 $x \in X$ 是 $X$ 的一个孤立点，是指如果 $x$ 有一个邻域，此邻域与 $X$ 的交是点 $x$; 聚点是 $X^{-}$的一个点，但不是一个孤立点。显然 $x$ 是 $X$ 的一个聚点，当且仅当 $x$ 的每个邻域包含 $X$ 的无穷多个点。</p>
+<ul>
+<li>这里是“聚点”，也就是 极限点，但我感觉还是把它作为更基础的感觉更舒服</li>
+</ul>
+<h4 id="3-1-2-练习"><a href="#3-1-2-练习" class="headerlink" title="3.1.2 练习"></a>3.1.2 练习</h4><ol>
+<li>如果 $S$ 是一个度量空间，其距离函数为 $d(x, y)$，试证明 $S$ 以 $\delta(x, y) &#x3D; d(x, y) &#x2F; [1 + d(x, y)]$ 为距离函数时也是一个度量空间。后一个空间在所有距离不超过一个固定界的意义上是有界的。<ul>
+<li>非负</li>
+<li>只有自身为0</li>
+<li>对称</li>
+<li>三角不等<ul>
+<li>不是那么好证明，但抓其本质 大概的方向是 $f(x)&#x3D;x&#x2F;(1+x)$是上凸且递增的函数, 然后复合 一个 上凸性质的</li>
+<li>这个思路下 就容易有 $\delta(x,z)&#x3D;f(d(x,z))\le f(d(x,y)+d(y,z)) \le f(d(x,y)) + f(d(y,z))&#x3D;\delta(x,y)+\delta(y,z)$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[TODO]假设在同一个空间 $S$ 上，给定了两个距离函数 $d(x, y)$ 和 $d_1(x, y)$。如果它们确定相同的开集(?)，则称(?)它们是等价的。证明：如果对每一个 $\epsilon &gt; 0$，存在一个 $\delta &gt; 0$，使得 $d(x, y) &lt; \delta$ 蕴涵着 $d_1(x, y) &lt; \epsilon$，反之亦然，则 $d$ 与 $d_1$ 等价。验证这个条件在上题中也成立。<ul>
+<li>这里说的(确定相同的开集)是啥意思? 是开集的形状? 例如 $|x-y|$确定的二维是一个圆形内部，而$|x_0-x_1|+|y_0-y_1|$确定的是一个正方形内部 不等价??</li>
+</ul>
+</li>
+<li>直接用定义证明 $|z - z_0| &lt; \delta$ 的闭包是 $|z - z_0| \leq \delta$。</li>
+<li>如果 $X$ 是一个复数集合，其实部和虚部均为有理数，问 Int$X$、$X^{-}$、$\partial X$ 是什么？<ul>
+<li>指定什么距离函数?</li>
+<li>内部应该是为空，因为 无理数在实数中也稠密</li>
+<li>闭包是复平面</li>
+<li>边界点也是复平面</li>
+</ul>
+</li>
+<li>印刷上有时把 $\sim X$ 简写为 $X’$，用这一记法，$X’^{-}’$ 与 $X$ 的关系如何？证明：$X^{-}’^{-}’^{-}’^{-}’ &#x3D; X^{-}’^{-}’$.<ul>
+<li>内部</li>
+<li>关键把点 分成 内部，边界，外部，这样去看上面等式中 三种点的属于情况，用邻域或者复合性质可以证明</li>
+</ul>
+</li>
+<li>一个集合称为离散的，是指它的所有点都是孤立点。证明：$\mathbf{R}$ 或 $\mathbf{C}$ 中的一个离散集是可数的。<ul>
+<li>每个点 构造开集，所有点开集不相交，每个开集因为有理数稠密，能吸附到有理数上，有理数可数，有理数子集可数</li>
+</ul>
+</li>
+<li>证明：任一集合的聚点组成一个闭集。<ul>
+<li>E的聚点(极限点): 任意邻域有E的点</li>
+<li>闭集: 所有极限点 属于其中</li>
+<li>也就是 (极限点 的 极限点) 是 极限点 </li>
+<li>x 是极限点的极限点，那么 x 任意半径r0有极限点p, p任意半径r1 有E中的点, 所以x的 r0+r1半径内有E的点，<ul>
+<li>从而按照这样想 对于任意半径r，x的r&#x2F;2内有p，p的r&#x2F;2内有E的点，从而x的r内有E的点</li>
+<li>所以反复强调三角不等式（源自度量函数）的重要性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-1-3-连通性-Connectedness"><a href="#3-1-3-连通性-Connectedness" class="headerlink" title="3.1.3 连通性 Connectedness"></a>3.1.3 连通性 Connectedness</h3><ul>
+<li>在 数学分析原理中，用的是$A\cap \bar{B}&#x3D;\varnothing$且$B\cap \bar{A}&#x3D;\varnothing$来定义 不连通</li>
+</ul>
+<p>若 $E$ 是度量空间 $S$ 的任一非空子集，从 $E$ 本身来看，可以把它考虑为 $S$ 上具有同一距离函数 $d(x, y)$ 的一个度量空间。$E$ 上的邻域和开集就像在任何度量空间上一样定义，但 $E$ 上的开集在看成 $S$ 的子集时不需要是开的。为了避免混乱，$E$ 上的邻域和开集经常叫作相对邻域和相对开集。作为一个例子，我们把闭区间 $0 \leq x \leq 1$ 看成 $\mathbf{R}$ 的一个子空间，于是半闭区间 $0 \leq x &lt; 1$ 是相对开的，但在 $\mathbf{R}$ 中不是开的。因此，当我们说一个子集 $E$ 具有某种特定的拓扑性质时，总是指它作为子空间时具有这个性质，它的子空间拓扑就称为相对拓扑。</p>
+<p>直观地说，一个空间是连通的，如果它由单一的片组成。为使这一说法有意义，必须用接近程度来定义这一陈述。最容易的办法是给出一个反面的表征：如果存在一个划分 $S &#x3D; A \cup B$，分成开子集 $A$ 和 $B$，则 $S$ 不是连通的。应当理解 $A$ 和 $B$ 是不相交的、非空的。</p>
+<p>一个空间的连通性通常以如下的方式使用：假设可以构造 $S$ 的两个互补的开子集 $A$ 和 $B$，如果 $S$ 是连通的，那么 $A$ 或 $B$ 之一是空集。</p>
+<ul>
+<li>这个在证明上有用过几次</li>
+</ul>
+<p>子集 $E \subseteq S$ 称为是连通的，如果它在相对拓扑下是连通的。不避迁腐，我们重复定义3 度量空间的一个子集是连通的，是指它不能表示成两个不相交的非空的相对开集之并。</p>
+<p>如果 $E$ 是开的，$E$ 的一个子集是相对开的当且仅当它是开的。</p>
+<ul>
+<li>类似地，如果 $E$ 是闭的，则相对闭就意味着闭。</li>
+<li>因此我们可以说：一个开集是连通的，是指它不能分解为两个开集；</li>
+<li>一个闭集是连通的，是指它不能分解成两个闭集。另外，这些集中没有一个可以是空集。</li>
+</ul>
+<p>连通集的平凡例子就是空集以及只由一个点组成的任何集。</p>
+<p>在实线的情形，可以命名所有的连通集。最重要的结果是整个直线是连通的，这实际上是实数系的基本性质之一。</p>
+<p>一个区间由下列四种类型的不等式之一定义：$a &lt; x &lt; b$, $a \leq x &lt; b$, $a &lt; x \leq b$, $a \leq x \leq b$。对于 $a &#x3D; -\infty$ 或 $b &#x3D; +\infty$，这包括半无限区间和整个直线。</p>
+<p>定理1 实线的非空连通子集都是区间。</p>
+<ul>
+<li>这块也可以看看 数学分析原理 的过程，用x,y属于得出之间的任意值属于</li>
+</ul>
+<p>我们在这里采用经典证法之一，其根据是任一单调序列必有一个有限或无穷的极限。</p>
+<p>设实线 $\mathbf{R}$ 用两个互不相交的闭集的并集表示为：$\mathbf{R} &#x3D; A \cup B$。如果 $A$ 及 $B$ 都不是空集，则可以找到 $a_1 \in A$ 及 $b_1 \in B$，不妨设 $a_1 &lt; b_1$。现在将区间 $(a_1, b_1)$ 平分，平分所得的两个半区间中必有一个有左端点在 $A$ 中，而右端点在 $B$ 中。把这一区间记为 $(a_2, b_2)$，仿此继续进行下去，于是可得区间套 $(a_n, b_n)$ 的一个序列，且 $a_n \in A$, $b_n \in B$。序列 ${a_n}$ 及 ${b_n}$ 具有同一极限 $c$。由于 $A$ 及 $B$ 是闭集，$c$ 应为 $A$ 及 $B$ 的一个公共点。这一矛盾说明 $A$ 或 $B$ 中有一个应是空集，因此 $\mathbf{R}$ 是连通的。</p>
+<p>上述证法稍作修改后可适用于任何区间。</p>
+<p>在完成定理证明之前我们插入一个重要的注记。设 $E$ 是 $\mathbf{R}$ 的一个任意子集，如果对于所有的 $x \in E$ 有 $a \leq x$，则称 $a$ 为 $E$ 的下界。现在考察所有下界组成的集 $A$。显然 $A$ 的余集是开集。至于 $A$ 本身，则很容易看出只要它不包含任何最大数，它必是开集。由于直线是连通的，$A$ 及其余集不能同时是开集，除非其中之一为空集，因此产生了三种可能：或者 $A$ 是空集，或者 $A$ 包含一个最大数，或者 $A$ 是整个直线。如果存在的话，$A$ 的最大数 $a$ 称为 $E$ 的下确界，通常，对于 $x \in E$，其下确界用 greatest lower bound. $x$ 或 inf $x$ 来表示。如果 $A$ 是空集，唯一确定的下确界。很清楚，要使 $a &#x3D; +\infty$，当且仅当 $E$ 为空集。对应地，可定义上确界，对于 $x \in E$，我们以 least upper bound $x$ 或 sup $x$ 表示上确界。</p>
+<ul>
+<li>这上下确界 可以放到 连通集 之前讲啊</li>
+<li>上界: 任意E中的点不大于</li>
+<li>上确界: 上界 且 比它小的任意点不是上界<ul>
+<li>不一定存在（紧性能保证存在）</li>
+</ul>
+</li>
+<li>有上确界 则 有下确界,</li>
+</ul>
+<p>现在再回到定理的证明上来，设 $E$ 是一连通集，具有下确界 $a$ 及上确界 $b$。$E$ 的所有点包括极限点，都位于 $a$ 与 $b$ 之间。设区间 $(a, b)$ 中有一点 $\xi$ 不属于 $E$，则开集 $x &lt; \xi$ 及 $x &gt; \xi$ 将覆盖 $E$，而由于 $E$ 是连通的，故这两个开集之一将不与 $E$ 相交。不妨设 $E$ 中没有点位于 $\xi$ 的左边。在这种情况下，如果 $\xi$ 是下界就将与 $a$ 是下确界相矛盾。相反的假设也将导致同样的矛盾，因此可得结论 $\xi$ 必属于 $E$。由此可知 $E$ 是一个开的、闭的或半闭的区间，端点为 $a$ 和 $b$，而 $a &#x3D; -\infty$ 和 $b &#x3D; +\infty$ 的情形也包括在内。</p>
+<p>在证明过程中，我们引入了下确界与上确界的概念。如果集是闭的而且上确界与下确界均为有限，则它们必属于集，此时把下确界与上确界分别称为极小与极大。为了确信界为有限，必须先知道集为非空而且具有某一有限的下界与某一有限的上界。换句话说，这时的集必位于一个有限的区间之内，这样的集称为有界集。于是就证明了下面的定理：</p>
+<p>定理2 实数的任一非空有界闭集必有一个极小值与一个极大值。</p>
+<p>平面上连通集的结构不像数轴上那样简单，但下面关于连通开集的特性基本上包括了我们所需的全部信息。</p>
+<p>定理3 平面上一个非空开集是连通的，当且仅当该集中的任意两点可用整个位于该集内的折线连接起来。</p>
+<ul>
+<li>这个折线 感觉如何准确定义啊，连续性?</li>
+</ul>
+<p>连接折线的概念比较简单，这里不再作形式定义了。</p>
+<p>我们先证条件的必要性：设 $A$ 为一个连通开集，选定一点 $a \in A$。将 $A$ 中的点加以区分，凡可以用 $A$ 中的折线与 $a$ 相连的点记为 $A_1$，而不能用 $A$ 中的折线与 $a$ 相连的点记为 $A_2$。现我们来证明 $A_1$ 和 $A_2$ 均为开集。</p>
+<ul>
+<li>也就是其中的任意点能有开集属于其中</li>
+<li>首先，如果设 $a_1 \in A_1$，则存在 $a_1$ 的一个邻域 $|z - a_1| &lt; \varepsilon$ 包含于 $A$ 中。这个邻域中的所有点都可以用一条线段与 $a_1$ 相连，由此可用折线与 $a$ 相连。故知整个邻域包含于 $A_1$ 之内，从而 $A_1$ 是开集。</li>
+<li>其次，如果 $a_2 \in A_2$，令 $|z - a_2| &lt; \varepsilon$ 为包含在 $A$ 中的一个邻域。如果这个邻域中有一点可用折线与 $a$ 相连，则 $a_2$ 必可用一条线段和这个点相连。但这与 $A_2$ 的定义矛盾，故知 $A_2$ 是开集。</li>
+<li>由于 $A$ 是连通的，故其子集 $A_1$、$A_2$ 中必有一个是空集。但 $A_1$ 包含点 $a$，因此 $A_2$ 是空集，从而所有的点都可与 $a$ 相连。最后，$A$ 中的任意两点可以经由 $a$ 相连，这就证明了条件的必要性。</li>
+</ul>
+<p>此后我们甚至可以把任意两点用边平行于坐标轴的折线来连接。其证明与上述相同。</p>
+<ul>
+<li>?????????, 注意这里是开的前提，如果是闭连通，不一定能用平行的，例如1，4向限两个闭集，只有(0,0)是公共点且是分别的极限点</li>
+</ul>
+<p>为了证明条件的充分性，设 $A$ 可用 $A &#x3D; A_1 \cup A_2$（即两个互不相交的开集的并）来表示。选取 $a_1 \in A_1$，$a_2 \in A_2$，并设这两点可用 $A$ 中的折线来连接。于是该折线必有一段连接 $A_1$ 中的一点到 $A_2$ 中的一点，据此我们只要考虑 $a_1$、$a_2$ 可用一条线段来连接的情形就够了。这一线段的参数表示式为 $z &#x3D; a_1 + t(a_2 - a_1)$，其中参数 $t$ 取值于区间 $0 \leq t \leq 1$。在区间 $0 &lt; t &lt; 1$ 中，分别与 $A_1$ 及 $A_2$ 中的点对应的两个子集显然是开集、互不相交而且非空。但这与区间的连通性矛盾，于是证明了条件的充分性。</p>
+<p>该定理很容易推广到 $\mathbf{R}^n$ 和 $\mathbf{C}$。</p>
+<p>定义4 一个非空的连通开集称为域, 区域region。</p>
+<ul>
+<li>注意 有些其它地方中文的域 也指 field</li>
+</ul>
+<p>根据定理3可知：整个平面、一个开圆盘 $|z-a| &lt; \rho$ 和一个半平面都是域。同样，$\mathbf{R}^n$ 中的任一 $\delta$ 邻域也是域。域是一个开区间的多维模拟。一个域的闭包称为闭域。显然，不同的域可以有相同的闭包。</p>
+<ul>
+<li>????????? 显然啥？？？ 这里说 close region的闭包 可以 &#x3D; open region 的闭包吗？还是说 存在两个不同 open region，但它们闭包相同？？</li>
+<li>一个神奇的例子 虽然一维中 $(-1,1)$去掉0 会让它不连通, 但是二维上$|z|&lt;1$ 如果去掉$(0,0)$ 它还是连通的，且它还是开集，从而 这样和不去掉中心的 具有相同的闭包</li>
+</ul>
+<p>通常，例如在证明过程中，我们需要分析那些定义得非常含糊的集的结构。在这种情况下，第一步就是把所考察的集分解成若干个最大连通分集。这里所谓分集就是一个连通子集，它不包含在任何更大的连通子集中。</p>
+<p>定理4 每一个集具有唯一的分成连通分集的分解。 Every set has a unique decomposition into components</p>
+<p>先证明 $C(a)$表示所有和a连通的点的交，那么如果c和a连通，那么$C(a)&#x3D;C(c)$, </p>
+<ul>
+<li>如果 $E$ 是给定的集，考虑一点 $a \in E$，并设 $C(a)$ 表示 $E$ 的包含 $a$ 的所有连通子集的并。由于由单一的点 $a$ 组成的集是连通的，所以 $C(a)$ 肯定包含 $a$。如果能证明 $C(a)$ 是连通的，则它是一个最大的连通集，换句话说，是一个分集。但是任何两个分集或是不相交的，或是完全相同的，而这正是需要我们证明的。事实上，如果 $c \in C(a) \cap C(b)$，则由 $C(c)$ 的定义以及 $C(a)$ 的连通性，有 $C(a) \subseteq C(c)$。因此 $a \in C(c)$，同理可推出，$C(c) \subseteq C(a)$，所以事实上 $C(a) &#x3D; C(c)$。类似地，$C(b) &#x3D; C(c)$，因此 $C(a) &#x3D; C(b)$。我们称 $C(a)$ 是 $a$ 的分集。</li>
+</ul>
+<p>假设 $C(c)$ 不是连通的，则我们要找相对开集 $A, B \neq \varnothing$，使得 $C(a) &#x3D; A \cup B$，$A \cap B &#x3D; \varnothing$。可以假设 $a \in A$，而 $B$ 包含一点 $b$。由于 $b \in C(a)$，所以存在一个连通集 $E_0 \subset E$，它包含 $a$ 和 $b$。表达式 $E_0 &#x3D; (E_0 \cap A) \cup (E_0 \cap B)$ 将是分解为相对开子集的一个分解，又因为 $a \in E_0 \cap A$，$b \in E_0 \cap B$，所以没有一个部分是空的。这是一个矛盾，因此 $C(a)$ 是连通的。</p>
+<p>定理5 在 $\mathbf{R}^n$ 中，任何开集的分集是开的。</p>
+<p>这是下列事实的推论：在 $\mathbf{R}^n$ 中 $\delta$ 邻域都是连通的。考察 $a \in C(a) \subset E$。如果 $E$ 是开的，它包含 $B(a, \delta)$，因为 $B(a, \delta)$ 是连通的，所以 $B(a, \delta) \subset C(a)$。因此，$C(a)$ 是开的。更一般些，论断对任何局部连通的空间 $S$ 是正确的，这是指点 $a$ 的任何邻域包含 $a$ 的一个连通邻域。这个证明留给读者。</p>
+<p>此外，在 $\mathbf{R}^n$ 的情形，可以得出结论：分集的数目是可数的。</p>
+<ul>
+<li>为了看出这一点，注意每一个开集必须包含具有有理坐标的点。而具有有理坐标的点集是可数的，这样，就可表示成序列 $(p_k)$。对每个分集 $C(a)$，确定最小的 $k$，使得 $p_k \in C(a)$。不同的 $k$ 对应不同的分集，于是得出结论：分集与自然数子集一一对应，因此分集是可数的。</li>
+<li>这和上面 证明 离散点集 是可数的是同样的思路</li>
+</ul>
+<p>例如，$\mathbf{R}$ 的每一个开子集是不相交开区间的可数并。</p>
+<ul>
+<li>every open subset of R is a countable union of disjoint open intervals</li>
+</ul>
+<p>另外，可以分析一下证明，从而得到更一般的结果。</p>
+<ul>
+<li>我们说集 $E$ 在 $S$ 中是稠密dense的，是指 $E^-&#x3D; S$。<ul>
+<li>S中任意点是E的点或E的极限点</li>
+</ul>
+</li>
+<li>一个度量空间是可分separable的，是指存在一个可数子集，它在 $S$ 中稠密。这样就得到下列结果：<ul>
+<li>emmmm 有点难悟这个性质</li>
+<li>神奇的切割成可数个子集，S中的点要么属于 子集 ，要么属于 子集的极限点，</li>
+<li>没有懂，搜了下不可分割的例子, 有人用 无穷维向量，和度量函数$d(x,y)&#x3D;max |x_i-y_i|$, 也就是不同则1，同则0, 它是不可数，每个点不可逼近，所以不能分割成可数的 子集（所以这里是要求子集是连通的吗？我看英文书上也写的只是 open subset）, 但从上面几个例子感觉，这里的 open subset 是需要connected的(可能是单点，region)</li>
+</ul>
+</li>
+</ul>
+<p>在局部locally连通connected可分separable空间space中，每个开集open set是不相交disjoint区域regions的可数countable并union。</p>
+<h4 id="3-1-3-练习"><a href="#3-1-3-练习" class="headerlink" title="3.1.3 练习"></a>3.1.3 练习</h4><ol>
+<li><p>如果 $x \subset S$，试证明：$X$ 的相对开(闭)子集是这样的集合，即它们可以表示为 $X$ 与 $S$ 的一个开(闭)子集的交。</p>
+<ul>
+<li>一个集合在X中开，那么所有点选同样的r 在X中属于X，在S中会多出一些不属于X的点而已，而这样的所有的并首先是开集，和X相交剩下的一定是 原来的集</li>
+<li>例子线段开和平面</li>
+</ul>
+</li>
+<li><p>证明：两个区域的并是一个区域，当且仅当它们有一个公共点。</p>
+<ul>
+<li>开:任何点属于其中一个，那么存在邻域属于其中一个 属于并</li>
+<li>连通性:<ul>
+<li>&lt;&#x3D; 公共点，有邻域，保证了 a-公共点-b 证明了连通性</li>
+<li>&#x3D;&gt; 没有公共点，则是分离子集，不可能是一个区域</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>证明：连通集的闭包是连通的。</p>
+<ul>
+<li>如果不连通，可以找到两个开集包裹 分割后的U和V</li>
+<li>原来的开集 属于 U 和 V的并，所以可以分别分割成属于U 和 属于V， 于是原来开集可分割</li>
+</ul>
+</li>
+<li><p>设 $A$ 是点 $(x, y) \in \mathbf{R}^2$ 且 $x &#x3D; 0$、$|y| \leqslant 1$ 的集合，并设 $B$ 是 $x &gt; 0$、$y &#x3D; \sin(1&#x2F;x)$ 的集合。问 $A \cup B$ 是不是连通的？</p>
+<ul>
+<li>这个例子 之前刷b站看到过，从图像上能看出非常神奇，A的点的确都是B的极限点</li>
+<li>本身里面都是连通的</li>
+<li>那么唯一的切割可能性就是A,B, 而$A\cap \bar{B}&#x3D;A$ 所以连通</li>
+<li>而需要注意的是，这个例子中，你找不到一个具体的移动路径（因为在二维上它不是开的）</li>
+<li>另外任意取 y&#x3D;a, 去观察x的取值，你会发现 只在x&#x3D;0是连续的，从而有一个点集，它的所有点都不是极限点，但是有无穷多个点, 换个类似简单的构造 $1,1&#x2F;2,1&#x2F;4,\cdots$也是这样的点集，所有点都不是极限点，</li>
+</ul>
+</li>
+<li><p>设 $E$ 是点 $(x, y) \in \mathbf{R}^2$ 的集合，满足$0 \leqslant x \leqslant 1$，对于某一正整数 $n$，或者 $y &#x3D; 0$，或者 $y &#x3D; 1&#x2F;n$。问 $E$ 的分集是什么？它们是否都是闭的？它们是相对开的吗？验证 $E$ 不是局部连通的。</p>
+<ul>
+<li>也就是很多$x&#x3D;[0,1]$的线段，然后一条一条平行于x轴，逼近x轴</li>
+<li>分集就是 按照$y$不同来分</li>
+<li>那么每个线段都是闭的（可以看成只是平移）</li>
+<li>相对开吗?<ul>
+<li>也就是 找平面开集 交 E &#x3D; 每个分集，当y&#x3D;1&#x2F;n时，上下距离1&#x2F;(n(n+1)), 所以可以实现</li>
+<li>但是y&#x3D;0 时，如果先选r，总有足够近的另一个线段上的点也会被包含进来<ul>
+<li>所以 y &#x3D;0时不是相对开，其它都是相对开</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>那么就是$y&#x3D;0$且$x&#x3D;(1&#x2F;2,1],(1&#x2F;3,1&#x2F;2),(1&#x2F;4,1&#x2F;3)$  这样的，以及很多孤立点</li>
+</ul>
+</li>
+<li><p>[TODO]证明：闭集的各分集都是闭的（应用练习 3）。</p>
+</li>
+<li><p>[TODO]如果集合的所有点都是孤立的，则称它为离散的。证明：可分度量空间中的一个离散集是可数的。</p>
+</li>
+</ol>
+<h3 id="3-1-4-紧致性-Compactness"><a href="#3-1-4-紧致性-Compactness" class="headerlink" title="3.1.4 紧致性 Compactness"></a>3.1.4 紧致性 Compactness</h3><p>收敛序列和柯西序列的概念显然在任何度量空间中都是有意义的。事实上，如果 $d(x_n, x) \to 0$，我们就可以说 $x_n \to x$；如果 $d(x_n, x_m)$ 当 $n, m \to \infty$ 时趋于零，则说 ${x_n}$ 是一个柯西序列。显然，每个收敛序列都是柯西序列。对于 $\mathbf{R}$ 和 $\mathbf{C}$，我们已经证明其逆命题是成立的，即每个柯西序列都是收敛序列（见 2.2.1 节）。不难看出，这一性质可推广到任何 $\mathbf{R}^n$。鉴于这个性质的重要性，我们给它一个特殊的名称。</p>
+<p><strong>定义 5</strong> 一个度量空间称为是完备的，是指每个柯西序列都是收敛的。</p>
+<ul>
+<li>完备 &lt;&#x3D;&gt; 每个柯西序列收敛</li>
+<li>紧 &#x3D;&gt; 完备</li>
+</ul>
+<p>如果一个子集被看成一个子空间时是完备的，则称它为完备的，读者不难证明：一个度量空间的完备子集是闭的；一个完备空间的闭集是完备的。</p>
+<p>下面介绍紧致性这个较强的概念。它比完备性强，是因为每个紧致空间或集合必是完备的，但反过来不成立。事实上，$\mathbf{R}$ 和 $\mathbf{C}$ 的紧致子集都是有界闭集。根据这一结果，似乎可以删掉紧致性这个概念，至少对于本书来说可以这样做。但这是不明智的，因为这样做就意味着不去注意实数或复数的有界闭集的最明显的性质。结果是，我们必须在许多不同的地方重复基本上相同的证明。</p>
+<p>紧致性有几个等价的特性描述，至于选用哪一个作为定义，则根据各人的爱好而定。无论怎样做，没有经验的读者总会感到有些模糊，因为他还不能识别定义的目的。这是不足为奇的，因为为了使数学家对最好的方法表示赞同，经历了整整一代人。目前的一致意见是：最好把注意力集中在可以使一个给定的集合能够用开集来覆盖的不同方法上。</p>
+<p>我们说开集族是集合 $X$ 的一个开覆盖，如果 $X$ 包含在这些开集的并集之中。子覆盖就是具有同一性质的开集族的一个子集。有限覆盖是由有限数的集合组成的一个覆盖。紧致性的定义如下：</p>
+<p><strong>定义 6</strong> 集合 $X$ 是紧致compact的，当且仅当 $X$ 的每一个开覆盖包含一个有限的子覆盖。</p>
+<ul>
+<li>这个是和 数学分析原理 用的是同一个</li>
+</ul>
+<p>这里，我们把 $X$ 设想为度量空间 $S$ 的一个子集，并用 $S$ 的开集来对它进行覆盖。但如果 $U$ 是 $S$ 中的一个开集，则 $U \cap X$ 又是 $X$ 的一个开子集（一个相对开集）；反之，$X$ 的每一个开子集可以表示成这一形式（见3.1.3节练习1）。因此，我们的定义究竟是对全空间阐述的，还是对一个子集阐述的，是没有区别的。</p>
+<p>在定义中阐明的这个性质常称为海涅-博雷尔性质Heine-Borel properly。它的重要性在于：当用开覆盖来阐述时，许多证明变得特别简单。</p>
+<p>首先，我们证明每个紧致空间必是完备的。设 $X$ 是紧致的，并设 ${x_n}$ 是 $X$ 中的一个柯西序列。如果 $y$ 不是 ${x_n}$ 的极限，则存在一个 $\varepsilon &gt; 0$，使得对无穷多个 $n$，有 $d(x_n, y) &gt; 2\varepsilon$。确定 $n_0$，使得当 $m, n \geq n_0$ 时，$d(x_m, x_n) &lt; \varepsilon$。选取一个固定的 $n \geq n_0$，使 $d(x_n, y) &gt; 2\varepsilon$。那么，对所有的 $m \geq n_0$，有 $d(x_m, y) \geq d(x_n, y) - d(x_m, x_n) &gt; \varepsilon$。于是得知：$\varepsilon$ 邻域 $B(y, \varepsilon)$ 只含有有限多个 $x_n$（更好地说，只对有限多个 $n$，包含 $x_n$）。</p>
+<p>现在考虑只包含有限多个 $x_n$ 的所有开集 $U$ 组成的家族。若 ${x_n}$ 不收敛，则根据上面的推理，得知这一家族是 $X$ 的一个开覆盖。因此它必含一个有限的子覆盖，由 $U_1, \ldots, U_N$ 组成。但这显然不可能，因为每个 $U_i$ 只包含有限多个 $x_n$，而这将意味着给定的序列是有限的。</p>
+<p>其次，一个紧致集必是有界的（一个度量空间是有界的，是指所有距离都不超过某个有限的界）。为了看出这一点，选一点 $x_0$ 并考虑所有的球 $B(x_0, r)$。这些球组成 $X$ 的一个开覆盖。如果 $X$ 是紧致的，那么它将包含一个有限的子覆盖。换句话说，$X \subset B(x_1, r_1) \cup \ldots \cup B(x_m, r_m)$，这意味着 $X \subset B(x_0, r)$，其中 $r &#x3D; \max(r_1, \ldots, r_m)$。由此推知：对于任何 $x, y \in X$，都有 $d(x, y) \leq d(x, x_0) + d(y, x_0) &lt; 2r$，这就证明了 $X$ 是有界的。</p>
+<ul>
+<li>这里 数学分析原理 也有证明，核心思路首先把中文翻译一下，有界就是存在点和有限r，让所有都属于这个邻域，这个反证的方式就是找到无穷多点，每个点只属于一个开覆盖，那么这样 有限开覆盖就矛盾的反证</li>
+</ul>
+<p>但是，有界性并不是我们所能证明的全部内容。为方便起见，我们定义一个较强的性质，称为<strong>全有界性</strong>。</p>
+<p><strong>定义7</strong> 集合 $X$ 称为全有界的，是指对于任一 $\varepsilon &gt; 0$，可用有限多个半径为 $\varepsilon$ 的球覆盖 $X$。</p>
+<p>这对任何紧致集来说肯定是正确的。因为半径为 $\varepsilon$ 的所有球族是一个开覆盖，而紧致性蕴涵着可以抽取有限多个来覆盖 $X$。注意：一个全有界集必是有界的，因为如果 $X \subset B(x_1, \varepsilon) \cup \ldots \cup B(x_m, \varepsilon)$，则 $X$ 的任意两点之间的距离小于 $2\varepsilon + \max{d(x_i, x_j)}$。（上面关于任一紧致集是有界集这一证明现在变成多余的了。）</p>
+<p>我们已经证明了下列定理的一部分。</p>
+<p><strong>定理6</strong> 一个集合是紧致的，当且仅当它是完备且全有界的。</p>
+<ul>
+<li>紧 &lt;&#x3D;&gt; 完备+全有界</li>
+</ul>
+<p>为了证明这个定理的另一部分，假定量度空间 $S$ 是完备且全有界的。</p>
+<ul>
+<li>设存在一个开覆盖，它不包含任何有限子覆盖</li>
+<li>记 $\varepsilon_n &#x3D; 2^{-n}$。</li>
+<li>因为全有界 我们知道 $S$ 可用有限多个 $B(x, \varepsilon_1)$ 覆盖</li>
+<li>如果每一个都有一个有限的子覆盖，则 $S$ 亦然。因此至少存在一个球 $B(x_1, \varepsilon_1)$，它不允许有一个有限的子覆盖。<ul>
+<li>这里我在想的是前面的任意开覆盖，而我们选的B是指定的开覆盖，那么这两个的关系是替换关系？也就是存在 覆盖是C，那么我们先用B覆盖S（因为全有界），然后取每个B交S，那么C是覆盖了所有B交S，如果每个B交S 都能被C有限覆盖，那么总的可以被C有限覆盖，否则至少有一个 B交S 不能被C有限覆盖, 从而递归这个过程</li>
+</ul>
+</li>
+<li>由于 $B(x_1, \varepsilon_1)$ 本身是全有界的，所以可找到一个 $x_2 \in B(x_1, \varepsilon_1)$，使得 $d(x_2, x_1) &lt; \varepsilon_1 &#x2F; 2$。如何使构造继续下去是很清楚的：我们得到一个序列 ${x_n}$。 它满足 $B(x_n, \varepsilon_n)$ 没有有限子覆盖并且 $x_{n+1} \in B(x_n, \varepsilon_n)$ 这样的性质. 后一个性质意味着 $d(x_n, x_{n+1}) &lt; \varepsilon_n$, 因此 $d(x_n, x_{n+p}) &lt; \varepsilon_n + \varepsilon_{n+1} + \cdots + \varepsilon_{n+p-1} &lt; 2^{-n}$, 这说明 $x_n$ 是一个柯西序列. 它收敛到极限 $y$, 而这个 $y$ 属于给定的覆盖中的开集之一 $U$. 由于 $U$ 是开的, 它包含球 $B(y, \delta)$. 取较大的 $n$ 使得 $d(x_n, y) &lt; \delta&#x2F;2$ 和 $\varepsilon_n &lt; \delta&#x2F;2$, 于是 $B(x_n, \varepsilon_n) \subseteq B(y, \delta)$, 因为 $d(x, x_n) &lt; \varepsilon_n$ 蕴涵着 $d(x, y) \leq d(x, x_n) + d(x_n, y) &lt; \delta$. 所以 $B(x_n, \varepsilon_n)$ 有一个有限的子覆盖, 它由单个集合 $U$ 组成. 这是一个矛盾, 因此 $S$ 具有海涅-博雷尔性质.</li>
+<li>这里我之前在看数学分析原理的时候想过 这里无穷下去的问题，而其实际是，如果存在这样开集，那么通过这样能找到y，但不要用这个无穷下去的过程，而是用 x 与 最初C中的开集，它应该在$\epsilon$某个时候停止。这里很关键的感觉就是，我们虽然是无穷下去找的x，但是最后在证明有限的时候，只用这个过程的部分结果，这里之前我绕了不少时间</li>
+<li>因此 有了 完备+全有界 &#x3D;&gt; 紧，作为对比，数学分析原理 好像没有这个全有界，而是只研究了 格子$I^n$ , 但每次选子开集，都是减半半径的思路都是一样的</li>
+</ul>
+<p>推论 $\mathbf{R}$ 或 $\mathbf{C}$ 的一个子集是紧致的, 当且仅当它是闭且有界的.</p>
+<p>我们已经提及过这一特殊的推论. 在一个方向, 结论是显而易见的: 我们知道一个紧致集是有界且完备的, 但是 $\mathbf{R}$ 和 $\mathbf{C}$ 都是完备的, 而一个完备空间的完备子集都是闭的. 对于相反的结论, 需要证明 $\mathbf{R}$ 或 $\mathbf{C}$ 中每一个有界集是全有界的. 我们就 $\mathbf{C}$ 的情形来讨论. 如果 $X$ 是有界的, 那么它包含在一个圆盘中, 因而包含在一个正方形中. 这个正方形可以分成有限多个边长任意小的正方形, 而这些小正方形又可用半径任意小的圆盘来覆盖, 这证明了 $X$ 是全有界的, 除了一个不应掩盖的小点之外. 当把定义7应用于子集 $X \subset S$ 上时, 多少有点不明确, 因为 $\varepsilon$ 邻域究竟是关于 $X$ 的还是关于 $S$ 的并不清楚, 也就是说, 我们是否要求它们的中心落在 $X$ 上是不明确的. 看来这是没有什么作用的. 事实上, 假设已用中心不一定落在 $X$ 上的 $\varepsilon$ 邻域覆盖了 $X$. 如果这样一个邻域不与 $X$ 相交, 那么它是多余的, 可以弃去. 如果它确实包含 $X$ 的一个点, 那么就可用那一点的一个 $2\varepsilon$ 邻域代替它, 并得到一个用中心在 $X$ 上的一些 $2\varepsilon$ 邻域覆盖的有限覆盖. 根据这一理由, 不明确仅是表观上的, 因此关于 $\mathbf{C}$ 的有界子集都是全有界的这个证明是正确的.</p>
+<ul>
+<li>从这个观点来看，比如 数轴上开集，之所以不紧，那么检查 完备和全有界，它肯定是全有界的（总能覆盖），但是却不完备（极限点不在其中)</li>
+</ul>
+<p>紧致性还有第三个特性描述, 它与极限点(有时称为聚点值)的概念有关: 我们称 $y$ 是序列 ${x_n}$ 的一个极限点, 如果存在一个子序列 ${x_{n_k}}$ 收敛于 $y$. 一个极限点几乎与点 $x_n$ 组成的集合的一个聚点相同, 区别仅仅在于一个序列可以允许同一点重复出现. 若 $y$ 是一个极限点, 则 $y$ 的每一邻域包含无穷多个 $x_n$. 反之亦然. 事实上, 设 $\varepsilon_k \to 0$. 如果每个球 $B(y, \varepsilon_k)$ 包含无穷多个 $x_n$, 则可归纳地选取下标 $n_k$, 使得 $x_{n_k} \in B(y, \varepsilon_k)$ 且 $n_{k+1} &gt; n_k$, 显然 ${x_{n_k}}$ 收敛于 $y$.</p>
+<p>定理7 一个度量空间是紧致的, 当且仅当每个无穷序列具有一个极限点.</p>
+<ul>
+<li>紧 &lt;&#x3D;&gt; 每个无穷序列 有极限点</li>
+</ul>
+<p>这一定理常称为波尔查诺-魏尔斯特拉斯 Bolzano-Weierstrass定理. 原来的陈述是这样的: 复数的每个有界序列具有一个收敛的子序列. 之所以认为它是一个重要定理, 是因为它在解析函数论中有重要作用.</p>
+<p>紧&#x3D;&gt; 每个无穷序列有极限点</p>
+<ul>
+<li>证明的第一部分是以前论据的重复. E是${x_n}$的集合, S是度量空间, 对于度量空间每个y选一个邻域组成覆盖，如果 $y$ 不是 ${x_n}$ 的一个极限点, 则 $y$ 有一个只包含有限多个 $x_n$ 的邻域. 如果没有极限点, 则只包含有限多个 $x_n$ 的那些开集组成一个开覆盖. 在紧致的情形, 我们可选取一个有限的子覆盖, 这样可推知序列是有限的. 而E的个数是有限的，如果每个出现次数有限，那么序列有限，否则至少有一个序列出现了无数次, 从而是极限点（当然 当E序列是无限是，可能极限点不属于E而属于S），所以注意 $x_n \in E\subset S$, S紧,那么$x_n$在S中有极限点（不是E中哦） </li>
+<li>以前我们使用这一推理证明一个紧致空间是完备的, 实质上证明了每个序列具有一个极限点, 然后使用这一推理证明一个紧致空间是完备的. 为了顺理成章, 最好在证明定理6之前先证明定理7，但我们更喜欢尽早强调全有界性的重要性。</li>
+</ul>
+<p>接下来证明其逆命题。E中每个无穷序列有S中的极限点 则 S是完备且全有界的</p>
+<ul>
+<li>希望证明 S 完备+全有界</li>
+<li>首先，波尔查诺-魏尔斯特拉斯 性质显然意味着完备性(极限点在S中）。事实上，刚才指出：一个具有极限点的柯西序列必是收敛的。</li>
+<li>现在设空间S不是全有界的，则存在一个 $\varepsilon &gt; 0$，使得空间不能用有限多个 $\varepsilon$ 邻域来覆盖。我们构造序列 ${x_n}$ 如下：$x_1$ 是任意的，当 $x_1, \cdots, x_n$ 选定后，选 $x_{n+1}$ 使得它不落在 $B(x_1, \varepsilon) \cup B(x_2, \varepsilon) \cup \cdots \cup B(x_n, \varepsilon)$ 中。这总是可能的，因为这些邻域并不覆盖全空间。但很明显 ${x_n}$ 没有收敛的子序列，因为对于所有的 $m$ 和 $n$ 都有 $d(x_m, x_n) \geqslant \varepsilon$。<ul>
+<li>也就是 不是全有界 &#x3D;&gt; 存在（能找到）无穷序列 没有极限点</li>
+<li>而 逆否命题 任意序列有极限点 那么 一定是全有界的</li>
+</ul>
+</li>
+<li>由此得到结论：波尔查诺-魏尔斯特拉斯性质意味着全有界性。考虑到定理6，这就是我们所要证明的。</li>
+</ul>
+<p>读者应对下列事实进行思考：我们介绍了紧致性的三种特性描述，它们的逻辑等价性并不是明显的。应当清楚，这类结果对于尽可能简明地呈现证明来说是具有特殊价值的。</p>
+<ul>
+<li>紧</li>
+<li>任意开覆盖有有限子覆盖</li>
+<li>完备+全有界</li>
+<li>每个无穷序列有极限点 (这里不区分E，S会更好吗?)</li>
+</ul>
+<h4 id="3-1-4-练习"><a href="#3-1-4-练习" class="headerlink" title="3.1.4 练习"></a>3.1.4 练习</h4><ol>
+<li>试给出下列事实的另一证明：复数的每个有界序列具有一个收敛的子序列（例如运用下极限）。<ul>
+<li>有界限制了norm，从而限制了实部和虚部的，从而实部和虚部都有极限点，再组合 回norm也是极限点</li>
+</ul>
+</li>
+<li>[TODO] 证明海涅-博雷尔性质也可表达如下：彼此不交的闭集，其每一个集族包含一个有限的子族，它们彼此不相交。</li>
+<li>用紧致性证明实数的一个有界闭集具有一个极大值。<ul>
+<li>每次选v，如果v是极大值则满足，否则存在$v_1 &gt; v$, 紧：每个无穷序列有极限点 + 完备，所以 这样的无穷序列单调递增，且有极限点t , 一方面 $t &gt;&#x3D; v_i &gt; v_{i-1}$, 另一方面$t$属于 闭集</li>
+</ul>
+</li>
+<li>如果 $E_1 \supseteq E_2 \supseteq E_3 \supseteq \cdots$ 是非空紧致集的一个递减序列，则交 $\bigcap_{i&#x3D;1}^{\infty} E_i$ 非空（康托尔引理Cantor’s lemma）。用例子说明：如果集合仅仅是闭的，则上面的结论不一定成立。<ul>
+<li>这又是挖 闭的定义，闭就要讨论极限点，极限点是先选点，所以 $R\cap [0,\sqrt{2}]$ 在$R$上是闭的,如果不要看上去那么怪，可以用$x^2 &lt; 2$来定义，这种例子其实在 柯西收敛也可以出现，柯西收敛但是没有极限</li>
+</ul>
+</li>
+<li>[TODO] 设 $S$ 是实数的所有序列 $a &#x3D; {x_n}$ 的集合，使得 $x_n$ 只有有限多个不为 0。定义 $d(x, y) &#x3D; \max |x_n - y_n|$。问这个空间是完备的吗？证明：$\delta$ 邻域不是全有界的。<ul>
+<li>完备性: S中找 柯西序列 要有S中极限</li>
+<li>显然 对于每个$x_i$孤立看，因为 受到max的限制，也就是max的柯西距离限制，所以每个点 都最终会收敛到一个值，所以总是存在一个序列 是它的收敛点，而问题是这个收敛的序列有没有可能有无穷多个不为零的点</li>
+<li>那么 构造 $a_1&#x3D;1,0,0,\cdots$,</li>
+<li>$a_2&#x3D;1,1&#x2F;2,0,\cdots$,</li>
+<li>$a_3&#x3D;1,1&#x2F;2,1&#x2F;3,0\cdots$,</li>
+<li>我们可以发现$N&lt;n&lt;m$时 $a_n$和$a_m$的前n项相同，而$n+1…m$项不同，尾上都是0, $d(a_n,a_m)&#x3D;1&#x2F;n$, 而这样的$a_i$的序列最后收敛到</li>
+<li>$x_i&#x3D;1&#x2F;i$的一个序列，它有无限个点不为0, 所以不完备</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-1-5-连续函数-Continuous-Functions"><a href="#3-1-5-连续函数-Continuous-Functions" class="headerlink" title="3.1.5 连续函数 Continuous Functions"></a>3.1.5 连续函数 Continuous Functions</h3><p>考虑定义在度量空间 $S$ 上而取值于另一度量空间 $S’$ 上的函数 $f$。函数也常称为映射；称 $f$ 将 $S$ 映入 $S’$，记为 $f: S \to S’$。很自然地，我们主要讨论实值或复值函数。后者偶尔也可取值于扩充的复平面，这时通常的距离就要换为黎曼球面上的距离了。</p>
+<p>空间 $S$ 是函数的定义域。当然可以考虑只以 $S$ 的一个子集为定义域的函数 $f$，这时，把定义域看成一个子空间。在大多数情形，我们对 $S$ 上的函数与它限制于一个子集上的约束不作区分，用同一记号表示之。如果 $X \subseteq S$，则当 $x \in S$ 时，$f(x)$ 的所有值称为 $X$ 在 $f$ 下的象，记为 $f(X)$。$X’ \subseteq S’$ 的逆象 $f^{-1}(X’)$ 由使 $f(x) \in X’$ 的所有 $x \in S$ 组成。注意 $f(f^{-1}(X’)) \subseteq X’$，$f^{-1}(f(X)) \supseteq X$。</p>
+<ul>
+<li>勘误？ 中英文书都错了吧，这里应该是(如果 $X \subseteq S$，则当 $x \in X$(????) 时，$f(x)$ 的所有值称为 $X$ 在 $f$ 下的象，记为 $f(X)$)</li>
+</ul>
+<p>一个连续函数的定义实际上不需修改：我们说 $f$ 在 $a$ 连续，是指：对任一 $\varepsilon &gt; 0$ 存在 $\delta &gt; 0$，使得 $d(x, a) &lt; \delta$ 蕴涵 $d’(f(x), f(a)) &lt; \varepsilon$。我们主要讨论在定义域的所有点上都连续的函数。下面的特性描述是定义的直接推论：</p>
+<p>一个函数是连续的，当且仅当每一个开集的逆象是开的。</p>
+<p>一个函数是连续的，当且仅当每一个闭集的逆象是闭的。</p>
+<p>如果$f$不是定义在全部$S$上，则当涉及逆象时，“开”和“闭”当然应该相对于$f$的定义域来理解。此处必须特别注意的是：这些性质仅对逆象成立，而对直接的象不成立。例如，将$\mathbf{R}$映入$\mathbf{R}$的映射$f(x)&#x3D;x^2&#x2F;(1+x^2)$具有象$f(\mathbf{R})&#x3D;{y;0\leq y&lt;1}$，它既不是开的，也不是闭的。在这个例子中，$f(\mathbf{R})$不是闭的，因为$\mathbf{R}$不是紧致的。事实上，有下列定理成立：</p>
+<p><strong>定理8</strong> 在连续映射下，任一紧致集的象必是紧致的，因而是闭的。</p>
+<p>设$f$在紧致集$X$上定义并连续。考虑$f(X)$的一个由开集$U$组成的覆盖。逆象$f^{-1}(U)$都是开的，并组成$X$的一个覆盖。由于$X$是紧致的，故可选取一个有限的子覆盖：$X\subseteq f^{-1}(U_1)\cup\cdots\cup f^{-1}(U_m)$。由此推知，$f(X)\subseteq U_1\cup\cdots\cup U_m$，这就证明了$f(X)$是紧致的。</p>
+<p><strong>推论</strong> 紧致集上一个实值连续函数必有一个极大值和一个极小值。</p>
+<p>象是$\mathbf{R}$的一个有界闭子集。极大值和极小值的存在可从定理2推出来。</p>
+<p><strong>定理9</strong> 在连续映射下，任一连通集的象是连通的。</p>
+<p>我们假定$f$在全空间$S$上定义并连续，并设$f(S)$是$S’$的全体。设$S’&#x3D;A\cup B$，其中$A$和$B$是不相交的开集。那么</p>
+<p>$S&#x3D;f^{-1}(A)\cup f^{-1}(B)$</p>
+<p>是$S$作为不相交的开集之并的一个表示。若$S$是连通的，即$f^{-1}(A)&#x3D;\varnothing$或$f^{-1}(B)&#x3D;\varnothing$，则$A&#x3D;\varnothing$或$B&#x3D;\varnothing$，从而得出结论$S’$是连通的。</p>
+<p>一个典型的应用是断言：在连通集上连续的非零实值函数或者恒正或者恒负。事实上，象是连通的，因此是一个区间。但是，一个包含正数和负数的区间必包含零。</p>
+<p>对于映射$f:S\to S’$如果$f(x)&#x3D;f(y)$仅当$x&#x3D;y$时成立，</p>
+<ul>
+<li>则称$f$为一对一的；如果$f(S)&#x3D;S’$，则称为是映上into的</li>
+<li>这些语言上笨拙的术语可换为单射(对于一对一 1-1)和满射(对于映上onto)。具有这两种性质的映射称为双射。</li>
+<li>同时具有这两种性质的映射具有逆$f^{-1}$，定义在$S’$上，满足$f^{-1}(f(x))&#x3D;x$和$f(f^{-1}(x’))&#x3D;x’$。在这种情况下，如果$f$和$f^{-1}$都连续，就说$f$是一个拓扑映射或同胚映射。<ul>
+<li>解析+双射+逆映射解析</li>
+<li>注意有些函数 解析但是 有重复区域，它可以是局部拓扑的, 例如$e^z$</li>
+</ul>
+</li>
+<li>一个集合的一种性质如果为这个集合的所有拓扑映像所共有，则称这一性质是一种拓扑性质。例如，已经证明的紧致性和连通性都是拓扑性质(定理8和定理9)。在这方面应当指出，成为一个开子集的这一性质并不是拓扑性质。如果$X\subseteq S$和$Y\subseteq S’$，并且$X$同胚映为$Y$，那么就没有理由说明$X$和$Y$为什么同时是开的。看来当$S&#x3D;S’&#x3D;\mathbf{R}^n$(域的不变性)时这是正确的，但这是一个深奥的定理，我们不需要。</li>
+</ul>
+<p>一致连续的概念今后将经常用到。一般来说，一个条件如果可以用不含某一参数的不等式来表示，那么就称这个条件关于这一参数一致地成立。由此，如果对于任意一个$\epsilon&gt;0$，存在一个$\delta&gt;0$，使得对所有的点对$(x_1,x_2)$，只要$d(x_1,x_2)&lt;\delta$，就有$d’(f(x_1),f(x_2))&lt;\epsilon$，则称函数$f$在$X$上一致连续。这里强调$\delta$不能依赖于$x_1$(否则是逐点连续）。</p>
+<h4 id="定理-10"><a href="#定理-10" class="headerlink" title="定理 10"></a>定理 10</h4><p>在紧致集上，每一个连续函数必是一致连续的。</p>
+<ul>
+<li>例如 闭区间上</li>
+</ul>
+<p>该定理的证明在使用海涅-博雷尔性质的方法中是典型的。设$f$在紧致集$X$上是连续的。对每一个$y\in X$，存在一个球$B(y,\rho)$，使得当$x\in B(y,\rho)$时有$d’(f(x),f(y))&lt;\varepsilon&#x2F;2$。这里$\rho$可以依赖于$y$。考虑$X$的由小球$B(y,\rho&#x2F;2)$组成的覆盖。存在一个有限的子覆盖：$X\subseteq B(y_1,\rho_1&#x2F;2)\cup\cdots\cup B(y_m,\rho_m&#x2F;2)$。设$\delta$是数$\rho_1&#x2F;2,\ldots,\rho_m&#x2F;2$中的最小者，并设$\delta&#x3D;\min(\rho_1&#x2F;2,\ldots,\rho_m&#x2F;2)$。因此，$d(x_1,x_2)&lt;\delta$。存在一个$y_i$使$d(x_1,y_i)&lt;\rho_i&#x2F;2$，并得到所需的$d(f(x_1),f(x_2))&lt;\varepsilon$。</p>
+<ul>
+<li>反正 核心思路就是 全覆盖，有限子覆盖，有限就可以min，min就可以和x选取无关</li>
+</ul>
+<p>在非紧致集上，有些连续函数是一致连续的，有些则不是。例如，函数$z$在整个复平面上是一致连续的，但函数$z^2$就不是。</p>
+<h4 id="3-1-5-练习"><a href="#3-1-5-练习" class="headerlink" title="3.1.5 练习"></a>3.1.5 练习</h4><ol>
+<li>构造一个将开圆盘$|z|&lt;1$映成整个平面的拓扑映射。<ul>
+<li>这里还没讲到 共形映射 保角映射，后面会讲</li>
+<li>$f(z)&#x3D;\frac{z}{1-|z|^2}$</li>
+</ul>
+</li>
+<li>[TODO ??? 啥叫拓扑等价]证明：与一个开区间拓扑等价的实线的一个子集是一个开区间。（考虑移去一点的效果。）</li>
+<li>[TODO]证明：一个紧致空间的每个连续一对一的映射是拓扑映射。（证明闭集映成闭集。）</li>
+<li>设$X$与$Y$是完备度量空间中的紧致集，证明：存在$x\in X$，$y\in Y$，使得$d(x,y)$是一个极小值。<ul>
+<li>交, d是0</li>
+<li>没有交, 极小值 &#x3D; $d(x,y)$的下确界</li>
+<li>那么需要证明 $d(x,y)$ 是完备即可</li>
+<li>直接靠 d的序列 难保证x,y都是</li>
+<li>要证明，紧下的度量是 连续的（正定+<ul>
+<li>$d(x,y) \le d(x,x_0)+d(x_0,y_0)+d(y_0,y)$</li>
+<li>$d(x_0,y_0) \le d(x_0,x)+d(x,y)+d(y,y_0)$</li>
+<li>有 $|d(x,y) - d(x_0,y_0)| \le d(x_0,x)+d(y,y_0)$</li>
+</ul>
+</li>
+<li>乘积拓扑是连续的</li>
+</ul>
+</li>
+<li>下列函数中，哪几个在整个实线上是一致连续的？<br>$$<br>\sin x,\quad x\sin x,\quad x\sin(x^2),\quad |x|^{\frac{1}{2}}\sin x.<br>$$</li>
+</ol>
+<h3 id="3-1-6-拓扑空间-Topological-Spaces"><a href="#3-1-6-拓扑空间-Topological-Spaces" class="headerlink" title="3.1.6 拓扑空间 Topological Spaces"></a>3.1.6 拓扑空间 Topological Spaces</h3><p>把接近程度用距离来表示是不必要的，而且常常是不方便的。细心的读者可能已注意到前几小节中的大多数结果都是通过开集来描述的。确实，我们已用了距离定义开集，不过这样做实在没有强有力的理由。如果我们决定把开集看成基本对象，那就必须假设一些它们应该满足的公理。下面几条公理给出了普遍可接受的拓扑空间的定义：</p>
+<p><strong>定义8</strong><br>一个集合$T$连同它的一族称为开集的子集是一个拓扑空间，如果它们满足下列条件：</p>
+<ol>
+<li>空集($\varnothing$)与整个空间$T$都是开集；</li>
+<li>任何两个开集的交是一个开集；</li>
+<li>任意多个开集的并是一个开集。</li>
+</ol>
+<p>可以看到，这一术语与我们早先关于度量空间开子集的定义是相容的。事实上，性质(ii)和(iii)要着重强调，而(i)是平凡的。</p>
+<p>闭集是开集的余集，因此怎样定义内部、闭包、边界等就显而易见了。邻域是可以避免的，但它们却是很方便的；如果存在一个开集$U$，使得$x\in U$且$U\subseteq N$，则$N$是$x$的一个邻域。</p>
+<ul>
+<li>emmmmmm 这里完全没有 度量距离和半径，我感受一下, 而且原始的开集 只有平凡的，那其余的要钦定？</li>
+</ul>
+<p>连通性纯粹是用开集定义的。因此，这个定义转到拓扑空间后，各定理仍保持正确。海涅-博雷尔性质也是只涉及开集的一种性质，所以说紧致拓扑空间是完全有意义的。但是，定理6变为无意义，定理7变为不正确。</p>
+<ul>
+<li>定理6 的有界 需要 度量</li>
+<li>定理7 一个度量空间是紧致的, 当且仅当每个无穷序列具有一个极限点 (极限点 的定义 转化成什么？ 任意开集 去心后有原序列的点).</li>
+</ul>
+<p>实际上，我们遇到的第一个严重困难是收敛序列。定义是清楚的：我们说$x_n\to x$，如果$x$的任一邻域包含除有限个之外的全部$x_n$。但如果$x_n\to x$且$x_n\to y$，并不能证明$x&#x3D;y$。如果引进一条新的公理，把拓扑空间刻画为豪斯多夫空间Hausdorff space，那么这一棘手的情况就可改善了。</p>
+<p><strong>定义9</strong> 一个拓扑空间topological space称为豪斯多夫空间，如果它的任意两个相异的点包含在不相交的开集之中。</p>
+<p>换句话说，如果$x\neq y$，则要求存在开集$U$与$V$，使得$x\in U$，$y\in V$，并且$U\cap V&#x3D;\emptyset$。这一条件成立时，一个收敛序列的极限显然是唯一的。在本书中，我们不考虑非豪斯多夫空间。</p>
+<p>这里无法给出一些不能从一个距离函数导出的拓扑的例子。这样的例子是非常复杂的，也不是本书讨论的目的。要记住，在实际中不需要距离的场合引进一个距离可能是不自然的。将其纳入本小节的理由是要提醒读者，距离并不是必需的。</p>
+<ul>
+<li>总的来说 最后这3.1.6，主要就是 讲 特殊的没有度量的开集定义，有些理论依然成立，有些是失效的，但本书不会更深的讨论这些，这里只是走马观花的提到一下</li>
+</ul>
+<h2 id="3-2-共形性-conformality"><a href="#3-2-共形性-conformality" class="headerlink" title="3.2 共形性 conformality"></a>3.2 共形性 conformality</h2><p>现在回到所有函数和变量都限于实数或复数的原来情况。度量空间的作用将变得相当小；我们实际需要的仅是连通性和紧致性的某些简单应用。</p>
+<p>本节主要是描述性的，重点是导数存在的几何推论。</p>
+<h3 id="3-2-1-弧与闭曲线-Arcs-and-Closed-Curves"><a href="#3-2-1-弧与闭曲线-Arcs-and-Closed-Curves" class="headerlink" title="3.2.1 弧与闭曲线 Arcs and Closed Curves"></a>3.2.1 弧与闭曲线 Arcs and Closed Curves</h3><p>平面中弧$\gamma$的方程用参数形式来表示最为方便，那就是$x&#x3D;x(t)$，$y&#x3D;y(t)$，其中$t$取值于区间$a\leq t\leq \beta$，且$x(t)$、$y(t)$都是连续函数。我们也可以用复数记法$z&#x3D;z(t)&#x3D;x(t)+iy(t)$，这一记法有若干方便的地方。习惯上也常把弧$\gamma$与$[a, \beta]$的连续映射等同起来。按照这种习惯，最好把映射记为$z&#x3D;\gamma(t)$。</p>
+<p>把一段弧看成是一个点集，那么它就是一个有限闭区间在一连续映射下的象。所以它是紧致的，也是连通的。但是，一段弧不仅仅是一个点集，更主要的它还是一个点列，按参数的递增值排出顺序。</p>
+<ul>
+<li>如果一个非降函数$t&#x3D;\varphi(\tau)$将区间$a’\leq \tau\leq \beta’$映成$a\leq t\leq \beta$，</li>
+<li>则$z&#x3D;z(\varphi(\tau))$所定义的有序点列就和$z&#x3D;z(t)$所定义的点列相同。我们说第一个方程是由第二个方程经参数变换而产生的。</li>
+<li>要使这一变换是可逆的，当且仅当$\varphi(\tau)$为严格递增。</li>
+<li>例如，参数方程$z&#x3D;t^2+it^4(0\leq t\leq 1)$就是由参数的可逆变换从方程$z&#x3D;t+i\tau^2(0\leq t\leq 1)$导出来的。参数区间$(a, \beta)$的变换常可由参数的线性变换来完成，这种线性变换具有形式如$t&#x3D;a\tau+b(a&gt;0)$。</li>
+</ul>
+<p>在逻辑上，最简单的办法是把两段具有不同方程的弧看成是不同的弧，而不管其中一个方程是否可以从另一个方程经参数变换来得到。采用这一办法（下面我们正是采用这个办法)，证明弧的某些性质在参数变换下保持不变就很重要。例如，一段弧的起点和终点经参数变换后保持不变。</p>
+<ul>
+<li>切成多个小段</li>
+</ul>
+<p>如果导数 $z’(t) &#x3D; x’(t) + iy’(t)$ 存在且不为 0，那么弧$\gamma$具有一条切线tangent，其方向由 $\arg z’(t)$ 确定。</p>
+<ul>
+<li>我们称弧arc是可微的differentiable，是指 $z’(t)$ 存在而且连续(用连续可微这个名词太不方便); 如果再有 $z’(t) \neq 0$，则称弧是正则的regular。如果上面列举的条件对除去有限个 t 的值以外成立，则称弧为分段可微或者分段正则；而在这些除外的点上，$z(t)$ 仍将以具有左导数与右导数而连续，这些导数分别等于 $z’(t)$ 的左极限和右极限，而且，在分段正则弧的情形，这些导数不等于零。</li>
+</ul>
+<p>一段弧的可微性 or 正则性在参数变换 $t &#x3D; \varphi(\tau)$ 下保持不变，</p>
+<ul>
+<li>其中 $\varphi’(\tau)$ 是连续的 提供 可微性</li>
+<li>$\varphi’(\tau) \neq 0$提供 正则性。</li>
+<li>这时，我们就称参数变换是可微的或正则的。</li>
+<li>勘误 这中文翻译也 不太对，已经手动改了一下</li>
+</ul>
+<p>一段弧，如果仅当 $t_1 &#x3D; t_2$ 时有 $z(t_1) &#x3D; z(t_2)$，则称为简单simple弧或若尔当Jordan弧。</p>
+<ul>
+<li>如果弧的两端点重合，即 $z(a) &#x3D; z(b)$，则称之为闭曲线。对于闭曲线，我们把参数的移换(shift)定义如下：如果原来的方程为 $z &#x3D; z(t) (a \leq t \leq b)$，从区间$(a, b)$中选定一点 $t_0$，定义一条新的闭曲线，对于 $t_0 \leq t \leq b$，它的方程为 $z &#x3D; z(t)$，而对于 $b \leq t \leq t_0 + b - a$，它的方程为 $z &#x3D; z(t - b + a)$。这一移换的目的在于移去起点的明显位置。可微的或正则的闭曲线及简单闭曲线(或若尔当曲线)的正确定义是显然的。</li>
+<li>也就是 $[a..t_0][t_0..b]$ 左边切割放到右边</li>
+</ul>
+<p>弧 $z &#x3D; z(t) (a \leq t \leq b)$ 的反向弧是指弧 $z &#x3D; z(-t) (-b \leq t \leq -a)$。两段相互反向的弧，根据具体情况，有时用 $\gamma$ 及 $-\gamma$ 表示，有时用 $\gamma$ 及 $\gamma^{-1}$ 表示。常值函数 $z(t)$ 定义一条点曲线。</p>
+<p>原来用轨迹 $|z - a| &#x3D; r$ 定义的圆$C$，可以看成是一条闭曲线，它的方程为 $z &#x3D; a + re^{i\theta} (0 \leq \theta \leq 2\pi)$。我们在说到有限圆的时候，将都用这一标准参数表示。这一约定可使我们不必随时写出方程。更为重要的一个目的是，它可以作为区别 $C$ (逆时针) 与 $-C$(顺时针) 的一个固定的法则。</p>
+<h3 id="3-2-2-域内的解析函数-Analytic-Functions-in-Regions"><a href="#3-2-2-域内的解析函数-Analytic-Functions-in-Regions" class="headerlink" title="3.2.2 域内的解析函数 Analytic Functions in Regions"></a>3.2.2 域内的解析函数 Analytic Functions in Regions</h3><p>设$f(z)$是定义在复平面的集合$A$上的一个复值函数，当我们考虑导数<br>$f’(z)&#x3D;\lim_{h\to0}\frac{f(z+h)-f(z)}{h}$<br>时，自然应理解为$z\in A$，并且极限是关于$h$，$z+h\in A$取的。因此，导数的存在在$z$是$A$的内点或边界点时有不同的意义。避免这种歧义的方法是坚持所有的解析函数都定义在开集上。</p>
+<p>我们给出定义的形式叙述如下：</p>
+<p><strong>定义10</strong> 定义在开集$\Omega$上的一个复值函数$f(z)$，如果它在$\Omega$上的每一点都可导，则称这一函数为$\Omega$内的解析函数。</p>
+<p>为了更明确些，有时称$f(z)$是复解析的complex analytic。通用的一个同义词是亚纯函数 holomorphic。</p>
+<p>要着重指出开集$\Omega$是定义的一部分。作为一条规则，必须避免只讲一个解析函数$f(z)$而不指明函数所处的特定开集$\Omega$，但若这个集合从上下文看已经很清楚时，可以不遵守这条规则。注意, $f$ 首先必须是一个函数, 因此是单值的. 若 $\Omega’$ 是 $\Omega$ 的一个开子集, 而 $f(z)$ 在 $\Omega$ 内解析, 则 $f$ 限制在 $\Omega’$ 上的约束是在 $\Omega’$ 内解析的. 习惯上, 把函数和它的约束用同一字母 $f$ 表示. 特别地, 由于一个开集的分集都是开的, 所以不失一般性, 可以只考虑 $\Omega$ 是连通的情形, 也就是说, $\Omega$ 是一个域的情形.</p>
+<p>为了措词上更大的“弹性”, 我们引入定义10 的补充如下:</p>
+<p>定义11 如果一个函数 $f(z)$ 是某一函数限制于一个任意点集 $A$ 上的约束, 而这个函数在包含 $A$ 的某一开集内解析, 则称 $f(z)$ 在 $A$ 上解析.</p>
+<p>这个定义只是使用了一个比较方便的术语. 这是不需要将集合 $\Omega$ 明确指出的一种情形, 因为 $\Omega$ 的特殊选择通常是无关重要的, 只要它包含 $A$. 另一种可以不指明 $\Omega$ 的情况是“设 $f(z)$ 在 $z_0$ 解析”. 它的意思是函数 $f(z)$ 在 $z_0$ 的某一未规定的开邻域中有定义并且可导.</p>
+<p>虽然, 上面的定义要求所有的解析函数应该是单值的, 但也可以研究像 $\sqrt{z}$、$\log z$ 或 $\arccos z$ 等多值函数, 只要把它们限制于一个一定的域, 在其中可以选择函数的一个单值而解析的分支.</p>
+<p>例如, 我们可以选择 $\Omega$ 为负实轴 $z \leqslant 0$ 的余集, 这个集合当然是开的且连通的. 在 $\Omega$ 内, $\sqrt{z}$ 有且只有一个值具有正的实部(因为两个解等大反向). 如取这个值作为 $\sqrt{z}$, 则 $w &#x3D; \sqrt{z}$ 就变为 $\Omega$ 内的一个单值函数. 现在我们来证明它是连续的(控制z的距离能控制$\sqrt{z}$的距离). 选定两点 $z_1$, $z_2 \in \Omega$, 并记 $w$ 的对应值为 $w_1 &#x3D; u_1 + iv_1$, $w_2 &#x3D; u_2 + iv_2$, 其中 $u_1$, $u_2 &gt; 0$(因为定义要正实部). 于是</p>
+<p>$$|z_1 - z_2| &#x3D; |w_1^2 - w_2^2| &#x3D; |w_1 - w_2| \cdot |w_1 + w_2|$$</p>
+<p>且 $|w_1 + w_2| \geqslant u_1 + u_2 &gt; u_1$. 因此</p>
+<p>$$|w_1 - w_2| &lt; \frac{|z_1 - z_2|}{u_1},$$</p>
+<ul>
+<li>也就是固定$z_1$,能控制$z_1$的邻域的距离控制$\sqrt{z}$的距离</li>
+</ul>
+<p>由此可知 $w &#x3D; \sqrt{z}$ 在 $z_1$ 处连续. 连续性一经确立以后, 就可从反函数 $z &#x3D; w^2$ 的求导中证明其解析性. 事实上, 应用微积分学中所用的记法, $\Delta z \to 0$ 蕴涵 $\Delta w \to 0$. 因此</p>
+<ul>
+<li>??????? 总觉得哪里不对，例如 到$z_1$对应的值随着$z_1$增大，距离$w_1$先远再近, 那么靠近$z_1$能让$w_2$靠近$w_1$, 但是$w_2$靠近$w_1$并不意味着$z_2$接近$z_1$啊??? 你要这个性质 也是针对于$\sqrt{z}$,或者说你先要对$z_1$取邻域</li>
+</ul>
+<p>$$\lim_{\Delta z \to 0} \frac{\Delta w}{\Delta z} &#x3D; \lim_{\Delta \omega \to 0} \frac{\Delta w}{\Delta z},$$</p>
+<p>于是得</p>
+<p>$$\frac{d}{dz}(w) &#x3D; \frac{1}{\frac{d}{dw}(z)} &#x3D; \frac{1}{2w} &#x3D; \frac{1}{2\sqrt{z}},$$</p>
+<p>它具有与 $\sqrt{z}$ 同样same的分支branch.</p>
+<ul>
+<li>这样定义的$w&#x3D;f(z)$ 的导数在每个$z_0$和$\sqrt{z}$的导数相同</li>
+</ul>
+<p>对于 $\log z$, 我们可以用同一个域 $\Omega$, 它由负实轴的余集组成, 并以条件 $|\operatorname{Im}\log z| &lt; \pi$ 定义对数的主支principal branch. 它的连续性也必须加以证明, 但现在没有代数恒等式可用, 因此必须应用更一般的推理. </p>
+<ul>
+<li>以 $w &#x3D; u + iv &#x3D; \log z$ 表示主支. </li>
+<li>对于给定的一点 $w_1 &#x3D; u_1 + iv_1$, $|v_1| &lt; \pi$ 以及一给定的 $\varepsilon &gt; 0$, 考虑 $w$ 平面内由不等式 $|w - w_1| \geqslant \varepsilon$, $|v| \leqslant \pi$, $|u - u_1| \leqslant \log 2$ 所定义的集A. <ul>
+<li>这个集是闭且有界的, 且对于充分小的$\varepsilon$, 它不是空集. <ul>
+<li>在复平面形状是 长方形减去开圆</li>
+</ul>
+</li>
+<li>因此连续函数$|e^w-e^{w_1}|$ 在A 上具有一个极小值$\rho$(定理8 的推论). 因为A 并不包含$w_1+n\cdot2\pi i$ 的任一点, 故这一极小值是正的(非零). 令$\delta&#x3D;\min(\rho,\frac{1}{2}e^{u_1})$, 并设</li>
+</ul>
+</li>
+</ul>
+<p>$$|z_1-z_2|&#x3D;|e^{w_1}-e^{w_2}|\leq\delta,$$</p>
+<ul>
+<li>这里 $z_1,z_2$是输入，要控制$w_1,w_2$的距离</li>
+</ul>
+<p>则$w_z$ 不能位于A 中, 否则将使$|e^{w_1}-e^{w_2}|\geq\rho\geq\delta$. </p>
+<ul>
+<li>此外, 也不可能有$u_z&lt;u_1-\log2$ 或$u_z&gt;u_1+\log2$. <ul>
+<li>在前一种情形下, 将得到$|e^{w_1}-e^{w_2}|\geq e^{u_1}-e^{u_1}\geq\delta$, </li>
+<li>在后一种情形下, 将得到$|e^{w_1}-e^{w_2}|\geq e^{u_1}-e^{u_1}\geq\delta$.</li>
+</ul>
+</li>
+<li>因此$w_z$ 必在圆盘$|w-w_1|&lt;\epsilon$ 中, 这就证明$w$ 是$z$的连续函数. 像上面一样, 从连续性可知其导数存在且等于$\frac{1}{z}$.</li>
+</ul>
+<p>arccosz 的无穷多个值就和ilog(z+$\sqrt{z^2-1}$) 的值一样. 在这种情形下, 我们把z 限制于半直线$x\leq-1$, $y&#x3D;0$ 与$x\geq1$, $y&#x3D;0$ 的余集Ω’之中. 因为$1-z^2$ 在Ω’中不能为负实数或零, 故可像前面的例子一样来定义$\sqrt{1-z^2}$, 然后令$\sqrt{z^2-1}&#x3D;i\sqrt{1-z^2}$. 不仅如此, z+$\sqrt{z^2-1}$ 在Ω’中不能为实数, 这是因为z+$\sqrt{z^2-1}$ 与z-$\sqrt{z^2-1}$ 互为倒数, 因此它们仅当z 与$\sqrt{z^2-1}$ 都是实数时才是实数, 而这只发生在z 位于实轴的被排除的部分时. 由于Ω’ 是连通的, 故知z+$\sqrt{z^2-1}$ 在Ω’中的所有值都位于实轴的同一侧, 而由于i 是这样的值, 故它们都位于上半平面内. 这样, 我们可以定义log(z+$\sqrt{z^2-1}$) 的一个解析分支, 使它的虚部位于0 与π之间. 于是得到Ω’中的一个单值解析函数</p>
+<p>$$\arccos z&#x3D;i\log(z+\sqrt{z^2-1}),$$</p>
+<p>它的导数为</p>
+<p>$$D(\arccos z)&#x3D;i\frac{1}{z+\sqrt{z^2-1}}\left(1+\frac{z}{\sqrt{z^2-1}}\right)&#x3D;\frac{1}{\sqrt{1-z^2}},$$</p>
+<p>其中$\sqrt{1-z^2}$ 具有正的实部.</p>
+<p>在上面这些例子中, 选定域和单值分支的方法并不是唯一的. 因此, 在每次考虑像$\log z$ 这样的函数的时候, 分支的选择都要加以说明. 一个基本的事实是在某些域内要定义$\log z$ 的单值而解析的分支是不可能的. 这一点将在积分一章中证明.</p>
+<p>2.1.2 节的所有结果对于在开集内解析的函数都有效. 特别地,$\Omega$ 内的一个解析函数的实部和虚部满足柯西-黎曼方程组</p>
+<p>$$\frac{\partial u}{\partial x}&#x3D;\frac{\partial v}{\partial y}, \quad \frac{\partial u}{\partial y}&#x3D;-\frac{\partial v}{\partial x}.$$</p>
+<p>反之, 如果$u$ 及$v$ 在$\Omega$ 内满足这些方程, 并且偏导数连续, 则$u+iv$ 是$\Omega$ 内的一个解析函数.</p>
+<p>一个在$\Omega$ 内解析的函数如果化为一个常数, 则称为退化degenerates. 在下面的定理中, 我们列出一些具有这样结果的简单条件.</p>
+<p>这两部分一个是约数定义域，一个是约数值的选取</p>
+<ul>
+<li>要求都是需要在相应约束下解析</li>
+</ul>
+<p>定理11 在域regioin$\Omega$内的一个解析函数，如果其导数恒等于零derivatie vanishes identically，则必must是reduce to一a常数constant。</p>
+<ul>
+<li>同样，如果$\Omega$内的解析函数的实部 或 虚部 或 模 或 辐角为常数，则函数必是一常数 。</li>
+<li>看了有些地方 对与0的英文，会用vanish，比如vanishing constant term</li>
+</ul>
+<p>先证明导数恒为零的情况:</p>
+<ul>
+<li>导数恒等于零意味着$\partial u&#x2F;\partial x$，$\partial u&#x2F;\partial y$，$\partial v&#x2F;\partial x$，$\partial v&#x2F;\partial y$都等于零。由此可知$u$和$v$在$\Omega$内的任何一条平行于坐标轴之一的线段上都为常数。在3.1.3节定理3中我们已经指出，一个域内的任意两点都可以用整个位于域内而其线段与坐标轴平行的折线连接起来，故知$u+iv$为常数。</li>
+</ul>
+<hr>
+<p>再证明: 实部 或(or) 虚部为常数的情况</p>
+<p>如果$u$或$v$为常数，则<br>$$f’(z)&#x3D;\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y}&#x3D;\frac{\partial v}{\partial y}+i\frac{\partial v}{\partial x}&#x3D;0,$$<br>因此$f(z)$必为常数。</p>
+<ul>
+<li>见第一章 函数解析, 它导数关于x,y偏导的四种写法</li>
+</ul>
+<hr>
+<p>模为常数的情况:</p>
+<p>如果$u^2+v^2$为常数，则<br>$$u\frac{\partial u}{\partial x}+v\frac{\partial v}{\partial x}&#x3D;0,$$<br>且<br>$$u\frac{\partial u}{\partial y}+v\frac{\partial v}{\partial y}&#x3D;-u\frac{\partial v}{\partial x}+v\frac{\partial u}{\partial x}&#x3D;0.$$</p>
+<p>由这些方程可知，只要判别式$u^2+v^2$不等于零(也就是u,v 不同时为0)，必有$\partial u&#x2F;\partial x&#x3D;\partial v&#x2F;\partial x&#x3D;0$。</p>
+<ul>
+<li>中文书把这里的determinant翻译成行列式??? 勘误???</li>
+</ul>
+<p>但如果在一点上$u^2+v^2&#x3D;0$，则它将恒等于零，从而$f(z)$恒等于零。因此，$f(z)$在任何情形下均为常数。</p>
+<hr>
+<p>最后，如果$\arg f(z)$为常数，可令$u&#x3D;kv$，其中$k$为常数（除非$v$恒等于零）。但$u-kv$是$(1+ik)f$的实部，因此仍得出$f$应为常数的结论。</p>
+<p>注意，对于这一定理，从本质上说$\Omega$应为一个域。否则，我们只能断定$f(z)$在$\Omega$的每一分集上是常数。</p>
+<h3 id="3-2-2-练习"><a href="#3-2-2-练习" class="headerlink" title="3.2.2 练习"></a>3.2.2 练习</h3><ol>
+<li><p>[TODO]试在一个适当的域中给出$\sqrt{1+z}+\sqrt{1-z}$的一个单值分支的精确定义，并证明它是解析的。</p>
+</li>
+<li><p>[TODO]同样为$\log\log z$定义一个单值分支，并证明它是解析的。</p>
+</li>
+<li><p>[TODO]设$f(z)$在域$\Omega$内解析，并满足条件$|f(z)^2-1|&lt;1$。证明在整个$\Omega$上或者$\operatorname{Re}(z)&gt;0$，或者$\operatorname{Re}(z)&lt;0$。</p>
+</li>
+</ol>
+<h3 id="3-2-3-共形映射-Confomal-Mapping"><a href="#3-2-3-共形映射-Confomal-Mapping" class="headerlink" title="3.2.3 共形映射 Confomal Mapping"></a>3.2.3 共形映射 Confomal Mapping</h3><p>设包含于域$\Omega$内的一段弧$\gamma$的方程为$z&#x3D;z(t)(\alpha\leq t\leq\beta)$，并设$f(z)$在$\Omega$内有定义而且连续，则方程$w&#x3D;w(t)&#x3D;f(z(t))$定义$w$平面上的一段弧$\gamma’$，我们不妨称它为$\gamma$的象。</p>
+<ul>
+<li>实值闭区间 通过$z$映射到平面上一段(有向?)弧, 再通过f(连续映射)把弧映射到w(也是平面上的另一段弧)</li>
+</ul>
+<p>考察在$\Omega$内解析的$f(z)$。如果$z’(t)$存在，则$w’(t)$也存在，且由下式确定：<br>$w’(t)&#x3D;f’(z(t))z’(t).$</p>
+<p>现在我们来研究这一方程在一点$z_0&#x3D;z(t_0)$处的意义，其中</p>
+<p>$$z’(t_0)\neq0,\quad f’(z_0)\neq0.$$</p>
+<p>第一个结论就是$w’(t_0)\neq0$。因此$\gamma’$在$w_0&#x3D;f(z_0)$处具有一条切线，其方向由下式确定：</p>
+<p>$$\arg w’(t_0)&#x3D;\arg f’(z_0)+\arg z’(t_0).$$</p>
+<ul>
+<li>根据复数的$re^{i\theta}$表示法显然</li>
+</ul>
+<p>这一关系断言在$z_0$处的有向切线与$\gamma’$在$w_0$处的有向切线之间的夹角为$\arg f’(z_0)$，因此它与曲线$\gamma$无关(independent，只和曲线上这个点的切线有关？)。由于这一理由，通过$z_0$而互切的曲线将映成在$w_0$处互切的曲线。此外，在$z_0$处变成一个角的两条曲线将映成两条曲线，保持其交角的大小和方向不变。</p>
+<ul>
+<li>总的说就只和对于点的切线有关</li>
+<li>根据这一性质，我们把$w&#x3D;f(z)$所确定的映射在所有$f’(z)\neq0$的各点上称为是共形的conformal。</li>
+<li>也就是说 经过$z_0$的所有夹角，都是旋转了$\arg f’(z_0)$度，所以“保角”（大小和方向）<ul>
+<li>换句话 不是$\arg z’(t_0) &#x3D; \arg w’(t_0)$</li>
+<li>而是不论如何选$z$, 有$\arg [w’(t_0)&#x2F;z’(t_0)]$不变，由$\arg f’(z_0)$决定，它不是自己的不变，而是以$z_0$顶点的角 到$w_0$的角 是不变的大小和方向的</li>
+</ul>
+</li>
+</ul>
+<p>映射的一个相关性质可以从模$|f’(z_0)|$的分析中得到。我们有<br>$$\lim_{z\to z_0}\frac{|f(z)-f(z_0)|}{|z-z_0|}&#x3D;|f’(z_0)|,$$<br>这就是说以$z_0$为一端点的任意小线段在极限情形下以比例$|f’(z_0)|$收缩或延伸。换句话说，在$z_0$处，由变换$w&#x3D;f(z)$所引起的尺度上的线性变化与方向无关。一般来说，这种尺度的变化将逐点不同。</p>
+<p>反之，很明显地可以看出，两类共形性共同保证了$f’(z_0)$的存在。但是由一类共形性单独地得到$f’(z_0)$的存在就不那么明显，至少在附加的正则性假设下如此。</p>
+<p>更精确地说，假设偏导数$\partial f&#x2F;\partial x$及$\partial f&#x2F;\partial y$都是连续的，在这种情况下，$w(t)&#x3D;f(z(t))$的导数可以表示成下面的形式：<br>$$w’(t_0)&#x3D;\frac{\partial f}{\partial x}x’(t_0)+\frac{\partial f}{\partial y}y’(t_0),$$</p>
+<p>其中偏导数取在$z_0$处。如果用$z’(t_0)$表示，则可以写成<br>$$w’(t_0)&#x3D;\frac{1}{2}\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)z’(t_0)+\frac{1}{2}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)\overline{z’(t_0)}.$$</p>
+<p>如果保持角不变，$\arg[w’(t_0)&#x2F;z’(t_0)]$应不依赖于$\arg z’(t_0)$（上面的保角），因此表达式<br>$$\frac{w’(t_0)}{z’(t_0)}&#x3D;\frac{1}{2}\left(\frac{\partial f}{\partial x}-i\frac{\partial f}{\partial y}\right)+\frac{1}{2}\left(\frac{\partial f}{\partial x}+i\frac{\partial f}{\partial y}\right)\frac{\overline{z’(t_0)}}{z’(t_0)}\tag{3}$$<br>应具有一个不变的辐角。 注意到这个式子是</p>
+<ul>
+<li>圆心 + 半径形式</li>
+<li>$z_0+z_1e^{i\theta}$形式</li>
+</ul>
+<p>当$\arg z’(t_0)$变化时，由（3）所表示的点画出一个以$\frac{1}{2}|(\partial f&#x2F;\partial x)+i(\partial f&#x2F;\partial y)|$为半径的圆(因为右边 $\bar{z}&#x2F;{z}$就是$1e^{i 2\theta}$的形式)。在这个圆上辐角不可能为常数，除非圆的半径等于零，因此必须有<br>$$\frac{\partial f}{\partial x}&#x3D;-i\frac{\partial f}{\partial y},\tag{4}$$<br>这就是柯西-黎曼方程的复形式。</p>
+<p>同理，尺度的改变不仅依赖于方向这一条件意味着（3）式的模应不变。在一个圆上，要使模为常数，仅当圆半径等于零或圆心在原点时才有可能。在第一种情形下，我们得到（4）式，而在第二种情形下，有</p>
+<p>$$\frac{\partial f}{\partial x}&#x3D;i\frac{\partial f}{\partial y}$$</p>
+<p>上式表示$f(z)$是解析的。由具有非零导数的解析函数的共轭函数所确定的映射称为是间接共形的。显然，</p>
+<ul>
+<li>它将保持大小不变，</li>
+<li>但角的符号则相反。</li>
+</ul>
+<p>如果由$w&#x3D;f(z)$所做的$\Omega$的映射是拓扑的（定理9下方 解析+双射+逆函数解析），那么反函数$z&#x3D;f^{-1}(w)$也是解析的。这一断言在$f’(z_0)\neq0$时很容易证明，因为此时反函数的导数在点$z&#x3D;f^{-1}(w)$处必须等于$1&#x2F;f’(z)$。后面我们将证明，在一个解析函数所做的映射是拓扑的情形下，$f’(z)$决不能等于零。</p>
+<p>如果映射限制在$z_0$的一个充分小的邻域内，则由$f’(z_0)\neq0$就完全可以断言该映射是拓扑的。这可以从微积分学中的隐(?)函数定理得到，因为函数$u&#x3D;u(x,y),v&#x3D;v(x,y)$在点$z_0$处的雅可比行列式是$|f’(z_0)|^2$，因而不等于0。在后面，我们将介绍这一重要定理的一个简单证法。</p>
+<ul>
+<li>数学分析原理9.24 反函数定理: 导函数连续，导数矩阵的行列式非零，邻域开区间导数矩阵非零，邻域内双射，且逆函数导数矩阵&#x3D;导数矩阵的逆矩阵</li>
+<li>为什么 这里说 隐函数定理得到,不是反函数定理得到<ul>
+<li>隐函数定理，连续可微实函数 $f(x&#x3D;a\in R^n,y&#x3D;b\in R^m)&#x3D;0\in R^n$ 如果 $\frac{\partial}{\partial x}(f)|_{x&#x3D;a} \neq 0$,那么在邻域可以用b解出a</li>
+</ul>
+</li>
+</ul>
+<p>但是，即使在整个区域$\Omega$中都有$f’(z)\neq0$，我们也不能断言整个区域的映射一定是拓扑的。为了说明这一点，书上有个图 其中子域$\Omega_1$及$\Omega_2$的映射都是一对一的，但它们的象则互相交迭。我们可以把整个区域的象设想为一个透明的膜，它是部分地自相遮盖着的。这就是黎曼（Riemann）在引入现在称为黎曼面的广义区域时所用的简明而有效的思想。</p>
+<ul>
+<li>也就是 局部都是 双射+解析，但是整体不是双射</li>
+</ul>
+<h3 id="3-2-4-长度和面积-Length-and-Area"><a href="#3-2-4-长度和面积-Length-and-Area" class="headerlink" title="3.2.4 长度和面积 Length and Area"></a>3.2.4 长度和面积 Length and Area</h3><p>我们看到，在共形映射$f(z)$下，一条无穷小线段的长度在点$z$被乘上因子$|f’(z)|$。由于形变在各个方向是相同的，所以无穷小面积显然乘以$|f’(z)|^2$。</p>
+<p>现在我们将其置于严格的基础上。从微积分可知，具有方程$z&#x3D;z(t)&#x3D;x(t)+iy(t),\ a\leq t\leq b$的可微弧$\gamma$的长度由下式给出：<br>$$L(\gamma)&#x3D;\int_a^b\sqrt{x’(t)^2+y’(t)^2},dt&#x3D;\int_a^b|z’(t)|,dt.$$</p>
+<p>象曲线$\gamma’$由$w&#x3D;w(t)&#x3D;f(z(t))$确定，其导数为$w’(t)&#x3D;f’(z(t))\cdot z’(t)$。这样，它的长度是<br>$$L(\gamma’)&#x3D;\int_a^b|f’(z(t))|\cdot|z’(t)|,dt.$$</p>
+<p>习惯上用下面较短的记号表示：</p>
+<p>$$L(\gamma)&#x3D;\int_{\gamma}|dz|,\quad L(\gamma’)&#x3D;\int_{\gamma}|f’(z)|dz.\tag{5}$$</p>
+<p>注意在复数的记法中，关于弧长积分常用的微积分记号$ds$要换为$|dz|$。</p>
+<p>设$E$是平面中的一个点集，其面积<br>$$A(E)&#x3D;\iint_{E}dxdy$$<br>可以表示成黎曼二重积分。若$f(z)&#x3D;u(x,y)+iv(x,y)$是一个双向可微映射，则根据积分变量的变换规则，象$E’&#x3D;f(E)$的面积由下式给出：<br>$$A(E’)&#x3D;\iint_{E}|u_{x}v_{y}-u_{y}v_{x}|dxdy.$$</p>
+<ul>
+<li>中间系数就是雅可比行列式</li>
+<li>这个在u,v分别解析时是正确的</li>
+</ul>
+<p>但若$f(z)$是一个包含$E$的开集的共形映射，则根据柯西-黎曼方程，$u_{x}v_{y}-u_{y}v_{x}&#x3D;|f’(z)|^{2}$，因而得到<br>$$A(E’)&#x3D;\iint_{E}|f’(z)|^{2}dxdy. \tag{6}$$</p>
+<ul>
+<li>其实，如果不是解析函数 无法用z作为单独变量表示?</li>
+</ul>
+<p>公式(5)和(6)在复分析部分有重要应用，这部分通常称为几何函数论。</p>
+<h3 id="3-3-线性变换-Linear-Transformations"><a href="#3-3-线性变换-Linear-Transformations" class="headerlink" title="3.3 线性变换 Linear Transformations"></a>3.3 线性变换 Linear Transformations</h3><p>在所有的解析函数中，一阶有理函数具有最简单的映射性质，因为这些函数确定的从扩充平面到自身的映射既是共形的(因为任意一点 乘上的导数只有正负两个方向)，又是拓扑的（解析+双射+反函数解析）。线性变换还有非常奇特的几何性质。因此，它们的重要性远不只是为共形映射提供简单的例子。希望读者对这一几何方面予以特别重视，从此可以获得一些简单而非常有价值的技巧。</p>
+<h4 id="3-3-1-线性群-The-Linear-Group"><a href="#3-3-1-线性群-The-Linear-Group" class="headerlink" title="3.3.1 线性群 The Linear Group"></a>3.3.1 线性群 The Linear Group</h4><blockquote>
+<p>注意 这里线性变换的 肉眼感觉不线性，但是分子分母关系又线性，有的地方称 分式线性变换， 线性分式变换，或者 莫比乌斯(Mobius)变换, 下面也会看到它和线性代数中的线性变换的区别和联系</p>
+</blockquote>
+<p>我们在2.1.4节已经提到线性分式变换<br>$$w&#x3D;S(z)&#x3D;\frac{az+b}{cz+d},\tag{7}$$<br>其中$ad-bc\neq0$，有逆<br>$$z&#x3D;S^{-1}(w)&#x3D;\frac{dw-b}{-cw+a}.$$</p>
+<p>特殊值$S(\infty)&#x3D;a&#x2F;c$和$S(-d&#x2F;c)&#x3D;\infty$可以作为约定而引入，也可以作为$z\to\infty$和$z\to-d&#x2F;c$的极限而引入。根据后一种解释，显见$S$是扩充平面映成自身的一个拓扑映射，其拓扑由黎曼球面上的距离定义。</p>
+<p>对于线性变换，通常我们将$S(z)$改记为$Sz$。在表示式(7)中，如果$ad-bc&#x3D;1$，则称它是规范化的。很明显，每一个线性变换都有两个规范化的表示式，其中一个可以从另一个经改变系数符号而得到。</p>
+<ul>
+<li>$a,b,c,d$同时除以$|ab-bc|$即可</li>
+</ul>
+<p>表示一个线性变换的方便办法是使用齐次（通过 分式 变成齐次）坐标。令$z&#x3D;z_{1}&#x2F;z_{2},\ w&#x3D;w_{1}&#x2F;w_{2}$，则如果</p>
+<p>$$w_{1}&#x3D;a z_{1}+b z_{2}, \tag{8}$$</p>
+<p>$$w_{2}&#x3D;c z_{1}+d z_{2}, \tag{8}$$</p>
+<p>便有 $w&#x3D;S z$. 矩阵记法的方便之处主要在于它可使一个复合变换 $w&#x3D;S_{1} S_{2} z$ 易于确定(!). 如果我们用下标来区分 $S_{1}$ 与 $S_{2}$ 对应的矩阵, 则易证 $S_{1} S_{2}$ 可用如下的矩阵乘积来确定:  </p>
+<p>$$\left(\begin{array}{ll} a_{1} &amp; b_{1} \ c_{1} &amp; d_{1} \end{array}\right)\left(\begin{array}{ll} a_{2} &amp; b_{2} \ c_{2} &amp; d_{2} \end{array}\right)&#x3D;\left(\begin{array}{cc} a_{1} a_{2}+b_{1} c_{2} &amp; a_{1} b_{2}+b_{1} d_{2} \ c_{1} a_{2}+d_{1} c_{2} &amp; c_{1} b_{2}+d_{1} d_{2} \end{array}\right)$$ </p>
+<p>所有的线性变换组成一个群. 事实上, 结合律 $\left(S_{1} S_{2}\right) S_{3}&#x3D;S_{1}\left(S_{2} S_{3}\right)$ 对任意变换都成立. 恒等式 $w&#x3D;z$ 是一个线性变换, 线性变换的反变换仍是线性的. 比 $z_{1}: z_{2} \neq 0: 0$ 都是复射影线上的点, 而(8)表明线性变换群就是复数的一维射影群, 通常记为 $P(1, \mathbb{C})$. 如果我们只用规范化表示式, 那么 (8) 就是行列式为 1 的 2 阶矩阵的群 (记为 $SL(2, \mathbb{C})$ ), 不过有两个相反的矩阵对应于同一个线性变换.  </p>
+<ul>
+<li>P: Projective</li>
+<li>SL: Special Linear group</li>
+</ul>
+<p>对矩阵记法, 我们不作进一步的使用, 不过要指出: 最简单的线性变换对应于如下形式的矩阵:  </p>
+<p>$$\left(\begin{array}{ll} 1 &amp; \alpha \ 0 &amp; 1 \end{array}\right),\left(\begin{array}{ll} k &amp; 0 \ 0 &amp; 1 \end{array}\right),\left(\begin{array}{ll} 0 &amp; 1 \ 1 &amp; 0 \end{array}\right)$$</p>
+<ul>
+<li>其中第一个, $w&#x3D;z+\alpha$, 称为平行移动. <ul>
+<li>$w_1&#x2F;w_2 &#x3D; (z_1+\alpha z_2)&#x2F;z_2&#x3D;z+\alpha$</li>
+</ul>
+</li>
+<li>第二个, $w&#x3D;k z$, 当 $|k|&#x3D;1$ 时是一旋转, 而当 $k&gt;0$ 时是位似变换（homothetic transformation）. 对于任意复数 $k \neq 0$, 令 $k&#x3D;|k| \cdot k &#x2F;|k|$, 因此, $w&#x3D;k z$ 可看成是一个位似变换之后接着作一旋转所得的结果. <ul>
+<li>$w_1&#x2F;w_2 &#x3D; kz_1&#x2F;z_2 &#x3D; kz$</li>
+<li>$k &#x3D; re^{i\theta}$, 可以看成 位似 和 旋转的 复合</li>
+</ul>
+</li>
+<li>第三个变换, $w&#x3D;1 &#x2F; z$, 称为反演.  <ul>
+<li>$w_1&#x2F;w_2 &#x3D; z_2&#x2F;z_1 &#x3D; 1&#x2F;z$</li>
+</ul>
+</li>
+</ul>
+<p>如果 $c \neq 0$, 则可以写为  </p>
+<p>$$\frac{a z+b}{c z+d}&#x3D;\frac{b c-a d}{c^{2}(z+d &#x2F; c)}+\frac{a}{c}$$ </p>
+<p>这一分解说明最普通的线性变换是由一个平移、一个反演、一个旋转、一个位似变换与另一个平移所组成. 如果 $c&#x3D;0$, 反演不存在, 最后一个平移也就不需要了.  </p>
+<h4 id="3-3-1-练习"><a href="#3-3-1-练习" class="headerlink" title="3.3.1 练习"></a>3.3.1 练习</h4><ol>
+<li>证明反射 $z \rightarrow \bar{z}$ 不是一个线性变换.  <ul>
+<li>如果是线性变换 存在a,b,c,d</li>
+<li>取0 可得b&#x3D;0</li>
+<li>取z&#x3D;1,2 可得d&#x3D;0</li>
+<li>由此 $&#x3D;a&#x2F;c$ 然而取z&#x3D;1+i 矛盾</li>
+</ul>
+</li>
+<li>如果<br>$$T_{1} z&#x3D;\frac{z+2}{z+3}, \quad T_{2} z&#x3D;\frac{z}{z+1}$$<br>求 $T_{1} T_{2} z$、$T_{2} T_{1} z$ 和 $T_{1}^{-1} T_{2} z$</li>
+</ol>
+<ul>
+<li>就矩阵乘法 </li>
+<li>其中逆变换用 $z&#x3D;S^{-1}(w)&#x3D;\frac{dw-b}{-cw+a}.$</li>
+</ul>
+<ol start="3">
+<li>证明保持原点和所有距离不变的一个最一般的变换或者是一个旋转, 或者是一个旋转之后接着一个关于实轴的反射.</li>
+</ol>
+<ul>
+<li>原点: b&#x3D;0</li>
+<li>$az&#x2F;(cz+d)$, 保持$|z|$, 那么$|az&#x2F;(cz+d)|&#x3D;|az|&#x2F;|cz+d|$, 注意到分子不变，那么分母是以d为圆心$|c|$为半径的圆上的点到原点距离，所以要么c&#x3D;0要么 d&#x3D;0<ul>
+<li>如果d&#x3D;0 那么, &#x3D; a&#x2F;z没有保持距离不变</li>
+<li>所以c&#x3D;0, $f(z)&#x3D;kz$的形式，要保持距离不变$|k|&#x3D;1$</li>
+</ul>
+</li>
+<li>emmmmmmm这里有要求 是线性变换的前提吗?</li>
+</ul>
+<ol start="4">
+<li>证明将实轴变成它自身的任何线性变换都可以写成实系数式</li>
+</ol>
+<ul>
+<li>$f(z)&#x3D;(az+b)&#x2F;(cz+d)$</li>
+<li>$f(z)&#x3D;\frac{a_rz+a_iz+b_r+b_i}{c_rz+c_iz+d_r+d_i}$</li>
+<li>$f(z)&#x3D;\frac{a_rz+b_r+a_iz+b_i}{c_rz+d_r+c_iz+d_i}$</li>
+<li>$k &#x3D; \frac{a_iz+b_i}{c_iz+d_i}$</li>
+<li>$f(z)&#x3D;\frac{a_rz+b_r-k(c_rz+d_r)+k(c_rz+d_r)+a_iz+b_i}{c_rz+d_r+c_iz+d_i}$</li>
+<li>$f(z)&#x3D;\frac{a_rz+b_r-k(c_rz+d_r)}{c_rz+d_r+c_iz+d_i}+k$<ul>
+<li>左边是 实数 除以 非实数的形式</li>
+<li>所以 要么 $c_iz+d_i &#x3D;0$, 要么分子为0</li>
+<li>分子为零的情况 是 $f(z)&#x3D;c$常数</li>
+<li>$c_iz+d_i &#x3D;0$的情况是 $f(z)&#x3D;\frac{a_rz+b_r}{c_rz+d_r}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-2-交比-The-cross-ratio"><a href="#3-3-2-交比-The-cross-ratio" class="headerlink" title="3.3.2 交比 The cross ratio"></a>3.3.2 交比 The cross ratio</h3><p>在扩充平面上给定三个不同的点$z_2$, $z_3$, $z_4$，则有一个将这些点变化为$1,0,\infty$的线性变换$S$存在。如果已知各点中没有一点是$\infty$，则$S$将由下式确定：</p>
+<p>$$Sz&#x3D;\frac{z-z_3}{z-z_4}:\frac{z_2-z_3}{z_2-z_4}$$</p>
+<ul>
+<li>从几何上，感觉是 四个向量的夹角的正负加和，和四个向量的长度乘除</li>
+</ul>
+<p>如果$z_2,z_3,z_4&#x3D;\infty$，则变换分别化为：</p>
+<p>$$\frac{z-z_3}{z-z_4},\frac{z_2-z_4}{z-z_4},\frac{z-z_3}{z_2-z_3}$$</p>
+<p>如果$T$为具有同样性质的另一变换，则$ST^{-1}$将固定点$1$, $0$, $\infty$不变。直接计算表明，这对恒等变换为真，因而有$S&#x3D;T$。由此可知$S$是唯一确定的。</p>
+<p>​<strong>定义12</strong>​ 在将$z_2$, $z_3$, $z_4$变为$1$, $0$, $\infty$的线性变换下，$z_1$的象称为$z_1$, $z_2$, $z_3$, $z_4$的交比，记作$(z_1,z_2,z_3,z_4)$。</p>
+<p>这一定义仅当$z_2$, $z_3$, $z_4$是不同的点时才有意义。当四点中有三点相异时，可以引入约定数值，但这对我们是不重要的。</p>
+<p>交比在线性变换下是不变的。更精确的叙述是：</p>
+<p>​<strong>定理12</strong>​ 如果$z_1,z_2,z_3,z_4$为扩充平面上的四个相异点，$T$为任意一个线性变换，则</p>
+<p>$$(Tz_1,Tz_2,Tz_3,Tz_4)&#x3D;(z_1,z_2,z_3,z_4)$$</p>
+<p>这一定理的证明是很显然的，因为如果$Sz&#x3D;(z_1,z_2,z_3,z_4)$（？？？勘误？？？ $Sz_1$???英文书也没有下标），则$ST^{-1}$将$Tz_2$, $Tz_3$, $Tz_4$变为$1$, $0$, $\infty$，因此根据定义有<br>$$(Tz_1,Tz_2,Tz_3,Tz_4)&#x3D;ST^{-1}(Tz_1)&#x3D;Sz_1&#x3D;(z_1,z_2,z_3,z_4)$$</p>
+<p>借助这一性质，我们立刻可以写出将已知点$z_1,z_2,z_3$变到规定位置$\omega_1,\omega_2,\omega_3$的线性变换。这个变换应为：<br>$$(\omega,\omega_1,\omega_2,\omega_3)&#x3D;(z,z_1,z_2,z_3)$$</p>
+<ul>
+<li>wow amazing !</li>
+</ul>
+<p>​<strong>定理13</strong>​ 交比$(z_1,z_2,z_3,z_4)$为实数，当且仅当四点共圆或共线。</p>
+<p>根据初等几何学原理，这一定理是很显然的，因为我们有：<br>$$\arg(z_1,z_2,z_3,z_4)&#x3D;\arg\frac{z_1-z_3}{z_1-z_4}-\arg\frac{z_2-z_3}{z_2-z_4}$$</p>
+<p>如果这些点都位于一个圆上，则上式等于$0$或$\pi$，依点的相对位置而定。</p>
+<p>由于$T(z)&#x3D;(z_1,z_2,z_3,z_4)$只在实轴经$T^{-1}$变换后所成的象上取实数，因此要从分析上证明这一定理, 只要证明在任一线性变换下，实轴的象是 圆 或 直线 即可.</p>
+<ul>
+<li>当$z$为实数时$\omega &#x3D; T^{-1}z$的值满足方程$T\omega&#x3D;\overline{T\omega}$,显然这个条件具有如下形式</li>
+</ul>
+<p>$$\frac{aw+b}{cw+d}&#x3D;\frac{\bar{a}\bar{w}+\bar{b}}{\bar{c}\bar{w}+\bar{d}}$$</p>
+<p>交叉相乘后得到方程：<br>$$(a\bar{c}-\bar{a}c)|w|^{2}+(a\bar{d}-c\bar{b})w+(b\bar{c}-\bar{a}d)\bar{w}+b\bar{d}-d\bar{b}&#x3D;0$$</p>
+<ul>
+<li>若$a\bar{c}-\bar{a}c&#x3D;0$，方程为直线（系数$a\bar{d}-c\bar{b}$不同时为零）  </li>
+<li>若$a\bar{c}-\bar{a}c\neq0$，通过配方化简得圆的方程：<br> $$\left|w+\frac{\bar{a}d-c\bar{b}}{\bar{a}c-\bar{c}a}\right|&#x3D;\left|\frac{ad-bc}{\bar{a}c-c\bar{a}}\right|$$<ul>
+<li>草稿纸上画了一会</li>
+</ul>
+</li>
+</ul>
+<p>在线性变换中，不用区别直线和圆，这从它们在黎曼球面上都是圆的进一步解释，在广义上使用圆</p>
+<p>​<strong>定理14</strong>​ 线性变换将圆变为圆。</p>
+<h4 id="3-3-2-练习"><a href="#3-3-2-练习" class="headerlink" title="3.3.2 练习"></a>3.3.2 练习</h4><ol>
+<li><p>​<strong>求线性变换</strong>​<br>将点$0$，$i$，$-i$变换为$1$，$-1$，$0$。</p>
+<ul>
+<li>$w(z)$</li>
+<li>$(w,1,-1,0)&#x3D;(z,0,i,-i)$</li>
+<li>$(w+1)&#x2F;w:(2&#x2F;1)&#x3D;(z-i)&#x2F;(z+i):(-i&#x2F;i)$</li>
+<li>$(w+1)&#x2F;(2w)&#x3D;-(z-i)&#x2F;(z+i)$</li>
+<li>$w&#x3D;[1,1;2,0]^{-1}[-1,i;1,i]z$, 这里是运算的逆不是矩阵的逆</li>
+<li>$w&#x3D;[0,-1;-2,1][-1,i;1,i]z$</li>
+<li>$w&#x3D;[-1,-i;3,-i]z$</li>
+<li>验证: <ul>
+<li>(-i)&#x2F;(-i)&#x3D;1</li>
+<li>(-i-i)&#x2F;(3i-i)&#x3D;-1</li>
+<li>(i-i)&#x2F;(-3i-i)&#x3D;0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>​<strong>交比表示</strong>​<br>用$\lambda&#x3D;(z_1,z_2,z_3,z_4)$表示四点的24种排列的交比。</p>
+<ul>
+<li>$(z_1,z_2,z_3,z_4) &#x3D; \lambda$</li>
+<li>$(z_1,z_2,z_4,z_3) &#x3D; 1&#x2F;\lambda$</li>
+<li>$(z_1,z_3,z_2,z_4) &#x3D; 1-\lambda$<ul>
+<li>这个比较难推</li>
+</ul>
+</li>
+<li>$(z_2,z_1,z_3,z_4) &#x3D; 1&#x2F;\lambda$</li>
+<li>上面我们有了 相邻交换的结果</li>
+<li>注意到变换可以复合</li>
+<li>所以 24种，对应交换可以复合得到</li>
+<li>$(z_1,z_2,z_3,z_4) &#x3D; \lambda$</li>
+<li>$(z_1,z_2,z_4,z_3) &#x3D; 1&#x2F;\lambda$</li>
+<li>$(z_1,z_3,z_2,z_4) &#x3D; 1-\lambda$</li>
+<li>$(z_1,z_3,z_4,z_2) &#x3D; 1&#x2F;(1-\lambda)$</li>
+<li>$(z_1,z_4,z_2,z_3) &#x3D; 1-1&#x2F;\lambda$</li>
+<li>$(z_1,z_4,z_3,z_2) &#x3D; 1&#x2F;(1-\lambda)$</li>
+<li>$(z_2,z_1,z_3,z_4) &#x3D; 1&#x2F;\lambda$</li>
+<li>$(z_2,z_1,z_4,z_3) &#x3D; \lambda$</li>
+<li>$(z_2,z_3,z_1,z_4) &#x3D; 1-1&#x2F;\lambda$</li>
+<li>$(z_2,z_3,z_4,z_1) &#x3D; 1&#x2F;(1-1&#x2F;\lambda)&#x3D;\lambda&#x2F;(\lambda-1)$</li>
+<li>$(z_2,z_4,z_1,z_3) &#x3D; 1-\lambda$</li>
+<li>$(z_2,z_4,z_3,z_1) &#x3D; 1&#x2F;(1-\lambda)$</li>
+<li>…</li>
+</ul>
+</li>
+<li><p>​<strong>圆上四边形的性质</strong>​<br>若四边形相邻顶点$z_1$，$z_2$，$z_3$，$z_4$共圆（有顺序性的），证明：<br>$$\left|z_1-z_3\right|\cdot\left|z_2-z_4\right|&#x3D;\left|z_1-z_2\right|\cdot\left|z_3-z_4\right|+\left|z_2-z_3\right|\cdot\left|z_4-z_1\right|$$<br>并给出几何解释。</p>
+<ul>
+<li>$1&#x3D;|\frac{z_1-z_2}{z_1-z_3}\frac{z_4-z_3}{z_4-z_2}|+|\frac{z_1-z_4}{z_1-z_3}\frac{z_2-z_3}{z_2-z_4}|$ </li>
+<li>$1&#x3D;|(z_1,z_4,z_2,z_3)|+|(z_1,z_2,z_4,z_3)|$</li>
+<li>共圆, 所以右侧 norm内是实数, 看成绝对值<ul>
+<li>因为 上面看成$re^{i\theta}$形式, 后,$\theta &#x3D;0$,所以是正实部</li>
+<li>右侧左边 &#x3D; $\lambda$</li>
+<li>则右边 &#x3D; $1-\lambda$, 同样是正的</li>
+</ul>
+</li>
+<li>平面几何的 托勒密定理：圆内接四边形 对角乘积&#x3D;对边乘积的和</li>
+</ul>
+</li>
+<li><p>​<strong>线性变换解的存在性</strong>​<br>证明任意四个相异点可通过线性变换映射到$1$，$-1$，$k$，$-k$的位置（$k$由点决定）。<br>​<strong>问题</strong>​：共有多少个解？解之间如何关联？</p>
+<ul>
+<li>感觉解线性方程组</li>
+<li>$(az_i+b)&#x2F;(cz_i+d)&#x3D;v_i$</li>
+<li>$z_ia+b+(-z_iv_i)c+(-v_i)d&#x3D;0$</li>
+<li>$[z_1,1,-z_1,-1;z_2,1,z_2,1;z_3,1,-kz_3,-k;z_4,1,kz_4,k]$</li>
+<li>$\begin{bmatrix} z_1 &amp; 1 &amp; -z_1 &amp; -1 \ z_2 &amp; 1 &amp; z_2 &amp; 1 \ z_3 &amp; 1 &amp; -k z_3 &amp; -k \ z_4 &amp; 1 &amp; k z_4 &amp; k \end{bmatrix}$</li>
+<li>另一个想法是</li>
+<li>$(z,z_2,z_3,z_4)&#x3D;(w,-1,k,-k)$完成了后面三个的映射<ul>
+<li>且如果相等这样$w(z)$是把输入z映射到w</li>
+</ul>
+</li>
+<li>那么需要$\lambda&#x3D;(z_1,z_2,z_3,z_4)&#x3D;(1,-1,k,-k)&#x3D;(1-k)^2&#x2F;(1+k)^2$即可</li>
+<li>$k&#x3D;\frac{1-\sqrt{\lambda}}{1+\sqrt{\lambda}}$, 开根 复平面上有两个解</li>
+</ul>
+</li>
+</ol>
+<p>现在 复变 多次说 圆 和 直线没有差别</p>
+<h3 id="3-3-3-对称性-Symmetry"><a href="#3-3-3-对称性-Symmetry" class="headerlink" title="3.3.3 对称性 Symmetry"></a>3.3.3 对称性 Symmetry</h3><p>​<strong>定义13</strong>​  </p>
+<ul>
+<li>点$z$与$\bar{z}$关于实轴对称  </li>
+<li>实系数线性变换将实轴映射为实轴，并保持对称性(并且$z$和$\bar{z}$映射的点仍然关于实轴对称)</li>
+</ul>
+<p>​<strong>推广</strong>​：若线性变换$T$将实轴映射为圆$C$，则称点$\omega&#x3D;T(z)$与$\omega^*&#x3D;T(\bar{z})$关于$C$对称。此关系是$\omega,\omega^*,C$之间的关系，它与$T$无关（T是$z$到$\omega$）的</p>
+<ul>
+<li>设$S$为另一将实轴映射为$C$的变换，则$S^{-1}T$为实变换, 因此$S^{-1}\omega&#x3D;S^{-1}T(z)$与$S^{-1}\omega^*&#x3D;S^{-1}T(\bar{z})$仍共轭</li>
+</ul>
+<p>定义13 点$z$及$z^*$称为关于过点$z_1,z_2,z_3$的圆$C$对称，当且仅当<br>$$(z^*,z_1,z_2,z_3)&#x3D;\overline{(z,z_1,z_2,z_3)}$$</p>
+<ul>
+<li>圆$C$上的点（且仅有这些点）与其自身对称。把点$z$变为$z^{\star}$的映射是一一对应的，称为关于$C$的反射。显然，两个反射组成一个线性变换。</li>
+</ul>
+<p>现在我们来研究对称的几何意义。先设$C$为一条直线，可以取$z_3&#x3D;\infty$，则对称的条件变为<br>$$\frac{z^*-z_2}{z_1-z_2}&#x3D;\frac{\bar{z}-\bar{z_2}}{\bar{z_1}-\bar{z_2}} \tag{10}$$<br>取绝对值得到$|z^*-z_2|&#x3D;|z-z_2|$。此处$z_2$可以为$C$上的任意一个有限点，因此可知$z$及$z^*$至$C$上任一点的距离都相等。由(10)还可以得<br>$$\text{Im}\frac{z^*-z_2}{z_1-z_2}&#x3D;-\text{Im}\frac{z-z_2}{z_1-z_2}$$<br>因此$z$及$z^*$位于$C$所确定的两个不同的半平面内。$C$是$z$及$z^*$连线的垂直平分线，这留给读者来证明。</p>
+<p>现在我们来讨论$C$是一个有限圆的情形，设$C$的圆心为$a$，半径为$R$。多次应用交比的不变性可得如下结果：<br>$$\overline{(z,z_1,z_2,z_3)}&#x3D;\overline{(z-a,z_1-a,z_2-a,z_3-a)}$$</p>
+<ul>
+<li>这里后面三项 从几何意义也容易看，从模长看也行<br>$$&#x3D;(\overline{z-a},\frac{R^2}{z_1-a},\frac{R^2}{z_2-a},\frac{R^2}{z_3-a})$$</li>
+<li>这里整体用线性变换 $T&#x3D;\frac{R^2}{z}$<br>$$&#x3D;(\frac{R^2}{\overline{z-a}},z_1-a,z_2-a,z_3-a)$$</li>
+<li>这里整体用线性变换 平移 $T&#x3D;z+a$<br>$$&#x3D;(\frac{R^2}{\overline{z-a}}+a,z_1,z_2,z_3)$$<br>这一方程表明$z$的对称点为$z^*&#x3D;\frac{R^2}{\overline{z-a}}+a$，或者说$z$及$z^*$满足方程<br>$$(z^*-a)(\overline{z-a})&#x3D;R^2$$<br>因此$z$及$z^*$至圆心的距离的乘积$|z^*-a|\cdot|z-a|$等于$R^2$。此外，比$(z^*-a)&#x2F;(z-a)$为正，这说明$z$及$z^*$位于由$a$引出的同一条半直线上。这提供了一个关于$z$的对称点的简单作图法（见图3-2）。注意$a$的对称点是$\infty$。</li>
+<li>也就是 $z,z^*,a$ 三点共线，距离乘积为R^2,是个嵌套相似三角形，<ul>
+<li>z在圆内 做过z垂直z-a的线交圆于一点，再在交点做切线</li>
+<li>z在圆外, 做两个圆的切线，相连切点，和z-a交于$z^*$</li>
+<li>几何上容易看出，圆心映射到无穷远点，</li>
+</ul>
+</li>
+</ul>
+<p>定理15（对称原理）如果一个线性变换将一个圆$C_{1}$映射为圆$C_{2}$，则这一变换必将关于$C_{1}$对称的任一对点变换为关于$C_{2}$对称的一对点。</p>
+<p>​<strong>证明思路</strong>​：当$C_{1}$或$C_{2}$为实轴时，原理可直接由对称定义得出。一般情况下，应用一个把圆$C$变为实轴的中间变换即可得证。</p>
+<p>简略地说，线性变换保持对称性。若已知$z$的象$z’$，则$C$的象必为$z$及$z’$象的对称轴。虽然这还不足以确定$C$的象，但我们所得的知识仍然有价值。</p>
+<h3 id="3-3-3-练习"><a href="#3-3-3-练习" class="headerlink" title="3.3.3 练习"></a>3.3.3 练习</h3><ol>
+<li>证明每一个反射将圆变为圆。<ul>
+<li>直线显然</li>
+<li>点集E中每个点w关于圆C的反射，在圆C到实轴的线性变换T下，等于$w^*&#x3D;T\overline{T^{-1}w}$, 而在线性变换T下，E如果是圆，那么$T^{-1}$以后是圆, 关于实轴反射后是圆，再关于$T$ 变换还是圆</li>
+</ul>
+</li>
+<li>试将虚轴、直线$x&#x3D;y$、圆$|z|&#x3D;1$反射到圆$|x-2|&#x3D;1$上。<ul>
+<li>reflect the imaginary axis, the line x&#x3D;y, and the circle |z|&#x3D;1 in the circle |z-2|&#x3D;1</li>
+</ul>
+</li>
+<li>在上题中，试用几何图法作出反射。<ul>
+<li>|z-1&#x2F;2|&#x3D;1&#x2F;2</li>
+<li>$|z-(7&#x2F;4+i&#x2F;4)|&#x3D;\sqrt{2}&#x2F;4$</li>
+<li>$|z-4&#x2F;3|&#x3D;1&#x2F;3$</li>
+</ul>
+</li>
+<li>试求可以将圆$|z|&#x3D;2$变为$|z+1|&#x3D;1$，将点$-2$变为原点，将原点变为$i$的线性变换。</li>
+</ol>
+<ul>
+<li>我想的保持 反射 关系 ，所以我们已经知道$(z,-2,0,z_4)&#x3D;(w,0,i,w_4)$, 那么$z_4$选关于圆$|z|&#x3D;2$的某个反射点,-2在圆上是它自己，0是圆心反射点无穷大, 而$i$在$|z+1|&#x3D;1$的反射点$-1&#x2F;2+i&#x2F;2$</li>
+<li>$(z,-2,0,\infty)&#x3D;(w,0,i,-1&#x2F;2+i&#x2F;2)$</li>
+<li>$w&#x3D;(z+2)&#x2F;((-1-i)z-2i)$, 怎么验证圆呢 选3个点?</li>
+</ul>
+<ol start="5">
+<li>试求将圆$|z|&#x3D;R$变为它自身的线性变换的最一般形式。<ul>
+<li>设圆外点$a$ 映射到$0$,那么$R^2&#x2F;\bar{a}$映射到$\infty$ (对称性)</li>
+<li>$w(z)&#x3D;\lambda \frac{z-a}{z-R^2&#x2F;\bar{a}}$<ul>
+<li>这一个洞察的式子，它把上面$(az+b)&#x2F;(cz+d)$变成了映射到零点和映射到无穷点的两个，虽然 原来$1,0,\infty$是三个点，而这里是两个点的情况</li>
+</ul>
+</li>
+<li>其中 $\lambda$ 为某个常数</li>
+<li>研究 右侧的模, 希望让它是某个于z具体值无关的数，从而可以变成某个常数</li>
+<li>$|\frac{z-a}{z-R^2&#x2F;\bar{a}}|&#x3D;\frac{|z-a|}{|R^2&#x2F;\bar{z}-R^2&#x2F;\bar{a}|}&#x3D; \frac{|z-a|}{R^2\frac{|\bar{a}-\bar{z}|}{|\bar{a}||\bar{z}|}}&#x3D;\frac{|\bar{a}|}{R}$</li>
+<li>所以 把它的倒数放入右侧分式，则右侧分式模恒为一</li>
+<li>$w(z)&#x3D;R^2e^{i\theta}\frac{z-a}{\bar{a}z-R^2}$</li>
+<li>$w(z)&#x3D;e^{i\theta}\frac{z-a}{\bar{a}z&#x2F;R^2-1}$</li>
+</ul>
+</li>
+<li>复平面中 假定一个线性分式变换把一组同心圆变换为另一组同心圆，证明圆半径之比不变。<ul>
+<li>首先 线性分式变换可以表示 成 平移,旋转+相似,反演的组合，其中只要结果是同一个线性分式变换，其过程不影响</li>
+<li>那么对于$w&#x3D;(az+b)&#x2F;(cz+d)$ 我们可以</li>
+<li>其中 平移，旋转，相似（可以证明） 都是保持圆心的映射，也是保持r比例的映射</li>
+<li>而反演 $|z-a|&#x3D;r$得到$z&#x3D;1&#x2F;w$, 有$|w-\frac{\bar{a}}{|a|^2-r^2}|&#x3D;|\frac{r}{|a|^2-r^2}|$ , 同心圆a相同，r不同，所以映射的不保持圆心，也不保持比例</li>
+<li>若$c&#x3D;0$, 不存在反演，那么可证 </li>
+<li>否则</li>
+<li>$z\to cz$ (旋转+相似 保持圆心 比例)</li>
+<li>$cz \to cz+d$ (平移 保持圆心 比例)</li>
+<li>$cz+d \to 1&#x2F;(cz+d)$ (反演 不保持圆心 比例)</li>
+<li>$1&#x2F;(cz+d) \to (b-ad&#x2F;c)&#x2F;(cz+d)$ (旋转+相似 保持圆心 比例（是和上一个状态）)</li>
+<li>$(b-ad&#x2F;c)&#x2F;(cz+d) \to a&#x2F;c + (b-ad&#x2F;c)&#x2F;(cz+d) &#x3D; (az+b)&#x2F;(cz+d)$ (平移 保持圆心 比例)</li>
+<li>所以 过程中恰有一个 反演，其它都是保持圆心+比例的，所以，这样一定不保持圆心，所以 证明了 这样的变换一定没有反演, 而没有反演的一定保持比例</li>
+</ul>
+</li>
+<li>求一个可以把$|z|&#x3D;1$与$|z-1&#x2F;4|&#x3D;1&#x2F;4$变换为同心圆的线性变换。半径之比怎样变化？<ul>
+<li>6是不是也可以用保持对称性做<ul>
+<li>除了圆心和无穷点，找不到任何点a，同时关于两个圆的反演是 共点的</li>
+<li>$p$为圆心$r_i$为半径</li>
+<li>$\frac{r_1^2}{\overline{a-p}}+p&#x3D;\frac{r_2^2}{\overline{a-p}}+p$</li>
+</ul>
+</li>
+<li>因为 同心圆，所以变换后的圆心和 无穷点，关于两个圆都对撑</li>
+<li>那么设变换前的a是映射到变换后的圆心，那么变换前的a的关于两个圆的对称点应该为同一个点（因为线性分式映射是1-1）的</li>
+<li>又有 $圆心,a,a^{*}$总是共射线且圆心在射线端点</li>
+<li>所以 $a,a^{*}$和两个圆心共线, 变成了线上的问题</li>
+<li>$\frac{r_1^2}{\overline{a-o_1}}+o_1&#x3D;\frac{r_2^2}{\overline{a-o_2}}+o_2$</li>
+<li>$\frac{1}{\overline{a}}&#x3D;\frac{1&#x2F;4^2}{\overline{a-1&#x2F;4}}+1&#x2F;4$</li>
+<li>$a&#x3D;2\pm \sqrt{3}$</li>
+<li>例如取 $w(z)&#x3D;\lambda \frac{z-(2-\sqrt{3})}{z-(2+\sqrt{3})}$</li>
+<li>因为 这样映射后 同时关于两个圆反演，映射后，一个在无穷远点，那么关于两个圆的反演都是圆心，所以另一个点就同时是它们的圆心所以必然是同心圆</li>
+<li>关于半径，既然映射到了原点，那么半径&#x3D;|w|</li>
+<li>直接带入两个点, 得到比例 &#x3D; $|(z_1,z_2,a,a^{*})|$<ul>
+<li>利用相似三角形容易得到$&#x3D;r_1&#x2F;|a-o_1|:r_2&#x2F;|a-o_2|$</li>
+</ul>
+</li>
+<li>另外上面的 $w(z)&#x3D;\lambda \frac{z-a}{z-a^*}+p$,可以把$a,a^*$映射到 $p,\infty$ 会得到同样的一些性质结果</li>
+</ul>
+</li>
+<li>求一个可以把$|z|&#x3D;1$和$x&#x3D;2$变换为同心圆的线性变换。<ul>
+<li>复平面上 直线的圆心是什么？感觉上只能是无穷？还是没有圆心</li>
+<li>没有什么特别的想法，一个想法是先随便一个线性变换成两个圆，再做类似上面的处理</li>
+<li>另一个想法是，如果看成是圆，那么圆心发出的射线需要垂直于圆环</li>
+<li>所以从$|z|&#x3D;1$的圆心发出和 x&#x3D;2共圆心的线需要垂直x&#x3D;2,</li>
+<li>那么这条线就是实轴，</li>
+<li>那么点 $a,a^* \in R$满足</li>
+<li>$(a-0)(a^*-0)&#x3D;1^2$</li>
+<li>$2-a&#x3D;a^*-2$</li>
+<li>一样的 $2\pm \sqrt{3}$是 选的保持反演的点</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-3-4-有向圆-Oriented-Circles"><a href="#3-3-4-有向圆-Oriented-Circles" class="headerlink" title="3.3.4 有向圆 Oriented Circles"></a>3.3.4 有向圆 Oriented Circles</h3><p>由于$S(z)$是解析的，并且<br>$$S’(z) &#x3D; \frac{ad-bc}{(cz+d)^2} \neq 0$$</p>
+<p>故对 $z\neq -d&#x2F;c$和$\infty$, 映射$w&#x3D;S(z)$是共形的，由此可知两个相交的圆映射成有相同交角的圆，此外角的方向保持不变。从直觉的观点看，这意味着左和右保持不变，但需要一个更精确的阐述。</p>
+<p>圆C的一个定向由C上的有序三重点$z_1$, $z_2$, $z_3$确定. </p>
+<ul>
+<li>相对于这一定向, 如果$Im(z, z_1, z_2, z_3) &gt; 0$, 不在C上的点称为在C的右边</li>
+<li>如果$Im(z, z_1, z_2, z_3) &lt; 0$就称称位于C的左边</li>
+<li>这与日常的用法一致, 因为$(i, 1, 0, \infty) &#x3D; i$. 而$1,0,\infty$是直线，指向负无穷大</li>
+<li>这里主要是要证明只有两种不同的定向. 这是指对于所有的三重点来说, 左边和右边的意义可以不论, 但左右之间存在着的区别则是共同的. 由于交比是不变的, 所以只要研究C是实轴的情形就够了.</li>
+</ul>
+<p>于是可以写成</p>
+<p>$$(z, z_1, z_2, z_3) &#x3D; \frac{az + b}{cz + d}$$</p>
+<p>其中系数是实的, 经简单计算得</p>
+<p>$$\mathrm{Im}(z, z_1, z_2, z_3) &#x3D; \frac{ad - bc}{|cz + d|^2}\mathrm{Im} z.$$</p>
+<p>我们看到右边和左边之间的区别就像上半平面和下半平面之间的区别一样. 至于哪一个是左哪一个右, 则依determinant$ad - bc$的符号而定.</p>
+<p>一个线性变换$S$把有向圆$C$变换为一个以三重点$Sz_1, Sz_2, Sz_3$定向的圆. 从交比的不变性可知: $C$的左边和右边将对应于<code>象圆</code>的左边和右边.</p>
+<p>如果两圆相切, 它们的定向就可以比较. 事实上, 我们可用一个线性变换将它们的切点变到$\infty$, 两圆就变为平行直线. 至于怎样比较平行线的方向, 是我们所熟知的.</p>
+<p>在几何表示中, 定向$z_1, z_2, z_3$可用箭头来表示, 箭头的方向由$z_1$通过$z_2$指向$z_3$. 在普通的坐标系中, 对这一箭头来说, 左边和右边的意义与我们日常所感觉的左右意义一致.</p>
+<p>当我们把一个未经推广的复平面考虑为扩充平面的一部分时, 无穷远点是特殊的. 因此, 可以根据$\infty$应位于有向圆<code>右边</code> 这一要求来定义所有有限圆的绝对正定向, </p>
+<ul>
+<li>这样, 左边的点组成圆的<code>内部</code></li>
+<li>而右边的点则组成圆的<code>外部</code>.</li>
+<li>总结：交比正负<ul>
+<li>正 右</li>
+<li>负 左</li>
+<li>如果 钦定 $\infty$在右, 那么（正,右,外部），（负，左，内部）, 圆是正向的</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-4-练习"><a href="#3-3-4-练习" class="headerlink" title="3.3.4 练习"></a>3.3.4 练习</h4><ol>
+<li><p>[TODO]如果$z_1, z_2, z_3, z_4$为同一圆上的点，证明$z_1, z_3, z_4$和$z_2, z_3, z_4$当且仅当$(z_1, z_2, z_3, z_4) &gt; 0$时确定同一定向。</p>
+</li>
+<li><p>[TODO]证明圆的切线垂直于过切点的半径（这样，圆的切线可以定义为与圆只有一个公共点的直线）。</p>
+</li>
+<li><p>[TODO]证明圆$|z - a| &#x3D; R$的内部由满足不等式$|z - a| &lt; R$的全部点$z$组成。</p>
+</li>
+<li><p>[TODO]两个有向圆在它们一个交点上的交角定义为它们在该点的相同取向的切线之间的夹角。用分析的推理而不是用几何观察证明：两个交点处的交角是互为反向的。</p>
+</li>
+</ol>
+<h3 id="3-3-5-圆族-Families-of-Circles"><a href="#3-3-5-圆族-Families-of-Circles" class="headerlink" title="3.3.5 圆族 Families of Circles"></a>3.3.5 圆族 Families of Circles</h3><p>用某些圆族可使线性变换更趋于具体，这些圆族可以设想为圆坐标系的坐标线。</p>
+<p>考察如下形式的线性变换：<br>$$w &#x3D; k\cdot\frac{z - a}{z - b}$$  </p>
+<ul>
+<li>前面习题我就用了不少这个</li>
+</ul>
+<p>此处$z &#x3D; a$对应于$w &#x3D; 0$，而$z &#x3D; b$对应于$w &#x3D; \infty$，由此可知在$w$平面内通过原点(0)的直线$(\infty)$都是通过$a$及$b$的圆的象。</p>
+<ul>
+<li><p>反之，以原点为圆心的同心圆$|w| &#x3D; \rho$对应于如下方程所确定的圆</p>
+<p>$$\left|\frac{z - a}{z - b}\right| &#x3D; \rho&#x2F;|k|$$  </p>
+</li>
+<li><p>$(z,z_1,a,b)&#x3D;(w,1,0,\infty)$, 这里通过选定不同的$z_1$来影响线性分式变换，影响k</p>
+</li>
+<li><p>$k\frac{z-a}{z-b}&#x3D;\frac{w-0}{w-\infty}\frac{1-\infty}{1-0}$</p>
+</li>
+<li><p>从而得到这个表达式</p>
+</li>
+</ul>
+<p>这些是具有极限点$a$及$b$的阿波罗尼奥斯圆circles of Apollonius。从它们的方程可知，它们是到点$a$及$b$的距离有定比的点的轨迹。</p>
+<ul>
+<li><p>圆的一种新定义，到两点定比的点的轨迹</p>
+</li>
+<li><p>以$C_1$表示通过$a$、$b$的圆</p>
+</li>
+<li><p>以$C_2$表示以$a$、$b$为极限点的阿波罗尼奥斯圆。</p>
+</li>
+<li><p>由所有这些圆$C_1$及$C_2$组成的构形称为$a$、$b$所确定的圆网circular net或施泰纳圆族Steiner circles。它具有很多有趣的性质，略举几点如下：</p>
+</li>
+</ul>
+<ol>
+<li>通过平面上除了极限点以外的每一点只有一个$C_1$，及一个$C_2$。  </li>
+<li>每一个$C_1$与每一个$C_2$交点是直角  </li>
+<li>在关于一个$C_1$的反射下，每一个$C_2$变换为它本身，而每一个$C_1$变换为另一个$C_1$。在关于一个$C_2$的反射下，每一个$C_1$变换为它本身，而每一个$C_2$变换为另一个$C_2$</li>
+<li>极限点关于每一个$C_2$都是对称的，但对任何其他的圆不对称。</li>
+</ol>
+<p>书上有个图 图3-3 施泰纳圆族 Steiner circles</p>
+<ul>
+<li>不过其实也好画，而且教材是纯黑的</li>
+<li>这要是两个颜色 分别表示$C_1$的和$C_2$的就好了</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_niSCpSMcxs">ytb steiner circles</a></p>
+<p>当极限点为$0$及$\infty$时</p>
+<ul>
+<li>$C_1$是通过原点的直线</li>
+<li>而$C_2$是同心圆时，</li>
+<li>这些性质是极为显而易见的。因为这些性质在线性变换下保持不变，所以在一般情形下它们必继续为真。fast proof!</li>
+</ul>
+<p>如果一线性变换$w &#x3D; Tz$将$a$、$b$变为$a’$、$b’$，它可以写成如下的形式：</p>
+<p>$$\frac{w-a’}{w-b’}&#x3D;k\frac{z-a}{z-b} \tag{12}$$</p>
+<ul>
+<li>$(w,\infty,a’,b’)&#x3D;(z,z_1,a,b)$</li>
+<li>$k&#x3D;\frac{z_1-b}{z_1-a}$</li>
+</ul>
+<p>显然，$T$将圆$C_1$及$C_2$变换为以$a’$、$b’$为极限点的圆$C_1’$及$C_2’$。</p>
+<p>这种情形在$a’&#x3D;a$、$b’&#x3D;b$时特别简单。这时点$a$、$b$称为$T$的不动点，且可方便地将$z$及$Tz$表示于同一平面。在这种情况下，整个圆网将在其自身上面映象。</p>
+<ul>
+<li>$(w,\infty,a,b)&#x3D;(z,z_1,a,b)$</li>
+<li>$k$的值可以确定象圆$C_1’$及$C_2’$。</li>
+<li>事实上，在适当的定向下，在$C_1$与其象$C_1’$上对应点的形如$\arg\frac{z-a}{z-b}$之差为$\arg k$，</li>
+<li>而在$C_2$及$C_2’$上对应点的形如$|z-a|&#x2F;|z-b|$之比为$|k|$。</li>
+<li>英文书都没给第一个分式，这个分式倒是显然 arg的差就是几何上相除的arg，而且不光是 圆上的点，是平面上所有点</li>
+</ul>
+<p>所有的$C_1$或所有的$C_2$映成它们自身的特殊情形是非常重要的。对于所有的$C_1$，如果$k&gt;0$，则$C_1’&#x3D;C_1$（如果$k&lt;0$，则圆仍然相等，但定向相反）。这时的变换称为双曲变换hyperbolic。当$k$增大时，点$Tz(z\ne a,b)$将沿着圆$C_1$向$b$移动。考虑这一移动就可得到双曲变换的一个十分清晰的形象化表示。</p>
+<ul>
+<li>因为k是实数时，arg k为0，所以对应点的 $\frac{z-a}{z-b}$没有arg 差(根据 4点共圆 交比为零0可得 共圆)</li>
+</ul>
+<p>当$|k|&#x3D;1$时就有$C_2’&#x3D;C_2$。具有这种性质的变换称为椭圆变换elliptic。当$\arg k$变化时，点$Tz$沿着圆$C_2$移动，这一移动沿着不同的方向环绕$a$及$b$。</p>
+<ul>
+<li>因为上面的 变换比 为$|k|$ 所以这时在同一个图像上</li>
+</ul>
+<p>具有两个不动点的一般线性变换是具有相同不动点的一个双曲变换及一个椭圆变换的乘积。</p>
+<p>一个线性变换的不动点从下面的方程中求得：</p>
+<p>$$z&#x3D;\frac{\alpha z+\beta}{\gamma z+\delta}\tag{13}$$</p>
+<p>在一般情况下，这是一个二次方程，具有两个根。如果$\gamma&#x3D;0$，则不动点之一为$\infty$。不过，可能有两根相重的情形。具有相重的不动点的线性变换称为抛物型变换parabolic。抛物型变换的条件是$(\alpha-\delta)^2&#x3D;4\beta\gamma$。</p>
+<p>如果方程(13)具有两个不同的根$a$及$b$，则变换可写成如下形式：</p>
+<p>$$\frac{w-a}{w-b}&#x3D;k\frac{z-a}{z-b}$$</p>
+<p>因此可用$a$、$b$所确定的施泰纳圆族来讨论变换的性质。但应该注意，这一方法并不只限于这种情况。我们把任一线性变换对任意的$a$、$b$写成(12)的形式，并根据便利性来应用两个圆网。</p>
+<p>为了讨论抛物型变换，我们还需要引入另一种圆网。考虑变换：</p>
+<p>$$w&#x3D;\frac{\omega}{z-a}+c$$</p>
+<p>显然$w$平面中的直线对应于过$a$的圆，平行线对应于互切的圆。特别是，如$w&#x3D;u+iv$，则直线$u&#x3D;$常数及$v&#x3D;$常数对应于两族互切的圆，它们彼此直交（Degenerate Steiner circles退化的施泰纳圆族）。这一构形可看成是一个退化的施泰纳圆族。它由点$a$及圆族之一的切线确定。以$C_1$表示直线$v&#x3D;$常数的象，$C_2$表示另一族圆。显然，直线$v&#x3D;\text{Im}c$对应于圆族$C_1$的切线，其方向为$\arg w$。</p>
+<p>把$a$变换为$a’$的任一变换可写成如下形式：<br>$$\frac{\omega’}{w-a’}&#x3D;\frac{\omega}{z-a}+c.$$<br>显然，圆$C_1$及$C_2$将变换为由$a’$及$\omega’$所确定的圆$C_1’$及$C_2’$。现在设$a&#x3D;a’$为唯一不动点，则<br>$$\omega&#x3D;\omega’,$$<br>且<br>$$\frac{\omega}{w-a}&#x3D;\frac{\omega}{z-a}+c.\tag{14}$$<br>用这一变换可将圆$C_1$及$C_2$组成的构形映成它自身。在(14)中，一个乘数因子是任意的，因此可假设$c$为实数。于是每一个$C_1$映成它自身，而抛物型变换可以认为是沿着圆$C_2$的移动。一个既不是双曲的、椭圆的又不是抛物型的线性变换称为斜坡变换。</p>
+<h4 id="3-3-5-练习"><a href="#3-3-5-练习" class="headerlink" title="3.3.5 练习"></a>3.3.5 练习</h4><ol>
+<li>求如下线性变换的不动点：<br>$$w&#x3D;\frac{z}{2z-1},\quad w&#x3D;\frac{2z}{3z-1},\quad w&#x3D;\frac{3z-4}{z-1},\quad w&#x3D;\frac{z}{2-z}.$$<br>这些变换中哪些是椭圆变换、双曲变换或抛物型变换？</li>
+</ol>
+<ul>
+<li>解二次方程a,b，a&#x3D;b（抛物），写成上面形式得到k, 根据k实（双曲），$|k|&#x3D;1$椭圆</li>
+</ul>
+<ol start="2">
+<li><p>[TODO]设变换<br>$$Sz&#x3D;\frac{az+b}{cz+d}$$<br>的系数用条件$ad-bc&#x3D;1$规范化，证明$S$是椭圆变换，当且仅当$-2&lt;a+d&lt;2$；$S$是抛物型变换，如果$a+d&#x3D;\pm2$；$S$是双曲变换，如果$a+d&lt;-2$或$a+d&gt;2$。</p>
+</li>
+<li><p>试证明：对某个整数$n$满足条件$S^nz&#x3D;z$的线性变换$S$必是椭圆变换。</p>
+</li>
+</ol>
+<ul>
+<li>$S:p(w)&#x3D;k_sp(z)$</li>
+<li>$S^n:p(w)&#x3D;k_s^np(z)$</li>
+<li>$|k_s^n|&#x3D;1$</li>
+<li>$|k_s|^n&#x3D;1$</li>
+<li>$|k_s|&#x3D;1$</li>
+</ul>
+<ol start="4">
+<li><p>[TODO]如果$S$是双曲的hyperbolic或斜坡的loxodromie，证明当$n\to\infty$时$S^nz$收敛到一个不动点，对所有的$z$。除了$z$与另一个不动点重合外都如此。（极限情形的这个不动点是吸收的attractive，另一不动点是排斥的 repellent。当$n\to\infty$时会发生什么情况？在抛物型情形又如何？）</p>
+</li>
+<li><p>[TODO]试求表示黎曼球面旋转的所有线性变换。</p>
+</li>
+<li><p>求所有与$|z|&#x3D;1$及$|z-1|&#x3D;4$直交的圆。</p>
+</li>
+</ol>
+<ul>
+<li>要么同时$C_1$(有公共点)，要么同时$C_2$无公共点</li>
+<li>这里只有$z&#x3D;-1$是公共点</li>
+<li>所以 是$C_1$, 而且是抛物线形式</li>
+<li>所以是退化的，只有 实轴</li>
+</ul>
+<ol start="7">
+<li>[TODO]一族变换以明显的方式（我们不准备精确叙述）依赖于某一数量的实参数。在所有线性变换的族中，试问一共有多少个实参数？在椭圆、双曲、抛物型变换族中各有多少？有多少线性变换可以把一给定的圆$C$保持不变？</li>
+</ol>
+<h3 id="3-4-初等共形映射-Elmentary-Confomal-Mappings"><a href="#3-4-初等共形映射-Elmentary-Confomal-Mappings" class="headerlink" title="3.4 初等共形映射 Elmentary Confomal Mappings"></a>3.4 初等共形映射 Elmentary Confomal Mappings</h3><p>与解析函数相联系的共形映射为解析函数的性质提供了一个极好的形象化表示，这与实际数用图像来形象化的情形十分相似。因此，一切与共形映射有关的问题自然应受到特别重视。在这一方面的进展大大增加了我们对解析函数的知识。此外，共形映射还自然地出现在数学物理的许多分支中，这正是直接用到复变函数论的原因。</p>
+<p>这里最重要的问题之一就是要确定一个域映成另一个域的共形映射。在这一节里，我们将研究一些可以由初等函数来定义的映射。</p>
+<h4 id="3-4-1-阶层曲线的应用-The-Use-of-Level-Curves"><a href="#3-4-1-阶层曲线的应用-The-Use-of-Level-Curves" class="headerlink" title="3.4.1 阶层曲线的应用 The Use of Level Curves"></a>3.4.1 阶层曲线的应用 The Use of Level Curves</h4><p>当一个共形映射由一个解析的显函数$w&#x3D;f(z)$来定义时，我们自然想得到映射的特殊几何性质。要做到这一点，最有效的方法之一就是研究由点的变换所引起的曲线之间的对应关系。由于某些简单曲线可变换为具有熟知特性的曲线族中的曲线，所以函数$f(z)$的特性可自行表达出来。任何这样的知识都将加强我们关于映射的具体概念。</p>
+<p>用线性变换所做的映射就是这种情形。在3.3节中我们曾证明，只要把直线作为圆的一个特殊情形来看，那么线性变换就把圆变为圆。通过对施泰纳图的研究，就可能得到关于对应关系的一个完整的图像。</p>
+<p>对于更一般的情形，最好是从直线$x&#x3D;x_0$及$y&#x3D;y_0$的象曲线的研究入手。如果令$f(z)&#x3D;u(x,y)+iv(x,y)$，</p>
+<ul>
+<li>则$x&#x3D;x_0$的象曲参数方程$u&#x3D;u(x_0,y),v&#x3D;v(x_0,y)$表示。这里$y$相当于一个参数，它可以消去或保留，视方便而定。</li>
+<li>$y&#x3D;y_0$的象也可同样确定。这些曲线在平面上的共同组成一个正交网。同理，我们可以研究平面上的曲线$u(x,y)&#x3D;u_0$及$v(x,y)&#x3D;v_0$。它们也是正交的，分别称为$u$及$v$的阶层曲线。</li>
+</ul>
+<p>在其他情形下，应用极坐标并研究同心圆及通过原点的直线的象可能更方便些。</p>
+<p>最简单的映射之一是由幂函数$w&#x3D;z^a$所做的象。这里我们只考虑$a$为实数的情形，因此不妨设$a$是正数。由于<br>$$|w|&#x3D;|z|^a,$$<br>$$\arg w&#x3D;a\arg z,$$<br>所以围绕原点的同心圆变换为同族的圆，由原点引出的半直线对应于另外的一些半直线。</p>
+<p>在所有不等于零的点 $z$ 上，映射都是共形的，但张于原点的角 $\theta$ 变换为角 $a\theta$。对于 $a \neq 1$，整个平面的变换不是一对一的，而如果 $a$ 为分数，则 $z^a$ 还不是单值的。因此，一般来说，我们只能考虑一个扇形映成另一扇形的映射。</p>
+<p>扇形 $S(\varphi_1, \varphi_2)(0 \leqslant \varphi_2 - \varphi_1 \leqslant 2\pi)$ 由所有满足下列条件的点 $z$ 组成：$z \neq 0$ 且 $\arg z$ 的一个值满足不等式</p>
+<p>$$<br>\varphi_1 &lt; \arg z &lt; \varphi_2. \tag{15}<br>$$</p>
+<p>容易证明 $S(\varphi_1, \varphi_2)$ 是一个域（非空连通开区间）。在这个域中，$w &#x3D; z^a$ 的唯一值由条件</p>
+<p>$$<br>\arg w &#x3D; a \arg z<br>$$</p>
+<p>所定义，其中 $\arg z$ 代表由条件 (15) 所界定的值。这个函数是解析的，具有非零导数</p>
+<p>$$<br>D e^{a \log z} &#x3D; a \frac{w}{z}.<br>$$</p>
+<p>映射仅在 $a (\varphi_2 - \varphi_1) \leqslant 2\pi$ 时是一对一的，这时，扇形 $S(\varphi_1, \varphi_2)$ 映成 $w$ 平面上的扇形 $S(a \varphi_1, a \varphi_2)$。应当注意，$S(\varphi_1 + n \cdot 2\pi, \varphi_2 + n \cdot 2\pi)$ 在几何上与 $S(\varphi_1, \varphi_2)$ 完全一样，但可以确定 $z^a$ 的一个不同的分支。</p>
+<p>现在我们来更详细地研究映射 $w &#x3D; z^2$。因为 $u &#x3D; x^2 - y^2$，$v &#x3D; 2xy$，故知阶层曲线 $u &#x3D; u_0$ 及 $v &#x3D; v_0$ 都是等边双曲线，以分角线及坐标轴为渐近线。它们当然是互相正交的。另一方面，$x &#x3D; x_0$ 的象是 $v^2 &#x3D; 4x_0^2(x_0^2 - u)$，$y &#x3D; y_0$ 的象是 $v^2 &#x3D; 4y_0^2(y_0^2 + u)$。这两族都是抛物线，以原点为焦点，它们的轴分别指向 $u$ 轴的负向及正向。从解析几何学可知它们是正交的。</p>
+<p>英文书上，阶层曲线level curves是(z-plane)</p>
+<ul>
+<li>(w-plane)</li>
+<li>简单的说，也就是 阶层曲线是 w平面画 平行于u,v的网格，反过来映射到z平面上的x,y上的形状</li>
+<li>而w平面是， z平面上的平行于x,y轴的网格，正向的函数变换映射到 w-plane的u,v的样子</li>
+<li>这两个映射 都是全纯的话，则有保角 </li>
+<li>另外 横纵交点应该只有一个，但是这里看上去是两个 而且不懂为啥英文中文教材都 向左偏移了交点，这个其实是看 $x&#x3D;\pm 1,y&#x3D;\pm 1$围成的正方形，4个交点，因为 $z^2$变成两个交点和两条抛物线</li>
+</ul>
+<p>为了研究其它 不同象的曲线族，我们考虑w-plane中的圆$|w-1|&#x3D;k$, 逆象的方程可以写成 </p>
+<p>$$(x^2+y^2)^2&#x3D;2(x^2-y^2)+k^2-1$$</p>
+<p>它表示一族以$\pm 1$为焦点focal points的双纽线 lemniscates. 正交族为</p>
+<p>$$x^2-y^2&#x3D;2hxy+1$$</p>
+<p>这是一簇通过点$\pm 1$并以原点为中心的等边双曲线.</p>
+<p>在三次幂$w&#x3D;z^3$的情形，两个平面上的阶层曲线都是三次曲线，没有必要导出它们的方程，因为它们的一般形状不用计算也是很清楚的. 例如，曲线$u&#x3D;u_0&gt;0$应有图3-7所示的形状. 同样，如果当$z$画出线$x&#x3D;x_0&gt;0$时观察$\arg w$的变化，则可知象曲线应具有一个圆环(见图3-8). 因此，它是笛卡尔叶形线.</p>
+<p>用$w&#x3D;e^z$所做的映射是很简单的. 线$x&#x3D;x_0$及$y&#x3D;y_0$映成以原点为中心的圆及辐角一定的射线. $z$平面上的任何其他直线映成对数螺线. 只要域中任意两点之差不等于$2\pi i$的倍数，这个映射在这个域内就是一对一的. 特别是，水平的带$y_1&lt;y&lt;y_2,\ y_2-y_1\leqslant2\pi$映成一个扇形，如果$y_2-y_1&#x3D;\pi$，则象是一个半平面. 这样，我们就可以把一个平行的带映成一个半平面，从而映成任一圆形的域. 带在虚轴左边的一半对应于一个半圆.</p>
+<p>这里，我们写出几个映射的显式公式是有用的. 函数$\zeta&#x3D;\xi+i\eta&#x3D;e^z$将带$-\pi&#x2F;2&lt;y&lt;\pi&#x2F;2$映成半平面$\xi&gt;0$，另一方面，</p>
+<p>$$w&#x3D;\frac{\zeta-1}{\zeta+1}$$</p>
+<p>将$\zeta&gt;0$映成$|w|&lt;1$，因此</p>
+<p>$$w&#x3D;\frac{e^z-1}{e^z+1}&#x3D;\tanh\frac{z}{2}$$</p>
+<p>将带$|\operatorname{Im}z|&lt;\pi&#x2F;2$映成单位圆盘$|w|&lt;1$。</p>
+<h4 id="3-4-2-初等映射概述-A-Survey-of-Elementary-Mappings"><a href="#3-4-2-初等映射概述-A-Survey-of-Elementary-Mappings" class="headerlink" title="3.4.2 初等映射概述 A Survey of Elementary Mappings"></a>3.4.2 初等映射概述 A Survey of Elementary Mappings</h4><p>当处理将一个域$\Omega_1$共形地映成另一个域$\Omega_2$的问题的时候，通常最好分两步进行。首先，把$\Omega_1$映成一个圆形的域，而后把圆形的域映成$\Omega_2$。</p>
+<ul>
+<li>换句话说，共形映射的一般问题可以化为将一个域映成圆盘或半平面的问题。</li>
+<li>域1 &lt;&#x3D;&gt; 圆形 &lt;&#x3D;&gt; 域2</li>
+<li>在第6章中，我们将证明这一映射问题对于每一个以简单闭曲线为边界的域恒有一个解。</li>
+</ul>
+<p>在处理问题中所用到的主要工具是线性变换、幂变换、指数函数变换和对数变换。所有这些变换都有一个共同的特征，那就是将某一直线族或圆族映成相似的族。因此，它们的用途将主要限于以圆弧或线段为边界的域。</p>
+<ul>
+<li>线性变换 圆 &lt;&#x3D;&gt; 圆</li>
+<li>幂变换$z^a$可特别用于矫正角度， $\arg w &#x3D; a \arg z$</li>
+<li>而指数函数变换$e^z$则可用于将平行的带角变成直角。</li>
+</ul>
+<p>利用这些方法，我们首先可以求得一个以两条共端点的圆弧为边界的任意域的标准映射。这样的域可以是一个圆楔形，它的角可以大于$\pi$，或者也可以是它的余补形。设两条弧的端点为a及b，我们先作预备映射$z_1&#x3D;(z−a)&#x2F;(z−b)$，将所给的域映成一个扇形。再用一个适当的幂变换$w&#x3D;z_1^\alpha$就可将这个扇形映成一个半平面。</p>
+<p>如果两个圆在点$a$互切，则变换$z_1&#x3D;1&#x2F;(z−a)$将把两圆间的域映成一个平行带，而后用一个适当的指数函数变换将带映成半平面。</p>
+<p>更一般些，同样的方法也可应用于具有两个直角的圆三角形。事实上，如果第三角的顶点为a，且设由a引出的两边再交于b，则线性变换$z_1&#x3D;(z−a)&#x2F;(z−b)$将三角形映成一个扇形。用一个幂变换可将这一扇形变换为一个半圆。这一半圆是一个楔形域，它又可映成一个半平面。</p>
+<p>在这一方面，我们来讨论一个经常遇到的特殊情形。设我们需要将一条线段的补区域映成一个圆的内部或外部。这个域是角为$2\pi$的楔形。不失一般性，可设线段的端点为$\pm 1$。预备变换</p>
+<p>$$z_1 &#x3D; \frac{z + 1}{z - 1}$$</p>
+<p>将楔形映成一个除去负实轴所得的全扇形。其次，定义平方根</p>
+<p>$$z_2 &#x3D; \sqrt{z_1}$$</p>
+<p>它的实部是正的，从而得到将全扇形映成右半平面的映射。最后，变换</p>
+<p>$$w &#x3D; \frac{z_2 - 1}{z_2 + 1}$$</p>
+<p>把右半平面映成$|w|&lt;1$。</p>
+<p>消去中间变量后可得到对应关系</p>
+<p>$$z &#x3D; \frac{1}{2} \left( w + \frac{1}{w} \right),$$</p>
+<p>$$w &#x3D; z - \sqrt{z^2 - 1}. \tag{16}$$</p>
+<p>平方根的符号可以由条件$|w|&lt;1$唯一地确定，因为$(z-\sqrt{z^2-1})(z+\sqrt{z^2-1})&#x3D;1$。如果符号相反，则得到映射$|w|&gt;1$的映射。</p>
+<p>为了更详细地研究映射(16)，令$w&#x3D;\rho e^{i\theta}$，这样就得到</p>
+<p>$$x&#x3D;\frac{1}{2}(\rho+\frac{1}{\rho})\cos\theta,$$</p>
+<p>$$y&#x3D;\frac{1}{2}(\rho-\frac{1}{\rho})\sin\theta,$$</p>
+<p>消去$\theta$，得</p>
+<p>$$\left[\frac{x}{\frac{1}{2}(\rho+\rho^{-1})}\right]^2+\left[\frac{y}{\frac{1}{2}(\rho-\rho^{-1})}\right]^2&#x3D;1,\tag{17}$$</p>
+<p>又消去$\rho$，得</p>
+<p>$$\frac{x^2}{\cos^2\theta}-\frac{y^2}{\sin^2\theta}&#x3D;1.\tag{18}$$</p>
+<p>因此，圆$|w|&#x3D;\rho&lt;1$的象是一个椭圆，长轴为$\rho+\rho^{-1}$，短轴为$\rho^{-1}-\rho$。一个半径的象是双曲线一个分支的一半。椭圆(17)及双曲线(18)是共焦的。对应关系如图3-9所示。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># uv init </span></span><br><span class="line"><span class="comment"># uv add numpy matplotlib</span></span><br><span class="line"><span class="comment"># uv run p72.py</span></span><br><span class="line"><span class="comment"># code by tongyi.aliyun</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">f</span>(<span class="params">z</span>):</span><br><span class="line">    <span class="keyword">return</span> z + <span class="number">1</span>/z  <span class="comment"># 复数运算</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成复平面网格</span></span><br><span class="line">x = np.linspace(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">400</span>)</span><br><span class="line">y = np.linspace(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">400</span>)</span><br><span class="line">X, Y = np.meshgrid(x, y)</span><br><span class="line">Z = X + <span class="number">1j</span>*Y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算网格线变换后的坐标</span></span><br><span class="line">W = f(Z)</span><br><span class="line">U = W.real</span><br><span class="line">V = W.imag</span><br><span class="line"></span><br><span class="line"><span class="comment"># 圆的半径及对应颜色</span></span><br><span class="line">radii = [<span class="number">0.5</span>, <span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">colors = [<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;green&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建画布</span></span><br><span class="line">plt.figure(figsize=(<span class="number">12</span>, <span class="number">6</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制原始平面（网格线 + 圆）</span></span><br><span class="line">plt.subplot(<span class="number">121</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Original Plane (z)&quot;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.plot(x, np.zeros_like(x), <span class="string">&#x27;k&#x27;</span>, lw=<span class="number">0.5</span>)  <span class="comment"># x轴</span></span><br><span class="line">plt.plot(np.zeros_like(y), y, <span class="string">&#x27;k&#x27;</span>, lw=<span class="number">0.5</span>)  <span class="comment"># y轴</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制网格线（水平蓝，垂直绿）</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x)):</span><br><span class="line">    plt.plot(X[:, i], Y[:, i], <span class="string">&#x27;b&#x27;</span>, alpha=<span class="number">0.3</span>, lw=<span class="number">0.5</span>)  <span class="comment"># 垂直线</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(y)):</span><br><span class="line">    plt.plot(X[i, :], Y[i, :], <span class="string">&#x27;g&#x27;</span>, alpha=<span class="number">0.3</span>, lw=<span class="number">0.5</span>)  <span class="comment"># 水平线</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制圆（不同颜色）</span></span><br><span class="line"><span class="keyword">for</span> r, color <span class="keyword">in</span> <span class="built_in">zip</span>(radii, colors):</span><br><span class="line">    theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">1000</span>)</span><br><span class="line">    circle_x = r * np.cos(theta)</span><br><span class="line">    circle_y = r * np.sin(theta)</span><br><span class="line">    plt.plot(circle_x, circle_y, color=color, lw=<span class="number">2</span>, alpha=<span class="number">0.8</span>, label=<span class="string">f&#x27;r=<span class="subst">&#123;r&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.xlim(-<span class="number">2</span>, <span class="number">2</span>), plt.ylim(-<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">plt.legend()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制变换后的平面（网格线 + 圆）</span></span><br><span class="line">plt.subplot(<span class="number">122</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Transformed Plane (w = z + 1/z)&quot;</span>)</span><br><span class="line">plt.grid(<span class="literal">True</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;Re(w)&#x27;</span>), plt.ylabel(<span class="string">&#x27;Im(w)&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制网格线（保持原色区分）</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(x)):</span><br><span class="line">    plt.plot(U[:, i], V[:, i], <span class="string">&#x27;b&#x27;</span>, alpha=<span class="number">0.3</span>, lw=<span class="number">0.5</span>)  <span class="comment"># 垂直线</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(y)):</span><br><span class="line">    plt.plot(U[i, :], V[i, :], <span class="string">&#x27;g&#x27;</span>, alpha=<span class="number">0.3</span>, lw=<span class="number">0.5</span>)  <span class="comment"># 水平线</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘制变换后的圆（与原圆颜色一致）</span></span><br><span class="line"><span class="keyword">for</span> r, color <span class="keyword">in</span> <span class="built_in">zip</span>(radii, colors):</span><br><span class="line">    theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">1000</span>)</span><br><span class="line">    z_circle = r * np.exp(<span class="number">1j</span> * theta)</span><br><span class="line">    w_circle = f(z_circle)</span><br><span class="line">    plt.plot(w_circle.real, w_circle.imag, color=color, lw=<span class="number">2</span>, alpha=<span class="number">0.8</span>)</span><br><span class="line"></span><br><span class="line">plt.xlim(-<span class="number">4</span>, <span class="number">4</span>), plt.ylim(-<span class="number">4</span>, <span class="number">4</span>)</span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># deepseek</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 参数设置</span></span><br><span class="line">r_min, r_max = <span class="number">0.2</span>, <span class="number">5.0</span>    <span class="comment"># w的模长范围（避免r=0）</span></span><br><span class="line">num_points = <span class="number">500</span>            <span class="comment"># 每条曲线的点数</span></span><br><span class="line">theta_values = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">24</span>, endpoint=<span class="literal">False</span>)  <span class="comment"># 固定theta的采样</span></span><br><span class="line">r_values = [<span class="number">0.2</span>, <span class="number">0.5</span>, <span class="number">1.0</span>, <span class="number">2.0</span>, <span class="number">3.0</span>]  <span class="comment"># 固定r的采样</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建画布和子图</span></span><br><span class="line">fig, (ax1, ax2) = plt.subplots(<span class="number">1</span>, <span class="number">2</span>, figsize=(<span class="number">16</span>, <span class="number">8</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------- 绘制原始w平面（左图） ----------</span></span><br><span class="line"><span class="comment"># 固定r的同心圆（蓝色）</span></span><br><span class="line"><span class="keyword">for</span> r <span class="keyword">in</span> r_values:</span><br><span class="line">    theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, num_points)</span><br><span class="line">    x_w = r * np.cos(theta)</span><br><span class="line">    y_w = r * np.sin(theta)</span><br><span class="line">    ax1.plot(x_w, y_w, color=<span class="string">&#x27;blue&#x27;</span>, linewidth=<span class="number">0.6</span>, alpha=<span class="number">0.7</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 固定theta的射线（红色）</span></span><br><span class="line"><span class="keyword">for</span> theta <span class="keyword">in</span> theta_values:</span><br><span class="line">    r = np.linspace(r_min, r_max, num_points)</span><br><span class="line">    x_w = r * np.cos(theta)</span><br><span class="line">    y_w = r * np.sin(theta)</span><br><span class="line">    ax1.plot(x_w, y_w, color=<span class="string">&#x27;red&#x27;</span>, linewidth=<span class="number">0.6</span>, alpha=<span class="number">0.7</span>)</span><br><span class="line"></span><br><span class="line">ax1.set_title(<span class="string">&#x27;Original w-plane&#x27;</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">ax1.set_xlabel(<span class="string">&#x27;Re(w)&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">ax1.set_ylabel(<span class="string">&#x27;Im(w)&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">ax1.set_xlim(-r_max, r_max)</span><br><span class="line">ax1.set_ylim(-r_max, r_max)</span><br><span class="line">ax1.grid(<span class="literal">True</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line">ax1.set_aspect(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------- 绘制映射后的z平面（右图） ----------</span></span><br><span class="line"><span class="comment"># 固定r的椭圆（蓝色）</span></span><br><span class="line"><span class="keyword">for</span> r <span class="keyword">in</span> r_values:</span><br><span class="line">    theta = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, num_points)</span><br><span class="line">    x_z = (r + <span class="number">1</span>/r) * np.cos(theta)</span><br><span class="line">    y_z = (r - <span class="number">1</span>/r) * np.sin(theta)</span><br><span class="line">    ax2.plot(x_z, y_z, color=<span class="string">&#x27;blue&#x27;</span>, linewidth=<span class="number">0.6</span>, alpha=<span class="number">0.7</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 固定theta的双曲线（红色）</span></span><br><span class="line"><span class="keyword">for</span> theta <span class="keyword">in</span> theta_values:</span><br><span class="line">    r = np.linspace(r_min, r_max, num_points)</span><br><span class="line">    x_z = (r + <span class="number">1</span>/r) * np.cos(theta)</span><br><span class="line">    y_z = (r - <span class="number">1</span>/r) * np.sin(theta)</span><br><span class="line">    ax2.plot(x_z, y_z, color=<span class="string">&#x27;red&#x27;</span>, linewidth=<span class="number">0.6</span>, alpha=<span class="number">0.7</span>)</span><br><span class="line"></span><br><span class="line">ax2.set_title(<span class="string">&#x27;Mapped z-plane (z = w + 1/w)&#x27;</span>, fontsize=<span class="number">14</span>)</span><br><span class="line">ax2.set_xlabel(<span class="string">&#x27;Re(z)&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">ax2.set_ylabel(<span class="string">&#x27;Im(z)&#x27;</span>, fontsize=<span class="number">12</span>)</span><br><span class="line">ax2.set_xlim(-<span class="number">6</span>, <span class="number">6</span>)</span><br><span class="line">ax2.set_ylim(-<span class="number">6</span>, <span class="number">6</span>)</span><br><span class="line">ax2.grid(<span class="literal">True</span>, linestyle=<span class="string">&#x27;--&#x27;</span>, alpha=<span class="number">0.5</span>)</span><br><span class="line">ax2.set_aspect(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.tight_layout()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>很明显，由于变换(16)，我们可以把一个椭圆的外部或一个双曲线的两分支之间的域映成一个圆域的映射也归属于初等共形映射类中。但是这一变换却不能使我们作椭圆内部或双曲线两分支内部的映射。</p>
+<p>作为最后一个比较复杂的例子，我们来研究三次多项式$w&#x3D;a_0z^3+a_1z^2+a_2z+a_3$所定义的映射。利用熟知的变换$z&#x3D;z_1-a_1&#x2F;3a_0$可消去方程中的二次项，经规格化以后，多项式可化为$w&#x3D;z^3-3z$.$z$的系数是这样选定的，即使导数在$z&#x3D;\pm1$时等于零。</p>
+<p>为了应用变换式(16)，引入辅助变量$\zeta$，$\zeta$由下式定义：</p>
+<p>$$z&#x3D;\zeta+\frac{1}{\zeta}$$</p>
+<p>于是三次多项式简化为</p>
+<p>$$\omega&#x3D;\zeta^{3}+\frac{1}{\zeta^{3}}$$</p>
+<p>我们看到每一个$z$确定两个$\zeta$的值，但它们互为倒数，因而可产生同一个$\omega$值。为了求得一个唯一的$\zeta$，可以加入条件$|\zeta|&lt;1$，但这样以后，线段$(-2,2)$必须从$z$平面上除去。</p>
+<p>现在我们容易将$z$平面与$\omega$平面之间的对应关系加以具体化。与圆$|\zeta|&#x3D;1$对应的，在$z$平面中是以$\rho^{-1}\pm\rho$为半轴的椭圆，而在$\omega$平面中则是以$\rho^{-3}\pm\rho^{3}$为半轴的椭圆。同样，圆的一个半径$\arg\zeta&#x3D;\theta$对应于$z$平面及$\omega$平面中的双曲线的分支、$z$平面中的双曲线以与正实轴的夹角为$-\theta$的直线为一渐近线，而$\omega$平面中的双曲线的一条渐近线则与正实轴的夹角为$-3\theta$。共焦椭圆和双曲线的整个形状保持不变，但在$z$描出一个椭圆时，$\omega$将画出对应的较大椭圆三次。因此，这里的情形和较简单的映射$\omega&#x3D;z^{3}$的情形十分相似。至于取向，可参看图3-9。</p>
+<p>对于渐近线之间的夹角小于等于$2\pi&#x2F;3$的双曲线，介于其两分支之间的域的映射是一对一的。特别是，双曲线$3x^{2}-y^{2}&#x3D;3$和$x$轴把$z$平面分成的六个域都映成半平面，其中三个映成上半平面，而另外三个映成下半平面。双曲线的右面一个分支的内部对应于整个$\omega$平面，但沿着负实轴到$-2$为止的一段有一个缺口。</p>
+<h4 id="3-4-2-练习"><a href="#3-4-2-练习" class="headerlink" title="3.4.2 练习"></a>3.4.2 练习</h4><p>下面所有的映射都应该是共形的：</p>
+<ol>
+<li><p>将圆盘$|z|&lt;1$及$|z-1|&lt;1$的公共部分映成单位圆的内部。选取映射使得保持两种对称性。</p>
+<ul>
+<li>两种对称性是指什么？？？？？</li>
+<li>记a,b 为它们交点, $a&#x3D;e^{-i\pi&#x2F;3},b&#x3D;e^{i\pi&#x2F;3}$</li>
+<li>$z_1(z)&#x3D;\frac{z-a}{z-b}$ 根据线性分式变换知识知道，把圆映射成圆，因为映射后 经过0和无穷点，所以这两个被映射成两个交于点0的直线,是angular sector(wedge?), 并且容易知道 是 $2\pi&#x2F;3$到$4\pi&#x2F;3$的部分</li>
+<li>然后旋转 成$0$到$2\pi&#x2F;3$ 的部分，简单的$z_2(z)&#x3D;e^{-i2\pi&#x2F;3}z$</li>
+<li>然后利用幂变换来完成角度缩放，扇形到半平面, $z_3(z)&#x3D;z^{3&#x2F;2}$</li>
+<li>最后再分式线性变换 半平面(Im z &gt; 0)到圆内, 需要<ul>
+<li>上半平面点p到圆心</li>
+<li>$\bar{p}$到无穷远</li>
+<li>原点到 $|w|&#x3D;1$上</li>
+<li>$z_4(z)&#x3D;\lambda \frac{z-p}{z-\bar{p}}$, 容易得到$|\lambda|&#x3D;1$, 取一个简洁的 $z_4(z)&#x3D;\frac{z-i}{z+i}$</li>
+</ul>
+</li>
+<li>综上 $w(z) &#x3D; z_4(z_3(z_2(z_1(z))))$</li>
+<li>然后发现 之前点的夹角是60度，而这样一个原点一个无穷点，以及幂变换后0点的角不保了，但因为 是 域（非空连通开）不包含这一点</li>
+<li>$w(0)&#x3D;z_4(z_3(z_2(z_1(0)&#x3D;e^{-i2\pi&#x2F;3})&#x3D;e^{i2\pi&#x2F;3})&#x3D;e^{i\pi}&#x3D;-1)&#x3D;i$</li>
+<li>$w(1)&#x3D;z_4(z_3(z_2(z_1(1)&#x3D;e^{i2\pi&#x2F;3})&#x3D;e^{0}&#x3D;1)&#x3D;1)&#x3D;-i$</li>
+<li>$w(a)&#x3D;z_4(z_3(z_2(z_1(a)&#x3D;0)&#x3D;0)&#x3D;0)&#x3D;-1$</li>
+<li>$w(b)&#x3D;z_4(z_3(z_2(z_1(b)&#x3D;\infty)&#x3D;\infty)&#x3D;\infty)&#x3D;1$</li>
+</ul>
+</li>
+<li><p>将$|z|&#x3D;1$及$\left|z-\frac{1}{2}\right|&#x3D;\frac{1}{2}$之间的域映成一个半平面。</p>
+<ul>
+<li>两个圆只有一个交点, 所以用$z_1(z)&#x3D;1&#x2F;(z-a)$的形式,这里$a&#x3D;1$,把两个圆映射成两个 平行线 x&#x3D;-1,x&#x3D;-1&#x2F;2</li>
+<li>平行带 到 半平面 靠 指数函数, 需要先把它变为平行于实轴的，y间距为 pi的 平行带</li>
+<li>$z_2(z)&#x3D;z+1&#x2F;2$ 变成 x&#x3D;-1&#x2F;2,x&#x3D;0之间的平行带 </li>
+<li>$z_3(z)&#x3D;e^{-i\pi&#x2F;2}z$ 变成 y&#x3D;1&#x2F;2,y&#x3D;0之间的平行带 </li>
+<li>$z_4(z)&#x3D;2\pi z$ 变成 y&#x3D;pi,y&#x3D;0之间的平行带 </li>
+<li>$z_5(z)&#x3D;e^z$ 变成 y&gt;0的半平面</li>
+</ul>
+</li>
+<li><p>将弧$|z|&#x3D;1,y\geq0$的补区域映成单位圆的外部，使无穷远点互相对应。</p>
+<ul>
+<li>端点a&#x3D;-1,b&#x3D;1</li>
+<li>$z_1(z)&#x3D;(z-a)&#x2F;(z-b)$, 单位圆映射成 过原点直线, 其中的弧的部分，根据($z_1(i)&#x3D;\frac{i+1}{i-1}&#x3D;-i$), 说明弧对应 y的负半轴</li>
+<li>把它旋转到 实轴正半轴 $z_2(z)&#x3D;e^{i\pi&#x2F;2}z$</li>
+<li>利用幂次（1&#x2F;2）映射，指定$Im &gt; 0$的分支变为$y&gt;0$的半平面 $z_3(z)&#x3D;\sqrt{z}$</li>
+<li>最后 线性分式 映射成圆外$z_4(z)&#x3D;\frac{z+i}{z-i}$</li>
+</ul>
+</li>
+<li><p>将抛物线$y^{2}&#x3D;2px$的外部映成圆盘$|w|&lt;1$，使$z&#x3D;0$及$z&#x3D;-p&#x2F;2$对应于$w&#x3D;1$及$w&#x3D;0$。（林德勒夫）</p>
+<ul>
+<li>抛物线 和$z^2$相关</li>
+<li>以$p &gt; 0$为例</li>
+<li>$w&#x3D;z^2$ 把$y&#x3D;y_0$映成$v^2&#x3D;4y_0^2(y_0^2+u)$</li>
+<li>$z_1(z)&#x3D;z-p&#x2F;2$ 平移 成 $y^2&#x3D;2p(p&#x2F;2+x)$ </li>
+<li>$z_2(z)&#x3D;\sqrt{z}$, 指定$Im &gt; 0$的分支, 把抛物线变为 $y&#x3D;\sqrt{p&#x2F;2}$</li>
+<li>根据题意 -p&#x2F;2 要映射到0，所以-p&#x2F;2是看作外部的</li>
+<li>目前 $-p&#x2F;2$被映射到 $\sqrt{p}i$</li>
+<li>目前 $0$被映射到 $\frac{\sqrt{p}}{\sqrt{2}}i$</li>
+<li>那么 关心对称点 $c&#x3D;(\sqrt{2}-1)\sqrt{p}i$, 最终被映射到无穷远</li>
+<li>直接交比</li>
+<li>$z_3(z)&#x3D;(z,\frac{\sqrt{p}}{\sqrt{2}}i,\sqrt{p}{i},(\sqrt{2}-1)\sqrt{p}i)$</li>
+</ul>
+</li>
+<li><p>[TODO] 试将双曲线$x^{2}-y^{2}&#x3D;a^{2}$的右边分支的内部映成圆盘$|w|&lt;1$，使焦点对应于$w&#x3D;0$，顶点对应于$w&#x3D;-1$。（林德勒夫）</p>
+</li>
+<li><p>[TODO] 试将双纽线$\left|z^{2}-a^{2}\right|&#x3D;\rho^{2}(\rho&gt;a)$的内部映成圆盘$|w|&lt;1$，使对称性不变。（林德勒夫）</p>
+</li>
+<li><p>[TODO] 将椭圆$(x&#x2F;a)^{2}+(y&#x2F;b)^{2}&#x3D;1$的外部映成圆盘$|w|&lt;1$，使对称性不变。</p>
+</li>
+<li><p>[TODO] 试将$z$平面在双曲线$x^{2}-y^{2}&#x3D;1$右半支左边的部分映成一个半平面。（林德勒夫）</p>
+</li>
+</ol>
+<p>提示：一方面考虑域的上半部分在$w &#x3D; z^2$下的映射，另一方面考虑一个象限在$w &#x3D; z^3 - 3z$下的映射。</p>
+<h4 id="3-4-3-初等黎曼面-Elementary-Riemann-Surfaces"><a href="#3-4-3-初等黎曼面-Elementary-Riemann-Surfaces" class="headerlink" title="3.4.3 初等黎曼面 Elementary Riemann Surfaces"></a>3.4.3 初等黎曼面 Elementary Riemann Surfaces</h4><p>用相应的映射将函数形象化的情形仅当映射为一对一时才是完全清晰的。如果映射不是一对一的，那么，引入广义的域之后仍可使我们的设想得到必要的支持，所谓广义域就是在其中不同的点可以具有相同的坐标。为了做到这一点，必须规定同一位置上的点可以用其他特征来加以区别，例如标号或颜色。具有相同标号的各个点被认为位于同一叶sheet或同一层layer。</p>
+<p>这一想法引出了黎曼面Riemann Surface的概念。这里我们不想给这一概念下一个严格的定义，就我们的目的来说，以纯粹描述的方式介绍一下黎曼面就够了。因为我们只用于帮助说明，不用于作逻辑的证明。</p>
+<p>最简单的黎曼面与$w &#x3D; z^n$所做的映射有关，这里$n &gt; 1$是一个整数。我们知道在每一个扇形$(k-1)(2\pi&#x2F;n) &lt; \arg z &lt; k(2\pi&#x2F;n)$（$k&#x3D;1, \cdots, n$$)$与除去了正实轴以后的整个$w$平面之间存在着一一对应的关系。因此，每一扇形的象可以在$w$平面上沿着正实轴作一“割痕cut”而求得。这一割痕具有两个“边缘edge”，一个在下方，一个在上方。对应于$z$平面中的$n$个扇形，我们来考察具有割痕的$w$平面的$n$个完全相同的副本。这些副本将组成黎曼面的“叶sheets”，不同的叶用标号$k$区分，每一个标号对应于一个扇形。当$z$在$z$平面上移动时，对应的点$w$将在黎曼面上自由移动。由于这一理由，我们必须把第一叶的下边缘接到第二叶的上边缘，第二叶的下边缘接到第三叶的上边缘，以此类推。最后，将第$n$叶的下边缘接到第一叶的上边缘，完成一个循环。从物理意义上说，这样做不可能不发生自交，但理想化的模型没有这一矛盾。这样构造的结果就组成一个黎曼面，它上面的点与$z$平面上的点一一对应。此外，如果连续性是根据构造情况来定义的，那么这一对应也是连续的。</p>
+<ul>
+<li>千层饼的感觉</li>
+</ul>
+<p><img data-src="https://i-blog.csdnimg.cn/blog_migrate/28c916d58ef2afd68c15595b9421029d.png"></p>
+<p>沿着正轴的割痕可以用沿着任意一段由0至$\infty$的简单弧arc的割痕来代替，这样构成的黎曼面应认为与原来构成的完全一样。换言之，割痕不能由曲面上的线来区分，但为了便于描述，引入特殊的割痕还是必要的。</p>
+<p>点$w &#x3D; 0$处于一特殊位置。它连接所有的叶，而一条曲线在闭合之前应环绕原点$n$次这样的点称为支点(branch point)。如果黎曼面是从扩充平面extended plane来考虑的，那么$\infty$点也是一个支点。在更一般的情形，一个支点不需要连接所有叶，如果它连接了$h$叶，则称它为$h-1$阶order支点。</p>
+<ul>
+<li>强烈谴责 数学词的中文翻译 支撑(support)集简写成支集，分支(branch)点简写成支点</li>
+</ul>
+<p>对应于$w &#x3D; e^z$的黎曼面具有同样的性质。在这种情况下，这一函数将每一平行带$(k-1)2π &lt; y &lt; k·2π$映成一个叶，割痕是沿正轴切下的。各叶彼此相连，因此组成一个没有尽头的螺旋。原点将不是黎曼面上的一点，这与$e^z$永远不能等于零相对应。</p>
+<p>读者应当不难构造出其他的黎曼面。我们提出$w &#x3D; \cos z$所定义的黎曼面来作为方法的说明：如果一个域，在一一对应下映成具有一个或几个割痕的整个平面，则称这个域为基本域fundamental region。我们可以选定带$(k-1)\pi &lt; x &lt; k\pi$作为$w &#x3D; \cos z$的基本域，每一个带映成带有割痕的整个$w$平面，这些割痕是沿着实轴由$-\infty$至$-1$以及由$1$至$\infty$切下的。直线$x &#x3D; k\pi$在$k$为偶数时对应于正向割痕的两个边缘，而在$k$为奇数时则对应于负向割痕的两个边缘。如果我们考察与直线$x &#x3D; k\pi$相邻的两条带，就可以知道对应割痕的边缘应交叉粘合，以便在$w &#x3D; \pm 1$处生成一个简单simple的支点branch point。所得的曲面在$w &#x3D; 1$及$w &#x3D; -1$上具有无穷多个简单的支点，这些支点交替地连接奇数和偶数的叶。</p>
+<p>叶与叶的粘合情形如图3-10所示。它表示割痕互相平行时的曲面的横截面。应记住同一水平线上的任何两点都可以用一条弧连接，弧不与任一割痕相交。</p>
+<p>不论这种表示的优点怎样，黎曼面的最清晰图形是从$z$平面中基本域的直接研究中得出。如图3-11所示，如果我们引入对应于上半平面及下半平面的子域，则说明将更为简单。图中阴影部分是$\cos z$具有正虚部的域。每一个域对应于一个半平面，在这个半平面上标记边界点$1$及$-1$。对于任意两个黑白相邻的域，半平面应通过区间$(-\infty, -1)$，$(-1, 1)$或$(1, \infty)$之一相连接，具体选择哪一个连接，可从$z$平面中的对应位置来确定。</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=mIOvmCyT4D">youtube sqrt z黎曼面可视化</a></p>
+<h4 id="3-4-3-练习"><a href="#3-4-3-练习" class="headerlink" title="3.4.3 练习"></a>3.4.3 练习</h4><ol>
+<li>说明函数$w &#x3D; \frac{1}{2}\left(z + \frac{1}{z}\right)$的黎曼面。<ul>
+<li>$z&#x3D;w\pm \sqrt{w^2-1}$</li>
+<li>两个分支 所以有两叶</li>
+<li>在$w&#x3D;\pm 1$有重根，是支点，是1阶支点（简单支点）</li>
+<li>粘合方式： w-plane上 -1到1的线段</li>
+<li>$w(z)&#x3D;w(1&#x2F;z)$, 所以可以考虑选择$|z|&lt;1$为基本区域</li>
+</ul>
+</li>
+<li>说明函数$w &#x3D; (z^2 - 1)^2$的黎曼面。<ul>
+<li>$z&#x3D;\pm \sqrt{1\pm \sqrt{w}}$</li>
+<li>需要构造4层黎曼面</li>
+<li>$w&#x3D;0$时 $z&#x3D;\pm 1$, 每个对应是二重根</li>
+<li>$w&#x3D;1$时 $z&#x3D;0$, 注意这里看上去$z&#x3D;\pm \sqrt{2}$但并没有是z&#x3D;0的四重根</li>
+<li>沿着实轴 $0$到$1$, $1$到$\infty$切割</li>
+<li>第1层 选$\sqrt{w}$虚部+, z选虚部+</li>
+<li>第2层 选$\sqrt{w}$虚部+, z选虚部-</li>
+<li>第3层 选$\sqrt{w}$虚部-, z选虚部+</li>
+<li>第4层 选$\sqrt{w}$虚部-, z选虚部-</li>
+<li>粘合是这样的<ul>
+<li>1层：<ul>
+<li>$4$层从$[0,\infty]$进入</li>
+<li>绕逆时针原点一圈后</li>
+<li>$[0,1]出口进入4层$,而$[1,\infty]$出口进入2层</li>
+</ul>
+</li>
+<li>2层：<ul>
+<li>$3$层 从$[0,1]$进入,1层从$[1,\infty]$进入</li>
+<li>绕逆时针原点一圈后</li>
+<li>$[0,\infty]出口进入3层$</li>
+</ul>
+</li>
+<li>3层：<ul>
+<li>$2$层从$[0,\infty]$进入</li>
+<li>绕逆时针原点一圈后</li>
+<li>$[0,1]出口进入2层$,而$[1,\infty]$出口进入4层</li>
+</ul>
+</li>
+<li>4层：<ul>
+<li>$1$层 从$[0,1]$进入,3层从$[1,\infty]$进入</li>
+<li>绕逆时针原点一圈后</li>
+<li>$[0,\infty]出口进入1层$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[TODO]说明函数$w &#x3D; z^3 - 3z$的黎曼面。</li>
+</ol>
+<h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><ul>
+<li>像这里很多定义，和其根本的东西，还是和数学分析原理的内容不同，这本书的年份似乎比较老，按我个人的感受，数学分析原理的那些定义感觉更“顺畅”，比如邻域，比如闭集</li>
+<li>这样看来，我觉得还是十分推荐先看数学分析原理的书,(作为对比让我更爱rudin了)</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>YeXiaoRain
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://yexiaorain.github.io/Math/Complex_Analysis_3/" title="LarsVAhlfors 复分析 3 作为映射的解析函数">https://yexiaorain.github.io/Math/Complex_Analysis_3/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/Math/tags/%E5%A4%8D%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 复分析</a>
+              <a href="/Math/tags/%E4%BD%9C%E4%B8%BA%E6%98%A0%E5%B0%84%E7%9A%84%E8%A7%A3%E6%9E%90%E5%87%BD%E6%95%B0/" rel="tag"><i class="fa fa-tag"></i> 作为映射的解析函数</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Complex_Analysis_2/" rel="prev" title="LarsVAhlfors 复分析 2 复函数">
+                  <i class="fa fa-chevron-left"></i> LarsVAhlfors 复分析 2 复函数
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments" id="disqus_thread">
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+  </div>
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">637k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">9:39</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script><script src="/Math/js/bookmark.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/Math/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/Math/js/third-party/math/mathjax.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.2.0/quicklink.umd.js" integrity="sha256-4kQf9z5ntdQrzsBC3YSHnEz02Z9C1UeW/E9OgnvlzSY=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://yexiaorain.github.io/Math/Complex_Analysis_3/"}</script>
+  <script src="/Math/js/third-party/quicklink.js"></script>
+<script class="next-config" data-name="disqus" type="application/json">{"enable":true,"shortname":"yexiaorain","count":true,"i18n":{"disqus":"disqus"}}</script>
+<script src="/Math/js/third-party/comments/disqus.js"></script>
+
+</body>
+</html>
