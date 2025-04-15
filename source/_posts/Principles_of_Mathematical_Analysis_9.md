@@ -295,13 +295,18 @@ tags:
 ### 隐函数定理 the implicit function theorem
 
 如果f是 plane 平面上 连续可微实函数，函数 f 在点$(a,b)$满足 $f(a,b)=0$
-- 且 $\frac{\partial}{\partial y}(f) \neq 0$ 那么在(a,b)的某个邻域内， 方程 f(x,y)=0 能把y用x解出
-- $\frac{\partial}{\partial x}f \neq 0$ 就能在(a,b) 附近把x解出，用y表示
-	- 偏导不等于0,可以考虑 $f(x,y)=x^2+y^2-1$
+- 且 $\frac{\partial}{\partial y}(f) \neq 0$
+  - 那么在(a,b)的某个邻域内， 方程 f(x,y)=0 能把y用x解出
+- 类似的 $\frac{\partial}{\partial x}f \neq 0$
+  - 就能在(a,b) 附近把x解出，用y表示
+- 这里偏导不等于0的必要,可以考虑 $f(x,y)=x^2+y^2-1$作为例子
 
 9.26 $x \in R^n, y \in R^m$
 - $(x,y) \in R^{n+m}$ 向量拼接
-- $A(h,k)=A_{x}h+A_{y,k}, A \in L(R^{n+m},R^n),A_{x}\in L(R^n,R^n),A_{y}\in  L(R^m,R^n)$
+- $A(h,k)=A_{x}h+A_{y}k$
+  - $A \in L(R^{n+m},R^n)$
+  - $A_{x}\in L(R^n,R^n)$
+  - $A_{y}\in  L(R^m,R^n)$
 
 9.27 若 $A_{x}$可逆, 那么 每个$k \in R^m$ 有唯一h使得 $A(h,k)=0$
 - $h=-(A_{x})^{-1}A_{y}k$ 计算出
