@@ -9,9 +9,9 @@ tags:
 ---
 
 
-# 复函数 complex functions
+# 2. 复函数 complex functions
 
-## 解析函数的概念 introduction to the concept of analytic function
+## 2.1 解析函数的概念 introduction to the concept of analytic function
 
 只有解析analytic函数 或 全纯holomorphic函数可以自由的进行微分和积分
 
@@ -25,7 +25,7 @@ tags:
 
 <!--more-->
 
-### 极限与连续性 limits and continuity
+### 2.1.1 极限与连续性 limits and continuity
 
 定义1 $x$趋于a时 函数$f(x)$有极限A，记为
 - $\lim_{x\to a} f(x) =A$
@@ -40,7 +40,7 @@ tags:
   - 复变量的实函数，要么导数为零，要么导数不存在，因为取增量h,和ih,如果导数存在，会分别得到实数导数和纯虚数导数
   - 实变量的复函数，可以看成实部和虚部分开的，函数的导数的合并 $z(t)=x(t)+iy(t), z'=x'+iy'$ 
 
-### 解析函数 analytic functions
+### 2.1.2 解析函数 analytic functions
 
 解析函数: 定义域上没一点都有导数的复变量的复函数组成，全纯函数 也常用来表示同样的意义
 
@@ -145,7 +145,7 @@ $u(z/2, z/2i) = \frac{1}{2} \left[ f(z) + \bar{f}(0) \right].$
 
 7. [TODO]证明一个调和函数满足形式微分方程$\frac{\partial^2 u}{\partial z \partial \bar{z}}=0$
 
-### 多项式 polynomials
+### 2.1.3 多项式 polynomials
 
 每一个多项式都是解析函数
 
@@ -183,7 +183,7 @@ $$
 
 这个定理的简明形式告诉我们：包含 $P(z)$ 零点的最小凸多边形也包含 $P'(z)$ 的零点。
 
-### 有理函数 rational functions
+### 2.1.4 有理函数 rational functions
 
 我们现在考虑作为两个多项式之商的有理函数 $R(z) = \frac{P(z)}{Q(z)}$ 的情形。假设 $P(z)$ 和 $Q(z)$ 没有公因子，这是基本的要求，因而没有公共零点。在 $Q(z)$ 的零点上 $R(z)$ 将取值 $\infty$。因此我们必须把它看成扩充平面上的函数，而且它是连续的。$Q(z)$ 的零点zero称为 $R(z)$ 的极点pole，由定义可知极点的阶数等于 $Q(z)$ 的对应零点的阶数。
 
@@ -318,14 +318,14 @@ $$
   - 首先纯多项式$P'(n)$，在$n > 1$的情况，可以$n-1$
   - 另一方面 非$\infty$ pole的阶是k,那么导后是k+1, 而 先合并右侧，可以得到 G的阶 + 右侧分母的阶，G的阶求导-1，所以下界是n-1
 
-## 幂级数的基础理论 elmentary theory of power series
+## 2.2 幂级数的基础理论 elmentary theory of power series
 
 多项式和有理函数是非常特殊的解析函数，要得到greater variety is to form limits
 - 收敛级数的和就是这样一个极限，
 - 如果项是解析的，那么和也是解析的
 - 在项为即系函数的所有级数中，以复系数的幂级数最为简单
 
-### 序列 sequences
+### 2.2.1 序列 sequences
 
 序列 $\{a_n\}_{n=1}^{\infty}$ 具有极限 $A$，如果对于任一 $\epsilon > 0$，存在一个 $N$ 使得当 $n \geq N$ 时，$|a_n - A| < \epsilon$。如果 $\lim_{n \to \infty} a_n = \infty$，则称这一序列发散到无穷。
 
@@ -368,7 +368,7 @@ $$
 
 - emmmmmmm 感觉这里没有证明白啊，从数学分析原理上看，收敛数列一定柯西，而柯西不一定收敛，因为值域不一定紧，也就是极限点的存在性，一个例子就是, 这里这个“反证” 只证明了上下界可以任意的近，依然没有紧
 
-### 级数 series
+### 2.2.2 级数 series
 
 柯西条件的一个非常简单的应用就是它使我们可以从一个序列的收敛性得到另一个序列的收敛性。如果对于所有各对下标 $m, n$，都有 $|b_m - b_n| \leq |a_m - a_n|$ 成立，则序列 $\{b_n\}$ 可以称为序列 $\{a_n\}$（这不是一个标准项）的收缩。在这个条件下，如果 $\{a_n\}$ 是一个柯西序列，则 $\{b_n\}$ 也是。因此，由 $\{a_n\}$ 的收敛性可得到 $\{b_n\}$ 的收敛性。
 
@@ -398,7 +398,7 @@ $$
 
 相比较。(15)的部分和序列是相应于(16)的序列的收缩，因为 $|a_n + a_{n+1} + \cdots + a_{n+p}| \leq |a_n| + |a_{n+1}| + \cdots + |a_{n+p}|$。因此，(16)的收敛意味着原级数(15)收敛。一个级数的各项的绝对值所组成的级数如果收敛，则称原级数为绝对收敛。
 
-### 一致收敛性 uniform convergence
+### 2.2.3 一致收敛性 uniform convergence
 
 考察函数 $f_n(x)$ 的一个序列，设所有函数都定义在同一集 $E$ 上。如果对每一个 $x \in E$，值序列 $\{f_n(x)\}$ 收敛，则极限 $f(x)$ 仍是 $E$ 上的一个函数。由定义，如果 $\epsilon > 0$，$x \in E$，则存在一个$n_0$，使得当$n\geqslant n_0$时有$|f_n(x) - f(x)| < \varepsilon$，但允许$n_0$依赖于$x$。例如，对所有的$x$，有
 
@@ -458,7 +458,7 @@ $$
 5. [TODO]对 $x$ 的实值讨论级数 $\sum_{n=1}^{\infty} \frac{x}{n(1 + nx^2)}$ 的一致收敛性。
 6. [TODO]如果 $U = u_1 + u_2 + \cdots$，$V = v_1 + v_2 + \cdots$ 都是收敛级数，证明：只要两个级数至少有一个是绝对收敛的，那么 $UV = u_1v_1 + (u_1v_2 + u_2v_1) + (u_1v_3 + u_2v_2 + u_3v_1) + \cdots$ 收敛。（如果两个级数都绝对收敛很容易证明。如果第二个级数不是绝对收敛的，试给出简短的证明。）
 
-### 幂级数 power series
+### 2.2.4 幂级数 power series
 
 幂级数具有如下的形式：
 $$
@@ -571,7 +571,7 @@ $$f(z)=f(0)+f'(0)z+\frac{f''(0)}{2!}z^2+\cdots+\frac{f^{(n)}(0)}{n!}z^n+\cdots$$
    - $\mathrm{Re}(z) > -1/2$
 9. [TODO]对什么样的$z$值，级数 $\sum_{0}^\infty \frac{z^n}{1+z^{2n}}$收敛？
 
-### 阿贝尔极限定理 Abel's limit theorem
+### 2.2.5 阿贝尔极限定理 Abel's limit theorem
 
 阿贝尔第二定理涉及一个幂级数在收敛圆周上的一点上收敛的情形. 不失一般性, 我们可设R=1, 并设收敛发生在点z=1处.
 
@@ -602,13 +602,13 @@ $=(1-z)(S_0+S_1z+⋯+S_{n-1}z^{n-1})+S_nz^n.$
 $f(z)$ 先换成$s_n(z)$, 再$\sum S_n z^n$, 然后截断到可控m, 最后控制$z\to 1$
 - 比较神奇的地方是 保持$|1-z|/(1-|z|)$有界时
 
-## 指数函数和三角函数 the exponential and trigonometric functions
+## 2.3 指数函数和三角函数 the exponential and trigonometric functions
 
 纯粹从实数观点处理微积分的人不指望指数函数 $e^x$ 和三角函数 $\cos x$, $\sin x$ 之间有任何关系。事实上，这些函数按照不同的目的，似乎可以从完全不同的来源导出。无疑，他会注意到这些函数的泰勒展开式之间的相似性，如果使用虚自变量，就可以导出欧拉公式 $e^{ix} = \cos x + i \sin x$ 作为一个正式的恒等式。但是分析其全部深度，则要归功于高斯(Gauss)。
 
 有了前一节的预备知识，容易对复数 $z$ 定义 $e^z$, $\cos z$ 和 $\sin z$，并推导出这些函数之间的关系。同时由指数函数的反函数可以定义对数，而对数又导出复数辐角的正确定义，因此导出角的非几何定义。
 
-### 指数函数 the exponential
+### 2.3.1 指数函数 the exponential
 
 一开始，我们可以把指数函数定义为如下微分方程的解：
 $$f'(z) = f(z), \tag{20}$$
@@ -638,7 +638,7 @@ $$|e^{x+iy}| = e^x$$
 
 下面多次用到
 
-### 三角函数 the trigonometric functions
+### 2.3.2 三角函数 the trigonometric functions
 
 三角函数由下式定义：
 $$\cos z = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin z = \frac{e^{iz} - e^{-iz}}{2i}.\tag{23}$$
@@ -678,7 +678,7 @@ $$\tan z = -i \frac{e^{iz} - e^{-iz}}{e^{iz} + e^{-iz}}$$
 
 注意：所有的三角函数都是 $e^{iz}$ 的有理函数！！！！！！！！！！！！！！！！！！！！！！！！！
 
-### 2.3.2 练习
+#### 2.3.2 练习
 
 1. 求 $\sin(i)$, $\cos(i)$ 和 $\tan(1+i)$ 的值。
 2. 双曲余弦和双曲正弦定义为 $\cosh z = \frac{e^z + e^{-z}}{2}$, $\sinh z = \frac{e^z - e^{-z}}{2}$. 用 $\cos(iz)$ 和 $\sin(iz)$ 表示它们。推导出加法公式，以及 $\cosh 2z$, $\sinh 2z$ 的公式。
@@ -694,7 +694,7 @@ $$|\sin z|^2 = \sinh^2 y + \sin^2 x = \cosh^2 y - \cos^2 x = \frac{1}{2} (\cosh 
 
 还是觉得幂级数 的展开，以及从$f'(x)=f(x),f(0)=1$开始,得到这$e^x,\sin,\cos,\sinh,\cosh$一切就顺滑,流畅,紧密,贯通了起来
 
-### 周期性 the periodicity
+### 2.3.3 周期性 the periodicity
 
 或者说 从 这条路径重新定义$\pi$,我们不把$\pi$看成几何的圆周率，而是上面性质和周期有关的东西
 
@@ -733,7 +733,7 @@ $\mathrm{e}^{i\pi/2} = i, \quad \mathrm{e}^{i\pi} = -1, \quad \mathrm{e}^{2\pi i
 
 > 需要注意的是, 对于复函数，如果不要求解析，完全可以构造出一个多方向不同周期的函数, 思路也很简单，选择$x\in[0,1],y\in[0,2]$边界都$=0$,但是中间任意的函数，那么这样的值一直 重复，那会发现沿着x方向周期是1，沿着y方向周期是2, $f(z)=f(z+k+2mi),k,m\in \mathbb{Z}$
 
-### 对数函数 the logarithm
+### 2.3.4 对数函数 the logarithm
 
 一与指数函数一起，我们还必须研究它的反函数——对数函数。根据定义，$z = \log w$ 是方程 $\mathrm{e}^z = w$ 的一个根。首先，由于 $\mathrm{e}^x$ 总是不为 $0$，所以数 $0$ 没有对数。对 $w \neq 0$，方程 $\mathrm{e}^{x+iy} = w$ 等价于
 
@@ -791,7 +791,7 @@ $$
 
 应该指出，在复解析函数论中，所有的初等超越函数都可用 $e^z$ 及其逆 $\log z$ 表示。换句话说，基本上只有一个初等超越函数。
 
-#### 练习
+#### 2.3.4 练习
 
 1. 对实的 $y$，证明在 $\cos y$ 和 $\sin y$ 的级数中，每一个余项具有与首项相同的符号（这推广了证明周期时用到的不等式，见 2.3.3 节）。
 2. 证明 $3 < \pi < 2\sqrt{3}$。
