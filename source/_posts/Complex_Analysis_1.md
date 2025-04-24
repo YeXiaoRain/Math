@@ -35,6 +35,8 @@ isbn
 单复变量的标准基础教材
 - 作者仍然坚信几何方法的基础作用，
 
+<!--more-->
+
 # 复数 complex numbers
 
 ## 复数代数 the algebra of complex numbers 
