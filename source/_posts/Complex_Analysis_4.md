@@ -11,7 +11,7 @@ tags:
 # 4 复积分 Complex Integration
 
 
-## 4.1 基本定理
+## 4.1 基本定理 Fundamental Theorems
 
 解析函数的许多重要性质不用复积分是很难证明的。举例来说，不借助复积分或等价工具，要证明一个解析函数的导数是连续的，或证明高阶导数存在，仅在最近才成为可能。当前，至少可以说，不用积分的证明比经典证明要困难得多
 - R. L. Plunkett 不用积分证明了导数的连续性（Bull. Am. Math. Soc. 65, 1959）。E. H. Connell 和 P. Porcelli 证明了所有导数的存在（Bull. Am. Math. Soc. 67, 1961）。这两个证明都依赖 G. T. Whyburn 的一个拓扑定理。
@@ -20,34 +20,34 @@ tags:
 
 <!--more-->
 
-### 4.1.1 线积分
+### 4.1.1 线积分 Line Integrals
 
 实积分的最直接推广就是复函数在一个实区间上的定积分。设 $f(t)=u(t)+iv(t)$ 是一个连续函数，定义于区间 $(a,b)$ 内。根据定义，令
 
-$$\int_{a}^{b} f(t) d t=\int_{a}^{b} u(t) d t+i \int_{a}^{b} v(t) d t,\tag{1}$$
+$$\int _{a}^{b} f(t) d t=\int _{a}^{b} u(t) d t+i \int _{a}^{b} v(t) d t,\tag{1}$$
 
 这一积分具有实积分的大部分性质。特别是，如果 $c=\alpha+i \beta$ 为一个复常数，则得
 
-$$\int_{a}^{b} c f(t) d t=c \int_{a}^{b} f(t) d t,\tag{2}$$
+$$\int _{a}^{b} c f(t) d t=c \int _{a}^{b} f(t) d t,\tag{2}$$
 
 因为两边都等于
 
-$$\int_{a}^{b}(\alpha u-\beta v) d t+i \int_{a}^{b}(\alpha v+\beta u) d t$$
+$$\int _{a}^{b}(\alpha u-\beta v) d t+i \int _{a}^{b}(\alpha v+\beta u) d t$$
 
 如果 $a \leqslant b$，则对于任意复的 $f(t)$，基本不等式
 
-$$\left|\int_{a}^{b} f(t) d t\right| \leqslant \int_{a}^{b}|f(t)| d t,\tag{3}$$
+$$\left|\int _{a}^{b} f(t) d t\right| \leqslant \int _{a}^{b}|f(t)| d t,\tag{3}$$
 
 成立。为了证明这一点，在 (2) 中取 $c=e^{-i \theta}$，这里 $\theta$ 为实数，则得
 
-$$\operatorname{Re}\left[e^{-i \theta} \int_{a}^{b} f(t) d t\right]=\int_{a}^{b} \operatorname{Re}\left[e^{-i \theta} f(t)\right] d t \leqslant \int_{a}^{b}|f(t)| d t$$
+$$\operatorname{Re}\left[e^{-i \theta} \int _{a}^{b} f(t) d t\right]=\int _{a}^{b} \operatorname{Re}\left[e^{-i \theta} f(t)\right] d t \leqslant \int _{a}^{b}|f(t)| d t$$
 
-如果 $\theta = \arg \int_a^b f(t) \, dt$，则上式的左边成为积分的绝对值，于是得 $(3)$。
+如果 $\theta = \arg \int _a^b f(t)  dt$，则上式的左边成为积分的绝对值，于是得 $(3)$。
 - 如果积分为0， arg没定义，但是不等式显然
 
 现在我们来考虑一个分段可微的弧 $\gamma$，其方程为 $z = z(t), a \leq t \leq b$。如果函数 $f(z)$ 定义在 $\gamma$ 上且在 $\gamma$ 上连续，则 $f(z(t))$ 也连续，我们可以令
 $$
-\int_\gamma f(z) \, dz = \int_a^b f(z(t)) z'(t) \, dt.
+\int _\gamma f(z)  dz = \int _a^b f(z(t)) z'(t)  dt.
 \tag{4}
 $$
 这就是 $f(z)$ 沿着弧 $\gamma$ 的复线积分的定义。
@@ -57,95 +57,95 @@ $$
 
 积分 $(4)$ 的一个最重要的性质是它在参数变换下的不变性。由增函数 $t = t(\tau)$ 确定的参数变换将区间 $\alpha \leq \tau \leq \beta$ 映射成区间 $a \leq t \leq b$，假设 $t(\tau)$ 是分段可微的。根据积分变量的变换法则，我们有
 $$
-\int_a^b f(z(t)) z'(t) \, dt = \int_\alpha^\beta f(z(t(\tau))) z'(t(\tau)) t'(\tau) \, d\tau.
+\int _a^b f(z(t)) z'(t)  dt = \int _\alpha^\beta f(z(t(\tau))) z'(t(\tau)) t'(\tau)  d\tau.
 $$
 但 $z'(t(\tau)) t'(\tau)$ 是 $z(t(\tau))$ 关于 $\tau$ 的导数，因此，不论 $\gamma$ 的方程为 $z = z(t)$ 还是为 $z = z(t(\tau))$，积分 $(4)$ 都有相同的值。
 
 在 3.2.1 节中，我们用等式 $z = z(-t) (-b \leq t \leq -a)$ 定义反向弧 $-\gamma$。因此我们有
 $$
-\int_{-\gamma} f(z) \, dz = \int_{-b}^{-a} f(z(-t)) (-z'(-t)) \, dt,
+\int _{-\gamma} f(z)  dz = \int _{-b}^{-a} f(z(-t)) (-z'(-t))  dt,
 $$
 作变量变换，上面的积分可写成
 $$
-\int_b^a f(z(t)) z'(t) \, dt.
+\int _b^a f(z(t)) z'(t)  dt.
 $$
 于是得到
 $$
-\int_{-\gamma} f(z) \, dz = -\int_\gamma f(z) \, dz.
+\int _{-\gamma} f(z)  dz = -\int _\gamma f(z)  dz.
 \tag{5}
 $$
 
 积分 $(4)$ 还有一个十分明显的加法性质。把弧 $\gamma$ 分成有限个子弧的意义是很明显的。用符号等式来表示，有
 $$
-\gamma = \gamma_1 + \gamma_2 + \cdots + \gamma_n,
+\gamma = \gamma _1 + \gamma _2 + \cdots + \gamma _n,
 $$
 对应的积分满足下面的关系：
 $$
-\int_{\gamma_1 + \gamma_2 + \cdots + \gamma_n} f \, dz = \int_{\gamma_1} f \, dz + \int_{\gamma_2} f \, dz + \cdots + \int_{\gamma_n} f \, dz.
+\int _{\gamma _1 + \gamma _2 + \cdots + \gamma _n} f  dz = \int _{\gamma _1} f  dz + \int _{\gamma _2} f  dz + \cdots + \int _{\gamma _n} f  dz.
 \tag{6}
 $$
 
-最后，沿着一条闭曲线的积分在参数代换下也保持不变。老的起点和新的起点确定两段子弧 $\gamma_1$ 及 $\gamma_2$，沿 $\gamma_1 + \gamma_2$ 的积分等于沿 $\gamma_2 + \gamma_1$ 的积分，这就证明了积分的不变性。
+最后，沿着一条闭曲线的积分在参数代换下也保持不变。老的起点和新的起点确定两段子弧 $\gamma _1$ 及 $\gamma _2$，沿 $\gamma _1 + \gamma _2$ 的积分等于沿 $\gamma _2 + \gamma _1$ 的积分，这就证明了积分的不变性。
 
 除了 $(4)$ 式这种形式的积分外，我们还可以考虑关于 $\overline{z}$ 的线积分。最方便的定义是用二重共轭符号
 
-$$\int_{\gamma} f \, \overline{dz} = \overline{\int_{\gamma} \overline{f} \, dz},$$
+$$\int _{\gamma} f  \overline{dz} = \overline{\int _{\gamma} \overline{f}  dz},$$
 
 使用这一记法，关于$x$或关于$y$的线积分可以写成
 
-$$\int_{\gamma} f \, dx = \frac{1}{2}\left(\int_{\gamma} f \, dz + \int_{\gamma} f \, \overline{dz}\right),$$
+$$\int _{\gamma} f  dx = \frac{1}{2}\left(\int _{\gamma} f  dz + \int _{\gamma} f  \overline{dz}\right),$$
 
-$$\int_{\gamma} f \, dy = \frac{1}{2i}\left(\int_{\gamma} f \, dz - \int_{\gamma} f \, \overline{dz}\right).$$
+$$\int _{\gamma} f  dy = \frac{1}{2i}\left(\int _{\gamma} f  dz - \int _{\gamma} f  \overline{dz}\right).$$
 
 记$f=u+iv$, 则(4)式的积分可写成下面的形式:
 
-$$\int_{\gamma}(u \, dx - v \, dy) + i\int_{\gamma}(u \, dy + v \, dx),\tag{7}$$
+$$\int _{\gamma}(u  dx - v  dy) + i\int _{\gamma}(u  dy + v  dx),\tag{7}$$
 
 它把实部和虚部分开了.
 
 当然, 我们完全可以从定义如下形式的积分开始:
 
-$$\int_{\gamma} p \, dx + q \, dy,$$
+$$\int _{\gamma} p  dx + q  dy,$$
 
 在这种情况下, (7)应作为积分(4)的定义. 选用哪一种, 纯属个人偏爱.
 
 关于弧长作积分可得一个基本上不同的线积分. 这种积分通常用两种记法, 其定义为
 
-$$\int_{\gamma} f ds = \int_{\gamma} f \, |dz| = \int_{\gamma} f(z(t)) \, |z'(t)| \, dt.\tag{8}$$
+$$\int _{\gamma} f ds = \int _{\gamma} f |dz| = \int _{\gamma} f(z(t))  |z'(t)|  dt.\tag{8}$$
 
 这一积分仍然不依赖于参数的选择. 和(5)式对比, 现在我们有
 
-$$\int_{-\gamma} f \, |dz| = \int_{\gamma} f \, |dz|,$$
+$$\int _{-\gamma} f  |dz| = \int _{\gamma} f  |dz|,$$
 
 但(6)式仍保持有效. 不等式
 
-$$\left|\int_{\gamma} f \, dz\right| \leqslant \int_{\gamma} |f| \cdot |dz|\tag{9}$$
+$$\left|\int _{\gamma} f  dz\right| \leqslant \int _{\gamma} |f| \cdot |dz|\tag{9}$$
 
 是(3)式的一个推论.
 
-如果$f=1$, 则(8)的积分为$\int_{\gamma}|dz|$, 根据定义, 这就是$\gamma$的长度. 作为例子, 我们来计算圆的周长. 从一个整圆的参数方程$z=z(t)=a+\rho e^{it}(0 \leqslant t \leqslant 2\pi)$可得$z'(t)=i\rho e^{it}$, 因此
+如果$f=1$, 则(8)的积分为$\int _{\gamma}|dz|$, 根据定义, 这就是$\gamma$的长度. 作为例子, 我们来计算圆的周长. 从一个整圆的参数方程$z=z(t)=a+\rho e^{it}(0 \leqslant t \leqslant 2\pi)$可得$z'(t)=i\rho e^{it}$, 因此
 
-$$\int_{0}^{2\pi} |z'(t)| \, dt = \int_{0}^{2\pi} \rho \, dt = 2\pi\rho,$$
+$$\int _{0}^{2\pi} |z'(t)|  dt = \int _{0}^{2\pi} \rho  dt = 2\pi\rho,$$
 
 与我们所希望的一致.
 
-### 4.1.2 可求长的弧
+### 4.1.2 可求长的弧 Rectifiable Arcs
 
 一段弧的长度也可以定义为所有和
 
-$$|z(t_1)-z(t_0)| + |z(t_2)-z(t_1)| + \cdots + |z(t_n)-z(t_{n-1})|,\tag{10}$$
-- 既然是长度为啥不 写成 $|z(t_i)-z(t_{i+1})|$ 感觉看上去更舒服
+$$|z(t _1)-z(t _0)| + |z(t _2)-z(t _1)| + \cdots + |z(t _n)-z(t _{n-1})|,\tag{10}$$
+- 既然是长度为啥不 写成 $|z(t _i)-z(t _{i+1})|$ 感觉看上去更舒服
 
 的上确界
 - 这里上确界是定义，另一方面是因为 度量的要求 norm的结果增加cut结构只会更大
 
-其中$a=t_0 < t_1 < \cdots < t_n=b$. 如果这个上确界是有限的, 就说该弧是可求长的rectifiable, 而且长度的两种定义是一致的.
+其中$a=t _0 < t _1 < \cdots < t _n=b$. 如果这个上确界是有限的, 就说该弧是可求长的rectifiable, 而且长度的两种定义是一致的.
 
-由于$|x(t_k)-x(t_{k-1})| \leqslant |z(t_k)-z(t_{k-1})|$，$|y(t_k)-y(t_{k-1})| \leqslant |z(t_k)-z(t_{k-1})|$，
+由于$|x(t _k)-x(t _{k-1})| \leqslant |z(t _k)-z(t _{k-1})|$，$|y(t _k)-y(t _{k-1})| \leqslant |z(t _k)-z(t _{k-1})|$，
 
-$|z(t_k)-z(t_{k-1})|\leq|x(t_k)-x(t_{k-1})|+|y(t_k)-y(t_{k-1})|$，显然，和(10)及相应的和
-$|x(t_1)-x(t_0)|+\cdots+|x(t_n)-x(t_{n-1})|$，
-$|y(t_1)-y(t_0)|+\cdots+|y(t_n)-y(t_{n-1})|$
+$|z(t _k)-z(t _{k-1})|\leq|x(t _k)-x(t _{k-1})|+|y(t _k)-y(t _{k-1})|$，显然，和(10)及相应的和
+$|x(t _1)-x(t _0)|+\cdots+|x(t _n)-x(t _{n-1})|$，
+$|y(t _1)-y(t _0)|+\cdots+|y(t _n)-y(t _{n-1})|$
 
 同时有界。当后面的和都有界时，就说函数$x(t)$与$y(t)$是有界变差的bounded variation。弧$z=z(t)$是可求长的，当且仅当$z(t)$的实部与虚部都是有界变差的。
 - bounded variation: 作为实的 任意切割 上确界有限
@@ -153,35 +153,35 @@ $|y(t_1)-y(t_0)|+\cdots+|y(t_n)-y(t_{n-1})|$
 
 若$\gamma$是可求长的，$f(z)$在$\gamma$上连续，则可定义类型(8)的积分为极限
 
-$$\int_\gamma f\,ds=\lim\sum_{k=1}^n f(z(t_k))|z(t_k)-z(t_{k-1})|$$
+$$\int _\gamma fds=\lim\sum _{k=1}^n f(z(t _k))|z(t _k)-z(t _{k-1})|$$
 
 这里的极限与定积分定义中出现的极限是同类型的。
 
 在初等解析函数论中，很少需要考虑可求长而不是分段可微的弧。但是，可求长的弧是每个数学家必须知道的一个概念。
 
-### 4.1.3 线积分作为弧的函数
+### 4.1.3 线积分作为弧的函数, Line Integrals as Functions of Arcs (定理1)
 
-形如$\int_\gamma p\,dx+q\,dy$的一般线积分常作为弧$\gamma$的函数functions（或泛函functionals）来研究。这时我们假设$p$与$q$定义在同一个域$\Omega$内，并在$\Omega$内连续，而弧$\gamma$在$\Omega$内是任意的。
+形如$\int _\gamma pdx+qdy$的一般线积分常作为弧$\gamma$的函数functions（或泛函functionals）来研究。这时我们假设$p$与$q$定义在同一个域$\Omega$内，并在$\Omega$内连续，而弧$\gamma$在$\Omega$内是任意的。
 
 一类重要的积分以下面的性质为其特征：沿弧的积分值只依赖于弧的两个端点。
-  - 换言之，如果$\gamma_1,\gamma_2$具有相同的起点与终点，则这一性质可表示为$\int_{\gamma_1}p\,dx+q\,dy=\int_{\gamma_2}p\,dx+q\,dy$。
+  - 换言之，如果$\gamma _1,\gamma _2$具有相同的起点与终点，则这一性质可表示为$\int _{\gamma _1}pdx+qdy=\int _{\gamma _2}pdx+qdy$。
   - 说一个积分只依赖于两个端点是指沿着任意闭曲线的积分值等于零。
-  - 事实上，设$\gamma$为一条闭曲线，则$\gamma$与$-\gamma$具有相同的端点，而如果积分只依赖于端点，则 $\int_\gamma=-\int_{-\gamma}$，因此$\int_\gamma=0$。
-  - 反之，如果$\gamma_1,\gamma_2$具有相同的端点，则$\gamma_1-\gamma_2$是一条闭曲线，而如果沿着任意闭曲线的积分等于零，则$\int_{\gamma_1}=\int_{\gamma_2}$。
+  - 事实上，设$\gamma$为一条闭曲线，则$\gamma$与$-\gamma$具有相同的端点，而如果积分只依赖于端点，则 $\int _\gamma=-\int _{-\gamma}$，因此$\int _\gamma=0$。
+  - 反之，如果$\gamma _1,\gamma _2$具有相同的端点，则$\gamma _1-\gamma _2$是一条闭曲线，而如果沿着任意闭曲线的积分等于零，则$\int _{\gamma _1}=\int _{\gamma _2}$。
 
 下面的定理给出了线积分只依赖于两个端点的一个充要条件。
 
-**定理1** 定义在$\Omega$内的线积分$\int_\gamma p\,dx+q\,dy$只依赖于$\gamma$的两个端点的充分必要条件是：在$\Omega$内存在一个函数$U(x,y)$，它具有偏导数$\frac{\partial U}{\partial x}=p$，$\frac{\partial U}{\partial y}=q$。
+**定理1** 定义在$\Omega$内的线积分$\int _\gamma pdx+qdy$只依赖于$\gamma$的两个端点的充分必要条件是：在$\Omega$内存在一个函数$U(x,y)$，它具有偏导数$\frac{\partial U}{\partial x}=p$，$\frac{\partial U}{\partial y}=q$。
 
 条件的充分性是立即可以看出来的，因为如果定理的条件得到满足，则用通常的记号，有
 
-$$\int_\gamma p\,dx+q\,dy=\int_a^b\left(\frac{\partial U}{\partial x}x'(t)+\frac{\partial U}{\partial y}y'(t)\right)dt=\int_a^b\frac{d}{dt}U(x(t),y(t))dt$$
+$$\int _\gamma pdx+qdy=\int _a^b\left(\frac{\partial U}{\partial x}x'(t)+\frac{\partial U}{\partial y}y'(t)\right)dt=\int _a^b\frac{d}{dt}U(x(t),y(t))dt$$
 
 $$=U(x(b),y(b))-U(x(a),y(a))$$
 
-而这个差的值只依赖于两个端点。为了证明必要性，在$\Omega$内任取一不动点$(x_0,y_0)$，用$\Omega$ 内的折线$\sigma$ 连接$(x_0,y_0)$与$(x,y)$, $\sigma$的边平行于坐标轴,并定义函数
+而这个差的值只依赖于两个端点。为了证明必要性，在$\Omega$内任取一不动点$(x _0,y _0)$，用$\Omega$ 内的折线$\sigma$ 连接$(x _0,y _0)$与$(x,y)$, $\sigma$的边平行于坐标轴,并定义函数
 
-$$U(x,y)=\int_{\gamma} p dx+qdy$$
+$$U(x,y)=\int _{\gamma} p dx+qdy$$
 
 由于积分只依赖于两个端点, 故知函数 $U$ 是确切定义的。另外, 如果取 $\gamma$ 的最后一段为水平的, 则可将 $y$ 保持固定而让 $x$ 变化, 并不影响其他的线段。在最后一段上, 可视 $x$ 为参数, 得到
 
@@ -199,79 +199,79 @@ $$\begin{aligned} & \frac{\partial F(z)}{\partial x}=f(z) \\ & \frac{\partial F(
 
 $$\frac{\partial F}{\partial x}=-i \frac{\partial F}{\partial y},$$
 
-因为根据假设, $f(z)$ 是连续的 (否则, $\int_{\gamma} fd z$ 将没有定义), 所以 $F(z)$ 是具有导数 $f(z)$ 的解析函数(见 2.1.2 节).
+因为根据假设, $f(z)$ 是连续的 (否则, $\int _{\gamma} fd z$ 将没有定义), 所以 $F(z)$ 是具有导数 $f(z)$ 的解析函数(见 2.1.2 节).
 
-连续函数 $f$ 的积分 $\int_{\gamma} fdz$(勘误这两个积分中文书都少了f) 只依赖于 $\gamma$ 的两个端点, 当且仅当 $f$ 为 $\Omega$ 内一个解析函数的导数.
+连续函数 $f$ 的积分 $\int _{\gamma} fdz$(勘误这两个积分中文书都少了f) 只依赖于 $\gamma$ 的两个端点, 当且仅当 $f$ 为 $\Omega$ 内一个解析函数的导数.
 
 在这种情况下, $f(z)$ 本身也是解析的, 其证明将在后面讨论.
 
 作为上面结果的一个直接应用, 我们有: 对于所有的闭曲线 $\gamma$, 只要整数 $n \geqslant 0$, 则
 
-$$\int_{\gamma}(z-a)^{n} d z=0,\tag{11}$$
+$$\int _{\gamma}(z-a)^{n} d z=0,\tag{11}$$
 
 因为 $(z-a)^{n}$ 是 $(z-a)^{n+1}/(n+1)$ 的导数, 而原函数是整个平面中的解析函数. 如果 $n$ 为负数, 但不等于 $-1$, 则对于所有不通过 $a$ 的闭曲线, 也有同样的结果, 因为在点 $a$ 的补区域中, 不定积分仍然是解析且单值的. 
 
 如果 $n=-1$, 则 (11) 不一定成立. 考察一个以 $a$ 为圆心的圆 $C$, 设其方程为 $z=a+\rho e^{i t}, 0 \leqslant t \leqslant 2 \pi$, 我们有
 
-$$\int_{c} \frac{d z}{z-a}=\int_{0}^{2 \pi} i d t=2 \pi i$$
+$$\int _{c} \frac{d z}{z-a}=\int _{0}^{2 \pi} i d t=2 \pi i$$
 
-这表明在圆环 $\rho_{1}<|z-a|<\rho_{2}$ 中, 不可能为 $\log (z-a)$ 定义一个单值分支. 反之, 如果闭曲线 $\gamma$ 包含在不含点 $a$ 的半平面中, 则积分等于零, 因为在这样的半平面中, 可以定义 $\log (z-a)$ 的一个单值解析分支.
+这表明在圆环 $\rho _{1}<|z-a|<\rho _{2}$ 中, 不可能为 $\log (z-a)$ 定义一个单值分支. 反之, 如果闭曲线 $\gamma$ 包含在不含点 $a$ 的半平面中, 则积分等于零, 因为在这样的半平面中, 可以定义 $\log (z-a)$ 的一个单值解析分支.
 - 哦！！！！ 这时候黎曼面 和 分支 叶的东西 其实就出现了，上面有个恰当<=> $\partial U/\partial x = p,\partial U/\partial y= q$,也有了满足Cauchy-Riemann方程,所以全纯
 
 #### 4.1.3 练 习
 
-1. 计算$\int_{\gamma} x d z$ 其中 $\gamma$ 为由 0 至 $1+i$ 的有向线段.
+1. 计算$\int _{\gamma} x d z$ 其中 $\gamma$ 为由 0 至 $1+i$ 的有向线段.
    - 取 $z(t)=t(1+i),t\in[0,1]$
    - 有$x(t)=t$
-   - $\int_\gamma x dz = \int_0^1 t (t(1+i))'dt$
-   - $= \int_0^1 t (1+i)dt$
+   - $\int _\gamma x dz = \int _0^1 t (t(1+i))'dt$
+   - $= \int _0^1 t (1+i)dt$
    - $=\frac{1}{2}(1+i)$
 
-2. 试对圆的正向按两种方法计算 $\int_{|z|=r} x d z$ 第一种方法是应用一个参数, 第二种方法是在圆上取 $x=\frac{1}{2}(z+\bar{z})=\frac{1}{2}\left(z+\frac{r^{2}}{z}\right)$.
+2. 试对圆的正向按两种方法计算 $\int _{|z|=r} x d z$ 第一种方法是应用一个参数, 第二种方法是在圆上取 $x=\frac{1}{2}(z+\bar{z})=\frac{1}{2}\left(z+\frac{r^{2}}{z}\right)$.
    - 正向圆（根据3.3.3 逆时针）
    - 参数
      - $z=re^{it},t\in[0,2\pi]$
      - $x=r\cos t=r\frac{e^{it}+e^{-it}}{2},t\in[0,2\pi]$
-     - $=\int_0^{2\pi} r\cos t (re^{it})' dt$
-     - $=r^2\int_0^{2\pi} i\frac{e^{2it}+1}{2} dt$
-     - $=r^2\int_0^{2\pi} \frac{1}{4}2ie^{2it}+\frac{i}{2} dt$
+     - $=\int _0^{2\pi} r\cos t (re^{it})' dt$
+     - $=r^2\int _0^{2\pi} i\frac{e^{2it}+1}{2} dt$
+     - $=r^2\int _0^{2\pi} \frac{1}{4}2ie^{2it}+\frac{i}{2} dt$
      - $r^2i\pi$
    - 方法2
      - 因为$x=\frac{1}{2}(z+\frac{r^2}{z})$
-     - 带入 $\int_{|z|=r} \frac{1}{2}(z+\frac{r^2}{z}) dz$
-     - 左边是全纯的导数，右边是-1次方（根据上面的结果$\int_{圆}z^{-1} dz = 2\pi i$
+     - 带入 $\int _{|z|=r} \frac{1}{2}(z+\frac{r^2}{z}) dz$
+     - 左边是全纯的导数，右边是-1次方（根据上面的结果$\int _{圆}z^{-1} dz = 2\pi i$
      - 所以 $=\frac{r^2}{2} 2\pi i= r^2\pi i$
 
-3. 试对圆的正向计算 $\int_{|z|=2} \frac{d z}{z^{2}-1}$
+3. 试对圆的正向计算 $\int _{|z|=2} \frac{d z}{z^{2}-1}$
       - $\frac{1}{z^2-1}=\frac{1}{2}(\frac{1}{z-1}-\frac{1}{z+1})$
       - 这两个 闭合路径 都绕过 分支点，所以都是$2\pi i$
       - 所以结果为0
 
-4. 计算 $\int_{|z|=1}|z-1| \cdot|d z|$
-   - $=\int_0^{2\pi} |(e^{it}-1)| |ie^{it}| dt$
-   - $=\int_0^{2\pi} \sqrt{2-2\cos t}\cdot 1 dt$
-   - $=\int_0^{2\pi} 2\sin \frac{t}{2} dt$
-   - $=-4\cos \frac{t}{2}|_0^{2\pi}$
+4. 计算 $\int _{|z|=1}|z-1| \cdot|d z|$
+   - $=\int _0^{2\pi} |(e^{it}-1)| |ie^{it}| dt$
+   - $=\int _0^{2\pi} \sqrt{2-2\cos t}\cdot 1 dt$
+   - $=\int _0^{2\pi} 2\sin \frac{t}{2} dt$
+   - $=-4\cos \frac{t}{2}| _0^{2\pi}$
    - $=8$
 
-5. 假设 $f(z)$ 在闭曲线 $\gamma$ 上解析 (即 $f$ 在包含 $\gamma$ 的一个区域内是解析的), 证明 $\int_{\gamma} \overline{f(z)} f^{\prime}(z) d z$ 是纯虚数. ($f^{\prime}(z)$ 被认为是连续的.)
+5. 假设 $f(z)$ 在闭曲线 $\gamma$ 上解析 (即 $f$ 在包含 $\gamma$ 的一个区域内是解析的), 证明 $\int _{\gamma} \overline{f(z)} f^{\prime}(z) d z$ 是纯虚数. ($f^{\prime}(z)$ 被认为是连续的.)
    - $|f(z)|^2$不是解析的
    - 这玩意是一种stokes定理中的1-form ?
-   - 但是  $\int_{\gamma} d|f(z)|^2=\int_{t_0}^{t_1} d |f(z(t))|^2=|f(z(t))|^2|_{t_0}^{t_1}=0$ 需要 f(z) 是连续的+单值的（黎曼面只有一层）?
-   - $0=\int_{\gamma} \overline{f(z)}f'(z)dz+f(z)\overline{f'(z)}dz$ 
-   - $0=\int_{\gamma} \overline{f(z)}f'(z)dz+\overline{\int_{\gamma} \overline{f(z)}f'(z)dz}$ 
+   - 但是  $\int _{\gamma} d|f(z)|^2=\int _{t _0}^{t _1} d |f(z(t))|^2=|f(z(t))|^2| _{t _0}^{t _1}=0$ 需要 f(z) 是连续的+单值的（黎曼面只有一层）?
+   - $0=\int _{\gamma} \overline{f(z)}f'(z)dz+f(z)\overline{f'(z)}dz$ 
+   - $0=\int _{\gamma} \overline{f(z)}f'(z)dz+\overline{\int _{\gamma} \overline{f(z)}f'(z)dz}$ 
    - 得证
 
-6. [TODO]假设$f(z)$在域$\Omega$内解析，并满足不等式$|f(z)-1|<1$，证明对$\Omega$中的任意闭曲线$\gamma$， $\int_{\gamma}\frac{f'(z)}{f(z)}dz=0.$ $(f'(z)$被认为是连续的。)
+6. [TODO]假设$f(z)$在域$\Omega$内解析，并满足不等式$|f(z)-1|<1$，证明对$\Omega$中的任意闭曲线$\gamma$， $\int _{\gamma}\frac{f'(z)}{f(z)}dz=0.$ $(f'(z)$被认为是连续的。)
     - $\ln f(z)$ 中没有 分支点
 
-7. [TODO]若$P(z)$是一个多项式，$C$表示圆$|z-a|=R$，问$\int_CP(z)d\overline{z}$的值为多少？
+7. [TODO]若$P(z)$是一个多项式，$C$表示圆$|z-a|=R$，问$\int _CP(z)d\overline{z}$的值为多少？
     - 答： $-2\pi iR^2P'(a).$ (为啥 中英文书这里给了答案)
 
-8. 试描述一组圆周，使公式 $\int_\gamma\log zdz=0$ 在其上有意义并正确。
+8. 试描述一组圆周，使公式 $\int _\gamma\log zdz=0$ 在其上有意义并正确。
    - $\log z = \log |z| + i \arg z$, 其中选择的$\arg$范围是$(-\pi,\pi]$, 所以 也就是 平面 减去负实轴的部分 都是解析的，所以只要gamma 不接触负实轴的环线即可
 
-### 4.1.4 矩形的柯西定理
+### 4.1.4 矩形的柯西定理 Cauchy's Theorem for a rectangle(定理2,3)
 
 柯西定理有好几种形式，但是与其说它们在分析内容上有所不同，倒不如说它们的差异在于拓扑方面。因此，我们自然从拓扑意义并不重要的情况开始。
 
@@ -285,12 +285,12 @@ $$\int_{c} \frac{d z}{z-a}=\int_{0}^{2 \pi} i d t=2 \pi i$$
 
 **定理2** 设函数$f(z)$在$R$上解析，则
 
-$$\int_{\partial R}f(z)dz=0.\tag{12}$$
+$$\int _{\partial R}f(z)dz=0.\tag{12}$$
 - 也就是说 函数在 R解析，那么沿着R的正向边界积分为0，（其中正向边界积分是通过上面定义有向线积分同样的）
 
 这一定理的证明是以平分法为基础的。引入记号
 
-$$\eta(R)=\int_{\partial R}f(z)dz,$$
+$$\eta(R)=\int _{\partial R}f(z)dz,$$
 
 对于包含在所给矩形内的任意矩形也用这一记号。如果将$R$分成四个全等的矩形$R^{(1)}$，$R^{(2)}$，$R^{(3)}$，$R^{(4)}$，则因沿着公共边的积分互相抵消，故有
 
@@ -303,50 +303,50 @@ $$\eta(R)=\eta(R^{(1)})+\eta(R^{(2)})+\eta(R^{(3)})+\eta(R^{(4)}).\tag{13}$$
 
 $|\eta\left(R^{(k)}\right)| \geqslant \frac{1}{4}|\eta(R)|$
 
-我们把满足这一条件的矩形记为 $R_1$. 如果有几个 $R^{(k)}$ 具有这一性质, 那么可根据某一确定的规则来选定这个 $R_1$.
+我们把满足这一条件的矩形记为 $R _1$. 如果有几个 $R^{(k)}$ 具有这一性质, 那么可根据某一确定的规则来选定这个 $R _1$.
 
 这一过程可无穷次地重复下去, 于是得到矩形套序列
 
-$$R \supset R_1 \supset R_2 \supset \cdots \supset R_n \supset \cdots,$$
+$$R \supset R _1 \supset R _2 \supset \cdots \supset R _n \supset \cdots,$$
 
 具有如下的性质:
 
-$$|\eta\left(R_n\right)| \geqslant \frac{1}{4}|\eta\left(R_{n-1}\right)|,$$
+$$|\eta\left(R _n\right)| \geqslant \frac{1}{4}|\eta\left(R _{n-1}\right)|,$$
 
 因此
 
-$$|\eta\left(R_n\right)| \geqslant 4^{-n}|\eta(R)|.\tag{14}$$
+$$|\eta\left(R _n\right)| \geqslant 4^{-n}|\eta(R)|.\tag{14}$$
 
-当 $n$ 充分大时, $R_n$ 将包含在一个规定的邻域 $|z-z^*| < \delta$ 之中, 因此 $R_n$ 将收敛于一点 $z^* \in R$. 首先, 我们选定很小的 $\delta$, 使得 $f(z)$ 在 $|z-z^*| < \delta$ 内有定义且解析. 其次, 如果给定了 $\varepsilon > 0$, 则可选定 $\delta$, 使得对于 $|z-z^*| < \delta$, 有
+当 $n$ 充分大时, $R _n$ 将包含在一个规定的邻域 $|z-z^*| < \delta$ 之中, 因此 $R _n$ 将收敛于一点 $z^* \in R$. 首先, 我们选定很小的 $\delta$, 使得 $f(z)$ 在 $|z-z^*| < \delta$ 内有定义且解析. 其次, 如果给定了 $\varepsilon > 0$, 则可选定 $\delta$, 使得对于 $|z-z^*| < \delta$, 有
 
-$$\left|\frac{f(z)-f\left(z^*\right)}{z-z^*}-f'\left(z^*\right)\right| < \varepsilon$$
+$$\left|\frac{f(z)-f\left(z^* \right)}{z-z^* }-f'\left(z^* \right)\right| < \varepsilon$$
 
 或
 
-$$\left|f(z)-f\left(z^*\right)-\left(z-z^*\right)f'\left(z^*\right)\right| < \varepsilon|z-z^*|.\tag{15}$$
+$$\left|f(z)-f\left(z^* \right)-\left(z-z^* \right)f'\left(z^* \right)\right| < \varepsilon|z-z^* |.\tag{15}$$
 
-我们假设 $\delta$ 同时满足上面两个条件(别假设啊，可以用$\delta=\min(\delta_1,\delta_2)$来达到), 并设 $R_n$ 包含在 $|z-z^*| < \delta$ 之中.
+我们假设 $\delta$ 同时满足上面两个条件(别假设啊，可以用$\delta=\min(\delta _1,\delta _2)$来达到), 并设 $R _n$ 包含在 $|z-z^*| < \delta$ 之中.
 
 现在来考察
 
-$$\int_{\partial R_n} dz = 0,$$
+$$\int _{\partial R _n} dz = 0,$$
 
-$$\int_{\partial R_n} z dz = 0.$$
+$$\int _{\partial R _n} z dz = 0.$$
 
 定理的这些特殊情形已在 4.1.1 节中证明. 证明时是以 $1$ 及 $z$ 分别为 $z$ 及 $z^2/2$ 的导数这一事实为根据的.
 - 也就是 解析函数 的闭合线积分为0
 
 根据这两个方程, 我们有  
 
-$$\eta\left(R_{n}\right)=\int_{\partial R_{n}}f(z)dz=\int_{\partial R_{n}}\left[f(z)-f\left(z^{*}\right)-\left(z-z^{*}\right) f^{\prime}\left(z^{*}\right)\right] d z,$$ 
+$$\eta\left(R _{n}\right)=\int _{\partial R _{n}}f(z)dz=\int _{\partial R _{n}}\left[f(z)-f\left(z^{ * }\right)-\left(z-z^{ * }\right) f^{\prime}\left(z^{*}\right)\right] d z,$$ 
 
 而从 (15) 得到  
 
-$$\left|\eta\left(R_{n}\right)\right| \leqslant \varepsilon \int_{\partial R_{n}}\left|z-z^{*}\right| \cdot|d z| . \tag{16}$$
+$$\left|\eta\left(R _{n}\right)\right| \leqslant \varepsilon \int _{\partial R _{n}}\left|z-z^{*}\right| \cdot|d z| . \tag{16}$$
 
-在最后的积分中, $\left|z-z^{*}\right|$ 充其量只能等于 $R_{n}$ 的对角线长 $d_{n}$. 如果令 $R_{n}$ 的周长为 $L_{n}$, 则这一积分必小于等于 $d_{n} L_{n}$. 但如果原来矩形 $R$ 的对角线及周长为 $d$ 及 $L$, 则显然有 $d_{n}=2^{-n} d$ 及 $L_{n}=2^{-n} L$. 因此, 根据 (16) 有  
+在最后的积分中, $\left|z-z^{*}\right|$ 充其量只能等于 $R _{n}$ 的对角线长 $d _{n}$. 如果令 $R _{n}$ 的周长为 $L _{n}$, 则这一积分必小于等于 $d _{n} L _{n}$. 但如果原来矩形 $R$ 的对角线及周长为 $d$ 及 $L$, 则显然有 $d _{n}=2^{-n} d$ 及 $L _{n}=2^{-n} L$. 因此, 根据 (16) 有  
 
-$$\left|\eta\left(R_{n}\right)\right| \leqslant 4^{-n} d L \varepsilon .$$ 
+$$\left|\eta\left(R _{n}\right)\right| \leqslant 4^{-n} d L \varepsilon .$$ 
 
 再与 (14) 式比较, 可得  
 
@@ -358,98 +358,98 @@ $$|\eta(R)| \leqslant d L \varepsilon .$$
 
 定理2 中的假设条件可以大大减弱. 下面我们将证明一个非常有用的较强定理.  
 
-**定理 3** 从矩形 $R$ 中去掉有限个内点 $\zeta_{i}$ 而得点集 $R^{\prime}$, 设 $f(z)$ 在 $R^{\prime}$ 上解析. 如果对于所有的 $j$, 有  
+**定理 3** 从矩形 $R$ 中去掉有限个内点 $\zeta _{i}$ 而得点集 $R^{\prime}$, 设 $f(z)$ 在 $R^{\prime}$ 上解析. 如果对于所有的 $j$, 有  
 
-$$\lim _{z \rightarrow \zeta_{j}}\left(z-\zeta_{j}\right) f(z)=0,$$  
+$$\lim _{z \rightarrow \zeta _{j}}\left(z-\zeta _{j}\right) f(z)=0,$$  
 
 则  
 
-$$\int_{\partial R} f(z) d z=0 .$$ 
+$$\int _{\partial R} f(z) d z=0 .$$ 
 
-很明显, $R$ 可以分成较小的矩形, 使这些小矩形至多包含一个 $\zeta_{j}$, 因此, 我们只需研究一个例外点 $\zeta$ 的情形就够了.  
+很明显, $R$ 可以分成较小的矩形, 使这些小矩形至多包含一个 $\zeta _{j}$, 因此, 我们只需研究一个例外点 $\zeta$ 的情形就够了.  
 
-我们将 $R$ 分成 9 个小矩形, 如图 4-3 所示, 除了中央的一个矩形 $R_{0}$ 以外, 对于其他的矩形应用定理 2 . 如果将每个矩形对应的方程 (12) 全部加起来, 经过相消以后, 可得  
+我们将 $R$ 分成 9 个小矩形, 如图 4-3 所示, 除了中央的一个矩形 $R _{0}$ 以外, 对于其他的矩形应用定理 2 . 如果将每个矩形对应的方程 (12) 全部加起来, 经过相消以后, 可得  
 
-$$\int_{\partial R} f d z=\int_{\partial R_{0}} f d z . \tag{17}$$
+$$\int _{\partial R} f d z=\int _{\partial R _{0}} f d z . \tag{17}$$
 
-如果 $\varepsilon>0$, 可以把矩形 $R_{0}$ 选择得足够小, 使得在 $\partial R_{0}$ 有不等式  
+如果 $\varepsilon>0$, 可以把矩形 $R _{0}$ 选择得足够小, 使得在 $\partial R _{0}$ 有不等式  
 
 $$|f(z)| \leqslant \frac{\varepsilon}{|z-\zeta|}$$
 - 这里使用 题目的条件 $|(z-\zeta)f(z)|\le \varepsilon$ 变形得到的
 
 成立. 因此, 根据 (17) 可得  
 
-$$\left|\int_{\partial R} f d z\right| \leqslant \varepsilon \int_{\partial R_{0}} \frac{|d z|}{|z-\zeta|} .$$ 
+$$\left|\int _{\partial R} f d z\right| \leqslant \varepsilon \int _{\partial R _{0}} \frac{|d z|}{|z-\zeta|} .$$ 
 
-我们可假设 $R_{0}$ 是一个以 $\zeta$ 为中心的正方形, 则通过初等计算表明
+我们可假设 $R _{0}$ 是一个以 $\zeta$ 为中心的正方形, 则通过初等计算表明
 
-$$\int_{\partial R_0} \frac{1}{|z - \xi|} |dz| =4\int_{-r}^r \frac{1}{|-i-rt|}dt=8\int_0^1 \frac{1}{|i-t|}dt < 8\int_0^1 1 dt=8.$$
+$$\int _{\partial R _0} \frac{1}{|z - \xi|} |dz| =4\int _{-r}^r \frac{1}{|-i-rt|}dt=8\int _0^1 \frac{1}{|i-t|}dt < 8\int _0^1 1 dt=8.$$
 
 因此得到  
 
-$$\left|\int_{\partial R} f dz\right| < 8\varepsilon,$$
+$$\left|\int _{\partial R} f dz\right| < 8\varepsilon,$$
 
 由于$\varepsilon$是任意的, 故定理得证.  
 
 如果$f(z)$在$R'$上解析且有界, 则定理的假设条件当然是满足的.  
 
-### 4.1.5 圆盘中的柯西定理  
+### 4.1.5 圆盘中的柯西定理 Cauchy's Theorem in a Disk (定理4,5)
 
 一个解析函数沿着一条闭曲线的积分并不永远等于零.  
 实际上, 如果$C$是以$a$为圆心的圆, 则  
-$$\int_C \frac{dz}{z - a} = 2\pi i.$$
+$$\int _C \frac{dz}{z - a} = 2\pi i.$$
 - 上面习题用到了
 
-设函数$f(z)$在域$\Omega$内解析, 曲线$\gamma$限制在$\Omega$内, 为了确保积分等于零, 我们必须对域$\Omega$附加特殊的条件. 现在我们还不能列出这些条件, 为此, 我们的讨论必须限于非常特殊的情形. 下面设$\Omega$是一个开圆盘$|z - z_0| < \rho$, 记为$\Delta$.  
+设函数$f(z)$在域$\Omega$内解析, 曲线$\gamma$限制在$\Omega$内, 为了确保积分等于零, 我们必须对域$\Omega$附加特殊的条件. 现在我们还不能列出这些条件, 为此, 我们的讨论必须限于非常特殊的情形. 下面设$\Omega$是一个开圆盘$|z - z _0| < \rho$, 记为$\Delta$.  
 
 **定理4** 设$f(z)$在开圆盘open disk$\Delta$内解析, 则对于$\Delta$中的每一条闭曲线$\gamma$, 必有  
 
-$$\int_\gamma f(z) dz = 0.\tag{18}$$
+$$\int _\gamma f(z) dz = 0.\tag{18}$$
 
 这一定理的证明是在定理1 第二部分证明中所用的论断的重复. 定义一个函数  
 
-$$F(z) = \int_\sigma f dz,\tag{19}$$  
+$$F(z) = \int _\sigma f dz,\tag{19}$$  
 
-其中, $\sigma$由中心$(x_0, y_0)$引至$(x, y_0)$的水平线段及由$(x, y_0)$引至$(x, y)$的垂直线段组成. 因此$\partial F/\partial y = if(z)$. 另一方面, 根据定理 2, $\sigma$可以用一条由一段垂直线接以一段水平线所组成的路径来代替. 这一选择定义出同一函数$F(z)$, 因而得到$\partial F/\partial x = f(z)$. 故知$F(z)$在$\Delta$内解析且具有导数$f(z)$, 而$f(z) dz$则为一个恰当微分.
+其中, $\sigma$由中心$(x _0, y _0)$引至$(x, y _0)$的水平线段及由$(x, y _0)$引至$(x, y)$的垂直线段组成. 因此$\partial F/\partial y = if(z)$. 另一方面, 根据定理 2, $\sigma$可以用一条由一段垂直线接以一段水平线所组成的路径来代替. 这一选择定义出同一函数$F(z)$, 因而得到$\partial F/\partial x = f(z)$. 故知$F(z)$在$\Delta$内解析且具有导数$f(z)$, 而$f(z) dz$则为一个恰当微分.
 
-很明显，对于任意域，只要它包含点$z_0$及$z$，蕴涵着包含以$z$及$z_0$为对顶点的矩形，同样的证法也适用。矩形、半平面及椭圆的内部都具有这种性质，因此定理4对于这些域也成立。不过，应用这一方法还不能达到完全的一般性。
+很明显，对于任意域，只要它包含点$z _0$及$z$，蕴涵着包含以$z$及$z _0$为对顶点的矩形，同样的证法也适用。矩形、半平面及椭圆的内部都具有这种性质，因此定理4对于这些域也成立。不过，应用这一方法还不能达到完全的一般性。
 - 也就是 圆盘内=> 内在矩形=> 运用定理2（矩形边界），定理1 （端点有关）=> 结果=绕着矩形
 - 另外 这里 是因为能构造出F，使得f(z)dz恰好能表示成恰当微分 才能使用
 
 在应用中，很重要的一点就是定理4的结论在定理3的较弱条件下也成立。我们现在把它作为另外一个定理。
 
-**定理5** 设$f(z)$在域$\Delta'$内解析，这里$\Delta'$由开圆盘$\Delta$去掉有限个点$\xi_j$后组成。如果对于所有的$j$，$f(z)$满足条件$\lim_{z\to\xi_j}(z-\xi_j)f(z)=0$，则公式(18)对于$\Delta'$内的任意闭曲线$\gamma$都成立。
+**定理5** 设$f(z)$在域$\Delta'$内解析，这里$\Delta'$由开圆盘$\Delta$去掉有限个点$\xi _j$后组成。如果对于所有的$j$，$f(z)$满足条件$\lim _{z\to\xi _j}(z-\xi _j)f(z)=0$，则公式(18)对于$\Delta'$内的任意闭曲线$\gamma$都成立。
 
-这一定理的证明方法必须修改，因为我们不能让$\sigma$通过例外的点。首先设没有点$\xi_j$位于直线$x=x_0$及$y=y_0$上。于是令$\sigma$由图4-4中的三条线段组成就可绕过例外的点。应用定理3知道(18)中的$F(z)$的值是不依赖于中间线段的选择的。此外，最后的线段既可以是垂直的，也可以是水平的。像上面一样，我们得到结论：$F(z)$是$f(z)$的一个不定积分，因而定理得证。
+这一定理的证明方法必须修改，因为我们不能让$\sigma$通过例外的点。首先设没有点$\xi _j$位于直线$x=x _0$及$y=y _0$上。于是令$\sigma$由图4-4中的三条线段组成就可绕过例外的点。应用定理3知道(18)中的$F(z)$的值是不依赖于中间线段的选择的。此外，最后的线段既可以是垂直的，也可以是水平的。像上面一样，我们得到结论：$F(z)$是$f(z)$的一个不定积分，因而定理得证。
 - 图4-4: 也就是 不经过但是可以包含这个点，和定理3类似的
 
-如果在直线$x=x_0$和$y=y_0$上有例外的点，读者容易相信要用四条线段代替三条线段，就可作出类似的证明。
+如果在直线$x=x _0$和$y=y _0$上有例外的点，读者容易相信要用四条线段代替三条线段，就可作出类似的证明。
 
 也就是我们有了:
-- 定理1 $\int_\gamma pdx +qdy$只依赖端点的充要是 p,q分别是U关于x,y的偏导 <=> 满足 柯西黎曼方程 gamma 上 U是解析的
-  - $F(z)$在$\gamma$的域上解析有$\int_{\gamma} F(z)' dz = 0$ 
-- 定理2 矩形R属于某开集, 开集中f解析，$\int_{\partial R矩形的正向边界}f(z) dz=0$, 其中用到了导函数连续
-  - 定理3 作为2 的补充，允许矩形中有有限个点 不解析，且相应点$\zeta$有$\lim_{z\to \zeta}(z-\zeta)f(z)=0$, 同样有定理2的结果
-- 定理4 开圆盘内f(z)解析，用 $F(z)=\int_{\sigma} f(z)dz$ ,做折线矩形(也是在圆盘内)
+- 定理1 $\int _\gamma pdx +qdy$只依赖端点的充要是 p,q分别是U关于x,y的偏导 <=> 满足 柯西黎曼方程 gamma 上 U是解析的
+  - $F(z)$在$\gamma$的域上解析有$\int _{\gamma} F(z)' dz = 0$ 
+- 定理2 矩形R属于某开集, 开集中f解析，$\int _{\partial R矩形的正向边界}f(z) dz=0$, 其中用到了导函数连续
+  - 定理3 作为2 的补充，允许矩形中有有限个点 不解析，且相应点$\zeta$有$\lim _{z\to \zeta}(z-\zeta)f(z)=0$, 同样有定理2的结果
+- 定理4 开圆盘内f(z)解析，用 $F(z)=\int _{\sigma} f(z)dz$ ,做折线矩形(也是在圆盘内)
   - 定理5 类似3对于2的增强，这里是对于4的增强，加的同样的条件
 
-## 4.2 柯西积分公式
+## 4.2 柯西积分公式 Cauchy's Integral Formula
 
 通过柯西定理的一个极简单的应用，我们就有可能将解析函数 $f(z)$ 表示为一个线积分，其中变量 $z$ 作为一个参数。这一表示式称为柯西积分公式 Cauchy's Integral Formula，它有着很多重要的用途。它可以帮助我们详细地去研究解析函数的各种局部性质。
 
-### 4.2.1 一点关于闭曲线的指数
+### 4.2.1 一点关于闭曲线的指数 The Index of a Point with Respect to a Closed Curve`
 
 在导出柯西公式之前，我们必须先介绍一个概念，它确切地指出一条闭曲线围绕不在曲线上的一个固定点的次数。如果曲线为分段可微(这样的假定并不失一般性)，则下面的引理可以作为我们进行定义的依据。
 
 **引理1** 如果一条分段可微的闭曲线$\gamma$并不通过点$a$，则积分
 
-$$\int_{\gamma}\frac{\mathrm{d}z}{z-a}$$
+$$\int _{\gamma}\frac{\mathrm{d}z}{z-a}$$
 
 的值是$2\pi i$的一个倍数。
 
 这一引理看来很平凡，因为我们可以写成
 
-$$\int_{\gamma}\frac{\mathrm{d}z}{z-a}=\int_{\gamma}\mathrm{d}\log(z-a)=\int_{\gamma}\mathrm{d}\log|z-a|+i\int_{\gamma}\mathrm{d}\arg(z-a).$$
+$$\int _{\gamma}\frac{\mathrm{d}z}{z-a}=\int _{\gamma}\mathrm{d}\log(z-a)=\int _{\gamma}\mathrm{d}\log|z-a|+i\int _{\gamma}\mathrm{d}\arg(z-a).$$
 
 当$z$描述一条闭曲线时，$\log|z-a|$回到它的初始值而$\arg(z-a)$则增大或减小$2\pi$的一个倍数。这样似乎可肯定上面的引理，但再仔细想一下，就会发觉该推理是不充分的，除非$\arg(z-a)$的值是唯一确定的。
 - 其实我感觉上从黎曼面上看，
@@ -458,7 +458,7 @@ $$\int_{\gamma}\frac{\mathrm{d}z}{z-a}=\int_{\gamma}\mathrm{d}\log(z-a)=\int_{\g
 
 最简单的证明是计算的证法，设$\gamma$的方程为$z=z(t)$，$\alpha\leq t\leq\beta$，考察函数
 
-$$h(t)=\int_{\alpha}^{t}\frac{z'(t)}{z(t)-a}\mathrm{d}t.$$
+$$h(t)=\int _{\alpha}^{t}\frac{z'(t)}{z(t)-a}\mathrm{d}t.$$
 
 它在闭区间$[\alpha,\beta]$上有定义而且连续，只要$z'(t)$连续，它就具有导数
 
@@ -467,7 +467,7 @@ $$h'(t)=\frac{z'(t)}{z(t)-a}.$$
 从这一公式可知$e^{-h(t)}(z(t)-a)$的导数可能除了有限个点以外都将等于零，
 - emmmmm 证明是可以的，但怎么想到这个的！？?????
   - emmmm有点怪，不过 $(e^{h(t)})'$去想得到 $\frac{1}{z(t)-a}e^{h(t)}$ 倒是有些可以
-  - 另一方面 对于简单的$\int_{\gamma} 1/z dz$可以计算得到 $2\pi i$ 反过去观察 这个值和 $e^z$的周期是有关的
+  - 另一方面 对于简单的$\int _{\gamma} 1/z dz$可以计算得到 $2\pi i$ 反过去观察 这个值和 $e^z$的周期是有关的
 - 而这一函数是连续的，所以它必为一个常数。取端点得到常数，因此有
 
 $$e^{h(t)}=\frac{z(t)-a}{z(\alpha)-a}.$$
@@ -476,7 +476,7 @@ $$e^{h(t)}=\frac{z(t)-a}{z(\alpha)-a}.$$
 
 现在我们可以把一点$a$关于曲线$\gamma$的指数用下面的等式来定义：
 
-$$n(\gamma,a)=\frac{1}{2\pi i}\int_{\gamma}\frac{\mathrm{d}z}{z-a}.$$
+$$n(\gamma,a)=\frac{1}{2\pi i}\int _{\gamma}\frac{\mathrm{d}z}{z-a}.$$
 
 用示意性的术语，指数又称为曲线$\gamma$关于点$a$的卷绕数winding number。
 
@@ -496,19 +496,19 @@ $$n(\gamma,a)=\frac{1}{2\pi i}\int_{\gamma}\frac{\mathrm{d}z}{z-a}.$$
 - 这里一下折线,一下线段的，根据 除法的几何意义，显然只有在“线段上”才可能是零或负实数，在直线上线段外是正实数，直线外是非实数的复数
 - 据此，$\log[(z-a)/(z-b)]$ 的主支在线段的余集中是解析的。它的导数等于 $(z-a)^{-1}-(z-b)^{-1}$，而如果 $\gamma$ 不与该线段相交，则必有
 
-$$\int_{\gamma}\left(\frac{1}{z-a}-\frac{1}{z-b}\right)dz=0.$$
+$$\int _{\gamma}\left(\frac{1}{z-a}-\frac{1}{z-b}\right)dz=0.$$
 
 因此 $n(\gamma,a)=n(\gamma,b)$。如果 $|a|$ 足够大，使 $\gamma$ 包含于一个圆盘 $|z|<\rho<|a|$ 之中，则根据 (i) 可知 $n(\gamma,a)=0$。这就证明了在无界域内 $n(\gamma,a)=0$.
 - 这里的是圆心在原点的，半径$\rho$ 的圆盘，这样$\gamma$上所有点$z$的半径 更小，所以$\gamma$在圆盘内，$a$在圆盘外
 
 我们将会看到 $n(\gamma,a)=1$ 的情形特别重要，因此需要为这一结论列出它的几何条件。为了简单起见，我们令 $a=0$.
 
-**引理 2** 设 $z_1,z_2$ 为不通过原点的闭曲线 $\gamma$ 上的两点。在曲线方向将由 $z_1$ 至 $z_2$ 的子弧记为 $\gamma_1$，由 $z_2$ 至 $z_1$ 的子弧记为 $\gamma_2$。设 $z_1$ 位于下半平面，而 $z_2$ 位于上半平面。如果 $\gamma_1$ 不与负实轴相交，$\gamma_2$ 不与正实轴相交，则
+**引理 2** 设 $z _1,z _2$ 为不通过原点的闭曲线 $\gamma$ 上的两点。在曲线方向将由 $z _1$ 至 $z _2$ 的子弧记为 $\gamma _1$，由 $z _2$ 至 $z _1$ 的子弧记为 $\gamma _2$。设 $z _1$ 位于下半平面，而 $z _2$ 位于上半平面。如果 $\gamma _1$ 不与负实轴相交，$\gamma _2$ 不与正实轴相交，则
 
 $$n(\gamma,0)=1.$$
 
-为了证明这一引理，从原点引过 $z_1$ 及 $z_2$ 的半直线 $L_1$ 及 $L_2$（见图 4-5）。设 $L_1,L_2$ 与以原点为圆心的圆 $C$ 分别交于点 $\zeta_1,\zeta_2$。设 $C$ 取正方向，并设由 $\zeta_1$ 至 $\zeta_2$ 的弧 $C_1$ 不与负实轴相交，而由 $\zeta_2$ 至 $\zeta_1$ 的弧 $C_2$ 不与正实轴相交。把 $z_1$ 至 $\zeta_1$ 及 $z_2$ 至 $\zeta_2$ 的有向线段分别记为 $\delta_1$ 及 $\delta_2$。引入闭曲线 $\sigma_1=\gamma_1+\delta_2-C_1-\delta_1$，$\sigma_2=\gamma_2+\delta_1-C_2-\delta_2$，则彼此相消后可得 $n(\gamma,0)=n(C,0)+n(\sigma_1,0)+n(\sigma_2,0)$。但 $\sigma_1$ 并不与负实轴相交，因此原点应属于 $\sigma_1$ 所确定的无界域，于是得 $n(\sigma_1,0)=0$。同理可得 $n(\sigma_2,0)=0$，从而得到
-- 这个图 是纯平面的图，画得有点 感觉立体（主要是为了 表示$z_1,z_2$不一定选得那么位置正
+为了证明这一引理，从原点引过 $z _1$ 及 $z _2$ 的半直线 $L _1$ 及 $L _2$（见图 4-5）。设 $L _1,L _2$ 与以原点为圆心的圆 $C$ 分别交于点 $\zeta _1,\zeta _2$。设 $C$ 取正方向，并设由 $\zeta _1$ 至 $\zeta _2$ 的弧 $C _1$ 不与负实轴相交，而由 $\zeta _2$ 至 $\zeta _1$ 的弧 $C _2$ 不与正实轴相交。把 $z _1$ 至 $\zeta _1$ 及 $z _2$ 至 $\zeta _2$ 的有向线段分别记为 $\delta _1$ 及 $\delta _2$。引入闭曲线 $\sigma _1=\gamma _1+\delta _2-C _1-\delta _1$，$\sigma _2=\gamma _2+\delta _1-C _2-\delta _2$，则彼此相消后可得 $n(\gamma,0)=n(C,0)+n(\sigma _1,0)+n(\sigma _2,0)$。但 $\sigma _1$ 并不与负实轴相交，因此原点应属于 $\sigma _1$ 所确定的无界域，于是得 $n(\sigma _1,0)=0$。同理可得 $n(\sigma _2,0)=0$，从而得到
+- 这个图 是纯平面的图，画得有点 感觉立体（主要是为了 表示$z _1,z _2$不一定选得那么位置正
 - 把上面的具体的数学的东西，再抽离 其实和前面 证明矩形有类似的内容，也是切割成曲线的和，不过这次会多出一些东西，而我们对于圆盘的边界有结果，所以尽量让多出的东西靠上去，而切割的小环可以处于同一个 黎曼面上不接触cut，从而 可以积分为0，从而可以只和内层的圆有关了。
 
 $$n(\gamma,0)=n(C,0)=1.$$
@@ -521,7 +521,7 @@ $$n(\gamma,0)=n(C,0)=1.$$
 
 1. 把 $\gamma$ 分成有限多个子弧，使在每一子弧上存在 $\arg(z - a)$ 的一个单值分支，以此来给出引理 1 的另一个证明。要特别注意：为证明这样一个划分的存在性而需用的紧致性论据.
 
-2. 对于不过点 $a$ 的任何连续闭曲线 $\gamma$，不论它是否分段可微，总可能定义 $n(\gamma, a)$. 为此，将 $\gamma$ 分成子弧 $\gamma_1,\ldots,\gamma_n$，每段子弧都包含在不含 $a$ 的一个圆盘中。设 $\sigma_k$ 是从 $\gamma_k$ 的起点到终点的有向线段，并令 $\sigma=\sigma_1+\cdots+\sigma_n$。定义 $n(\gamma,a)$ 为 $n(\sigma,a)$ 的值.
+2. 对于不过点 $a$ 的任何连续闭曲线 $\gamma$，不论它是否分段可微，总可能定义 $n(\gamma, a)$. 为此，将 $\gamma$ 分成子弧 $\gamma _1,\ldots,\gamma _n$，每段子弧都包含在不含 $a$ 的一个圆盘中。设 $\sigma _k$ 是从 $\gamma _k$ 的起点到终点的有向线段，并令 $\sigma=\sigma _1+\cdots+\sigma _n$。定义 $n(\gamma,a)$ 为 $n(\sigma,a)$ 的值.
 
 为验证该定义，证明:
 
@@ -533,23 +533,23 @@ $$n(\gamma,0)=n(C,0)=1.$$
 
 3. 若尔当曲线定理断言平面中的每一条若尔当曲线恰好确定两个区域。卷绕数概念使定理的一部分的证明加快，也就是说，若尔当曲线 $\gamma$ 的余集至少有两个分集。如果存在一点 $a$，使 $n(\gamma,a)\neq 0$，情况就是这样.
 
-可假定在 $\gamma$ 上 $\operatorname{Re} z>0$，并设有两点 $z_1,z_2\in\gamma$，且 $\operatorname{Im} z_1<0$，$\operatorname{Im} z_2>0$。这些点可以这样选取，即使得 $\gamma$ 上没有其他的点位于 $0$ 到 $z_1$ 和 $0$ 到 $z_2$ 的线段上。设 $\gamma_1$ 和 $\gamma_2$ 是由 $z_1$ 到 $z_2$ 的 $\gamma$ 的弧（不包括端点）.
+可假定在 $\gamma$ 上 $\operatorname{Re} z>0$，并设有两点 $z _1,z _2\in\gamma$，且 $\operatorname{Im} z _1<0$，$\operatorname{Im} z _2>0$。这些点可以这样选取，即使得 $\gamma$ 上没有其他的点位于 $0$ 到 $z _1$ 和 $0$ 到 $z _2$ 的线段上。设 $\gamma _1$ 和 $\gamma _2$ 是由 $z _1$ 到 $z _2$ 的 $\gamma$ 的弧（不包括端点）.
 
-设 $\sigma_1$ 是由从 $0$ 到 $z_1$ 的线段接上 $\gamma_1$ 和从 $z_2$ 到 $0$ 的线段组成的闭曲线，并设 $\sigma_3$ 的构造与 $\sigma_1$ 相同，但 $\gamma_1$ 换成 $\gamma_2$，于是 $\sigma_1-\sigma_2=\gamma$ 或 $-\gamma$.
+设 $\sigma _1$ 是由从 $0$ 到 $z _1$ 的线段接上 $\gamma _1$ 和从 $z _2$ 到 $0$ 的线段组成的闭曲线，并设 $\sigma _3$ 的构造与 $\sigma _1$ 相同，但 $\gamma _1$ 换成 $\gamma _2$，于是 $\sigma _1-\sigma _2=\gamma$ 或 $-\gamma$.
 
-正实轴与 $\gamma_1$ 和 $\gamma_2$ 都相交。（为什么？）选取这样的记号，使右边最远的交点 $x_2$ 是与 $\gamma_2$ 相交的点（见图 4-6）.
+正实轴与 $\gamma _1$ 和 $\gamma _2$ 都相交。（为什么？）选取这样的记号，使右边最远的交点 $x _2$ 是与 $\gamma _2$ 相交的点（见图 4-6）.
 
 证明:
 
-(a) $n(\sigma_1,x_2)=0$，因此，对于 $z\in\gamma_2$，有 $n(\sigma_1,z)=0$；
+(a) $n(\sigma _1,x _2)=0$，因此，对于 $z\in\gamma _2$，有 $n(\sigma _1,z)=0$；
 
-(b) 对于小的 $x>0$，$n(\sigma_1,x)=n(\sigma_2,x)=1$（引理 2）.
+(b) 对于小的 $x>0$，$n(\sigma _1,x)=n(\sigma _2,x)=1$（引理 2）.
 
-(c) 正实轴与 $\gamma$ 的第一个交点 $x_1$ 位于 $\gamma_1$ 上；  
-(d) $n(\sigma_2,x_1)=1$，因此，对于 $z\in\gamma_1$，有 $n(\sigma_2,z)=1$；  
-(e) 正实轴有一段，其一端在 $\gamma_1$ 上，另一端在 $\gamma_2$ 上．这两个端点之间的点 $x$ 满足 $n(\gamma,x)=1$ 或 $-1$．  
+(c) 正实轴与 $\gamma$ 的第一个交点 $x _1$ 位于 $\gamma _1$ 上；  
+(d) $n(\sigma _2,x _1)=1$，因此，对于 $z\in\gamma _1$，有 $n(\sigma _2,z)=1$；  
+(e) 正实轴有一段，其一端在 $\gamma _1$ 上，另一端在 $\gamma _2$ 上．这两个端点之间的点 $x$ 满足 $n(\gamma,x)=1$ 或 $-1$．  
 
-### 4.2.2 积分公式  
+### 4.2.2 积分公式 The Integral Formula(定理6) 
 
 设 $f(z)$ 在一个开圆盘 $\Delta$ 内解析．考察 $\Delta$ 中的一条闭曲线 $\gamma$ 及不在 $\gamma$ 上的一点 $a\in\Delta$．把柯西定理应用于函数  
 $$
@@ -557,36 +557,36 @@ F(z)=\frac{f(z)-f(a)}{z-a}.
 $$  
 这个函数对于 $z\neq a$ 是解析的．如果 $z=a$，则没有定义，但它满足条件  
 $$
-\lim_{z\to a}F(z)(z-a)=\lim_{z\to a}(f(z)-f(a))=0.
+\lim _{z\to a}F(z)(z-a)=\lim _{z\to a}(f(z)-f(a))=0.
 $$  
 这是定理5的条件．因此  
 $$
-\int_\gamma\frac{f(z)-f(a)}{z-a}\,\mathrm{d}z=0.
+\int _\gamma\frac{f(z)-f(a)}{z-a}\mathrm{d}z=0.
 $$  
 这一方程可写成下面的形式：  
 $$
-\int_\gamma\frac{f(z)\,\mathrm{d}z}{z-a}=f(a)\int_\gamma\frac{\mathrm{d}z}{z-a},
+\int _\gamma\frac{f(z)\mathrm{d}z}{z-a}=f(a)\int _\gamma\frac{\mathrm{d}z}{z-a},
 $$  
 但右边的积分根据定义应等于 $2\pi i\cdot n(\gamma,a)$，因此证明了下面的定理：  
 
 **定理6** 设 $f(z)$ 在开圆盘 $\Delta$ 内解析，并设 $\gamma$ 是 $\Delta$ 中的一条闭曲线，那么对不在 $\gamma$ 上的任一点 $a$，必有  
 $$
-n(\gamma,a)\cdot f(a)=\frac{1}{2\pi i}\int_\gamma\frac{f(z)}{z-a}\,\mathrm{d}z,\tag{20}
+n(\gamma,a)\cdot f(a)=\frac{1}{2\pi i}\int _\gamma\frac{f(z)}{z-a}\mathrm{d}z,\tag{20}
 $$  
 其中 $n(\gamma,a)$ 是点 $a$ 关于 $\gamma$ 的指数．  
 
 在上面的叙述中，我们不要求 $a$ 是 $\Delta$ 中的一点，这主要是为了便于对 $a$ 不属于 $\Delta$ 的情形解释公式(20)．事实上，当 $a\notin\Delta$ 时，$n(\gamma,a)$ 及右边的积分都等于零，因此不论 $f(a)$ 取怎样的值，公式(20) 都正确．  
 
-很明显，对于任意可以应用定理5的域 $\Omega$，定理6均成立．也可允许有应予除去的点 $\xi_i$，只要它们都不与 $a$ 重合．  
+很明显，对于任意可以应用定理5的域 $\Omega$，定理6均成立．也可允许有应予除去的点 $\xi _i$，只要它们都不与 $a$ 重合．  
 
 这个定理最普遍的应用就是用于 $n(\gamma,a)=1$ 的情形，这时我们有  
 $$
-f(a)=\frac{1}{2\pi i}\int_\gamma\frac{f(z)\,\mathrm{d}z}{z-a}, \tag{21}
+f(a)=\frac{1}{2\pi i}\int _\gamma\frac{f(z)\mathrm{d}z}{z-a}, \tag{21}
 $$  
 这个式子常称为表示公式．事实上，只要 $f(z)$ 在 $\gamma$ 上的值为已知，且如果已知 $f(z)$ 在 $\Delta$ 内解析，则 $f(a)$ 的值就可以算出．在(21)式中，只要 $a$ 关于 $\gamma$ 的阶数始终保持等于1，那么，可将记法稍加改变，把(21)式写成  
 
 $$
-f(z)=\frac{1}{2\pi i}\int_{\gamma} \frac{f(\zeta) d \zeta}{\zeta - z}. \tag{22}
+f(z)=\frac{1}{2\pi i}\int _{\gamma} \frac{f(\zeta) d \zeta}{\zeta - z}. \tag{22}
 $$
 
 这个公式通常称为柯西积分公式。应当记住，这个公式当$n(γ,z)=1$时正确，而且我们只对$f(z)$在圆盘内解析时作了证明。
@@ -596,38 +596,38 @@ $$
 #### 4.2.2 练习
 
 1. 计算  
-   $\int_{|z|=1} \frac{e^z}{z} dz$
+   $\int _{|z|=1} \frac{e^z}{z} dz$
    - 定理6，, $f(z)=e^z$解析, 点$a=0$
    - $=2\pi i\cdot n(\gamma,0) f(0)=2\pi i$
 
 2. 通过将被积函数分解为部分分式来计算  
-   $\int_{|z|=2} \frac{dz}{z^2 + 1}$
+   $\int _{|z|=2} \frac{dz}{z^2 + 1}$
    - $\frac{1}{z^2+1}=\frac{1}{2i}(\frac{1}{z-i}-\frac{1}{z+i})$
-   - $a_0=i,a_1=-i$
+   - $a _0=i,a _1=-i$
    - $f(z)=1$
    - $=\frac{1}{2i} (2\pi i \cdot n(\gamma,i) f(i)-2\pi i \cdot n(\gamma, -i)f(-i))=0$
 
 3. 计算  
-   $\int_{|z|=\rho} \frac{|dz|}{|z - a|^2}$  
+   $\int _{|z|=\rho} \frac{|dz|}{|z - a|^2}$  
    条件是$|a| \neq \rho$。提示：应用方程$z\bar{z} = \rho^2$及$|dz| = -i\rho \frac{dz}{z}$。
    - $\displaystyle \frac{1}{|z-a|^2}=\frac{1}{(z-a)\overline{(z-a)}}=\frac{1}{(z-a)(\frac{\rho^2}{z}-\bar{a})}=\frac{z/-\bar{a}}{(z-a)(z-\frac{\rho^2}{\bar{a}})}=\frac{z}{-\bar{a}}\frac{1}{a-\frac{\rho^2}{\bar{a}}}(\frac{1}{z-a}-\frac{1}{z-\frac{\rho^2}{\bar{a}}})$
-   - $\displaystyle=\int_{|z|=\rho} \frac{|dz|}{|z - a|^2}=\int_{|z|=\rho} \frac{i\rho}{|a|^2-\rho^2}(\frac{1}{z-a}-\frac{1}{z-\frac{\rho^2}{\bar{a}}})dz$  
+   - $\displaystyle=\int _{|z|=\rho} \frac{|dz|}{|z - a|^2}=\int _{|z|=\rho} \frac{i\rho}{|a|^2-\rho^2}(\frac{1}{z-a}-\frac{1}{z-\frac{\rho^2}{\bar{a}}})dz$  
    - 注意到 $a,\frac{\rho^2}{\bar{a}}$是关于圆$|z|=\rho$的反射的点,所以一个在圆内一个在圆外
    - $|a| < \rho$时 $=(\cdots)(2\pi i-0)=\frac{2\pi \rho}{\rho^2-|a|^2}$
    - $|a| > \rho$时 $=(\cdots)(0-2\pi i)=\frac{2\pi \rho}{|a|^2-\rho^2}$
    - 整合 分母符号
    - $=\frac{2\pi \rho}{|\rho^2-|a|^2|}$
 
-### 4.2.3 高阶导数
+### 4.2.3 高阶导数 Higher Derivatives
 
 表达式(22)给我们提供了一个研究解析函数局部性质的理想工具。特别是，我们可以证明一个解析函数具有各阶导数，而各阶导函数也必是解析的。
 
 现在来考察在一个任意域$\Omega$内解析的函数$f(z)$。对于一点$a \in \Omega$，我们确定一个包含于$\Omega$中的$\delta$邻域$\Delta$，并在$\Delta$内确定一个以$a$为中心的圆$C$。对$\Delta$内的$f(z)$可以应用定理6。由于$n(C,a)=1$，故知对于$C$内部的所有点$z$，都有$n(C,z)=1$。对于$z$，根据(22)式有  
-$$f(z) = \frac{1}{2\pi i} \int_C \frac{f(\zeta)d\zeta}{\zeta - z}$$
+$$f(z) = \frac{1}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{\zeta - z}$$
 
 只要这一积分可以在积分号下进行微分，则(期望的样子 稍后证明 等号成立)  
-$$f'(z) = \frac{1}{2\pi i} \int_C \frac{f(\zeta)d\zeta}{(\zeta - z)^2},\tag{23}$$ 
-$$f^{(n)}(z) = \frac{n!}{2\pi i} \int_C \frac{f(\zeta)d\zeta}{(\zeta - z)^{n+1}}. \tag{24}$$
+$$f'(z) = \frac{1}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{(\zeta - z)^2},\tag{23}$$ 
+$$f^{(n)}(z) = \frac{n!}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{(\zeta - z)^{n+1}}. \tag{24}$$
 
 如果这些微分公式能够得到证明，那就证明了$C$内部各点上各阶导数的存在。由于$\Omega$中的每一点都位于某一圆$C$的内部，故在整个域$\Omega$中各阶导数的存在得证。同时我们也将得出一个便于求导数的表示公式。
 - 这里的肌肉感觉就是两边同时求导，但小心翼翼的，左边的导数存在性是未知的，所以只能走定义式走
@@ -635,29 +635,29 @@ $$f^{(n)}(z) = \frac{n!}{2\pi i} \int_C \frac{f(\zeta)d\zeta}{(\zeta - z)^{n+1}}
 这里的证明或者可参照实数情形中的相应定理来进行，或者证明一个关于线积分的一般定理。这一线积分的被积函数在分析意义上依赖于一个参数。实际上，就目前需要来说, 我们只需要证明下面的引理就够了
 
 引理3 设 $\varphi(\zeta)$ 是弧 $\gamma$ 上的一个连续函数，则函数  
-$$F_n(z)=\int_{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)^n}$$  
-在 $\gamma$ 所确定的任意域内都解析，且其导数为 $F'_n(z)=nF_{n+1}(z)$。  
+$$F _n(z)=\int _{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)^n}$$  
+在 $\gamma$ 所确定的任意域内都解析，且其导数为 $F' _n(z)=nF _{n+1}(z)$。  
 
-先证 $F_1(z)$ 是连续的。设 $z_0$ 为 **不在** $\gamma$ 上的一点，选取邻域 $|z-z_0|<\delta$，使之不与 $\gamma$ 相交。将 $z$ 限制于较小的邻域 $|z-z_0|<\delta/2$ 之中，则对所有的 $\zeta\in\gamma$，可得 $|\zeta-z|>\delta/2$。从  
-$$F_1(z)-F_1(z_0)=(z-z_0)\int_{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)(\zeta-z_0)}$$ 
+先证 $F _1(z)$ 是连续的。设 $z _0$ 为 **不在** $\gamma$ 上的一点，选取邻域 $|z-z _0|<\delta$，使之不与 $\gamma$ 相交。将 $z$ 限制于较小的邻域 $|z-z _0|<\delta/2$ 之中，则对所有的 $\zeta\in\gamma$，可得 $|\zeta-z|>\delta/2$。从  
+$$F _1(z)-F _1(z _0)=(z-z _0)\int _{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)(\zeta-z _0)}$$ 
 立即可得  
-$$\left|F_1(z)-F_1(z_0)\right|<|z-z_0|\cdot\frac{2}{\delta^2}\int_{\gamma}|\varphi||d\zeta|$$ 
+$$\left|F _1(z)-F _1(z _0)\right|<|z-z _0|\cdot\frac{2}{\delta^2}\int _{\gamma}|\varphi||d\zeta|$$ 
 
-这一不等式证明了 $F_1(z)$ 在 $z_0$ 处是连续的。  
+这一不等式证明了 $F _1(z)$ 在 $z _0$ 处是连续的。  
 
-将引理的这一部分应用于函数 $\varphi_1(\zeta)=\varphi(\zeta)/(\zeta-z_0)$，则知
+将引理的这一部分应用于函数 $\varphi _1(\zeta)=\varphi(\zeta)/(\zeta-z _0)$，则知
 
-$$\lim_{z\to z_0} (\frac{F_1(z)-F_1(z_0)}{z-z_0}=\int_{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)(\zeta-z_0)}) \to F_2(z_0)$$ 
-- 上面证明了 $F_{1,\varphi}(z)$在$z_0$连续,
-- 这里再用到 $F_{1,\varphi_1}(z)$在$z_0$连续,
-- $\lim_{z\to z_0} (F_1导数定义式=F_{1,\varphi_1}(z)) =F_{1,\varphi_1}(z_0)=F_2(z_0)$
+$$\lim _{z\to z _0} (\frac{F _1(z)-F _1(z _0)}{z-z _0}=\int _{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)(\zeta-z _0)}) \to F _2(z _0)$$ 
+- 上面证明了 $F _{1,\varphi}(z)$在$z _0$连续,
+- 这里再用到 $F _{1,\varphi _1}(z)$在$z _0$连续,
+- $\lim _{z\to z _0} (F _1导数定义式=F _{1,\varphi _1}(z)) =F _{1,\varphi _1}(z _0)=F _2(z _0)$
 
-这就证明了 $F'_1(z)=F_2(z)$。  
+这就证明了 $F' _1(z)=F _2(z)$。  
 
-一般的情形可用归纳法来证明。假设已经证明 $F'_{n-1}(z)=(n-1)F_n(z)$。从恒等式  
+一般的情形可用归纳法来证明。假设已经证明 $F' _{n-1}(z)=(n-1)F _n(z)$。从恒等式  
 
-$$F_n(z)-F_n(z_0)=\left[\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z_0)}d\zeta-\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z_0)^n}d\zeta\right]+(z-z_0)\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^n(\zeta-z_0)}d\zeta$$ 
-可知 $F_n(z)$ 是连续的。事实上，根据归纳假设，应用于 $\varphi(\zeta)/(\zeta-z_0)$，上式右边第一项当 $z\to z_0$ 时将趋于零，而在第二项中，$z-z_0$ 的因子在 $z_0$ 的一个邻域中有界。现在如果以 $z-z_0$ 除恒等式两边，并令 $z\to z_0$，则第一项中的商将趋于一个导数，根据归纳假设，它应等于 $(n-1)F_{n+1}(z_0)$。第二项中余下的因子是连续的，根据上面已经证明过的关系可知，它应具有极限 $F_{n+1}(z_0)$。这就证明了 $F'_n(z_0)$ 的存在，且等于 $nF_{n+1}(z_0)$。  
+$$F _n(z)-F _n(z _0)=\left[\int _{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta-z _0)}d\zeta-\int _{\gamma}\frac{\varphi(\zeta)}{(\zeta-z _0)^n}d\zeta\right]+(z-z _0)\int _{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^n(\zeta-z _0)}d\zeta$$ 
+可知 $F _n(z)$ 是连续的。事实上，根据归纳假设，应用于 $\varphi(\zeta)/(\zeta-z _0)$，上式右边第一项当 $z\to z _0$ 时将趋于零，而在第二项中，$z-z _0$ 的因子在 $z _0$ 的一个邻域中有界。现在如果以 $z-z _0$ 除恒等式两边，并令 $z\to z _0$，则第一项中的商将趋于一个导数，根据归纳假设，它应等于 $(n-1)F _{n+1}(z _0)$。第二项中余下的因子是连续的，根据上面已经证明过的关系可知，它应具有极限 $F _{n+1}(z _0)$。这就证明了 $F' _n(z _0)$ 的存在，且等于 $nF _{n+1}(z _0)$。  
 
 很明显，引理 3 正是用严格方法导出公式 (23) 及 (24) 的依据。这样，我们就证明了:
 - 任意解析函数具有各阶导数，它们都是解析的 !!!!!!
@@ -669,7 +669,7 @@ $$F_n(z)-F_n(z_0)=\left[\int_{\gamma}\frac{\varphi(\zeta)}{(\zeta-z)^{n-1}(\zeta
 
 条件:
 - 设 $f(z)$ 在域 $\Omega$ 内有定义且连续，
-- 对于 $\Omega$ 中的所有闭曲线 $\gamma$ 有 $\int_{\gamma}f dz=0$，
+- 对于 $\Omega$ 中的所有闭曲线 $\gamma$ 有 $\int _{\gamma}f dz=0$，
 
 性质:
 - 则 $f(z)$ 在 $\Omega$ 内解析。
@@ -690,7 +690,7 @@ $$
 |f^{(n)}(a)| \leqslant M n ! r^{-n} \tag{25}
 $$
 
-对于刘维尔定理, 我们只需研究 $n=1$ 的情形, 定理的假设条件意味着在所有的圆上都有 $|f(\zeta)| \leqslant M$. 因此可令 $r \rightarrow \infty$, 于是对于所有的 $a$, 从 (25) 可得 $|f'(a)| \le \lim_{r\to \infty} \frac{M}{r}=0$. 由此可知函数是一个常数.
+对于刘维尔定理, 我们只需研究 $n=1$ 的情形, 定理的假设条件意味着在所有的圆上都有 $|f(\zeta)| \leqslant M$. 因此可令 $r \rightarrow \infty$, 于是对于所有的 $a$, 从 (25) 可得 $|f'(a)| \le \lim _{r\to \infty} \frac{M}{r}=0$. 由此可知函数是一个常数.
 
 刘维尔定理引出了代数基本定理的证明. 设 $P(z)$ 为次数大于 0 的多项式. 如果 $P(z)$ 恒不等于零, 则 $1 / P(z)$ 将是整个平面中的解析函数. 当 $z \rightarrow \infty$ 时, $P(z) \rightarrow \infty$, 因此 $1 / P(z) \rightarrow 0$. 这就表示函数是有界的 (绝对值在黎曼球面上连续, 因此具有一个有限的极大值), 根据刘维尔定理, $1 / P(z)$ 应为常数. 但情形并不如此, 因此方程 $P(z)=0$ 必有一个根.
 
@@ -701,19 +701,19 @@ $$
 [TODO]
 
 1. 计算:
-   - $\int_{|z|=1} e^{z} z^{-n} d z$ 
+   - $\int _{|z|=1} e^{z} z^{-n} d z$ 
      - $f(z)=e^z$ 
-     - $f^{(n-1)}(0)=\frac{(n-1)!}{2\pi i}\int_C \frac{f(\zeta) d\zeta}{(\zeta - 0)^{n}}$
+     - $f^{(n-1)}(0)=\frac{(n-1)!}{2\pi i}\int _C \frac{f(\zeta) d\zeta}{(\zeta - 0)^{n}}$
      - 原式$=\frac{2\pi i}{(n-1)!} (e^z)^{(n-1)}(0) = \frac{2\pi i}{(n-1)!}$
-   - $\int_{|z|=2} z^{n}(1-z)^{m} d z$
+   - $\int _{|z|=2} z^{n}(1-z)^{m} d z$
      - 如果都是非负整数 解析=0
      - $m < 0$, $f(z)=z^n$
-     - $f^{(-m-1)}(1)=\frac{(-m-1)!}{2\pi i}\int_C \frac{f(\zeta) d\zeta}{(\zeta - 1)^{-m}}$
+     - $f^{(-m-1)}(1)=\frac{(-m-1)!}{2\pi i}\int _C \frac{f(\zeta) d\zeta}{(\zeta - 1)^{-m}}$
      - $=2\pi i \frac{n!}{(-m-1)!(n-(-m-1))!}=2\pi i \binom{n}{-m-1}$ 其中 $-m-1 \le n$, 否则还是=0
-   - [TODO] $\int_{|z|=\rho}|z-a|^{-4}|d z|(|a| \neq \rho)$
+   - [TODO] $\int _{|z|=\rho}|z-a|^{-4}|d z|(|a| \neq \rho)$
      - $|dz|=-\frac{i\rho}{z} dz$
      - $\bar{z} =\frac{\rho^2}{z}$
-     - $\int_{|z|=\rho} \frac{1}{(z-a)^2(\bar{z}-\bar{a})^2}\frac{-i\rho}{z} dz$
+     - $\int _{|z|=\rho} \frac{1}{(z-a)^2(\bar{z}-\bar{a})^2}\frac{-i\rho}{z} dz$
 2. 证明, 在整个平面中解析的函数如果对于某些 $n$ 及所有充分大的 $|z|$, 能满足不等式 $|f(z)|<|z|^{n}$, 则必为一个多项式.
 
 3. 设 $f(z)$ 是解析函数, 对于 $|z| \leqslant R$, 有 $|f(z)| \leqslant M$, 试求 $\left|f^{(n)}(z)\right|$ 在 $|z| \leqslant \rho<R$ 中的上界.
@@ -724,27 +724,27 @@ $$
 
 *6. 引理 3 的一个更为一般的形式如下: 设函数 $\varphi(z, t)$ 在 $z$ 位于域 $\Omega$ 中而 $\alpha \leqslant t \leqslant \beta$时, 作为两个变量的函数是连续的. 再设 $\varphi(z, t)$ 对任何固定的 $t$, 作为 $z \in \Omega$ 的函数是解析的, 那么
 
-$$F(z)=\int_{\alpha}^{\beta} \varphi(z, t) d t$$
+$$F(z)=\int _{\alpha}^{\beta} \varphi(z, t) d t$$
 
 关于 $z$ 是解析的, 且
 
-$$F'(z)=\int_{\alpha}^{\beta}\frac{\partial \varphi(z,t)}{\partial z}dt.\tag{26}$$
+$$F'(z)=\int _{\alpha}^{\beta}\frac{\partial \varphi(z,t)}{\partial z}dt.\tag{26}$$
 
 要证明上式, 可将 $\varphi(z, t)$ 表示成柯西积分
 
-$$\varphi(z, t)=\frac{1}{2 \pi i} \int_{C} \frac{\varphi(\zeta, t)}{\zeta-z} d \zeta$$
+$$\varphi(z, t)=\frac{1}{2 \pi i} \int _{C} \frac{\varphi(\zeta, t)}{\zeta-z} d \zeta$$
 
 经过计算, 得到
 
-$$F(z)=\int_{c}\left(\frac{1}{2 \pi i} \int_{a}^{\beta} \varphi(\zeta, t) d t\right) \frac{d \zeta}{\zeta-z}$$
+$$F(z)=\int _{c}\left(\frac{1}{2 \pi i} \int _{a}^{\beta} \varphi(\zeta, t) d t\right) \frac{d \zeta}{\zeta-z}$$
 
 并用引理 3 证明 (26).
 
-## 4.3 解析函数的局部性质
+## 4.3 解析函数的局部性质 Local Properties of Analytic Functions
 
 上面我们已经证明了解析函数具有各阶导数。在本节中, 我们将详细研究其局部性质, 包括解析函数的各种孤立奇点isolated singularities的分类.
 
-### 4.3.1 可去奇点和泰勒定理
+### 4.3.1 可去奇点和泰勒定理 Removable Singularities. Taylor's Theorem(定理7,8)
 
 在定理 3 中, 我们提出了一个较弱的条件, 用以代替有限个点上的解析性, 而不影响最后的结果。在定理 5 中, 我们又证明, 在这些较弱的条件下, 圆盘中的柯西定理仍保持正确。这就是我们导出柯西积分公式的主要依据, 因为我们应用柯西定理于函数 $(f(z)-f(a))/(z-a)$.
 
@@ -755,11 +755,11 @@ $$F(z)=\int_{c}\left(\frac{1}{2 \pi i} \int_{a}^{\beta} \varphi(\zeta, t) d t\ri
 
 这一定理的必要性和唯一性都是很明显的, 因为延拓的函数必须在 $a$ 上连续。为了证明条件的充分性, 可以以 $a$ 为圆心作一个圆 $C$, 使 $C$ 及其内部都包含在 $\Omega$ 内。这时柯西公式是适用的(定理3 + 额外的上面lim条件, 例如反例 1/x挖去0，满足前面的解析，但是不满足这个lim条件的), 对于 $C$ 内部的所有 $z \neq a$, 我们可以写出
 
-$$f(z)=\frac{1}{2 \pi i} \int_{C} \frac{f(\zeta)}{\zeta-z} d \zeta$$
+$$f(z)=\frac{1}{2 \pi i} \int _{C} \frac{f(\zeta)}{\zeta-z} d \zeta$$
 
 但右边的积分表示一个在 $C$ 内部处处解析的 $z$ 的函数。因此, 一个函数当 $z \neq a$ 时它等于 $f(z)$, 而当 $z=a$ 时它的值为
 
-$$\frac{1}{2 \pi i} \int_{C} \frac{f(\zeta)}{\zeta-a} d \zeta\tag{27}$$
+$$\frac{1}{2 \pi i} \int _{C} \frac{f(\zeta)}{\zeta-a} d \zeta\tag{27}$$
 
 这一函数必在 $\Omega$ 内解析。我们自然可以以 $f(z)$ 表示延拓的函数，可以以 $f(a)$ 表示值 $(27)$.
 
@@ -767,79 +767,79 @@ $$\frac{1}{2 \pi i} \int_{C} \frac{f(\zeta)}{\zeta-a} d \zeta\tag{27}$$
 
 $$F(z)=\frac{f(z)-f(a)}{z-a}$$
 
-这一函数在 $z=a$ 时没有定义，但它满足条件 $\lim_{z\to a}(z-a)F(z)=0$. 当 $z\to a$ 时，$F(z)$ 的极限是 $f'(a)$. 因此，存在一个解析函数，它在 $z\neq a$ 时等于 $F(z)$，而在 $z=a$ 时等于 $f'(a)$. 以 $f_1(z)$ 表示这一函数. 重复这一过程，可得一个解析函数 $f_2(z)$，当 $z\neq a$ 时，它等于 $(f_1(z)-f_1(a))/(z-a)$，而当 $z=a$ 时它等于 $f'_1(a)$，如此等等.
+这一函数在 $z=a$ 时没有定义，但它满足条件 $\lim _{z\to a}(z-a)F(z)=0$. 当 $z\to a$ 时，$F(z)$ 的极限是 $f'(a)$. 因此，存在一个解析函数，它在 $z\neq a$ 时等于 $F(z)$，而在 $z=a$ 时等于 $f'(a)$. 以 $f _1(z)$ 表示这一函数. 重复这一过程，可得一个解析函数 $f _2(z)$，当 $z\neq a$ 时，它等于 $(f _1(z)-f _1(a))/(z-a)$，而当 $z=a$ 时它等于 $f' _1(a)$，如此等等.
 
-用以定义 $f_n(z)$ 的递推关系可写成如下形式:
+用以定义 $f _n(z)$ 的递推关系可写成如下形式:
 - 这里是导数定义时用的非极限表达式
 
-$$f(z)=f(a)+(z-a)f_1(z),$$
+$$f(z)=f(a)+(z-a)f _1(z),$$
 
-$$f_1(z)=f_1(a)+(z-a)f_2(z),$$
+$$f _1(z)=f _1(a)+(z-a)f _2(z),$$
 
 $$\vdots$$
 
-$$f_{n-1}(z)=f_{n-1}(a)+(z-a)f_n(z).$$
+$$f _{n-1}(z)=f _{n-1}(a)+(z-a)f _n(z).$$
 
 这些方程对 $z=a$ 也正确，从这些方程可得
 
-$$f(z)=f(a)+(z-a)f_1(a)+\cdots+(z-a)^{n-1}f_{n-1}(a)+(z-a)^nf_n(z).$$
+$$f(z)=f(a)+(z-a)f _1(a)+\cdots+(z-a)^{n-1}f _{n-1}(a)+(z-a)^nf _n(z).$$
 
 微分 $n$ 次，并令 $z=a$ 得
 
-$$f^{(n)}(a)=n!f_n(a).$$
+$$f^{(n)}(a)=n!f _n(a).$$
 
-这确定出系数 $f_n(a)$，因此得到如下形式的泰勒定理:
-- 所以 $f_n$ 在点a的 值是靠 泰勒展开到n项，再用n次微分确定的
-- 这里 $f_i$ 看起来 通过乘除变化是 导数的 定义式的形式，但是在a点同样有唯一的补充定义 通过上面得到
+这确定出系数 $f _n(a)$，因此得到如下形式的泰勒定理:
+- 所以 $f _n$ 在点a的 值是靠 泰勒展开到n项，再用n次微分确定的
+- 这里 $f _i$ 看起来 通过乘除变化是 导数的 定义式的形式，但是在a点同样有唯一的补充定义 通过上面得到
 - 这里 也建立了**在点a** 余项式 和 导数 之间的关系
 
 **定理 8** 设 $f(z)$ 在包含 $a$ 的域 $\Omega$ 内解析，则有
 
-$$f(z)=f(a)+\sum_{i=1}^{n-1} \frac{f^{(i)}(a)}{i!}(z-a)^i+f_n(z)(z-a)^n, \tag{28}$$
+$$f(z)=f(a)+\sum _{i=1}^{n-1} \frac{f^{(i)}(a)}{i!}(z-a)^i+f _n(z)(z-a)^n, \tag{28}$$
 
-其中 $f_n(z)$ 在 $\Omega$ 内是解析的.
+其中 $f _n(z)$ 在 $\Omega$ 内是解析的.
 
-这里也就是把中间的$f_i$通过上面的关系换成了$f^{(i)}$相关的表达式
+这里也就是把中间的$f _i$通过上面的关系换成了$f^{(i)}$相关的表达式
 
-这一有限的展开式必须和后面即将讨论的无穷泰勒级数很好地区别. 不过，对于研究 $f(z)$ 的局部性质来说，最有用的还是有限展开式 (28). 它之所以有用，是因为 $f_n(z)$ 有一个线积分的简单的显式表示.
+这一有限的展开式必须和后面即将讨论的无穷泰勒级数很好地区别. 不过，对于研究 $f(z)$ 的局部性质来说，最有用的还是有限展开式 (28). 它之所以有用，是因为 $f _n(z)$ 有一个线积分的简单的显式表示.
 
 应用上面的同一个圆 $C$，首先有(24式 的0次形式)
 
-$$f_n(z)=\frac{1}{2\pi i}\int_C \frac{f_n(\zeta)d\zeta}{\zeta-z}.$$
+$$f _n(z)=\frac{1}{2\pi i}\int _C \frac{f _n(\zeta)d\zeta}{\zeta-z}.$$
 
-而后用从 (28) 式所得的表达式代入 $f_n(\zeta)$. 包含 $f(\zeta)$ 的只有一项，其余的项除了常数因子外，都有如下的形式(这里没说系数，只说了zeta相关的部分):
+而后用从 (28) 式所得的表达式代入 $f _n(\zeta)$. 包含 $f(\zeta)$ 的只有一项，其余的项除了常数因子外，都有如下的形式(这里没说系数，只说了zeta相关的部分):
 
-$$F_v(a)=\int_C \frac{d\zeta}{(\zeta-a)^v(\zeta-z)}, \quad v\geq1.$$
+$$F _v(a)=\int _C \frac{d\zeta}{(\zeta-a)^v(\zeta-z)}, \quad v\geq1.$$
 
 但对于 $C$ 内部的所有 $a$，恒等地有
 
-$$F_1(a) = \frac{1}{z-a}\int_C(\frac{1}{\zeta-z}-\frac{1}{\zeta-a})d\zeta=0$$
+$$F _1(a) = \frac{1}{z-a}\int _C(\frac{1}{\zeta-z}-\frac{1}{\zeta-a})d\zeta=0$$
 
-根据引理3, 有 $F_{v+1}(a) = F_v^{(v)}(a)/v!$, 因此, 对所有的 $v \geq 1$, 有 $F_v(a) = 0$. 故 $f_v(z)$ 的表达式化为
+根据引理3, 有 $F _{v+1}(a) = F _v^{(v)}(a)/v!$, 因此, 对所有的 $v \geq 1$, 有 $F _v(a) = 0$. 故 $f _v(z)$ 的表达式化为
 
 $$
-f_n(z) = \frac{1}{2\pi i} \int_C \frac{f(\zeta)d\zeta}{(\zeta - a)^n (\zeta - z)}. \tag{29}
+f _n(z) = \frac{1}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{(\zeta - a)^n (\zeta - z)}. \tag{29}
 $$
 
 这一表达式在 $C$ 内部是正确的.
 
 - 这里的结论是 按照点a和导数定义式的泰勒展开的n次 余部，可以表示成和原函数有关的式子29
 
-### 4.3.2 零点和极点
+### 4.3.2 零点和极点 Zeros and Poles(定理9)
 
 如果 $f(a)$ 及所有的导数 $f^{(n)}(a)$ 都等于零，则根据 (28)，对于任意 $n$，有
 
 $$
-f(z) = f_n(z)(z - a)^n. \tag{30}
+f(z) = f _n(z)(z - a)^n. \tag{30}
 $$
 
-$f_n(z)$ 的估值可用 (29) 式求得.
-- 这里再次注意 上面的点a的n项泰勒展开，只得到点a处 导数和余项关系，所以$f_n(z)$ 目前仍然不能换掉
+$f _n(z)$ 的估值可用 (29) 式求得.
+- 这里再次注意 上面的点a的n项泰勒展开，只得到点a处 导数和余项关系，所以$f _n(z)$ 目前仍然不能换掉
 
 具有周界 $C$(圆心在a)的圆盘应包含于域 $\Omega$ 中，在域 $\Omega$ 内，函数 $f(z)$ 有定义且解析. 绝对值 $|f(z)|$ 在 $C$ 上具有一个极大值 $M$ （紧集得到的性质，能取到sup）. 如果令 $C$ 的半径为 $R$，则对于 $|z - a| < R$，有(这是对29式 进行1个替换，2个放缩得到的)
 
 $$
-|f_n(z)| \leq \frac{M}{R^{n-1}(R - |z - a|)}.
+|f _n(z)| \leq \frac{M}{R^{n-1}(R - |z - a|)}.
 $$
 
 因此，根据 (30) 式，有
@@ -851,19 +851,19 @@ $$
 但在 $n \to \infty$ 时，$\left(\frac{|z - a|}{R}\right)^n \to 0$，因为 $|z - a| < R$. 因此，在 $C$ 的内部，$f(z) = 0$.
 - 在解析圆盘内一点 `值`和`导数`全为0，则圆盘内 函数恒为0
 
-现在我们来证明在整个 $\Omega$(f全部解析) 内 $f(z)$ 恒等于零. 设 $E_1$ 为一个集，在其上 $f(z)$ 及其所有导数都等于零，并设 $E_2$ 为另一个集，在其上函数或其导数之一不为零. 
-- 根据上面的推理可知 $E_1$ 是开集，
+现在我们来证明在整个 $\Omega$(f全部解析) 内 $f(z)$ 恒等于零. 设 $E _1$ 为一个集，在其上 $f(z)$ 及其所有导数都等于零，并设 $E _2$ 为另一个集，在其上函数或其导数之一不为零. 
+- 根据上面的推理可知 $E _1$ 是开集，
   - 开集的任意并 开
-- 而由于函数及其所有导数都是连续的，故知 $E_2$ 也是开集. 
-  - $f^{(i)}(E_2) \to R-\lbrace 0\rbrace$, 紧集 连续映射 开集的原像开
+- 而由于函数及其所有导数都是连续的，故知 $E _2$ 也是开集. 
+  - $f^{(i)}(E _2) \to R-\lbrace 0\rbrace$, 紧集 连续映射 开集的原像开
   - 开集的任意并 开
-- 因此，$E_1$ 或 $E_2$ 必有一个为空集. 如果 $E_2$ 为空集，则函数应恒等于零. 如果 $E_1$ 是空集，则 $f(z)$ 及其所有导数不能同时等于零.
+- 因此，$E _1$ 或 $E _2$ 必有一个为空集. 如果 $E _2$ 为空集，则函数应恒等于零. 如果 $E _1$ 是空集，则 $f(z)$ 及其所有导数不能同时等于零.
   - 注意到两个函数 共同构成整个$\Omega$, 根据域（非空联通开）和连通性定理
 
-设 $f(z)$ 不恒等于零($\Omega=E_2$)，那么，如果 $f(a) = 0$，则存在第一个不等于零的导数 $f^{(h)}(a)$. 此时，我们称 $a$ 为 $h$ 阶零点，根据上面的证明(逆否命题)，零点都不是无穷阶. 在这一方面，解析函数与多项式具有同样的局部性质，正像在多项式的情形一样，我们可以写 $f(z) = (z - a)^h f_h(z)$，其中 $f_h(z)$ 是解析的，且 $f_h(a) \neq 0$.
+设 $f(z)$ 不恒等于零($\Omega=E _2$)，那么，如果 $f(a) = 0$，则存在第一个不等于零的导数 $f^{(h)}(a)$. 此时，我们称 $a$ 为 $h$ 阶零点，根据上面的证明(逆否命题)，零点都不是无穷阶. 在这一方面，解析函数与多项式具有同样的局部性质，正像在多项式的情形一样，我们可以写 $f(z) = (z - a)^h f _h(z)$，其中 $f _h(z)$ 是解析的，且 $f _h(a) \neq 0$.
 - 上面条件是点a 有限任意阶导数为零 => 全平面为0（恒等于0），这里是逆否命题，所以不存在 无穷阶零点（也就是值和导数全为0）
 
-在同样情形中($\Omega=E_2$)，由于 $f_h(z)$ 是连续的，故知在 $a$ 的一个邻域中，$f_h(z) \neq 0$，而 $z = a$ 就是 $f(z)$ 在这一邻域中的唯一零点. (因为邻域中 $(z-a)^h$也不为0)
+在同样情形中($\Omega=E _2$)，由于 $f _h(z)$ 是连续的，故知在 $a$ 的一个邻域中，$f _h(z) \neq 0$，而 $z = a$ 就是 $f(z)$ 在这一邻域中的唯一零点. (因为邻域中 $(z-a)^h$也不为0)
 
 **换句话说，凡是一个不恒等于零的解析函数的诸零点都是孤立的.**
 
@@ -875,14 +875,14 @@ $$
 
 现在我们来考察一个在$a$的邻域中解析的函数$f(z)$，这个函数可能在$a$点本身不解析，即$f(z)$将在区域$0<|z-a|<\delta$内解析。点$a$称为$f(z)$的孤立奇点。上面我们已经讨论过可去奇点的情形。据此，我们可以定义$f(a)$使得$f(z)$在圆盘$|z-a|<\delta$内成为一个解析函数，因此这里就不需要作进一步的研究。
 
-如果$\lim_{z\to a}f(z)=\infty$，则点$a$称为$f(z)$的极点，而令$f(a)=\infty$。存在一个$\delta'<\delta$，使得当$0<|z-a|<\delta'$时，$f(z)\neq0$。在这个域中，函数$g(z)=1/f(z)$有定义且解析。但$g(z)$在$a$处的奇点是可去的，而且$g(z)$具有一个解析延拓，$g(a)=0$。由于$g(z)$并不恒等于零，$a$处的零点具有有限的阶数，可令$g(z)=(z-a)^kg_h(z)$，$g_h(a)\neq0$。数$h$称为极点的阶数，$f(z)$的表示式为$f(z)=(z-a)^{-h}f_h(z)$，其中$f_h(z)=1/g_h(z)$在$a$的一个邻域中解析且不等于零。这样，就可以看出一个极点的本质恰与有理函数情形中的一样。
+如果$\lim _{z\to a}f(z)=\infty$，则点$a$称为$f(z)$的极点，而令$f(a)=\infty$。存在一个$\delta'<\delta$，使得当$0<|z-a|<\delta'$时，$f(z)\neq0$。在这个域中，函数$g(z)=1/f(z)$有定义且解析。但$g(z)$在$a$处的奇点是可去的，而且$g(z)$具有一个解析延拓，$g(a)=0$。由于$g(z)$并不恒等于零，$a$处的零点具有有限的阶数，可令$g(z)=(z-a)^kg _h(z)$，$g _h(a)\neq0$。数$h$称为极点的阶数，$f(z)$的表示式为$f(z)=(z-a)^{-h}f _h(z)$，其中$f _h(z)=1/g _h(z)$在$a$的一个邻域中解析且不等于零。这样，就可以看出一个极点的本质恰与有理函数情形中的一样。
 - 也就是 同样是 有阶数 不是无限阶的 极点
 
 一个在域$\Omega$内除了极点以外到处解析的函数$f(z)$称为$\Omega$内的亚纯函数meromorphic。更精确地说，对于每一个$a\in\Omega$，在$\Omega$内必存在一个邻域$|z-a|<\delta$，使得函数$f(z)$或者在整个邻域中解析，或者在区域$0<|z-a|<\delta$中解析，而孤立奇点是一个极点,一个亚纯函数的极点。根据定义是孤立的。在$\Omega$内解析的两个函数之商$f(z)/g(z)$，只要$g(z)$不恒等于零，则是$\Omega$内的亚纯函数。它可能有的极点都是$g(z)$的零点，但$f(z)$及$g(z)$的公共零点也可以是一个可去奇点。若有这一情形存在，则商的值必须用连续性确定。更一般地说，两个亚纯函数的和、积及商都是亚纯的。除非把常数$\infty$也当作是一个亚纯函数，否则分母恒等于零的情形应除外。
 
 为了更详细地讨论孤立奇点，我们来考察两种情形：
 
-(1) $\lim_{z\to a}|z-a|^{t}|f(z)|=0$；(2) $\lim_{z\to a}|z-a|^{t}|f(z)|=\infty$，此处$t$是一个实数。
+(1) $\lim _{z\to a}|z-a|^{t}|f(z)|=0$；(2) $\lim _{z\to a}|z-a|^{t}|f(z)|=\infty$，此处$t$是一个实数。
 - 不是 教材 非要同时用a和alpha吗
 
 如果对某一个$t$，条件(1)成立，则对所有更大的$t$，条件(1)也成立，因而对某一整数$m$，(1)还是成立。因此，$(z-a)^mf(z)$具有一个可去奇点，而当$z=a$时它等于零。这里又有两种情形，
@@ -905,19 +905,19 @@ $$
 
 在$h$阶极点的情形，对解析函数$(z - a)^h f(z)$应用定理8(这里把它看作整体)，得到如下展开式：
 
-$(z - a)^h f(z) = B_h + B_{h - 1}(z - a) + \cdots + B_1(z - a)^{h - 1} + \varphi(z)(z - a)^h$
+$(z - a)^h f(z) = B _h + B _{h - 1}(z - a) + \cdots + B _1(z - a)^{h - 1} + \varphi(z)(z - a)^h$
 
-其中函数$\varphi(z)$在$z = a$处解析。如果$z \neq a$，则可用$(z - a)^h$除上式，得到$f(z) = B_h(z - a)^{-h} + B_{h - 1}(z - a)^{-h + 1} + \cdots + B_1(z - a)^{-1} + \varphi(z)$。上面的展开式中，$\varphi(z)$前面的部分称为$f(z)$在$z = a$处的奇部singular part。由此可知，一个极点不仅有阶数，而且还有明确定义的奇部。具有相同奇部的两个函数之差在$a$处是解析函数。
+其中函数$\varphi(z)$在$z = a$处解析。如果$z \neq a$，则可用$(z - a)^h$除上式，得到$f(z) = B _h(z - a)^{-h} + B _{h - 1}(z - a)^{-h + 1} + \cdots + B _1(z - a)^{-1} + \varphi(z)$。上面的展开式中，$\varphi(z)$前面的部分称为$f(z)$在$z = a$处的奇部singular part。由此可知，一个极点不仅有阶数，而且还有明确定义的奇部。具有相同奇部的两个函数之差在$a$处是解析函数。
 
 在（iii）的情形，点$a$称为本性孤立奇点essential isolated singularity。在一个本性奇点的邻域中，$f(z)$一方面是无界的，但同时又是任意地逼近于零的。下面我们来证明魏尔斯特拉斯的一个经典定理，借以说明函数在本性奇点的邻域中复杂行为的特征。
 
 **定理9** 一个解析函数在本性奇点的每一邻域中都将任意地逼近于任意复数值。 An analytic function comes arbitrarily close to any complex value in every neighborhood of an essential singularity
 
-如果这一断言不正确，那么一定可以找到一个复数$A$及一个$\delta > 0$，在$a$的一个邻域（$z = a$除外）中满足条件$|f(z) - A| > \delta$。于是对于任意$t < 0$，有$\lim_{z \to a} |z - a|^t|f(z) - A| = \infty$，这样(满足2)，$a$就不能是$f(z) - A$的本性奇点。因此，必存在一个$\beta$使$\lim_{z \to a} |z - a|^{\beta}|f(z) - A| = 0$，而且可以选取$\beta$是一个正数。在这种情形下，由于$\lim_{z \to a} |z - a|^{\beta}|A| = 0$，故知$\lim_{z \to a} |z - a|^{\beta}|f(z)| = 0$，而$a$就不能是$f(z)$的本性奇点。这与假设矛盾，因此定理得证。
+如果这一断言不正确，那么一定可以找到一个复数$A$及一个$\delta > 0$，在$a$的一个邻域（$z = a$除外）中满足条件$|f(z) - A| > \delta$。于是对于任意$t < 0$，有$\lim _{z \to a} |z - a|^t|f(z) - A| = \infty$，这样(满足2)，$a$就不能是$f(z) - A$的本性奇点。因此，必存在一个$\beta$使$\lim _{z \to a} |z - a|^{\beta}|f(z) - A| = 0$，而且可以选取$\beta$是一个正数。在这种情形下，由于$\lim _{z \to a} |z - a|^{\beta}|A| = 0$，故知$\lim _{z \to a} |z - a|^{\beta}|f(z)| = 0$，而$a$就不能是$f(z)$的本性奇点。这与假设矛盾，因此定理得证。
 - 也就是 每个都存在一个足够近的
 - 但 又 不是共同有限阶的
 
-孤立奇点的概念也适用于在$\infty$的邻域$|z| > R$中解析的函数。由于$f(\infty)$是没有定义的，我们把$\infty$看作一个孤立奇点，根据约定，就像$g(z) = f(1/z)$在$z = 0$上的奇性一样，它具有可去奇点、极点或本性奇点的同样特性。如果奇点是非本性的，则$f(z)$具有一个代数阶$h$，使$\lim_{z \to \infty} z^{-h}f(z)$既不等于零，也不等于$\infty$，因此对于一个极点，奇部也是$z$的多项式。如果$\infty$为一个本性奇点，则在$\infty$的每一邻域中，函数具有定理9所说的性质。
+孤立奇点的概念也适用于在$\infty$的邻域$|z| > R$中解析的函数。由于$f(\infty)$是没有定义的，我们把$\infty$看作一个孤立奇点，根据约定，就像$g(z) = f(1/z)$在$z = 0$上的奇性一样，它具有可去奇点、极点或本性奇点的同样特性。如果奇点是非本性的，则$f(z)$具有一个代数阶$h$，使$\lim _{z \to \infty} z^{-h}f(z)$既不等于零，也不等于$\infty$，因此对于一个极点，奇部也是$z$的多项式。如果$\infty$为一个本性奇点，则在$\infty$的每一邻域中，函数具有定理9所说的性质。
 
 #### 4.3.2 练习
 
@@ -935,63 +935,63 @@ $(z - a)^h f(z) = B_h + B_{h - 1}(z - a) + \cdots + B_1(z - a)^{h - 1} + \varphi
 
 6. 证明$f(z)$的一个孤立奇点不能是$\exp f(z)$的一个极点。（为什么？）然后再应用定理9。
 
-### 4.3.3 局部映射
+### 4.3.3 局部映射 The Local Mapping(定理10,11)
 
-我们从证明一个可用于确定解析函数的零点个数的一般公式开始。设函数$f(z)$在开圆盘$\Delta$内解析且不恒等于零。令$\gamma$为$\Delta$内的一条闭曲线，在$\gamma$上$f(z)\neq 0$。为简单起见，先设$f(z)$在$\Delta$内只有有限个零点，记为$z_1,z_2,\cdots,z_n$，这里，每个零点按其阶数重复计数,有几阶就重复算几次。
+我们从证明一个可用于确定解析函数的零点个数的一般公式开始。设函数$f(z)$在开圆盘$\Delta$内解析且不恒等于零。令$\gamma$为$\Delta$内的一条闭曲线，在$\gamma$上$f(z)\neq 0$。为简单起见，先设$f(z)$在$\Delta$内只有有限个零点，记为$z _1,z _2,\cdots,z _n$，这里，每个零点按其阶数重复计数,有几阶就重复算几次。
 
-反复应用定理8或其推论(30)式，有$f(z)=(z-z_1)(z-z_2)\cdots(z-z_n)g(z)$，其中$g(z)$在$\Delta$内解析且不等于0。对于$z\neq z_j$，特别是对于$\gamma$上的$z$，作对数导数，得到
+反复应用定理8或其推论(30)式，有$f(z)=(z-z _1)(z-z _2)\cdots(z-z _n)g(z)$，其中$g(z)$在$\Delta$内解析且不等于0。对于$z\neq z _j$，特别是对于$\gamma$上的$z$，作对数导数，得到
 
-$$\frac{f'(z)}{f(z)}=\frac{1}{z-z_1}+\frac{1}{z-z_2}+\cdots+\frac{1}{z-z_n}+\frac{g'(z)}{g(z)}$$
+$$\frac{f'(z)}{f(z)}=\frac{1}{z-z _1}+\frac{1}{z-z _2}+\cdots+\frac{1}{z-z _n}+\frac{g'(z)}{g(z)}$$
 
 由于在$\Delta$内$g(z)\neq 0$，故由柯西定理得到(分母解析非0，分子解析函数的导数解析，所以整个解析，没有分支点)
 
-$$\int_{\gamma}\frac{g'(z)}{g(z)}dz=0$$
+$$\int _{\gamma}\frac{g'(z)}{g(z)}dz=0$$
 
-再根据$n(\gamma,z_j)$的定义，有
+再根据$n(\gamma,z _j)$的定义，有
 
-$$n(\gamma,z_1)+n(\gamma,z_2)+\cdots+n(\gamma,z_n)=\frac{1}{2\pi i}\int_{\gamma}\frac{f'(z)}{f(z)}dz\tag{31}$$
+$$n(\gamma,z _1)+n(\gamma,z _2)+\cdots+n(\gamma,z _n)=\frac{1}{2\pi i}\int _{\gamma}\frac{f'(z)}{f(z)}dz\tag{31}$$
 
-若$f(z)$在$\Delta$内具有无穷多个零点，上式仍正确。事实上，$\gamma$显然包含在一个小于$\Delta$的同心圆盘$\Delta'$之中。除非$f(z)$恒等于零（这一情形显然应予排除），否则它在$\Delta'$中只能有有限个零点。这是波尔查诺-魏尔斯特拉斯定理的一个明显的推论，因为如果有无穷多个零点，则它们必有一个聚点在$\Delta'$的闭包内，但这是不可能的。现在对圆盘$\Delta'$应用公式(31)，$\Delta'$之外的零点满足条件$n(\gamma,z_j)=0$，因此对(31)中的和不影响。这样就证明了下面的定理：
+若$f(z)$在$\Delta$内具有无穷多个零点，上式仍正确。事实上，$\gamma$显然包含在一个小于$\Delta$的同心圆盘$\Delta'$之中。除非$f(z)$恒等于零（这一情形显然应予排除），否则它在$\Delta'$中只能有有限个零点。这是波尔查诺-魏尔斯特拉斯定理的一个明显的推论，因为如果有无穷多个零点，则它们必有一个聚点在$\Delta'$的闭包内，但这是不可能的。现在对圆盘$\Delta'$应用公式(31)，$\Delta'$之外的零点满足条件$n(\gamma,z _j)=0$，因此对(31)中的和不影响。这样就证明了下面的定理：
 
-**定理10** 设函数$f(z)$在圆盘$\Delta$内解析且不恒等于零，$z_j$为函数$f(z)$的零点，各个零点按其阶数重复计数。对于$\Delta$内每一条不通过零点的闭曲线$\gamma$，有
+**定理10** 设函数$f(z)$在圆盘$\Delta$内解析且不恒等于零，$z _j$为函数$f(z)$的零点，各个零点按其阶数重复计数。对于$\Delta$内每一条不通过零点的闭曲线$\gamma$，有
 
-$$\sum_j n(\gamma,z_j)=\frac{1}{2\pi i}\int_{\gamma}\frac{f'(z)}{f(z)}dz\tag{32}$$
+$$\sum _j n(\gamma,z _j)=\frac{1}{2\pi i}\int _{\gamma}\frac{f'(z)}{f(z)}dz\tag{32}$$
 
 其中，和只有有限的项不为0。
-- 注意这里的$z_j$和上面的限制 不同，上面限制了 $z_j$在$\gamma$围成的区域内，而这里是所有零点，是通过上面的外面的$n(\gamma,z_j)=0$得到的
+- 注意这里的$z _j$和上面的限制 不同，上面限制了 $z _j$在$\gamma$围成的区域内，而这里是所有零点，是通过上面的外面的$n(\gamma,z _j)=0$得到的
 
 函数$f: z\mapsto w$将z-plane中的$\gamma$映成w-plane中的 闭曲线$\Gamma$，故得
 
-$$\int_{\Gamma}\frac{dw}{w}=\int_{\gamma}\frac{f'(z)}{f(z)}dz$$
+$$\int _{\Gamma}\frac{dw}{w}=\int _{\gamma}\frac{f'(z)}{f(z)}dz$$
 
 因此，公式(32)具有如下的解释：
 
-$$n(\Gamma,0)=\sum_j n(\gamma,z_j)\tag{33}$$
+$$n(\Gamma,0)=\sum _j n(\gamma,z _j)\tag{33}$$
 - 这里 $\Gamma=f(\gamma)$
 - z-plane gamma 围绕所有零点的圈数和 = 映射后 w-plane上 Gamma 绕0点的圈数
   - 这里依然右边是所有零点, 围绕外的贡献是0
 
-这一定理最简单且最有用的应用是用于已知每个$n(\gamma,z_j)$应等于0或1的情形，这时，(32)式给出了计算$\gamma$内部零点总数的公式。当$\gamma$是一个圆的时候显然就是这种情形。
+这一定理最简单且最有用的应用是用于已知每个$n(\gamma,z _j)$应等于0或1的情形，这时，(32)式给出了计算$\gamma$内部零点总数的公式。当$\gamma$是一个圆的时候显然就是这种情形。
 
-设$a$为任意复数，对$f(z)-a$应用定理10。$f(z)-a$的零点就是方程$f(z)=a$的根，记为$z_j(a)$。代替公式(32)，得到公式
+设$a$为任意复数，对$f(z)-a$应用定理10。$f(z)-a$的零点就是方程$f(z)=a$的根，记为$z _j(a)$。代替公式(32)，得到公式
 
-$$\sum_{j} n(\gamma,z_j(a))=\frac{1}{2\pi i}\int_{\gamma} \frac{f'(z)}{f(z)-a}dz$$
+$$\sum _{j} n(\gamma,z _j(a))=\frac{1}{2\pi i}\int _{\gamma} \frac{f'(z)}{f(z)-a}dz$$
 
 同时，(33)式变为
 
-$$n(\Gamma, a) = \sum_{j} n(\gamma, z_j(a))$$
-- emmm觉得$z_j(a)$看着好怪，想写成 $z_{f,a,j}$
-- 这里再详细写的话 就是$g(z)=f(z)-a$,然后有$n(\Gamma_g,0)=\sum_j n(\gamma,z_{g,0,j})$ 然后变成 $n(\Gamma_f,a)=\sum_j n(\gamma,z_{f,a,j})$
+$$n(\Gamma, a) = \sum _{j} n(\gamma, z _j(a))$$
+- emmm觉得$z _j(a)$看着好怪，想写成 $z _{f,a,j}$
+- 这里再详细写的话 就是$g(z)=f(z)-a$,然后有$n(\Gamma _g,0)=\sum _j n(\gamma,z _{g,0,j})$ 然后变成 $n(\Gamma _f,a)=\sum _j n(\gamma,z _{f,a,j})$
 
 这里，必须设在$\gamma$上$f(z)\neq a$。
 
-如果$a$及$b$位于$\Gamma$所确定的同一个域中，则$n(\Gamma, a)=n(\Gamma, b)$，因此又有$\sum_{j} n(\gamma, z_j(a))=\sum_{j} n(\gamma, z_j(b))$。如果$\gamma$为一个圆，则在$\gamma$内部，$f(z)$取值$a$及取值$b$的次数相等。下面关于局部对应的定理就是这一结果的直接推论。
+如果$a$及$b$位于$\Gamma$所确定的同一个域中，则$n(\Gamma, a)=n(\Gamma, b)$，因此又有$\sum _{j} n(\gamma, z _j(a))=\sum _{j} n(\gamma, z _j(b))$。如果$\gamma$为一个圆，则在$\gamma$内部，$f(z)$取值$a$及取值$b$的次数相等。下面关于局部对应的定理就是这一结果的直接推论。
 
-**定理11** 设$f(z)$在$z_0$处解析，$f(z_0)=w_0$，设$f(z)-w_0$在$z_0$处具有一个$n$阶零点。若$\varepsilon>0$足够小，则必存在一个对应的$\delta>0$，对于所有使$|a-w_0|<\delta$的$a$，方程$f(z)=a$在圆盘$|z-z_0|\leq\varepsilon$内恰具有$n$个根。
+**定理11** 设$f(z)$在$z _0$处解析，$f(z _0)=w _0$，设$f(z)-w _0$在$z _0$处具有一个$n$阶零点。若$\varepsilon>0$足够小，则必存在一个对应的$\delta>0$，对于所有使$|a-w _0|<\delta$的$a$，方程$f(z)=a$在圆盘$|z-z _0|\leq\varepsilon$内恰具有$n$个根。
 
-我们可以选择$\varepsilon$，使$f(z)$在圆盘$|z-z_0|\leq\varepsilon$内有定义而解析，且使$z_0$是$f(z_0)-w_0$在这个圆盘中唯一的一个零点。设$\gamma$为圆$|z-z_0|=\varepsilon$，并设$\gamma$在映射$w=f(z)$下的象为$\Gamma$。由于$w_0$属于闭集$\Gamma$的余集，故必存在一个不与$\Gamma$相交的邻域$|w-w_0|<\delta$（见图4-7）。由此直接可知，在$\gamma$内部取这一邻域中的任一值$a$的次数全相等。但方程$f(z)=w_0$在$\gamma$内部恰有$n$个相重的根，故知每一值$a$在$\gamma$内部将取$n$次。应当理解，重根是根据其相重数计数的，但如果$\varepsilon$取得充分小，使得$f'(z)$在$0<|z-z_0|<\varepsilon$上也不等于零，于是我们可以断言，当$a\neq w_0$时，方程$f(z)=a$的所有根都是单根。
-- 前面的点 简单说 z-plane中的$\gamma$映射到w-plane中的$\Gamma$,然后w-plane 总能取一个 更小的以$w_0$为中心，半径$\delta$的圆盘,
-- what !!!!!  $f(z)=w_0$ 如果在$z_0$是n重根, 它的一个邻域$\gamma$内 $f(z)=a$, $a$在 映射的 $\Gamma$内, 那么$f(z)=b$的解是 分离的单点
+我们可以选择$\varepsilon$，使$f(z)$在圆盘$|z-z _0|\leq\varepsilon$内有定义而解析，且使$z _0$是$f(z _0)-w _0$在这个圆盘中唯一的一个零点。设$\gamma$为圆$|z-z _0|=\varepsilon$，并设$\gamma$在映射$w=f(z)$下的象为$\Gamma$。由于$w _0$属于闭集$\Gamma$的余集，故必存在一个不与$\Gamma$相交的邻域$|w-w _0|<\delta$（见图4-7）。由此直接可知，在$\gamma$内部取这一邻域中的任一值$a$的次数全相等。但方程$f(z)=w _0$在$\gamma$内部恰有$n$个相重的根，故知每一值$a$在$\gamma$内部将取$n$次。应当理解，重根是根据其相重数计数的，但如果$\varepsilon$取得充分小，使得$f'(z)$在$0<|z-z _0|<\varepsilon$上也不等于零，于是我们可以断言，当$a\neq w _0$时，方程$f(z)=a$的所有根都是单根。
+- 前面的点 简单说 z-plane中的$\gamma$映射到w-plane中的$\Gamma$,然后w-plane 总能取一个 更小的以$w _0$为中心，半径$\delta$的圆盘,
+- what !!!!!  $f(z)=w _0$ 如果在$z _0$是n重根, 它的一个邻域$\gamma$内 $f(z)=a$, $a$在 映射的 $\Gamma$内, 那么$f(z)=a$的解是 分离的单点
 - 后面这个 分离单点，首先个数是n个上面的容易得到
 - 首先 如果$f'(z)$在a是零点，根据零点都是孤立+有限里只有有限个零点，可以通过 缩小半径让1阶导数非零，
 - 如果在 $f'(z)$ 不是零点, 同样根据 零点是分离 有限个的，也可以通过 缩小半径让1阶导数都非零，
@@ -1001,21 +1001,21 @@ $$n(\Gamma, a) = \sum_{j} n(\gamma, z_j(a))$$
 
 **推论1** 一个非常数的解析函数将开集映成开集。
 
-这就是说，每一个充分小的圆盘$|z-z_0|<\varepsilon$的象包含一个邻域$|w-w_0|<\delta$。
+这就是说，每一个充分小的圆盘$|z-z _0|<\varepsilon$的象包含一个邻域$|w-w _0|<\delta$。
 
-在$n=1$的情形，圆盘$|w-w_0|<\delta$与$|z-z_0|<\varepsilon$的一个开子集$\Delta$之间存在一一对应的关系。因为$z$平面上的开集对应于$w$平面上的开集，故$f(z)$的反函数是连续的，映射是拓扑的。这个映射可以限制在$\Delta$中$z_0$的一个邻域内，因此有如下推论：
+在$n=1$的情形，圆盘$|w-w _0|<\delta$与$|z-z _0|<\varepsilon$的一个开子集$\Delta$之间存在一一对应的关系。因为$z$平面上的开集对应于$w$平面上的开集，故$f(z)$的反函数是连续的，映射是拓扑的。这个映射可以限制在$\Delta$中$z _0$的一个邻域内，因此有如下推论：
 
-**推论2** 设$f(z)$在$z_0$处解析，且$f'(z_0)\neq0$，则它把$z_0$的一个邻域共形地而且拓扑地映成一个域。
+**推论2** 设$f(z)$在$z _0$处解析，且$f'(z _0)\neq0$，则它把$z _0$的一个邻域共形地而且拓扑地映成一个域。
 
-从反函数的连续性, 根据通常方法可知反函数是解析的, 因此逆映射也是共形的. 反之, 如果局部映射是一对一的, 则定理 11 只在 $n=1$ 时成立, 因此 $f^{\prime}\left(z_{0}\right)$ 必异于零.
+从反函数的连续性, 根据通常方法可知反函数是解析的, 因此逆映射也是共形的. 反之, 如果局部映射是一对一的, 则定理 11 只在 $n=1$ 时成立, 因此 $f^{\prime}\left(z _{0}\right)$ 必异于零.
 - 这里 需要 数学分析原理中 反函数定理，局部的开区间的1-1映射（拓扑的（连续映射+1-1+逆映射连续））
 
 对于 $n>1$, 局部对应仍可精确地描述. 在定理 11 的假设条件下, 我们可以记
 
-$$f(z)-w_{0}=\left(z-z_{0}\right)^{n} g(z),$$
+$$f(z)-w _{0}=\left(z-z _{0}\right)^{n} g(z),$$
 
-式中 $g(z)$ 在 $z_{0}$ 处解析, 并且 $g\left(z_{0}\right) \neq 0$. 选取一个 $\varepsilon>0$, 使得当 $\left|z-z_{0}\right|<\varepsilon$ 时有 $\left|g(z)-g\left(z_{0}\right)\right|<\left|g\left(z_{0}\right)\right|$. 
-- 这是以$g(z_0)$为圆心的一个圆盘,保证$g(z)$不经过$0$
+式中 $g(z)$ 在 $z _{0}$ 处解析, 并且 $g\left(z _{0}\right) \neq 0$. 选取一个 $\varepsilon>0$, 使得当 $\left|z-z _{0}\right|<\varepsilon$ 时有 $\left|g(z)-g\left(z _{0}\right)\right|<\left|g\left(z _{0}\right)\right|$. 
+- 这是以$g(z _0)$为圆心的一个圆盘,保证$g(z)$不经过$0$
 
 在这个邻域中, 有可能定义 $\sqrt[n]{g(z)}$ 的一个单值解析分支, 记为 $h(z)$.
 - 勘误？这“有可能”的中文教材翻译的，英文是possible，感觉翻译成“总可以”更好吧
@@ -1024,11 +1024,11 @@ $$f(z)-w_{0}=\left(z-z_{0}\right)^{n} g(z),$$
 于是
 
 
-$$f(z)-w_{0}=\zeta(z)^{n},$$
+$$f(z)-w _{0}=\zeta(z)^{n},$$
 
-$$\zeta(z)=\left(z-z_{0}\right) h(z).$$
+$$\zeta(z)=\left(z-z _{0}\right) h(z).$$
 
-由于 $\zeta^{\prime}\left(z_{0}\right)=h\left(z_{0}\right) \neq 0$, 故映射 $\zeta=\zeta(z)$ 在 $z_{0}$ 的邻域中是拓扑的. 另一方面, 映射 $w=w_{0}+\zeta^{n}$ 是初等性质的, 对于每一个 $w$ 的值, 确定 $n$ 个等间隔的 $\zeta$ 值. 如果我们分两步来完成这一映射, 就可得到局部对应的一个很清晰的图. 图 4-8 表示一个小圆盘的逆象以及映成正的半径的 $n$ 段弧.
+由于 $\zeta^{\prime}\left(z _{0}\right)=h\left(z _{0}\right) \neq 0$, 故映射 $\zeta=\zeta(z)$ 在 $z _{0}$ 的邻域中是拓扑的. 另一方面, 映射 $w=w _{0}+\zeta^{n}$ 是初等性质的, 对于每一个 $w$ 的值, 确定 $n$ 个等间隔的 $\zeta$ 值. 如果我们分两步来完成这一映射, 就可得到局部对应的一个很清晰的图. 图 4-8 表示一个小圆盘的逆象以及映成正的半径的 $n$ 段弧.
 
 #### 4.3.3 练 习
 
@@ -1037,30 +1037,30 @@ $$\zeta(z)=\left(z-z_{0}\right) h(z).$$
    - 局部单射需要导函数非零, $2z+1\neq 0$, 有$z\neq -1/2$, $R<1/2$
      -  emmmm 这书前面好像没有 单变量复函数 导函数 和 1-1 对应的充要定理呢?
    - 哦 是用 公式33, 我们要把最大$\gamma$ in z-plane映射成$\Gamma$
-   - $n(\Gamma,a)=\sum_{j} n(\gamma,z_j(a))$
+   - $n(\Gamma,a)=\sum _{j} n(\gamma,z _j(a))$
    - 映射后w-plane的Gamma围绕a的次数 = 映射前z-plane中 f(z)=a 中根被$\gamma$围绕的次数
    - 首先$f(z)$是单值的，要1-1，那么需要$\gamma$范围中$f(z)=a$至多有一个解
    - $=0 \text{or} 1$
-   - $\frac{1}{2\pi i}\int_{\gamma} \frac{f'(z)}{f(z)-a}dz =0\text{or} 1$
-   - $=\frac{1}{2\pi i}\int_{\gamma} \frac{2z+1}{z^2+z-a}dz =0\text{or} 1$
+   - $\frac{1}{2\pi i}\int _{\gamma} \frac{f'(z)}{f(z)-a}dz =0\text{or} 1$
+   - $=\frac{1}{2\pi i}\int _{\gamma} \frac{2z+1}{z^2+z-a}dz =0\text{or} 1$
      - emmm有点神奇 韦达定理可以让这里 恰好拆分成 分子是1的和
-   - $=\frac{1}{2\pi i}\int_{\gamma} \frac{1}{z-\frac{-1+\sqrt{1+4a}}{2}} +\frac{1}{z-\frac{-1-\sqrt{1+4a}}{2}}dz =0\text{or} 1$
+   - $=\frac{1}{2\pi i}\int _{\gamma} \frac{1}{z-\frac{-1+\sqrt{1+4a}}{2}} +\frac{1}{z-\frac{-1-\sqrt{1+4a}}{2}}dz =0\text{or} 1$
    - 注意这里a的任意性
-   - $=\frac{1}{2\pi i}\int_{\gamma} \frac{1}{z+\frac{1}{2}-t} +\frac{1}{z+\frac{1}{2}+t}dz =0\text{or} 1$
+   - $=\frac{1}{2\pi i}\int _{\gamma} \frac{1}{z+\frac{1}{2}-t} +\frac{1}{z+\frac{1}{2}+t}dz =0\text{or} 1$
    - 那么 如果 环绕了-1/2, 那么当t=0时 会等于2，所以R最大为1/2
-   - 反复阅读了一下，更简单就是定理11，$f(z)=w_0$ 去构造 > 1重的零点，那么在邻域内有 > 1种方案的解，从而不是1-1，但这个东西对于更大的区域没什么保证啊，感觉只能搞搞边界？
+   - 反复阅读了一下，更简单就是定理11，$f(z)=w _0$ 去构造 > 1重的零点，那么在邻域内有 > 1种方案的解，从而不是1-1，但这个东西对于更大的区域没什么保证啊，感觉只能搞搞边界？
    - 这里可以 $f(z)=-1/4$变成 $(z+1/2)^2=0$有2重根，肯定不能包含-1/2
-   - 另一方面 原点映射到 w-plane中$0^2+0=0$，在$\Gamma$中，所以$\Gamma$中的 所有点的的次数相同，也就是 $=\frac{1}{2\pi i}\int_{\gamma} \frac{2z+1}{z^2+z-(0^2+0)} dz=0\text{or} 1$即可
+   - 另一方面 原点映射到 w-plane中$0^2+0=0$，在$\Gamma$中，所以$\Gamma$中的 所有点的的次数相同，也就是 $=\frac{1}{2\pi i}\int _{\gamma} \frac{2z+1}{z^2+z-(0^2+0)} dz=0\text{or} 1$即可
 
 2. 试对 $w=e^{z}$ 解上题.
    - 原点映射到$e^0=1$在$\Gamma$中
-   - $\frac{1}{2\pi i}\int_{\gamma} \frac{f'(z)}{f(z)-a}dz =0\text{or} 1$
-   - $\frac{1}{2\pi i}\int_{\gamma} \frac{e^z}{e^z-1}dz =0\text{or} 1$
+   - $\frac{1}{2\pi i}\int _{\gamma} \frac{f'(z)}{f(z)-a}dz =0\text{or} 1$
+   - $\frac{1}{2\pi i}\int _{\gamma} \frac{e^z}{e^z-1}dz =0\text{or} 1$
    - 分母一阶导数非零，说明所有让分母为0的是1阶零点，
    - 所以感觉上$2n \pi i$是对应点，所以$R < 2\pi i$
 
-3. 应用表示式 $f(z)=w_{0}+\zeta(z)^{n}$ 于 $\cos z$, 其中 $z_{0}=0$. 确定 $\zeta(z)$.
-   - $w_0=\cos (z_0=0) = 1$
+3. 应用表示式 $f(z)=w _{0}+\zeta(z)^{n}$ 于 $\cos z$, 其中 $z _{0}=0$. 确定 $\zeta(z)$.
+   - $w _0=\cos (z _0=0) = 1$
    - $(f(z)-1)'= -\sin z$ 也是0点
    - $(f(z)-1)''= -\cos z$ 不是0点, $n=2$
    - $\zeta(z)=zg(z),g(z)$解析不为0
@@ -1074,12 +1074,12 @@ $$\zeta(z)=\left(z-z_{0}\right) h(z).$$
    - $f(z)=f(0)+zh(z)$,其中$h(z)$解析不为0
    - 像推论2一样，控制 $h(z)$的值域在某个不覆盖原点的圆盘内, 其n次根可选分支
    - 0的邻域内 $\sqrt[n]{z}$同样通过选择分支解析（这里感觉 是 输入的z不再是复平面的z，而是黎曼面上的某个z，也就是还带有当前在那一层的信息）
-   - 这里要证明的一个是 对于$z_0\neq z_1, z_0^n=z_1^n$
-   - 要有$g(z_1)^n=f(z_1^n)-f(0)=f(z_2^n)-f(0)=g(z_2)^n$
-   - 要有$g(z_1)=\sqrt[n]{z_1^nh(z_1^n)}=\sqrt[n]{z_2^nh(z_2^n)}=g(z_2)$
+   - 这里要证明的一个是 对于$z _0\neq z _1, z _0^n=z _1^n$
+   - 要有$g(z _1)^n=f(z _1^n)-f(0)=f(z _2^n)-f(0)=g(z _2)^n$
+   - 要有$g(z _1)=\sqrt[n]{z _1^nh(z _1^n)}=\sqrt[n]{z _2^nh(z _2^n)}=g(z _2)$
    - 要用到 n次幂，n次根的解析性吗?
 
-### 4.3.4 最大值原理
+### 4.3.4 最大值原理 The Maximum Principle(定理12,13)
 
 定理 11 的推论 1 具有一个非常重要的分析推理, 称为解析函数的最大值原理. 由于它简单明显, 所以是函数论中最有用的一般定理之一. 通常, 以最大值原理为根据的证明都非常简捷, 故一般都十分乐于使用这一类的证明.
 
@@ -1089,59 +1089,59 @@ $$\zeta(z)=\left(z-z_{0}\right) h(z).$$
 - 注意到 global maximum的前提是 local maximum
 - 所以下面 的方法证明没有local maximum当然也就没有global maximum
 
-这一定理的证明是很显然的。如果 $w_0=f(z_0)$ 为函数在 $\Omega$ 内所取的任意值，则在 $\Omega$ 的像之中必存在一个邻域 $|w-w_0|<\varepsilon$。在这个邻域中，它们的模大于 $|w_0|$，因此 $|f(z_0)|$ 不是 $|f(z)|$ 的极大值。
-- 因为 开 到 开，所以$w_0$的邻域才能找到
+这一定理的证明是很显然的。如果 $w _0=f(z _0)$ 为函数在 $\Omega$ 内所取的任意值，则在 $\Omega$ 的像之中必存在一个邻域 $|w-w _0|<\varepsilon$。在这个邻域中，它们的模大于 $|w _0|$，因此 $|f(z _0)|$ 不是 $|f(z)|$ 的极大值。
+- 因为 开 到 开，所以$w _0$的邻域才能找到
 
 这一定理也可正面表述如下：
 
 **定理 12'** 设 $f(z)$ 在一个有界闭集 $E$ 上有定义且连续，并在 $E$ 的内部解析，则 $|f(z)|$ 的极大值出现在 $E$ 的边界上。
 
-由于 $E$ 是紧致的，所以 $|f(z)|$ 在 $E$ 上有一个极大值，假定出现在 $z_0$ 处。如果 $z_0$ 是内点，那么 $|f(z_0)|$ 也将是 $|f(z)|$ 在包含于 $E$ 中的圆盘 $|z-z_0|<\delta$ 内的极大值。但这是不可能的，除非 $f(z)$ 在包含 $z_0$ 的 $E$ 的内部的分集中是常数。于是由连续性可知，$|f(z)|$ 在该分集的整个边界上等于它的极大值。这一边界非空，且包含在 $E$ 的边界中。因此，极大值总出现在边界上。
+由于 $E$ 是紧致的，所以 $|f(z)|$ 在 $E$ 上有一个极大值，假定出现在 $z _0$ 处。如果 $z _0$ 是内点，那么 $|f(z _0)|$ 也将是 $|f(z)|$ 在包含于 $E$ 中的圆盘 $|z-z _0|<\delta$ 内的极大值。但这是不可能的，除非 $f(z)$ 在包含 $z _0$ 的 $E$ 的内部的分集中是常数。于是由连续性可知，$|f(z)|$ 在该分集的整个边界上等于它的极大值。这一边界非空，且包含在 $E$ 的边界中。因此，极大值总出现在边界上。
 - 神奇又有点小怪，例如p点是极大值，那么 把边界绕着p点一圈以后，让p点变为内点，p点则又不是极大值了，
 
-最大值原理也可用分析的观点来证明，作为柯西积分公式的一个推论。在公式 (22) 中（f(z)由开圆盘内闭合曲线上的点的值唯一决定），把 $\gamma$ 取作一个圆，其圆心在 $z_0$，半径为 $r$，则在 $\gamma$ 上，$\zeta=z_0+re^{i\theta}$，$d\zeta=ire^{i\theta}d\theta$，因此对于 $z=z_0$，有
+最大值原理也可用分析的观点来证明，作为柯西积分公式的一个推论。在公式 (22) 中（f(z)由开圆盘内闭合曲线上的点的值唯一决定），把 $\gamma$ 取作一个圆，其圆心在 $z _0$，半径为 $r$，则在 $\gamma$ 上，$\zeta=z _0+re^{i\theta}$，$d\zeta=ire^{i\theta}d\theta$，因此对于 $z=z _0$，有
 
 $$
-f(z_0)=\frac{1}{2\pi}\int_{\gamma} \frac{f(\zeta)}{\zeta - z_0}d\zeta=\frac{1}{2\pi}\int_{0}^{2\pi}f(z_0+re^{i\theta})d\theta.\tag{34}
+f(z _0)=\frac{1}{2\pi}\int _{\gamma} \frac{f(\zeta)}{\zeta - z _0}d\zeta=\frac{1}{2\pi}\int _{0}^{2\pi}f(z _0+re^{i\theta})d\theta.\tag{34}
 $$
 
-这一公式表明：一个解析函数在其解析域内任意一个闭圆盘 $|z-z_0|\leqslant r$ 的圆心的值等于它在圆上的值的算术平均数。
+这一公式表明：一个解析函数在其解析域内任意一个闭圆盘 $|z-z _0|\leqslant r$ 的圆心的值等于它在圆上的值的算术平均数。
 - wow 不错，这复平面解析函数的性质看起来都好爽啊
 
 从公式 (34) 可以导出不等式
 
 $$
-|f(z_0)|\leqslant\frac{1}{2\pi}\int_{0}^{2\pi}|f(z_0+re^{i\theta})|d\theta. \tag{35}
+|f(z _0)|\leqslant\frac{1}{2\pi}\int _{0}^{2\pi}|f(z _0+re^{i\theta})|d\theta. \tag{35}
 $$
 
-假设 $|f(z_0)|$ 是一个极大值，于是将会有 $|f(z_0+re^{i\theta})|\leqslant|f(z_0)|$，如果严格的不等关系对于 $\theta$ 的某一个值成立，则根据连续性，它在整个弧上都成立。但这时 $|f(z_0+re^{i\theta})|$ 的平均值将严格地小于 $|f(z_0)|$，于是 (35) 将会引出矛盾 $|f(z_0)|<|f(z_0)|$。因此，$|f(z)|$ 在所有充分小的圆 $|z-z_0|=r$ 上必恒等于 $|f(z_0)|$，故 $|f(z)|$ 在 $z_0$ 的一个邻域中也恒等于 $|f(z_0)|$，由此不难得出 $f(z)$ 必为一常数。这一推理提供了最大值原理的第二个证明方法，我们优先提出第一个证法，是由于它表明了最大值原理是用解析函数所做映射的拓扑性质的一个推论。
+假设 $|f(z _0)|$ 是一个极大值，于是将会有 $|f(z _0+re^{i\theta})|\leqslant|f(z _0)|$，如果严格的不等关系对于 $\theta$ 的某一个值成立，则根据连续性，它在整个弧上都成立。但这时 $|f(z _0+re^{i\theta})|$ 的平均值将严格地小于 $|f(z _0)|$，于是 (35) 将会引出矛盾 $|f(z _0)|<|f(z _0)|$。因此，$|f(z)|$ 在所有充分小的圆 $|z-z _0|=r$ 上必恒等于 $|f(z _0)|$，故 $|f(z)|$ 在 $z _0$ 的一个邻域中也恒等于 $|f(z _0)|$，由此不难得出 $f(z)$ 必为一常数。这一推理提供了最大值原理的第二个证明方法，我们优先提出第一个证法，是由于它表明了最大值原理是用解析函数所做映射的拓扑性质的一个推论。
 
 现在我们来考察在开圆盘 $|z|<R$ 内解析而在闭圆盘 $|z|\leqslant R$ 上连续的函数 $f(z)$。如果在 $|z|=R$ 上已知 $|f(z)|\leqslant M$，则根据前面的说明，在整个圆盘内将有 $|f(z)|\leqslant M$。等号仅当 $f(z)$ 是常数且绝对恒等于 $M$ 时成立。因此，如果已知 $f(z)$ 取某一值，其模小于 $M$，则应当可以求得一个较优的估值。这一方面的定理很有用，下面的特殊结果称为施瓦茨引理 lemma of Schwarz。
 
 **定理 13** 如果函数 $f(z)$ 对于 $|z|<1$ 解析，且满足条件 $|f(z)|\leqslant1$，$f(0)=0$，则 $|f(z)|\leqslant|z|$，且 $|f'(0)|\leqslant1$， if $|f(z)|=|z|$for some $z\neq 0$, or if $|f'(0)|=1$, then $f(z)=cz$ with a constanct $c$ of absolute value 1
 - 勘误？ 中文书翻译漏了这一段？
 
-设函数 $f_1(z)$ 在 $z \neq 0$ 时等于 $f(z)/z$，在 $z=0$ 时等于 $f'(0)$，对这一函数应用最大值原理（这里需要 这个$f_1$解析，它的确满足）。在圆 $|z|=r<1$ 上，其绝对值小于等于 $1/r$（边界的上界），因此当 $|z| \leq r$ 时，$|f_1(z)| \leq 1/r$。令 $r$ 趋近于 $1$，则对于所有的 $z$，$|f_1(z)| \leq 1$，这就是定理的结论。如果在某一点上(园内)等式成立，那就是 $|f_1(z)|$ 达到极大值，因而 $f_1(z)$ 应变为一个常数。
+设函数 $f _1(z)$ 在 $z \neq 0$ 时等于 $f(z)/z$，在 $z=0$ 时等于 $f'(0)$，对这一函数应用最大值原理（这里需要 这个$f _1$解析，它的确满足）。在圆 $|z|=r<1$ 上，其绝对值小于等于 $1/r$（边界的上界），因此当 $|z| \leq r$ 时，$|f _1(z)| \leq 1/r$。令 $r$ 趋近于 $1$，则对于所有的 $z$，$|f _1(z)| \leq 1$，这就是定理的结论。如果在某一点上(园内)等式成立，那就是 $|f _1(z)|$ 达到极大值，因而 $f _1(z)$ 应变为一个常数。
 
 定理 13 的假设多少有点特殊，但这并不是主要的，应看成是规格化的结果。
 - 例如，如果已知 $f(z)$ 在半径为 $R$ 的圆盘内满足定理的条件，则可应用定理的原始形式于函数 $f(Rz)$，结果得到 $|f(Rz)| \leq |z|$，这一式又可写为 $|f(z)| \leq |z|/R$。
 - 同样，如果模的上界不是 $1$ 而是 $M$，则可应用定理于 $f(z)/M$，
 - 或更一般地，应用于 $f(Rz)/M$，结果不等式为 $|f(z)| \leq M|z|/R$。
 
-更一般地说，我们可以把条件 $f(0)=0$ 换为任意条件 $f(z_0)=w_0$，其中 $|z_0| < R$，$|w_0| < M$。
-- 设 $\zeta=Tz$ 为一个线性分式变换，它将 $|z| < R$ 映成 $|\zeta| < 1$，以 $z_0$ 对应于原点，
-- 并设 $Sw$ 为一个线性变换，$Sw_0=0$，且将 $|w| < M$ 映成 $|Sw| < 1$。
+更一般地说，我们可以把条件 $f(0)=0$ 换为任意条件 $f(z _0)=w _0$，其中 $|z _0| < R$，$|w _0| < M$。
+- 设 $\zeta=Tz$ 为一个线性分式变换，它将 $|z| < R$ 映成 $|\zeta| < 1$，以 $z _0$ 对应于原点，
+- 并设 $Sw$ 为一个线性变换，$Sw _0=0$，且将 $|w| < M$ 映成 $|Sw| < 1$。
 - 显然，函数 $Sf(T^{-1}\zeta)$ 满足原来定理的假设。
-  - $Sf(z_0)=Sw_0=0$
+  - $Sf(z _0)=Sw _0=0$
   - $|\zeta|< 1,|g(\zeta)| = |Sf(T^{-1}\zeta)|<1$
 - 因此可得 $|Sf(T^{-1}\zeta)| \leq |\zeta|$ 即 $|Sf(z)| \leq |Tz|$。更明显地表示时，这一不等式可写成如下形式：
-  - 这里 需要回顾之前线性分式映射的特点，当有反演的时候，那么将不会保圆心，也就是 这里上面的S,T的映射 虽然都是圆心在原点的圆之间的映射，但是 映射关系中 原点和原点是不对应的，而是钦定的$z_0$和$w_0$
-  - $T(z)=e^{i\theta} \frac{R}{|z_0|}\frac{z-z_0}{z-\frac{R^2}{\bar{z_0}}}$ 根据保圆保对称点 章节的知识
-  - $|T(z)|=|\frac{R(z-z_0)}{z\bar{z_0}-R^2}$
-  - $S(w)=e^{i\theta}\frac{M}{|w_0|}\frac{w-w_0}{w-\frac{M^2}{\bar{w_0}}}$
-  - $|S(w)|=|\frac{M(w-w_0)}{w\bar{w_0}-M^2}|$
+  - 这里 需要回顾之前线性分式映射的特点，当有反演的时候，那么将不会保圆心，也就是 这里上面的S,T的映射 虽然都是圆心在原点的圆之间的映射，但是 映射关系中 原点和原点是不对应的，而是钦定的$z _0$和$w _0$
+  - $T(z)=e^{i\theta} \frac{R}{|z _0|}\frac{z-z _0}{z-\frac{R^2}{\bar{z _0}}}$ 根据保圆保对称点 章节的知识
+  - $|T(z)|=|\frac{R(z-z _0)}{z\bar{z _0}-R^2}$
+  - $S(w)=e^{i\theta}\frac{M}{|w _0|}\frac{w-w _0}{w-\frac{M^2}{\bar{w _0}}}$
+  - $|S(w)|=|\frac{M(w-w _0)}{w\bar{w _0}-M^2}|$
 
-$$\left| \frac{M(f(z)-w_0)}{M^2 - \overline{w}_0 f(z)} \right| \leq \left| \frac{R(z-z_0)}{R^2 - \overline{z}_0 z} \right|$$
+$$\left| \frac{M(f(z)-w _0)}{M^2 - \overline{w} _0 f(z)} \right| \leq \left| \frac{R(z-z _0)}{R^2 - \overline{z} _0 z} \right|$$
 
 #### 4.3.4 练习
 
@@ -1153,7 +1153,7 @@ $$\left| \frac{M(f(z)-w_0)}{M^2 - \overline{w}_0 f(z)} \right| \leq \left| \frac
 
 2. 若 $f(z)$ 解析，且当 $\text{Im} z > 0$ 时 $\text{Im} f(z) \geq 0$，证明：
 
-   $$\frac{|f(z)-f(z_0)|}{|f(z)-\overline{f(z_0)}|} \leq \frac{|z-z_0|}{|z-\overline{z}_0|}$$
+   $$\frac{|f(z)-f(z _0)|}{|f(z)-\overline{f(z _0)}|} \leq \frac{|z-z _0|}{|z-\overline{z} _0|}$$
 
    和
 
@@ -1167,31 +1167,31 @@ $$\left| \frac{M(f(z)-w_0)}{M^2 - \overline{w}_0 f(z)} \right| \leq \left| \frac
 
 6. 设 $\gamma$ 是 $|z| < 1$ 中的一个分段可微弧，积分
 
-   $$\int_{\gamma} \frac{|dz|}{1-|z|^2}$$
+   $$\int _{\gamma} \frac{|dz|}{1-|z|^2}$$
 
    称为 $\gamma$ 的非欧长度或（双曲长度）。证明：当 $|z| < 1$ 时，$|f(z)| < 1$ 的解析函数 $f(z)$ 将每一个$\gamma$映成一段具有较小或相等非欧长度的弧.
 
 证明将单位圆盘映成自身的线性变换保持非欧长度不变, 并用显式计算验证结果.
 
-7. (*)证明在单位圆盘中连接两个给定点且具有最小非欧长度的弧是正交于单位圆的圆弧。(使用一个将连接的一个端点变成原点, 另一个端点变成正实轴上一点的线性变换.) 最短非欧长度称为两个端点之间的非欧距离。试推导 $z_1$ 与 $z_2$ 之间的非欧距离的一个公式。答:
+7. (*)证明在单位圆盘中连接两个给定点且具有最小非欧长度的弧是正交于单位圆的圆弧。(使用一个将连接的一个端点变成原点, 另一个端点变成正实轴上一点的线性变换.) 最短非欧长度称为两个端点之间的非欧距离。试推导 $z _1$ 与 $z _2$ 之间的非欧距离的一个公式。答:
 
-$$\frac{1}{2} \log \frac{1 + \left| \frac{z_1 - z_2}{1 - \overline{z_1} z_2} \right|}{1 - \left| \frac{z_1 - z_2}{1 - \overline{z_1} z_2} \right|}$$
+$$\frac{1}{2} \log \frac{1 + \left| \frac{z _1 - z _2}{1 - \overline{z _1} z _2} \right|}{1 - \left| \frac{z _1 - z _2}{1 - \overline{z _1} z _2} \right|}$$
 
 8. (*)在上半平面内应如何定义非欧长度?
 
-## 4.4 柯西定理的一般形式
+## 4.4 柯西定理的一般形式 The General Form of Cauchy's Theorem
 
 上面我们讨论柯西定理和积分公式的时候, 所考虑的只是圆域的情形。这在研究解析函数的局部性质时是十分适宜的, 但从更一般的角度来看, 我们不能满足于这样不完全的结果。要把这一结果推广至一般情形可有两种方式: 其一是求得柯西定理普遍有效的区域特性; 其二是就任意区域找出曲线 γ, 使柯西定理的论断在其上有效。
 
 - 这东西 数学分析原理有，但那个感觉太精简了，有点云里雾里的
 
-### 4.4.1 链和闭链
+### 4.4.1 链和闭链 Chains and Cycles
 
 首先, 我们必须将线积分的概念加以推广。为此, 考察等式
 
-$$\int_{\gamma_1+\gamma_2+\cdots+\gamma_n} f dz = \int_{\gamma_1} f dz + \int_{\gamma_2} f dz + \cdots + \int_{\gamma_n} f dz,\tag{37}$$
+$$\int _{\gamma _1+\gamma _2+\cdots+\gamma _n} f dz = \int _{\gamma _1} f dz + \int _{\gamma _2} f dz + \cdots + \int _{\gamma _n} f dz,\tag{37}$$
 
-这个式子在 $\gamma_1, \gamma_2, \cdots, \gamma_n$ 是弧 γ 的各分段时正确。由于 (37) 式的右边对任何有限的组合都有意义, 所以我们尽可以考虑任意的形式和 $\gamma_1+\gamma_2+\cdots+\gamma_n$, 它不一定是一段弧, 并用等式 (37) 直接定义对应的积分。弧arc的这种形式和叫作链chains。显然, 考察沿着任意链的线积分将不会有损失, 反而还可以得到很多方便。
+这个式子在 $\gamma _1, \gamma _2, \cdots, \gamma _n$ 是弧 γ 的各分段时正确。由于 (37) 式的右边对任何有限的组合都有意义, 所以我们尽可以考虑任意的形式和 $\gamma _1+\gamma _2+\cdots+\gamma _n$, 它不一定是一段弧, 并用等式 (37) 直接定义对应的积分。弧arc的这种形式和叫作链chains。显然, 考察沿着任意链的线积分将不会有损失, 反而还可以得到很多方便。
 
 正像一段弧的分割没有唯一的方法一样, 不同的形式和可以代表同一个链。the guiding principle is that two chains should be considered identical if they yield the same line integrals for all functions f指导原则是: 两个链, 如果对于所有的函数 f 得出同样的线积分, 则应认为它们恒等。将这一原则加以分析, 可知下面的运算并不影响到链的恒等: 
 1) 两段弧的置换permutation; 
@@ -1204,19 +1204,19 @@ $$\int_{\gamma_1+\gamma_2+\cdots+\gamma_n} f dz = \int_{\gamma_1} f dz + \int_{\
 
 两个链的和可用并列法按通常方式定义。很明显, 线积分的加法性质 (37) 对任意的链保持有效。当恒等的链相加时, 为了方便起见, 可以用倍数来表示它们的和。因此, 每一个链可写成如下形式:
 
-$$\gamma = a_1 \gamma_1 + a_2 \gamma_2 + \cdots + a_n \gamma_n \tag{38}$$
+$$\gamma = a _1 \gamma _1 + a _2 \gamma _2 + \cdots + a _n \gamma _n \tag{38}$$
 
-式中$a_j$是正整数，$\gamma_j$全不相同。对于反向弧，可令$a(-\gamma)=-a\gamma$而将$(38)$式化简，一直到任何两个$\gamma_j$都不相反时为止。系数都是任意**整数**，具有零系数的项可任意加入。这使得指空的链的和或指所有系数都等于零的链的和。
+式中$a _j$是正整数，$\gamma _j$全不相同。对于反向弧，可令$a(-\gamma)=-a\gamma$而将$(38)$式化简，一直到任何两个$\gamma _j$都不相反时为止。系数都是任意**整数**，具有零系数的项可任意加入。这使得指空的链的和或指所有系数都等于零的链的和。
 
 若一个链可用若干闭曲线closed curves的和来表示，则称该链为闭链cycle。通过极为简单的组合分析就可以知道，要使一个链成为闭链，其充要条件是任何一个表示式中个别弧的起点和终点成对地相重。这样，要看一个链是否为闭链就很容易。
 
 在应用中，我们要讨论的是包含在给定开集$\Omega$中的链，这就是说，链可以用$\Omega$中的弧来表示，而我们所要考虑的也只是这种表示式。不难看出，以前我们列出的对域中闭曲线成立的所有定理事实上对域中的任意闭链都正确，特别是，一个**恰当微分**沿着**任意** **闭链**的积分等于零。
 - stokes定理?
 
-一点关于闭链的指数完全可仿照单一闭曲线情形的同样方法来定义。它具有同样的性质，此外，我们还可将十分明显而又非常重要的加法定理表达为$n(\gamma_1+\gamma_2,a)=n(\gamma_1,a)+n(\gamma_2,a)$。
-- 这里要求 $\gamma_i$是cycle吗?
+一点关于闭链的指数完全可仿照单一闭曲线情形的同样方法来定义。它具有同样的性质，此外，我们还可将十分明显而又非常重要的加法定理表达为$n(\gamma _1+\gamma _2,a)=n(\gamma _1,a)+n(\gamma _2,a)$。
+- 这里要求 $\gamma _i$是cycle吗?
 
-### 4.4.2 单连通性
+### 4.4.2 单连通性, Simple Connectivity(定理14)
 
 如果我们说一个域region没有孔holes，它的意义无疑是为读者所了解的。这样的域称为单连通域simply connected，而正是对于单连通域，柯西定理才是普遍成立的。这句示意性的话不能代替数学的定义，但稍加修正即可使之精确化。大家知道，一个没有孔的域显然就是这样的域，即它的余集是由单独的一整片组成，因此可得如下的定义：
 
@@ -1237,34 +1237,34 @@ $$\gamma = a_1 \gamma_1 + a_2 \gamma_2 + \cdots + a_n \gamma_n \tag{38}$$
 
 现在考察闭链
 $$
-\gamma = \sum_j \partial Q_j,
+\gamma = \sum _j \partial Q _j,
 $$
-其中的和式是按网中所有与 $A$ 有一个公共点的正方形 $Q_j$ 来取的（见图 4-9）。由于 $a$ 包含于一个而且只包含于一个正方形之中，故显然有 $n(\gamma,a)=1$。不仅如此，曲线 $\gamma$ 显然不与 $B$ 相交。但如果进行相消之后，同样可以看出 $\gamma$ 不与 $A$ 相交。事实上，任何一条与 $A$ 相交的边必然是包含于和式 (39) 中的两个正方形的公共边，由于它们的方向相反，故在 $\gamma$ 的简化公式中不会有这种边出现。因此 $\gamma$ 包含于 $\Omega$，于是定理得证。
+其中的和式是按网中所有与 $A$ 有一个公共点的正方形 $Q _j$ 来取的（见图 4-9）。由于 $a$ 包含于一个而且只包含于一个正方形之中，故显然有 $n(\gamma,a)=1$。不仅如此，曲线 $\gamma$ 显然不与 $B$ 相交。但如果进行相消之后，同样可以看出 $\gamma$ 不与 $A$ 相交。事实上，任何一条与 $A$ 相交的边必然是包含于和式 (39) 中的两个正方形的公共边，由于它们的方向相反，故在 $\gamma$ 的简化公式中不会有这种边出现。因此 $\gamma$ 包含于 $\Omega$，于是定理得证。
 - 这里 其实最核心的是 定义 不想交集的最近距离，从而才有网格
 
 现在我们来说明柯西定理对于不是单连通的区域肯定不成立。事实上，如果在 $\Omega$ 内有一个闭链 $\gamma$，对于 $\Omega$ 外的某一点 $a$，满足条件 $n(\gamma,a)\neq 0$，则 $1/(z-a)$ 在 $\Omega$ 内解析，而它的积分
 
-$$\int_{\gamma} \frac{d z}{z-a}=2 \pi i n(\gamma, a) \neq 0$$
+$$\int _{\gamma} \frac{d z}{z-a}=2 \pi i n(\gamma, a) \neq 0$$
 
-### 4.4.3 同调
+### 4.4.3 同调 Homology
 
 由定理14刻画的单连通性为单连通区域中的所有闭区域或任意开集中的闭链找出了一条共同的性质, 但对于拓扑学中起着重要作用, 因而赋予一个特殊的名称.
 
 定义 2 开集 $\Omega$ 内的闭链 $\gamma$ 称为关于 $\Omega$ 同调于零homologous to zero, 如果对于 $\Omega$ 的余集中的所有点 $a$,均有 $n(\gamma, a)=0$.
 
-用记号表示, 就是 $\gamma \sim 0(\bmod \Omega)$. 当所参考的开集已经很明显时, $\Omega$ 就可省略. 记号 $\gamma_{1} \sim \gamma_{2}$ 等价于 $\gamma_{1}-\gamma_{2} \sim 0$. 同调关系可以相加与相减, 而 $\gamma \sim 0(\bmod \Omega)$ 就意味着对所有 $\Omega^{\prime} \supset \Omega$, 有 $\gamma \sim 0(\bmod \Omega^{\prime})$.
+用记号表示, 就是 $\gamma \sim 0(\bmod \Omega)$. 当所参考的开集已经很明显时, $\Omega$ 就可省略. 记号 $\gamma _{1} \sim \gamma _{2}$ 等价于 $\gamma _{1}-\gamma _{2} \sim 0$. 同调关系可以相加与相减, 而 $\gamma \sim 0(\bmod \Omega)$ 就意味着对所有 $\Omega^{\prime} \supset \Omega$, 有 $\gamma \sim 0(\bmod \Omega^{\prime})$.
 - 因为 集更大，余集更小(大小的定义是感官的,或者说包含关系)
 
 另外, 我们的术语与标准用法并不完全一致. 用零卷绕数来刻画同调性是 Emil Artin 发现的. 正是他把同调性与柯西定理的一般形式所需的特性紧密地联系起来. 这一概念使早先的一些证明大大简化了.
 
-### 4.4.4 柯西定理的一般叙述
+### 4.4.4 柯西定理的一般叙述 The General Statemenet of Cauchyls Theorem(定理15)
 
 现在, 柯西定理的确定形式很容易陈述.
 
-定理 15 如果 $f(z)$ 在 $\Omega$ 中解析, 则对于 $\Omega$ 中同调于零的任意闭链 $\gamma$, 恒有
+**定理 15** 如果 $f(z)$ 在 $\Omega$ 中解析, 则对于 $\Omega$ 中同调于零的任意闭链 $\gamma$, 恒有
 - 同调是环绕数，这里是线积分，而有同调定义以后，我们的$\Omega$将可以有孔holes了
 
-$$\int_{\gamma} f(z) d z=0 .\tag{40}$$
+$$\int _{\gamma} f(z) d z=0 .\tag{40}$$
 
 在一种不同的叙述中, 我们要求, 如果 $\gamma$ 使 (40) 对某一族解析函数成立, 即对形如 $1 /(z-a)$ 的解析函数族成立, 其中 $a \notin \Omega$, 则它对 $\Omega$ 中所有的解析函数成立.
 
@@ -1278,39 +1278,39 @@ $$\int_{\gamma} f(z) d z=0 .\tag{40}$$
 
 推论 2 如果 $f(z)$ 在单连通域 $\Omega$ 中解析且不等于 0 , 则在 $\Omega$ 中, 可定义 $\log f(z)$ 和 $\sqrt[n]{f(z)}$ 的单值解析分支.
 
-事实上, 我们知道在 $\Omega$ 中存在一个解析函数 $F(z)$ 使得 $F^{\prime}(z)=f^{\prime}(z) / f(z)$. 函数$f(z)e^{-F(z)}$的导数为零，因此是一个常数(前面也用过这个技术)。选取一点$z_0\in\Omega$和无穷多个值$\log f(z_0)$之一，得$e^{F(z)-F(z_0)+\log f(z_0)}=f(z)$，因此可令$\log f(z)=F(z)-F(z_0)+\log f(z_0)$。为定义$\sqrt[n]{f(z)}$，只要将它写成形式$\exp\left(\frac{1}{n}\log(f(z))\right)$即可。
+事实上, 我们知道在 $\Omega$ 中存在一个解析函数 $F(z)$ 使得 $F^{\prime}(z)=f^{\prime}(z) / f(z)$. 函数$f(z)e^{-F(z)}$的导数为零，因此是一个常数(前面也用过这个技术)。选取一点$z _0\in\Omega$和无穷多个值$\log f(z _0)$之一，得$e^{F(z)-F(z _0)+\log f(z _0)}=f(z)$，因此可令$\log f(z)=F(z)-F(z _0)+\log f(z _0)$。为定义$\sqrt[n]{f(z)}$，只要将它写成形式$\exp\left(\frac{1}{n}\log(f(z))\right)$即可。
 
-### 4.4.5 柯西定理的证明
+### 4.4.5 柯西定理的证明 Proof of Cauchy's Theorem
 
 - 这一证明是根据 A.F.Beardom的建议作出的，并且他慷慨的允许我在这里引用
 
-我们从一个与定理14的证明相平行的结构开始。先设$\Omega$是有界的，而后则是任意的。给定$\delta>0$，我们用边长为$\delta$的正方形网覆盖平面，将$\Omega$中所含网内的闭正方形记为$Q_j,j\in J$。由于$\Omega$是有界的，所以集$J$是有限的，如果$\delta$充分小，则它是非空的。正方形$Q_j,j\in J$的并由一些闭区域组成，这些闭区域的有向边界构成闭链
+我们从一个与定理14的证明相平行的结构开始。先设$\Omega$是有界的，而后则是任意的。给定$\delta>0$，我们用边长为$\delta$的正方形网覆盖平面，将$\Omega$中所含网内的闭正方形记为$Q _j,j\in J$。由于$\Omega$是有界的，所以集$J$是有限的，如果$\delta$充分小，则它是非空的。正方形$Q _j,j\in J$的并由一些闭区域组成，这些闭区域的有向边界构成闭链
 - 注意这里只取全部在$\Omega$内的正方形，部分在的不取
 
-$$\Gamma_\delta=\sum_{j\in J}\partial Q_j$$
+$$\Gamma _\delta=\sum _{j\in J}\partial Q _j$$
 - 这里每个正方形 边界链的和，相邻正方形的边刚好抵消
 
-很明显，$\Gamma_\delta$是一些有向线段的和，这些线段恰好都是一个$Q_j$的边。用$\Omega_\delta$表示并$\bigcup Q_j$的内部（见图4-10）画得像个细胞一样, 这样的画法，会让中间的holes，被 与外层反向的 正方形边界围起来。
+很明显，$\Gamma _\delta$是一些有向线段的和，这些线段恰好都是一个$Q _j$的边。用$\Omega _\delta$表示并$\bigcup Q _j$的内部（见图4-10）画得像个细胞一样, 这样的画法，会让中间的holes，被 与外层反向的 正方形边界围起来。
 
-设 $\gamma$ 是在 $\Omega$ 内同调于零的一个闭链。选 $\delta$ 充分小，使得 $\gamma$ 含于 $\Omega_\delta$ 内（这个应该要说明为什么可以吧？？？？？？ 感觉说明，还是 gamma和"Omega的余集"的最小距离 来定控制这个delta）。考察一点 $\zeta \in \Omega - \Omega_\delta$。它至少属于一个 $Q$，该 $Q$ 不是一个 $Q_j$，存在一点 $\zeta_0 \in Q_j$，它不属于 $\Omega$，可以用位于 $Q$ 中的一条线段连接 $\zeta$ 和 $\zeta_0$，因此该线段不与 $\Omega_\delta$ 相交。由于 $\Gamma$ 看作一个点集，含于 $\Omega_\delta$ 中，故知 $n(\gamma, \zeta) = n(\gamma, \zeta_0) = 0$。特别地，对于 $\Gamma_\delta$ 上的所有点 $\zeta$，有 $n(\gamma, \zeta) = 0$。
+设 $\gamma$ 是在 $\Omega$ 内同调于零的一个闭链。选 $\delta$ 充分小，使得 $\gamma$ 含于 $\Omega _\delta$ 内（这个应该要说明为什么可以吧？？？？？？ 感觉说明，还是 gamma和"Omega的余集"的最小距离 来定控制这个delta）。考察一点 $\zeta \in \Omega - \Omega _\delta$。它至少属于一个 $Q$，该 $Q$ 不是一个 $Q _j$，存在一点 $\zeta _0 \in Q _j$，它不属于 $\Omega$，可以用位于 $Q$ 中的一条线段连接 $\zeta$ 和 $\zeta _0$，因此该线段不与 $\Omega _\delta$ 相交。由于 $\Gamma$ 看作一个点集，含于 $\Omega _\delta$ 中，故知 $n(\gamma, \zeta) = n(\gamma, \zeta _0) = 0$。特别地，对于 $\Gamma _\delta$ 上的所有点 $\zeta$，有 $n(\gamma, \zeta) = 0$。
 
-现在假设 $f$ 在 $\Omega$ 中解析。如果 $z$ 位于 $Q_{j_0}$ 的内部，则
+现在假设 $f$ 在 $\Omega$ 中解析。如果 $z$ 位于 $Q _{j _0}$ 的内部，则
 
-$$\frac{1}{2\pi i}\int_{\partial Q_j} \frac{f(\zeta)}{\zeta - z} d\zeta = \begin{cases} f(z) & \text{若 } j = j_0 \\ 0 & \text{若 } j \neq j_0 \end{cases}$$
+$$\frac{1}{2\pi i}\int _{\partial Q _j} \frac{f(\zeta)}{\zeta - z} d\zeta = \begin{cases} f(z) & \text{若 } j = j _0 \\ 0 & \text{若 } j \neq j _0 \end{cases}$$
 
 因此
 
-$$f(z) = \frac{1}{2\pi i}\int_{\Gamma_\delta} \frac{f(\zeta)}{\zeta - z} d\zeta.\tag{41}$$
+$$f(z) = \frac{1}{2\pi i}\int _{\Gamma _\delta} \frac{f(\zeta)}{\zeta - z} d\zeta.\tag{41}$$
 
-由于上式两边都是 $z$ 的连续函数，所以上式对于所有的 $z \in Q_\delta$ 成立。
+由于上式两边都是 $z$ 的连续函数，所以上式对于所有的 $z \in Q _\delta$ 成立。
 
 作为一个推论，我们得到
 
-$$\int_\gamma f(z) dz = \int_\gamma \left( \frac{1}{2\pi i} \int_{\Gamma_\delta} \frac{f(\zeta)}{\zeta - z} d\zeta \right) dz.\tag{42}$$
+$$\int _\gamma f(z) dz = \int _\gamma \left( \frac{1}{2\pi i} \int _{\Gamma _\delta} \frac{f(\zeta)}{\zeta - z} d\zeta \right) dz.\tag{42}$$
 
-内积分的被积函数是两个积分变量（即 $\Gamma_\delta$ 和 $\gamma$ 的参数）的连续函数。因此，积分次序可以调换(Fubini's Theorem（富比尼定理）)。换言之，
+内积分的被积函数是两个积分变量（即 $\Gamma _\delta$ 和 $\gamma$ 的参数）的连续函数。因此，积分次序可以调换(Fubini's Theorem（富比尼定理）)。换言之，
 
-$$\int_\gamma \left( \frac{1}{2\pi i} \int_{\Gamma_\delta} \frac{f(\zeta)}{\zeta - z} d\zeta \right) dz = \int_{\Gamma_\delta} \left( \frac{1}{2\pi i} \int_\gamma \frac{dz}{\zeta - z} \right) f(\zeta) d\zeta.$$
+$$\int _\gamma \left( \frac{1}{2\pi i} \int _{\Gamma _\delta} \frac{f(\zeta)}{\zeta - z} d\zeta \right) dz = \int _{\Gamma _\delta} \left( \frac{1}{2\pi i} \int _\gamma \frac{dz}{\zeta - z} \right) f(\zeta) d\zeta.$$
 
 右端的内层积分是 $-n(\gamma, \zeta) = 0$。因此积分 $(42)$ 为零，这样就对有界的 $\Omega$ 证明了定理。
 - 因为目标是域上解析函数 同调于零 的闭曲线 积分为零，这里其实做的工作就是把 域通过 拆解成有限个小正方形，一方面覆盖了曲线，另一方面在域中
@@ -1318,83 +1318,83 @@ $$\int_\gamma \left( \frac{1}{2\pi i} \int_{\Gamma_\delta} \frac{f(\zeta)}{\zeta
 
 如果 $\Omega$ 是无界的，我们就用 $\Omega$ 与足够包含 $\gamma$ 的圆盘 $|z| < R$ 的交 $\Omega'$ 代替 $\Omega$。在 $\Omega'$ 的余集中的任一点 $a$，或者落在 $\Omega$ 的余集中，或者位于圆盘的外部。不论哪种情况，总有 $n(\gamma, a) = 0$，所以 $\gamma \sim 0 (\bmod \Omega')$。证明可应用于 $\Omega'$，由此证明了定理对任意 $\Omega$ 成立。
 
-### 4.4.6 局部恰当微分
+### 4.4.6 局部恰当微分 Locally Exact Differentials(定理16)
 
 微分 $p dx + q dy$ 称为在 $\Omega$ 中是局部恰当的，如果它在 $\Omega$ 的每一点的某个邻域中是恰当的。不难看出（下面的练习 1）$p dx + q dy$ 为局部恰当的充要条件是：对于所有的 $\gamma = \partial R$，有
 
-$$\int_\gamma p dx + q dy = 0,\tag{43}$$
+$$\int _\gamma p dx + q dy = 0,\tag{43}$$
 
 其中 $R$ 是 $\Omega$ 中的一个矩形。这一条件在 $p dx + q dy = f(z) dz$ 时肯定满足，其中 $f$ 在 $\Omega$ 中解析，于是由定理 15，对任何闭链 $\gamma \sim 0 (\bmod \Omega)$，$(43)$ 成立。
 
 **定理 16** 如果 $p dx + q dy$ 在 $\Omega$ 中局部恰当，则对于 $\Omega$ 中的任意闭链 $\gamma \sim 0$，有下式成立：
 
-$$\int_\gamma p dx + q dy = 0.$$
+$$\int _\gamma p dx + q dy = 0.$$
 
 看来这里并没有修改定理 15 的证明的任何直接途径可使之包容这一更为普遍的情况。因此，我们介绍柯西一般定理的两种证明方法，像本书早先两版中一样, 定理 16 将用 Artin 的证法,柯西定理的个别证明由于其特殊吸引力也被收录.
 
 对于定理16的证明，首先要证明$\gamma$可用一个具有水平边及垂直边的折线$\sigma$来代替，使得每一个局部恰好微分沿着$\sigma$的积分相等，沿着$\gamma$的积分相等。特别是，这一性质意味着对于$\Omega$的余集中的$a$，有$n(\sigma,a)=n(\gamma,a)$，因而$\sigma\sim0$。这样，只要对具有水平边与垂直边的折线证明定理就可以了。
 
-作出$\sigma$，把它当作$\gamma$的一个近似。设由$\gamma$至$\Omega$的余集的距离为$\rho$，如果$\gamma$由$z=z(t)$给出，则函数$z(t)$在闭区间$[a,b]$上是一致连续的。确定$\delta>0$，使得当$|t-t'|<\delta$时，$|z(t)-z(t')|<\rho$，并将$[a,b]$分成子区间，其长度小于$\delta$。$\gamma$的对应子弧$\gamma_i$具有这样的性质：其每一个必包含在半径为$\rho$而整个位于$\Omega$内的一个圆盘之中。$\gamma_i$的端点可在同一圆盘内用由水平线段和垂直线段组成的折线$\sigma_i$来连接。由于所给的微分在圆盘内是恰当的，故
+作出$\sigma$，把它当作$\gamma$的一个近似。设由$\gamma$至$\Omega$的余集的距离为$\rho$，如果$\gamma$由$z=z(t)$给出，则函数$z(t)$在闭区间$[a,b]$上是一致连续的。确定$\delta>0$，使得当$|t-t'|<\delta$时，$|z(t)-z(t')|<\rho$，并将$[a,b]$分成子区间，其长度小于$\delta$。$\gamma$的对应子弧$\gamma _i$具有这样的性质：其每一个必包含在半径为$\rho$而整个位于$\Omega$内的一个圆盘之中。$\gamma _i$的端点可在同一圆盘内用由水平线段和垂直线段组成的折线$\sigma _i$来连接。由于所给的微分在圆盘内是恰当的，故
 
-$$\int_{\sigma_i} p \, dx + q \, dy = \int_{\gamma_i} p \, dx + q \, dy,$$
+$$\int _{\sigma _i} p  dx + q  dy = \int _{\gamma _i} p  dx + q  dy,$$
 
-令$\sigma=\sum \sigma_i$，即得到
+令$\sigma=\sum \sigma _i$，即得到
 
-$$\int_{\sigma} p \, dx + q \, dy = \int_{\gamma} p \, dx + q \, dy,$$
+$$\int _{\sigma} p  dx + q  dy = \int _{\gamma} p  dx + q  dy,$$
 
-为继续证明，我们将构成$\sigma$的所有线段延长至无穷（见图4-11）。这些线段将平面分成若干个有限的矩形$R_i$和一些无界的区域$R_j'$，这些$R_j'$可以看作无穷的矩形。
+为继续证明，我们将构成$\sigma$的所有线段延长至无穷（见图4-11）。这些线段将平面分成若干个有限的矩形$R _i$和一些无界的区域$R _j'$，这些$R _j'$可以看作无穷的矩形。
 
-从每个$R_i$的内部取一点$a_i$，作成闭链
+从每个$R _i$的内部取一点$a _i$，作成闭链
 
-$$\sigma_0 = \sum_i n(\sigma, a_i) \partial R_i,\tag{44}$$
+$$\sigma _0 = \sum _i n(\sigma, a _i) \partial R _i,\tag{44}$$
 
-其中的和取遍所有有限的矩形。系数$n(\sigma,a_i)$是完全确定的，因为没有一个$a_i$位于$\sigma$上。在下面的讨论中，我们也将用到从每个$R_j'$的内部选取的点$a_j'$.
+其中的和取遍所有有限的矩形。系数$n(\sigma,a _i)$是完全确定的，因为没有一个$a _i$位于$\sigma$上。在下面的讨论中，我们也将用到从每个$R _j'$的内部选取的点$a _j'$.
 
-很明显，若$k=i$，$n(\partial R_i,a_k)=1$；若$k\neq i$，$n(\partial R_i,a_k)=0$；类似地，对所有的$j$，$n(\partial R_i,a_j')=0$。据此，由(44)推得$n(\sigma_0,a_i)=n(\sigma,a_i)$和$n(\sigma_0,a_j')=0$。而对于处于$\sigma$所确定的无界区域中的$R_j'$的内部，也有$n(\sigma,a_j')=0$成立, 这样就证明了对于所有的$a=a_i,a=a_j'$ 都有$n(\sigma-\sigma_0,a)=0$
+很明显，若$k=i$，$n(\partial R _i,a _k)=1$；若$k\neq i$，$n(\partial R _i,a _k)=0$；类似地，对所有的$j$，$n(\partial R _i,a _j')=0$。据此，由(44)推得$n(\sigma _0,a _i)=n(\sigma,a _i)$和$n(\sigma _0,a _j')=0$。而对于处于$\sigma$所确定的无界区域中的$R _j'$的内部，也有$n(\sigma,a _j')=0$成立, 这样就证明了对于所有的$a=a _i,a=a _j'$ 都有$n(\sigma-\sigma _0,a)=0$
 - 这里带一撇的都是 无限的矩形和矩形中的点
-- $n(\sigma_0,p)=n(\sum_i n(\sigma, a_i) \partial R_i,p)=\sum_i n(\sigma, a_i)n( \partial R_i,p)$
+- $n(\sigma _0,p)=n(\sum _i n(\sigma, a _i) \partial R _i,p)=\sum _i n(\sigma, a _i)n( \partial R _i,p)$
 
-从$\sigma-\sigma_0$的这一性质，我们要得到$\sigma_0$与$\sigma$除了相差一些彼此互相抵消的线段之外是恒等的。设$\sigma_{ik}$是两个相邻矩形$R_i$与$R_k$的公共边，取定向使得$R_i$位于$\sigma_{ik}$的左边。假定$\sigma-\sigma_0$的简化后的表达式包含因子$c\sigma_{ik}$，则闭链$\sigma-\sigma_0-c\partial R_i$不含$\sigma_{ik}$，由此可知$a_i$与$a_k$关于这个闭链必具有相同的指数index (因为 相邻正方形 公共边不属于 闭链，那么闭链 和 相邻正方形构成的长方形内部 是没有交点，ai,ak属于同一个长方形)。另一方面，这些指数分别是$-c$和$0$，故$c=0$（index唯一，前面的差得到0）。同样的推理适用于$\sigma_{0}$是有限矩形$R_i$与无穷矩形$R_j'$的公共边的情况，这样，一个有限矩形的每一条边以系数零出零出现在$\sigma-\sigma_0$中，从而证明了
+从$\sigma-\sigma _0$的这一性质，我们要得到$\sigma _0$与$\sigma$除了相差一些彼此互相抵消的线段之外是恒等的。设$\sigma _{ik}$是两个相邻矩形$R _i$与$R _k$的公共边，取定向使得$R _i$位于$\sigma _{ik}$的左边。假定$\sigma-\sigma _0$的简化后的表达式包含因子$c\sigma _{ik}$，则闭链$\sigma-\sigma _0-c\partial R _i$不含$\sigma _{ik}$，由此可知$a _i$与$a _k$关于这个闭链必具有相同的指数index (因为 相邻正方形 公共边不属于 闭链，那么闭链 和 相邻正方形构成的长方形内部 是没有交点，ai,ak属于同一个长方形)。另一方面，这些指数分别是$-c$和$0$，故$c=0$（index唯一，前面的差得到0）。同样的推理适用于$\sigma _{0}$是有限矩形$R _i$与无穷矩形$R _j'$的公共边的情况，这样，一个有限矩形的每一条边以系数零出零出现在$\sigma-\sigma _0$中，从而证明了
 - 上面的任意点 卷绕数相等emmm认为证明不了，这里非要多一步也就是 差的闭链，不绕过任何点来才认为相等
 
-$$\sigma=\sum n(\sigma,a_i)\partial R_i.\tag{45}$$
+$$\sigma=\sum n(\sigma,a _i)\partial R _i.\tag{45}$$
 
-现在证明对应系数$n(\sigma,a_i)$不为零的所有$R_i$实际上均含于$\Omega$中。设闭矩形$R_i$中的一点$a$不在$\Omega$内，则因$\sigma\sim0\pmod{\Omega}$，有$n(\sigma,a)=0$。另一方面，$a$与$a_i$之间的连线不与$\sigma$相交，因此，$n(\sigma,a_i)=n(\sigma,a)=0$。于是从局部恰当性可知，$Pdx+Qdy$在(45)中出现的任何$\partial R_i$上的积分等于零。因此
+现在证明对应系数$n(\sigma,a _i)$不为零的所有$R _i$实际上均含于$\Omega$中。设闭矩形$R _i$中的一点$a$不在$\Omega$内，则因$\sigma\sim0\pmod{\Omega}$，有$n(\sigma,a)=0$。另一方面，$a$与$a _i$之间的连线不与$\sigma$相交，因此，$n(\sigma,a _i)=n(\sigma,a)=0$。于是从局部恰当性可知，$Pdx+Qdy$在(45)中出现的任何$\partial R _i$上的积分等于零。因此
 
-$$\int_{\sigma}Pdx+Qdy=0,$$
+$$\int _{\sigma}Pdx+Qdy=0,$$
 
 于是定理16得证。
 
 思路
-- 化局部曲为直，直之后变成直接的叠加$\sigma=\sum \sigma_i$，和神奇的 每个小方格 边界链的 $\sigma_0 = \sum_i n(\sigma, a_i) \partial R_i$带权叠加，证明其相等，而后面的可以小方格累计的形式证明
+- 化局部曲为直，直之后变成直接的叠加$\sigma=\sum \sigma _i$，和神奇的 每个小方格 边界链的 $\sigma _0 = \sum _i n(\sigma, a _i) \partial R _i$带权叠加，证明其相等，而后面的可以小方格累计的形式证明
 - 这里我想说，看起来这么多，但和4.1中间 长方形拆小长方形，弯曲的线拆成合并成圆的核心思想一样的，都是1拆成更小的环，2贴着的地方利用正负抵消掉
 - 也就有了 局部处处恰当，那么，其中任意闭链 同调于0
 - 这里我感觉还是要有一点紧的东西去控制有限，感觉证明里没有
 
-### 4.4.7 多连通域
+### 4.4.7 多连通域 Multiply Connected Regions
 
 一个不是单连通的域称为是多连通的multiply connected。更确切点说，如果一个域$\Omega$的余集恰具有有限的连通数$n$。如果它的余集具有无穷多个分集，则称$\Omega$具有无穷的连通数。用稍不严格但更能示意的话来说，那就是在黎曼球面上穿$n$个孔就得连通数为$n$的域。
 
-在连通数为有限的情形，设$A_1,A_2,\ldots,A_n$为$\Omega$的余集的分集，并设$\infty$属于$A_n$。如果$\gamma$为$\Omega$内的任意闭链，则就像在定理14中一样，可以证明，当$a$在任意分集$A_i$上变化时，$n(\gamma,a)$为常数，而且在$A_n$上$n(\gamma,a)=0$。不仅如此，如果照样作出定理14证明中所用的构造，则可得闭链$\gamma_i,i=1,\ldots,n-1$，使得对于$a\in A_i$，有$n(\gamma_i,a)=1$，而对于所有其他在$\Omega$外部的点，有$n(\gamma_i,a)=0$。
-- 注意这里 $A_{1\cdots n}$都是$\Omega$ 外部的点,虽然 从 看上去在$\Omega$里面，但是从点集的属于情况，是$\Omega$外部, 说视觉感，就是$\Omega$中的曲线，仅包裹$A_i$
+在连通数为有限的情形，设$A _1,A _2,\ldots,A _n$为$\Omega$的余集的分集，并设$\infty$属于$A _n$。如果$\gamma$为$\Omega$内的任意闭链，则就像在定理14中一样，可以证明，当$a$在任意分集$A _i$上变化时，$n(\gamma,a)$为常数，而且在$A _n$上$n(\gamma,a)=0$。不仅如此，如果照样作出定理14证明中所用的构造，则可得闭链$\gamma _i,i=1,\ldots,n-1$，使得对于$a\in A _i$，有$n(\gamma _i,a)=1$，而对于所有其他在$\Omega$外部的点，有$n(\gamma _i,a)=0$。
+- 注意这里 $A _{1\cdots n}$都是$\Omega$ 外部的点,虽然 从 看上去在$\Omega$里面，但是从点集的属于情况，是$\Omega$外部, 说视觉感，就是$\Omega$中的曲线，仅包裹$A _i$
 
-$$\gamma\sim c_1\gamma_1+c_2\gamma_2+\cdots+c_{n-1}\gamma_{n-1}.$$
+$$\gamma\sim c _1\gamma _1+c _2\gamma _2+\cdots+c _{n-1}\gamma _{n-1}.$$
 
-因此，每个闭链同调于闭链$\gamma_1,\ldots,\gamma_{n-1}$的一个线性组合。这个线性组合是唯一确定的，因为如果同时有两个线性组合同调于同一个闭链，则它们的差必是同调于$0$的一个线性组合。但闭链$c_1\gamma_1+c_2\gamma_2+\cdots+c_{n-1}\gamma_{n-1}$显然环绕$A_i$中的点$c_i$次，因此它不能同调于$0$，除非所有的$c_i$都等于零。根据这一情况，我们称闭链$\gamma_1,\gamma_2,\ldots,\gamma_{n-1}$组成域$\Omega$的同调基。同调基不是唯一的，但根据线性代数的基本定理可得结论: 每一个同调基都具有同样个数的元素。因此, 具有有限个同调基的每一域必具有有限的连通数, 而基元素的数目较连通数少 1.(不算含有无穷大的那个域$A_n$)
+因此，每个闭链同调于闭链$\gamma _1,\ldots,\gamma _{n-1}$的一个线性组合。这个线性组合是唯一确定的，因为如果同时有两个线性组合同调于同一个闭链，则它们的差必是同调于$0$的一个线性组合。但闭链$c _1\gamma _1+c _2\gamma _2+\cdots+c _{n-1}\gamma _{n-1}$显然环绕$A _i$中的点$c _i$次，因此它不能同调于$0$，除非所有的$c _i$都等于零。根据这一情况，我们称闭链$\gamma _1,\gamma _2,\ldots,\gamma _{n-1}$组成域$\Omega$的同调基。同调基不是唯一的，但根据线性代数的基本定理可得结论: 每一个同调基都具有同样个数的元素。因此, 具有有限个同调基的每一域必具有有限的连通数, 而基元素的数目较连通数少 1.(不算含有无穷大的那个域$A _n$)
 
-对于 $\Omega$ 内的任意解析函数 $f(z)$, 根据定理 18 可得
+对于 $\Omega$ 内的任意解析函数 $f(z)$, 根据定理 18（在后面） 可得
 
-$$\int_{\gamma} f \, dz = c_1 \int_{\gamma_1} f \, dz + c_2 \int_{\gamma_2} f \, dz + \cdots + c_{n-1} \int_{\gamma_{n-1}} f \, dz.$$
+$$\int _{\gamma} f  dz = c _1 \int _{\gamma _1} f  dz + c _2 \int _{\gamma _2} f  dz + \cdots + c _{n-1} \int _{\gamma _{n-1}} f  dz.$$
 
 数
 
-$$P_i = \int_{\gamma_i} f \, dz$$
+$$P _i = \int _{\gamma _i} f  dz$$
 
-只依赖于函数 $f$, 而与 $\gamma$ 无关。这些数称为微分 $f \, dz$ 的周期periodicity的模modules, 或简称为不定积分的周期。我们已证明 $f(z)$ 沿任意闭链的积分是周期的线性组合, 组合中的系数都是整数, 而且沿着一段由 $z_0$ 至 $z$ 的弧的积分除周期的倍数外可完全确定。周期等于零是单值不定积分存在的必要和充分条件。
+只依赖于函数 $f$, 而与 $\gamma$ 无关。这些数称为微分 $f  dz$ 的周期periodicity的模modules, 或简称为不定积分的周期。我们已证明 $f(z)$ 沿任意闭链的积分是周期的线性组合, 组合中的系数都是整数, 而且沿着一段由 $z _0$ 至 $z$ 的弧的积分除周期的倍数外可完全确定。周期等于零是单值不定积分存在的必要和充分条件。
 
-为了说明这一点, 让我们考察由 $r_1 < |z| < r_2$ 定义的一个圆环的最简单情形。余集的分集为 $|z| \leqslant r_1$ 及 $|z| \geqslant r_2$, 我们所考虑的将包括退化情形 $r_1 = 0$ 及 $r_2 = \infty$ 在内。圆环是双连通的, 同调基由任意圆 $|z| = r, r_1 < r < r_2$ 组成。如果令这个圆为 $C$, 则圆环中的任意闭链将满足条件 $\gamma \sim n C$, 其中 $n = n(\gamma, 0)$。一个解析函数沿闭链的积分等于单周期
+为了说明这一点, 让我们考察由 $r _1 < |z| < r _2$ 定义的一个圆环的最简单情形。余集的分集为 $|z| \leqslant r _1$ 及 $|z| \geqslant r _2$, 我们所考虑的将包括退化情形 $r _1 = 0$ 及 $r _2 = \infty$ 在内。圆环是双连通的, 同调基由任意圆 $|z| = r, r _1 < r < r _2$ 组成。如果令这个圆为 $C$, 则圆环中的任意闭链将满足条件 $\gamma \sim n C$, 其中 $n = n(\gamma, 0)$。一个解析函数沿闭链的积分等于单周期
 
-$$P = \int_C f \, dz$$
+$$P = \int _C f  dz$$
 
 的一个倍数, 其值当然不依赖于半径 $r$.
 
@@ -1402,9 +1402,9 @@ $$P = \int_C f \, dz$$
 
 [TODO]
 
-1. 不用定理 16, 证明 $p \, dx + q \, dy$ 在 $\Omega$ 中局部恰当的充要条件是, 对边平行于坐标轴的每一个矩形 $R \subseteq \Omega$, 有
+1. 不用定理 16, 证明 $p  dx + q  dy$ 在 $\Omega$ 中局部恰当的充要条件是, 对边平行于坐标轴的每一个矩形 $R \subseteq \Omega$, 有
 
-$\int_{\partial R} p \, dx + q \, dy = 0.$
+$\int _{\partial R} p  dx + q  dy = 0.$
 
 2. 证明从一个单连通域中移去 $m$ 个点所成的区域是 $m+1$ 连通的, 并求一个同调基。
 
@@ -1418,80 +1418,80 @@ $\int \frac{dz}{\sqrt{1 - z^2}}$
 
 的可能值。
 
-## 4.5 留数计算
+## 4.5 留数计算 The Calculus of Residues
 
 上一节的结果表明, 解析函数沿闭曲线的线积分的确定可以归结为周期的确定。在某些情形下，周期可以不通过计算或通过很少的计算而求得，因此，我们有了一种在很多情况下不必通过计算即能求出积分的方法，这在实用上，以及在理论的进一步发展上都具有重大的意义。
 
 为了使这一方法更加系统化, 复积分理论的创始人柯西 (Cauchy) 提出了一个简单的形式体系, 称为留数计算法the calculus of residues。从本书的角度来看, 留数理论主要是 4.4 节中所证明的一些结果在某些特殊的简单场合下的应用.
 
-### 4.5.1 留数定理
+### 4.5.1 留数定理 The Residue Theorem(定理17)
 
 首先, 我们按照 4.4 节的一般性定理回顾一下早先介绍的一些结果。很明显, 凡是可作为圆盘中柯西定理的推论的所有结果对于一切包含同调于 0 的闭链的任意域都保持有效。举一个典型的例子来说, 我们可将柯西积分公式表达成如下形式:
 
 如果 $f(z)$ 在域 $\Omega$ 内解析, 那么对于每一个在 $\Omega$ 同调于 0 的闭链 $\gamma$, 必有
 
-$$n(\gamma, a) f(a)=\frac{1}{2 \pi i} \int_{\gamma} \frac{f(z) d z}{z-a}$$
+$$n(\gamma, a) f(a)=\frac{1}{2 \pi i} \int _{\gamma} \frac{f(z) d z}{z-a}$$
 
 这一定理的证明是定理 6 的证明的重复。这里应当指出, 在有可去奇点的情形, 当然用不着再对定理 15 作另外的证明。实际上, 我们在讨论局部行为时已经证明了所有可去奇点都可不予理会。
 
-现在我们来讨论一个在域 $\Omega$ 内除了若干孤立奇点外到处解析的函数 $f(z)$ 。首先, 假设函数只有有限个奇点, 记为 $a_{1}, a_{2}, \cdots, a_{n}$ 。弃去点 $a_{j}$ 后所成的域记为 $\Omega^{\prime}$ 。
+现在我们来讨论一个在域 $\Omega$ 内除了若干孤立奇点外到处解析的函数 $f(z)$ 。首先, 假设函数只有有限个奇点, 记为 $a _{1}, a _{2}, \cdots, a _{n}$ 。弃去点 $a _{j}$ 后所成的域记为 $\Omega^{\prime}$ 。
 
-对于每一个 $a_{j}$, 存在一个 $\delta_{j}>0$, 使得双连通域 $0<|z-a_{j}|<\delta_{j}$ 包含于 $\Omega^{\prime}$ 之中。以 $a_{j}$ 为圆心, 作一个半径小于 $\delta_{j}$ 的圆 $C_{j}$, 并令 $f(z)$ 的对应周期为
+对于每一个 $a _{j}$, 存在一个 $\delta _{j}>0$, 使得双连通域 $0<|z-a _{j}|<\delta _{j}$ 包含于 $\Omega^{\prime}$ 之中。以 $a _{j}$ 为圆心, 作一个半径小于 $\delta _{j}$ 的圆 $C _{j}$, 并令 $f(z)$ 的对应周期为
 
-$$P_{j}=\int_{C_{j}} f(z) d z, \tag{46}$$
+$$P _{j}=\int _{C _{j}} f(z) d z, \tag{46}$$
 
-特殊的函数 $1 /(z-a_{j})$ 的周期为 $2 \pi i$ 。因此, 如果令 $R_{j}=P_{j} / 2 \pi i$, 则函数
+特殊的函数 $1 /(z-a _{j})$ 的周期为 $2 \pi i$ 。因此, 如果令 $R _{j}=P _{j} / 2 \pi i$, 则函数
 
-$$f(z)-\frac{R_{j}}{z-a_{j}}$$
+$$f(z)-\frac{R _{j}}{z-a _{j}}$$
 
-的周期等于零。导致这一结果的常数 $R_{j}$ 称为 $f(z)$ 在点 $a_{j}$ 的留数。定义如下:
+的周期等于零。导致这一结果的常数 $R _{j}$ 称为 $f(z)$ 在点 $a _{j}$ 的留数。定义如下:
 
 定义 3 设 $a$ 是函数 $f(z)$ 的孤立奇点, $R$ 是一个复数, 如果函数 $f(z)-\frac{R}{z-a}$ 是圆环 $0<|z-a|<\delta$ 内某个单值解析函数的导数, 则确定的复数 $R$ 就称为函数 $f(z)$ 在孤立奇点 $a$ 上的留数。
 
 有时也用更为明显的记法: $R=\underset{z=a}{\operatorname{Res}} f(z)$ 。
 - 这个感觉 就是 $f(z)$拆分母成分母只有1次，然后分子就是R,当有多重的时候，会拆成分母1次到多次幂， 多次幂是不能拆成1次幂，那么就是1次幂的分子
-- 例子 $\frac{1}{2\pi i}\int_{|z|=2} \frac{1}{(z-1)^3}+\frac{1}{(z-1)} dz$
-- $f''(1) = \frac{2!}{2\pi i} \int_{|z|=2} \frac{1}{(z-1)^{2+1}}dz$
-- $f(1) = \frac{0!}{2\pi i} \int_{|z|=2} \frac{1}{(z-1)^{0+1}}dz$
+- 例子 $\frac{1}{2\pi i}\int _{|z|=2} \frac{1}{(z-1)^3}+\frac{1}{(z-1)} dz$
+- $f''(1) = \frac{2!}{2\pi i} \int _{|z|=2} \frac{1}{(z-1)^{2+1}}dz$
+- $f(1) = \frac{0!}{2\pi i} \int _{|z|=2} \frac{1}{(z-1)^{0+1}}dz$
 - 而这两个$f(z)=1$是常函数，所以只有 1次的 结果是非零，等于分子
 
 设 $\gamma$ 为 $\Omega^{\prime}$ 内的一个闭链, $\gamma$ 关于 $\Omega$ 同调于 0 , 则 $\gamma$ 必满足关于 $\Omega^{\prime}$ 的同调关系
 
-$$\gamma \sim \sum_{j} n\left(\gamma, a_{j}\right) C_{j}$$
+$$\gamma \sim \sum _{j} n\left(\gamma, a _{j}\right) C _{j}$$
 
-实际上, 很容易证明点 $a_{j}$ 以及 $\Omega$ 外部的所有点关于两个闭链是同阶的。根据同调关系, 应用(46)式的记法, 得
+实际上, 很容易证明点 $a _{j}$ 以及 $\Omega$ 外部的所有点关于两个闭链是同阶的。根据同调关系, 应用(46)式的记法, 得
 
-$$\int_{\gamma} f d z=\sum_{j} n(\gamma, a_{j}) \int_{C_j} f d z=\sum_{j} n(\gamma, a_{j}) P_{j}$$
+$$\int _{\gamma} f d z=\sum _{j} n(\gamma, a _{j}) \int _{C _j} f d z=\sum _{j} n(\gamma, a _{j}) P _{j}$$
 
-而由于 $P_{j}=2 \pi i \cdot R_{j}$, 故最后得
+而由于 $P _{j}=2 \pi i \cdot R _{j}$, 故最后得
 
-$$\frac{1}{2 \pi i} \int_{\gamma} f d z=\sum_{j} n(\gamma, a_{j}) R_{j}$$
+$$\frac{1}{2 \pi i} \int _{\gamma} f d z=\sum _{j} n(\gamma, a _{j}) R _{j}$$
 
 这就是留数定理, 
 - 左边带有系数关于$\gamma$的积分 = 所有奇点， 环绕数*留数 的和
 
-不过上面我们作了函数只有有限个奇点的限制性假设. 在一般情形, 我们只要证明除了在有限个点 $a_{j}$ 之外, 到处有 $n(\gamma, a_{j})=0$, 其余的证明与上面一样. 这一断言可以根据惯用的推理来确立. 使得 $n(\gamma, a)=0$ 的所有点 $a$ 的集合是一个开集, 并且包含了一个大圆外部的所有点. 因此其余集是一个紧致集, 所以它不能包含多于有限个孤立点 $a_{j}$. 这说明 $n(\gamma, a_{j}) \neq 0$ 只对有限个奇点成立, 从而有:
+不过上面我们作了函数只有有限个奇点的限制性假设. 在一般情形, 我们只要证明除了在有限个点 $a _{j}$ 之外, 到处有 $n(\gamma, a _{j})=0$, 其余的证明与上面一样. 这一断言可以根据惯用的推理来确立. 使得 $n(\gamma, a)=0$ 的所有点 $a$ 的集合是一个开集, 并且包含了一个大圆外部的所有点. 因此其余集是一个紧致集, 所以它不能包含多于有限个孤立点 $a _{j}$. 这说明 $n(\gamma, a _{j}) \neq 0$ 只对有限个奇点成立, 从而有:
 
-定理 17 设 $f(z)$ 在域 $\Omega$ 内除了孤立奇点 $a_{j}$ 之外到处解析, 则对于任意在 $\Omega$ 内同调于 0 而不通过 $a_{j}$ 中任一点的闭链 $\gamma$, 必有
+**定理 17** 设 $f(z)$ 在域 $\Omega$ 内除了孤立奇点 $a _{j}$ 之外到处解析, 则对于任意在 $\Omega$ 内同调于 0 而不通过 $a _{j}$ 中任一点的闭链 $\gamma$, 必有
 
-$$\frac{1}{2 \pi i} \int_{\gamma} f(z) d z=\sum_{j} n(\gamma, a_{j}) \operatorname{Res}_{z=a_{j}} f(z) \tag{47}$$
+$$\frac{1}{2 \pi i} \int _{\gamma} f(z) d z=\sum _{j} n(\gamma, a _{j}) \operatorname{Res} _{z=a _{j}} f(z) \tag{47}$$
 
-在应用中, 常遇到的情形是 $n(\gamma, a_{j})=0$ 或 $n(\gamma, a_{j})=1$. 于是
+在应用中, 常遇到的情形是 $n(\gamma, a _{j})=0$ 或 $n(\gamma, a _{j})=1$. 于是
 
-$$\frac{1}{2 \pi i} \int_{\gamma} f(z) d z=\sum_{z=a_{j}} \operatorname{Res} f(z)$$
+$$\frac{1}{2 \pi i} \int _{\gamma} f(z) d z=\sum _{z=a _{j}} \operatorname{Res} f(z)$$
 
-式中的和是对 $\gamma$ 所围的全部奇点来求的.($a_j$的可选范围和上面不一样)
+式中的和是对 $\gamma$ 所围的全部奇点来求的.($a _j$的可选范围和上面不一样)
 
 如果我们没有一个简单的方法来确定留数, 那么留数定理的价值就不大. 对于本性奇点来说, 具有任何实用价值的方法是没有的, 因此在有本性奇点的场合, 留数定理很少应用. 至于极点的情形就完全不同. 考察展开式
 
-$$f(z)=B_{h}(z-a)^{-h}+\cdots+B_{1}(z-a)^{-1}+\varphi(z)$$
+$$f(z)=B _{h}(z-a)^{-h}+\cdots+B _{1}(z-a)^{-1}+\varphi(z)$$
 
-可知留数就等于系数 $B_{1}$. 事实上, 当略去项 $B_{1}(z-a)^{-1}$ 时, 余下的显然是一个导数. 因为极点的奇部常是已知的, 或者是很容易求得的, 所以可得一个极为简单的求留数的方法. 对于单极点来说, 方法更加直接, 因为这时的留数就等于函数 $(z-a) f(z)$ 在 $z=a$ 处的值. 例如, 让我们来求函数
+可知留数就等于系数 $B _{1}$. 事实上, 当略去项 $B _{1}(z-a)^{-1}$ 时, 余下的显然是一个导数. 因为极点的奇部常是已知的, 或者是很容易求得的, 所以可得一个极为简单的求留数的方法. 对于单极点来说, 方法更加直接, 因为这时的留数就等于函数 $(z-a) f(z)$ 在 $z=a$ 处的值. 例如, 让我们来求函数
 - 和上面讲留数 的一致，只用关心分母1次的情况
 
 $$\frac{e^{z}}{(z-a)(z-b)}$$
 
-在极点 $a$ 及 $b \neq a$ 上的留数. 显然, 在 $a$ 上的留数等于 $e^{a}/(a-b)$, 而在 $b$ 上的留数则为 $e^{b}/(b-a)$. 如果 $b=a$, 则情形稍复杂, 应先用泰勒定理将 $e^{z}$ 展开为 $e^{z}=e^{a}+e^{a}(z-a)+f_{2}(z)(z-a)^{2}$. 除以 $(z-a)^{2}$, 于是得 $e^{z}/(z-a)^{2}$ 在 $z=a$ 上的留数为 $e^{a}$.
+在极点 $a$ 及 $b \neq a$ 上的留数. 显然, 在 $a$ 上的留数等于 $e^{a}/(a-b)$, 而在 $b$ 上的留数则为 $e^{b}/(b-a)$. 如果 $b=a$, 则情形稍复杂, 应先用泰勒定理将 $e^{z}$ 展开为 $e^{z}=e^{a}+e^{a}(z-a)+f _{2}(z)(z-a)^{2}$. 除以 $(z-a)^{2}$, 于是得 $e^{z}/(z-a)^{2}$ 在 $z=a$ 上的留数为 $e^{a}$.
 
 注 在按照较为经典的方法引入柯西定理、积分公式和留数定理时，并不提到同调性，也不会用到指数的概念. 在经典方法中，定理中的曲线 $\gamma$ 假定为 $\Omega$ 的一个子域的全部边界，其取向的选定是使子域位于 $\Omega$ 的左边. 在严格的著作中，要花费很大的力量来证明这些直观概念具有精确意义. 现在这一方法的主要目的是需要腾出时间和注意力来研究主题以外更为精致的问题.
 
@@ -1504,33 +1504,33 @@ $$\frac{e^{z}}{(z-a)(z-b)}$$
 
 如果 $\gamma$ 是 $\Omega$ 的围线, 并设 $f(z)$ 在集 $\Omega + \gamma$ 上解析, 则
 
-$$\int_{\gamma} f(z) \, dz = 0,$$
+$$\int _{\gamma} f(z)  dz = 0,$$
 
 而且对所有的 $z \in \Omega$, 有
 
-$$f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(\zeta)}{\zeta - z} \, d\zeta.$$
+$$f(z) = \frac{1}{2\pi i} \int _{\gamma} \frac{f(\zeta)}{\zeta - z}  d\zeta.$$
 
 如果 $f(z)$ 在 $\Omega + \gamma$ 上除了 $\Omega$ 中的孤立奇点外到处解析, 则
 
-$$\frac{1}{2\pi i} \int_{\gamma} f(z) \, dz = \sum_j \text{Res}_{z=a_j} f(z),$$
+$$\frac{1}{2\pi i} \int _{\gamma} f(z)  dz = \sum _j \text{Res} _{z=a _j} f(z),$$
 
-这里该式是关于所有奇点 $a_j \in \Omega$ 取和.
+这里该式是关于所有奇点 $a _j \in \Omega$ 取和.
 
-作为 $\Omega$ 的围线的闭链, $\gamma$ 必须包含集合论意义上 $\Omega$ 的边界. 事实上, 如果 $z_0$ 位于 $\Omega$ 的边界上, 则 $z_0$ 的每个邻域必同时包含属于 $\Omega$ 的点及不属于 $\Omega$ 的点. 如果这样的邻域中没有 $\gamma$ 上的点, 那么 $n(\gamma, z)$ 将在邻域中有定义且等于常数. 这与定义相矛盾, 因此, $z_0$ 的每个邻域必与 $\gamma$ 相交, 由于 $\gamma$ 是闭集, 故 $z_0$ 必在 $\gamma$ 上.
+作为 $\Omega$ 的围线的闭链, $\gamma$ 必须包含集合论意义上 $\Omega$ 的边界. 事实上, 如果 $z _0$ 位于 $\Omega$ 的边界上, 则 $z _0$ 的每个邻域必同时包含属于 $\Omega$ 的点及不属于 $\Omega$ 的点. 如果这样的邻域中没有 $\gamma$ 上的点, 那么 $n(\gamma, z)$ 将在邻域中有定义且等于常数. 这与定义相矛盾, 因此, $z _0$ 的每个邻域必与 $\gamma$ 相交, 由于 $\gamma$ 是闭集, 故 $z _0$ 必在 $\gamma$ 上.
 
 上面叙述的逆不成立, 因为 $\gamma$ 上的一点可以有一个不与 $\Omega$ 相交的邻域. 通常, 应试着选择 $\gamma$, 使它与 $\Omega$ 的边界完全重合, 但对于柯西定理及有关研究, 这一假设是不需要的.
 
-### 4.5.2 辐角原理
+### 4.5.2 辐角原理 The Argument Principle(定理18)
 
 柯西积分公式可以看成是留数定理的特例. 事实上, 函数 $f(z)/(z - a)$ 在 $z = a$ 处具有一个单极点, 其留数为 $f(a)$, 应用公式 (47), 即得积分公式.
 
-在定理 10 的证明中有留数定理的另一个应用, 应用这一定理可以确定一个解析函数的零点个数. 对于一个 $h$ 阶零点, 可令 $f(z) = (z - a)^h f_h(z)$, 且 $f_h(a) \neq 0$, 得 $f'(z) = h(z - a)^{h - 1} f_h(z) + (z - a)^h f_h'(z)$, 故 $f'/f$ 具有一个单极点, 其上的留数为 $h$. 在公式 (32) 中, 这一留数要用若干项的对应重数来计算.
+在定理 10 的证明中有留数定理的另一个应用, 应用这一定理可以确定一个解析函数的零点个数. 对于一个 $h$ 阶零点, 可令 $f(z) = (z - a)^h f _h(z)$, 且 $f _h(a) \neq 0$, 得 $f'(z) = h(z - a)^{h - 1} f _h(z) + (z - a)^h f _h'(z)$, 故 $f'/f$ 具有一个单极点, 其上的留数为 $h$. 在公式 (32) 中, 这一留数要用若干项的对应重数来计算.
 
 现在我们可以把定理 10 推广到亚纯函数的情形. 如果 $f(z)$ 具有一个 $h$ 阶极点, 则用上面同样的计算, 以 $-h$ 代 $h$, 得 $f'/f$ 的留数 $-h$. 于是得如下定理:
 
-**定理 18** 如果 $f(z)$ 是 $\Omega$ 内的亚纯函数, 具有零点 $a_j$ 和极点 $b_k$, 则对于每一个在 $\Omega$ 内同调于 0 而不通过任意零点或极点的闭链 $\gamma$, 必有
+**定理 18** 如果 $f(z)$ 是 $\Omega$ 内的亚纯函数, 具有零点 $a _j$ 和极点 $b _k$, 则对于每一个在 $\Omega$ 内同调于 0 而不通过任意零点或极点的闭链 $\gamma$, 必有
 
-$$\frac{1}{2\pi i}\int_{\gamma} \frac{f'(z)}{f(z)}dz = \sum_j n(\gamma, a_j) - \sum_k n(\gamma, b_k) \tag{48}$$
+$$\frac{1}{2\pi i}\int _{\gamma} \frac{f'(z)}{f(z)}dz = \sum _j n(\gamma, a _j) - \sum _k n(\gamma, b _k) \tag{48}$$
 
 这里，重零点及重极点应按其阶数重复计数。(48)式中的和是有限的。
 
@@ -1547,35 +1547,37 @@ $$\left|\frac{g(z)}{f(z)}-1\right| < 1$$
 
 儒歇定理的一个典型应用如下：设我们要求函数$f(z)$在圆盘$|z| \leqslant R$内的零点数。应用泰勒定理，有
 
-$$f(z) = P_{n-1}(z) + z^n f_n(z)$$
+$$f(z) = P _{n-1}(z) + z^n f _n(z)$$
 
-其中$P_{n-1}$是一个$n-1$次多项式。对于适当选择的$n$，可以证明不等式$R^n |f_n(z)| < |P_{n-1}(z)|$在$|z|=R$上成立(emmmmmmm 这里怎么适当，是因为左边是余项，又有限，所以 左边会趋于0吗，而右边趋于f(z) )。于是$f(z)$在$|z| \leqslant R$内的零点数将和多项式$P_{n-1}(z)=0$的零点数相同，而这一零点数可以用多项式方程$P_{n-1}(z)=0$的近似解来确定。
+其中$P _{n-1}$是一个$n-1$次多项式。对于适当选择的$n$，可以证明不等式$R^n |f _n(z)| < |P _{n-1}(z)|$在$|z|=R$上成立(emmmmmmm 这里怎么适当，是因为左边是余项，又有限，所以 左边会趋于0吗，而右边趋于f(z) )。于是$f(z)$在$|z| \leqslant R$内的零点数将和多项式$P _{n-1}(z)=0$的零点数相同，而这一零点数可以用多项式方程$P _{n-1}(z)=0$的近似解来确定。
 
 定理18可按如下方式推广：如果$g(z)$在$\Omega$内解析，则$g(z)\frac{f'(z)}{f(z)}$在一个$h$阶零点$a$上的留数为$h g(a)$，在一个极点上的留数为$-h g(a)$。于是得到公式：
-- emmm 这个g怎么塞进去的, 想了一下还是有道理，其实 $f'/f$的拆分，的环上积分，能得到$n(\gamma,)$的形式，那么这里，其实类似的想，和前面$f(a)=\frac{1}{2\pi i}\int_{\gamma} \frac{f(z)}{z-a} dz$就是一样的了
+- emmm 这个g怎么塞进去的, 想了一下还是有道理，其实 $f'/f$的拆分，的环上积分，能得到$n(\gamma,)$的形式，那么这里，其实类似的想，和前面$f(a)=\frac{1}{2\pi i}\int _{\gamma} \frac{f(z)}{z-a} dz$就是一样的了
 
-$$\frac{1}{2\pi i}\int_{\gamma} g(z)\frac{f'(z)}{f(z)}dz = \sum_j n(\gamma, a_j)g(a_j) - \sum_k n(\gamma, b_k)g(b_k),\tag{49}$$
+$$\frac{1}{2\pi i}\int _{\gamma} g(z)\frac{f'(z)}{f(z)}dz = \sum _j n(\gamma, a _j)g(a _j) - \sum _k n(\gamma, b _k)g(b _k),\tag{49}$$
 
-这一结果在研究反函数时很重要。使用定理11的记法，我们知道方程$f(z)=w$($|w-w_0|< \delta$)在圆盘$|z-z_0| < \varepsilon$内具有$n$个根$z_j(w)$。应用公式(49)，令$g(z)=z$，则得
+这一结果在研究反函数时很重要。使用定理11的记法，我们知道方程$f(z)=w$($|w-w _0|< \delta$)在圆盘$|z-z _0| < \varepsilon$内具有$n$个根$z _j(w)$。应用公式(49)，令$g(z)=z$，则得
 
-$$\sum_{j=1}^n z_j(w) = \frac{1}{2\pi i}\int_{|z-z_0|=\varepsilon} \frac{f'(z)}{f(z)-w} zdz$$
+$$\sum _{j=1}^n z _j(w) = \frac{1}{2\pi i}\int _{|z-z _0|=\varepsilon} \frac{f'(z)}{f(z)-w} zdz$$
 - wow这样可以算 所有根的和，类似的$g(z)=z^2$可以算所有根的平方和
 
 如果$n=1$，则得反函数$f^{-1}(w)$的显表示式为
 
-$$f^{-1}(w) = \frac{1}{2\pi i}\int_{|z-z_0|=\varepsilon} \frac{f'(z)}{f(z)-w} z dz$$
+$$f^{-1}(w) = \frac{1}{2\pi i}\int _{|z-z _0|=\varepsilon} \frac{f'(z)}{f(z)-w} z dz$$
 - 哇, 这样算根 好妙啊(虽然不知道呀右边好不好算，但是这是一个 神奇的求根公式!?)
 - 而且你可以变动w, f(z)=w 的根的和，的m次幂的和都可以得到
 
 如果对$g(z)=z^m$应用公式(49)，则方程(50)变为
 
-$$\sum_{j=1}^n z_j(w)^m = \frac{1}{2\pi i}\int_{|z-z_0|=\varepsilon} \frac{f'(z)}{f(z)-w} z^m dz$$
+$$\sum _{j=1}^n z _j(w)^m = \frac{1}{2\pi i}\int _{|z-z _0|=\varepsilon} \frac{f'(z)}{f(z)-w} z^m dz$$
 
-不难证明，上式的右端在$|w-w_0| < \delta$内是$w$的解析函数，由此可知，根$z_j(w)$的乘幂的和，都是$w$的单值解析函数。但是大家知道，初等对称函数都可表示为乘幂的和的多项式，因此它们都是解析的，于是知道 $z_j(w)$ 是一个多项式方程  
+不难证明，上式的右端在$|w-w _0| < \delta$内是$w$的解析函数，由此可知，根$z _j(w)$的乘幂的和，都是$w$的单值解析函数。但是大家知道，初等对称函数都可表示为乘幂的和的多项式(高等代数里的对称多项式 牛顿恒等式)，因此它们都是解析的，于是知道 $z _j(w)$ 是一个多项式方程  
 
-$$z^n + a_1(w)z^{n-1} + \cdots + a_{n-1}(w)z + a_n(w) = 0$$
+$$z^n + a _1(w)z^{n-1} + \cdots + a _{n-1}(w)z + a _n(w) = 0$$
 
-的根。这一方程的系数都是 $\left|w - w_0\right| < δ$ 中的 $w$ 的解析函数。
+的根。这一方程的系数都是 $\left|w - w _0\right| < δ$ 中的 $w$ 的解析函数。
+- 这里$a _i(w)$是 一些$m$幂次对称式的组合，例如 $(z-z _0)(z-z _1)(z-z _2)=z^3-(z _0+z _1+z _2)z^2+(z _0z _1+z _1z _2+z _2z _3)z+z _0z _1z _3=z^3-s _1z^2+\frac{1}{2}(s _1^2-s _2)z-\frac{1}{6}(s _1^3-3s _1s _2+2s _3)$
+- 具体知识点见高等代数 对称多项式
 
 
 #### 4.5.2 练 习
@@ -1593,7 +1595,7 @@ $$z^n + a_1(w)z^{n-1} + \cdots + a_{n-1}(w)z + a_n(w) = 0$$
 
 3. [TODO] 方程 $z^4 + 8z^3 + 3z^2 + 8z + 3 = 0$ 在右半平面内有几个根？提示：作虚轴的象，再对一个大的半圆盘应用辐角原理。
 
-### 4.5.3 定积分的计算
+### 4.5.3 定积分的计算 Evaluation of Definite Integrals
 
 留数定理为定积分的计算提供了一个极为有效的工具。这一方法在不可能明显地求得不定积分的情形下尤为重要，即使普通微积分方法可以使用，但应用留数也通常要省力得多。复积分的计算显然相当于两个定积分的计算，但是有了留数计算，复积分较之实积分反而更加方便。
 
@@ -1601,21 +1603,21 @@ $$z^n + a_1(w)z^{n-1} + \cdots + a_{n-1}(w)z + a_n(w) = 0$$
 
 1）形如下式的积分可以很容易地用留数来计算：
 
-$$\int_{0}^{2\pi} R(\cosθ, \sinθ) dθ,\tag{51}$$
+$$\int _{0}^{2\pi} R(\cosθ, \sinθ) dθ,\tag{51}$$
 
 其中被积函数是 $\cosθ$ 及 $\sinθ$ 的有理函数。当然，这些积分也可以用普通积分法来计算，但一般都很费力。作代换 $z = e^{iθ}$，就可将（51）式变为如下形式的线积分：
 
-$$-i\oint_{\left|z\right|=1} R\left[\frac{1}{2}\left(z + \frac{1}{z}\right), \quad \frac{1}{2i}\left(z - \frac{1}{z}\right)\right] \frac{dz}{z}.$$
+$$-i\oint _{\left|z\right|=1} R\left[\frac{1}{2}\left(z + \frac{1}{z}\right), \quad \frac{1}{2i}\left(z - \frac{1}{z}\right)\right] \frac{dz}{z}.$$
 
 现在只需确定被积函数在单位圆内部各极点上对应的留数即可得到积分的值。
 
 让我们来计算
 
-$$\int_{0}^{\pi} \frac{dθ}{a + \cosθ}, \quad a > 1$$
+$$\int _{0}^{\pi} \frac{dθ}{a + \cosθ}, \quad a > 1$$
 
 的值作为例子. 这一积分的积分区间不是 $(0,2 \pi)$, 但因 $\cos \theta$ 在区间 $(0, \pi)$ 及 $(\pi, 2 \pi)$ 上所取的值相同, 故知由 $0$ 至 $\pi$ 的积分等于由 $0$ 至 $2 \pi$ 的积分的一半. 据此可知所给积分等于
 
-$$-i \int_{|z|=1} \frac{\mathrm{d} z}{z^{2}+2 a z+1}$$
+$$-i \int _{|z|=1} \frac{\mathrm{d} z}{z^{2}+2 a z+1}$$
 - 哇 好爽啊
 
 被积函数的分母可分解为 $(z-\alpha)(z-\beta)$, 其中
@@ -1626,90 +1628,90 @@ $$\alpha=-a+\sqrt{a^{2}-1}, \quad \beta=-a-\sqrt{a^{2}-1}$$
 
 2) 形如
 
-$$\int_{-\infty}^{\infty} R(x) \mathrm{d} x$$
+$$\int _{-\infty}^{\infty} R(x) \mathrm{d} x$$
 
 的积分收敛, 当且仅当有理函数 $R(x)$ 中分母的次数至少高于分子的次数二次, 并且在实轴上没有极点. 标准的方法是将复函数 $R(z)$ 沿着一条由线段 $(-\rho, \rho)$ 及上半平面中由 $\rho$ 至 $-\rho$ 的半圆组成的闭曲线进行积分. 若 $\rho$ 足够大, 则这一曲线将包围上半平面中的所有极点, 对应的积分就等于 $2 \pi i$ 乘以上半平面上的留数之和. 当 $\rho \rightarrow \infty$ 时, 估计表明, 沿着半圆的积分趋向于 0 , 因此得
 
-$$\int_{-\infty}^{\infty} R(x) \mathrm{d} x=2 \pi i \sum_{y>0} \operatorname{Res} R(z)$$
+$$\int _{-\infty}^{\infty} R(x) \mathrm{d} x=2 \pi i \sum _{y>0} \operatorname{Res} R(z)$$
    - 半圆 圆心在原点，直径在十周上，
    - 没有R仅仅从R(x)变成R(z)
 
 3) 同样的方法可应用于如下形式的积分:
 
-$$\int_{-\infty}^{\infty} R(x) e^{i x} \mathrm{~d} x, \tag{52}$$
+$$\int _{-\infty}^{\infty} R(x) e^{i x} \mathrm{~d} x, \tag{52}$$
 
 它的实部和虚部确定了下面很重要的积分:
 
-$$\int_{-\infty}^{\infty} R(x) \cos x \mathrm{~d} x, \quad \int_{-\infty}^{\infty} R(x) \sin x \mathrm{~d} x .\tag{53}$$
+$$\int _{-\infty}^{\infty} R(x) \cos x \mathrm{d} x, \quad \int _{-\infty}^{\infty} R(x) \sin x \mathrm{d} x .\tag{53}$$
 
 由于 $\left|e^{i z}\right|=e^{-y}$ 在上半平面是有界的, 故知只要有理函数 $R(z)$ 在无穷远点具有一个阶数至少等于 2 的零点, 则沿着半圆的积分仍然是趋于 0 的. 于是得
 
-$$\int_{-\infty}^{\infty} R(x) e^{i x} \mathrm{~d} x=2 \pi i \sum_{y>0} \operatorname{Res} R(z) e^{i z}$$
+$$\int _{-\infty}^{\infty} R(x) e^{i x} \mathrm{~d} x=2 \pi i \sum _{y>0} \operatorname{Res} R(z) e^{i z}$$
 
 当 $\infty$ 是 $R(z)$ 的单极点时, 同样的结果也成立. 这是因为: 第一, 估计沿着半圆的积分就不太方便; 第二, 即使可以估计出这个积分, 我们也只是证明了区间 $(-\rho, \rho)$ 上的积分
 
-$$\int_{-\rho}^{\rho} R(x) e^{i x} \mathrm{~d} x$$
+$$\int _{-\rho}^{\rho} R(x) e^{i x} \mathrm{~d} x$$
 
 当 $\rho \rightarrow \infty$ 时具有所需的极限. 事实上, 我们当然是要证明
 
-$$\int_{-x_{1}}^{x_{2}} R(x) e^{i x} \mathrm{~d} x$$
+$$\int _{-x _{1}}^{x _{2}} R(x) e^{i x} \mathrm{~d} x$$
 
-当 $X_{1}$ 及 $X_{2}$ 独立地趋向于 $\infty$ 时具有一个极限. 在前面的例子中并不出现这样的问题, 因为事先已经断定积分是收敛的. 
+当 $X _{1}$ 及 $X _{2}$ 独立地趋向于 $\infty$ 时具有一个极限. 在前面的例子中并不出现这样的问题, 因为事先已经断定积分是收敛的. 
 
-为了证明这一点，可沿着一个矩形的周界进行积分，矩形的顶点为 $X_2,X_2+iY,-X_1+iY,-X_1$，其中 $Y>0$。只要 $X_1,X_2$ 及 $Y$ 足够大，这个矩形就将包含上半平面上 $R(z)$ 的所有极点。在这一假设下 $|zR(z)|$ 是有界的，因此沿着右面的垂直边的积分除了常数因子外，将小于  
+为了证明这一点，可沿着一个矩形的周界进行积分，矩形的顶点为 $X _2,X _2+iY,-X _1+iY,-X _1$，其中 $Y>0$。只要 $X _1,X _2$ 及 $Y$ 足够大，这个矩形就将包含上半平面上 $R(z)$ 的所有极点。在这一假设下 $|zR(z)|$ 是有界的，因此沿着右面的垂直边的积分除了常数因子外，将小于  
 $$
-\int_{0}^{Y} e^{-y} \frac{dy}{|z|} < \frac{1}{X_2} \int_{0}^{Y} e^{-y} dy < 1.
+\int _{0}^{Y} e^{-y} \frac{dy}{|z|} < \frac{1}{X _2} \int _{0}^{Y} e^{-y} dy < 1.
 $$  
-最后一个积分可以直接算出，其值小于 $1$。因此，沿着右面的垂直边的积分小于一个常数乘以 $1/X_2$，对于左面的垂直边也可得到相应的结果。沿着上面水平边的积分显然小于 $e^{-Y}(X_1+X_2)/Y$ 乘以一个常数。对于固定的 $X_1$ 及 $X_2$，当 $Y\to\infty$ 时，它趋于 $0$，于是得  
+最后一个积分可以直接算出，其值小于 $1$。因此，沿着右面的垂直边的积分小于一个常数乘以 $1/X _2$，对于左面的垂直边也可得到相应的结果。沿着上面水平边的积分显然小于 $e^{-Y}(X _1+X _2)/Y$ 乘以一个常数。对于固定的 $X _1$ 及 $X _2$，当 $Y\to\infty$ 时，它趋于 $0$，于是得  
 $$
-\left| \int_{-X_1}^{X_2} R(x)e^{ix} dx - 2\pi i \sum_{y>0} \text{Res} R(z)e^{iz} \right| < A\left( \frac{1}{X_1} + \frac{1}{X_2} \right),
+\left| \int _{-X _1}^{X _2} R(x)e^{ix} dx - 2\pi i \sum _{y>0} \text{Res} R(z)e^{iz} \right| < A\left( \frac{1}{X _1} + \frac{1}{X _2} \right),
 $$  
 式中 $A$ 代表一个常数。这一不等式证明，在 $R(\infty)=0$ 的情形下，有  
 $$
-\int_{-\infty}^{\infty} R(x)e^{ix} dx = 2\pi i \sum_{y>0} \text{Res} R(z)e^{iz}.
+\int _{-\infty}^{\infty} R(x)e^{ix} dx = 2\pi i \sum _{y>0} \text{Res} R(z)e^{iz}.
 $$  
 
-在讨论中，我们曾经假设 $R(z)$ 在实轴上没有极点，因为否则积分 $(52)$ 就没有意义。不过，如果 $R(z)$ 具有与 $\sin x$ 或 $\cos x$ 的零点相重合的单极点，则 $(53)$ 式中可有一个积分存在。举例来说，设 $R(z)$ 以 $z=0$ 为一个单极点，则 $(53)$ 的第二个积分具有意义，应予计算。应用与前面同样的方法，但所用的积分路线应避开原点，这可在下半平面上作一个小的半圆，其半径为 $\delta$，如图 4-12 所示。容易看出，只要 $X_1,X_2$ 及 $Y$ 足够大而且 $\delta$ 足够小，则这一闭曲线将包含上半平面上的所有极点及原点处的极点，除此之外，别无其他。设 $0$ 上的留数为 $B$，因此可令 $R(z)e^{iz}=B/z + R_0(z)$，其中 $R_0(z)$ 在原点解析。第一项沿半圆的积分等于 $\pi i B$，而第二项的积分则随 $\delta$ 同时趋于 $0$，由此得  
+在讨论中，我们曾经假设 $R(z)$ 在实轴上没有极点，因为否则积分 $(52)$ 就没有意义。不过，如果 $R(z)$ 具有与 $\sin x$ 或 $\cos x$ 的零点相重合的单极点，则 $(53)$ 式中可有一个积分存在。举例来说，设 $R(z)$ 以 $z=0$ 为一个单极点，则 $(53)$ 的第二个积分具有意义，应予计算。应用与前面同样的方法，但所用的积分路线应避开原点，这可在下半平面上作一个小的半圆，其半径为 $\delta$，如图 4-12 所示。容易看出，只要 $X _1,X _2$ 及 $Y$ 足够大而且 $\delta$ 足够小，则这一闭曲线将包含上半平面上的所有极点及原点处的极点，除此之外，别无其他。设 $0$ 上的留数为 $B$，因此可令 $R(z)e^{iz}=B/z + R _0(z)$，其中 $R _0(z)$ 在原点解析。第一项沿半圆的积分等于 $\pi i B$，而第二项的积分则随 $\delta$ 同时趋于 $0$，由此得  
 $$
-\lim_{\delta\to 0} \int_{-\infty}^{-\delta} + \int_{\delta}^{\infty} R(x)e^{ix} dx = 2\pi i \left[ \sum_{y>0} \text{Res} R(z)e^{iz} + \frac{1}{2} B \right].
+\lim _{\delta\to 0} \int _{-\infty}^{-\delta} + \int _{\delta}^{\infty} R(x)e^{ix} dx = 2\pi i \left[ \sum _{y>0} \text{Res} R(z)e^{iz} + \frac{1}{2} B \right].
 $$  
 左边的极限称为积分的柯西主值Cauchy principal value of the integral，虽然在积分本身没有意义的时候，它也存在。在上式的右边，包含 $0$ 上留数的一半，这就好像说，这个极点的一半是在上半平面上。
 
 对于在实轴上具有若干个极点的一般情形，我们有
 
-$$\text{pr.v.}\int_{-\infty}^{\infty}R(x)e^{ix}dx=2\pi i\sum_{y>0}\text{Res}R(z)e^{ix}+\pi i\sum_{y=0}\text{Res}R(z)e^{ix}$$
+$$\text{pr.v.}\int _{-\infty}^{\infty}R(x)e^{ix}dx=2\pi i\sum _{y>0}\text{Res}R(z)e^{ix}+\pi i\sum _{y=0}\text{Res}R(z)e^{ix}$$
 
 式中的记法是无须解释的。主要假设是所有位于实轴上的极点都是单极点，而且必须假设$R(\infty)=0$。
 
 作为最简单的例子，我们有
 
-$$\text{pr.v.}\int_{-\infty}^{\infty}\frac{e^{ix}}{x}dx=\pi i$$
+$$\text{pr.v.}\int _{-\infty}^{\infty}\frac{e^{ix}}{x}dx=\pi i$$
 
 将实部与虚部分开，可知上式的实部是很平凡的，因为被积式是奇函数。在虚部中不必取主值，而由于被积式是偶函数，故
 
-$$\int_{0}^{\infty}\frac{\sin x}{x}dx=\frac{\pi}{2}$$
+$$\int _{0}^{\infty}\frac{\sin x}{x}dx=\frac{\pi}{2}$$
 
 包含因子$\cos^n x$或$\sin^n x$的积分可用同样方法计算。事实上，这些因子可写成$\cos mx$及$\sin mx$的线性组合，对应的积分也可以通过变量变换转化为(52)的形式：
 
-$$\int_{-\infty}^{\infty}R(x)e^{imx}dx=\frac{1}{m}\int_{-\infty}^{\infty}R\left(\frac{x}{m}\right)e^{ix}dx$$
+$$\int _{-\infty}^{\infty}R(x)e^{imx}dx=\frac{1}{m}\int _{-\infty}^{\infty}R\left(\frac{x}{m}\right)e^{ix}dx$$
 
 4）下面考虑如下形式的积分：
 
-$$\int_{0}^{\infty}x^\alpha R(x)dx$$
+$$\int _{0}^{\infty}x^\alpha R(x)dx$$
 
 其中指数$\alpha$是实数，可假设这个指数的值位于区间$0<\alpha<1$中。为了保证收敛，$R(z)$在$\infty$处应具有一个阶数至少为2的零点，而在原点处至多只能有一个单极点。
 
 这种积分的特点是$R(z)z^\alpha$并不是单值的。但这正是对它可求0至$\infty$的积分的原因。最简单的方法是先作代换$x=t^2$，将积分变换成如下形式：
 
-$$2\int_{0}^{\infty}t^{2\alpha+1}R(t^2)dt$$
+$$2\int _{0}^{\infty}t^{2\alpha+1}R(t^2)dt$$
 
 从函数$z^{2\alpha}$中可选定辐角位于$-\pi\alpha$及$3\pi\alpha$之间的分支，它在弃去负虚轴所得的域内有定义且解析。只要我们能避开负虚轴，就可以对函数$z^{2\alpha+1}R(z^2)$应用留数定理。我们所用的闭曲线由下列各部分组成：正实轴和负实轴上的两条线段；上半平面中的两个半圆，一个很大，一个很小。如图4-13所示。在我们的假设条件下，不难证明沿着半圆的积分趋于0。因此应用留数定理，得到积分
 
-$$\int_{-\infty}^{\infty}z^{2\alpha+1}R(z^2)dz=\int_{0}^{\infty}(z^{2\alpha+1}+(-z)^{2\alpha+1})R(z^2)dz$$
+$$\int _{-\infty}^{\infty}z^{2\alpha+1}R(z^2)dz=\int _{0}^{\infty}(z^{2\alpha+1}+(-z)^{2\alpha+1})R(z^2)dz$$
 
 的值。但$(-z)^{2\alpha}=e^{2\pi i\alpha}z^{2\alpha}$，故积分等于
 
-$$(1-e^{2\pi i\alpha})\int_{0}^{\infty}z^{2\alpha+1}R(z^2)dz$$
+$$(1-e^{2\pi i\alpha})\int _{0}^{\infty}z^{2\alpha+1}R(z^2)dz$$
 
 由于前面的因子不等于0，故最后确定所求积分值的值是完全可以办到的。
 
@@ -1717,7 +1719,7 @@ $$(1-e^{2\pi i\alpha})\int_{0}^{\infty}z^{2\alpha+1}R(z^2)dz$$
 
 5) 作为最后一个例子，我们计算下列特殊积分
 
-$$\int_0^{\pi} \log \sin \theta \mathrm{d} \theta$$
+$$\int _0^{\pi} \log \sin \theta \mathrm{d} \theta$$
 
 考察函数$1-e^{2iz}=-2ie^{iz}\sin z$，从表达式$1-e^{2iz}=1-e^{-2y}(\cos 2x+i\sin 2x)$可知，这一函数只在$x=n\pi$，$y\leqslant 0$时是负实数。因此，函数$\log(1-e^{2iz})$的主支在弃去这些半直线后所成的域内是单值而解析的。对顶点为$0$，$\pi$，$\pi+iY$，$iY$的矩形应用柯西定理，但应避开点$0$及$\pi$，为此可在这两点处作半径为$\delta$的四分之一小圆。
 
@@ -1725,15 +1727,15 @@ $$\int_0^{\pi} \log \sin \theta \mathrm{d} \theta$$
 
 在顶点$\pi$附近也可应用同样的证明，于是得
 
-$$\int_0^\pi \log(-2ie^{ix}\sin x)\,dx=0$$
+$$\int _0^\pi \log(-2ie^{ix}\sin x)dx=0$$
 
 如果取$\log e^{ix}=ix$，则虚部位于$0$与$\pi$之间。因此，为了求得虚部在$-\pi$与$\pi$之间的主支，必须令$\log(-i)=-\pi i/2$。于是方程可写成如下形式：
 
-$$\pi\log 2-\left(\frac{\pi^2}{2}\right)i+\int_0^\pi \log\sin x\,dx+\left(\frac{\pi^2}{2}\right)i=0$$
+$$\pi\log 2-\left(\frac{\pi^2}{2}\right)i+\int _0^\pi \log\sin xdx+\left(\frac{\pi^2}{2}\right)i=0$$
 
 从而得
 
-$$\int_0^\pi \log\sin x\,dx=-\pi\log 2$$
+$$\int _0^\pi \log\sin xdx=-\pi\log 2$$
 
 #### 4.5.3 练习
 
@@ -1766,43 +1768,43 @@ $$\int_0^\pi \log\sin x\,dx=-\pi\log 2$$
 
 2. 试用留数方法计算下列积分:
 
-(a)$\int_{0}^{\pi / 2} \frac{d x}{a+\sin ^{n} x},|a|>1$,
+(a)$\int _{0}^{\pi / 2} \frac{d x}{a+\sin ^{n} x},|a|>1$,
 
-(b)$\int_{0}^{\infty} \frac{x^{2} d x}{x^{4}+5 x^{2}+6}$,
+(b)$\int _{0}^{\infty} \frac{x^{2} d x}{x^{4}+5 x^{2}+6}$,
 
-(c)$\int_{-\infty}^{\infty} \frac{x^{2}-x+2}{x^{4}+10 x^{2}+9} d x$,
+(c)$\int _{-\infty}^{\infty} \frac{x^{2}-x+2}{x^{4}+10 x^{2}+9} d x$,
 
-(d)$\int_{0}^{\infty} \frac{x^{2} d x}{\left(x^{2}+a^{2}\right)^{3}}, a$ 为实数,
+(d)$\int _{0}^{\infty} \frac{x^{2} d x}{\left(x^{2}+a^{2}\right)^{3}}, a$ 为实数,
 
-(e)$\int_{0}^{\infty} \frac{\cos x}{x^{2}+a^{2}} d x, a$ 为实数,
+(e)$\int _{0}^{\infty} \frac{\cos x}{x^{2}+a^{2}} d x, a$ 为实数,
 
-(f)$\int_{0}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x, a$ 为实数,
+(f)$\int _{0}^{\infty} \frac{x \sin x}{x^{2}+a^{2}} d x, a$ 为实数,
 
-(g)$\int_{0}^{\infty} \frac{x^{1 / 3}}{1+x^{2}} d x$,
+(g)$\int _{0}^{\infty} \frac{x^{1 / 3}}{1+x^{2}} d x$,
 
-(h)$\int_{0}^{\infty}(1+x^{2})^{-1} \log x d x$,
+(h)$\int _{0}^{\infty}(1+x^{2})^{-1} \log x d x$,
 
-(i)$\int_{0}^{\infty} \log \left(1+x^{2}\right) \frac{d x}{x^{1+a}}(0<\alpha<2)$. (试用分部积分.)
+(i)$\int _{0}^{\infty} \log \left(1+x^{2}\right) \frac{d x}{x^{1+a}}(0<\alpha<2)$. (试用分部积分.)
 
 4. 计算
 
-$\int_{|z|=\rho} \frac{|d z|}{|z-a|^{2}}, \quad|a| \neq \rho$
+$\int _{|z|=\rho} \frac{|d z|}{|z-a|^{2}}, \quad|a| \neq \rho$
 
 提示: 用 $z \bar{z}=\rho^{2}$ 把积分变成一个有理函数的线积分.
 
 *5. 有时可用复积分来计算面积分. 作为说明, 证明如果当 $|z|<1$ 时 $f(z)$ 解析且有界, 又若 $|\zeta|<1$, 则
 
-$f(\zeta)=\frac{1}{\pi} \iint_{|z|<1} \frac{f(z) d x d y}{\left(1-\bar{z} \zeta\right)^{2}}$
+$f(\zeta)=\frac{1}{\pi} \iint _{|z|<1} \frac{f(z) d x d y}{\left(1-\bar{z} \zeta\right)^{2}}$
 
 注 这称为伯格曼核公式. 为证明这个公式, 将面积分表示成极坐标, 然后把内层的积分变换成一个线积分, 可用留数计算.
 
-## 4.6 调和函数
+## 4.6 调和函数 Harmonic Functions
 
 一个解析函数的实部和虚部是共轭的调和函数. 因此, 有关解析函数的所有定理是一对共轭调和函数的定理. 不过, 调和函数有它本身的重要性, 而且它们的研究常不能用复分析方法来简化. 这一点在共轭调和函数不是单值函数时尤为突出.
 
 在这一节里, 我们把有关调和函数与柯西定理紧密联系的某些事实汇集在一起. 至于调和函数更精致的性质, 将在下一章介绍.
 
-### 4.6.1 定义和基本性质
+### 4.6.1 定义和基本性质 Definition and Basic Properties(定理19)
 
 在域 $\Omega$ 内有定义且为单值的实值函数 $u(z)$ 或 $u(x, y)$ 称为在 $\Omega$ 内调和harmonic（或称为位函数potential function）的前提是它本身及其一阶、二阶偏导数在 $\Omega$ 中连续，并且满足拉普拉斯Laplace's equation方程
 
@@ -1856,65 +1858,65 @@ $$f d z=d u+i^{*} d u\tag{57}$$
 
 根据柯西定理可知, $f d z$ 沿着在 $\Omega$ 内同调于 0 的任一闭链的积分等于 0 . 另一方面, 恰当微分 $d u$ 沿任何闭链的积分都等于 0 . 故从(57)可知, 对于在 $\Omega$ 内同调于零的所有闭链 $\gamma$,  
 
-$$\int_{\gamma}^{} \,\mathrm{}^{\ast}d u=\int_{\gamma}^{}-\frac{\partial u}{\partial y} d x+\frac{\partial u}{\partial x} d y=0 .\tag{58}$$  
+$$\int _{\gamma}^{} \mathrm{}^{\ast}d u=\int _{\gamma}^{}-\frac{\partial u}{\partial y} d x+\frac{\partial u}{\partial x} d y=0 .\tag{58}$$  
 
 (58) 式中的积分有一个重要的解释, 应当在此提一下. 令 $\gamma$ 为一条正则曲线regular curve, 其方程为 $z=z(t)$, 切线方向由角 $\alpha=\arg z^{\prime}(t)$ 确定, 我们可令 $d x=|d z| \cos \alpha, d y=|d z| \sin \alpha$. 指向切线右方的法线方向为$\beta=\alpha -\pi/2$, 因此 $\cos \alpha=-\sin \beta, \sin \alpha=\cos \beta$. 表达式  
 $$\frac{\partial u}{\partial n}=\frac{\partial u}{\partial x} \cos \beta+\frac{\partial u}{\partial y} \sin \beta$$ 
 是 $u$ 的一个方向导数, 即关于曲线 $\gamma$ 的右法向导数. 于是得到 ${ }^{*} d u=(\partial u / \partial n)|d z|$, 而 (58)式可写成如下形式:  
 
-$$\int_{\gamma} \frac{\partial u}{\partial n}|d z|=0 .\tag{59}$$
+$$\int _{\gamma} \frac{\partial u}{\partial n}|d z|=0 .\tag{59}$$
 
 这是经典的记法. 这一记法的主要好处是 $\partial u / \partial n$ 实际表示出了垂直于 $\gamma$ 的方向上的变化率. 例如, 如果 $\gamma$ 为一个取正向的圆 $|z|=r$, 则 $\partial u / \partial n$ 就可用偏导数 $\partial u / \partial r$ 代替. 这一记法的缺点就是 (59)式已不是一个普通曲线积分, 而是一个关于弧长的积分. 为此, 经典记法在同调论中不很适用, 还是使用记法 ${ }^{*} d u$ 为好.  
 
-在一个单连通域内, ${ }^{*} d u$ 沿所有闭链的积分都等于零, 而 $u$ 则具有一个单值的共轭函数 $v$, 这个函数除了一个附加的常数外, 可以完全确定. 在多连通的情形, 共轭函数具有对应于同调基上的闭链 $\gamma_{i}$ 的周期periods(勘误，中文书的星号错位置了):  
+在一个单连通域内, ${ }^{*} d u$ 沿所有闭链的积分都等于零, 而 $u$ 则具有一个单值的共轭函数 $v$, 这个函数除了一个附加的常数外, 可以完全确定. 在多连通的情形, 共轭函数具有对应于同调基上的闭链 $\gamma _{i}$ 的周期periods(勘误，中文书的星号错位置了):  
 
-$$\int_{\gamma_{i}}{ }^{*} d u=\int_{\gamma_{i}} \frac{\partial u}{\partial n}|d z| .$$ 
+$$\int _{\gamma _{i}}{ }^{*} d u=\int _{\gamma _{i}} \frac{\partial u}{\partial n}|d z| .$$ 
 
-对于一对调和函数, 公式(58)有一个重要的推广. 设 $u_{1}$ 及 $u_{2}$ 为 $\Omega$ 内的调和函数, 可以断言, 对于在 $\Omega$ 内同调于零的每个闭链 $\gamma$, 必有  
-$$\int_{\gamma} u_{1}^{*} d u_{2}-u_{2}^{*} d u_{1}=0 .\tag{60}$$  
+对于一对调和函数, 公式(58)有一个重要的推广. 设 $u _{1}$ 及 $u _{2}$ 为 $\Omega$ 内的调和函数, 可以断言, 对于在 $\Omega$ 内同调于零的每个闭链 $\gamma$, 必有  
+$$\int _{\gamma} u _{1}^{*} d u _{2}-u _{2}^{*} d u _{1}=0 .\tag{60}$$  
 
-根据 4.4.6 节的定理 16 , 我们只要对 $\gamma=\partial R$ 证明公式(60)就够了, 其中 $R$ 为 $\Omega$ 中的一个矩形. 在 $R$ 中, $u_{1}$ 及 $u_{2}$ 具有单值的共轭函数 $v_{1}$ 及 $v_{2}$, 因此可写作  
-$$u_{1}^{*} d u_{2}-u_{2}^{*} d u_{1}=u_{1} d v_{2}-u_{2} d v_{1}=u_{1} d v_{2}+v_{1} d u_{2}-d\left(u_{2} v_{1}\right),$$
+根据 4.4.6 节的定理 16 , 我们只要对 $\gamma=\partial R$ 证明公式(60)就够了, 其中 $R$ 为 $\Omega$ 中的一个矩形. 在 $R$ 中, $u _{1}$ 及 $u _{2}$ 具有单值的共轭函数 $v _{1}$ 及 $v _{2}$, 因此可写作  
+$$u _{1}^{*} d u _{2}-u _{2}^{*} d u _{1}=u _{1} d v _{2}-u _{2} d v _{1}=u _{1} d v _{2}+v _{1} d u _{2}-d\left(u _{2} v _{1}\right),$$
 
-此处, $d\left(u_{2} v_{1}\right)$ 为恰当微分, 而 $u_{1} d v_{2}+v_{1} d u_{2}$ 是$\left(u_{1}+i v_{1}\right)\left(d u_{2}+i d v_{2}\right)$的虚部. 最后一个微分可写成 $F_{1} f_{2} d z$ 的形式, 其中 $F_{1}(z)$ 及 $f_{2}(z)$ 都在 $R$ 上解析. 根据柯西定理, $F_{1} f_{2} d z$ 的积分等于零, 因此其虚部的积分也等于零. 故知 (60)式对 $\gamma=\partial R$ 成立, 这就证明了下面的定理：
+此处, $d\left(u _{2} v _{1}\right)$ 为恰当微分, 而 $u _{1} d v _{2}+v _{1} d u _{2}$ 是$\left(u _{1}+i v _{1}\right)\left(d u _{2}+i d v _{2}\right)$的虚部. 最后一个微分可写成 $F _{1} f _{2} d z$ 的形式, 其中 $F _{1}(z)$ 及 $f _{2}(z)$ 都在 $R$ 上解析. 根据柯西定理, $F _{1} f _{2} d z$ 的积分等于零, 因此其虚部的积分也等于零. 故知 (60)式对 $\gamma=\partial R$ 成立, 这就证明了下面的定理：
 
-**定理 19** 设 $u_1$ 及 $u_2$ 都在域 $\Omega$ 内调和, 则对于在 $\Omega$ 内同调于零的任意闭链 $\gamma$, 必有
+**定理 19** 设 $u _1$ 及 $u _2$ 都在域 $\Omega$ 内调和, 则对于在 $\Omega$ 内同调于零的任意闭链 $\gamma$, 必有
 
-$$\int_{\gamma}(u_1^*\mathrm{d}u_2-u_2^*\mathrm{d}u_1)=0.$$
+$$\int _{\gamma}(u _1^*\mathrm{d}u _2-u _2^*\mathrm{d}u _1)=0.$$
 
-如果 $u_1=1$ 而 $u_2=u$, 则上式化成(58)式. 如果用经典记法, (60)式可写成
+如果 $u _1=1$ 而 $u _2=u$, 则上式化成(58)式. 如果用经典记法, (60)式可写成
 
-$$\int_{\gamma}\left(u_1\frac{\partial u_2}{\partial n}-u_2\frac{\partial u_1}{\partial n}\right)|\mathrm{d}z|=0.$$
+$$\int _{\gamma}\left(u _1\frac{\partial u _2}{\partial n}-u _2\frac{\partial u _1}{\partial n}\right)|\mathrm{d}z|=0.$$
 
-### 4.6.2 均值性质
+### 4.6.2 均值性质 The Mean-value Property(定理20,21)
 
-现在我们来应用定理 19, 令 $u_1=\log r$, $u_2=u$, $u$ 在 $|z|<\rho$ 中调和. 取有孔圆盘 $0<|z|<\rho$ 作为 $\Omega$, 闭链 $C_1-C_2$ 作为 $\gamma$, 其中 $C_i$ 是一个取正向的圆 $|z|=r_i<\rho$. 在圆 $|z|=r$ 上, 有
+现在我们来应用定理 19, 令 $u _1=\log r$, $u _2=u$, $u$ 在 $|z|<\rho$ 中调和. 取有孔圆盘 $0<|z|<\rho$ 作为 $\Omega$, 闭链 $C _1-C _2$ 作为 $\gamma$, 其中 $C _i$ 是一个取正向的圆 $|z|=r _i<\rho$. 在圆 $|z|=r$ 上, 有
 
 $$^{\ast}\mathrm{d}u=r(\partial u/\partial r)\mathrm{d}\theta,$$
 
 因此, 由 (60)得
 
-$$\log r_1\int_{c_1}r_1\frac{\partial u}{\partial r}\mathrm{d}\theta-\int_{c_1}u\mathrm{d}\theta=\log r_2\int_{c_2}r_2\frac{\partial u}{\partial r}\mathrm{d}\theta-\int_{c_2}u\mathrm{d}\theta.$$
+$$\log r _1\int _{c _1}r _1\frac{\partial u}{\partial r}\mathrm{d}\theta-\int _{c _1}u\mathrm{d}\theta=\log r _2\int _{c _2}r _2\frac{\partial u}{\partial r}\mathrm{d}\theta-\int _{c _2}u\mathrm{d}\theta.$$
 
 换言之, 表达式
 
-$$\int_{|z|=r}u\mathrm{d}\theta-\log r\int_{|z|=r}r\frac{\partial u}{\partial r}\mathrm{d}\theta$$
+$$\int _{|z|=r}u\mathrm{d}\theta-\log r\int _{|z|=r}r\frac{\partial u}{\partial r}\mathrm{d}\theta$$
 
 是一个常数, 这一点即使在所给的 $u$ 只在一个圆环中调和时也正确. 从(58)可知, 如果 $u$ 在一个圆环中调和, 则
 
-$$\int_{|z|=r}r\frac{\partial u}{\partial r}\mathrm{d}\theta$$
+$$\int _{|z|=r}r\frac{\partial u}{\partial r}\mathrm{d}\theta$$
 
 是一个常数, 而若 $u$ 在整个圆盘内调和, 则等于零. 合并上述结果, 就得到:
 
 **定理 20** 一个调和函数在同心圆 $|z|=r$ 上的算术平均值是 $\log r$ 的一个线性函数,
 
-$$\frac{1}{2\pi}\int_{|z|=r}u\mathrm{d}\theta=\alpha\log r+\beta,\tag{61}$$
+$$\frac{1}{2\pi}\int _{|z|=r}u\mathrm{d}\theta=\alpha\log r+\beta,\tag{61}$$
 
 如果 $u$ 在一个圆盘内调和, 则 $\alpha=0$, 而 $u$ 的算术平均是一个常数.
 
 在后一种情形, 根据连续性, $\beta=u(0)$, 变换到一个新的原点后, 得到
 
-$$u(z_0)=\frac{1}{2\pi}\int_0^{2\pi}u(z_0+re^{i\theta})\mathrm{d}\theta.\tag{62}$$
+$$u(z _0)=\frac{1}{2\pi}\int _0^{2\pi}u(z _0+re^{i\theta})\mathrm{d}\theta.\tag{62}$$
 
 公式(62)显然也可直接从 4.3.4 节中的解析函数的对应公式(34)中导出. 这就直接引出了调和函数的最大值原理:
 
@@ -1928,21 +1930,21 @@ $$u(z_0)=\frac{1}{2\pi}\int_0^{2\pi}u(z_0+re^{i\theta})\mathrm{d}\theta.\tag{62}
 
 1. 设$u$在$0<|z|<\rho$中有界且调和, 证明: 原点是$u$的可去奇点, 这就是说, 当$u(0)$经过适当定义以后, $u$变成在$|z|<\rho$中调和.
 
-2. 设$f(z)$在圆环$r_1<|z|<r_2$中解析, 并在闭圆环上连续. 当$|z|=r$时, 以$M(r)$表示$|f(z)|$的极大值, 证明:
-   $$M(r)\leq M(r_1)^{\alpha}M(r_2)^{1-\alpha},$$
-   其中$\alpha=\log(r_2/r)/\log(r_2/r_1)$(阿达马三圆定理). 并讨论等号成立的情形. 提示: 对$\log|f(z)|$和$\log|z|$的一个线性组合应用最大值原理.
+2. 设$f(z)$在圆环$r _1<|z|<r _2$中解析, 并在闭圆环上连续. 当$|z|=r$时, 以$M(r)$表示$|f(z)|$的极大值, 证明:
+   $$M(r)\leq M(r _1)^{\alpha}M(r _2)^{1-\alpha},$$
+   其中$\alpha=\log(r _2/r)/\log(r _2/r _1)$(阿达马三圆定理). 并讨论等号成立的情形. 提示: 对$\log|f(z)|$和$\log|z|$的一个线性组合应用最大值原理.
 
 
-### 4.6.3 泊松公式
+### 4.6.3 泊松公式 Poisson's Formula(定理22)
 
-最大值原理具有一个如下的重要推论: 设$u(z)$在一个有界闭集$E$上连续, 并在$E$的内部调和, 则这一函数将由它在$E$的边界上的值唯一确定. 实际上, 如果设$u_1$及$u_2$为两个具有同样边值的调和函数, 则$u_1-u_2$将是边值为$0$的调和函数. 应用最大值原理可知, $u_1-u_2$应在$E$上恒等于零.
+最大值原理具有一个如下的重要推论: 设$u(z)$在一个有界闭集$E$上连续, 并在$E$的内部调和, 则这一函数将由它在$E$的边界上的值唯一确定. 实际上, 如果设$u _1$及$u _2$为两个具有同样边值的调和函数, 则$u _1-u _2$将是边值为$0$的调和函数. 应用最大值原理可知, $u _1-u _2$应在$E$上恒等于零.
 
 这里产生了当$u$的边值已经给定时, 如何求出$u$的问题. 在这方面, 我们将只对最简单的情形(即一个闭的圆盘)给出问题的解.
 
 公式(62)确定$u$在圆盘中心的值. 这正是我们所需要的, 因为存在一个线性交换, 它可把任何一点变到圆心. 为明确起见, 设$u(z)$在闭圆盘$|z|\leq R$中调和. 线性变换
 $$z=S(\zeta)=\frac{R(R\zeta+a)}{R+\bar{a}\zeta}$$
 将$|\zeta|\leq 1$映成$|z|\leq R$, 以点$\zeta=0$与点$z=a$对应. 函数$u(S(\zeta))$在$|\zeta|\leq 1$中调和, 根据(62), 得到
-$$u(a)=\frac{1}{2\pi}\int_{|\zeta|=1}u(S(\zeta))d\arg\zeta.$$
+$$u(a)=\frac{1}{2\pi}\int _{|\zeta|=1}u(S(\zeta))d\arg\zeta.$$
 从
 $$\zeta=\frac{R(z-a)}{R^2-\overline{a}z}$$
 我们计算
@@ -1963,77 +1965,78 @@ $$\frac{1}{2}\left(\frac{z+a}{z-a}+\frac{\overline{z}+\overline{a}}{\overline{z}
 
 于是得到泊松公式Poissons formula的两种形式如下：
 
-$$u(a)=\frac{1}{2\pi}\int_{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(z)d\theta=\frac{1}{2\pi}\int_{|z|=R}\operatorname{Re}\frac{z+a}{z-a}u(z)d\theta.$$
+$$u(a)=\frac{1}{2\pi}\int _{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(z)d\theta=\frac{1}{2\pi}\int _{|z|=R}\operatorname{Re}\frac{z+a}{z-a}u(z)d\theta.\tag{63}$$
 
 在极坐标系中，
 
-$$u(re^{i\varphi})=\frac{1}{2\pi}\int_{0}^{2\pi}\frac{R^{2}-r^{2}}{R^{2}-2rR\cos(\theta-\varphi)+r^{2}}u(Re^{i\theta})d\theta.$$
+$$u(re^{i\varphi})=\frac{1}{2\pi}\int _{0}^{2\pi}\frac{R^{2}-r^{2}}{R^{2}-2rR\cos(\theta-\varphi)+r^{2}}u(Re^{i\theta})d\theta.$$
 
 在导出泊松公式的过程中，我们假设了$u(z)$在闭圆盘中调和. 但是，在较弱的条件，即$u(z)$在开圆盘中调和，在闭圆盘中连续之下，结论仍是正确的. 事实上，如果$0<r<1$，则$u(rz)$在闭圆盘中调和，于是得到
 
-$$u(ra)=\frac{1}{2\pi}\int_{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(rz)d\theta.$$
+$$u(ra)=\frac{1}{2\pi}\int _{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(rz)d\theta.$$
 
 现在我们需要做的是令$r$趋于$1$. 因为$u(z)$在$|z|\leqslant R$上一致连续，因此对于$|z|=R$，一致地有$u(rz)\to u(z)$，故知(63)保持正确.
 
 我们把该结果阐述成如下定理：
 
-定理22 假设$u(z)$在$|z|<R$调和，在$|z|\leqslant R$连续，则对所有$|a|<R$，恒有
+**定理 22** 假设$u(z)$在$|z|<R$调和，在$|z|\leqslant R$连续，则对所有$|a|<R$，恒有
 
-$$u(a)=\frac{1}{2\pi}\int_{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(z)d\theta.\tag{64}$$
+$$u(a)=\frac{1}{2\pi}\int _{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(z)d\theta.\tag{64}$$
 
 由该定理立即得到$u$的共轭函数的一个明显表达式. 实际上，由公式(63)得
 
-$$u(z)=\operatorname{Re}\left[\frac{1}{2\pi i}\int_{|\zeta|=R}\frac{\zeta+z}{\zeta-z}u(\zeta)\frac{d\zeta}{\zeta}\right].\tag{65}$$
+$$u(z)=\operatorname{Re}\left[\frac{1}{2\pi i}\int _{|\zeta|=R}\frac{\zeta+z}{\zeta-z}u(\zeta)\frac{d\zeta}{\zeta}\right].\tag{65}$$
 
 当$|z|<R$时方括号内的表达式是$z$的一个解析函数. 由此可知$u(z)$是
 
-$$f(z)=\frac{1}{2\pi i}\int_{|\zeta|=R}\frac{\zeta+z}{\zeta-z}u(\zeta)\frac{d\zeta}{\zeta}+iC,\tag{66}$$
+$$f(z)=\frac{1}{2\pi i}\int _{|\zeta|=R}\frac{\zeta+z}{\zeta-z}u(\zeta)\frac{d\zeta}{\zeta}+iC,\tag{66}$$
 
 的实部，其中$C$是一个任意的实常数. 这一公式称为施瓦茨公式Schwarz's formula.
+- $f(z)=u(z)+i(v(z)+C)$
 
 作为(64)的一种特殊情况，注意$u=1$给出
 
-$$\int_{|z|=R}\frac{R^{2}-|z|^{2}}{|z-a|^{2}}d\theta=2\pi,\tag{67}$$
+$$\int _{|z|=R}\frac{R^{2}-|z|^{2}}{|z-a|^{2}}d\theta=2\pi,\tag{67}$$
 
 对所有的$|a|<R$成立.
  
 - 这里是半径R圆中的点a映射到0
 
-### 4.6.4 施瓦茨定理
+### 4.6.4 施瓦茨定理 Schwarz's Theorem (定理23)
 
 定理22可用于将一个给定的调和函数通过它在一个圆周上的值来表达. 但是公式(64)的右端当 $u$ 在 $|z|=R$ 上有定义时, 只要是充分正则的, 例如是分段连续的, 就有意义. 像在(65)中一样, 积分仍可写成一个解析函数的实部, 因此它是一个调和函数. 问题是: 它在 $|z|=R$ 上是否有边值 $u(z)$ ?
 
 有理由来澄清一下记号. 取 $R=1$, 对于 $0 \leqslant \theta \leqslant 2 \pi$ 中的任意分段连续函数 $U(\theta)$, 定义
 
-$$P_{U}(z)=\frac{1}{2 \pi} \int_{0}^{2 \pi} \operatorname{Re} \frac{e^{i \theta}+z}{e^{i \theta}-z} U(\theta) d \theta,$$
+$$P _{U}(z)=\frac{1}{2 \pi} \int _{0}^{2 \pi} \operatorname{Re} \frac{e^{i \theta}+z}{e^{i \theta}-z} U(\theta) d \theta,$$
 
-并称它为 $U$ 的泊松积分 Poissonintegral of U. 注意: $P_{U}(z)$ 不仅是 $z$ 的函数, 而且还是函数 $U$ 的函数, 称它为一个泛函functional. 如果
+并称它为 $U$ 的泊松积分 Poissonintegral of U. 注意: $P _{U}(z)$ 不仅是 $z$ 的函数, 而且还是函数 $U$ 的函数, 称它为一个泛函functional. 如果
 
-$$P_{U+V}=P_{U}+P_{V},$$
+$$P _{U+V}=P _{U}+P _{V},$$
 
 并对一个常数 $c$, 有
 
-$$P_{c U}=c P_{U},$$
+$$P _{c U}=c P _{U},$$
 
-成立, 则称这个泛函functional是线性linear的. 此外, $U \geqslant 0$ 就意味着 $P_{U}(z) \geqslant 0$. 由于这一性质, 所以称 $P_{U}$ 为正线性泛函 positive linear functional.
+成立, 则称这个泛函functional是线性linear的. 此外, $U \geqslant 0$ 就意味着 $P _{U}(z) \geqslant 0$. 由于这一性质, 所以称 $P _{U}$ 为正线性泛函 positive linear functional.
 
-从 (67) 可推得 $P_{c}=c$. 从这一性质, 再加上泛函的线性和正的特性, 使我们得出结论: 不等式 $m \leqslant U \leqslant M$ 蕴涵着 $m \leqslant P_{U} \leqslant M$.
+从 (67) 可推得 $P _{c}=c$. 从这一性质, 再加上泛函的线性和正的特性, 使我们得出结论: 不等式 $m \leqslant U \leqslant M$ 蕴涵着 $m \leqslant P _{U} \leqslant M$.
 
 边值的问题是用下列基本定理来处理的, 该定理是施瓦茨(H. A. Schwarz)首先证明的:
 
-定理 23 只要函数 $U$ 在 $\theta_{0}$ 处连续, 则函数 $P_{U}(z)$ 在 $|z|<1$ 内调和, 且
+**定理 23** 只要函数 $U$ 在 $\theta _{0}$ 处连续, 则函数 $P _{U}(z)$ 在 $|z|<1$ 内调和, 且
 
-$$\lim _{z \rightarrow e^{i \theta_{0}}} P_{U}(z)=U\left(\theta_{0}\right).$$
+$$\lim _{z \rightarrow e^{i \theta _{0}}} P _{U}(z)=U\left(\theta _{0}\right).$$
 
-我们已经指出, $P_{U}$ 是调和的. 为了研究边界行为, 设 $C_{1}$ 和 $C_{2}$ 是单位圆上两段互余的弧, 并以 $U_{1}$ 表示在 $C_{1}$ 上等于 $U$ 而在 $C_{2}$ 上等于零的函数, 以 $U_{2}$ 表示在 $C_{2}$ 上等于 $U$ 而在 $C_{1}$ 上等于零的函数. 显然, $P_{U}=P_{U_{1}}+P_{U_{2}}$.
+我们已经指出, $P _{U}$ 是调和的. 为了研究边界行为, 设 $C _{1}$ 和 $C _{2}$ 是单位圆上两段互余的弧, 并以 $U _{1}$ 表示在 $C _{1}$ 上等于 $U$ 而在 $C _{2}$ 上等于零的函数, 以 $U _{2}$ 表示在 $C _{2}$ 上等于 $U$ 而在 $C _{1}$ 上等于零的函数. 显然, $P _{U}=P _{U _{1}}+P _{U _{2}}$.
 
-由于 $P_{U_{1}}$ 可以看作沿着 $C_{1}$ 的一个线积分, 故根据前面同样的推理, 它在除闭弧 $C_{1}$ 之外处处调和. 对于 $z \neq e^{i \theta}$, 表达式
+由于 $P _{U _{1}}$ 可以看作沿着 $C _{1}$ 的一个线积分, 故根据前面同样的推理, 它在除闭弧 $C _{1}$ 之外处处调和. 对于 $z \neq e^{i \theta}$, 表达式
 
 $$\operatorname{Re} \frac{e^{i \theta}+z}{e^{i \theta}-z}=\frac{1-|z|^{2}}{\left|e^{i \theta}-z\right|^{2}}$$
 
-在 $|z|=1$ 上等于零. 故知 $P_{U_{1}}$ 在开弧 $C_{2}$ 上等于零, 又因它是连续的, 所以当 $z \rightarrow e^{i \theta} \in C_{2}$ 时, $P_{U_{1}}(z) \rightarrow 0$.
+在 $|z|=1$ 上等于零. 故知 $P _{U _{1}}$ 在开弧 $C _{2}$ 上等于零, 又因它是连续的, 所以当 $z \rightarrow e^{i \theta} \in C _{2}$ 时, $P _{U _{1}}(z) \rightarrow 0$.
 
-要证明 (68), 可以假设 $U\left(\theta_{0}\right)=0$, 因为如果情形不如此, 则只需以 $U-U\left(\theta_{0}\right)$ 代替 $U$ 即可. 给定一个 $\varepsilon>0$, 可以找到 $C_{1}$ 和 $C_{2}$ 使得 $e^{i \theta_{0}}$ 是 $C_{2}$ 的一个内点interior point, 并对 $e^{i \theta} \in C_{2}$, 有 $|U(\theta)|<\varepsilon / 2$. 在这一条件下, 对于所有的 $\theta$, 必有 $\left|U_{2}(\theta)\right|<\varepsilon / 2$, 因此, 对于 $|z|<1$, 就有 $\left|P_{U_{2}}(z)\right|<\varepsilon / 2$. 另一方面, 由于 $U_{1}$ 连续并在 $e^{i \theta_{0}}$ 处等于零, 故存在一个 $\delta$, 只要 $\left|z-e^{i \theta_{0}}\right|<\delta$ 便有 $\left|P_{U_{1}}(z)\right|<\varepsilon / 2$. 由此可知, 只要 $|z|<1,\left|z-e^{i \theta_{0}}\right|<\delta$, 就有 $\left|P_{U}(z)\right| \leqslant\left|P_{U_{1}}\right|+\left|P_{U_{2}}\right|<\varepsilon$, 这就是所要证明的.
+要证明 (68), 可以假设 $U\left(\theta _{0}\right)=0$, 因为如果情形不如此, 则只需以 $U-U\left(\theta _{0}\right)$ 代替 $U$ 即可. 给定一个 $\varepsilon>0$, 可以找到 $C _{1}$ 和 $C _{2}$ 使得 $e^{i \theta _{0}}$ 是 $C _{2}$ 的一个内点interior point, 并对 $e^{i \theta} \in C _{2}$, 有 $|U(\theta)|<\varepsilon / 2$. 在这一条件下, 对于所有的 $\theta$, 必有 $\left|U _{2}(\theta)\right|<\varepsilon / 2$, 因此, 对于 $|z|<1$, 就有 $\left|P _{U _{2}}(z)\right|<\varepsilon / 2$. 另一方面, 由于 $U _{1}$ 连续并在 $e^{i \theta _{0}}$ 处等于零, 故存在一个 $\delta$, 只要 $\left|z-e^{i \theta _{0}}\right|<\delta$ 便有 $\left|P _{U _{1}}(z)\right|<\varepsilon / 2$. 由此可知, 只要 $|z|<1,\left|z-e^{i \theta _{0}}\right|<\delta$, 就有 $\left|P _{U}(z)\right| \leqslant\left|P _{U _{1}}\right|+\left|P _{U _{2}}\right|<\varepsilon$, 这就是所要证明的.
 
 泊松公式有一个有趣的几何解释, 也是施瓦茨提出的. 给定单位圆内部的一个固定点 $z$, 对每一个 $e^{i \theta}$, 确定点 $e^{i \theta^{*}}$, 使 $e^{i \theta}, z$ 与 $e^{i \theta^{*}}$ 在一条直线上 (见图 4-15). 经几何考察或通过直接计算, 有
 
@@ -2041,15 +2044,15 @@ $$1-|z|^{2}=|\mathrm{e}^{\mathrm{i} \theta}-z||\mathrm{e}^{\mathrm{i} \theta^{*}
 
 但 $(\mathrm{e}^{\mathrm{i} \theta}-z)/\left(\mathrm{e}^{\mathrm{i} \theta^{*}}-z\right)$ 是负的, 故必有
 
-$$1-|z|^{2}=-\left(\mathrm{e}^{\mathrm{i} \theta}-z\right)\left(\mathrm{e}^{-\mathrm{i} \theta^{*}}-\bar{z}\right)$$
+$$1-|z|^{2}=-\left(\mathrm{e}^{\mathrm{i} \theta}-z\right)\left(\mathrm{e}^{-\mathrm{i} \theta^{\ast}}-\bar{z}\right)$$
 
 把 $\theta^{*}$ 看作 $\theta$ 的函数进行求导. 由于 $z$ 是常数, 故得
 
-$$\frac{\mathrm{e}^{\mathrm{i} \theta} \mathrm{d} \theta}{\mathrm{e}^{\mathrm{i} \theta}-z}=\frac{\mathrm{e}^{-\mathrm{i} \theta^{*}} \mathrm{d} \theta^{*}}{\mathrm{e}^{-\mathrm{i} \theta^{*}}-\bar{z}}$$
+$$\frac{\mathrm{e}^{\mathrm{i} \theta} \mathrm{d} \theta}{\mathrm{e}^{\mathrm{i} \theta}-z}=\frac{\mathrm{e}^{-\mathrm{i} \theta^{\ast}} \mathrm{d} \theta^{\ast}}{\mathrm{e}^{-\mathrm{i} \theta^{\ast}}-\bar{z}}$$
 
 取绝对值, 得
 
-$$\frac{\mathrm{d} \theta^{*}}{\mathrm{d} \theta}=\left|\frac{\mathrm{e}^{\mathrm{i} \theta^{*}}-\bar{z}}{\mathrm{e}^{\mathrm{i} \theta}-z}\right|,\tag{70}$$
+$$\frac{\mathrm{d} \theta^{\ast}}{\mathrm{d} \theta}=\left|\frac{\mathrm{e}^{\mathrm{i} \theta^{\ast}}-\bar{z}}{\mathrm{e}^{\mathrm{i} \theta}-z}\right|,\tag{70}$$
 
 从 (69) 和 (70) 得
 
@@ -2057,9 +2060,9 @@ $$\frac{1-|z|^{2}}{\left|\mathrm{e}^{\mathrm{i} \theta}-z\right|^{2}}=\frac{\mat
 
 因此
 
-$$P_{U}(z)=\frac{1}{2 \pi} \int_{0}^{2 \pi} U(\theta) \mathrm{d} \theta^{*}=\frac{1}{2 \pi} \int_{0}^{2 \pi} U\left(\theta^{*}\right) \mathrm{d} \theta$$
+$$P _{U}(z)=\frac{1}{2 \pi} \int _{0}^{2 \pi} U(\theta) \mathrm{d} \theta^{\ast}=\frac{1}{2 \pi} \int _{0}^{2 \pi} U\left(\theta^{\ast}\right) \mathrm{d} \theta$$
 
-换言之, 为求 $P_{U}(z)$, 可将 $U(\theta)$ 的每一个值换为 $z$ 对面的点上的值, 并沿圆取平均值即可.
+换言之, 为求 $P _{U}(z)$, 可将 $U(\theta)$ 的每一个值换为 $z$ 对面的点上的值, 并沿圆取平均值即可.
 
 #### 4.6.4 练习
 
@@ -2067,26 +2070,26 @@ $$P_{U}(z)=\frac{1}{2 \pi} \int_{0}^{2 \pi} U(\theta) \mathrm{d} \theta^{*}=\fra
 
 1. 设 $U(\xi)$ 对所有实的 $\xi$ 是分段连续而有界的, 证明:
 
-$P_{U}(z)=\frac{1}{\pi} \int_{-\infty}^{\infty} \frac{y}{(x-\xi)^{2}+y^{2}} U(\xi) \mathrm{d} \xi$
+$P _{U}(z)=\frac{1}{\pi} \int _{-\infty}^{\infty} \frac{y}{(x-\xi)^{2}+y^{2}} U(\xi) \mathrm{d} \xi$
 
 表示上半平面中的一个调和函数, 在连续点有边值 $U(\xi)$ (半平面的泊松积分).
 
 2. 证明: 在上半平面中调和而有界、在实轴上连续的函数可以表示成一个泊松积分. 
-   - 注: 无穷远点的出现增加了困难, 因为我们不能直接对 $u-P_u$ 应用最大值和最小值原理。一个好的尝试是对 $\varepsilon>0$ 应用最大值原理于 $u-P_u-\varepsilon y$, 记住要令 $\varepsilon$ 趋于 0。这几乎总是可行的, 因为当 $y\to0$ 时函数趋于 0, 而当 $y\to\infty$ 时, 函数趋于 $-\infty$, 但当 $|x|\to\infty$ 时就不能控制。试证明: 若应用于 $u-P_u-\varepsilon\operatorname{Im}(\sqrt{i z})$, 则推理可成功地作出。
+   - 注: 无穷远点的出现增加了困难, 因为我们不能直接对 $u-P _u$ 应用最大值和最小值原理。一个好的尝试是对 $\varepsilon>0$ 应用最大值原理于 $u-P _u-\varepsilon y$, 记住要令 $\varepsilon$ 趋于 0。这几乎总是可行的, 因为当 $y\to0$ 时函数趋于 0, 而当 $y\to\infty$ 时, 函数趋于 $-\infty$, 但当 $|x|\to\infty$ 时就不能控制。试证明: 若应用于 $u-P _u-\varepsilon\operatorname{Im}(\sqrt{i z})$, 则推理可成功地作出。
 
-3. 在练习 1 中, 假设 $U$ 在 0 有一个跳跃, 例如 $U(+0)=0$, $U(-0)=1$。试证明: 当 $z\to0$ 时, $P_U(z)-\frac{1}{\pi}\arg z$ 趋于 0。试将结果推广到任意跳跃和圆的情形。
+3. 在练习 1 中, 假设 $U$ 在 0 有一个跳跃, 例如 $U(+0)=0$, $U(-0)=1$。试证明: 当 $z\to0$ 时, $P _U(z)-\frac{1}{\pi}\arg z$ 趋于 0。试将结果推广到任意跳跃和圆的情形。
 
-4. 设 $C_1$ 及 $C_2$ 为单位圆上两段互余的弧, 在 $C_1$ 上, 令 $U=1$, 在 $C_2$ 上, 令 $U=0$。求 $P_U(z)$ 的显式, 并证明与 $C_1$ 相对、由过 $z$ 及 $C_1$ 的两端点的直线所截出的弧的长度等于 $2\pi P_U(z)$。
+4. 设 $C _1$ 及 $C _2$ 为单位圆上两段互余的弧, 在 $C _1$ 上, 令 $U=1$, 在 $C _2$ 上, 令 $U=0$。求 $P _U(z)$ 的显式, 并证明与 $C _1$ 相对、由过 $z$ 及 $C _1$ 的两端点的直线所截出的弧的长度等于 $2\pi P _U(z)$。
 
-5. 证明均值公式 (62) 对 $u=\log|1+z|$，$z_0=0$，$r=1$ 仍成立, 应用这一点, 计算积分 $\int_0^\pi \log \sin \theta d\theta$。
+5. 证明均值公式 (62) 对 $u=\log|1+z|$，$z _0=0$，$r=1$ 仍成立, 应用这一点, 计算积分 $\int _0^\pi \log \sin \theta d\theta$。
 
 6. 若 $f(z)$ 在整个平面内解析, 并设 $z\to\infty$ 时 $z^{-1}\operatorname{Re}f(z)\to0$, 试证 $f$ 是一个常数。提示: 利用 (66)。
 
-7. 若 $f(z)$ 在 $\infty$ 的一个邻域内解析, 并设 $z\to\infty$ 时 $z^{-1}\operatorname{Re}f(z)\to0$, 试证 $\lim_{z\to\infty}f(z)$ 存在（换言之, 在 $\infty$ 的孤立奇点是可去的。）提示: 首先用柯西积分公式证明 $f=f_1+f_2$, 其中 $z\to\infty$，$f_1(z)\to0$，$f_2(z)$ 在整个平面内解析。
+7. 若 $f(z)$ 在 $\infty$ 的一个邻域内解析, 并设 $z\to\infty$ 时 $z^{-1}\operatorname{Re}f(z)\to0$, 试证 $\lim _{z\to\infty}f(z)$ 存在（换言之, 在 $\infty$ 的孤立奇点是可去的。）提示: 首先用柯西积分公式证明 $f=f _1+f _2$, 其中 $z\to\infty$，$f _1(z)\to0$，$f _2(z)$ 在整个平面内解析。
 
-8. 若 $u(z)$ 在 $0<|z|<\rho$ 上调和并且 $\lim_{z\to0}zu(z)=0$, 试证明 $u$ 可写成形式 $u(z)=\alpha\log|z|+u_0(z)$, 其中 $\alpha$ 是一个常数, $u_0$ 在 $|z|<\rho$ 中是调和的。提示: 选取 $\alpha$ 如 (61)。然后证明 $u_0$ 是一个解析函数 $f_0(z)$ 的实部, 并用上一练习得出结论——在 0 的奇点是可去的。
+8. 若 $u(z)$ 在 $0<|z|<\rho$ 上调和并且 $\lim _{z\to0}zu(z)=0$, 试证明 $u$ 可写成形式 $u(z)=\alpha\log|z|+u _0(z)$, 其中 $\alpha$ 是一个常数, $u _0$ 在 $|z|<\rho$ 中是调和的。提示: 选取 $\alpha$ 如 (61)。然后证明 $u _0$ 是一个解析函数 $f _0(z)$ 的实部, 并用上一练习得出结论——在 0 的奇点是可去的。
 
-### 4.6.5 反射原理
+### 4.6.5 反射原理 The Reflection Principle(定理24)
 
 对称原理或反射原理的一种初等情形已在线性变换中讨论过（见 3.3.3 节）。另外, 还有许多更为一般的形式, 都是由 H. A. Schwarz 首先阐述的。
 
@@ -2098,21 +2101,21 @@ $P_{U}(z)=\frac{1}{\pi} \int_{-\infty}^{\infty} \frac{y}{(x-\xi)^{2}+y^{2}} U(\x
 
 即使在这一阐述中，假设仍是太强了。事实上，主要的是求虚部$v(z)$在$\sigma$上等于零，至于实部，不需做任何假设，所以在反射原理的确切叙述中，侧重点是在调和函数上
 
-定理24 设$\Omega^{+}$是一个对称区域$\Omega$在上半平面的部分，$\sigma$是实轴在$\Omega$中的部分。假设$v(x)$在$\Omega^{+}\cup\sigma$中连续，在$\Omega^{+}$中调和而在$\sigma$上等于零，则$v$具有一个扩张到$\Omega$的调和延拓，满足对称关系$v(\bar{z})=-v(z)$。在相同条件下，如果$v$是$\Omega^{+}$中的一个解析函数$f(z)$的虚部，则$f(z)$具有一个满足$f(z)=\overline{f(\bar{z})}$的解析延拓。
+**定理 24** 设$\Omega^{+}$是一个对称区域$\Omega$在上半平面的部分，$\sigma$是实轴在$\Omega$中的部分。假设$v(x)$在$\Omega^{+}\cup\sigma$中连续，在$\Omega^{+}$中调和而在$\sigma$上等于零，则$v$具有一个扩张到$\Omega$的调和延拓，满足对称关系$v(\bar{z})=-v(z)$。在相同条件下，如果$v$是$\Omega^{+}$中的一个解析函数$f(z)$的虚部，则$f(z)$具有一个满足$f(z)=\overline{f(\bar{z})}$的解析延拓。
 
-为证明这个定理，作函数$V(z)$，使之在$\Omega^{+}$内等于$v(z)$，在$\sigma$上等于零，而在$\Omega^{+}$的镜像中等于$-v(\bar{z})$。我们要证明$V$在$\sigma$上调和。对于点$x_{0}\in\sigma$，考虑一个中心$x_{0}$含于$\Omega$中的圆盘，以$P_{V}$表示相对于这一圆盘的由边值$V$组成的泊松积分。差$V-P_{V}$在圆盘的上半部分是调和的。根据定理23，它在半圆周上以及在直径上都等于零。因为按定义，$V\to0$，而按对称性，$P_{V}$等于零。最大值和最小值原理蕴涵着在上半圆盘中$V=P_{V}$，而对下半圆盘，可重复同样的证明，因此得出结论：$V$在整个圆盘中调和，特别是在$x_{0}$调和。
+为证明这个定理，作函数$V(z)$，使之在$\Omega^{+}$内等于$v(z)$，在$\sigma$上等于零，而在$\Omega^{+}$的镜像中等于$-v(\bar{z})$。我们要证明$V$在$\sigma$上调和。对于点$x _{0}\in\sigma$，考虑一个中心$x _{0}$含于$\Omega$中的圆盘，以$P _{V}$表示相对于这一圆盘的由边值$V$组成的泊松积分。差$V-P _{V}$在圆盘的上半部分是调和的。根据定理23，它在半圆周上以及在直径上都等于零。因为按定义，$V\to0$，而按对称性，$P _{V}$等于零。最大值和最小值原理蕴涵着在上半圆盘中$V=P _{V}$，而对下半圆盘，可重复同样的证明，因此得出结论：$V$在整个圆盘中调和，特别是在$x _{0}$调和。
 
-至于定理的余下部分，仍考察中心在$\sigma$的一个圆盘，我们已经将$v$扩张到整个圆盘，并且$v$在同一圆盘中有一个共轭调和函数$-u_{0}$，对它可加以正规化而使得在上半圆盘内$u_{0}=Re(f(z))$。考虑
+至于定理的余下部分，仍考察中心在$\sigma$的一个圆盘，我们已经将$v$扩张到整个圆盘，并且$v$在同一圆盘中有一个共轭调和函数$-u _{0}$，对它可加以正规化而使得在上半圆盘内$u _{0}=Re(f(z))$。考虑
 
-$$U_{0}(z)=u_{0}(z)-u_{0}(\bar{z})$$
+$$U _{0}(z)=u _{0}(z)-u _{0}(\bar{z})$$
 
-显然，在实直径上$\partial U_{0}/\partial x=0$，又
+显然，在实直径上$\partial U _{0}/\partial x=0$，又
 
-$$\frac{\partial U_{0}}{\partial y}=2\frac{\partial u_{0}}{\partial y}=-2\frac{\partial v}{\partial x}=0$$
+$$\frac{\partial U _{0}}{\partial y}=2\frac{\partial u _{0}}{\partial y}=-2\frac{\partial v}{\partial x}=0$$
 
-由此可知，解析函数$\partial U_{0}/\partial x-i\partial U_{0}/\partial y$在实轴上等于零，因而恒等于零。所以$U_{0}$是一个常数，而这一常数显然是零。这样就证明了$u_{0}(z)=u_{0}(\bar{z})$。
+由此可知，解析函数$\partial U _{0}/\partial x-i\partial U _{0}/\partial y$在实轴上等于零，因而恒等于零。所以$U _{0}$是一个常数，而这一常数显然是零。这样就证明了$u _{0}(z)=u _{0}(\bar{z})$。
 
-该构造可对任意圆盘重复做。显然，在互相交迭的圆盘中，$u_{0}$重合在一起，定义可扩张到整个$\Omega$，于是定理得证。
+该构造可对任意圆盘重复做。显然，在互相交迭的圆盘中，$u _{0}$重合在一起，定义可扩张到整个$\Omega$，于是定理得证。
 
 该定理有明显的推广。域$\Omega$可取为关于圆C对称，而不是关于一条直线对称，当z趋于C时，可以假设$f(z)$趋于另一个圆$C'$。在这样的条件下，$f(z)$有一个解析延拓，它把关于C对称的点映成关于$C'$对称的点。
 
@@ -2120,7 +2123,7 @@ $$\frac{\partial U_{0}}{\partial y}=2\frac{\partial u_{0}}{\partial y}=-2\frac{\
 
 1. 如果$f(z)$在整个平面中解析，在实轴上取实值，在虚轴上为纯虚数，证明$f(z)$是奇函数。
 
-2. 证明在对称区域$\Omega$中解析的任意函数$f$可以写成形式$f_1 + i f_2$，其中$f_1, f_2$在$\Omega$中解析，并在实轴上取实值。
+2. 证明在对称区域$\Omega$中解析的任意函数$f$可以写成形式$f _1 + i f _2$，其中$f _1, f _2$在$\Omega$中解析，并在实轴上取实值。
 
 3. 如果$f(z)$在$|z| \leqslant 1$时解析并在$|z| = 1$时满足$|f| = 1$，证明$f(z)$是有理函数。
 
@@ -2128,8 +2131,136 @@ $$\frac{\partial U_{0}}{\partial y}=2\frac{\partial u_{0}}{\partial y}=-2\frac{\
 
 5. 如果$u(z)$是调和函数，且当$y > 0$时，$0 \leqslant u(x) \leqslant K y$，证明$u = k y$，其中$0 \leqslant k \leqslant K$。
 
-# 碎片
+# TLDR
 
 有些地方的 闭合路径积分，在书写上会用$\oint$代替$\int$
 
 我还挺喜欢 像是引理3等一些地方对于 极限意义下值的 证明的 变成 多个常数 乘上一个 可以控制的$\delta$，之前有些教材 特别喜欢去 反过来凹 $\delta$和$\epsilon$的表达式，再擦去草稿正着写，总觉得不舒服
+
+4.1 基本定理
+- 1.线积分: 在实数到实数的积分的想法，现在自变量通过t对应实数区间，有z(t), 而积分结果把实部和虚部分开积分，从而有了线上复数积分.
+  - 显然的，参数导致的曲线上移动方向会影响符号
+  - 作为自然的感受
+    - 同样的线上，需要函数拆分的线性
+    - 同样的函数，需要把线拆成多段的的线性性
+  - $dz=dx+idy$
+  - 圆上$z'(t)=i\rho e^{it}$
+  - 弧（不带方向）$\int _{\gamma} f ds = \int _{\gamma} f |dz| = \int _{\gamma} f(z(t)) |z’(t)| dt$
+- 2.可求长的弧，度量+三角不等式，从而切分点的距离和的sup有限，那么就定义了弧长，后面没怎么用，算作线积分的例子
+- 3.研究只依赖于端点的线积分 **定理1** 定义在$\Omega$内的线积分$\int _\gamma pdx+qdy$只依赖于$\gamma$的两个端点的充分必要条件是：在$\Omega$内存在一个函数$U(x,y)$，它具有偏导数$\frac{\partial U}{\partial x}=p$，$\frac{\partial U}{\partial y}=q$。
+   - 充分:具有偏导数 => 思路 x,y 都换成t的参数 可证明只依赖于端点
+   - 必要:只依赖于端点 => 选取特殊路径，最后一段平行于坐标轴，可证明具有这样偏导数 
+   - 这样的 $pdx+qdy$称为恰当微分
+   - 等价:沿着任意闭曲线的积分值等于零
+   - U满足柯西黎曼方程（解析）
+   - 结论：解析函数的微分是恰当微分，积分结果只依赖于端点
+- 4.f在矩形上解析（一个更大的开集包裹矩形，在更大的开集上解析），那么矩形的正向边界（$\partial R$逆时针）$\int _{\partial R} f dz=0$
+   - 和上面区别是，
+   - 上面F解析，dF的积分只和端点有关
+   - 这里f自己解析，第二限制了是矩形正向边界上
+   - 增强
+     - 从矩形到圆盘内：用矩形的方式去找到一个F,使得dF = fdz,从而恰当微分
+     - 不需要全解析，允许有限个 $\lim _{z\to \zeta _j} (z-\zeta _j)f(z)=0$
+   - $\int _{|z-a|=R}\frac{dz}{z-a}=2\pi i$
+
+
+4.2 柯西积分公式
+  - winding number 卷绕数 $n(\gamma,a)=\frac{1}{2\pi i}\int _{\gamma} \frac{dz}{z-a}$, 也就是gamma绕了点a多少圈
+  - 大多数情况研究 n=0或1的情况
+  - 这里和上面矩形，以及后面的小正方形，都用了切割成更小的，边界的正反抵消
+  - **定理6**(柯西积分公式) 设 $f(z)$ 在开圆盘 $\Delta$ 内解析，并设 $\gamma$ 是 $\Delta$ 中的一条闭曲线，那么对不在 $\gamma$ 上的任一点 $a$，必有  $n(\gamma,a)\cdot f(a)=\frac{1}{2\pi i}\int _\gamma\frac{f(z)}{z-a}\mathrm{d}z$ , 其中 $n(\gamma,a)$ 是点 $a$ 关于 $\gamma$ 的指数．  
+  - 这里和后面多次 构造一个在范围内全解析的函数，让它在的闭链上积分为0，从而得到式子
+  - 引理3 设 $\varphi(\zeta)$ 是弧 $\gamma$ 上的一个连续函数，则函数  $F _n(z)=\int _{\gamma}\frac{\varphi(\zeta)d\zeta}{(\zeta-z)^n}$ 在 $\gamma$ 所确定的任意域内都解析，且其导数为 $F' _n(z)=nF _{n+1}(z)$。  
+    - 和导数定义式挂钩，通过极限证明关系
+  - $f^{(n)}(z) = \frac{n!}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{(\zeta - z)^{n+1}}$
+  - 任意阶导数存在
+  - Morera's theorem: (f定义+f连续+所有闭曲线 积分fdx=0，则f解析)
+  - Liouville's theorem: 整个平面中有界的解析函数一定是常数
+
+4.3 解析函数局部性质
+  - 上面说明 解析函数 点的值唯一由一个闭链上的值决定,
+  - 那么在用同样的 $\int _{\gamma} \frac{f(z)}{z-a}dz$下，如果原始f(a)未定义（各种原因），而$\lim _{z\to a}f(z)=$这个积分下的值，那么可去（想法还是很自然，首先是用其它一样的计算方式计算，然后和实数可去点一样看两个值是不是一致的）
+  - 这种的可去的充要条件是 $\lim _{z\to a} (z-a)f(z)=0$和上面一样的
+  - 在点a, n项 泰勒展开$f(z)=f(a)+\sum _{i=1}^{n-1} (z-a)^if _i(a)+(z-a)^nf _n(z)$
+  - 余项与级数关系: $f^{(n)}(a)=n!f _n(a)$, 仅在点a
+  - $f(z)=f(a)+\sum _{i=1}^{n-1} \frac{f^{(i)}(a)}{i!}(z-a)^i+f _n(z)(z-a)^n$
+  - 余项在不是a的点 $f _n(z) = \frac{1}{2\pi i} \int _C \frac{f(\zeta)d\zeta}{(\zeta - a)^n (\zeta - z)}$
+  - 点a处, f(a)=0且所有导数为0，则全平面为0
+  - 换句话说，凡是一个不恒等于零的解析函数的诸零点都是孤立的(不能聚点到0)
+  - 一个在域内除了极点以外到处解析的函数称为该域内的亚纯函数meromorphic
+  - **定理10** 设函数$f(z)$在圆盘$\Delta$内解析且不恒等于零，$z _j$为函数$f(z)$的零点，各个零点按其阶数重复计数。对于$\Delta$内每一条不通过零点的闭曲线$\gamma$，有$\sum _j n(\gamma,z _j(a))=\frac{1}{2\pi i}\int _{\gamma}\frac{f'(z)}{f(z)-a}dz=\frac{1}{2\pi i}\int _{\Gamma} \frac{dw}{w-a}=n(\Gamma,a)$
+  - z-plane中$\gamma$围绕范围内的f(z)=a解的个数 = w-plane中$\Gamma$围绕a的卷数
+  - 当我们固定了$\gamma$和$f$，就固定了$\Gamma$, 所以在w-plane中同时在$\Gamma$内的点$n(\Gamma,a)=n(\Gamma,b)$, 有结论，如果$f(z)=a$有n重根，根据孤立性能找到足够小$\gamma$邻域只含有=a的根，而$\Gamma$内其它点，同样有n个根，但是根据一阶导数非0得到，其它根全是单根！
+  - $f$连续把闭链$\gamma$映射到 闭集$\Gamma$，所以$w _0=f(z _0)$存在邻域属于$\Gamma$, 所以是局部的开到开，
+  - 推论，如果在$z _0$, $f(z _0)=a$的根是一重(n=1),那么在足够小的$\Gamma$中$w _0$邻域，和$z _0$中的是1-1的（因为都是1重根
+  - f解析且$f'(z _0)\neq 0$,邻域共形拓扑（连续,1-1,反函数连续）映射域到域
+  - 推论, 既然开到开，那么从 模长上, $|f(\gamma)|$内没有极大值，也就没有最大值，如果有也是在边界上
+  - **定理 13** 如果函数 $f(z)$ 对于 $|z|<1$ 解析，且满足条件 $|f(z)|\leqslant1$，$f(0)=0$，则 $|f(z)|\leqslant|z|$，且 $|f'(0)|\leqslant1$， if $|f(z)|=|z|$for some $z\neq 0$, or if $|f'(0)|=1$, then $f(z)=cz$ with a constanct $c$ of absolute value 1
+
+4.4 柯西定理的一般形式
+  - 核心就是拆链
+  - 首先定义同调: 开集 $\Omega$ 内的闭链 $\gamma$ 称为关于 $\Omega$ 同调于零homologous to zero, 如果对于 $\Omega$ 的余集中的所有点 $a$,均有 $n(\gamma, a)=0$.
+  - $\Omega$中 局部恰当微分pdx+qdy <=充要=> 任意 $\partial R$上积分为0, R是$\Omega$中的矩形(这里需要注意的是，这里“中”的定义和矩形的定义，要不只是边界还要内部，然后是点集的属于关系)
+  - 这相关的几个定理，全部是靠 拆成更小的有限的闭链，然后重合反向边抵消，有限性通过 距离的最小值来控制矩形的大小
+  - 对于多个孔 和任意$\Omega$内的闭链$\gamma$,把只围绕一个孔的闭曲链一次的作为基，那么$\gamma$唯一的等价于一个线性组合，每个基的系数是整数. 这里的要做的就是 $\gamma$能拆成同调的线性组合，那么其上的积分也能自然感觉的拆成对应的线性组合 
+
+4.5 留数计算
+  - 核心就是 对于奇点$a _i$ 找足够小邻域只有这个奇点, 让$f-\frac{R _i}{x-a _i}$ 在这个邻域中 积分为0，从而$R _i$定义为留数
+  - 核心就是 分解的最小单位的 结果，它容易计算，需要注意的是 这里并不是完全消除奇点，例如 $1/(x-1)^2+1/(x-1)$,其中分母2次项不影响留数，因为它 虽然在点1是极限点，但是绕它的积分为0，其实本质上还是 原函数 一个是 $-1/(x-1)$它可以单值, 而$\log (x-1)$它会有黎曼面，且绕着点1（分支点）会到另一层黎曼面
+  - $\frac{1}{2\pi i}\int _{\gamma} f dz = \sum _{j} n(\gamma,a _j)R _j$, 也就是$\gamma$拆成绕不同holes的卷绕数, f拆成对应的分母1次时，的分子
+  - 辐角定理 **定理 18** 如果 $f(z)$ 是 $\Omega$ 内的亚纯函数, 具有零点 $a _j$ 和极点 $b _k$, 则对于每一个在 $\Omega$ 内同调于 0 而不通过任意零点或极点的闭链 $\gamma$, 必有$n(\Gamma,0)=\frac{1}{2\pi i}\int _{\gamma} \frac{f'(z)}{f(z)}dz = \sum _j n(\gamma, a _j) - \sum _k n(\gamma, b _k)$ 这里，重零点及重极点应按其阶数重复计数。
+  - Rouche’s theorem : 设$\gamma$在$\Omega$内同调于0，对于不在$\gamma$上的任一点$z$，满足关系$n(\gamma, z)=0$或1。设$f(z)$及$g(z)$在$\Omega$内解析，并在$\gamma$上满足不等式$|f(z)-g(z)| < |f(z)|$，则$f(z)$及$g(z)$在$\gamma$内具有相同数目的零点。可以用于一些多项式的圆内零点判断
+  - 一种加权感, g解析, $\frac{1}{2\pi i}\int _{\gamma} g(z)\frac{f'(z)}{f(z)}dz = \sum _j n(\gamma, a _j)g(a _j) - \sum _k n(\gamma, b _k)g(b _k)$, 这个的用处是 零点唯一时，取g(z)=z是一种求根公式，
+  - 对于定积分的计算：
+  - $\int _0^{2\pi} R(\cos \theta,\sin \theta) d\theta$
+    - $z=e^{i\theta}$
+    - $\cos \theta =\frac{1}{2}(z+1/z)$
+    - $\sin \theta =\frac{1}{2i}(z-1/z)$
+    - $d\theta = -\frac{idz}{z}$
+  - $\int _{-\infty}^{\infty} R(x) dx=2\pi i\sum _{y>0} Res R(z)$, 需要 $R(\infty)=0$（至少2阶零点, 保证半圆弧上积分为0）,增加上半平面的半圆, 
+    - 这个简单想是 半圆半径趋于无穷（但没有证明任意性），而更具体，通过左侧x右侧x，上方y分别独立趋于无穷（矩形） 来证明
+    - $\int _{-\infty}^{\infty} R(x) e^{i x} \mathrm{~d} x$ 考虑拆开再合并
+    - 对于在实轴上有极点的情况，柯西主值：它做一个极小的半圆绕过这个点，认为“一半”覆盖在上面，所以是 留数的1/2的贡献
+    - 例如 $\text{pr.v.}\int _{-\infty}^{\infty}\frac{e^{ix}}{x}dx=\pi i$
+  - $\int _{0}^{\infty}x^\alpha R(x)dx=2 = 2\int _{0}^{\infty}t^{2\alpha+1}R(t^2)dt=\int _{-\infty}^{\infty}t^{2\alpha +1}R(t^2)dt$,其中$0<\alpha <1$， 这里想法
+    - 首先向上一种靠近，
+    - 其次，这次不包含原点，
+    - 还有 避开了负虚轴（因为$z^{\alpha}$是多值的 这样可以选择一个分支在 $[-\pi\alpha,3\pi \alpha]$之间 
+
+4.6 调和函数
+  - $\Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0.$
+  - $r \frac{\partial}{\partial r} \left( r \frac{\partial u}{\partial r} \right) + \frac{\partial^2 u}{\partial \theta^2} = 0.$
+  - 一个解析函数的实部和虚部是共轭的调和函数. 因此, 有关解析函数的所有定理是一对共轭调和函数的定理.
+  - u调和 则 $f(z)=\frac{\partial u}{\partial x}-i\frac{\partial u}{\partial y}$解析
+  - $du = \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy$
+  - 希望 $fdz = du+idv$ 样子(恰当微分)，v不一定存在，把共轭微分dv写作$^{\ast}du = -\frac{\partial u}{\partial y} dx + \frac{\partial u}{\partial x} dy$
+  - 上面 我们有解析积分为0，调和积分为0，所以调和的共轭微分 的积分 = 0-0=0
+  - 图的角度看 是 右法向导数积分为零$\int _{\gamma}{}^{\ast}du=\int _{\gamma} \frac{\partial u}{\partial n} |dz|=0$
+  - **定理 19** 设 $u _1$ 及 $u _2$ 都在域 $\Omega$ 内调和, 则对于在 $\Omega$ 内同调于零的任意闭链 $\gamma$, 必有$\int _{\gamma}(u _1^*\mathrm{d}u _2-u _2^*\mathrm{d}u _1)=0.$
+    - 如果 $u _1=1$ 而 $u _2=u$, $\int _{\gamma}\left(u _1\frac{\partial u _2}{\partial n}-u _2\frac{\partial u _1}{\partial n}\right)|\mathrm{d}z|=0.$
+  - **定理 20** 一个调和函数在同心圆 $|z|=r$ 上的算术平均值是 $\log r$ 的一个线性函数,$\frac{1}{2\pi}\int _{|z|=r}u\mathrm{d}\theta=\alpha\log r+\beta$, 当不去心时$\alpha=0$，是常数,$\beta=u(0)$， 平移后：在圆内的调和函数，圆边界上均值=圆心
+  - 对于圆内其它点，考虑 线性分式变换 把它变成圆心，于是结合上面的计算圆心值的公式 有了泊松公式$u(a)=\frac{1}{2\pi}\int _{|z|=R}\frac{R^{2}-|a|^{2}}{|z-a|^{2}}u(z)d\theta=\frac{1}{2\pi}\int _{|z|=R}\operatorname{Re}\frac{z+a}{z-a}u(z)d\theta$
+    - 这里两个公式一个用了 圆，一个保持z
+    - 在极坐标系中，$u(re^{i\varphi})=\frac{1}{2\pi}\int _{0}^{2\pi}\frac{R^{2}-r^{2}}{R^{2}-2rR\cos(\theta-\varphi)+r^{2}}u(Re^{i\theta})d\theta.$
+  - 施瓦茨公式Schwarz's formula. $f(z)=\frac{1}{2\pi i}\int _{|\zeta|=R}\frac{\zeta+z}{\zeta-z}u(\zeta)\frac{d\zeta}{\zeta}+iC$，其中$C$是一个任意的实常数. 作用是当我们拿到调和函数u，希望$f=u+i(v+C)$, 这个可以不用具体的找v，就能求得 圆内任意一点z的值
+  - 施瓦茨积分 $P _{U}(z)=\frac{1}{2 \pi} \int _{0}^{2 \pi} \operatorname{Re} \frac{e^{i \theta}+z}{e^{i \theta}-z} U(\theta) d \theta=\frac{1}{2 \pi} \int _{0}^{2 \pi} \frac{1-|z|^2}{|e^{i\theta}-z|^2} U(\theta) d \theta=\frac{1}{2 \pi} \int _{0}^{2 \pi} U(\theta) \mathrm{d} \theta^{*}=\frac{1}{2 \pi} \int _{0}^{2 \pi} U\left(\theta^{*}\right) \mathrm{d} \theta$, 后面可以有趣的几何解释, $e^{i\theta},z,e^{i\theta^{\ast}}$三点共线
+  - 反射:
+    - $u$调和 $u(\bar{z})$也调和
+    - $f$解析 $\overline{f(\bar{u})}$ 解析
+    - 其中域 关于实轴反射得到
+
+
+
+总结 核心公式还是 
+- $\int _{\gamma} f(z)dz = 0$和 $n(\gamma,a)f(a)=\frac{1}{2\pi i}\int _{\gamma} \frac{f(z)dz}{z-a}$
+  - 这个 点的值由边界唯一决定
+  - 这个研究从 恰当微分
+  - 到自身解析
+    - 矩形
+    - 圆盘
+    - 到允许有限的 特殊点 $\lim _{z\to a} (z-a)f(z)=0$
+  - 到gamma在$\Omega$内同调于0
+  - 到调和函数
+- 有$\sum _j n(\gamma,z _j(a))=\frac{1}{2\pi i}\int _{\gamma}\frac{f'(z)}{f(z)-a}dz=\frac{1}{2\pi i}\int _{\Gamma} \frac{dw}{w-a}=n(\Gamma,a)$
+- 在这个基础上，对于绕a的次数， $\int _{\gamma} fdz$,把f拆解成这类形状, 因子记作留数，拆解$\gamma$成不同的围绕 holes，根据和holes的关系定义同调，是整个章节的
+- 始终还是逃不开 值的分支 和黎曼面
