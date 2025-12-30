@@ -12,9 +12,9 @@ ISBN 9787040364729
 
 # 数论函数举例 
 
-{% note no-icon success %}
+
 定义1: 在全体正整数上定义的函数是数论函数
-{% endnote %}
+
 
 $u(n)=1 , n\ge 1$, $u\circ U = [x]$
 
@@ -42,13 +42,13 @@ $\mathrm{Liouville}$函数$\lambda(n) = (-1)^{\Omega(n)}= [n\text{ is square}] *
 
 # Dirichlet 乘积 /卷积
 
-{% note no-icon success %}
+
 
 定义2: $f(n),g(n)$是两个数论函数,$h=f * g$称作Dirichlet 乘积/卷积
 
 $\displaystyle h(n) = \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x相乘为n的对应y的乘积的和, 所以也可以写成$(f * g)(n) =\sum_{ab = n}f(a)g(b)$
   
-{% endnote %}
+
 
 定理1: Dirichlet乘积满足 交换率$f * g = g * f$和结合率$(f * g)* h = f * (g * h)$
 
@@ -57,19 +57,19 @@ $\displaystyle h(n) = \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x
 
 $= 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
 
-{% note no-icon success %}
+
 
 定义3: 若 $I = f * g$ 则$f$和$g$互为Dirichlet的逆
 
-{% endnote %}
+
 
 定理2: $f * I = I * f = f$
 
-{% note no-icon success %}
+
 
 定义4: $F=f*u$ 则$F$称作$f$的$\mathrm{M\ddot{o}bius}$变换, $F(n) = \sum_{d|n} f(d)$, 如$d=u * u, I = \mu * u$
 
-{% endnote %}
+
 
 定理3(这也就是算法里常见的Mobius反演): $F=f * u \Rightarrow f=F * \mu$, $F(n) = \sum_{d|n} f(d) \Rightarrow f(n)=\sum_{d|n} F(d)\mu(\frac{n}{d})$, 反向一样的推法
 
@@ -85,11 +85,11 @@ $= 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} = (1-1)^s$
 > 可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来,证明时对于可乘函数也只需要证明质数幂次的情况
 > 完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)=\mu(n)f(n)$
 
-{% note no-icon success %}
+
 
 定义5: 定义在全体自然数上，且不恒等于零的数论函数,若$f(mn)=f(m)f(n), \gcd(m,n)=1$,则称它为可乘/积性函数,若没有$\gcd$的限制，全部满足$f(mn)=f(m)f(n)$则称作完全/绝对 可乘函数
 
-{% endnote %}
+
 
 例3: $\mu(n),d(n)$为可乘函数与,$\mathrm{Liouville}$函数,$e^\lambda(n)=n^{\lambda},I(n)$ 为完全可乘函数
 
@@ -341,7 +341,7 @@ $\displaystyle =\frac{6}{\pi^2}x+O(\sqrt{x})$
 ## 9. $\lambda(n)=(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k=1}^{[x]}\lambda(k)[\frac{x}{k}]=[\sqrt{x}]$
 
 
-{% note info no-icon Proof %}
+
 
 $\sum_{d|n}\lambda(d)d^s = \sum_{d|n,d=\prod p_i^{\beta_i}} (-1)^{\sum \beta_i}(\prod {p_i}^{\beta_i})^s$
 
@@ -357,11 +357,11 @@ $=((\lambda * u)\circ U)([x])$
 
 $(\lambda * u)(n) = \left\lbrace\begin{array}{lc} 1,& n=k^2 \\\\ 0,& \text{others}\end{array}\right.$
 
-{% endnote %}
+
 
 ## 14. 设$\displaystyle s(n)=\sum_{j\in[1,n],\gcd(j,n)=1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}=\frac{1}{n^2}\sum_{j=1}^n j^2$,$s(n)=n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$
 
-{% note info no-icon Proof %}
+
 
 通过和n的gcd来分类
 
@@ -389,11 +389,11 @@ $=\sum_{d|n} (\frac{n^3}{3d^3}\mu(d)d^2+\frac{n^2}{2d^2}\mu(d)d^2+\frac{n}{6d}\m
 
 $=\frac{n^2}{3} (\mu * e) +\frac{n^2}{2}(\sum_{d|n}\mu(d))+\frac{n}{6}\sum_{d|n}\mu(d)d$
 
-{% endnote %}
+
 
 ## 16. 求所有使得$\phi(n)= 24$
 
-{% note info no-icon Proof %}
+
 
 $\phi(n)=n\prod_{p|n}\frac{p-1}{p}$
 
@@ -413,20 +413,20 @@ $\phi(13)=12$
 
 所以有$13\cdot 3,13\cdot 3\cdot 2,13\cdot 2^2\cdots$
 
-{% endnote %}
+
 
 ## 17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$ 
 
-{% note info no-icon Proof %}
+
 
 $\phi(n)=n\prod_{p|n}(1-\frac{1}{p}) \le n(1-\frac{1}{p}) \le n(1-\frac{1}{\sqrt{n}}) = n-\sqrt{n}$
 
-{% endnote %}
+
 
 ## 25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)=1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$
 
 
-{% note info no-icon Proof %}
+
 
 定义函数$\mathrm{rad}(n) = \prod_{p|n} p$相当于$n$中所有质因子的乘积
 
@@ -458,4 +458,3 @@ $\displaystyle \ge \frac{\phi(d)}{d} \sum_{t\le x}\frac{1}{t}$, 这里看出,任
 
 $\displaystyle \ge \frac{\phi(d)}{d} \log([x]+1)$
 
-{% endnote %}

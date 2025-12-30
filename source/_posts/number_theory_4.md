@@ -106,7 +106,6 @@ $\displaystyle G(m)=\sum_{x\pmod m}' f(x)$ 表示对模$m$的一个简化系求�
 
 ## 2. xxxx
 
-{% note info no-icon Proof %}
 
 
-{% endnote %}
+
