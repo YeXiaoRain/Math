@@ -39,7 +39,7 @@ isbn
 
 # 复数 complex numbers
 
-## 复数代数 the algebra of complex numbers 
+## 复数代数 the algebra of complex numbers
 
 尽量和实数的保持一致
 
@@ -166,12 +166,12 @@ $-|a| \le \text{Im}\, a \le |a|$
     - $||a|-|b|| \le |a-b|$
   - 当 复数拆分表示$|a+ib| \le |a|+|b|$
   - 柯西不等式 $|\sum_{i=1}^{n} a_ib_i|^2 \le \sum_{i=1}^n |a_i|^2\sum_{i=1}^n |b_i|^2$
-    - 证明$\sum_{i=1}^n |a_i-\lambda \bar{b_i}| = \sum |a_i|^2+|\lambda|^2 \sum |b_i|^2 -2\text{Re}\, \bar{\lambda} \sum a_ib_i \ge 0$ 
+    - 证明$\sum_{i=1}^n |a_i-\lambda \bar{b_i}| = \sum |a_i|^2+|\lambda|^2 \sum |b_i|^2 -2\text{Re}\, \bar{\lambda} \sum a_ib_i \ge 0$
     - 取$\lambda=\frac{\sum a_ib_i}{|b_i|^2}$代入
     - 等号成立当且当$a_i,\bar{b_i}$成比例
     - 也可以 归纳法证明柯西不等式
 
-练习 
+练习
 
 3. $|a_i| < 1, \lambda_i \ge 0, \sum \lambda_i=1$证明$|\sum \lambda_i a_i| < 1$
    1. $|| \le \sum \lambda_i |a_i| < \sum \lambda_i\cdot 1 = 1$, 三角不等式
@@ -246,7 +246,7 @@ Moivre's formula
 - 它们 长度相同，幅角均分$2\pi$ 几何上看正好是正n边形的n个顶点
 - 其中 右侧=1是重要情况，是均分单位元的情况
 
-### 解析几何 Analytic Geometry 
+### 解析几何 Analytic Geometry
 
 一个复方程 本来就等价于两个实方程
 
@@ -257,7 +257,7 @@ Moivre's formula
 - 只有$b_1,b_2$成实数倍数时，两个直线平行
 - 指向 arg b
 - 夹角 $arg b_1/b_2$, 特别的 如果$b_1/b_2$是纯虚数，那么两条直线正交
-- $\text{Im}(z-a)/b > 0$可以表示直线a+bt的b方向的逆时针方向的半面（因为 直线视作从a点b方向正向和逆向延伸，而z-a视作从a到z的向量，那么 (z-a)/b 根据几何视角是 向量b向z-a的夹角，那么它的虚数部分的正负可以看作在哪侧） 
+- $\text{Im}(z-a)/b > 0$可以表示直线a+bt的b方向的逆时针方向的半面（因为 直线视作从a点b方向正向和逆向延伸，而z-a视作从a到z的向量，那么 (z-a)/b 根据几何视角是 向量b向z-a的夹角，那么它的虚数部分的正负可以看作在哪侧）
 
 exercises
 
@@ -268,7 +268,7 @@ show that all circle that pass through $a$ and $1/\bar{a}$ intersect the circle 
 - 显然，O，A，B共线（根据复数运算规则 知道夹角相等）
 - 那么 相似三角形有 角OCA=角CBO=角CBA=1/2 角CDA=90-ACD得证
 
-### 球面表示 The Spherical Representation 
+### 球面表示 The Spherical Representation
 
 引入 无穷，和一些与之有关的四则运算
 
@@ -288,7 +288,7 @@ show that all circle that pass through $a$ and $1/\bar{a}$ intersect the circle 
 - 注意半球$x_3 < 0$对应圆盘|z|<1, 半球$x_3>0$对应于圆盘的外部$|z|>1$
 - 在函数论中S称为 黎曼球面
 - 如果 复数平面就是以$x_1$轴，$x_2$轴分别为实轴和虚轴的(x_1,x_2)平面，则变换有简单几何意义，记$z=x+iy$可证 x:y:(-1)=x_1:x_2:(x_3-1)
-- 说明点 (x,y,0), (x_1,x_2,x_3),(0,0,1) 在一条直线上。 
+- 说明点 (x,y,0), (x_1,x_2,x_3),(0,0,1) 在一条直线上。
 - 因此 这个对应是以 (0,0,1)为中心的中心投影
 - 称为 球极平面投影
 
@@ -356,3 +356,5 @@ $d(z, \infty) = \frac{2}{\sqrt{1 + |z|^2}}.$
 这本书 一个小节都有直接习题，而不是章节总的习题
 
 https://web.ma.utexas.edu/users/demason/Ahlfors%20Exercises.pdf
+
+有地方用 实矩阵 $[a,-b;b,a] = a+ib$，同时有复数乘法，其特征值是a+-ib
