@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="isbn 9787115543844 这英文是 real analysis, 后缀是 all the tools you need to understand proofs 据说有视频课 calclifesaver.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="普林斯顿 数学分析读本">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="isbn 9787115543844 这英文是 real analysis, 后缀是 all the tools you need to understand proofs 据说有视频课 calclifesaver.com">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-12-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.622Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数学分析">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/","path":"the_real_analysis_lifesaver/","title":"普林斯顿 数学分析读本"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>普林斯顿 数学分析读本 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">1. 预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">2.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%95%B0%E5%AD%A6%E4%B8%8E%E9%80%BB%E8%BE%91"><span class="nav-number">2.2.</span> <span class="nav-text">基础数学与逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88%E8%AE%BA"><span class="nav-number">2.3.</span> <span class="nav-text">集合论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AE%9E%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">2. 实数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E7%A1%AE%E7%95%8C"><span class="nav-number">3.1.</span> <span class="nav-text">上确界</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0%E5%9F%9F"><span class="nav-number">3.2.</span> <span class="nav-text">实数域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E4%B8%8E%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%A9%BA%E9%97%B4"><span class="nav-number">3.3.</span> <span class="nav-text">复数与欧几里得空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%8B%93%E6%89%91%E5%AD%A6"><span class="nav-number">4.</span> <span class="nav-text">3. 拓扑学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E5%B0%84"><span class="nav-number">4.1.</span> <span class="nav-text">双射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E6%95%B0%E6%80%A7"><span class="nav-number">4.2.</span> <span class="nav-text">可数性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%93%E6%89%91%E5%AE%9A%E4%B9%89"><span class="nav-number">4.3.</span> <span class="nav-text">拓扑定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AD%E9%9B%86%E5%92%8C%E5%BC%80%E9%9B%86"><span class="nav-number">4.4.</span> <span class="nav-text">闭集和开集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A7%E9%9B%86"><span class="nav-number">4.5.</span> <span class="nav-text">紧集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%B7%E6%B6%85-%E5%8D%9A%E9%9B%B7%E5%B0%94%E5%AE%9A%E7%90%86"><span class="nav-number">4.6.</span> <span class="nav-text">海涅-博雷尔定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%A4%87%E9%9B%86%E4%B8%8E%E8%BF%9E%E9%80%9A%E9%9B%86"><span class="nav-number">4.7.</span> <span class="nav-text">完备集与连通集</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BA%8F%E5%88%97"><span class="nav-number">5.</span> <span class="nav-text">4. 序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B6%E6%95%9B"><span class="nav-number">5.1.</span> <span class="nav-text">收敛</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%81%E9%99%90%E4%B8%8E%E5%AD%90%E5%BA%8F%E5%88%97"><span class="nav-number">5.2.</span> <span class="nav-text">极限与子序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E5%BA%8F%E5%88%97%E4%B8%8E%E5%8D%95%E8%B0%83%E5%BA%8F%E5%88%97"><span class="nav-number">5.3.</span> <span class="nav-text">柯西序列与单调序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%90%E5%BA%8F%E5%88%97%E6%9E%81%E9%99%90"><span class="nav-number">5.4.</span> <span class="nav-text">子序列极限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%BA%8F%E5%88%97"><span class="nav-number">5.5.</span> <span class="nav-text">特殊序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%A7%E6%95%B0"><span class="nav-number">5.6.</span> <span class="nav-text">级数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">5.7.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-number">6.</span> <span class="nav-text">其它</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/the_real_analysis_lifesaver/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="普林斯顿 数学分析读本 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          普林斯顿 数学分析读本
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-12-20 00:00:00" itemprop="dateCreated datePublished" datetime="2024-12-20T00:00:00+08:00">2024-12-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>16k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>57 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>isbn 9787115543844</p>
+<p>这英文是 real analysis, 后缀是 all the tools you need to understand proofs</p>
+<p>据说有视频课 calclifesaver.com</p>
+<span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>实分析是第一门 讲究严格性 的数学教程</p>
+<p>慢慢来 慢慢读 慢慢写 并仔细思考</p>
+<h2 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>哦 作者也参考了 Walter Rudin的数学分析原理 第三版（这我之后也打算读一读）</p>
+<p>数学家把 实分析称作“严格”的微积分，研究微积分的“合理性”</p>
+<p>卧槽，这本书 相当于 Rudin的注解版伴读版！？</p>
+<h3 id="基础数学与逻辑"><a href="#基础数学与逻辑" class="headerlink" title="基础数学与逻辑"></a>基础数学与逻辑</h3><p>自然数 $\mathbb{N}$ 所有正整数不包括0, natural number</p>
+<p>整数 $\mathbb{Z}$ 德语Zahlen</p>
+<p>有理数 $\frac{m}{n}\in \mathbb{Q}; m,n \in\mathbb{Z},n\neq 0$, 商 Quotient</p>
+<p>实数$\mathbb{R}$ 稍后定义, real number</p>
+<hr>
+<p>形式逻辑</p>
+<ul>
+<li>两个命题同时为真或假，命题才等价</li>
+<li>蕴含： A $\Rightarrow$ B, 如果A为真 则 B为真</li>
+<li>当且仅当: $A \Leftrightarrow B$, 互相蕴含</li>
+<li>否命题: $\neg$ 非 \neg</li>
+<li>逆命题： 颠倒蕴含关系</li>
+<li>逆否命题： $\neg B\Rightarrow \neg A$, 逆否命题和原命题 等价（同为真假）</li>
+</ul>
+<hr>
+<p>常用证明技巧</p>
+<ul>
+<li>举反例 （用于证明 命题为假），并非每个连续函数可微, f(x)&#x3D;|x|</li>
+<li>证明 逆否命题</li>
+<li>反证法： 证明($A\Rightarrow \neg B$) 为假</li>
+<li>归纳法： 初始状态成立 + $对于&lt; n的状态都成立 能推出 任意状态n成立$， 需要找到一个偏序性<ul>
+<li>这另一个用处就是，猜结论证明法 就可以用</li>
+</ul>
+</li>
+<li>分两步直接证明：这里演示的是草稿纸倒推法+正向写（我还挺反感现在的这种 要不写“草稿纸”的部分的，我始终觉得草稿纸的部分应该属于证明的一部分</li>
+</ul>
+<h3 id="集合论"><a href="#集合论" class="headerlink" title="集合论"></a>集合论</h3><p>定义3.1 集合</p>
+<ul>
+<li>一堆元素的集体，包含无穷多个元素的集合成为无限集</li>
+</ul>
+<p>定义3.3 索引族</p>
+<ul>
+<li>如果每一个$i\in I$都对应着一个集合$A_i$, 那么$\mathscr{A}&#x3D;\lbrace A_i|i\in I \rbrace$ 就是索引集为$I$的集合A的索引族</li>
+<li>例如 $A_i&#x3D;\lbrace 1,2,i^2\rbrace$<ul>
+<li>$\mathscr{A}&#x3D;\lbrace \lbrace 1,2,1 \rbrace ,\lbrace 1,2,4 \rbrace,\lbrace 1,2,9 \rbrace\cdots \rbrace$</li>
+<li>其中第一个 就是$\lbrace 1,2 \rbrace$ 只是书写冗余</li>
+</ul>
+</li>
+</ul>
+<p>定义3.5 子集，超集</p>
+<ul>
+<li>通过元素关系定义的 $A\subseteq B$ ,$\forall x\in A \Rightarrow  x\in B$<ul>
+<li>特别的$\subset$表示$\subseteq$且$\neq$ 这念起来，写起来 看起来 是 subseteq &#x3D;subset + eq, 但定义上，上面的subseteq更容易定义, 而很多时候数学家的写法 用的$\subset$ 但同时没有排除不等的可能，所以看到 subset也不一定是真子集，除非特别说明</li>
+</ul>
+</li>
+<li>$\emptyset \subset A$ 任何集合包含空集，因为定义是通过元素来定义的，只要一个集合中所有元素属于另一个集合，而空集没有元素，也就满足</li>
+<li>对于证明集合相等，常用的一个证明思路是 $A\subset B,B\subset A$来说明相等</li>
+</ul>
+<p>定义3.8 区间</p>
+<ul>
+<li>开区间</li>
+<li>闭区间</li>
+<li>半开区间<ul>
+<li>这三个都是通过 不等式来定义的 例如 $[a,b]&#x3D;\lbrace x\in \mathbb{R} | a \le x \le b \rbrace$</li>
+<li>注意到的是 在 数轴上因为只有左右，所以会有这种半开区间，对于二维平面或者更高维度的，一般研究的就是开区间 或 闭区间</li>
+</ul>
+</li>
+</ul>
+<p>定义3.10 交集，并集</p>
+<ul>
+<li>这里定义是通过 元素的属于性质来定义的，交就是同时属于，并就是至少属于其中一个</li>
+<li>$\mathbb{Q}\cap \mathbb{R}&#x3D;\mathbb{Q}$</li>
+<li>性质：<ul>
+<li>$A\cap A&#x3D;A&#x3D;A\cup A$ 自己和自己</li>
+<li>交换律</li>
+<li>结合律</li>
+<li>特殊的 0点，也就是空集, $A\cap \emptyset &#x3D; \emptyset, A\cup \varnothing&#x3D; A$ ,  在tex里面，似乎 零和斜线的是emptyset,而圆的是 varnothing</li>
+</ul>
+</li>
+<li>更复杂的性质<ul>
+<li>$(A\cap B)\subset A \subset (A\cup B)$ 一定理解上 交会变小的趋势，并有变大的趋势</li>
+<li>$A\cup B&#x3D;B \Leftrightarrow A\subset B$, 属于关系</li>
+<li>$A\cap B&#x3D;A \Leftrightarrow A\subset B$</li>
+<li>$A\cup (\cap_i B_i)&#x3D;\cap_i (A\cup B_i)$ 类似分配率</li>
+<li>$A\cap (\cup_i B_i)&#x3D;\cup_i (A\cap B_i)$ 类似分配率</li>
+</ul>
+</li>
+</ul>
+<p>定义3.15 补集</p>
+<ul>
+<li>$A^c&#x3D;B \textbackslash A &#x3D; \lbrace x\in B | x\not\in A\rbrace$</li>
+<li>$B\textbackslash(B\textbackslash A)&#x3D;A$</li>
+<li>Augustus De Morgan 命令的 定理, 德摩根律<ul>
+<li>$\neg (A或B)\Leftrightarrow (\neg A)且(\neg B)$</li>
+<li>$\neg (A且B)\Leftrightarrow (\neg A)或(\neg B)$</li>
+<li>$(\cup A_i)^c&#x3D;\cap (A_i^c)$</li>
+<li>$(\cap A_i)^c&#x3D;\cup (A_i^c)$</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-实数"><a href="#2-实数" class="headerlink" title="2. 实数"></a>2. 实数</h2><h3 id="上确界"><a href="#上确界" class="headerlink" title="上确界"></a>上确界</h3><p>构造了一个$\mathbb{Q}$的超集$\mathbb{R}$ ，它的一个特点是有上确界</p>
+<p>定理4.1 存在没有最小数的有理数子集，也存在没有最大数的有理数子集</p>
+<ul>
+<li>我知道过程能证明这个命题<ul>
+<li>但是 这对于 (0,1), 每个p, 取 p&#x2F;2不是一样可以没有最小数吗? 总觉得哪里不对？？？？？</li>
+</ul>
+</li>
+</ul>
+<p>定义4.2 有序集</p>
+<ul>
+<li>集合S, 顺序关系，记作 &lt;, 满足性质：<ul>
+<li><ol>
+<li>任意两个S中元素，可比较，要么x &lt; y,x&#x3D;y,y &lt; x 这3种一种</li>
+</ol>
+<ul>
+<li>自己和自己 x&#x3D;x</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>传递性</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>集合+顺序 &#x3D; 有序集<ul>
+<li>其中  y &lt; x 可以记作 x &gt; y</li>
+<li>$x \le y \Leftrightarrow \neg (x &gt; y)$</li>
+</ul>
+</li>
+</ul>
+<p>定义4.3 最小值，最大值</p>
+<ul>
+<li>$A\subset B$ 且 最小最大值存在<ul>
+<li>$\min A\ge \min B$</li>
+<li>$\max A\le \max B$</li>
+</ul>
+</li>
+<li>有些集合并不存在最小值最大值，例如 <code>(0,1)</code></li>
+</ul>
+<p>定义4.5 边界</p>
+<ul>
+<li>有序集S,对于 $E\subset S$,如果存在$a\in S$,使得$\forall b \in E, b \le a$ , 那么a是$E$的上界,E是有上界的<ul>
+<li>对称类似的的可以定义下界</li>
+<li>注意到的是，这里上界并不要求紧凑，例如2是(0,1)的上界，100也是(0,1)的上界， 1是<code>[0,1]</code>的上界(它同时属于其中)</li>
+<li>$(0,+\infty)$没有上界</li>
+<li>更精确的写法是 E在S中有上界</li>
+</ul>
+</li>
+<li>回到前面的 问题 $A&#x3D;(0,\sqrt{2})\cap \mathbb{Q},B&#x3D;(\sqrt{2},+\infty)\cap \mathbb{Q}$, <ul>
+<li>我们找不到一个有理数能 即是A的上界，又是B的下界，因为 根号2是无理数，也就是 有理数不能很好的切割<ul>
+<li>感觉有点怪，因为你切割的点就是根号2,然后 4.1 对实数也成立，</li>
+<li>虽然书中给出的不是直接给的根号2，而是靠 $x^2$与$2$比大小得到的集合</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定义4.7 上确界，下确界</p>
+<ul>
+<li>上面只限制了 范围，但可选的太多了，一个是希望它能唯一“最简化”最接近化，</li>
+<li>如果 S中的上界a满足，$\forall b &lt; a,b\in S$ 且$b$不是E的上界，那么a称作上确界，最小上界，a &#x3D; sup E<ul>
+<li>类似定义下确界</li>
+<li>那么 这里 和上面最小最大值的问题一样，上确界 一定存在吗？<ul>
+<li>(-3,3) ,显然的直觉的，3是一个上确界，且$3\in \mathbb{Q}$</li>
+<li>$A &#x3D; \lbrace x | x^2 &lt; 2, x\in \mathbb{Q}\rbrace$ 这样的$A$ 在$\mathbb{R}$中有上确界$\sqrt{2}$, 但是在$\mathbb{Q}$中没有上确界</li>
+<li>所以感觉是，一边在E内被向大了推，一边在E外向小了推，最后汇聚一点</li>
+<li>{1&#x2F;n} 的上下确界是0,1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理4.9 存在于E中的上界 是 上确界</p>
+<ul>
+<li>对称下确界同理，</li>
+<li>证明：首先 上确界是上界，那么只需要证明比上确界小的（不一定在E中）都不是上界，显然小于当前值，而当前值在E中</li>
+</ul>
+<p>定义4.10 ！！！有序集S,如果S的每一个有上界的非空子集E都在S中存在 supE, 那么称有序集具有 最小上界性</p>
+<ul>
+<li>$\mathbb{Q}$没有最小上界性</li>
+<li>有的地方 完备性 &#x3D; 最小上界性+最大下界性</li>
+</ul>
+<p>定理4.12 有序集S, 有最小上界性</p>
+<ul>
+<li>如果S具有最小上界性，那么S具有最大下界性<ul>
+<li>证明：E的下界的集合 根据已知 有上界，这个上界 满足 下确界的性质，从而得证</li>
+</ul>
+</li>
+<li>等价的 $E\subset S$, $U$是E在S上的上界的集合, $\text{sup} E&#x3D;\text{inf} U$ , 上确界 是 所有上界集合的下确界</li>
+<li>对称的 定理4.13 上界集的下确界</li>
+</ul>
+<h3 id="实数域"><a href="#实数域" class="headerlink" title="实数域"></a>实数域</h3><p>$\mathbb{R}$作为实数域 有三个重要的特性</p>
+<ul>
+<li>阿基米德性质</li>
+<li>$\mathbb{Q}$的稠密性</li>
+<li>根的存在性</li>
+</ul>
+<p>域 &#x3D; 集合+ 两种运算(加法，乘法)</p>
+<ul>
+<li>加法<ul>
+<li>封闭</li>
+<li>交换</li>
+<li>结合</li>
+<li>单位元&#x2F;零元</li>
+<li>逆元</li>
+</ul>
+</li>
+<li>乘法<ul>
+<li>封闭</li>
+<li>交换</li>
+<li>结合</li>
+<li>单位元&#x2F;零元 ， 注意在实数中 乘法的零元是1</li>
+<li>逆元，除了加法零元</li>
+</ul>
+</li>
+<li>分配率， x(y+z)&#x3D;xy+xz</li>
+<li>其它例子：例如 mod p的域里面，有带mod运算，只有 0~p-1的 新的加法乘法，的域</li>
+</ul>
+<p>定义5.3 有序域</p>
+<ul>
+<li>F是域</li>
+<li>$\forall x,y,z\in F, y &lt; z \Rightarrow x+y &lt; x+z$</li>
+<li>$\forall x,y\in F, x&gt;0,y&gt;0 \Rightarrow xy &gt; 0$</li>
+<li>从而有一些常用不等式运算法则</li>
+</ul>
+<p>定义5.4 实数</p>
+<ul>
+<li>$\mathbb{R}$ 具有最小上界性 且 包含$\mathbb{Q}$的有序域</li>
+<li>有个 完备性（最小上界性，最大下界性）证明叫做 戴德金分割</li>
+</ul>
+<p>定义5.5 阿基米德性质</p>
+<ul>
+<li>对于任意$a &gt; 0$,可以找到一个 自然数b，使得 ab任意大<ul>
+<li>对于任意大的翻译是， $\forall a,v \in \mathbb{R}, a &gt; 0,\exists b\in \mathbb{N},ab &gt; v$</li>
+<li>特别的当a取1时，也就有$\forall v \in\mathbb{R}, \exists b\in\mathbb{N}b &gt;v$</li>
+<li>这个性质 有理数也有（有理数更好证明因为可以表示称 n&#x2F;m形式</li>
+<li>对于实数， $B&#x3D;\lbrace bx | b\in \mathbb{N}\rbrace$, 如果 无限则证明完成，如果有上确界$c&#x3D;\text{sup} B$, 根据上确界性质$c&#x2F;2 &lt; c$ 所以c&#x2F;2不是上界，存在 $b_ix &gt; c&#x2F;2$，$2b_i x &gt; c$ 而$(2b_i)\in \mathbb{N}$ 所以c不是上界</li>
+</ul>
+</li>
+</ul>
+<p>定义5.6 稠密性</p>
+<ul>
+<li>$\mathbb{Q}$在$\mathbb{R}$中稠密： 任意两个实数间至少存在一个有理数<ul>
+<li>$x,y\in \mathbb{R},x &lt; y, \exists p\in \mathbb{Q}, x&lt;p&lt;y$</li>
+</ul>
+</li>
+<li>显然 R本身是稠密  $x &lt; (x+y)&#x2F;2 &lt; y$<ul>
+<li>Q本身也是 稠密</li>
+<li>N不稠密</li>
+</ul>
+</li>
+<li>稠密性 从至少存在一个保证了 存在无穷多个<ul>
+<li>从而任何开区间&#x2F;闭区间, a &lt; b, <code>(a,b),[a,b]</code> 包含无穷多个 （$\cap \mathbb{Q}$也是)</li>
+</ul>
+</li>
+<li>证明：<ul>
+<li>想法找  $x &lt; n&#x2F;m &lt; y$ 那么 m足够大, 从而 y-x这段区间 能有一个切割点，那么 m &#x3D; 10 ceil(1&#x2F;(y-x)), 这样<ul>
+<li>首先 x落在 $[i&#x2F;m,(i+1)&#x2F;m)$中（阿基米德性质），而 y一定不在 $[(i+1)&#x2F;m,(i+2)&#x2F;m]$中，从而 (i+1)&#x2F;m是一个有理数，左闭右开是为了不要等于x</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>推论：无理数 在 R中稠密<ul>
+<li>神奇的证明，$x &lt; p &lt; y$想找无理数p,特别的，$\sqrt{2} x &lt; \sqrt{2} p &lt; \sqrt{2}y$, 可以找有理数$\sqrt{2} p$ 通过上面的方法，从而除以$\sqrt{2}$就有了无理数稠密</li>
+</ul>
+</li>
+</ul>
+<p>定理5.8 R中根存在性</p>
+<ul>
+<li>$x\in \mathbb{R}, x &gt;0, \exists a \in \mathbb{R}, a^n&#x3D;x$ 且$a_0^n&#x3D;a_1^n \Rightarrow a_0&#x3D;a_1$ 实数中n次方正根 存在 且唯一<ul>
+<li>唯一性，根据上面的 有序域 得到的 $0 &lt; a_0 &lt; a_1 \Rightarrow a_0^n&#x3D;x &lt; a_1^n&#x3D;x$</li>
+<li>利用上确界 $E&#x3D;\lbrace t\in \mathbb{R} | t&gt;0, t^n &lt; x\rbrace$ 我们希望证明的是 $(\text{sup} E)^n&#x3D;x$<ul>
+<li>首先 sup E存在，（非空( x&#x2F;(x+1) )+有上界(x+1)+最小上界性( 完备性））</li>
+<li>那么只需要证明 它的n次方既不大于x也不小于x即可</li>
+<li>$y^n &lt; x \Rightarrow (y+\min(1,\frac{x-y^n}{n(y+1)^{n-1}}))^n &lt; x$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理5.9 开方运算满足分配率</p>
+<ul>
+<li>$\forall a,b\in \mathbb{R}, a,b &gt; 0, \forall n\in \mathbb{N}, (ab)^{\frac{1}{n}}&#x3D;a^{\frac{1}{n}}b^{\frac{1}{n}}$<ul>
+<li>证明 $()^n&#x3D;ab&#x3D;()^n()^n$</li>
+</ul>
+</li>
+</ul>
+<p>定义5.10 扩张的实数系</p>
+<ul>
+<li>$\mathbb{R}\cup \lbrace +\infty,-\infty \rbrace$</li>
+<li>有一些四则运算，个别的没有约定值</li>
+</ul>
+<h3 id="复数与欧几里得空间"><a href="#复数与欧几里得空间" class="headerlink" title="复数与欧几里得空间"></a>复数与欧几里得空间</h3><p>复数是二维实数+特殊运算</p>
+<p>定义6.1 k维向量</p>
+<ul>
+<li>顺序的 $(x_i)$,</li>
+<li>相等当且仅当对应位置相等</li>
+</ul>
+<p>定义6.2 复数</p>
+<ul>
+<li>二维实向量，新的加法和乘法</li>
+<li>x+y&#x3D;(a+c,b+d)</li>
+<li>xy&#x3D;(ac-bd,ad+bc)</li>
+<li>$\mathbb{C}$</li>
+</ul>
+<p>定义6.3 复数是一个域</p>
+<ul>
+<li>加法 5条性质<ul>
+<li>加法单位元(0,0)</li>
+<li>逆元(-a,-b)</li>
+</ul>
+</li>
+<li>乘法 五条性质<ul>
+<li>乘法单位元(1,0)</li>
+<li>逆元 $(\frac{a}{a^2+b^2},\frac{b}{a^2+b^2})$</li>
+</ul>
+</li>
+<li>分配率</li>
+<li>注意到 复数域的第二维度 全0,可以得到实数，那么复数域是域，实数域是它的子域</li>
+<li>不满足 有序，不是有序域</li>
+<li>其它写法 a+bi</li>
+</ul>
+<p>定义6.4 复共轭</p>
+<ul>
+<li>z&#x3D;a+bi</li>
+<li>a&#x3D;Re(z)</li>
+<li>b&#x3D;Im(z)</li>
+<li>$\bar{z}&#x3D;a-bi$<ul>
+<li>性质</li>
+<li>$\overline{z+w}&#x3D;\bar{z}+\bar{w}$</li>
+<li>$\overline{zw}&#x3D;\bar{z}\bar{w}$</li>
+<li>$\overline{z}+\overline{w}&#x3D;2a,\overline{z}-\overline{w}&#x3D;2ib$</li>
+<li>$z\overline{z} \ge 0$ 当且仅当$z&#x3D;0$时取等号</li>
+</ul>
+</li>
+</ul>
+<p>定义6.6 绝对值 长度</p>
+<ul>
+<li>$|z|&#x3D;+(z\bar{z})^{\frac{1}{2}}$</li>
+</ul>
+<p>定理6.7 绝对值性质:</p>
+<ul>
+<li>$|z| \ge 0$当且仅当z&#x3D;0时取等号</li>
+<li>$|\bar{z}|&#x3D;|z|$</li>
+<li>$|zw|&#x3D;|z||w|$ 这个用 长度与夹角的视角更显然</li>
+<li>$|Re(z)|\le |z|, |Im(z)|\le z$</li>
+<li>$|z+w|\le |z|+|w|$ 三角不等式</li>
+</ul>
+<p>定理6.8 柯西-施瓦兹不等式</p>
+<ul>
+<li>$a_i,b_i\in \mathbb{C}$</li>
+<li>$|\sum_{i&#x3D;1}^n a_ib_i|\le(\sum_{i&#x3D;1}^n |a_i|^2)(\sum_{i&#x3D;1}^n |b_i|^2)$<ul>
+<li>证明：对于n进行归纳法</li>
+</ul>
+</li>
+</ul>
+<p>定义6.9 向量空间$\mathbb{R}^k$</p>
+<ul>
+<li>定义加法和数量乘法</li>
+<li>交换 结合 分配，构成向量空间</li>
+<li>但不是域，没有定义 $\mathbb{R}^k\times \mathbb{R}^k\Rightarrow \mathbb{R}^k$ 的乘法</li>
+<li>因为不是有序的 所以大于小于是无法定义，而 &#x3D; 是可以定义的，特别的x&#x3D;0表示所有它的坐标x_i&#x3D;0</li>
+</ul>
+<p>定义6.10 欧几里得空间</p>
+<ul>
+<li>$x,y\in \mathbb{R}^k$ 定义内积$x\cdot y&#x3D;\sum_{i&#x3D;1}^k x_iy_i$， 注意到这不是$\mathbb{R}^k\times \mathbb{R}^k\Rightarrow \mathbb{R}^k$ 而是$\mathbb{R}^k\times \mathbb{R}^k\Rightarrow \mathbb{R}$</li>
+<li>范数 $|x|&#x3D;+(\sum_{i&#x3D;1}^k x_i^2)^{\frac{1}{2}}$</li>
+<li>欧几里得空间&#x3D;向量空间+内积定义+范数运算</li>
+</ul>
+<p>定理6.11 范数性质</p>
+<ul>
+<li>$|x|\ge 0$ 当且仅当 x&#x3D;0时等号成立</li>
+<li>数量乘法 |ax|&#x3D;|a||x|</li>
+<li>内积 $|x\cdot y|\le |x||y|$</li>
+<li>线性加 $|x+y|\le |x|+|y|$<ul>
+<li>改写 $|x-z|\le |x-y|+|y-z|$</li>
+<li>改写 $|x-y|\ge |x|-|y|$</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-拓扑学"><a href="#3-拓扑学" class="headerlink" title="3. 拓扑学"></a>3. 拓扑学</h2><h3 id="双射"><a href="#双射" class="headerlink" title="双射"></a>双射</h3><p>定义7.1 函数</p>
+<ul>
+<li>$f: A\to B$, A中每一个在B中找到 唯一 的对应元素</li>
+<li>$f: x\mapsto f(x)$ \mapsto<ul>
+<li>$A$定义域</li>
+<li>$B$上域，陪域</li>
+<li>需要注意的的是，中文翻译里 这里的“域” ，和上面说的 “实数域“，”复数域“ 的”域“是完全不同的概念<ul>
+<li>定义域 英文 domain of definition, 用的是domain, 有区域 区间的意思，因此区间也是domain</li>
+<li>而 实数域 中的域 对应的英文是filed,    Field of Real Numbers, real number field</li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/23830155/answer/25796504">https://www.zhihu.com/question/23830155/answer/25796504</a><ul>
+<li>台湾和日本的域都叫做体 ！？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>例子 $A&#x3D;B&#x3D;\mathbb{R}$<ul>
+<li>$f:x\mapsto x^2$, </li>
+<li>会发现不同的x可能同样的x^2,B没有被映满</li>
+<li>另一方面，“同样的f”，可以$A&#x3D;B&#x3D;\mathbb{Z}$</li>
+</ul>
+</li>
+</ul>
+<p>定义7.2 像，值域</p>
+<ul>
+<li>像$E\subset A$, 那么$f(E)&#x3D;\lbrace f(x) | x\in E\rbrace$ 称作E的像</li>
+<li>值域 &#x3D; 定义域的像 &#x3D; f(A)</li>
+</ul>
+<p>定义7.5 原像</p>
+<ul>
+<li>逆映射，注意到的是，这里逆映射可能不是函数（值不唯一）</li>
+<li>写法上是 $f^{-1}(G)&#x3D;\lbrace x | x\in A,f(x)\in G, G\subset B\rbrace$<ul>
+<li>也就是这里 用$^{-1}$表示原像 而不是逆</li>
+</ul>
+</li>
+</ul>
+<p>定义7.7 函数的逆</p>
+<ul>
+<li>感觉应该放在双射一起</li>
+<li>那么也就是原像过程是唯一的，那么原函数就是可逆的</li>
+<li>上面的 $x\to x^2$ 在$\mathbb{R}$上不可逆, 但是在 $\mathbb{R}^+$上可逆</li>
+<li>另外的 这里情况都是R,在线性代数中也有不变子空间</li>
+<li>有时写成$f^{-1}(x)$<ul>
+<li>但是对于$f: A\to B, A\cap B&#x3D;\varnothing$ 时，才会注意到$f^{-1}(y)$ 接受的应该是$B$的某个子集，只是有时A和B有重叠</li>
+</ul>
+</li>
+</ul>
+<p>定义7.9 映上</p>
+<ul>
+<li>每个 B中的元素，的原像至少存在一个</li>
+<li>称作 映上，满射，</li>
+</ul>
+<p>定义7.11 单射</p>
+<ul>
+<li>一个对一个：原像至多一个<ul>
+<li>不是一一对应（一一对应是双射）</li>
+</ul>
+</li>
+</ul>
+<p>定义7.13 双射：</p>
+<ul>
+<li>单射（原像至多一个）+满射（原像至少一个）<ul>
+<li>原像恰有一个</li>
+<li>双射&lt;&#x3D;&gt;可逆<ul>
+<li>$(f^{-1})^{-1}&#x3D;f$ 原像的原像是f</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定义7.17 复合函数</p>
+<ul>
+<li>$f:A\to B, g: B\to C$</li>
+<li>$g \circ f: A\to C,  x \mapsto g(f(x))$<ul>
+<li>对于可逆</li>
+<li>$h^{-1} \circ h: x \mapsto x$</li>
+<li>$h \circ h^{-1}: x \mapsto x$</li>
+</ul>
+</li>
+</ul>
+<h3 id="可数性"><a href="#可数性" class="headerlink" title="可数性"></a>可数性</h3><p>定义8.1 等价关系</p>
+<ul>
+<li>关系 g</li>
+<li>自反: a g a   为真</li>
+<li>对称性: a g b$\Rightarrow$ b g a</li>
+<li>传递性: a g b, b g c 则 a g c</li>
+<li>那么称这个关系 g是等价关系<ul>
+<li>小于 没有自反性</li>
+<li>小于等于 没有 对称性</li>
+<li>同血缘关系 没有传递性，父亲与孩子，孩子与母亲</li>
+</ul>
+</li>
+<li>相等 显然是一种等价关系</li>
+</ul>
+<p>定义8.3 势，基数</p>
+<ul>
+<li>$\sim$, $A \sim B \Leftrightarrow$ 存在$f: A\to B$且f是双射<ul>
+<li>A和B一一对应</li>
+<li>A和B有相同的基数</li>
+</ul>
+</li>
+</ul>
+<p>定理8.4 势是等价关系</p>
+<ul>
+<li>证明 利用双射复合称新的双射</li>
+</ul>
+<p>定理8.5 有限集的势</p>
+<ul>
+<li>个数相同的 势相同（这里依然没有定义具体的“值”，只是证明其相同），通过下标指标集</li>
+</ul>
+<p>定义8.6 可数性</p>
+<ul>
+<li>这中文翻译称可数总给人不好的感觉（觉得是有限），我觉得之前有教材的“可列性”翻译感觉更好）</li>
+<li>任意集合 $A\sim \mathbb{N}$那么称$A$可数<ul>
+<li>有限或可数 称为至多可数</li>
+<li>这玩意 似乎就是 实分析最开始最重要的一个结论，所有有理数可数，而所有无理数不可数<ul>
+<li>以我思来想去之前看实分析的理解，就是我们需要排列方案，不光知道下标（自然数）能计算出值，又要知道值能反推下标（看起来是求原像的过程）</li>
+<li>然后 后续的例如把 整数可数，有理数可数，有限维有理数坐标可数，核心思想就是穿插排列（而这种穿插排列方案只需要存在性，不需要任何映射都是能有逆的，例如 $x\mapsto 2x$ 对于所有整数，会发现奇数没有被排列</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理8.7 势与可数性</p>
+<ul>
+<li>$A\sim B$, 那么A和B的可数性一致，利用等价关系，一个能等价到 自然数，那么都可以</li>
+<li>8.8 $\mathbb{Z}$ 可数，</li>
+</ul>
+<p>定义8.8 无限集</p>
+<ul>
+<li>至少与它的一个真子集的势相等的集合，</li>
+</ul>
+<p>定义8.10 不可数集</p>
+<ul>
+<li>$(0,1)$ 的所有实数 S</li>
+<li>对于S的任意可数真子集E的映射方案，这里采用的 i,j同步对角法（康托尔对角法）<ul>
+<li>也就是 取 s,其中s的小数i位 与 当前方案中第i个数的第i位不同，从而$s\in S,s\not \in E$, 所以S的任意可数子集是 真子集</li>
+<li>这种对角法对于有理数是失效的因为s是个无理数！？</li>
+</ul>
+</li>
+<li>让我们无法按顺序排列所有元素（任何一种排列方式，有元素遗留在外）</li>
+</ul>
+<p>定义8.11 子集和超集的势</p>
+<ul>
+<li>$E\subset A$, 那么</li>
+<li>$A$至多可数&#x3D;&gt; E至多可数</li>
+<li>E不可数 &#x3D;&gt; A不可数</li>
+</ul>
+<p>推论8.12 $\mathbb{R}不可数$</p>
+<ul>
+<li>（0,1) 不可数 &#x3D;&gt; $\mathbb{R}$不可数</li>
+</ul>
+<p>定理8.13 可数集的可数并 可数</p>
+<ul>
+<li>可数集沿着纵向放置，集合沿着横向放置</li>
+<li>和有理数类似的想法，对角游走 可以给一个次序，或者说 按照 集合i的下标j,的i+j的从小到大重新排列</li>
+<li>推论8.14 可数集的任意 可数并 可数<ul>
+<li>这里没有强调可数并的顺序，但是我们可以给出顺序</li>
+<li>这13,14 都要可数并，注意并的“可数”</li>
+</ul>
+</li>
+</ul>
+<p>定理8.15 可数集的幂次 可数</p>
+<ul>
+<li>A可数,$A^n$ 是A中元素构成的全体n元组可数</li>
+<li>例如二维有理数 $(a&#x2F;b,n&#x2F;m)$ 可数</li>
+</ul>
+<p>定理8.16 有理数可数</p>
+<ul>
+<li>a&#x2F;b &#x3D;&gt; (a,b) 是 (Z,Z) 的子集</li>
+<li>推论8.17 无理数集不可数<ul>
+<li>反证 R+无理数 &#x3D; 实数，否则实数可数</li>
+</ul>
+</li>
+</ul>
+<h3 id="拓扑定义"><a href="#拓扑定义" class="headerlink" title="拓扑定义"></a>拓扑定义</h3><p>定义 9.1 度量空间</p>
+<ul>
+<li>集合X, 函数d: ${X}\times{X}\to \mathbb{R}$</li>
+<li>距离, $d(p,q) \ge 0$ 等号成立当且仅当$p&#x3D;q$</li>
+<li>对称, $d(p,q) &#x3D; d(q,p)$</li>
+<li>三角不等式, $d(p,q)\le d(p,r)+d(r,q)$</li>
+<li>那么称为 距离函数或度量<ul>
+<li>例如二维平面</li>
+<li>常见的勾股定理  &#x3D;$\sqrt{(x_0-x_1)^2+(y_0-y_1)^2}$</li>
+<li>只走直角的距离  &#x3D;$|x_0-x_1|+|y_0-y_1|$</li>
+<li>都满足上面的性质</li>
+<li>所以三角不等式 另一个 奇怪的理解是，按照规定的移动规则，距离是这个规则下最短的移动代价</li>
+<li>对称性，有个小学题目叫做 家到学校 3段路上坡，下坡，平路，速度不同，如果用时间来作为距离的话，发现没有对称性</li>
+<li>另一方面，距离 变成了一个 不是理所当然的东西</li>
+</ul>
+</li>
+</ul>
+<p>定义9.3 有界集</p>
+<ul>
+<li>E是度量空间X的一个子集，如果X中存在一点q,使得q到E中任意一点的“距离”均小于某个固定的有限实数M,那么E是有界的</li>
+<li>$\exists q\in X,\exists M \in \mathbb{R} 使得\forall p\in E, d(p,q)\le M$ 那么$E\subset X$是有界的</li>
+<li>注意到，有界的定义是在 度量空间中的，而上面 上下界的定义是 min &#x2F; max 存在，<ul>
+<li>那么如果特别的在R中 把 d(x,y)定义为&#x3D;|x-y|，那么才和之前的有联系</li>
+<li>在 度量空间$\mathbb{R}$ 的$\mathbb{Q}$是无界的</li>
+</ul>
+</li>
+</ul>
+<p>定理9.5 有界集的并</p>
+<ul>
+<li>{A_i}是度量空间X的任意子集族，有限并$\cup_{i&#x3D;1}^n A_i$也有界,</li>
+<li>任意选点p, 对于A_i中的点p_i 有 d(p_i,p) &lt;&#x3D; d(m_i,p)+M_i， 等式右侧的值只有n个（有限个，且值有限）</li>
+</ul>
+<p>定理9.6 有界 &lt;&#x3D;&gt; 既有上界又有下界</p>
+<p>定义9.7 邻域</p>
+<ul>
+<li>$N_r(p)&#x3D;\lbrace q | q\in X,d(p,q) &lt; r\rbrace$ , 度量空间中 到点p的距离小于r的点</li>
+</ul>
+<p>定义9.9 极限点, 聚点，累积点</p>
+<ul>
+<li>$E\subset X$, $\forall r &gt; 0, N_r(p)\cap E\neq \lbrace p\rbrace, \neq \varnothing$</li>
+<li>点p的邻域有其它（非p）的点<ul>
+<li>非极限点称为孤立点</li>
+</ul>
+</li>
+<li><code>(0,1),[0,1]</code>每个点都是 聚点，极限点<ul>
+<li>其中 0,1 不是(0,1)的元素，同样是它的极限点</li>
+</ul>
+</li>
+<li>称作极限点，就像微积分最开始学极限，学连续时候的感觉一样，</li>
+</ul>
+<p>定理9.11 极限点的邻域包含无穷多E中的点</p>
+<ul>
+<li>反证易得，若存在r有限，那么有限可以排距离取min</li>
+<li>推论9.12 有限集没有极限点</li>
+</ul>
+<p>定义9.13 闭集</p>
+<ul>
+<li>最常见的 是 <code>[a,b]</code> 而这里从 度量空间（新的距离概念，新的极限概念）定义了闭集</li>
+<li>度量空间的X一个子集E 包含其所有极限点，那么就是闭集<ul>
+<li>$\lbrace p | p\in X,p 是E的极限点 \rbrace \subset E$</li>
+</ul>
+</li>
+<li>推论9.15 度量空间有限子集是闭集<ul>
+<li>因为全是孤立点，没有极限点</li>
+</ul>
+</li>
+</ul>
+<p>定义9.16 稠密集</p>
+<ul>
+<li>$E\subset X$<ul>
+<li>$X\subset E\cup (E的极限点)$， 那么称E是稠密的</li>
+</ul>
+</li>
+<li>对于度量空间X的任意闭子集E,E在X中稠密当且仅当E&#x3D;X</li>
+<li>和前面的稠密不同，前面的稠密 在实数上 x &lt; y中间找q,使得x &lt; q &lt; y</li>
+<li>这两种“稠密”的定义下, $\mathbb{Q}$在$\mathbb{R}$中都是稠密的</li>
+<li>在度量空间中稠密，也就是 任何 无理数 的 任何邻域 都有 有理数。（这比找有理数列趋于无理数更容易，）</li>
+</ul>
+<p>定义9.19 内点</p>
+<ul>
+<li>$\exists r &gt; 0, N_r(p) \subset E$， 点的某个邻域完全属于E， 那么$p$是$E\subset X$的内点</li>
+<li>注意到 线段(0,1), 在 数轴上，度量空间R中，每个点都是内点。<ul>
+<li>而同样的 $y&#x3D;0,x\in(0,1)$ 在平面上 度量空间$R^2$中, 每个点都不是内点</li>
+</ul>
+</li>
+<li>$[0,1]$的0和1不是内点</li>
+</ul>
+<p>定义9.21 开集</p>
+<ul>
+<li>度量空间X的子集E,的所有点都是该集合的内点</li>
+<li>$\forall p \in E,\exists r &gt; 0, N_r(p) \subset E$<ul>
+<li>(0,1)是开集</li>
+</ul>
+</li>
+<li>注意的是这里和数轴上的开闭通过控制边界的点包不包含不同<ul>
+<li>从而 开集 和 闭集 是可能有非空交的</li>
+</ul>
+</li>
+</ul>
+<p>定理9.23 邻域是开集</p>
+<ul>
+<li>也就是证明 每个点能找到r, 三角不等式 + 半长 可证. 图9.1是在 d&#x3D;勾股定理的时候的 特殊情况的感觉</li>
+</ul>
+<p>定义 9.24 完备集</p>
+<ul>
+<li>完备集 &#x3D; 闭集 + 所有点都是极限点<ul>
+<li>注意到 闭集&#x3D;E 并 E的极限点；孤立点的极限点是空集，</li>
+<li>换句话说 极限点是所有点</li>
+<li>[0,1]是完备集</li>
+<li>$[0,1] \cup \lbrace 2\rbrace$ 是闭集 但不是完备集，（而这在数轴上不是闭区间</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>有界</th>
+<th>极限点</th>
+<th>闭集</th>
+<th>完备集</th>
+<th>内点</th>
+<th>开集</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空集$\varnothing$</td>
+<td>1</td>
+<td>无</td>
+<td>1</td>
+<td>1</td>
+<td>无</td>
+<td>1</td>
+</tr>
+<tr>
+<td>单点集</td>
+<td>1</td>
+<td>无</td>
+<td>1</td>
+<td>否</td>
+<td>与 度量空间X有关，对于通常R否，对于R中取整点</td>
+<td>同内点判断</td>
+</tr>
+<tr>
+<td>R中[a,b]</td>
+<td>1</td>
+<td>[a,b]</td>
+<td>1</td>
+<td>1</td>
+<td>(a,b)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>R中(a,b)</td>
+<td>1</td>
+<td>[a,b]</td>
+<td>否</td>
+<td>否</td>
+<td>(a,b)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>R中(a,b]</td>
+<td>1</td>
+<td>[a,b]</td>
+<td>否</td>
+<td>否</td>
+<td>(a,b)</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<h3 id="闭集和开集"><a href="#闭集和开集" class="headerlink" title="闭集和开集"></a>闭集和开集</h3><p>定理 10.1 开集的补集</p>
+<ul>
+<li>X的子集E是开集，当且仅当 E的补集是闭集</li>
+<li>在数轴上的开闭主要靠端点</li>
+<li>而这里，开集闭集的定义完全看上去是不相关的<ul>
+<li>闭集&#x3D;E的极限点（点的任意邻域有点）都属于E</li>
+<li>开集&#x3D;E的点全是内点（点的邻域全属于E）</li>
+<li>这两个虽然 分别依靠 极限点和内点，但还好再多挖一部，就都和“邻域”有关</li>
+<li>$E^c 闭$，$\forall x\in E$, $x\not\in E^c极限点$, $x$存在邻域不包含$E^c$的点，全是$E$的点, E是开集</li>
+</ul>
+</li>
+<li>推论10.2<ul>
+<li>闭集的补集是开集</li>
+</ul>
+</li>
+</ul>
+<p>定理10.3</p>
+<ul>
+<li>一组任意开集的并 是开集，采用原来的邻域易证属于 并</li>
+<li>一组任意闭集的交 是闭集，证明 交的极限点 都属于新的闭集，（注意原来的极限点可能还存在但是交后变为孤立点，例如[0,1] 交 [1,2]）</li>
+</ul>
+<p>定理10.4</p>
+<ul>
+<li>比上面多了”有限”</li>
+<li>开集有限交 是开集，例如 (-1&#x2F;n,1&#x2F;n)的无限交 得到{0} 闭集</li>
+<li>闭集有限并 是闭集，例如 [0,1-1&#x2F;n] 无限交是 [0,1)</li>
+<li>有限性是关键，关键在于邻域的概念<ul>
+<li>例如 交 需要点全是内点，内点需要存在邻域全属于，而存在邻域就是存在r &gt; 0，有限时，可以取min r, 而 1&#x2F;n 这种无限时，它的“下确界（最贴近的下界）”不属于集合 { 1&#x2F;n }，这里的无限破坏了可取性</li>
+<li>对于 并，那就是 新的极限点 是其中任何一个的极限点，反证法能 min r_i找到</li>
+</ul>
+</li>
+<li>而10.3 不需要有限性，是因为 不需要进行这种 min的处理，也就是无穷数列求min&#x2F;max 趋于上下确界（如果存在），而上下确界不一定属于原来的集合，从而破坏了这种（保持性质）</li>
+</ul>
+<p>定义10.5 闭包</p>
+<ul>
+<li>度量空间X的子集E的所有极限点集合记作 E’, E的闭包$\bar{E}&#x3D;E\cup E’$</li>
+<li>闭包是闭集<ul>
+<li>我们注意到 E’是E的所有极限点，那么 E的闭包根据 定义 包含了E的所有极限点.</li>
+<li>那么问题是，有没有可能 $(E\cup E’)’ \not \subset (E\cup E’)$ 也就是 闭包有了新的极限点，而新的极限点还不属于闭包</li>
+<li>这里用的是 开集闭集互补+邻域定义去证明<ul>
+<li>$\bar{E}^c&#x3D;(E\cup E’)^c$ 是开集</li>
+<li>$\forall p\in \bar{E}^c$ 那么p不属于E也不是E的极限点，存在r 与E交为空，如果能和E’交也为空 即是内点<ul>
+<li>如果任意r 交E’ 非空，那么E’的对应点因为是极限点，在r内能找到E中的点，从而 对于任意r, 三角不等式 2r内能找到E的点，则 这个点也是极限点，应该属于E’, 反证法知道</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>推论10.8 X的任意子集E, $E&#x3D;\bar{E}$ 当且仅当E是闭集</li>
+<li>推论10.9 闭包是每个闭超集的子集<ul>
+<li>$E\subset F \subset X$, $F$是闭集, 那么$\bar{E}\subset F$</li>
+<li>根据上面闭包定义 E闭包多出来的点都是E的极限点，这个也就是在说，闭包的子集的极限点一定在闭包内，这就显然的因为E的极限点也是F的极限点 $E’\subset F’$</li>
+</ul>
+</li>
+</ul>
+<p>定理10.10 闭包中的实数，上确界和下确界</p>
+<ul>
+<li>下确界对称同理</li>
+<li>$E\subset \mathbb{R}$ 非空有上界E, $\text{sup}E\in \bar{E}$<ul>
+<li>实数上也可能有孤立点 和 不连续多段，所以 这里右边是闭包而不是 极限点或其它</li>
+</ul>
+</li>
+<li>推论, $\mathbb{R}$中任意一个有上界E,如果E是闭集，那么 $\text{sup} E\in E$</li>
+</ul>
+<p>定义10.12 相对开集</p>
+<ul>
+<li>E是一个集合. 如果对于任意$p\in E$存在$r &gt; 0$使得$q\in Y$且$d(p,q) &lt; r \Rightarrow q\in E$, 那么集合E相对于Y是开集</li>
+<li>和开集定义类似，不同的是这里多了一个Y<ul>
+<li>之前是 邻域 属于E</li>
+<li>现在是 邻域与Y的交 属于E</li>
+<li>例如二维平面一条不含端点的线段 在二维平面不是开集，在一维对应直线中是开集</li>
+</ul>
+</li>
+</ul>
+<p>定理10.14 相对开集</p>
+<ul>
+<li>度量空间$Y \subset X$， Y的子集E相对于Y是开集，当且仅当存在X的某个开子集G,使得 $E&#x3D;Y\cap G$</li>
+<li>每个Y的相对开子集，都可以表示为X的开集G和Y的交</li>
+<li>E&#x3D;交 &#x3D;&gt; E在G中存在邻域 全属于G，也就 邻域交Y 属于 G交Y，是相对开集</li>
+<li>是相对开集  &#x3D;&gt; E每个点p存在$r_p$,  X中邻域交Y属于E是开集，考虑把这些X中的邻域并起来，开集任意并是开集所以构造出了G</li>
+</ul>
+<p>类似的</p>
+<p>定义10.15 相对闭集</p>
+<ul>
+<li>$p\in Y$, 且p是E的极限点，那么$p\in E$,那么E相对于Y是闭集, 书上符号是不是还用错了？</li>
+<li>$E&#x3D;[1,2)$ 在$Y&#x3D;[0,2)$中是闭集</li>
+</ul>
+<hr>
+<p>一点感受，这里拓扑定义 这么多吗，开集闭集来来回回，感觉核心的就两点 1. 度量空间（距离）, 2 邻域r存在性，从而导出&#x2F;新定义的一系列的东西</p>
+<h3 id="紧集"><a href="#紧集" class="headerlink" title="紧集"></a>紧集</h3><p>实分析中不可或缺的部分</p>
+<p>定义11.1 开覆盖</p>
+<ul>
+<li>$E\subset X$</li>
+<li>$E$的开覆盖是一族集合{G_a},其中每个$G_a$都是相对于X的开集，并且E包含在这些集合的并中<ul>
+<li>$\forall a, G_a相对于X是开集, E\subset \cup_a G_a$ 那么 称 {G_a}是E的一个开覆盖</li>
+</ul>
+</li>
+<li>E的开覆盖 的有限子覆盖是由 {G_a}中有限多个集合组成的一族集合，并且E仍包含在这有限多个集合的并中<ul>
+<li>$n\in\mathbb{N}, E\subset \cup_{i&#x3D;1}^n G_{a_i}$</li>
+</ul>
+</li>
+</ul>
+<p>定义11.3 紧集</p>
+<ul>
+<li>K是度量空间X的一个子集，如果K的每一个开覆盖都有一个有限子覆盖，那么K就是紧集</li>
+<li>$\forall K的开覆盖$ {G_a},存在 $a_1\cdots,a_n$使得 $K\subset \cup_{i&#x3D;1}^n G_{a_i}$, 那么K是紧集<ul>
+<li><ol>
+<li>这里要 任意的开覆盖 都有，不是存在一个有限开覆盖</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>要的是 有限 子覆盖</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>先从简单开始<ul>
+<li>空集一定是紧集，因为 任意开覆盖，选任意一个 空集是它的子集，是有限子覆盖</li>
+<li>单点集一定是紧集，因为 任意开覆盖，至少一个覆盖了它，选择那个覆盖了它的，是有限子覆盖</li>
+<li>有限个数点集一定是紧集，因为 任意开覆盖，每次选一个涵盖其中至少一点的集合，就变成归纳的子问题，从而构造出有限子覆盖</li>
+</ul>
+</li>
+</ul>
+<p>定理 11.5 开区间不是紧集</p>
+<ul>
+<li>(a,b) 可以用 {G_n}&#x3D;(a+1&#x2F;n,b-1&#x2F;n) 来覆盖，它不存在有限子集也是开覆盖，其实注意到这和上面的 “开区间的任意并还是开区间”，“开区间有限交不一定是开区间”的 思路很像，但结论不像</li>
+<li>这里的 无限并的感觉，就是在掰扯 先找点能找到n包含它，反的寻找顺序 先找n,那么能找到不属于这一段的点</li>
+</ul>
+<p>任何度量空间是子集的闭子集（包含所有极限点），也是自己的开子集（全是内点）</p>
+<p>定义11.6 相对紧</p>
+<ul>
+<li>度量空间$Y\subset X$， Y的子集K相对于X是紧集，当且仅当K相对于Y是紧集</li>
+<li>也就是 Y中的开覆盖可以扩展到X中的开覆盖，反过来X的开覆盖可以和Y求交得到Y中的开覆盖<ul>
+<li>也就是定理10.14</li>
+</ul>
+</li>
+</ul>
+<p>定理11.7 紧子集是闭集</p>
+<ul>
+<li>度量空间X的任意紧子集K,K是X中的闭集</li>
+<li>证明：证明$X^c$是开集，也就是$\forall p\in X^c$, p是内点(存在 领域 在$X^c$中)<ul>
+<li>对于任意点$p \in X^c$, $W_q&#x3D;\lbrace N_{d(p,q)&#x2F;3}(q) | q\in K\rbrace$ 是一个开覆盖，也就是 K中所有点q的邻域的并（而邻域的半径选择 是 p到q距离的1&#x2F;3, 所以这样的是一个开覆盖</li>
+<li>因为紧集, 所以 $W_q$有有限子集，也就是有限多个$q_1,\cdots,q_n$ 以及它们的邻域，同样是开覆盖$W\subset \cup_{i&#x3D;1}^n W_{q_i}$</li>
+<li>有限的好处就是 可以取min,max, 那么这个时候，我们的目标是p的邻域在$X^c$, 也就是 找半径&#x3D;min d(p,q_i)&#x2F;3, 显然在这样的半径下，所有q_i的邻域 的交为空, 从而证明了 任意p能找到全在X^c中的邻域，从而X^c是开集，从而X是闭集</li>
+<li>所以紧集的有限性 带来了 可以取min max,从而可以找到邻域 从而才有了全是内点</li>
+</ul>
+</li>
+</ul>
+<p>定理11.8 紧集的闭子集仍是紧集</p>
+<ul>
+<li>$K\subset X$,如果K是紧集，并且K的子集F相对于X是闭集，那么F也是紧集</li>
+<li>(F的任意开覆盖)+$F^c$ 是X的开覆盖, 也是K的开覆盖<ul>
+<li>K紧，所以有限开覆盖 覆盖K, 同时覆盖F,所以F的任意也有有限子开覆盖（如果选了$F^c$去掉就行，所以F也紧</li>
+</ul>
+</li>
+<li>推论11.9 闭集与紧集的交<ul>
+<li>$K\subset X$ ,如果K是紧，X的子集F相对于X是闭集，那么$F\cap K$也是紧集</li>
+<li>这个推论告诉我们，如果把紧集K嵌入到任何一个度量空间中，那么K与该度量空间中任何闭集的交都是紧集</li>
+</ul>
+</li>
+</ul>
+<p>定理11.10 紧集也是有界的</p>
+<ul>
+<li>对于度量空间X的任意紧子集K,K在X中有界<ul>
+<li>有界：存在点q,存在距离M,使得所有$d(q,p \in K) \le M$</li>
+</ul>
+</li>
+<li>证明 逆否命题：无界&#x3D;&gt;不是紧集<ul>
+<li>无界: 任意点q,任意距离M,使得存在$d(p\in K,q) &gt; M$</li>
+</ul>
+</li>
+<li>说半天 最后没有证明逆否命题，还是正向证明，取所有点的半径1的开覆盖，因为紧，所有存在有限，因为有限，所以距离最远两点的距离r, 三角不等式 1+r+1 能覆盖所有 <code>p_1-q_i-q_j-p_2</code> 的路径</li>
+</ul>
+<p>定理11.11 紧集交集</p>
+<ul>
+<li>{K_a}是度量空间X中一族非空紧集，如果 任意 有限 交 非空，那么 所有的交 非空</li>
+<li>这书上反例不够直接啊， 换一个：(0,1&#x2F;n) 它不是紧集，它的任意有限交 非空，但是 它的所有交是空集</li>
+<li>反证：如果所有交为空，<ul>
+<li>那么 K_1 交 （其它所有的交）&#x3D; 空集</li>
+<li>K_1 属于 (其它所有的补（是开集） 的并)</li>
+<li>K_1紧，所以存在 有限多个  其它补的并 覆盖了K_1</li>
+<li>K_1 交，有限多个  其它的交&#x3D; 空集</li>
+</ul>
+</li>
+<li>这里要求任意有限交为非空，推论让结构更简单“嵌套” $K_{n+1}\subset K_n$<ul>
+<li>推论 11.12，嵌套非空紧集，的所有的交非空（马上就是闭区间套定理了）</li>
+<li>原来 俄罗斯套娃有名字 Olga,Galina,Anastasia</li>
+</ul>
+</li>
+</ul>
+<p>定理11.13 紧集中的极限点</p>
+<ul>
+<li>紧集K中的任意一个无限子集E, E在K中至少有一个极限点</li>
+<li>首先得是无限子集才有可能有极限点</li>
+<li>反证：如果没有极限点<ul>
+<li>对于K中每个点p，能找到$r_p$邻域交E 只有p（p属于E时）,或者为空（p不属于E时）</li>
+<li>从而 找到一个K的开覆盖（不考虑交E），而K紧，所有有有限开覆盖覆盖K,同时覆盖E,而每个开覆盖至多含一个E的点，从而E是有限的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>小总结:</p>
+<ul>
+<li>紧集定义是 任意 开覆盖，有 有限 子覆盖</li>
+<li>从而 在紧集条件下 向下推 运算关系，常见紧集&#x3D;&gt;闭集, 不是紧集&#x3D;&gt;开集，而中间证明的核心部分其实没有变，还是用的上面的 距离定义，邻域，有限才有min max 以及 距离三角不等式</li>
+<li>但 这里似乎没有说 当证明是紧集以后，能有什么“用途和特别的性质”，就是有限开覆盖吗？</li>
+</ul>
+<h3 id="海涅-博雷尔定理"><a href="#海涅-博雷尔定理" class="headerlink" title="海涅-博雷尔定理"></a>海涅-博雷尔定理</h3><p>$\mathbb{R}^k$的子集是紧集 当且仅当 它即是闭集又是有界集</p>
+<ul>
+<li>上面证明了 紧集 &#x3D;&gt; 有界闭集</li>
+<li>那么这里 是对于$\mathbb{R}^k$ 要证明 有界闭集 &#x3D;&gt; 紧集<ul>
+<li>反例 $(-\pi,\pi)\cap \mathbb{Q}$在$\mathbb{Q}$中是有界闭集，但不是紧集</li>
+</ul>
+</li>
+</ul>
+<p>定理12.1 闭区间套性质</p>
+<ul>
+<li>$\mathbb{R}$中的闭区间套$I_n$的无限交非空。运用上面紧集的交集中的结论</li>
+<li>也可以 $[a_i,b_i]$, $A&#x3D;\lbrace a_i |i\in \mathbb{N}\rbrace,x&#x3D;\text{sup}A$, 证明x属于所有，利用任意两个交非空</li>
+</ul>
+<p>定义12.2 k维格子</p>
+<ul>
+<li>$x_i\in  [a_i,b_i],i&#x3D;1\cdots k, x&#x3D;(x_1,\cdots,x_k)$ 就是长方形，矩体的样子</li>
+<li>定理12.3 k维格子嵌套性质<ul>
+<li>对于每个维度单独用闭区间嵌套性质，所以最后汇总出来存在一个x</li>
+</ul>
+</li>
+<li>定理12.4 k维格子是紧集<ul>
+<li>反证：如果不紧，存在一个开覆盖没有“有限”子覆盖，那么对于当前格子切割<ul>
+<li>至少切割的一部分没有有限子覆盖</li>
+<li>继续反复切割，这样得到了一系列 嵌套切割，每一个都没有有限子覆盖（这要切割有限次才行吧？？？？</li>
+<li>那么 这个切割嵌套至少包含一个点x,找任一个包含x的覆盖Gx,那么因为Gx开，所以Gx包含x的一个可确定大小的邻域 ，矛盾</li>
+<li>总觉得怪怪的呢？<ul>
+<li>反复看了下，如果不紧，存在一个开覆盖，反复的（无限切割？块还严格变小？包含一个点没有处理所有点？）</li>
+<li>预先完成无限切割（二分所有维度）<ul>
+<li>那么对于任意给定n_1,可以找到一个序列是不被覆盖的，</li>
+<li>再任意给定n_2,可以在上面基础上继续延长这个序列</li>
+<li>再任意给定n_3,还是可以继续延长</li>
+<li>还是好怪啊，而且没用到闭集的性质也是</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对于k维格子，令$\delta&#x3D; \sqrt{\sum (a_i-b_i)^2}$ 距离平方和开根，就是最长对顶点距离<ul>
+<li>任意两点距离$\le \delta$</li>
+<li>然后这里的确是 二分所有维度(任意两点距离最大值减半)，切割成了一个 {I_n} 族，其中每一个都不能被有限覆盖，（且看起来是无限(?)切割）</li>
+<li>存在点x属于所有的 嵌套的格子，</li>
+<li>x 属于I,所以存在Gx覆盖x, 且是开集，x的某r邻域属于Gx, 那么注意到上面二分让最大距离减半，所以可以控制n来控制r</li>
+<li>从而存在 $n$, x所在的切割 $I_n \subset N_r(x) \subset G_x$, 那么I_n被G_x覆盖，和前面的“能找到”矛盾</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理 12.5 $\mathbb{R}^k$ 中的有界集</p>
+<ul>
+<li>子集E有界，那么包含在某个k维格子中</li>
+<li>证明: 有界&#x3D;&gt; 距离表达 存在上限M &#x3D;&gt; 距离展开不等式，每个维度的上下变化不超过-M,+M</li>
+</ul>
+<p>定理 12.6 海涅-博雷尔定理</p>
+<ul>
+<li>$\mathbb{R}^k$的子集E是紧集 当且仅当 它既是闭集又是有界集<ul>
+<li>这里 闭集 和 有界集，指的是$\mathbb{R}^k$中的 闭集和有界集</li>
+<li>紧集&#x3D;&gt; 闭(11.7),有界(11.10)</li>
+<li>有界闭 &#x3D;&gt; 在某个k维格子I中(12.5)，I紧， &#x3D;&gt; 是紧(11.8 紧中的闭是紧)</li>
+</ul>
+</li>
+</ul>
+<p>定理12.7 实紧集中的极限点</p>
+<ul>
+<li>$\mathbb{R}^k$的一个子集E是紧集，当且仅当 E的每个无限子集 在E中 都有一个极限点</li>
+<li>证明：<ul>
+<li>紧 &#x3D;&gt; 每个无限子集都有极限点(11.13)</li>
+<li>每个无限子集都有极限点 &#x3D;&gt; 是紧集 （证明是有界闭集）<ul>
+<li>逆否命题，不是有界或不是闭集 &#x3D;&gt; 存在无限子集 没有极限点</li>
+<li>无限：q&#x3D;0, 找点，（计算距离，翻倍距离找新点） 重复，可以得到一个无限点集，每个点都是孤立点</li>
+<li>不是闭集：E有不属于E的极限点x_0,对于r,每次折半，取E中的点，这样x_0是唯一极限点 但又不属于E</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>对于任意$E\subset \mathbb{R}^k$ 下面三个命题是等价的</p>
+<ul>
+<li>E既是闭集又是有界集</li>
+<li>E是紧集</li>
+<li>E的每个无限子集在E中都有一个与极限点</li>
+</ul>
+<p>定理12.8 （魏尔斯特拉斯定理）</p>
+<ul>
+<li>如果$\mathbb{R}^k$的无限子集E有界，那么E在$\mathbb{R}^k$中有一个极限点</li>
+<li>证明：<ul>
+<li>12.5 存在格子I, $E\subset I$,</li>
+<li>12.4 I是紧集</li>
+<li>11.3 I中任意无限子集有极限点，E在I中有极限点</li>
+<li>I是$\mathbb{R}^k$子集，E在$\mathbb{R}^k$中有集贤殿</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>小总结</p>
+<ul>
+<li>从 拓扑，回到了$\mathbb{R}^k$, 从 交非空 来到了 嵌套</li>
+<li>从更普适的拓扑，回到$\mathbb{R}^k$ 上以后甚至$\mathbb{R}$上以后，反过来，有界闭集&#x3D;&gt;是紧集&#x3D;&gt; 也就是有界闭集的任意开覆盖存在有限子覆盖，也有有界闭集的任意嵌套并非空</li>
+</ul>
+<h3 id="完备集与连通集"><a href="#完备集与连通集" class="headerlink" title="完备集与连通集"></a>完备集与连通集</h3><p>我们将 引入连通集的概念来结束对拓扑学的研究。</p>
+<p>不仅区间不可数，每一个实完备集也都是不可数的。</p>
+<p>完备集：A, A的所有极限点属于A, A的所有点都是A的极限点</p>
+<p>定理 13.1 实完备集是不可数的</p>
+<ul>
+<li>如果$\mathbb{R}^k$的非空子集P是完备集，那么P就是不可数的</li>
+<li>实际上值 P中有不可数各元素</li>
+<li>证明：P非空 &#x3D;&gt; 至少包含点x &#x3D;&gt; 因为完备（x是极限点），x的任意邻域包含无限多点 &#x3D;&gt; P是无限集<ul>
+<li>若P 是可数的, 那么存在一个写成有序点列的方法?</li>
+<li>P中$x_1$选半径，因为 完备&#x3D;&gt;$x_1$极限点，闭邻域 $r_1$, 开邻域中存在 $x_2$, 取$r_2$ 使得邻域完全在$x_1,r_1$中但是 不含$x_1$<ul>
+<li>这个方法可以在P中选择出一系列点，和一系列闭邻域 层层嵌套，</li>
+<li>$K_n&#x3D;\bar{V_n}\cap P$  每个闭邻域与P的交，<ul>
+<li>每个闭邻域有界闭，所以 根据海涅-博泪尔 &#x3D;&gt; 紧, </li>
+<li>根据11.9（闭交紧&#x3D;得到紧，这里P是闭，所以K_n 也紧。</li>
+<li>根据$\bar{V_n}$嵌套,$K_n$也嵌套</li>
+<li>这里矛盾的是 K_n无限可数交非空，但是任意点给定n,都不输于这个可数交，然后就矛盾了？</li>
+<li>为啥？为啥是给了一个方法，证明了矛盾，而不是证明不存在方法呢？</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>康托尔集：每次3等分闭集，去掉中间<ul>
+<li>这样 取这个可数交，得到的是不可数集，长度还为0</li>
+<li>是实完备集，不是任何闭区间的超集</li>
+</ul>
+</li>
+</ul>
+<p>定理13.3 康托尔集非空</p>
+<ul>
+<li>每个 $E_n$ (构造的每一层)，都是有界闭集，是紧集。紧集的嵌套非空</li>
+<li>$P&#x3D;\cap^{\infty} E_n$ ,P本身是 有界 闭集（无穷多闭集的交），所以P也紧</li>
+</ul>
+<p>定理13.4 不包含开区间</p>
+<ul>
+<li>任意 (a,b) , 不是子集(a &lt; b), 区间长度总能 &lt; b-a, 类似的不包含任何非单点的闭区间</li>
+<li>从而包含的所有闭集都是单点集</li>
+</ul>
+<p>定理13.5 康托尔集是完备集</p>
+<ul>
+<li>度量空间$\mathbb{R}$中 康托尔集P是完备集</li>
+<li>完备: 极限点属于P,(闭)，所有点是极限点<ul>
+<li>只需要证明 所有点是极限点即可，也就是每个点任意邻域内有点</li>
+</ul>
+</li>
+</ul>
+<p>定义13.6 分离集</p>
+<ul>
+<li>A,B是度量空间X的两个子集，如果$A\cap \bar{B}&#x3D;\varnothing, \bar{A}\cap B&#x3D;\varnothing$那么称为分离的，也就是互相不与对方闭包相交</li>
+<li>例如 $A&#x3D;[-1,0),B&#x3D;(0,1]$ 是分离的 而如果其中一个取到零就不是分离的了<ul>
+<li>$A&#x3D;[-1,0),B&#x3D;[0,1]$ 是不相交的，但不是分离的 因为 B交 A的闭包 &#x3D; <code>&#123;0&#125;</code> 非空</li>
+</ul>
+</li>
+<li>上面 康托尔集构造中 $E_n$中每一对闭区间都是分离的</li>
+</ul>
+<p>定理13.8 分离子集</p>
+<ul>
+<li>A,B分离, $A_1\subset A,B_1\subset B$ ,那么$A_1,B_1$也是分离，核心还是 闭包不会超过父集的闭包</li>
+</ul>
+<p>定义 13.9 连通集</p>
+<ul>
+<li>不连通： 度量空间X,的子集E是两个非空分离集的并集（可以表示成），那么E是不连通的</li>
+<li>存在 $A,B \subset, A\neq \varnothing,B\neq \varnothing$,</li>
+<li>$E&#x3D;A\cup B$</li>
+<li>$A\cap \bar{B}&#x3D;\varnothing, \bar{A}\cap B&#x3D;\varnothing$</li>
+<li>连通 &#x3D; 不是 不连通<ul>
+<li>感觉上就是能否切开（而且切开处不会有闭包“粘黏感”</li>
+<li>空集是连通的</li>
+<li>上面的例子 <code>[-1,1]</code>是连通的， 例如切割$[-1,0),[0,1]$ 不是分离的</li>
+<li>康托尔集不连通</li>
+</ul>
+</li>
+</ul>
+<p>定理13.11 不连通的另一种定义</p>
+<ul>
+<li>E 不连通</li>
+<li>存在$U,V\subset X$使得</li>
+<li>$U,V$都是开集</li>
+<li>$E\subset U\cap V$</li>
+<li>$E\cap U\neq \varnothing,E\cap V\neq \varnothing$</li>
+<li>$E\cap U\cap V &#x3D;\varnothing$<ul>
+<li>感觉上，像是两个 U,V泡泡 包裹E的部分</li>
+<li>另一方面，可以用上面A,B的并集的补作为U,V, 这样的话是对应的感觉</li>
+</ul>
+</li>
+</ul>
+<p>定理13.12 实直线上的连通集</p>
+<ul>
+<li>$\mathbb{R}$的子集E是连通的，当且仅当对于任意给定的两点$x,y\in E$和任意$z\in \mathbb{R}$, 如果$x &lt; z &lt; y$那么$z\in E$</li>
+<li>也就是 连通 &#x3D;&gt; 任意两点中间所有点， 任意两点中间所有点&#x3D;&gt; 连通</li>
+<li>证明：<ul>
+<li>逆否命题 不包含其中某个点 &#x3D;&gt; 不连通，因为不包含p,那么可以用 $U&#x3D;(-\infty,p),V&#x3D;(p,\infty)$ 包裹</li>
+<li>逆否 不连通 &#x3D;&gt;  不包含某点，存在分离集A,B,每个中存在点x,y,那么 $z&#x3D;\sup\lbrace a | a\in A,x\le a \le y\rbrace$<ul>
+<li>需要证明 $z\not\in E$， z 一方面是A的闭包上的（是A的极限点），根据13.9 的定义 B交A的闭包为空，所以z不属于B</li>
+<li>如果 z不属于A,那么 两个不属于，保证了 x &lt; z &lt; y</li>
+<li>如果 z属于A, 因为 A交 B的闭包为空，所以 A中的点 不是B的极限点，所以z存在邻域 交B的闭包为空，邻域中取一点$z_1&#x3D;z+r&#x2F;2$，$x &lt; z_1 &lt; y$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>推论，开区间(a,b), 闭区间<code>[a,b]</code>都是连通的，也就是任意两点之间的点都包含</li>
+</ul>
+<h2 id="4-序列"><a href="#4-序列" class="headerlink" title="4. 序列"></a>4. 序列</h2><h3 id="收敛"><a href="#收敛" class="headerlink" title="收敛"></a>收敛</h3><p>定义14.1 序列</p>
+<ul>
+<li>也就是 把 自然数映射到 度量空间中的点的函数</li>
+<li>$f:\mathbb{N}\to X, f:n \mapsto p_n$ （序列长度无限）</li>
+<li>可能值的集合称为 范围，如果范围有界则称为有界<ul>
+<li>范围：取值个数：可能无限，但是有界， $1&#x2F;n$</li>
+</ul>
+</li>
+<li>可数集 都有办法排成序列</li>
+</ul>
+<p>定义14.3 收敛</p>
+<ul>
+<li>对于任意 $\epsilon &gt;0$存在$N &gt; 0$ 每个$n &gt; N$, 有$d(p_n,p) &lt; \epsilon$ 那么收敛到$p\in X$, 称作$p_n$的极限</li>
+<li>可以就是可以通过控制N来控制 距离</li>
+<li>发散 &#x3D; 不收敛</li>
+</ul>
+<p>定理14.5 收敛另一个定义</p>
+<ul>
+<li>{p_n}是度量空间X中的任意一个序列， 收敛到$p\in X$,当且仅当p的每一个邻域，在邻域外之存在{p_n}的有限多个元素</li>
+<li>对于 想被控制的 邻域，能找到N,那么 不超过N个元素在外面所有有限</li>
+<li>反过来 如果有无限多，无法通过N控制</li>
+</ul>
+<p>定理14.6 极限的唯一性</p>
+<ul>
+<li>核心还是邻域，用上面14.5的好处是 r直接选1&#x2F;3距离</li>
+</ul>
+<p>定理14.7 收敛 则 有界</p>
+<ul>
+<li>14.5的划分， 界&#x3D;有限 与 邻域的max可以控制</li>
+</ul>
+<p>定理14.8 收敛到极限点</p>
+<ul>
+<li>$E\subset X$,且p是E的极限点，E中存在一个收敛到p的序列 {p_n}</li>
+<li>也就是 按照极限点性质，每次严格缩小邻域(1&#x2F;2) 都可以有存在的点，极限点显然是序列的极限，而序列极限存在则唯一，所以</li>
+</ul>
+<p>推论14.9 紧集的无限子集中的序列</p>
+<ul>
+<li>K是一个紧集，E是K的任意一个无限子集，那么E包含一个收敛到K中某点的序列</li>
+<li>根据11.3 紧集K的任意无限子集E有一个极限点$p\in K$, 注意可能不属于E,</li>
+<li>根据14.8 这个 极限点可以构造对应序列</li>
+</ul>
+<p>推论14.10 有界无限实数集中的序列</p>
+<ul>
+<li>$\mathbb{R}^k$的每个有界无限子集 E都包含一个收敛到$\mathbb{R}^k$中某点的序列</li>
+<li>12.8 维尔斯特拉斯定理：$\mathbb{R}^k$ 有界无限子集 E，在$\mathbb{R}^k$ 中存在极限点</li>
+<li>从而 14.8 的方式构造出序列</li>
+</ul>
+<h3 id="极限与子序列"><a href="#极限与子序列" class="headerlink" title="极限与子序列"></a>极限与子序列</h3><p>序列之间的运算 与 自序列考察</p>
+<p>定理15.1 代数运算</p>
+<ul>
+<li><ol>
+<li>（加法&#x2F;减法）收敛序列的 元素对应下标相加，新的序列 收敛于 原来两个收敛值相加</li>
+</ol>
+<ul>
+<li>注意到恒为c的序列收敛于c,所以 运用1,有常数加法</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>常数乘法, 收敛序列 每个元素 乘c, 新收敛值 &#x3D; c * 原收敛值</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>序列 对应下标相乘，收敛于 收敛值相乘。这个 稍微配个待定系数 加 max限制以下可以控制，</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>如果 极限非零，且序列任意元素非零，那么 极限趋于 1&#x2F;极限，这个用邻域控制了符号，再二次控制半径即可</li>
+</ol>
+</li>
+</ul>
+<p>定理15.2 实向量的收敛性</p>
+<ul>
+<li>向量的收敛，也就是每个维度的收敛（当且仅当）</li>
+<li>本质是源于 距离公式的定义</li>
+</ul>
+<p>定理15.3 $\mathbb{R}^k$中极限的代数运算，向量</p>
+<ul>
+<li>保持加法</li>
+<li>保持数乘</li>
+<li>保持内积</li>
+</ul>
+<p>定义15.4 子序列</p>
+<ul>
+<li>保持，下标递增的取出</li>
+<li>子序列 也是一个序列</li>
+</ul>
+<p>定理 15.6 收敛 &lt;&#x3D;&gt; 所有子序列都收敛</p>
+<ul>
+<li>&lt;&#x3D; 很好证明，因为自身也是自身的子序列</li>
+<li>&#x3D;&gt; 收敛：存在p, 通过N控制p的范围，那么 子序列 同样被控制，所以p也是子序列极限，极限唯一，子序列都收敛到p</li>
+</ul>
+<p>定理15.7 紧集中的子序列</p>
+<ul>
+<li>紧度量空间X中任意子序列，那么$p_n$的某个子序列将收敛到某个点$p\in X$</li>
+<li>如果 取值有限，那么一定有值出现无穷多次，那么子序列取 等于这个值的即可</li>
+<li>如果取值无限，那么利用11.13（紧中无限存在属于紧的集贤殿）存在极限点p, 也就是p任何邻域包含 序列E中无限多点，每次取一个，r&#x2F;&#x3D;2,注意到子序列要保证下标顺序，所以要取的 E中下标更大与 p邻域的交集，而因为无限总能取到，从而完成构造。</li>
+</ul>
+<p>定理15.8 波尔查诺-维尔斯特拉斯 定理</p>
+<ul>
+<li>$\mathbb{R}^k$中的任意一个序列，如果$p_n$有界，那么某个子序列 将收敛到某个点$p\in \mathbb{R}^k$</li>
+<li>和前面的感觉有点像，前面是 有界无限 能有 极限点</li>
+<li>这里 其实就是 找到包裹的 有限格子I,紧集，然后用15.7</li>
+</ul>
+<p>定理15.9 全体子序列极限组成的集合$E^*$是相对于X的闭集</p>
+<ul>
+<li>闭集也就是 极限点属于自己</li>
+<li>那么 q 是 $E^*$的一个极限点 <ul>
+<li>如果 存在 N, n&gt;N, p_n&#x3D;q, 那么 p_n就是有唯一极限为q的序列，每个子序列极限也是q</li>
+<li>核心想法是三角不等式+严格趋于0的领域，$r_n &#x3D; d(p_{n_i},q) &lt; d(p_{n_1},q)&#x2F;i$, 也就是 每次找q的一个$r_n&#x2F;2$中$E^*$中的点，再这个点又可以邻域$r_n&#x2F;2$ 且 坐标比当前最大坐标更大的一个点，从而 三角不等式两个邻域完成了找点</li>
+<li>从而 我们能找出一个序列的极限是q,所以q也属于$E^*$,</li>
+<li>这里的过程 和 之前证明 闭包 不会产生新的 极限点的思路可以说完全一样</li>
+</ul>
+</li>
+</ul>
+<h3 id="柯西序列与单调序列"><a href="#柯西序列与单调序列" class="headerlink" title="柯西序列与单调序列"></a>柯西序列与单调序列</h3><p>是否存在一种与收敛性相似，但不依赖于度量空间的性质？有就像紧性那样，</p>
+<ul>
+<li>柯西序列是在任何度量空间中都成立的性质。</li>
+<li>某个度量空间中的柯西序列 在 任何度量空间中都是柯西序列</li>
+</ul>
+<p>定义16.1 柯西序列</p>
+<ul>
+<li>{p_n} 是度量空间X中的任意一个序列。如果任意$\epsilon &gt; 0$存在某个自然数N，对于任意大于等于N的n和m均有$d(p_n,p_m) &lt; \epsilon$ 那么 ${p_n}$ 是一个柯西序列</li>
+<li>从理解上，都是控制N来控制“度量空间中的距离”，但不同的是，这里我们“不知道”极限的具体，而是后面任意选择n,m, 从形状上理解，原来的更像知道中心在控制半径，而这里像在控制直径不知道中心。</li>
+</ul>
+<p>定理16.3 收敛序列 &#x3D;&gt; 柯西序列</p>
+<ul>
+<li>序列收敛到p,那么这个序列也是柯西序列</li>
+<li>这里终于说直径的概念了</li>
+</ul>
+<p>定义16.4 直径，</p>
+<ul>
+<li>集合中 元素距离的 上确界</li>
+</ul>
+<p>定理16.6 柯西序列的直径</p>
+<ul>
+<li>子序列{P_N,P_{N+1}…</li>
+<li>p_n是柯西序列，当且仅当 上述从N开始子序列，当N趋于无穷时，直径趋于0</li>
+</ul>
+<p>定理16.7 闭包的直径</p>
+<ul>
+<li>度量空间X的任意子集 E, $\text{diam} \bar{E}&#x3D;\text{diam} E$</li>
+<li>闭包的直径和原来的直径一致</li>
+<li>这里用 &gt;&#x3D;, &lt;&#x3D; 来证明，&gt;&#x3D;是显然的，因为闭包多了点，只可能变大</li>
+<li>要证明 $\text{diam} \bar{E} \le \text{diam} E$, 那么 也就是证明 任意 $\epsilon &gt; 0$,  $\text{diam} \bar{E} \le \text{diam} E+\epsilon$<ul>
+<li>这样 p-q vs p-p1-q1-q,的想法，其中p1,q1是E中，p-q是闭包中，三角不等式<ul>
+<li>任意p-q, 找到分别邻域 p1,q1, 左侧 &lt;&#x3D; r+右侧距离+r &lt;&#x3D; r+sup+r, 所以r&#x3D;epsilon &#x2F;2整理顺序苛政</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>定理16.8  嵌套紧集，直径趋于0, 无穷交恰好包含一个点</p>
+<ul>
+<li>嵌套紧集 至少一个，如果两个直径趋于0矛盾，</li>
+</ul>
+<p>定理16.9 紧集中，柯西序列&#x3D;&gt; 收敛序列</p>
+<ul>
+<li>每个子集的闭包 构成嵌套，直径趋于0,所以恰好存在一个点，这个点是极限</li>
+</ul>
+<p>定理16.10 在$\mathbb{R}^k$ 中 柯西序列 &#x3D;&gt; 收敛序列</p>
+<ul>
+<li>柯西序列，有界，格子，紧集，16.9 &#x3D;&gt; 收敛</li>
+</ul>
+<p>定义16.11 完备性</p>
+<ul>
+<li>如果X中每个柯西序列都收敛到X中的某个点，那么度量空间X就是完备的</li>
+<li>任何紧度量空间都是完备的，</li>
+<li>任何欧几里得空间$\mathbb{R}^k$都是完备度量空间<ul>
+<li>例如 有理数空间不完备，可以收敛到不属于有理数空间的有力柯西序列</li>
+</ul>
+</li>
+</ul>
+<p>任意有序域F,下面两个命题等价</p>
+<ul>
+<li>F有最小上界性<ul>
+<li>有序域才能定义一个有意义的上界</li>
+</ul>
+</li>
+<li>F是完备的并且有阿基米德性质</li>
+</ul>
+<p>定理16.13 完备度量空间的闭子集</p>
+<ul>
+<li>E是完备度量空间X的子集，如果E是闭集，那么E也是完备的</li>
+<li>X完备，所以E中的柯西序列收敛于X中的某个点，p的每个邻域也包含E的无限多点，p是E的极限点。p是闭集所有已p属于E,所以E完备</li>
+</ul>
+<p>定义16.14 单调序列</p>
+<ul>
+<li>有序域， s_n&lt;&#x3D;s_{n+1}单调递增</li>
+<li>对称同理 定义</li>
+</ul>
+<p>定理16.16 有界单调序列</p>
+<ul>
+<li>{s_n} 是有序域F中的单调序列，并且F具有最小上界性，那么{s_n}在F中收敛当且仅当{s_n}有界</li>
+<li>收敛&#x3D;&gt;有界 之前证明过</li>
+<li>有界&#x3D;&gt; 收敛， 有界-&gt; 有上确界s, s的任意邻域有无限多值，从而控制 半径，</li>
+</ul>
+<h3 id="子序列极限"><a href="#子序列极限" class="headerlink" title="子序列极限"></a>子序列极限</h3><p>定义17.1 发散到无穷大</p>
+<ul>
+<li>{s_n} 是度量空间$\mathbb{R}$ 中的任意一个序列，如果任意$M\in \mathbb{R}$, 存在某个自然数N,使得对于每一个大于等于N的n有$s_n\ge M$那么{s_n}就发散到无穷大</li>
+<li>负无穷大类似</li>
+</ul>
+<p>定理17.3 无界 &lt;&#x3D;&gt; 一个子序列发散到无穷大</p>
+<ul>
+<li>无界 任意点和半径存在点很远，这里要多控制一个下标，这样能完成构建</li>
+<li>发散到 无穷大，如果有界，只需要 M_1 &#x3D; M_0+ 界限的控制</li>
+</ul>
+<p>定义17.4 上极限和下极限</p>
+<ul>
+<li>定义是 子序列收敛点 集合的sup,inf<ul>
+<li>有的地方 记作 limsup 一个整体</li>
+</ul>
+</li>
+<li>这里有讨论 无穷大，负无穷大，本质上不是极限</li>
+</ul>
+<p>定理17.6 收敛序列的上极限和下极限</p>
+<ul>
+<li>$\mathbb{R}$中任意一个序列，收敛到有限数s，当且仅当 上极限&#x3D;下极限&#x3D;s</li>
+<li>&#x3D;&gt; 前面证明过</li>
+<li>&lt;&#x3D; 每个收敛子序列都收敛到s,那么 是否可能原序列不收敛，对于任意s邻域，s_n中有无穷多在邻域外的，而根据15.8 这些中可以选出一个序列收敛于一个新的点，和“每个收敛子序列都收敛于s”矛盾<ul>
+<li>这里的&#x3D;&gt; 太直观了，而&lt;&#x3D; 很“神奇”</li>
+</ul>
+</li>
+</ul>
+<p>定理17.7 上极限下极限都是子序列极限</p>
+<ul>
+<li>又是 和之前类似的，双重邻域接上三角不等式</li>
+</ul>
+<p>定理17.8 作为序列边界的上极限和下极限</p>
+<ul>
+<li>{s_n}是度量空间$\mathbb{R}$中的任意一个序列，E是其子序列极限的集合，s&#x3D;lim sup_{n\to \infty } s_n,对于任意x&gt;s,存在N,使得 n&gt;&#x3D;N时有 s_n &lt; x</li>
+<li>也就是大于上极限的数，可以序列从某处截断后面都比它小<ul>
+<li>反证法，找不到，就有无穷多个构成 新子序列有新极限</li>
+</ul>
+</li>
+</ul>
+<p>定理17.9 上极限和下极限存在性和唯一性，</p>
+<ul>
+<li>在扩张的实数系中，存在且唯一。<ul>
+<li>扩张是指 +\infty, -\infty</li>
+<li>这里也是运用15.8，无穷中能抽出子序列有新极限来证明过</li>
+</ul>
+</li>
+</ul>
+<p>定理 17.10 上极限和下极限的比较</p>
+<ul>
+<li>两个序列，如果下标对应有一致大小关系，那么它们的上极限下极限有同样的大小关系。</li>
+</ul>
+<h3 id="特殊序列"><a href="#特殊序列" class="headerlink" title="特殊序列"></a>特殊序列</h3><p>定理18.1 夹逼定理</p>
+<ul>
+<li>$a_n \le s_n \le b_n$ 如果左右都收敛到同一个点，那么中间也是</li>
+</ul>
+<p>定理18.2</p>
+<ul>
+<li>p &gt; 0 $\lim_{n\to \infty} \frac{1}{n^p}&#x3D;0$</li>
+</ul>
+<p>定理18.3</p>
+<ul>
+<li>$\lim_{n\to\infty} p^{\frac{1}{n}}&#x3D;1$</li>
+</ul>
+<p>定理18.4 $\lim_{n\to \infty}n^{1&#x2F;n}&#x3D;1$</p>
+<p>定理18.5 $\lim_{n\to\infty} \frac{n^a}{(1+p)^n}&#x3D;0,p&gt;0,a\in\mathbb{R}$</p>
+<p>定理18.6 $|x|&lt;1, \lim_{n\to\infty} x^n&#x3D;0$</p>
+<h3 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h3><p>部分和$s_n&#x3D;\sum_{i&#x3D;1}^n a_i$</p>
+<p>级数: 部分和序列</p>
+<ul>
+<li>级数不是和 是 序列</li>
+</ul>
+<p>级数收敛: 部分和序列收敛到某个点</p>
+<ul>
+<li>否则发散</li>
+</ul>
+<p>定理19.2 级数收敛性</p>
+<ul>
+<li>当且仅当 任意$\epsilon &gt;0$存在自然是N,使得对于任意大于N的n和m有 之间的 原序列a_{n~m} 的和的绝对值在epsilon内</li>
+<li>就是柯西序列的想法</li>
+<li>推论19.3 必要不充分<ul>
+<li>级数收敛，原序列趋于0</li>
+</ul>
+</li>
+</ul>
+<p>定理19.4 a_i &gt;&#x3D;0</p>
+<ul>
+<li>级数 收敛，当且仅当 部分和序列 {s_n} 有界</li>
+<li>也就是 单调递增有界，所以收敛</li>
+</ul>
+<p>定理19.5 收敛的比较判别法</p>
+<ul>
+<li>某个N以后 |a_n| &lt;&#x3D; c_n, 并且c_n的级数收敛，那么a_n的级数也收敛</li>
+<li>三角不等式 + 柯西压缩法可以控制 a_n和的范围</li>
+</ul>
+<p>定理19.6 发散的比较判别法</p>
+<ul>
+<li>0 &lt;&#x3D; d_n &lt;&#x3D;a_n</li>
+<li>d_n的级数发散，那么a_n的级数翻上，用上面反证</li>
+</ul>
+<p>定理19.7 几何级数</p>
+<ul>
+<li>|x| &lt; 1 级数 $\sum_{n&#x3D;0}^{\infty} x^n$收敛到$\frac{1}{1-x}$, 其它范围发散</li>
+</ul>
+<p>定理19.9 柯西凝聚判别法</p>
+<ul>
+<li>$\sum_{n&#x3D;1}^{\infty}a_n$是单调递减非负项级数,  它收敛 &lt;&#x3D;&gt; $\sum_{k&#x3D;0}^{\infty} 2^ka_{2^k}$收敛</li>
+<li>通过配项  1&#x2F;2 右侧 &lt;&#x3D; 左侧 &lt;&#x3D;右侧， 可以得到它们同时有界或无界，而单调性从而同时收敛或发散</li>
+<li>可以用于调和级数</li>
+</ul>
+<p>定理19.10 p级数</p>
+<ul>
+<li>p &gt; 1 $\sum_{n&#x3D;1}^\infty \frac{1}{n^p}$ 收敛</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol start="3">
+<li>集合相等 常用 互相包含证明</li>
+<li>最小上界：任何集合中的不大于它，任何小于它的不是上确界</li>
+<li>阿基米德性质：任意x,y能找到nx&gt;y</li>
+<li>三角不等式</li>
+<li>双射：是函数，单射+满射</li>
+<li>集合可数：建立与自然数的双射，或者自然数到它的满射，忽略重复项</li>
+<li>邻域 钦定半径，有限才有min,max</li>
+<li>补集（颠倒开闭方便证明）</li>
+<li>紧（任意开覆盖 有 有限子覆盖），无穷多嵌套紧集非空</li>
+<li>$\mathbb{R}^k$ 中 紧集&#x3D;有界闭</li>
+<li>拓扑问题 一些证明 讨论p的属于与不属于的情况</li>
+<li>数列收敛 控制N来控制范围</li>
+<li>子序列构造：三角不等式+邻域+控制下标</li>
+<li>柯西序列控制直径 &#x3D;&gt; 收敛，证明是柯西序列就证明收敛</li>
+<li>子序列的子序列，在增广定义下能找到收敛的子序列</li>
+<li>夹逼定理</li>
+<li>级数不适合，比较判别法 柯西凝聚判别法</li>
+</ol>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"># 数学分析</a>
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"># 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/newton_identities/" rel="prev" title="牛顿恒等式">
+                  <i class="fa fa-chevron-left"></i> 牛顿恒等式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/the_calculus_lifesaver/" rel="next" title="普林斯顿 微积分读本">
+                  普林斯顿 微积分读本 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

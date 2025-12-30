@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分  积分的定义和存在性 definition and existence of the integral6.1 let [a,b] be a given interval. by a partition P of [a,b] we">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="Riemann-Stieltjes 积分integral先讨论区间上实值函数的积分，  后面推广到区间上的复值和向量值函数的积分 10～11章 再讨论在不是区间上的积分  积分的定义和存在性 definition and existence of the integral6.1 let [a,b] be a given interval. by a partition P of [a,b] we">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-02-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.619Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数学分析">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/","path":"Principles_of_Mathematical_Analysis_6/","title":"Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Riemann-Stieltjes-%E7%A7%AF%E5%88%86integral"><span class="nav-number">1.</span> <span class="nav-text">Riemann-Stieltjes 积分integral</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E5%AD%98%E5%9C%A8%E6%80%A7-definition-and-existence-of-the-integral"><span class="nav-number">1.1.</span> <span class="nav-text">积分的定义和存在性 definition and existence of the integral</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E7%9A%84%E6%80%A7%E8%B4%A8-properties-of-the-integral"><span class="nav-number">1.2.</span> <span class="nav-text">积分的性质 properties of the integral</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%AF%E5%88%86%E4%B8%8E%E5%BE%AE%E5%88%86-integration-and-differentiation"><span class="nav-number">1.3.</span> <span class="nav-text">积分与微分 integration and differentiation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E7%A7%AF%E5%88%86-integration-of-vector-valued-functions"><span class="nav-number">1.4.</span> <span class="nav-text">向量值函数的积分 integration of vector-valued functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E6%B1%82%E9%95%BF%E6%9B%B2%E7%BA%BF-rectifiable-curves"><span class="nav-number">1.5.</span> <span class="nav-text">可求长曲线 rectifiable curves</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-02-24 00:00:00" itemprop="dateCreated datePublished" datetime="2025-02-24T00:00:00+08:00">2025-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>5.2k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>19 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Riemann-Stieltjes-积分integral"><a href="#Riemann-Stieltjes-积分integral" class="headerlink" title="Riemann-Stieltjes 积分integral"></a>Riemann-Stieltjes 积分integral</h2><p>先讨论区间上实值函数的积分，</p>
+<ul>
+<li>后面推广到区间上的复值和向量值函数的积分</li>
+<li>10～11章 再讨论在不是区间上的积分</li>
+</ul>
+<h3 id="积分的定义和存在性-definition-and-existence-of-the-integral"><a href="#积分的定义和存在性-definition-and-existence-of-the-integral" class="headerlink" title="积分的定义和存在性 definition and existence of the integral"></a>积分的定义和存在性 definition and existence of the integral</h3><p>6.1 let <code>[a,b]</code> be a given interval. by a partition P of [a,b] we mean a finite set of points $x_0,\cdots,x_n$ where</p>
+<ul>
+<li>$a &#x3D; x_0 \le x_1 \le \cdots \le x_{n-1} \le x_n&#x3D;b$</li>
+<li>令 $\Delta x_i&#x3D;x_i-x_{i-1}$</li>
+<li>假设f is a bounded real function defined on [a,b]. Corresponding to each partition P of [a,b] we put</li>
+<li>$M_i&#x3D;\sup f(x)$ $x_{i-1}\le x \le x_i$ 每个区间上确界</li>
+<li>$m_i&#x3D;\inf f(x)$ $x_{i-1}\le x \le x_i$ 每个区间下确界<ul>
+<li>$U(P,f)&#x3D;\sum_{i&#x3D;1}^n M_i\Delta x_i$  这个和不小于原来的 面积, 上和 上积分</li>
+<li>$L(P,f)&#x3D;\sum_{i&#x3D;1}^n m_i\Delta x_i$ 这个和不大于原来的 面积，下和 下积分</li>
+<li>$\bar{\int_a^b} f dx &#x3D; \inf U(P,f)$ 上和的下确界, 称作 upper Riemann integrals of f</li>
+<li>$\underline{\int}_a^b f dx &#x3D; \sup L(P,f)$ 下和的上确界 ,称作 lower Riemann integrals of f (这个tex怎么打啊??</li>
+<li>over <code>[a,b]</code></li>
+<li>如果 upper &#x3D; lower ,那么 称f is Riemann-integrable on [a,b] ,  $f\in \mathscr{R}$ ,, (mathscr)<ul>
+<li>记作$\int_a^b f(x) dx$</li>
+<li>因为假设 $f$ is a bounded real function, 所以存在$m,M$, 使得$m \le f([a,b])\le M$</li>
+<li>$m(b-a)\le L(P,f)\le U(P,f) \le M(b-a)$ 注意的是，这个条件 并不要求 黎曼积分存在，这是描述f上下界与 下和 上和 的大小关系<ul>
+<li>也就是有界函数f,上积分和下积分都有定义</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<p>6.2 设g是<code>[a,b]</code> 上一个单调递增函数，g(a),g(b)有限，所以g在[a,b]上有界, 对于a,b的每个分割法P</p>
+<ul>
+<li>$\Delta g_i&#x3D;g(x_i)-g(x_{i-1}) \ge 0$</li>
+<li>$U(P,f,g)&#x3D;\sum_{i&#x3D;1}^n M_i \Delta g_i$</li>
+<li>$L(P,f,g)&#x3D;\sum_{i&#x3D;1}^n m_i \Delta g_i$</li>
+<li>定义 $\bar{\int}<em>a^b f d g&#x3D;\inf</em>{P} U(P,f,g)$</li>
+<li>定义 $\underline{\int}_a^b f d g&#x3D;\sup_P L(P,f,g)$<ul>
+<li>如果相等记作 $\int_a^b f(x)dg(x)$ , 或 $\int_a^b fdg$， 注意结果和x无关，这里x只表示两个函数入参一致和从a到b, x换成y也相同的结果</li>
+<li>也就是[a,b]上f关于g的Riemann-Stieltjes 积分</li>
+<li>f关于g在Riemann意义上可积，记作$f\in\mathscr{R}(g)$</li>
+</ul>
+</li>
+</ul>
+<p>6.3 partition $P^*$ is a refinement(加细，细分) of P, if $P^* \supset P$ (P的每个切割点都在$P^*$)中, </p>
+<ul>
+<li>$P^*&#x3D;P_1\cup P_2$, say $P^*$ is their common refinement 共同加细</li>
+</ul>
+<p>6.4 </p>
+<ul>
+<li>$L(P,f,g)\le L(P^*,f,g)$</li>
+<li>$U(P^*,f,g)\le U(P,f,g)$</li>
+<li>加细 让 上和 下和 有更靠近的趋势</li>
+<li>proof 每次多加一个点的角度考虑，另一方面，对于细分的一个具体 $[x_{i-1},x_i]$可以看成是未切分而有上下界（bounded f,6.1而加细，看成是切分，同样可以证明</li>
+</ul>
+<p>6.5 $\underline{\int}_a^b fdg&#x3D;\bar{\int}_a^b fdg$</p>
+<ul>
+<li>proof $P^{*}&#x3D;P_1\cup P_2$<ul>
+<li>$L(P_1,f,g)\le L(P^*,f,g) \le U(P^*,f,g)\le U(P_2,f,g)$</li>
+<li>对于任意给定$P_1$遍历$P_2$<ul>
+<li>$L(P_1,f,g)\le \bar{\int}_a^bfdg$</li>
+<li>再遍历所有$P_1$得证</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.6  $f\in\mathscr{R}$ on $[a,b]$ if and only if for every $\epsilon &gt; 0$ there exists a partition P such that</p>
+<ul>
+<li>$U(P,f,g)-L(P,f,a) &lt; \epsilon$</li>
+<li>也就是任意目标上下界距离，可以通过 给定具体分化来达成</li>
+<li>这里注意到 虽然任意近了，但是分化之间的关联没有，而分化之间管理，通过上面的加细动作可以完成</li>
+<li>距离 到 更小距离时， 记老分化$P_0$, 新分化$P_1$,而 我们取$P_1’&#x3D;P_0\cup P_1$ 这样 同时满足了更小距离，也满足了值的不等式串联k<ul>
+<li>$L(P_0,f,g)\le L(P_1’,f,g) \le U(P_1’,f,g)\le U(P_0,f,g)$</li>
+</ul>
+</li>
+<li>不过这里证明的 还是按照 上面6.2的 存在的定义来证明</li>
+<li>这个充要 之后证明会用到，也就是证明大和小和的差距可以任意小</li>
+</ul>
+<p>6.7</p>
+<ul>
+<li>epsilon 在P成立<ul>
+<li>那么对P加细后依然成立</li>
+<li>$\sum_{i&#x3D;1}^n |f(s_i)-f(t_i)|\Delta g_i &lt; \epsilon$ 其中$s_i,t_i$是$[x_{i-1},x_i]$内任意点,  每段里面 差$\le M_i-m_i$ </li>
+<li>如果 $f\in\mathscr{R}(g)$  那么 $|\sum_{i&#x3D;1}^n f(t_i)\Delta g_i -\int_a^b f d g| &lt; \epsilon$<ul>
+<li>$L(P,f,g) \le \sum f(t_i)\Delta g_i \le U(P,f,g)$</li>
+<li>$L(P,f,g) \le \int fdg \le U(P,f,g)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.8 if f is continuous on [a,b] then $f\in \mathscr{R}(g) on [a,b]$</p>
+<ul>
+<li>取$\eta [g(b)-g(a)] &lt; \epsilon$</li>
+<li>4.19 f 是 一致连续, 存在 $\delta$控制 x,t距离时 $|f(x)-f(t)|&lt;\eta$, (这里用到了 “一致连续”)<ul>
+<li>所以 如果划分P的所有$\Delta x_i &lt; \delta$，那么每个划分区间中 $M_i-m_i\le eta$</li>
+<li>$U(P,f,g)-L(P,f,g)&#x3D;\sum_{i&#x3D;1}^n(M_i-m_i)\Delta g_i\le \eta \sum_{i&#x3D;1}^n\Delta g_i&#x3D;\eta[g(b)-g(a)] &lt; \epsilon$</li>
+<li>也就有 $f\in \mathscr{R}(g)$</li>
+</ul>
+</li>
+</ul>
+<p>6.9 $[a,b]$上 f单调monotonic，g单调连续(本来g就要单调递增), $f\in \mathscr{R}(g)$</p>
+<ul>
+<li>假设单增（单减类似）</li>
+<li>切割 直接 (g(b)-g(a))&#x2F;n的g的值来切割x,也就是 $\Delta g_i &#x3D; g(x_i)-g(x_{i-1})&#x3D;(g(b)-g(a))&#x2F;n$</li>
+<li>这样$U-L&#x3D;\Delta \sum {M_i-m_i}&#x3D;\Delta \sum f(x_i)-f(x_{i-1})&#x3D;\Delta (f(b)-f(a)) &lt; \epsilon$ 可通过控制n来控制</li>
+</ul>
+<p>6.10 $[a,b]$上f有界， f有限多个点 不连续，这些点的对应位置g是连续的，那么$f\in \mathscr{R}(g)$</p>
+<ul>
+<li>M&#x3D; sup |f|</li>
+<li>E&#x3D;f的不连续点, n&#x3D;|E|点个数</li>
+<li>对于任意epsilon</li>
+<li>每个点不连续点切割邻域，保证<ul>
+<li>邻域内g连续</li>
+<li>任意两个邻域之间不覆盖</li>
+<li>邻域内g的增量 &lt; epsilon &#x2F; n</li>
+</ul>
+</li>
+<li>对于邻域外的点, <code>[a,b]</code>去掉所有邻域是 紧的，f在上面一致连续，存在 控制$x$范围$\delta$控制$f$变化范围$&lt; \epsilon$，所以邻域外的点按照不超过$\delta$切割</li>
+<li>$U-L&#x3D;\sum (M_i-m_i) \Delta g_i$<ul>
+<li>$&#x3D;(\sum_\delta (M_i-m_i)\Delta g_i)+(\sum_{\epsilon&#x2F;n} (M_i-m_i)\Delta g_i)$ 分别为邻域外的点和邻域内的点</li>
+<li>邻域外的点 $\le (\sum_\delta \epsilon \Delta g_i) \le (\sum \epsilon \Delta g_i) &#x3D; \epsilon (g(b)-g(a))$</li>
+<li>邻域内的点 $\le (\sum_{\epsilon &#x2F;n} 2M \Delta g_i) \le 2M \epsilon$</li>
+<li>这里 $M,g(b),g(a)$都是定值，因此可以任意小</li>
+</ul>
+</li>
+<li>那么 反例:</li>
+<li>f,g 在 $[-1,1]$上定义,$g(x) &#x3D; \text{sign}(x)$, 也就是取符号，-1,0,1 满足单调性</li>
+<li>$f &#x3D; 2g$</li>
+<li>容易看出在非零点的 划分不影响，着重看零点的划分<ul>
+<li>$[x_1,0][0,x_2], x_1&lt;0&lt;x_2$</li>
+<li>$U(P,f,g) - L(P,f,g)$ 在这两个划分里的贡献是 $\sum (M_i-m_i) \Delta g_i$<ul>
+<li>$&#x3D; (0-(-2))\cdot (0-(-1)) + (2-0)\cdot (1-0)$ </li>
+<li>$&#x3D; 4 &gt; 0$ 也就是 与具体的$x_1,x_2$选取无关，这里的距离不会趋于无穷小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对于 高等数学中，一般来说 我们的 $g(x)&#x3D;x$</li>
+</ul>
+<p>6.11 $[a,b]$上 $f\in \mathscr{R}(g)$ , $m\le f\le M$,$\phi$在$[m,M]$上连续，并且在$[a,b]$上 $h(x)&#x3D;\phi(f(x))$,那么在$[a,b]$上$h\in\mathscr{R}(g)$</p>
+<ul>
+<li>也就是$[a,b]$上  复合函数： 连续(黎曼可积) 是 黎曼可积 的</li>
+<li>和6.10类似的思路</li>
+<li>$U(P,\phi,g)-L(P,\phi,g)&#x3D;(\sum_A (M_i-m_i)\Delta g_i)+(\sum_B (M_i-m_i)\Delta g_i)$<ul>
+<li>这里 $M,m$是关于$\phi$的</li>
+<li>我们希望一边是通过控制 $M_i-m_i$的范围，另一边是通过控制$\sum \Delta g_i$的范围<ul>
+<li>这样一边是 $范围 \cdot (g(b)-g(a))$另一边是 $2K \cdot 范围$, 其中$|\phi|\le K$</li>
+</ul>
+</li>
+<li>按照这个思路 如何控制$M_i-m_i$的范围呢?<ul>
+<li>$\phi$ 一致连续，可以控制 f的距离$\delta$ 控制 $\phi$的距离</li>
+<li>所以如果 切割P能控制 f的距离$\delta$ 就可以 控制 $\phi$的距离</li>
+</ul>
+</li>
+<li>对于没有控制的段，有 段内距离 $&gt;\delta$<ul>
+<li>$\delta \sum_{没有控制到f的切割段} \Delta g_i &lt; U(P,f,g)-L(P,f,g) &#x3D;$任意值, 因为f是关于g黎曼可积</li>
+<li>所以这里任意值，可以取$\delta\epsilon$或者 $\frac{\delta \epsilon}{2K}$， 书上用的是$\delta^2$且$\delta &lt; \epsilon$, 不过这都不影响，因为$\delta$的值是 控制f 能控制 phi 在delta内的，所以这里任何$h(\epsilon,\delta,K)$都是可以的, 最终向上针对目标尽量仅有$\epsilon$</li>
+<li>从而 控制了$\sum \Delta g_i$<ul>
+<li>这部分 的控制相对难想一点</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>所以又变成 $\epsilon(g(b)-g(a))+2K\epsilon$ 根据任意性可控</li>
+</ul>
+</li>
+<li>11.33(b)给出什么样的函数 恰好 黎曼可积</li>
+</ul>
+<h3 id="积分的性质-properties-of-the-integral"><a href="#积分的性质-properties-of-the-integral" class="headerlink" title="积分的性质 properties of the integral"></a>积分的性质 properties of the integral</h3><p>6.12 定理</p>
+<ul>
+<li>如果在$[a,b]$ 上$f_1\in \mathscr{R}(g)$且$f_2\in \mathscr{R}(g)$那么 $f_1,f_2\in \mathscr{R}(g)$, 对于任意常数$c$有$cf\in\mathscr{R}(g)$<ul>
+<li>$\int_{a}^b (f_1+f_2)dg&#x3D;\int_{a}^bf_1dg+\int_a^bf_2dg$<ul>
+<li>$L(f_1)+L(f_2)\le L(f)\le U(f)\le U(f_1)+U(f_2)$</li>
+</ul>
+</li>
+<li>$c\int_{a}^b fdg&#x3D;\int_{a}^b cfdg$</li>
+<li>也就是 四则运算中的 加（减）和 数乘，的保持</li>
+</ul>
+</li>
+<li>$[a,b]$上$f_1(x)\le f_2(x)$那么 $\int_a^bf_1dg\le \int_a^b f_2dg$ 也就是有序性</li>
+<li>$a&lt;c&lt;b$ 那么在$[a,c],[c,b]$上$f\in\mathscr{R}(g)$且$\int_a^c fdg+\int_c^bfdg&#x3D;\int_a^bfdg$ 拆分及分段</li>
+<li>$|f(x)|\le M$, 那么$|\int_a^b fdg|\le M[g(b)-g(a)]$</li>
+<li>$f\in \mathscr{R}(g_1),f\in \mathscr{R}(g_2)$那么$f\in \mathscr{R}(g_1+g_2)$, 并且 $\int_a^b f d(g_1+g_2)&#x3D;\int_a^bfdg_1+\int_a^bfdg_2$ 拆解”积”的部分</li>
+</ul>
+<p>6.13 </p>
+<ul>
+<li>$fg\in \mathscr{R}(g)$<ul>
+<li>6.11 复合 的黎曼可积，因为$\phi(x)&#x3D;x^2 \in\mathscr{R}(\alpha)$, 所以若 $f\in\mathscr{R}(\alpha)$则$f^2&#x3D;\phi(f)\in\mathscr{R}(\alpha)$</li>
+<li>$fg&#x3D;1&#x2F;4((f+g)^2-(f-g)^2)$得证</li>
+</ul>
+</li>
+<li>勘误 这里中文版又打错了<ul>
+<li>$|f|\in\mathscr{R}(g)$且$|\int_a^bfdg|\le \int_a^b |f|dg$</li>
+<li>$\phi(x)&#x3D;|x|\in\mathscr{R}(\alpha)$</li>
+<li>左侧&#x3D;$\int f$或$-\int f$,也就是 $c\int f$,其中$c&#x3D;1$或$c&#x3D;-1$</li>
+<li>左侧$&#x3D;c\int f&#x3D;\int cf \le$右侧, （因为6.12中有序性的保持$cf \le |f|$)</li>
+</ul>
+</li>
+</ul>
+<p>6.14 单位阶跃函数I的定义是</p>
+<ul>
+<li>$I(x)&#x3D;[x &gt; 0]$</li>
+</ul>
+<p>6.15 $a&lt;s&lt;b$, f在$[a,b]$上有界, f在s点连续,而$\alpha(x)&#x3D;I(x-s)$ 那么</p>
+<ul>
+<li>$\int_a^bfd\alpha&#x3D;f(s)$</li>
+<li>这里$\alpha(x)&#x3D;[x&gt;s]$, f在s连续，根据 定义 大小和都是 $\sum m_i&#x2F;M_i\Delta \alpha_i$ 的形式，那么这里$\Delta\alpha_i$要非零的部分只有含有s点及正向邻域的区间<ul>
+<li>也就是任意切割如果没有在s切断，那么细分到s有了$[s,s+ds]$ 只有这个有贡献, f在s点连续, 可以控制ds来控制$m_i,M_i$到$f(s)$的距离，所以，这$m_i,M_i$的距离也可以任意被控制，</li>
+</ul>
+</li>
+<li>6.16 $c_n\ge 0,\sum c_n$ 收敛, {$s_n$}是$(a,b)$之内一串不同的点,且$\alpha(x)&#x3D;\sum_{n&#x3D;1}^{\infty} c_nI(x-s_n)$, $f在[a,b]$上连续<ul>
+<li>$\int_a^bfd\alpha&#x3D;\sum_{n&#x3D;1}^{\infty}c_n f(s_n)$</li>
+<li>比较收敛法，对于每个x收敛，$\alpha(x)$显然单调的$\alpha(a)&#x3D;0,\alpha(b)&#x3D;\sum c_n$</li>
+<li>任意$\epsilon &gt;0$,可以控制$N$满足$\sum_{N+1}^{\infty} c_n &lt; \epsilon$<ul>
+<li>从而 拆成$\alpha_1&#x3D;\sum_{n&#x3D;1}^N,\alpha_2&#x3D;\sum_{n&#x3D;N+1}^{\infty}$<ul>
+<li>前一半 有限的运算能得到$\sum_{n&#x3D;1}^Nc_nf(s_n)$ 勘误这里写成i了</li>
+<li>后一半，利用f的有限M,和控制的epsilon，</li>
+<li>于是 $|\int_a^b fd\alpha -\sum_{n&#x3D;1}^Nc_nf(s_n)|\le M\epsilon$ 其中N可以任意更大，可以趋于无穷，右边是任意目标</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.17 若$\alpha$单调递增在$[a,b]$上$\alpha’\in\mathscr{R}$，设$f$是$[a,b]$上的有界实函数,于是$f\in\mathscr{R}(\alpha)$当且仅当$f\alpha’\in\mathscr{R}$, 这时候</p>
+<ul>
+<li>$\int_a^b fd\alpha&#x3D;\int_a^bf(x)\alpha’(x)dx$ 也就是建立变量dx和$d\alpha$的关系</li>
+<li>6.6 $f\in \mathscr{R}(\alpha)$则任意$\epsilon &gt; 0$存在分法$U(P,\alpha’)-L(P,\alpha’)&lt;\epsilon$<ul>
+<li>中值定理$t_i\in[x_{i-1},x_i]$使得$\Delta\alpha_i&#x3D;\alpha’(t_i)\Delta x_i$</li>
+</ul>
+</li>
+<li>6.7(b) 若$s_i\in[x_i,x_i]$那么$\sum |\alpha’(s_i)-\alpha’(t_i)|\Delta x_i&lt;\epsilon$</li>
+<li>令$M&#x3D;\sup |f(x)|$ </li>
+<li>$\sum f(s_i)\Delta \alpha_i&#x3D;\sum f(s_i)\alpha’(t_i)\Delta x_i$</li>
+<li>$|\sum f(s_i)\Delta \alpha_i - \sum f(s_i)\alpha’(s_i)\Delta x_i|$ 绝对值不等式<ul>
+<li>$&#x3D;|\sum f(s_i)\alpha’(t_i)\Delta x_i- \sum f(s_i)\alpha’(s_i)\Delta x_i|$</li>
+<li>$&#x3D;|\sum f(s_i)(\alpha’(t_i)-\alpha’(s_i))\Delta x_i|$</li>
+<li>$\le M\epsilon$</li>
+<li>对于$s_i$的一切选取法</li>
+<li>$\sum f(s_i)\Delta \alpha_i\le U(P,f\alpha’)+M\epsilon$ 根据绝对值不等式</li>
+<li>所以 $U(P,f,\alpha)\le U(P,f\alpha’)+M\epsilon$,或者说右边的 $\alpha_{right}(x)&#x3D;x$</li>
+<li>同样 根据绝对值不等式 $U(P,f\alpha’)\le U(P,f,\alpha)+M\epsilon$, ？？？为啥要这样搞，上面绝对值不等式说明可以任意靠近不就好了吗？哦 意思是绝对值 里面是$\sum$ 不能直接换成$U$, 这里转出来说明两个U可以无限接近</li>
+<li>从而 证明 两个的上积分（大和）可以任意接近，所以相对。类似的可以证明下和</li>
+</ul>
+</li>
+</ul>
+<p>6.18 评注 Stieltjes积分方法所固有的普遍性和适应性</p>
+<ul>
+<li>如果$\alpha$是纯跃阶函数，那么就变成6.16 形式本质是有限或无限的级数</li>
+<li>如果$\alpha$有可积的导数，就变成普通的Riemann积分（大多数教材教的）<ul>
+<li>例子 惯性矩 $\int x^2 dm$,质量函数$m$的导数是密度$\rho$, $x^2\rho dx$</li>
+</ul>
+</li>
+</ul>
+<p>6.19 换元</p>
+<ul>
+<li>$\varphi(x)$是严格递增的连续函数，它把闭区间$[A,B]$ onto $[a,b]$假设$\alpha$在$[a,b]$上单调递增，而且在$[a,b]$上$f\in\mathscr{R}(\alpha)$在$[a,b]$上</li>
+<li>$\beta(y)&#x3D;\alpha(\varphi(y)),g(y)&#x3D;f(\varphi(y))$,那么$g\in\mathscr{R}(\beta)$ 且</li>
+<li>$\int_A^B gd\beta &#x3D;\int_a^bfd\alpha$ （要证明</li>
+<li>证明:<ul>
+<li>$\varphi: [A,B]\mapsto [a,b]$且严格单调递增</li>
+<li>$[a,b]$的分法P有$[A,B]$的分发Q对应，其中分割点通过$\varphi$ 保持对应$y_i&#x3D;\varphi(x_i \in[A,B])\in [a,b]$</li>
+<li>$U(Q,g,\beta)&#x3D;\sum g(x_i)\Delta \beta_i &#x3D; \sum f(y_i&#x3D;\varphi(x_i))\Delta \alpha_i(\varphi(x_i))&#x3D;U(P,f,\alpha)$, 这里 $f,g$都要取到区间最小值，所以选择$x_i$始终可以一样</li>
+<li>上界类似 $L(Q,g,\beta)&#x3D;L(P,f,\alpha)$ 这里的感觉是，不同的 入参的 切割点，而不同的切割点下 $\sum$每一段的取值情况$g_i&#x3D;f_i,\Delta \alpha_i &#x3D;\Delta \beta_i$</li>
+<li>两边的划分 都可以足够靠近 它们分别的 积分定义，所以证明了两边相等</li>
+</ul>
+</li>
+<li>特殊的$\alpha(x)&#x3D;x,\beta&#x3D;\varphi$ 假设$[A,B]$上$\varphi’\in\mathscr{R}$,<ul>
+<li>$\int_a^b f(x)dx&#x3D;\int_a^b f(x)\alpha’(x)dx$ 利用 特殊的$\alpha’(x)&#x3D;1$</li>
+<li>$&#x3D;\int_a^b fd\alpha$ 根据6.17</li>
+<li>$&#x3D;\int_A^B f(\varphi(y)) d \varphi$ 根据6.19</li>
+<li>$&#x3D;\int_A^Bf(\varphi(y))\varphi’(y)dy$ 根据6.17</li>
+</ul>
+</li>
+</ul>
+<h3 id="积分与微分-integration-and-differentiation"><a href="#积分与微分-integration-and-differentiation" class="headerlink" title="积分与微分 integration and differentiation"></a>积分与微分 integration and differentiation</h3><p>在实函数内，在某种意义上是互逆运算, we shall show that integration and differentiation are , in a certain sense, inverse operations</p>
+<p>6.20 $[a,b]$上$f\in\mathscr{R}$ 对于$a\le x\le b$令$F(x)&#x3D;\int_a^x f(t)dt$, 那么$F$在$[a,b]$上连续, 如果$f$又在$[a,b]$上$x_0$点连续,那么$F$在该点可微且$F’(x_0)&#x3D;f(x_0)$</p>
+<ul>
+<li>黎曼可积，有界，被M控制，$|F(y)-F(x)|\le M(y-x)$ 可以控制入参距离来控制结果的距离（实际上是一致连续）</li>
+<li>$|\frac{F(t)-F(s)}{t-s}-f(x_0)|&#x3D;|\frac{1}{t-s}\int_s^t[f(u)-f(x_0)]du|$, 其中$s &lt; x_0 &lt; t$<ul>
+<li>目标很明确，要能通过控制$x_0$邻域来控制上面表达式能任意小,f的连续 让 |f(u)-f(x_0)|可被控制，根据6.12d 上面的也可以被控制</li>
+</ul>
+</li>
+</ul>
+<p>6.21 微积分基本定理 the fundamental theorem of calculus</p>
+<ul>
+<li>$[a,b]$上f黎曼可积, $F$ on $[a,b]$可导,且F’&#x3D;f那么</li>
+<li>$\int_a^b f(x) dx&#x3D;F(b)-F(a)$</li>
+<li>分析学里等号不是“等号，一样的意思，而更多是定义下的值相等“<ul>
+<li>所以这里还是证明左右两边可以任意接近</li>
+</ul>
+</li>
+<li>这里和6.20不太一样的前提，上面是通过f和黎曼积分定义出的F,这样定义出的F的导数会等于原来对应点f的值<ul>
+<li>而6.21是说，F‘&#x3D;f和，也就是F不是通过f定义出来的，要证明的的是 黎曼积分的结果 &#x3D; 端点的总变化量</li>
+<li>再或者说6.20的F是一个 特殊的积分结果 F(a)&#x3D;0</li>
+<li>而这里F 是一个不定积分的某个具体F</li>
+</ul>
+</li>
+<li>6.7c: 对于给定距离指标$\epsilon &gt;0$,对于分割P, 上下和的距离满足该指标$U-L &lt; \epsilon$，那么每个区间任取$s_i,t_i$得到$\sum |f(s_i)-f(t_i)|\Delta\alpha_i &lt;\epsilon$ 也满足这个指标，并且 $|\sum f(t_i)\Delta \alpha_i - \int_a^b fd\alpha|&lt;\epsilon$ 也就是划分的和的结果，和黎曼积分的值的距离也满足这个指标</li>
+<li>这里 根据中值定理，因为$t_i$可以任意选取，我们要最终得到$F(b)-F(a)$,我们希望中间是$F(x_i)-F(x_{i-1})&#x3D;f(t_i)\Delta  x_i$ 而这个根据中值定理可以取到</li>
+</ul>
+<p>6.22 分部积分integration by parts 假定F和G 都是$[a,b]$上的可微函数. $F’&#x3D;f\in \mathscr{R}$且$G’&#x3D;g\in\mathscr{R}$ Then</p>
+<ul>
+<li>$\int_a^b F(x)g(x)dx&#x3D;F(b)G(b)-F(a)G(a)-\int_a^bf(x)G(x)dx$</li>
+<li>proof<ul>
+<li>put H(x)&#x3D;F(x)G(x)<ul>
+<li>注意到$H’\in\mathscr{R}$(根据6.13)</li>
+</ul>
+</li>
+<li>然后把H带入6.21 就证明完毕</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量值函数的积分-integration-of-vector-valued-functions"><a href="#向量值函数的积分-integration-of-vector-valued-functions" class="headerlink" title="向量值函数的积分 integration of vector-valued functions"></a>向量值函数的积分 integration of vector-valued functions</h3><p>6.23 $f: [a,b]\mapsto \mathbb{R}^k$</p>
+<ul>
+<li>同样是Stieltjes的方法，如果$\alpha$在$[a,b]$上单调递增，那么$f\in \mathscr{R}(\alpha)$</li>
+<li>$\int_a^b fd\alpha&#x3D;(\int_a^b f_1d\alpha,\cdots,\int_a^b f_k d\alpha)$ 也就是每个维度的$f_i$的stieltjes积分</li>
+<li>性质，显然<ul>
+<li>6.12 （向量中没有偏序关系，所以一些值不等式的先跳过<ul>
+<li>a 加法和数乘成立</li>
+<li>c 积分的分段成立</li>
+<li>e 关于$\alpha$的拆分成立</li>
+</ul>
+</li>
+<li>6.17 关于$d\alpha$和$dx$的转化 成立</li>
+<li>6.20 变成了每个分量的 $F_i$ 成立</li>
+<li>6.21 向量分量的微积分基本定理<ul>
+<li>6.24: $\int_a^b f(t)dt&#x3D;F(b)-F(a)$ 写起来和6.21看着一样，不过不同的是，这里的f,F上面是$[a,b]\to\mathbb{R}$的，而这$[a,b]\to \mathbb{R}^k$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.25 $f\in\mathscr{R}(\alpha)$那么$|f|\in\mathscr{R}(\alpha)$ 且$|\int_a^b fd\alpha|\le \int_a^b|f|d\alpha$</p>
+<ul>
+<li>$|f|&#x3D;(\sum f_i^2)^{1&#x2F;2}$ norm<ul>
+<li>$f_i\in\mathscr{R},x^2连续,f_i^2\in\mathscr{R},\sum f_i^2\in\mathscr{R},\sqrt{x}连续,f\in\mathscr{R}$</li>
+<li>勘误 书上这里f漏了一个加粗（表示向量）</li>
+<li>对于左边norm内的用y表示 $y&#x3D;\int_a^bfd\alpha$, 其中$y_i&#x3D;\int f_i d\alpha$</li>
+<li>$|y|^2&#x3D;\sum y_i^2&#x3D;\sum y_i \int f_i d\alpha&#x3D;\int (\sum y_if_i)d\alpha$<ul>
+<li>schwarz不等式 $\sum y_if_i(t) \le |y||f(t)| ,(a\le t \le b)$</li>
+<li>$|y|^2\le \int |y||f(t)|d\alpha&#x3D;|y|\int |f(t)|d\alpha$ <ul>
+<li>y&#x3D;0那么显然</li>
+<li>否则两边同时除以$|y|$ 得证</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="可求长曲线-rectifiable-curves"><a href="#可求长曲线-rectifiable-curves" class="headerlink" title="可求长曲线 rectifiable curves"></a>可求长曲线 rectifiable curves</h3><p>k&#x3D;2 也就是$\mathbb{R}^2$ 情况 研究复变量 解析函数</p>
+<p>6.26 将闭区间$[a,b]$ 映入$\mathbb{R}^k$的映射$\gamma$叫做$\mathbb{R}^k$里的曲线.为了重视参数区间$[a,b]$，也可以说$\gamma$是$[a,b]$上的曲线</p>
+<ul>
+<li>假如$\gamma$是一对一的，$\gamma$就称作弧</li>
+<li>假如$\gamma(a)&#x3D;\gamma(b)$就说$\gamma$是闭曲线</li>
+<li>这里定义的“曲线”是 映射， 而不是点集。 结合着$\mathbb{R}^k$里每个曲线$\gamma$总有$\mathbb{R}^k$的一个子集，即$\gamma$的值域，不同的曲线 可能有 相同的值域</li>
+<li>对于分法P配置一个数 $\Lambda(P,\gamma)&#x3D;\sum_{i&#x3D;1}^n |\gamma(x_i)-\gamma(x_{i-1})|$ ，也就是切割点的距离和，那么这里Lambda就是按照切割下的折线长<ul>
+<li>这就好多了（之前 各种树上都是 $\sqrt{1+dx^2}$ 总感觉怪怪的</li>
+<li>$\Lambda(\gamma)&#x3D;\sup \Lambda(P,\gamma)$<ul>
+<li>如果$\Lambda &lt; \infty$ 那么$\gamma$就是可求长的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>6.27 假如$\gamma’$在$[a,b]$上连续，$\gamma$便是可求长的，而且</p>
+<ul>
+<li>$\Lambda(\gamma)&#x3D;\int_a^b |\gamma’(t)| dt$</li>
+<li>证明：<ul>
+<li>这里用 左右互相 大于等于来证明</li>
+<li>正向<ul>
+<li>6.24 : $|\gamma(x_i)-\gamma(x_{i-1})|&#x3D;|\int_{x_{i-1}}^{x_i}\gamma’(t)dt|$ , 这里是切割段 端点的 向量变化 的 norm &#x3D; 导数的向量积分的norm</li>
+<li>6.25：$\le \int_{x_{i-1}}^{x_i} |\gamma’(t)|dt$</li>
+<li>对于每个分法P: $\Lambda(P,\gamma)\le \int_a^b |\gamma’(t)|dt$</li>
+<li>$\Lambda(\gamma)&#x3D;\sup \Lambda(P,\gamma)\le \int_a^b |\gamma’(t)|dt$</li>
+</ul>
+</li>
+<li>反向<ul>
+<li>$\epsilon &gt; 0$ 既然$\gamma’$在$[a,b]$上一致连续,便有$|s-t|&lt;\delta$ 时$|\gamma’(s)-\gamma’(t)|&lt;\epsilon$，也就是$\delta$控制距离能控制$\gamma’$的距离</li>
+<li>对于任意满足上面$\delta$控制切割力度的划分P $|\gamma’(t)|\le|\gamma’(x_i)|+\epsilon$ 绝对值不等式</li>
+<li>$\int_{x_{i-1}}^{x_i}|\gamma’(t)|dt\le |\gamma’(x_i)|\Delta x_i+\epsilon\Delta x_i$</li>
+<li>$&#x3D;|\int_{x_{i-1}}^{x_i}[\gamma’(t)+\gamma’(x_i)-\gamma’(t)] dt|+\epsilon\Delta x_i$</li>
+<li>$\le|\int_{x_{i-1}}^{x_i} \gamma’(t)dt|+|\int_{x_{i-1}}^{x_i}[\gamma’(x_i)-\gamma’(t)] dt|+\epsilon\Delta x_i$ 三角不等式</li>
+<li>$\le|\gamma’(x_i)-\gamma’(x_{i-1})|+2\epsilon\Delta x_i$  </li>
+<li>即 $\int_a^b |\gamma’(t)|dt\le \Lambda(P,\gamma)+2\epsilon(b-a)$</li>
+<li>$\le \Lambda(\gamma)+2\epsilon(b-a)$</li>
+<li>右侧epsilon是任意的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>小总结</p>
+</blockquote>
+<p>这积分 虽然是riemann引入，但是前面通过stieltjes的方法来研究，为后面特殊称Riemann也好，变量替换也好，分部积分也好，研究积分基本定理也好，提供了更好看的基础。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"># 数学分析</a>
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"># 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_5/" rel="prev" title="Walter Rudin 数学分析原理 5 微分法">
+                  <i class="fa fa-chevron-left"></i> Walter Rudin 数学分析原理 5 微分法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/2025-03-01-Vieta_jumping/" rel="next" title="韦达跳跃Vieta jumping">
+                  韦达跳跃Vieta jumping <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

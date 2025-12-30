@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="isbn  中文 9787111134176 英文 9787111619543  前言受众：数学专业高年级，或一年级研究生">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Walter Rudin 数学分析原理 1 实数系与复数系">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="isbn  中文 9787111134176 英文 9787111619543  前言受众：数学专业高年级，或一年级研究生">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-01-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.618Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数学分析">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/","path":"Principles_of_Mathematical_Analysis_1/","title":"Walter Rudin 数学分析原理 1 实数系与复数系"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Walter Rudin 数学分析原理 1 实数系与复数系 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0%E7%B3%BB%E4%B8%8E%E5%A4%8D%E6%95%B0%E7%B3%BB"><span class="nav-number">2.</span> <span class="nav-text">实数系与复数系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%BC%95"><span class="nav-number">2.1.</span> <span class="nav-text">导引</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E9%9B%86-Ordered-sets"><span class="nav-number">2.2.</span> <span class="nav-text">有序集 Ordered sets</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%9F-Fields"><span class="nav-number">2.3.</span> <span class="nav-text">域 Fields</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0%E5%9F%9F-the-reald-field"><span class="nav-number">2.4.</span> <span class="nav-text">实数域 the reald field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89%E5%AE%9E%E6%95%B0%E7%B3%BB-the-extended-real-number-system"><span class="nav-number">2.5.</span> <span class="nav-text">广义实数系 the extended real number system</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0%E5%9F%9F-complex-field"><span class="nav-number">2.6.</span> <span class="nav-text">复数域 complex field</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AC%A7%E6%B0%8F%E7%A9%BA%E9%97%B4-Euclidean-spaces"><span class="nav-number">2.7.</span> <span class="nav-text">欧氏空间 Euclidean spaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%84%E5%BD%95%EF%BC%8C%E4%BB%8E%E6%9C%89%E7%90%86%E6%95%B0%E5%9F%9F-%E4%B8%BA%E4%BA%86%E6%9C%80%E5%B0%8F%E4%B8%8A%E7%95%8C%E6%80%A7-%E6%9E%84%E9%80%A0%E5%87%BA%E5%AE%9E%E6%95%B0%E5%9F%9F"><span class="nav-number">2.8.</span> <span class="nav-text">附录，从有理数域 为了最小上界性 构造出实数域</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Walter Rudin 数学分析原理 1 实数系与复数系 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Walter Rudin 数学分析原理 1 实数系与复数系
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-01-20 00:00:00" itemprop="dateCreated datePublished" datetime="2025-01-20T00:00:00+08:00">2025-01-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>11 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>isbn</p>
+<ul>
+<li>中文 9787111134176</li>
+<li>英文 9787111619543</li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>受众：数学专业高年级，或一年级研究生</p>
+<span id="more"></span>
+
+<p>TODO: 最后两章学得有点云里雾里，据说有其它教材更细致的讲解，推荐1~9章还是很容易读的</p>
+<h2 id="实数系与复数系"><a href="#实数系与复数系" class="headerlink" title="实数系与复数系"></a>实数系与复数系</h2><h3 id="导引"><a href="#导引" class="headerlink" title="导引"></a>导引</h3><p>有理数&#x3D;m&#x2F;n</p>
+<ul>
+<li>不存在有理数 $p^2&#x3D;2$ 这里普林斯顿那本应该也是抄这个例子的<ul>
+<li>一方面不存在（ 偶数证明</li>
+<li>一方面没有 最近, p &#x3D;(2p+2)&#x2F;(p+2)</li>
+</ul>
+</li>
+</ul>
+<p>1.3 快速过了一下集合的概念</p>
+<h3 id="有序集-Ordered-sets"><a href="#有序集-Ordered-sets" class="headerlink" title="有序集 Ordered sets"></a>有序集 Ordered sets</h3><p>1.5 集合中的 序order, is a relation</p>
+<ul>
+<li>任何两个可按照 给定序比较 或相等</li>
+<li>传递性, if x,y,z in S, if x &lt; y and y &lt; z then x &lt; z</li>
+</ul>
+<p>1.6 集合set+序(order is defined) &#x3D;&gt; 有序集 ordered set</p>
+<p>1.7 子集的上界定义, bounded above 上方有界, (中文书上翻译的 上有界)</p>
+<ul>
+<li>有序集S的子集E, 任意E中元素，&lt;&#x3D; b \in S,那么b是上界upper bound of E</li>
+<li>类似 Lower bound<ul>
+<li>从翻译上 看起来英文的 bounded above是形容集合，而 upper bound of 是一个值的与集合的关系属性</li>
+</ul>
+</li>
+</ul>
+<p>1.8 上确界 least-upper-bound of</p>
+<ul>
+<li>a 是 上界 upper bound of</li>
+<li>更小不是上界,b &lt; a, b is not upper bound of</li>
+<li>类似下确界 greatest-lower-bound property</li>
+</ul>
+<p>1.10 最小上界性 least-upper-bound property</p>
+<ul>
+<li>$E\subset S$,E有上界时, $\text{sup} E \in S$ <ul>
+<li>有理数中 $A&#x3D;\lbrace q| q^2&lt;2\rbrace, B&#x3D;\lbrace q | q^2 &gt; 2\rbrace$, A的上界全在B中，但是B没有最小值 从而 $\mathbb{Q}$没有最小上界性</li>
+</ul>
+</li>
+<li>1.11 最小上界性 &lt;&#x3D;&gt; 最小下界性<ul>
+<li>这个的证明核心 就是 证明上面的定义的要素：是+更（小&#x2F;大）不是</li>
+</ul>
+</li>
+</ul>
+<h3 id="域-Fields"><a href="#域-Fields" class="headerlink" title="域 Fields"></a>域 Fields</h3><p>1.12 Deinition A field is a set F with two operations, called addition and multiplication, 满足两个所谓的 “field axioms”(域的公理)</p>
+<ul>
+<li>Axioms for addition<ul>
+<li>A1 x in F + y in F &#x3D;&gt; x+y in F 封闭</li>
+<li>A2 commutative x+y&#x3D;y+x for all x,y in F 交换</li>
+<li>A3 associative (x+y)+z&#x3D;x+(y+z) for all x,y,z in F 结合</li>
+<li>A4 F contains an elment 0 such that 0+x&#x3D;x for every x in F, 在addition运算下的零元</li>
+<li>A5 x in F, exist y in F, x+y&#x3D;0, y 记作 -x, 逆元存在</li>
+</ul>
+</li>
+<li>Axioms for mutiplication<ul>
+<li>M1 封闭</li>
+<li>M2 交换</li>
+<li>M3 结合</li>
+<li>M4 乘法零元，且不等于加法零元，记作1, 1x&#x3D;x for every x in F</li>
+<li>M5 乘法逆元</li>
+</ul>
+</li>
+<li>the Distribution law 分配<ul>
+<li>x(y+z)&#x3D;xy+xz for x,y,z in F</li>
+</ul>
+</li>
+<li>注意一些地方的一些写法是简记<ul>
+<li>例如 减法 是 加逆元，分数符号或除法是乘上逆元</li>
+<li>同等级 连加，连乘，是省去了运算括号，实际是从左到右侧</li>
+<li>整数次幂次 是 同个数连乘缩写</li>
+<li>这些“简记”并没有 额外定义性质</li>
+</ul>
+</li>
+</ul>
+<p>1.14 命题proposition </p>
+<ul>
+<li>if x+y&#x3D;y+z then y&#x3D;z</li>
+<li>if x+y&#x3D;y then y &#x3D; 0</li>
+<li>if x+y&#x3D;0 then y &#x3D; -x</li>
+<li>-(-x)&#x3D;x 逆元的逆元得到本身</li>
+</ul>
+<p>1.15 命题 关于乘法</p>
+<ul>
+<li>x \neq 0 and xy&#x3D;xz then y&#x3D;z</li>
+<li>x \neq 0 and xy&#x3D;x then y&#x3D;1</li>
+<li>x \neq 0 and xy&#x3D;1 then y&#x3D;1&#x2F;x</li>
+<li>x \neq 0 , 1(1&#x2F;x)&#x3D;x</li>
+</ul>
+<p>1.16 命题 x,y,z in F</p>
+<ul>
+<li>0x&#x3D;0</li>
+<li>x\neq 0 and y \neq0 then xy\neq 0</li>
+<li>(-x)y&#x3D;-(xy)&#x3D;x(-y)</li>
+<li>(-x)(-y)&#x3D;xy</li>
+</ul>
+<p>1.17 定义 ordered field 有序域</p>
+<ul>
+<li>field F + ordered set</li>
+<li>x + y &lt; x+z if x,y,z in F and y &lt; z</li>
+<li>xy &gt; 0 if x in F, y in F, x &gt; 0 and y &gt;0</li>
+<li>这里 定义 positive ,negative</li>
+</ul>
+<p>1.18 命题，因为我们对于实数域很熟，有一些实数域中的结论在 有序域中同样成立，例如</p>
+<ul>
+<li>if x &gt; 0 then -x &lt; 0,对称也成立</li>
+<li>if x &gt; 0 and y &lt; z then xy &lt; xz</li>
+<li>if x &lt; 0 and y &lt; z then xy &gt; xz</li>
+<li>if x \neq 0 then xx &gt;0,特别的 1(乘法零元) &gt; 0（加法零元）</li>
+<li>if 0 &lt; x &lt; y then 0 &lt; 1&#x2F;y &lt; 1&#x2F;x</li>
+</ul>
+<h3 id="实数域-the-reald-field"><a href="#实数域-the-reald-field" class="headerlink" title="实数域 the reald field"></a>实数域 the reald field</h3><p>本章核心 存在定理: existence theorem</p>
+<p>1.19 存在一个 有序域R,有 最小上界性</p>
+<ul>
+<li>同时包含实数域Q 作为子域。<ul>
+<li>这里没有直接说R是啥</li>
+<li>子域 是保持两者之间的运算映射一致</li>
+<li>R的元叫做 实数, the members of R are called real numbers</li>
+<li>具体的R构造见1章附录</li>
+</ul>
+</li>
+</ul>
+<p>1.20 </p>
+<ul>
+<li>archimedean property of R 欧几里德性 x,y in R, x &gt; 0 , then there is a positive integer n such that nx &gt; y<ul>
+<li>不成立y是上界，有界，最小上界性 a&#x3D;sup nx, a-x不是最小上界, 存在m使得a-x &lt; mx, a &lt; (m+1)x ,a不是上界，不是最小上界</li>
+</ul>
+</li>
+<li>Q is dense(稠密) in R.  x,y, in R x &lt; y ,exists p in Q such that x &lt; p &lt; y, 任意两个实数之间有有理数<ul>
+<li>利用1, n(y-x)&gt;1 划缝，让x,y必然落在 1&#x2F;m切割的不同区间中</li>
+</ul>
+</li>
+</ul>
+<p>1.21 $x^n&#x3D;a$ 存在1个正实数解</p>
+<ul>
+<li>y &#x3D; sup x | x^n &lt; a。 因为上确界性</li>
+<li>那么 y^n &#x3D; a, 即是 y^n &lt; a或者 y^n &gt; a都会矛盾（注意不要弄错成 <del>y的n次方都比a小，大于y的n次方都比a大</del></li>
+<li>这里的想法和开篇的 y^2&#x3D;2 的想法类似，插入一个 y^n ~ a 之间的数，而且它的n次方是直接可以y表示的<ul>
+<li>(y+h)^n-y^n &lt; a-y^n, 0 &lt; h &lt; 1</li>
+<li>h(\sum (y+h)^? y^?) &lt; a-y^n</li>
+<li>h(\sum (y+1)^{n-1}) &lt; a-y^n</li>
+<li>h(n(y+1)^{n-1}) &lt; a-y^n</li>
+<li>我们能得到h 关于 a,y,n的 只有乘除加减没有开根的表达式，从而能凑，就能有之间的数，从而就能有矛盾</li>
+</ul>
+</li>
+<li>推论 (ab)^{1&#x2F;n}&#x3D;(a^{1&#x2F;n})(b^{1&#x2F;n})</li>
+</ul>
+<p>1.22 小数 &#x3D;&gt; 实数</p>
+<ul>
+<li>无穷小数，看成 逐渐截断的 10的幂次 系数的和 的集合的 sup E</li>
+<li>since we shall never use decimals ,we do not enter into a detailed discussion</li>
+</ul>
+<h3 id="广义实数系-the-extended-real-number-system"><a href="#广义实数系-the-extended-real-number-system" class="headerlink" title="广义实数系 the extended real number system"></a>广义实数系 the extended real number system</h3><p>这里英文是 extended, 多了 正无穷和负无穷两个 符号</p>
+<ul>
+<li>在 extended 里， 正无穷是 所有的上界，每个非空集合至少一个上界</li>
+<li>一些还能用的四则运算</li>
+</ul>
+<h3 id="复数域-complex-field"><a href="#复数域-complex-field" class="headerlink" title="复数域 complex field"></a>复数域 complex field</h3><p>有序对(a,b)</p>
+<ul>
+<li>相等 对位相等</li>
+<li>复数运算的 新加法，和新乘法</li>
+<li>(a,b)+(c,d)&#x3D;(a+c,b+d)</li>
+<li>(a,b) * (c,d)&#x3D;(ac-bd,ad+bc)</li>
+<li>在新加法乘法的定义下满足 加法5条，乘法5条，交换1条，所以是个 域 field</li>
+<li>实数 对应的是第二维为零，实数和复数有相同的运算性质，因此可以看作子域 the real field as a  subfield of the complex field</li>
+</ul>
+<p>其它记法 a+bi</p>
+<ul>
+<li>新记法下的运算，实部Re(z) real part，虚部Im(z) imaginary</li>
+<li>共轭相关运算 (在普林斯顿那书笔记中有)</li>
+<li>$z\bar{z}$ 是实+正，只有&#x3D;0时&#x3D;0</li>
+<li>absolute value $|z|&#x3D;\sqrt{z\bar{z}}$</li>
+</ul>
+<p>Schwarz inequality</p>
+<ul>
+<li>$|\sum a_i\bar{b_i}|^2 \le (\sum |a_i|^2)(\sum |b_i|^2)$</li>
+<li>书上这个神奇的起手怎么想到的真不知道，drop from sky</li>
+<li>一个办法 $f(t)&#x3D;\sum |a_i+tb_i|^2$ 这个思路是去找判别式靠，在 高代第10章 就是类似这个思路</li>
+</ul>
+<h3 id="欧氏空间-Euclidean-spaces"><a href="#欧氏空间-Euclidean-spaces" class="headerlink" title="欧氏空间 Euclidean spaces"></a>欧氏空间 Euclidean spaces</h3><p>n维坐标, 坐标值都是实数</p>
+<ul>
+<li>线性<ul>
+<li>加法 addition of vectors</li>
+<li>数乘 , multiplication of a vector by a real number (a scalar)</li>
+</ul>
+</li>
+<li>内积 inner product<ul>
+<li>x y &#x3D; sum x_i y_i</li>
+<li>范数 norm of x, |x|&#x3D;(x x)^{1&#x2F;2}</li>
+</ul>
+</li>
+<li>性质1.37<ul>
+<li>|x|&gt;&#x3D;0</li>
+<li>|x| &#x3D;0 if and only if x &#x3D;0</li>
+<li>|ax|&#x3D;|a||x|</li>
+<li>|x y | &lt;&#x3D; |x| |y| 是 Schwarz inequaliy的结果</li>
+<li>|x+y| &lt;&#x3D; |x|+|y| 三角不等式<ul>
+<li>|x-z| &lt;&#x3D; |x-y|+|y-z|</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="附录，从有理数域-为了最小上界性-构造出实数域"><a href="#附录，从有理数域-为了最小上界性-构造出实数域" class="headerlink" title="附录，从有理数域 为了最小上界性 构造出实数域"></a>附录，从有理数域 为了最小上界性 构造出实数域</h3><p>对于1.19，要从Q构造出R</p>
+<p>Step 1. The members of R will be certain subsets of Q, called cuts. A cut is, by definition, any set S \subset Q with following three properties</p>
+<ul>
+<li>S is not empty and S \neq Q, 非空 非全，真子集</li>
+<li>if p in S, q in Q, and q &lt; p, then q in S, Q中某个元素比S中某个元素小，那么同时在S中<ul>
+<li>含有：不在S中的 都比S中的大，否则会在S中</li>
+<li>比 不在S中的大的，同样不在S中</li>
+</ul>
+</li>
+<li>if p in S,then p &lt; r for some r in S,每个S中元素能找到更大的, 没有最大化</li>
+</ul>
+<p>p,q,r表示有理数，S,T,U表示分化 cuts</p>
+<p>Step 2. S &lt; T 表示S是T的真子集</p>
+<ul>
+<li>这里主要是要表达，集合之间，在上述的cuts, 真子集 是一种有序关系<ul>
+<li>（注意普通的集合之间的不是“任意两个都有序的”</li>
+<li>这里至多 一个&gt;&#x3D;&lt; 成立显然</li>
+<li>证明一下至少一个成立，这里用元素属于分类讨论去证明</li>
+</ul>
+</li>
+<li>传递性容易证</li>
+<li>因此 所有cuts 集合 构成的集合 是有序集</li>
+</ul>
+<p>step3 有序集R有最小上界性</p>
+<ul>
+<li>R&#x3D;{cuts的集合}<ul>
+<li>每个cut是 有理数集合 满足step1的性质</li>
+</ul>
+</li>
+<li>那么取任意R非空子集 A</li>
+<li>假定B in R是它的上界</li>
+<li>令$A_1&#x3D;$ 所有 S in A的并 （cut的并）<ul>
+<li>那么要证明 $A_1$ 属于R<ul>
+<li>且$A_1&#x3D;\sup A$, 也就是 最小上界性（能在R中找到最小上界</li>
+</ul>
+</li>
+<li>证明 属于R: 也就是证明A_1 满足step1的3条性质,<ul>
+<li>元素关系证明非空，$S \subset A \subset B \neq R$ 证明不等</li>
+<li>后两条，对于元素p,能找具体的集合S,再在S中找元素q,</li>
+</ul>
+</li>
+<li>证明 是 上确界：<ul>
+<li>上界显然</li>
+<li>证明 比他小的不是上界，靠元素属于关系 拉扯</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>step4 如果 $S,T \in R$, 定义S+T&#x3D;所有 a+b,a in S,b in T 的元素组成</p>
+<ul>
+<li>定义 集合的 <code>加</code> 运算</li>
+<li>那么证明 加法5条，封闭（证明 step1 cut三条），交换，结合，<ul>
+<li>零元($0^*$定义为 所有负有理数组成的集合, 证明相对用互相包含证明)，</li>
+<li>逆元 $A\in R,B&#x3D;\lbrace p | \exists r &gt; 0, -p-r\not \in A \rbrace$ 比-p小一点的有理数不在A内，这样的B就是A的逆元</li>
+</ul>
+</li>
+<li>这里核心证明思路都是通过元素属于关系证明的</li>
+<li>至此 这样定义下 有了 加法 运算性质</li>
+<li>step 5<ul>
+<li>基于 加法 和 序 定义的一些性质</li>
+<li>如消去律 1.14, a+b&#x3D;a+c 则b&#x3D;c</li>
+</ul>
+</li>
+</ul>
+<p>step 6 处理乘法</p>
+<ul>
+<li>$R^+ &#x3D;${a|$a\in R, a &gt; 0^*$}</li>
+<li>先类似加法的方式 通过元素构成定义乘法</li>
+<li>从而类似的有了乘法零元: $1^*$</li>
+</ul>
+<p>step 7 利用 逆元 零元 和 （正数乘法）的定义把乘法的定义扩展到全体R上</p>
+<ul>
+<li>$A0^*&#x3D;0^*$</li>
+<li>至此新的加法和新的乘法都有了</li>
+</ul>
+<p>step 8 用类似的形式，给现有有理数对应的 “分化”</p>
+<ul>
+<li>注意现在还是只有有理数，和上面的集合R，（而不是实数）</li>
+<li>对于任意$r\in \mathbb{Q}$</li>
+<li>$r^*&#x3D;\lbrace p| p&lt;r ,p\in\mathbb{Q}\rbrace$<ul>
+<li>验证step1的3条性质,它是一个分化</li>
+<li>然后我们需要证明的是 有理数加法$(r_1+r_2)^*$，和上面集合的 新加法$r_1^*+r_2^*$ 同构（&#x3D;） ,乘法也是</li>
+</ul>
+</li>
+</ul>
+<p>step 9</p>
+<ul>
+<li>根据上面 同构</li>
+<li>我们把 构造出的R看作实数</li>
+</ul>
+<p>回顾</p>
+<ul>
+<li>第1步 完成构造</li>
+<li>第2步 证明构造东西的有序性</li>
+<li>第3步 证明最小上界性</li>
+<li>第4~7步 新的构造中 定义新的加法和乘法</li>
+<li>第8~9步 证明现有有理数以及加法乘法运算，与新定义的同构，从而证明了“实数”的构造</li>
+</ul>
+<hr>
+<p>戴德金分割，感觉像在所有有理数中间切分，而其“文字描述下”，和可数性又不冲突，</p>
+<ul>
+<li>例如 每个有理数按照有理数的可数排列 同样可以贴着“每个有理数”完成切割，但这种情况，你会发现  A&#x3D;{x^2 &lt; 2}, B&#x3D;{x^2&gt;&#x3D;2} 这种“切割”，又不在按可数排列的切割里</li>
+<li>在 可数 稠密 下 的 切割，和有限比很怪</li>
+<li>而且另一方面，的问题是，和中小学学的：有理数（可以表示成 m&#x2F;n 或者 有限，循环小数），无理数（无限不循环），或者连分数，有理数：有限，无理数：无限。 那这样 A的上确界不在A中，如何能保证取完所有 无理数</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"># 数学分析</a>
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"># 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/A_First_Course_in_Probability/" rel="prev" title="概率论基础教程">
+                  <i class="fa fa-chevron-left"></i> 概率论基础教程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_2/" rel="next" title="Walter Rudin 数学分析原理 2 基础拓扑">
+                  Walter Rudin 数学分析原理 2 基础拓扑 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

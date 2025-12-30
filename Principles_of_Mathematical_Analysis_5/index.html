@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="微分法 differentiation实函数中的导数 the derivative of a real function5.1 Let f be defined (and real-valued) on [a,b], For any x in [a,b] form the quotient  $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Walter Rudin 数学分析原理 5 微分法">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="微分法 differentiation实函数中的导数 the derivative of a real function5.1 Let f be defined (and real-valued) on [a,b], For any x in [a,b] form the quotient  $\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2025-02-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.619Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数学分析">
+<meta property="article:tag" content="微积分">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/","path":"Principles_of_Mathematical_Analysis_5/","title":"Walter Rudin 数学分析原理 5 微分法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Walter Rudin 数学分析原理 5 微分法 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AE%E5%88%86%E6%B3%95-differentiation"><span class="nav-number">1.</span> <span class="nav-text">微分法 differentiation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84%E5%AF%BC%E6%95%B0-the-derivative-of-a-real-function"><span class="nav-number">1.1.</span> <span class="nav-text">实函数中的导数 the derivative of a real function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86-mean-value-theorems"><span class="nav-number">1.2.</span> <span class="nav-text">中值定理 mean value theorems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7-the-continuity-of-derivatives"><span class="nav-number">1.3.</span> <span class="nav-text">导数的连续性 the continuity of derivatives</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L%E2%80%99Hospital-%E6%B3%95%E5%88%99-rule"><span class="nav-number">1.4.</span> <span class="nav-text">L’Hospital 法则 rule</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E9%98%B6%E5%AF%BC%E6%95%B0-Derivatives-of-higher-order"><span class="nav-number">1.5.</span> <span class="nav-text">高阶导数 Derivatives of higher order</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Taylor%E5%AE%9A%E7%90%86-Taylor%E2%80%99s-theorem"><span class="nav-number">1.6.</span> <span class="nav-text">Taylor定理 Taylor’s theorem</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-15-suppose-f-is-a-real-function-on-a-b-n%E6%98%AF%E6%AD%A3%E6%95%B4%E6%95%B0-f-n-1-%E5%9C%A8-a-b-%E4%B8%8A%E8%BF%9E%E7%BB%AD%EF%BC%8C-f-n-%E5%9C%A8-a-b-%E5%87%BA%E5%A4%84%E5%AD%98%E5%9C%A8-alpha-beta-%E5%9C%A8-a-b-%E6%98%AF%E4%B8%8D%E5%90%8C%E7%9A%84%E7%82%B9-P-t-sum-k-0-n-1-frac-f-k-alpha-k-t-alpha-k-%E9%82%A3%E4%B9%88%E5%AD%98%E5%9C%A8%E5%A4%84%E4%BA%8E-alpha-beta-%E4%B9%8B%E9%97%B4%E7%9A%84%E7%82%B9x-f-beta-P-beta-frac-f-n-x-n-beta-alpha-n"><span class="nav-number">2.</span> <span class="nav-text">5.15 suppose f is a real function on [a,b], n是正整数, $f^{(n-1)}$在$[a,b]$上连续， $f^{(n)}$在$(a,b)$出处存在,$\alpha,\beta$在$[a,b]$是不同的点- $P(t)&#x3D;\sum_{k&#x3D;0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(t-\alpha)^k$- 那么存在处于$\alpha,\beta$之间的点x, $f(\beta)&#x3D;P(\beta)+\frac{f^{(n)}(x)}{n!}(\beta-\alpha)^n$ &lt;—要证明- n&#x3D;1时是中值定理- 说明f能被 n-1次多项式逼近- 如果知道 $|f^{(n)}(x)|$上界，还能做误差估计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E5%80%BC%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E5%88%86%E6%B3%95-Differentiation-of-vector-valued-functions"><span class="nav-number">2.1.</span> <span class="nav-text">向量值函数的微分法 Differentiation of vector-valued functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Riemann-Stieltjes-%E7%A7%AF%E5%88%86integral"><span class="nav-number">3.</span> <span class="nav-text">Riemann-Stieltjes 积分integral</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/Principles_of_Mathematical_Analysis_5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Walter Rudin 数学分析原理 5 微分法 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Walter Rudin 数学分析原理 5 微分法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-02-17 00:00:00" itemprop="dateCreated datePublished" datetime="2025-02-17T00:00:00+08:00">2025-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">数学分析</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>2.2k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>8 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="微分法-differentiation"><a href="#微分法-differentiation" class="headerlink" title="微分法 differentiation"></a>微分法 differentiation</h2><h3 id="实函数中的导数-the-derivative-of-a-real-function"><a href="#实函数中的导数-the-derivative-of-a-real-function" class="headerlink" title="实函数中的导数 the derivative of a real function"></a>实函数中的导数 the derivative of a real function</h3><p>5.1 Let f be defined (and real-valued) on <code>[a,b]</code>, For any x in <code>[a,b]</code> form the quotient</p>
+<ul>
+<li>$\phi(t)&#x3D;\frac{f(t)-f(x)}{t-x}, a &lt; t &lt; b,t\neq x$</li>
+<li>define: $f’(x)&#x3D;\lim_{t\to x} \phi(t)$ 需要右侧存在， called the derivative导函数 of f </li>
+<li>如果 $f’(x)$ 在点x定义, 称f is differentiable at x, 如果 逐点 differentiable, 则称E上 differentiable</li>
+<li>类似的，可以在点讨论 导函数左右极限，可以引出左导数右导数</li>
+</ul>
+<span id="more"></span>
+
+<p>5.2 f定义在<code>[a,b]</code>上, 如果f在点$x\in[a,b]$可微, 那么f在x点连续</p>
+<ul>
+<li>f(t)-f(x)&#x3D;f’(x) (t-x), 可微左边f’(x)对于给定x是常数，所以 趋于0</li>
+</ul>
+<p>5.3 定理 f和g定义在$[a,b]$上，并且都在点$x\in[a,b]$可微，那么 加法，乘法，除法 也可微并且有</p>
+<ul>
+<li>(f+g)’&#x3D;f’+g’</li>
+<li>(fg)’&#x3D;f’g+fg’</li>
+<li>(f&#x2F;g)’&#x3D;f’&#x2F;g-fg’&#x2F;g^2</li>
+</ul>
+<p>5.5 链式</p>
+<ul>
+<li>(f(g(x)))’&#x3D;f’(g(x)) g’(x)</li>
+<li>这里前面是 f的导函数，在点g(x)处的导数值</li>
+</ul>
+<h3 id="中值定理-mean-value-theorems"><a href="#中值定理-mean-value-theorems" class="headerlink" title="中值定理 mean value theorems"></a>中值定理 mean value theorems</h3><p>5.7 f是定义在度量空间X上的实值函数，称f在点$p\in X$取得局部极大值，如果存在着$\delta &gt; 0$</p>
+<ul>
+<li>当$d(p,q) &lt; \delta$时,且$q\in X$时，有$f(q)\le f(p)$</li>
+<li>类似的定义局部极小值</li>
+</ul>
+<p>5.8 f定义在$[a,b]$上, $x\in [a,b]$如果f在x点取得局部极大值,$f’(x)$存在,$f’(x)&#x3D;0$,</p>
+<ul>
+<li>proof 也就是左导数 &lt;&#x3D;0, 右导数&gt;&#x3D;0,要相等只能&#x3D;0</li>
+</ul>
+<p>这里中文原书第3版,2004.1(2024.4 重印 第一版)，有错误，漏掉了g（勘误），英文版是对的</p>
+<p>5.9 f和g是<code>[a,b]</code>上连续实函数，在(a,b)中可微，那么便有一点$x\in(a,b)$ 使得</p>
+<ul>
+<li>$[f(b)-f(a)]g’(x)&#x3D;[g(b)-g(a)]f’(x)$</li>
+<li>并不要求在断电上可微</li>
+<li>$h(t)&#x3D;[f(b)-f(a)]g(t)-[g(b)-g(a)]f(t)$,</li>
+<li>h在 闭区间上连续，在开区间上可微，且 $h(a)&#x3D;h(b)$<ul>
+<li>只需要证明存在一点 $h’(t)&#x3D;0$, 若为常数则每点满足</li>
+<li>若有点 大于端点，4.16（紧度量空间上连续函数 存在点使f能取到最大值），所以最大值点能取到，且导数为0</li>
+<li>若有点 小于端点 类似的</li>
+<li>这叫 一般中值定理generalized mean value theorem</li>
+</ul>
+</li>
+<li>注意 在值域是复数域时会失效 稍后的 5.17</li>
+</ul>
+<p>5.10 更常用的退化中值定理</p>
+<ul>
+<li>f(b)-f(a)&#x3D;(b-a)f’(x), 也就是g(x)&#x3D;x</li>
+</ul>
+<p>5.11 f在(a,b)可微</p>
+<ul>
+<li>f’(x) &gt;&#x3D;0 单调递增</li>
+<li>f’(x) &#x3D;0 常函数</li>
+<li>f’(x) &lt;&#x3D;0 单调递减</li>
+</ul>
+<h3 id="导数的连续性-the-continuity-of-derivatives"><a href="#导数的连续性-the-continuity-of-derivatives" class="headerlink" title="导数的连续性 the continuity of derivatives"></a>导数的连续性 the continuity of derivatives</h3><p>$f(x)&#x3D;x^2sin(1&#x2F;x),f(0)&#x3D;0$是 处处导数存在，但导函数不连续的函数</p>
+<p>5.12 f是<code>[a,b]</code>上的实值可微函数，再设 $f’(a) &lt; \lambda &lt; f’(b)$, 那必有一点 $f’(x)&#x3D;\lambda$</p>
+<ul>
+<li>$g(t)&#x3D;f(t)-\lambda t$</li>
+<li>g’(a) &lt; 0 , g’(b) &gt; 0,所以 分别存在$g(t_1) &lt; g(a),g(t_2) &lt; g(b)$, 也就是存在点 小于左端点，存在点小于右端点</li>
+<li>所以在极小值点x（4.16可达到）， g’(x)&#x3D;0,从而可以取到</li>
+<li>而这个性质，并没有要求导函数连续，只需要f处处可微</li>
+<li>推论 f在<code>[a,b]</code>上可微，那么f’在<code>[a,b]</code>上便不能有<code>简单间断</code>, <ul>
+<li>但是 f’很可能有第二类间断</li>
+</ul>
+</li>
+</ul>
+<h3 id="L’Hospital-法则-rule"><a href="#L’Hospital-法则-rule" class="headerlink" title="L’Hospital 法则 rule"></a>L’Hospital 法则 rule</h3><p>洛必达法则, 在求极限时时常用到</p>
+<p>5.13 假设是函数f和g在(a,b)内可微，而且对于所有$x\in(a,b),g’(x)\neq 0$,这里 $-\infty \le a &lt; b \le \infty$ </p>
+<ul>
+<li>已知 $x\to a$时, $\frac{f’(x)}{g’(x)}\to A$</li>
+<li>如果$x\to a$时, $f(x)\to 0,g(x)\to 0$</li>
+<li>那么 $x\to a$时, $\frac{f(x)}{g(x)}\to A$</li>
+<li>也就是 在某点，函数导数之比有极限，且原函数均趋于0,那么原函数之比也趋于这个极限<ul>
+<li>对于 原函数 均趋于无穷时，也有这个</li>
+</ul>
+</li>
+<li>proof, 证明思路: <ul>
+<li>任意q_1满足 A &lt; q_1，能找到c_1, 使得所有x满足  a &lt; x &lt; c_1 有 f(x)&#x2F;g(x) &lt; q_1, 这里通过5.9找存在点</li>
+<li>从另一侧 , q_2 &lt; A,也能 a &lt; x &lt; c_2 使得 q_2 &lt; f(x)&#x2F;g(x)</li>
+<li>从而 可以控制 x与a的距离 来 控制 f(x)&#x2F;g(x)与A的距离，也就是趋于A</li>
+</ul>
+</li>
+</ul>
+<h3 id="高阶导数-Derivatives-of-higher-order"><a href="#高阶导数-Derivatives-of-higher-order" class="headerlink" title="高阶导数 Derivatives of higher order"></a>高阶导数 Derivatives of higher order</h3><p>5.14 导数本身是一种函数，直接导数定义为1阶导数，n阶导数是对于n-1阶导数的 求导函数，</p>
+<ul>
+<li>需要注意 求的时候，需要 上一阶在那一点可微</li>
+<li>记作 $f^{(n)}$</li>
+</ul>
+<h3 id="Taylor定理-Taylor’s-theorem"><a href="#Taylor定理-Taylor’s-theorem" class="headerlink" title="Taylor定理 Taylor’s theorem"></a>Taylor定理 Taylor’s theorem</h3><h2 id="5-15-suppose-f-is-a-real-function-on-a-b-n是正整数-f-n-1-在-a-b-上连续，-f-n-在-a-b-出处存在-alpha-beta-在-a-b-是不同的点-P-t-sum-k-0-n-1-frac-f-k-alpha-k-t-alpha-k-那么存在处于-alpha-beta-之间的点x-f-beta-P-beta-frac-f-n-x-n-beta-alpha-n"><a href="#5-15-suppose-f-is-a-real-function-on-a-b-n是正整数-f-n-1-在-a-b-上连续，-f-n-在-a-b-出处存在-alpha-beta-在-a-b-是不同的点-P-t-sum-k-0-n-1-frac-f-k-alpha-k-t-alpha-k-那么存在处于-alpha-beta-之间的点x-f-beta-P-beta-frac-f-n-x-n-beta-alpha-n" class="headerlink" title="5.15 suppose f is a real function on [a,b], n是正整数, $f^{(n-1)}$在$[a,b]$上连续， $f^{(n)}$在$(a,b)$出处存在,$\alpha,\beta$在$[a,b]$是不同的点- $P(t)&#x3D;\sum_{k&#x3D;0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(t-\alpha)^k$- 那么存在处于$\alpha,\beta$之间的点x, $f(\beta)&#x3D;P(\beta)+\frac{f^{(n)}(x)}{n!}(\beta-\alpha)^n$ &lt;—要证明- n&#x3D;1时是中值定理- 说明f能被 n-1次多项式逼近- 如果知道 $|f^{(n)}(x)|$上界，还能做误差估计"></a>5.15 suppose f is a real function on <code>[a,b]</code>, n是正整数, $f^{(n-1)}$在$[a,b]$上连续， $f^{(n)}$在$(a,b)$出处存在,$\alpha,\beta$在$[a,b]$是不同的点<br>- $P(t)&#x3D;\sum_{k&#x3D;0}^{n-1} \frac{f^{(k)}(\alpha)}{k!}(t-\alpha)^k$<br>- 那么存在处于$\alpha,\beta$之间的点x, $f(\beta)&#x3D;P(\beta)+\frac{f^{(n)}(x)}{n!}(\beta-\alpha)^n$ &lt;—要证明<br>- n&#x3D;1时是中值定理<br>- 说明f能被 n-1次多项式逼近<br>- 如果知道 $|f^{(n)}(x)|$上界，还能做误差估计</h2><ul>
+<li>令$M&#x3D;\frac{f(\beta)-P(\beta)}{(\beta-\alpha)^n}$</li>
+<li>令$g(t)&#x3D;f(t)-P(t)-M(t-\alpha)^n$<ul>
+<li>$g^{(n)}(t)&#x3D;f^{(n)}(t)-n!M$</li>
+<li>这里 如果有x $g^{(n)}(x)&#x3D;0$,那么 $M&#x3D;\frac{f^{(n)}(x)}{n!}$, 再根据M的令，可以证明 上面要证明的存在性</li>
+<li>根据M定义，带入显然$g(\beta)&#x3D;0$</li>
+<li>根据P的定义，$g^{(m&#x3D;0\cdots n-1)}(\alpha)&#x3D;(f^{(m)}-P^{(m)})(x) - M((x-\alpha)^n)^{(m)} |_{x&#x3D;\alpha}$<ul>
+<li>$&#x3D;0-0&#x3D;0$</li>
+</ul>
+</li>
+<li>这里之间 ，因为不知道$\alpha,\beta$大小</li>
+<li>$\alpha,\beta$之间存在点$x_1,g’(x_1)&#x3D;0$</li>
+<li>$\alpha,x_1$之间存在点$x_2,g^{(2)}(x_2)&#x3D;0$</li>
+<li>如此</li>
+<li>$\alpha,x_{n-1}$之间存在点$x_n,g^{(n)}(x_n)&#x3D;0$</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量值函数的微分法-Differentiation-of-vector-valued-functions"><a href="#向量值函数的微分法-Differentiation-of-vector-valued-functions" class="headerlink" title="向量值函数的微分法 Differentiation of vector-valued functions"></a>向量值函数的微分法 Differentiation of vector-valued functions</h3><p>5.16 考虑f是在<code>[a,b]</code>上的复值函数</p>
+<ul>
+<li>5.1 导数定义一样</li>
+<li>5.2 导数存在 则连续 也类似</li>
+<li>5.3 导函数 四则运算的 也一样</li>
+<li>$f_1,f_2$分别是$f$的实部和虚部<ul>
+<li>$f(t)&#x3D;f_1(t)+f_2(t)$</li>
+<li>f在点x可微，当且仅当 $f_1,f_2$ 可微</li>
+<li>实值的极限是控制距离&#x2F;半径，复数里也是控制 半径，或者范数norm</li>
+</ul>
+</li>
+<li>更一般的，$f$把$[a,b]$映入into $\mathbb{R}^k$<ul>
+<li>5.1 同样定义$f’(x)$, 但注意$f’(x)$不是实数，而是$\mathbb{R}^k$中的一个点<ul>
+<li>$\lim_{t\to x} |\frac{f(t)-f(x)}{t-x}-f’(x)|&#x3D;0$, 这里的绝对值符号 用的是norm 范数</li>
+</ul>
+</li>
+<li>$f’&#x3D;(f’_1,\cdots,f’_k)$那么f可微，当且仅当 所有$f_i$可微</li>
+<li>5.2 存在连续也类似</li>
+<li>5.3 四则运算，其中函数的乘积 用内积替换，再多个数乘</li>
+</ul>
+</li>
+<li>而者也有 不满足 的 例如 中值定理，L’Hospital</li>
+</ul>
+<p>5.17 中值定理失效例子 $f(x)&#x3D;e^{ix}&#x3D;\cos x+i\sin x$</p>
+<ul>
+<li>作为复指数幂的定义</li>
+<li>$f(2\pi)-f(0)&#x3D;1-1&#x3D;0$<ul>
+<li>$f’(x)&#x3D;ie^{ix}$</li>
+<li>$|f’(x)|&#x3D;1$ 范数</li>
+<li>所以中值定理失效<ul>
+<li>回顾中值定理，的感觉是构造函数 两端&#x3D;0，中间连续可取到，而极值点的导数&#x3D;0,另外，极值点的导数&#x3D;0是通过，点左右导数 一侧 &gt;&#x3D;0, 另一侧 &lt;&#x3D;0</li>
+<li>而这里，值在复数上连续，首先没有所谓的极值点。</li>
+<li>这种甚至在3维中可以画图，正好输入是实数轴，复平面垂直实轴，看起来像弹簧的形状，而变换的感觉就是物理中绳子挂着小球转圈，绳子给小球的向心拉力，让小球做圆周运动，所以等大向心</li>
+<li>$(f(a)-f(b))&#x2F;(a-b)$ 如果要看到空间中,向一条直直向量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>5.18 L’Hospital失效例子</p>
+<ul>
+<li>$(0,1)$, $f(x)&#x3D;x,g(x)&#x3D;x+x^2e^{i&#x2F;x^2}$</li>
+<li>$\lim_{x\to 0} \frac{f(x)}{g(x)}&#x3D;1$</li>
+<li>$\lim_{x\to 0} \frac{f’(x)}{g’(x)}&#x3D;0$ , $g’(x)_{x\to 0}\neq 0$</li>
+</ul>
+<p>5.19 $f: [a,b] \mapsto\mathbb{R}^k$ 连续映射, $(a,b)$内可微</p>
+<ul>
+<li>存在$x \in (a,b)$ , $|f(b)-f(a)|\le (b-a)|f’(x)|$</li>
+<li>proof $z&#x3D;f(b)-f(a)$<ul>
+<li>令$\phi(t)&#x3D;z \cdot f(t), a\le t\le b$, 这里 定义时用的 向量z 与 向量f(t)的点积</li>
+<li>这样$\phi(t)$是$[a,b]$上 连续的实值函数</li>
+<li>根据中值定理 存在 $\phi(b)-\phi(a)&#x3D;(b-a)\phi’(x)&#x3D;(b-a) z \cdot f’(x)$<ul>
+<li>另一方面$\phi(b)-\phi(a)&#x3D;z\cdot f(b)-z\cdot f(a)&#x3D;z \cdot(f(b)-f(a))&#x3D;z\cdot z&#x3D;|z|^2$</li>
+<li>$|z|^2&#x3D;(b-a)z\cdot f’(x)\le (b-a) |z| |f’(x)|$, 使用 Schwarz不等式</li>
+<li>证毕</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Riemann-Stieltjes-积分integral"><a href="#Riemann-Stieltjes-积分integral" class="headerlink" title="Riemann-Stieltjes 积分integral"></a>Riemann-Stieltjes 积分integral</h2><p>先讨论区间上实值函数的积分，</p>
+<ul>
+<li>后面推广到区间上的复值和向量值函数的积分</li>
+<li>10～11章 再讨论在不是区间上的积分</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/" rel="tag"># 数学分析</a>
+              <a href="/Math/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/" rel="tag"># 微积分</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_4/" rel="prev" title="Walter Rudin 数学分析原理 4 连续性">
+                  <i class="fa fa-chevron-left"></i> Walter Rudin 数学分析原理 4 连续性
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/Principles_of_Mathematical_Analysis_6/" rel="next" title="Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分">
+                  Walter Rudin 数学分析原理 6 Riemann-Stieltjes积分 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

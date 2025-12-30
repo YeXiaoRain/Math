@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数论基础 一 整数的可除性">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/number_theory_1/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.620Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数论基础">
+<meta property="article:tag" content="辗转相除">
+<meta property="article:tag" content="gcd">
+<meta property="article:tag" content="lcm">
+<meta property="article:tag" content="归纳法">
+<meta property="article:tag" content="exgcd">
+<meta property="article:tag" content="Beatty’s theorem">
+<meta property="article:tag" content="Legendre’s formula">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/number_theory_1/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/number_theory_1/","path":"number_theory_1/","title":"数论基础 一 整数的可除性"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数论基础 一 整数的可除性 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B4%E9%99%A4%EF%BC%8C%E5%B8%A6%E4%BD%99%E6%95%B0%E9%99%A4%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">整除，带余数除法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0-%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">最大公约数,最小公倍数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95-Euclid-%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">辗转相除法, Euclid 算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E6%AC%A1%E4%B8%8D%E5%AE%9A%E6%96%B9%E7%A8%8B-ax-by-c"><span class="nav-number">4.</span> <span class="nav-text">一次不定方程 $ax+by&#x3D;c$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-x-x"><span class="nav-number">5.</span> <span class="nav-text">函数[x],{x}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%9C%89%E6%97%A0%E7%A9%B7%E5%A4%9A%E5%BD%A2%E5%A6%824m-3%E7%9A%84%E7%B4%A0%E6%95%B0%EF%BC%8C%E6%9C%89%E6%97%A0%E7%A9%B7%E5%A4%9A%E5%BD%A2%E5%A6%826m-5%E7%9A%84%E7%B4%A0%E6%95%B0"><span class="nav-number">6.1.</span> <span class="nav-text">8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-1"><span class="nav-number">6.2.</span> <span class="nav-text">19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-%E8%AF%81%E6%98%8E-frac-2m-2n-m-n-m-n-%E6%98%AF%E6%95%B4%E6%95%B0"><span class="nav-number">6.3.</span> <span class="nav-text">27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-k-%E4%B8%BA%E6%AD%A3%E6%95%B4%E6%95%B0-n-%E5%8F%AF%E4%BB%A5%E5%94%AF%E4%B8%80%E8%A1%A8%E7%A4%BA%E6%88%90-n-lm-k-%E5%85%B6%E4%B8%AD-l-%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95-k-%E6%AC%A1%E6%96%B9%E5%9B%A0%E5%AD%90"><span class="nav-number">6.4.</span> <span class="nav-text">28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-Beatty%E5%AE%9A%E7%90%86%EF%BC%8C1926-alpha-beta-0-%E6%95%B0%E5%88%97-alpha-x-alpha-y-%E6%B2%A1%E6%9C%89%E5%85%AC%E5%85%B1%E6%AD%A3%E6%95%B4%E6%95%B0-%E4%B8%94%E7%BB%84%E6%88%90%E5%85%A8%E4%BD%93%E8%87%AA%E7%84%B6%E6%95%B0%E7%9A%84%E5%85%85%E8%A6%81%E6%9D%A1%E4%BB%B6-alpha-beta-%E6%97%A0%E7%90%86%E6%95%B0%E4%B8%94-frac-1-alpha-frac-1-beta-1"><span class="nav-number">6.5.</span> <span class="nav-text">30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/number_theory_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数论基础 一 整数的可除性 | YeXiaoRain's Math">
+      <meta itemprop="description" content="1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数论基础 一 整数的可除性
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-15T00:00:00+08:00">2023-03-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数论基础</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>2.7k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>10 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">1. 整除，带余数除法 2. 最大公约数,最小公倍数 3. 辗转相除法 4.一次不定方程 5. 函数[x], {x}</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="整除，带余数除法"><a href="#整除，带余数除法" class="headerlink" title="整除，带余数除法"></a>整除，带余数除法</h1><p>定义1: $a,b$是整数,$b\ne 0$, 若存在整数$c$使得$a&#x3D;bc$,则$b|a$,否则$b \nmid a$</p>
+<p>性质:</p>
+<ul>
+<li>$b\ne 0$,$c$唯一</li>
+<li>$b|a,a|e \Rightarrow b|e$</li>
+<li>$b\ne 0$,所有的倍数为$0,\pm b,\pm 2b,\pm 3b,\cdots$</li>
+<li>$a\ne 0,b|a \Rightarrow |b| \le |a|$</li>
+<li>$b|a_1,b|a_2 \Rightarrow b|m_1a_1+m_2a_2, (\forall m_1,m_2)$</li>
+</ul>
+<p>定义2: $p &gt; 1$且仅有$1|p,p|p$,则$p$为素数，自然数分为$1$,素数,合数</p>
+<p>定理1: $p | d \Rightarrow p\le \sqrt{|d|}$</p>
+<p>定理2: 素数无穷多个(反正法假设有最大,构造$\prod p_i +1$)</p>
+<p>定理3: $a&gt;1$则$a$可以被表示成多个素数之积 每次最小因子必定素数，递降法</p>
+<p>定理4(带余数除法): $a,b &gt;0$存在唯一一对$(q,r),r\in[0,b)$使得$a&#x3D;qb+r$, 通过对数轴$[kb,(k+1)b)$的切割</p>
+<p>定理5(算术基本定理): $p|ab,p \nmid a \Rightarrow p | b$,其中$p$是质数</p>
+<p>定理5.1(算术基本定理): $p|a_1a_2\cdots$其中$p$是质数,则存在某个$i$让$p | a_i$</p>
+<p>定理6(算术基本定理): $n&gt;1$ $n$有素数的唯一分解(同定理3), 推论$n$的因子的对应质数的幂次不大于$n$中对应质数的幂次</p>
+<h1 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数,最小公倍数"></a>最大公约数,最小公倍数</h1><p>定义3: 对于$a_1,a_2,\cdots a_k$最大的$d$,满足$\forall i, d|a_i$, $d$称作为最大公约数,记作$\gcd(a_1,a_2,\cdots,a_k) &#x3D; d$,当$d&#x3D;1$时称作互素</p>
+<p>定义4: 对于$a_1,a_2,\cdots a_k$最小的$l$,满足$\forall i, a_i|l$, $l$称作为最小公倍数,记作$\mathrm{lcm}(a_1,a_2,\cdots,a_k) &#x3D; l$</p>
+<p>定理7: $b_1,\cdots,b_k$的任意公倍数,都是最小公倍数的倍数,(反证法 $l’&#x3D;kl+r,r\in[1,l)$ 则$r$小于$l$也是公倍数 矛盾)</p>
+<p>推论3: $\mathrm{lcm}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{lcm}(\mathrm{lcm}(a_1,\cdots,a_n),\mathrm{lcm}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
+<p>定理8: $a_1,\cdots,a_k$的任意公共因数一定是它们最大公因数的因数,(反证$d &lt; \mathrm{lcm}(d_1,d) | a_i$)</p>
+<p>推论4: $\mathrm{gcd}(a_1,\cdots,a_n,b_1,\cdots,b_m) &#x3D; \mathrm{gcd}(\mathrm{gcd}(a_1,\cdots,a_n),\mathrm{gcd}(b_1,\cdots,b_m))$, (通过左右互为倍数证明)</p>
+<p>定理9: $m &gt; 0, \mathrm{lcm}(mb_1,mb_2)&#x3D; m \cdot \mathrm{lcm}(b_1,b_2)$, 同样是左右互为倍数来证明</p>
+<p>推论5: $d|b_1,d|b_2,\mathrm{lcm}(\frac{b_1}{d},\frac{b_2}{d})&#x3D;\frac{1}{d}\mathrm{lcm}(b_1,b_2)$</p>
+<p>定理10: $m&gt;0,\mathrm{gcd}(mb_1,mb_2)&#x3D; m \cdot \mathrm{gcd}(b_1,b_2)$</p>
+<p>推论6: $d|b_1,d|b_2,\mathrm{gcd}(\frac{b_1}{d},\frac{b_2}{d})&#x3D;\frac{1}{d}\mathrm{gcd}(b_1,b_2)$</p>
+<p>定理11: $\mathrm{gcd}(a,b)\mathrm{lcm}(a,b)&#x3D;ab$, 直接拆成质数表示最好证明</p>
+<p>定理12(辗转相除法的基础): $a,b,r$不全为$0$,则$a&#x3D;qb+r,r\in[0,b)$则$\mathrm{gcd}(a,b)&#x3D;\mathrm{gcd}(b,r)$, (通过任取因数左右互推证明), 推论$\mathrm{gcd}(a,b) | (ax+by)$</p>
+<p>定理13: $a,b$不全为$0$, $(x_0,y_0)$让$ax+by$取到最小正整数, 则$\mathrm{gcd}(a,b) &#x3D; ax_0+by_0$, 又是两侧互为倍数的证明, </p>
+<p>推论7: 上面证明了总存在$x_0,y_0$让$ax+by$取到$\mathrm{gcd}(a,b)$</p>
+<p>定理14: $\mathrm{gcd}(a,c)&#x3D;1$则$\mathrm{gcd}(ab,c)&#x3D;\mathrm{gcd}(b,c)$ 把右侧最大公约数拆出来证明</p>
+<p>推论8: $\mathrm{gcd}(a,b)&#x3D;1 \Rightarrow \mathrm{gcd}(ab,d)&#x3D;\mathrm{gcd}(a,d)\mathrm{gcd}(b,d)$，把右侧最大公约数拆出来证明</p>
+<p>定理15: $\mathrm{gcd}(a,c)&#x3D;1,c|ab \Rightarrow c|b$, 用定理14</p>
+<h1 id="辗转相除法-Euclid-算法"><a href="#辗转相除法-Euclid-算法" class="headerlink" title="辗转相除法, Euclid 算法"></a>辗转相除法, Euclid 算法</h1><p>就是基于定理12不断下降</p>
+<p>$(P_1,Q_1)&#x3D;(1,q_1), P_1a-Q_1b&#x3D;(-1)^{1-1}r_1$, 已知$r_i &#x3D; q_{i+2}r_{i+1}+r_{i+2}$</p>
+<p>希望有 $P_ia-Q_ib&#x3D;(-1)^{i-1}r_i$</p>
+<p>直接展开</p>
+<p>$P_ia-Q_ib&#x3D;(-1)^{i-1}r_i &#x3D; (-1)^{i-1} (q_{i+2}r_{i+1}+r_{i+2})$</p>
+<p>$&#x3D; (-1)^{i-1} (q_{i+2}(P_{i+1}a-Q_{i+1}b)(-1)^i+(P_{i+2}a-Q_{i+2}b)(-1)^{i+1})$</p>
+<p>$&#x3D; (P_{i+2}-q_{i+2}P_{i+1})a-(Q_{i+2}-q_{i+1}Q_{i+1})b$</p>
+<p>所以对应相等</p>
+<p>$P_i &#x3D; q_iP_{i-1}+P_{i-2}$</p>
+<p>$Q_i &#x3D; q_iQ_{i-1}+Q_{i-2}$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 返回的 [x,y,z] 满足 a*x+b*y=z=gcd(a,b)</span></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function">array&lt;T,3&gt; <span class="title">exgcd</span><span class="params">(T a,T b)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(b==<span class="number">0</span>) <span class="keyword">return</span> &#123;<span class="number">1</span>,<span class="number">0</span>,a&#125;;</span><br><span class="line">  <span class="keyword">auto</span> [x,y,z] = <span class="built_in">exgcd</span>(b,a%b);</span><br><span class="line">  <span class="keyword">return</span> &#123;y,x-(a/b)*y,z&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="type">int</span> a=<span class="number">31</span>,b=<span class="number">7</span>;</span><br><span class="line">  <span class="keyword">auto</span> [x,y,z] = <span class="built_in">exgcd</span>(a,b);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%d*%d+%d*%d=%d\n&quot;</span>,a,x,b,y,z);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注: 这里的$(x,y)$不是唯一的,因为每当$x$增加$\frac{b}{\mathrm{gcd}(a,b)}$,对应$y$同时减少$\frac{a}{\mathrm{gcd}(a,b)}$即可,等式依然成立</p>
+<h1 id="一次不定方程-ax-by-c"><a href="#一次不定方程-ax-by-c" class="headerlink" title="一次不定方程 $ax+by&#x3D;c$"></a>一次不定方程 $ax+by&#x3D;c$</h1><p>定理17 $\gcd(a,b) &#x3D; c$则有解,$(x_0,y_0)$是一组解则$(x_0+\frac{b}{\mathrm{gcd}(a,b)}t,y_0-\frac{a}{\mathrm{gcd}(a,b)}t)$是所有解</p>
+<p>推论9: 和$\frac{a}{\mathrm{gcd}(a,b)}x+\frac{b}{\mathrm{gcd}(a,b)}y&#x3D;\frac{c}{\mathrm{gcd}(a,b)}$ 同解</p>
+<h1 id="函数-x-x"><a href="#函数-x-x" class="headerlink" title="函数[x],{x}"></a>函数<code>[x]</code>,<code>&#123;x&#125;</code></h1><p>设$x$为任意实数, $[x] \le x$表示不超过$x$的最大整数,$\lbrace x\rbrace &#x3D; x-[x]$</p>
+<p>性质</p>
+<ul>
+<li>$x\ge y \Rightarrow [x]\ge [y]$</li>
+<li>$x-1&lt;[x]\le x, 0\le \lbrace x \rbrace &lt; 1$</li>
+<li>$n$为整数,$[n+x]&#x3D;n+[x],\lbrace n+x \rbrace &#x3D; \lbrace x \rbrace$</li>
+</ul>
+<p>引理1: 实数$x &gt; 0$,$a$正整数,$[\frac{x}{a}]$个不超过$x$且是$a$的倍数的整数, (找a的最大整数倍)</p>
+<p>定理18: 在$n!$的标准分解式中,素数$p\le n$的指数$\displaystyle  &#x3D; [\frac{n}{p}]+[\frac{n}{p^2}]+\cdots&#x3D;\sum_{r&#x3D;1}^{\infty} [\frac{n}{p^r}]$</p>
+<p>推论10(Legendre’s formula): $\displaystyle n!&#x3D;\prod_{p\le n} p^{\sum_{r&#x3D;1}^{\infty} [\frac{n}{p^r}]}$</p>
+<p>定理19: $\prod_{i&#x3D;1}^{k} \frac{a+i}{i}$ 必定是整数, (一个是这就是$\binom{a+k}{k}$,用上面相关的就是直接讨论$\le k$质因子的幂次,$[\frac{a+k}{p^r}]\ge [\frac{a}{p^r}]+[\frac{k}{p^r}]$)</p>
+<p>推论11: $n&#x3D;s_1+s_2+\cdots+s_k, \frac{n!}{s_1!s_2!\cdots s_k!}$是整数, (一样)</p>
+<p>定理20: $p$为素数,则任意$x$有$p|x^p-x$, (归纳$x$,$x&#x3D;0$时成立,$(x+1)^p-(x+1) &#x3D; x^p-x + \binom{p}{\cdots}(\cdots)$</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数"><a href="#8-有无穷多形如4m-3的素数，有无穷多形如6m-5的素数" class="headerlink" title="8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数"></a>8. 有无穷多形如4m+3的素数，有无穷多形如6m+5的素数</h2><p>和证明素数无限多一样的想法，如果有限个则全部乘起来，</p>
+<p>4m+3,讨论末尾是+3还是+1,如果是+3,则再+4,如果是+1,则再+2, 注意到得到的数是4k+3形式的,又和已知的都互质，但是如果分解不可能全分解成4k+1的，因子它会分解出一个4k+3形式的质数</p>
+<p>6m+5,讨论末尾是+5还是+1,如果是+5,则再+6,如果是+1,则再+4, 一样的(6m+1)形式的乘积也得不到6m+5,</p>
+<h2 id="19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-1"><a href="#19-2-nmid-m-Rightarrow-gcd-2-m-1-2-n-1-1" class="headerlink" title="19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$"></a>19. $2 \nmid m \Rightarrow \gcd(2^m-1,2^n+1)&#x3D;1$</h2><p>令$d &#x3D; gcd(2^m-1,2^n+1)$, 若$d \ne 1$,则$d &#x3D; 2k+1$</p>
+<p>$2^m\equiv 1 \pmod d$</p>
+<p>$2^n \equiv -1 \pmod d$</p>
+<p>$2^{\mathrm{gcd}(m,n)} &#x3D; 2^{\mathrm{gcd}(m,2n)} &#x3D; 2^{xm+2ny} &#x3D; (2^{m})^{x}(2^{2n})^y \equiv 1^x1^y \equiv 1 \pmod d$</p>
+<p>$2^n &#x3D; (2^{\mathrm{gcd}(m,n)})^{\frac{n}{\mathrm{gcd}(m,n)}} \equiv 1^{\frac{n}{\mathrm{gcd}(m,n)}}\equiv 1 \pmod d$</p>
+<p>对于$d&#x3D;2k+1$矛盾</p>
+<h2 id="27-证明-frac-2m-2n-m-n-m-n-是整数"><a href="#27-证明-frac-2m-2n-m-n-m-n-是整数" class="headerlink" title="27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数"></a>27. 证明$\frac{(2m)!(2n)!}{m!n!(m+n)!}$是整数</h2><p>还是要用到Legendre’s formula, 也就是要证明$v_p((2m)!(2n)!)-v_p(m!n!(m+n)!)\ge 0$ for any prime $p$, </p>
+<p>也就是要证明 $[2x]+[2y] \ge [x]+[y]+[x+y]$</p>
+<p>$[2([x]+\lbrace x\rbrace)]+[2([y]+\lbrace y\rbrace)] \ge [[x]+\lbrace x\rbrace]+[[y]+\lbrace y\rbrace]+[[x]+\lbrace x\rbrace+[y]+\lbrace y\rbrace]$</p>
+<p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace]+[\lbrace y\rbrace]+[\lbrace x\rbrace+\lbrace y\rbrace]$</p>
+<p>$[2\lbrace x\rbrace]+[2\lbrace y\rbrace] \ge [\lbrace x\rbrace+\lbrace y\rbrace]$, 右侧取$0$则左侧始终成立,右侧取$1$,至少一个$\ge \frac{1}{2}$, 同样成立</p>
+<h2 id="28-k-为正整数-n-可以唯一表示成-n-lm-k-其中-l-没有任何-k-次方因子"><a href="#28-k-为正整数-n-可以唯一表示成-n-lm-k-其中-l-没有任何-k-次方因子" class="headerlink" title="28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子"></a>28. $k$为正整数,$n$可以唯一表示成$n&#x3D;lm^k$,其中$l$没有任何$k$次方因子</h2><p>$p$的幂次$w$唯一表示 $w &#x3D; qk+r$</p>
+<p>28.2 实数$A &gt; 0$则$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; [A]$, 其中$\sum’$表示无$k$次方因子的$z$求和</p>
+<p>首先$A&#x3D;zm^k$ 才会让左侧内部 $\displaystyle \sqrt[k]{\frac{A}{z}}$为正整数, 因此$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{[A]}{z}}]$ (A与它的整部之间不会有其它的值让整个为正整数, 或者说对于给定$k$, 它的整部不变时对应的A的区间的端点都是整数,且除了最初的$z$,后续的都是)</p>
+<p>$A&#x3D;0$时显然, 所以只需要证明对于 任意正整数$A$, 有$\displaystyle \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] &#x3D; A$</p>
+<p>对$A$进行归纳,</p>
+<p>当$A &#x3D; 1$时, 左侧$&#x3D;1&#x3D;$右侧, 成立</p>
+<p>若$A+1$ 的质数最高幂次 $&lt; k$, 对于$z \le A$时有$\displaystyle [\sqrt[k]{\frac{A}{z}}]&#x3D;[\sqrt[k]{\frac{A+1}{z}}]$, (和上面把有理数变整数一样的原理)</p>
+<p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A+1}{A+1}}] &#x3D; \sum_{1\le z \le A}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{A+1}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
+<p>若$A+1$ 的质数最高幂次 $\ge k$, 则$A+1 &#x3D; z_0m^k$(唯一表示),且$z_0 &lt; A$</p>
+<p>对于$z_0$有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]+1&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$<br>对于其它$z \ne z_0, z \le A$,有 $\displaystyle [\sqrt[k]{\frac{A}{z_0}}]&#x3D;[\sqrt[k]{\frac{A+1}{z_0}}]$</p>
+<p>$\displaystyle A+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A}{z}}] + [ \sqrt[k]{\frac{A}{z_0}}]+1 &#x3D; \sum_{1\le z \le A, z\ne z_0}’ [ \sqrt[k]{\frac{A+1}{z}}] + [ \sqrt[k]{\frac{A+1}{z_0}}] &#x3D; \sum_{1\le z \le A+1}’ [ \sqrt[k]{\frac{A+1}{z}}]$</p>
+<h2 id="30-Beatty定理，1926-alpha-beta-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-1"><a href="#30-Beatty定理，1926-alpha-beta-0-数列-alpha-x-alpha-y-没有公共正整数-且组成全体自然数的充要条件-alpha-beta-无理数且-frac-1-alpha-frac-1-beta-1" class="headerlink" title="30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$"></a>30(Beatty定理，1926). $\alpha,\beta &gt; 0$ 数列$[\alpha x],[\alpha y]$ 没有公共正整数 且组成全体自然数的充要条件$\alpha,\beta$无理数且$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</h2><p><a target="_blank" rel="noopener" href="https://proofwiki.org/wiki/Beatty%27s_Theorem">https://proofwiki.org/wiki/Beatty%27s_Theorem</a></p>
+<p>$\Leftarrow :$</p>
+<p>反正法: 若存在$k&#x3D;[\alpha x]&#x3D;[\beta y]$</p>
+<p>即$k &lt; \alpha x &lt; k+1,k &lt; \beta y &lt; k+1$</p>
+<p>$k&#x3D;\frac{k}{\alpha} + \frac{k}{\beta} &lt; x+y &lt; \frac{k+1}{\alpha} + \frac{k+1}{\beta} &#x3D; k+1$</p>
+<p>矛盾.</p>
+<p>若有$k$同时无法被表示, 找$[\alpha (x-1)] &lt; k &lt; [\alpha x]$</p>
+<p>即 $\alpha x &gt; k+1,\alpha (x-1) &lt; k$</p>
+<p>$\alpha (x-1) &lt; k &lt; \alpha x-1$</p>
+<p>同理 $\beta (y-1) &lt; k h&lt; \beta y-1$</p>
+<p>$x+y-2&#x3D;x-1+y-1 &lt; k &lt; x-\frac{1}{\alpha} + y-\frac{1}{\beta} &#x3D; x+y-1$</p>
+<p>矛盾.</p>
+<p>证必</p>
+<p>$\Rightarrow :$</p>
+<p>设$\alpha &lt; \frac{p}{q}$则,$[\alpha] &lt; [2\alpha] &lt; \cdots &lt; [q\alpha] &lt; p$ 因为要两两不等所以$[1,p-1]$ 中至少(小于关系并没有描绘精确程度)出现$q$个</p>
+<p>所以$[1,p-1]$中至多有$p-1-q$个在是$[\beta y]$中,$(p-q)\beta$ 一定在$[1,p-1]$外</p>
+<p>那么$(p-q)\beta \ge [(p-q)\beta] \ge p$ 即$\beta \ge \frac{p}{p-q}$</p>
+<p>那么极限保号$\displaystyle \beta \ge \lim_{\frac{p}{q}\to \alpha} \frac{p}{p-q}&#x3D;\lim_{\frac{p}{q}\to \alpha} \frac{\frac{p}{q}}{\frac{p}{q}-1} &#x3D; \frac{\alpha}{\alpha-1}$<br>从另一侧$\alpha &gt; \frac{p}{q}$, 极限也会得到$\beta \le \frac{\alpha}{\alpha-1}$, 于是有$\frac{1}{\alpha}+\frac{1}{\beta}&#x3D;1$</p>
+<p>证无理数: $[q\frac{p}{q}]&#x3D;p&#x3D;[(p-q)\frac{p}{p-q}]$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="tag"># 数论基础</a>
+              <a href="/Math/tags/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4/" rel="tag"># 辗转相除</a>
+              <a href="/Math/tags/gcd/" rel="tag"># gcd</a>
+              <a href="/Math/tags/lcm/" rel="tag"># lcm</a>
+              <a href="/Math/tags/%E5%BD%92%E7%BA%B3%E6%B3%95/" rel="tag"># 归纳法</a>
+              <a href="/Math/tags/exgcd/" rel="tag"># exgcd</a>
+              <a href="/Math/tags/Beatty%E2%80%99s-theorem/" rel="tag"># Beatty’s theorem</a>
+              <a href="/Math/tags/Legendre%E2%80%99s-formula/" rel="tag"># Legendre’s formula</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/Fermat_s_two_square_theorem/" rel="prev" title="Fermat's two square theorem">
+                  <i class="fa fa-chevron-left"></i> Fermat's two square theorem
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/number_theory_2/" rel="next" title="数论基础 二 数论函数">
+                  数论基础 二 数论函数 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

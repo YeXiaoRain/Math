@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="来自2009年初中数学竞赛的一道题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求手算出x^3+101&#x3D;y^2的正整数解">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="来自2009年初中数学竞赛的一道题">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-08-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.613Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="Mordell_s_equation">
+<meta property="article:tag" content="数论">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/","path":"2024-08-14-Mordell_equation/","title":"求手算出x^3+101=y^2的正整数解"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>求手算出x^3+101=y^2的正整数解 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E4%B8%8D%E7%AE%97%E6%88%90%E5%8A%9F%E7%9A%84%E5%B0%9D%E8%AF%95"><span class="nav-number">1.1.</span> <span class="nav-text">一些不算成功的尝试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A5%E8%87%AAmath-stackexchange%E7%9A%84%E6%8F%90%E9%80%9F%E6%96%B9%E6%A1%88"><span class="nav-number">1.2.</span> <span class="nav-text">来自math.stackexchange的提速方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3"><span class="nav-number">1.3.</span> <span class="nav-text">相关</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/2024-08-14-Mordell_equation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="求手算出x^3+101=y^2的正整数解 | YeXiaoRain's Math">
+      <meta itemprop="description" content="来自2009年初中数学竞赛的一道题">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          求手算出x^3+101=y^2的正整数解
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2024-08-14 00:00:00" itemprop="dateCreated datePublished" datetime="2024-08-14T00:00:00+08:00">2024-08-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>516</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">来自2009年初中数学竞赛的一道题</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>$x^3+101&#x3D;y^2$ 求手算一组正整数解</p>
+<p>这道题目来自2009年初中数学竞赛的一道题</p>
+<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/123254978.html">https://zhidao.baidu.com/question/123254978.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/114242326.html">https://zhidao.baidu.com/question/114242326.html</a></p>
+<hr>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/664003966">https://www.zhihu.com/question/664003966</a></p>
+<p><a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/4957099">https://math.stackexchange.com/questions/4957099</a></p>
+<h2 id="一些不算成功的尝试"><a href="#一些不算成功的尝试" class="headerlink" title="一些不算成功的尝试"></a>一些不算成功的尝试</h2><p>在场上 有尝试做一些mod,但没有很多，然后以为不会太大，就开始了暴力计算，当然当场是没有做出这个题目</p>
+<hr>
+<p>当时赛后 问了汀舅，汀舅给的方案是</p>
+<p>做了更多的mod,进一步缩小枚举范围，但没有特别如意</p>
+<hr>
+<p>最近在整理一些东西，突然又看到了这个，自己尝试了一下</p>
+<p>通过 $x^3+1 &#x3D; (x+1)(x^2-x+1)&#x3D;(y-10)(y+10)$ 的变形，让我对于2相关的 幂次很感兴趣</p>
+<p>比较容易的得到了 $x\equiv 3\pmod{16}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{16}, y\equiv 2 \pmod{4}$</p>
+<p>这对于知道答案的来说，的确已经可以暴力手动计算了，但对于不知道答案的来说，其实不知道自己会需要枚举多少个</p>
+<h2 id="来自math-stackexchange的提速方案"><a href="#来自math-stackexchange的提速方案" class="headerlink" title="来自math.stackexchange的提速方案"></a>来自math.stackexchange的提速方案</h2><p>$x^3+101&#x3D;y^2\pmod 9$</p>
+<p>容易得到 $x\equiv 2 \pmod{3}$,  计算量也不大，因为$x$侧只用关心 $\mod 3$, $y$侧考虑$0\to8$</p>
+<hr>
+<p>然后 考察</p>
+<p>$x^3+101&#x3D;y^2\pmod 8$</p>
+<p>可以得到 $x\equiv 3\pmod{8}, y\equiv 0 \pmod{4}$ 或 $x\equiv -1\pmod{8}, y\equiv 2 \pmod{4}$</p>
+<hr>
+<p>两者结合可以得到 </p>
+<p>$x\equiv -1 \pmod{24}, y \equiv 2 \pmod{4}$</p>
+<p>$x\equiv 11 \pmod{24}, y \equiv 0 \pmod{4}$</p>
+<hr>
+<p>$x&#x3D;24a-1,y&#x3D;4b+2$ 通过测试$\pmod{16}$可以得到$a$是偶数,$x&#x3D;48c-1$, 再尝试$\pmod{32}$可以得到$x&#x3D;96d-1$</p>
+<p>$x&#x3D;24a+11,y&#x3D;4b$ 通过测试$\pmod{16}$可以得到$a$是奇数$x&#x3D;48c+35$ ??TODO</p>
+<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27159180">知乎 椭圆曲线的一些基础性质 陆zz</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/491035924">知乎 </a></p>
+<p><a target="_blank" rel="noopener" href="https://hr.userweb.mwn.de/numb/mordell.html">https://hr.userweb.mwn.de/numb/mordell.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://math.stackexchange.com/a/4957401/728591">Travis Willse</a> 大佬说  The following routine in Sage 的结果 看来只有 x&#x3D;-1,和x&#x3D;95两个解</p>
+<p><a target="_blank" rel="noopener" href="https://math.stackexchange.com/a/4958295/728591">Sayan Dutta</a>  大佬说 这是 Mordell’s equation</p>
+<p><a target="_blank" rel="noopener" href="http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf">http://alpha.math.uga.edu/%7Epete/4400MordellEquation.pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf">https://kconrad.math.uconn.edu/blurbs/gradnumthy/mordelleqn1.pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf">https://www.math.leidenuniv.nl/%7Eevertsejh//dio2011-diophantine.pdf</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/Mordell-s-equation/" rel="tag"># Mordell_s_equation</a>
+              <a href="/Math/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/MIT_18.06_linear_algebra/" rel="prev" title="MIT18.06线性代数">
+                  <i class="fa fa-chevron-left"></i> MIT18.06线性代数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/newton_identities/" rel="next" title="牛顿恒等式">
+                  牛顿恒等式 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

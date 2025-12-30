@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="前置知识：微积分， 看了下有些结论需要依赖复分析的结果 isbn 9787115543776 优点：  脉络很好，非常喜欢整体性，  缺点：  有习题 无直接的答案，好像也没有答案书 很多专业名词出现时没有对应英文">
+<meta property="og:type" content="article">
+<meta property="og:title" content="普林斯顿 概率论读本">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/the_probability_lifesaver/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="前置知识：微积分， 看了下有些结论需要依赖复分析的结果 isbn 9787115543776 优点：  脉络很好，非常喜欢整体性，  缺点：  有习题 无直接的答案，好像也没有答案书 很多专业名词出现时没有对应英文">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://bkimg.cdn.bcebos.com/pic/0b7b02087bf40ad11e5f5a4e572c11dfa8eccee0?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080">
+<meta property="article:published_time" content="2024-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.622Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="概率论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bkimg.cdn.bcebos.com/pic/0b7b02087bf40ad11e5f5a4e572c11dfa8eccee0?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/the_probability_lifesaver/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/the_probability_lifesaver/","path":"the_probability_lifesaver/","title":"普林斯顿 概率论读本"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>普林斯顿 概率论读本 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E4%B8%80%E8%88%AC%E6%80%A7%E7%90%86%E8%AE%BA"><span class="nav-number">1.</span> <span class="nav-text">第一部分 一般性理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%BC%95%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">1.引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E6%A6%82%E7%8E%87%E5%AE%9A%E5%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2.基本概率定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%AE%A1%E6%95%B0I%EF%BC%9A-%E7%BA%B8%E7%89%8C"><span class="nav-number">1.3.</span> <span class="nav-text">3.计数I： 纸牌</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87%E3%80%81%E7%8B%AC%E7%AB%8B%E6%80%A7%E5%92%8C%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86"><span class="nav-number">1.4.</span> <span class="nav-text">4. 条件概率、独立性和贝叶斯定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%AE%A1%E6%95%B0II-%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86"><span class="nav-number">1.5.</span> <span class="nav-text">5. 计数II: 容斥原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E8%AE%A1%E6%95%B0III%E9%AB%98%E7%AD%89%E7%BB%84%E5%90%88%E5%AD%A6"><span class="nav-number">1.6.</span> <span class="nav-text">6. 计数III高等组合学</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">第二部分 随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">2.1.</span> <span class="nav-text">7. 离散型随机变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F"><span class="nav-number">2.2.</span> <span class="nav-text">8. 连续型随机变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%9C%9F%E6%9C%9B"><span class="nav-number">2.3.</span> <span class="nav-text">9. 工具：期望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%8D%B7%E7%A7%AF%E5%92%8C%E5%8F%98%E9%87%8F%E6%9B%BF%E6%8D%A2"><span class="nav-number">2.4.</span> <span class="nav-text">10. 工具：卷积和变量替换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%B7%A5%E5%85%B7-%E5%BE%AE%E5%88%86%E6%81%92%E7%AD%89%E5%BC%8F"><span class="nav-number">2.5.</span> <span class="nav-text">11. 工具: 微分恒等式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E7%89%B9%E6%AE%8A%E5%88%86%E5%B8%83"><span class="nav-number">3.</span> <span class="nav-text">第三部分 特殊分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E7%A6%BB%E6%95%A3%E5%88%86%E5%B8%83"><span class="nav-number">3.1.</span> <span class="nav-text">12. 离散分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%88%86%E5%B8%83%EF%BC%8C0-1-%E5%88%86%E5%B8%83"><span class="nav-number">3.1.1.</span> <span class="nav-text">伯努利分布，0-1 分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%EF%BC%8Cn%E6%AC%A1%E7%8B%AC%E7%AB%8B0-1%E5%88%86%E5%B8%83"><span class="nav-number">3.1.2.</span> <span class="nav-text">二项分布，n次独立0-1分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%A1%B9%E5%88%86%E5%B8%83"><span class="nav-number">3.1.3.</span> <span class="nav-text">多项分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%A0%E4%BD%95%E5%88%86%E5%B8%83-%E9%87%8D%E5%A4%8D%E5%88%B0%E6%88%90%E5%8A%9F%E7%9A%840-1%E5%88%86%E5%B8%83"><span class="nav-number">3.1.4.</span> <span class="nav-text">几何分布 重复到成功的0-1分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83"><span class="nav-number">3.1.5.</span> <span class="nav-text">负二项分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83-%E5%B7%A8%E5%A4%A7%E9%87%8F%E5%AE%9E%E9%AA%8C%E5%8F%AA%E7%9F%A5%E9%81%93%E6%AC%A1%E6%95%B0%E7%9A%84-%E4%BC%AF%E5%8A%AA%E5%88%A9%E5%88%86%E5%B8%83"><span class="nav-number">3.1.6.</span> <span class="nav-text">泊松分布 巨大量实验只知道次数的 伯努利分布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A6%BB%E6%95%A3%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="nav-number">3.1.7.</span> <span class="nav-text">离散均匀分布</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%EF%BC%9A%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83%E4%B8%8E%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">13. 连续型随机变量：均匀分布与指数分布</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9D%87%E5%8C%80%E5%88%86%E5%B8%83"><span class="nav-number">3.2.1.</span> <span class="nav-text">均匀分布</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-X-x-frac-1-b-a-x-in-a-b-X-sim-Unif-a-b-%E6%A0%87%E5%87%86%E5%8C%96-U-sim-Unif-0-1-X-b-a-U-a-E-U-1-2-Var-U-1-12-E-X-frac-a-b-2-E-X-frac-b-a-2-12"><span class="nav-number">4.</span> <span class="nav-text">$f_X(x)&#x3D;\frac{1}{b-a},x\in [a,b]$- $X\sim Unif(a,b)$- 标准化$U\sim Unif(0,1)$    - $X&#x3D;(b-a)U+a$    - $E[U]&#x3D;1&#x2F;2$    - $Var(U)&#x3D;1&#x2F;12$- $E[X]&#x3D;\frac{a+b}{2}$- $E[X]&#x3D;\frac{(b-a)^2}{12}$
+    </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83"><span class="nav-number">4.0.1.</span> <span class="nav-text">指数分布</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E8%BF%9E%E7%BB%AD%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%EF%BC%9A%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="nav-number">4.1.</span> <span class="nav-text">14. 连续型随机变量：正态分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E4%BC%BD%E9%A9%AC%E5%87%BD%E6%95%B0%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%88%86%E5%B8%83"><span class="nav-number">4.2.</span> <span class="nav-text">15. 伽马函数与相关分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E5%8D%A1%E6%96%B9%E5%88%86%E5%B8%83"><span class="nav-number">4.3.</span> <span class="nav-text">16. 卡方分布</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">第四部分 极限定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%92%8C%E5%A4%A7%E6%95%B0%E5%AE%9A%E5%BE%8B"><span class="nav-number">5.1.</span> <span class="nav-text">17. 不等式和大数定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E6%96%AF%E7%89%B9%E6%9E%97%E5%85%AC%E5%BC%8F"><span class="nav-number">5.2.</span> <span class="nav-text">18. 斯特林公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E7%94%9F%E6%88%90%E5%87%BD%E6%95%B0%E4%B8%8E%E5%8D%B7%E7%A7%AF"><span class="nav-number">5.3.</span> <span class="nav-text">19. 生成函数与卷积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86%E7%9A%84%E8%AF%81%E6%98%8E"><span class="nav-number">5.4.</span> <span class="nav-text">20. 中心极限定理的证明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E5%82%85%E9%87%8C%E5%8F%B6%E5%88%86%E6%9E%90%E4%B8%8E%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86"><span class="nav-number">5.5.</span> <span class="nav-text">21. 傅里叶分析与中心极限定理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E5%85%B6%E5%AE%83%E4%B8%BB%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">第四部分 其它主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C"><span class="nav-number">6.1.</span> <span class="nav-text">22.  假设检验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#z%E6%A3%80%E9%AA%8C-%E7%A8%B3%E5%AE%9A%EF%BC%8C%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86%EF%BC%8C-30%E4%B8%AA%E6%A0%B7%E6%9C%AC%EF%BC%8C-%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%E6%A3%80%E9%AA%8C"><span class="nav-number">6.1.1.</span> <span class="nav-text">z检验 (稳定，中心极限定理， &gt;&#x3D;30个样本， 正态分布检验)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#p%E6%A3%80%E9%AA%8C-%EF%BC%88%E6%88%90%E7%AB%8B%E6%8C%87%E6%A0%87%EF%BC%89"><span class="nav-number">6.1.2.</span> <span class="nav-text">p检验 （成立指标）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#t%E6%A3%80%E9%AA%8C-%EF%BC%88%E9%87%8F%E5%B0%91%EF%BC%8C%E4%B8%8D%E7%9F%A5%E9%81%93%E6%96%B9%E5%B7%AE%EF%BC%89"><span class="nav-number">6.1.3.</span> <span class="nav-text">t检验 （量少，不知道方差）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E9%AA%8C%E6%96%B9%E5%B7%AE"><span class="nav-number">6.1.4.</span> <span class="nav-text">检验方差</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8B%E3%80%81%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E8%BF%87%E7%A8%8B%E5%92%8C%E6%A6%82%E7%8E%87%E8%AE%BA"><span class="nav-number">6.2.</span> <span class="nav-text">23. 差分方程、马尔科夫过程和概率论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95"><span class="nav-number">6.3.</span> <span class="nav-text">24. 最小二乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E5%A9%9A%E5%A7%BB%E7%A7%98%E4%B9%A6%E9%97%AE%E9%A2%98%EF%BC%8C%E8%92%99%E6%8F%90%E9%9C%8D%E5%B0%94%E9%97%AE%E9%A2%98"><span class="nav-number">6.4.</span> <span class="nav-text">25. 婚姻秘书问题，蒙提霍尔问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A2%8E%E7%89%87"><span class="nav-number">7.</span> <span class="nav-text">碎片</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/the_probability_lifesaver/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="普林斯顿 概率论读本 | YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          普林斯顿 概率论读本
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2025-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2025-01-01T00:00:00+08:00">2025-01-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%A6%82%E7%8E%87%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">概率论</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>17k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1:02</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>前置知识：微积分， 看了下有些结论需要依赖复分析的结果</p>
+<p>isbn 9787115543776</p>
+<p>优点：</p>
+<ul>
+<li>脉络很好，非常喜欢整体性，</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>有习题 无直接的答案，好像也没有答案书</li>
+<li>很多专业名词出现时没有对应英文</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="第一部分-一般性理论"><a href="#第一部分-一般性理论" class="headerlink" title="第一部分 一般性理论"></a>第一部分 一般性理论</h2><h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h3><p>生日问题，房间里有多少人才能保证，两人同生日概率 &gt;&#x3D; 50%, 假设365天，如果一个人在一年中出生概率相等（然而似乎统计的现实不是这样，而现实中一个小圈圈可能也有生日聚集性）</p>
+<ul>
+<li>一个直接的错误的 想法是 182.5,</li>
+<li>$&#x3D;\frac{365!}{365^n(365-n)!}$<ul>
+<li>23人时达到 ~50.7%</li>
+<li>30人时达到 ~70.6%</li>
+<li>40人时达到 ~89.1%</li>
+<li>50人时达到 ~97%</li>
+</ul>
+</li>
+<li>d天内分布，大约需要 sqrt{d 2 log 2}个人，使得 同一天发生概率50%</li>
+</ul>
+<p>只要看到乘积就取其对数，巴普洛夫条件反射</p>
+<p>$log p_n&#x3D;\sum_{k&#x3D;0}^{n-1} log(1-\frac{k}{d})&#x3D;\sum_{k&#x3D;0}^{n-1} -\frac{k}{d}&#x3D;-\frac{n(n-1)}{2d}$ 这里用了k远小于d, 等差数列求和</p>
+<p>$n(n-1)&#x3D;2d \log 2$, 继续大数 $n&#x3D;\sqrt{d 2 \log 2}$</p>
+<p>最后是程序暴力模拟检验一下是否严重偏差</p>
+<hr>
+<p>先p成功，1-p失败，后手q成功1-q失败，一人成功时结束游戏，问先手成功的概率</p>
+<ul>
+<li>按次数统计 &#x3D;p+(1-p)(1-q)p+(1-p)^2(1-q)^2p+…..<ul>
+<li>$&#x3D;p\frac{1}{1-(1-p)(1-q)}$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>代回法的例子，感觉核心需要级数收敛，例子 sum Fib_n&#x2F;3^n,  这里用概率论的描述法举例了，但是要注意描述法的一致性</p>
+<p>结尾给了个可以二次下注，且期望恒正的对冲例子</p>
+<h3 id="2-基本概率定律"><a href="#2-基本概率定律" class="headerlink" title="2.基本概率定律"></a>2.基本概率定律</h3><p>罗素悖论表明：依靠直觉来判断该如何使用集合会给我们带来麻烦</p>
+<p>$R&#x3D;${$x|x\not\in x$}</p>
+<p>我们应该意识到，松散定义和非正式论述的危险</p>
+<hr>
+<p>集合论综述，属于，子集，超集，空集，并，交，补集，笛卡尔乘积</p>
+<ul>
+<li>常用集合相等证明方法：互相包含</li>
+<li>这里只讨论可数事件的概率</li>
+</ul>
+<p>开集，闭集</p>
+<hr>
+<p>希望：</p>
+<ul>
+<li>概率$P(A) \in[0,1]$</li>
+<li>$P(结果空间) &#x3D; 1$</li>
+<li>任意多个不相交事件$A_i$, $P(A_i的并)&#x3D;\sum P(A_i)$</li>
+</ul>
+<p>柯尔莫戈洛夫的 概率公理：$\Omega$是一个结果空间,$\Sigma$是一个$\sigma$代数。如果概率函数满足下列条件，那么$(\Omega,\Sigma,Prob)$就是一个概率空间</p>
+<ul>
+<li>若$A\in\Sigma$，那么$Pr(A)$是有定义的，且$0\le Pr(A)\le 1$</li>
+<li>$Pr(\emptyset)&#x3D;0,Pr(\Omega)&#x3D;1$</li>
+<li>{$A_i$}有限个两两互不相交的集合构成的集族，并且每一个集合都是$\Omega$中的元素，那么$Pr_i(\cup A_i)&#x3D;\sum_i Pr(A_i)$</li>
+</ul>
+<p>概率空间有用的规则</p>
+<ul>
+<li>$A\in \Omega$则$Pr(A)+Pr(A^c)&#x3D;1$, 其中$A^c$为补集</li>
+<li>$Pr(A\cup B)&#x3D;Pr(A)+Pr(B)-Pr(A\cap B)$ 这个还可以延伸更多项，从而有容斥原理</li>
+<li>$A\subset B$则 $Pr(A)\le Pr(B)$,以及$Pr(B)&#x3D;Pr(A)+Pr(B\cap A^c)$ 这里注意是 拆出来的部分可能概率为0<ul>
+<li>对上面这条推广，$A_i \subset B$ 有$Pr(\cup A_i)\le Pr(B)$</li>
+</ul>
+</li>
+</ul>
+<p>对于给定的并集，通常希望能把它写成几个互不相交的集合的并</p>
+<hr>
+<p>概率空间和$\sigma$代数</p>
+<p>巴拿赫-塔尔斯基悖论： 利用（不可数的）选择公理</p>
+<ul>
+<li>分球</li>
+<li>$x-y\in Q$ 是有理数，那么看作等价类,$[x]&#x3D;${$y\in[0,1]|x\sim y$}</li>
+<li>利用选择公理$[0,1]$中 每个等价类中取元素组成集合$A$, (或者说 $A&#x3D;[0,1]&#x2F;\sim$ 的商集)</li>
+<li>对于有理数r,令 $A_r&#x3D;${$x+r|x\in A$}$\cap [0,1]$, 不同有理数 的 交集&#x3D;空集,</li>
+<li>$[0,1] &#x3D; \cup_{r\in Q} A_r$</li>
+<li>这里 无法对A分配概率</li>
+</ul>
+<p>结果空间是 半径1的圆内，那么Pr(一个点)的概率是多少呢？，会发现任何值都不对</p>
+<ul>
+<li>Pr(点)&#x3D;0 那么总概率0</li>
+<li>Pr(点) &#x3D; c &gt; 0,那么总概率无穷大</li>
+</ul>
+<p>$\sigma$代数 定义：</p>
+<ul>
+<li>$\Omega$是集合，$\Sigma$是$\Omega$子集构成的一个非空集合，满足下面前提，则是$\sigma$代数<ul>
+<li>若$A\in \Sigma$则$A^c\in \Sigma$</li>
+<li>$\Sigma$的子集的“可数并”仍然属于$\Sigma$, $A_i$均满足 $A_i\in\Sigma$ 那么$\cup A_i &#x3D; \Sigma$</li>
+<li>把$\Omega$中的元素称为事件、</li>
+</ul>
+</li>
+</ul>
+<p>柯尔莫戈洛夫的 概率公理：$\Sigma$是结果空间$\Omega$的一个$\sigma$代数，我们可以定义一个概率函数Prob: $\Sigma \to[0,1]$</p>
+<ul>
+<li>可以为$\Sigma$中满足以下性质的每个元素分配一个0~1之间的概率</li>
+<li>$A\in \Sigma$ $Pr(A)\in [0,1]$</li>
+<li>$Pr(\Omega)&#x3D;1$</li>
+<li>互不交的$A_i$有$Pr(\cup A_i)&#x3D;\sum Pr(A_i)$， 这里就是要可数并</li>
+</ul>
+<p>再看上面的圆的问题，1&#x3D;Pr(落在圆上)&#x3D;?&#x3D;\sum_所有点 Pr(落在点上)&#x3D;0?</p>
+<ul>
+<li>这里和上面定义的关键就是 所有点 这里是不可数的，不满足上面的要求</li>
+<li>所以 Pr(落在圆上)&#x3D;1,和Pr(落在一个具体点上)&#x3D;0 都是对的</li>
+</ul>
+<h3 id="3-计数I：-纸牌"><a href="#3-计数I：-纸牌" class="headerlink" title="3.计数I： 纸牌"></a>3.计数I： 纸牌</h3><p>对于坚持要赌博的人，请阅读第23章</p>
+<p>阶乘: n! 叙事解释成n人排序的方案数</p>
+<ul>
+<li>延伸 gamma函数</li>
+</ul>
+<p>二项式系数：binom(n,k)&#x3D;n!&#x2F;(k!(n-k)!), 解释n个人中选k个不考虑顺序的方案</p>
+<ul>
+<li>延伸 广义二项式负数</li>
+<li>$\binom{n}{k}+\binom{n}{k+1}&#x3D;\binom{n+1}{k+1}$</li>
+</ul>
+<hr>
+<p>作者列举了各种扑克牌游戏</p>
+<h3 id="4-条件概率、独立性和贝叶斯定理"><a href="#4-条件概率、独立性和贝叶斯定理" class="headerlink" title="4. 条件概率、独立性和贝叶斯定理"></a>4. 条件概率、独立性和贝叶斯定理</h3><p>条件概率：在已知其他事件发生的前提下，我们想知道某个时间发生的概率有多大</p>
+<p>帽子游戏概率论版：3个人，可游玩前制定策略，进入游戏后禁止交流，每个人白黑是独立1&#x2F;2概率决定，每个人仅能看到其它两人帽子，不可交流，每人猜测或弃权，所有人同时进行，当猜测人数非零，且参与猜测全正确，平分奖金，有什么策略能大于50%</p>
+<ul>
+<li>显然一个策略 是其中一个人钦定白色，另外两个人不发言 是50%</li>
+</ul>
+<p>条件概率： P(A|B)&#x3D;在B发生时A的概率</p>
+<ul>
+<li>$P(A|B)&#x3D;P(A\cap B)&#x2F;(P(A\cap B)+P(A^c\cap B))&#x3D;P(A\cap B)&#x2F;P(B)$</li>
+<li>蒙提霍尔开门问题</li>
+</ul>
+<p>一般乘法$P(A\cap B)&#x3D;P(A|B)\cdot P(B)$</p>
+<hr>
+<p>独立性</p>
+<p>A和B相互独立: $P(A|B)&#x3D;P(A)$</p>
+<ul>
+<li>B的发生不会改变A的概率</li>
+<li>$P(A\cap B)&#x3D;P(A)\cdot P(B)$<ul>
+<li>n个</li>
+<li>$P(\cap A_i)&#x3D;\prod P(A_i)$ 且，{A_i} 任意一个非空子集都是相互独立的</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>贝叶斯定理：$P(A|B)&#x3D;P(B|A)\frac{P(A)}{P(B)}$</p>
+<ul>
+<li>我还是喜欢之前看到的 P(高学历|有礼貌)</li>
+<li>$P(A)&#x3D;P(A|B)P(B)+P(A|B^c)P(B^c)$</li>
+<li>划分：两两事件交为空，所有事件并&#x3D;整个样本空间<ul>
+<li>对于上面的扩展到n个事件 $P(A)&#x3D;\sum P(A|B_i)P(B_i)$</li>
+</ul>
+</li>
+<li>$P(A|B)&#x3D;\frac{P(B|A)P(A)}{\sum P(B|A_i)P(A_i)}$, 其中{$A_i$}是划分</li>
+</ul>
+<h3 id="5-计数II-容斥原理"><a href="#5-计数II-容斥原理" class="headerlink" title="5. 计数II: 容斥原理"></a>5. 计数II: 容斥原理</h3><p>n个事件A_i,例如容易算交，不容易算并</p>
+<p>$P(\cup A_i)&#x3D;-\sum_{t&#x3D;1}^n (-1)^t \sum_{遍历t个事件选择} P(\cap A_j)$</p>
+<ul>
+<li>简单的理解，就是看n&#x3D;2,3时的表达式</li>
+<li>证明 对于一个元素，恰好属于上面k &gt; 0 个A_i,那么考虑上面表达式这个元素被统计的次数 $-\sum_{t&#x3D;1}^{k} (-1)^t \binom{k}{t}&#x3D;1-(-1+1)^t&#x3D;1$</li>
+</ul>
+<p>算法竞赛里经常用到</p>
+<hr>
+<p>N(K)表示至少K个</p>
+<ul>
+<li>E(K)恰好K个 &#x3D; N(K)-N(K+1)</li>
+<li>这个解决了 一些没有直接设容斥的</li>
+</ul>
+<p>例子：错排概率，n个元素，所有元素都不在它原来位置上的概率</p>
+<ul>
+<li>没法直接 事件</li>
+<li>N(K)&#x3D;至少K个在原来位置上概率</li>
+<li>E(0)&#x3D;N(0)-N(1)&#x3D;n!-N(1)</li>
+<li>A_i&#x3D;第i个元素在原来位置上, $N(1)&#x3D;P(\cup A_i)$ 可以容斥</li>
+<li>$D_n&#x3D;n!-\frac{n!}{1!}+\frac{n!}{2!}-\frac{n!}{3!}+\cdots+(-1)^n\frac{n!}{n!}$</li>
+<li>$\frac{D_n}{n!} \sim e^{-1}$</li>
+</ul>
+<h3 id="6-计数III高等组合学"><a href="#6-计数III高等组合学" class="headerlink" title="6. 计数III高等组合学"></a>6. 计数III高等组合学</h3><p>不同重排序，binom的扩展</p>
+<ul>
+<li>$\frac{N!}{n_1!n_2!\cdots n_k!}$</li>
+</ul>
+<p>隔板法：binom扩展，c个相同饼干分给p个不同人 $\binom{c+p-1}{p-1}$</p>
+<h2 id="第二部分-随机变量"><a href="#第二部分-随机变量" class="headerlink" title="第二部分 随机变量"></a>第二部分 随机变量</h2><h3 id="7-离散型随机变量"><a href="#7-离散型随机变量" class="headerlink" title="7. 离散型随机变量"></a>7. 离散型随机变量</h3><p>离散型随机变量X就是定义在一个离散的结果空间$\Omega$ 这意味着（$\Omega$是有限的或至多可数的）上的实值函数，具体地说，我们为每个元素指定一个$X(\omega)$ 实数</p>
+<p>probability density function 概率密度函数</p>
+<ul>
+<li>离散型概率密度函数，X随机变量，它定义在离散的结果空间 $\Omega$上  $f_X(x)&#x3D;Prob(\omega \in \Omega: X(\omega)&#x3D;x)$,</li>
+<li>关于 随机变量X的 概率密度函数，的&#x3D;x时的值，就是X恰好取x的概率。 也就是原来有Prob,现在基于prob定义了$f_X(x)$</li>
+</ul>
+<p>cumulative distribution function 累计分布函数</p>
+<ul>
+<li>区别是 对 随机变量不超过x的 概率的汇总 $F_x(x)&#x3D;Prob(\omega \in \Omega: X(\omega) \le x)$</li>
+</ul>
+<p>这里例子是n个硬币，正面次数和的概率, 二项式分布</p>
+<ul>
+<li>$f_X(k)&#x3D;\binom{n}{k}p^{k}(1-p)^{n-k}$</li>
+<li>$F_x(k)&#x3D;\sum_{i&#x3D;0}^k \binom{n}{i}&#x2F;2^n$</li>
+<li>这里教材上，还扩展了定义域到 其它，并不是限死在0~n? 往后看，那么定义 非可取点就有一定的合理性了？<ul>
+<li>离散型 累计分布函数 的极限：$\lim_{x\to - \infty}F_X(x)&#x3D;0,\lim_{x\to \infty}F_X(x)&#x3D;1$, 且非严格单调递增</li>
+</ul>
+</li>
+</ul>
+<h3 id="8-连续型随机变量"><a href="#8-连续型随机变量" class="headerlink" title="8. 连续型随机变量"></a>8. 连续型随机变量</h3><p>利用 速度，时间，路程 回顾了以下微积分知识</p>
+<ul>
+<li>稍微提了以下 有限分段，也点了以下实分析和勒贝格积分</li>
+<li>$\int_a^b f(x)dx&#x3D;F(b)-F(a)$</li>
+</ul>
+<p>希望 基于离散随机变量的基础，来建立连续变量的 概率理论</p>
+<p>连续型随机变量、概率密度函数和累积 分布函数：X是随机变量，如果存在$f_X$满足</p>
+<ul>
+<li>分段连续函数 $f_X$</li>
+<li>$f_X(x)\ge 0$</li>
+<li>$\int_{-\infty}^{\infty} f_X(t)dt &#x3D; 1$</li>
+</ul>
+<p>那么$X$是一个连续型随机变量，f_X是X的概率密度函数，X的累积分布函数$F_X(x)$就是X不大于x的概率</p>
+<ul>
+<li>$F_X(x)&#x3D;Prob(X\le x)&#x3D;\int_{-\infty}^x f_X(t) dt$</li>
+<li>非严格单调递增，左极限0,右极限1,</li>
+</ul>
+<p>那么微积分基本定理的意义是，概率可以等价于 概率密度函数 下面的面积</p>
+<p>例子 $x\in[0,1], f_X(x)&#x3D;2+3x-5x^2$ 当$x$在其它值时$f_X(x)&#x3D;0$</p>
+<ul>
+<li>验证： 分段连续（满足），非负（满足），积分为1(不满足)</li>
+</ul>
+<p>对于积分不为0任意非负分段连续函数 $f(x)$. 容易构造$g(x)&#x3D;\frac{f(x)}{\int_{-\infty}^{\infty} f(x)dx}$ 来完成 第3个条件 积分为1</p>
+<ul>
+<li>根据微积分的“补充定义”来看， X属于 $[a,b],(a,b],[a,b),(a,b)$ 对于连续型随机变量来说 是相等的</li>
+</ul>
+<h3 id="9-工具：期望"><a href="#9-工具：期望" class="headerlink" title="9. 工具：期望"></a>9. 工具：期望</h3><p>这章脉络是：</p>
+<ul>
+<li>矩能描绘概率密度函数的形状</li>
+<li>我们希望能 对于 不同随机变量之间 进行线性运算，希望能求得新的随机变量的 概率密度函数性质（也就是矩函数的结果）</li>
+<li>这里重点在于 一阶矩（均值）和 二阶中心矩（方差）展开</li>
+</ul>
+<p>回顾 微积分知识：泰勒展开，x在点a展开，可以估算“附近”的值</p>
+<p>期望值和矩(moment)： X是在R上的随机变量，概率密度函数$f_X$, 函数$g(X)$的 期望值 是</p>
+<ul>
+<li>$E[g(X)] &#x3D;\int_{-\infty}^{\infty} g(x)f_X(x) dx$ 连续型</li>
+<li>$E[g(X)] &#x3D;\sum_{i} g(x_i)f_X(x_i) dx$ 离散型</li>
+</ul>
+<p>特别的</p>
+<ul>
+<li>当$g(x)&#x3D;x^r$ 把$E[X^r]$称为X的r阶矩，$E[(X-E[X])^r]$ 称为X的r阶中心矩</li>
+</ul>
+<p>显然的问题：为什么要算期望值，能得到什么信息</p>
+<ul>
+<li>类似泰勒级数，知道更多的矩能让我们更好地理解 概率密度函数 的形状和性质！！！！！？？？？？ 不是一个值吗？ 搜了下知乎，见最底外链</li>
+<li>之后会聚焦两个 均值（1阶矩）方差（2阶中心矩）</li>
+</ul>
+<p>这里给了 $x\in[0,1] f_X(x) &#x3D; \frac{6}{11}(2+3x-5x^2)$ 的例子</p>
+<ul>
+<li>对于$g(x)&#x3D;x^r$,$g(x)&#x3D;e^x$,$g(x)&#x3D;1&#x2F;x$ 分别 做了积分计算，</li>
+</ul>
+<hr>
+<p>这里写了一边公式，不如直接用上面的定义</p>
+<ul>
+<li>对于离散连续都是</li>
+<li>均值 &#x3D; $E[g(X)&#x3D;X]$ </li>
+<li>方差 $\sigma_X^2&#x3D;Var(X)$ &#x3D; $E[g(X)&#x3D;(X-E[X])^2]$  二阶中心矩<ul>
+<li>这里 的一些可拆分，是因为 积分和求和的 加减可拆分</li>
+<li>注意对于二阶中心矩 <code>E[X]</code>是一个值(常数的感觉)，不是随机变量, $E[(X-E[X])^2]&#x3D;E[X^2-2XE[X]+E[X]^2]&#x3D;E[X^2]-2E[X]E[X]+E[X]^2&#x3D;E[X^2]-E[X]^2$</li>
+</ul>
+</li>
+<li>标准差$\sigma_X&#x3D;\sqrt{Var(X)}$<ul>
+<li>优势是“单位相同”</li>
+</ul>
+</li>
+<li>技术说明：为了保证均值存在，希望 运算结果是有限的</li>
+</ul>
+<p>一个例子 柯西分布 $f_X(x)&#x3D;\frac{1}{\pi}\frac{1}{1+x^2}$</p>
+<ul>
+<li>这个例子说明 了 均值：看起来是 奇函数积分&#x3D;0,但是 无穷大，选择不同的左右极限逼近方式，得到的结果不同，所以值与趋近方式有关，极限不存在</li>
+</ul>
+<hr>
+<p>联合分布</p>
+<p>联合概率密度函数：$X_i$ 都是连续随机变量，$f_{X_i}$ 是它们的概率密度函数</p>
+<ul>
+<li>如果 $f_{X_i}(x_i)&#x3D;\int\int\int f_{X,X,…,X}(x,x,…,x) dx_1 dx_2…$ 也就是 对其它n-1个变量积分得来</li>
+<li>那么$f_{X_i}$称为$X_i$的边缘密度函数</li>
+<li>独立：如果满足 $f_{X_1,\cdots,X_n}(x_1,\cdots,x_n)&#x3D;\prod f_{X_i}(x_i)$</li>
+<li>这 从形状上理解，可以从二维的看，$z(x,y)&#x3D;f_{X,Y}(x,y)$, 那么分别的 沿着一个方向 挤压到一起（积分到一起），就得到没有被压的那个维度的边缘密度函数，</li>
+<li>例子 $f_{X,Y}(x,y)&#x3D;1&#x2F;\pi, x^2+y^2\le 1$其它时候为0</li>
+</ul>
+<hr>
+<p>期望值的线性性质</p>
+<ul>
+<li>咋这才讲，感觉上面讲期望就可以讲</li>
+<li>核心就是 多个随机变量满足线性关系 $E[\sum_i a_ig(X_i)]&#x3D;\sum_i a_i E[g(X_i)]$, 根据连续的积分 离散的求和 的加减法是线性的显然<ul>
+<li>$E[常数c]&#x3D;c$</li>
+</ul>
+</li>
+</ul>
+<p>引理9.5.2 X是随机变量，均值$\mu_X$,方差Var(X),若 a,b是常数，那么随机变量 Y&#x3D;aX+b有下列结果</p>
+<ul>
+<li>$\mu_Y&#x3D;a\mu_X+b$</li>
+<li>利用线性性质</li>
+<li>$Var(Y)&#x3D;E[Y^2]-E[Y]^2&#x3D;E[(aX+b)^2]-E[aX+b]^2&#x3D;(a^2E[X^2]+2abE[X]+b^2)-(a^2E[X]^2+2abE[X]+b^2)&#x3D;a^2(E[X^2]-E[X]^2)&#x3D;a^2Var(X)$</li>
+<li>另一方面<ul>
+<li>我们认为 均值 一阶矩函数描绘的概率密度函数的平均值，所以 倍增 平移是同步的</li>
+<li>我们认为 方差 二阶中心矩函数 描绘的是到均值的 移动&#x2F;距离 情况，所以平移是无效的，不会有b的存在</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>均值方差的性质:</p>
+<ul>
+<li>9.6.1 X,Y是相互独立的随机变量，那么$E[XY]&#x3D;E[X][Y]$<ul>
+<li>证明 就是回到 积分里，根据“独立”的定义 联合分布$f_{X,Y}(x,y)$可以拆成两个 边缘密度函数的乘积</li>
+</ul>
+</li>
+<li>一种特别重要的情况是 $E[(X-\mu_X)(Y-\mu_Y)]&#x3D;E[X-\mu_X]E[Y-\mu_Y]&#x3D;0$</li>
+</ul>
+<p>9.6.2： $X_i$是n个随机变量</p>
+<ul>
+<li>均值 $E[\sum X_i]&#x3D;\sum E[X_i]$</li>
+<li>如果随机变量相互独立，那么 $Var(\sum X_i)&#x3D;\sum Var(X_i)$<ul>
+<li>这里的核心原理就是 中心矩 中间可以线性拆开，拆开的分配率会出现上面的形如$E[(X-\mu_X)(Y-\mu_y)]$的形式，这个形式在 独立时 为0<ul>
+<li>例子是 X,和-X不独立，那么和为常数 方差为0</li>
+</ul>
+</li>
+<li>如果独立+同分布, $E[\sum X_i]&#x3D;nE[X_1]$, $Var(\sum X_i)&#x3D;nVar(X_i)$</li>
+</ul>
+</li>
+</ul>
+<p>协方差（Variance）： X和Y是两个随机变量。X和Y的协方差记作$\sigma_{XY}$或$Cov(X,Y)&#x3D; E[(X-\mu_X)(Y-\mu_Y)]$</p>
+<ul>
+<li>特别的 $Cov(X,X)&#x3D;Var(X)$</li>
+<li>$Var(\sum X_i)&#x3D;\sum Var(X_i)+\sum_{i,j} 2Cov(X_i,X_j)$</li>
+<li>这里一个意义说，投资股票时，期望等于分别收益的和，而方差能描述达到这个期望的波动状态，当无关时，就是两个的方差之和，</li>
+<li>一个是离散的 看5x5的离散型的不同 概率情况</li>
+<li>注意： 无关&#x3D;&gt; 协方差为0,但协方差为零不表示无关<ul>
+<li>离散的例子 (X,Y)&#x3D;(1,1)(2,4)(3,1) 概率都是1&#x2F;3, 画成2维图更直观<ul>
+<li>E(X)&#x3D;2， E(Y)&#x3D;2,  Cov(X,Y)&#x3D;E[(X-2)(Y-2)]&#x3D;((1-2)(1-2)+(2-2)(4-2)+(3-2)(1-2))&#x2F;3&#x3D;0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>协方差的意义？ - Charlie的回答 - 知乎 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/23484126/answer/1601710771">https://www.zhihu.com/question/23484126/answer/1601710771</a></p>
+<p>离散情况的例子 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14A41197Uz">https://www.bilibili.com/video/BV14A41197Uz</a></p>
+<p>相关系数 $\rho&#x3D;\frac{Cov(X,Y)}{\sigma_X\sigma_Y} \in[-1,1]$ 描绘的是 X,Y的线性相关性的 强度</p>
+<hr>
+<p>偏斜度：三阶中心矩</p>
+<ul>
+<li>测量了分布的不对称性，正态分布偏斜度是0</li>
+<li>对于单峰的密度分布函数，可以看出哪一侧有较厚，长的尾巴<ul>
+<li>偏斜度负的，那么 左侧尾巴比右侧更长</li>
+</ul>
+</li>
+</ul>
+<p>峰度：四阶中心矩</p>
+<ul>
+<li>可以测量 正态分布的数据如何达到峰值和扁平的。</li>
+<li>峰度较高会非常尖</li>
+</ul>
+<p>在中心极限定理中，对于随机变量之和 如何收敛到正态分布这个问题，它们发挥了关键作用</p>
+<h3 id="10-工具：卷积和变量替换"><a href="#10-工具：卷积和变量替换" class="headerlink" title="10. 工具：卷积和变量替换"></a>10. 工具：卷积和变量替换</h3><p>将在19章中看到，一个分布的矩会提供与该分布性质有关的线索。 这里会让我们引入卷积</p>
+<p>$f_X(x)$ 在 -1&#x2F;2~1&#x2F;2 均匀分布</p>
+<p>$f_Y(x)$ 在 -1&#x2F;2~1&#x2F;2 均匀分布</p>
+<p>但是 我们 无法直接获得 $f_{X+Y}$  的分布情况，因为 不知道X和Y是否独立，有什么关系，</p>
+<ul>
+<li>X和X,那么 -1～1均匀分布</li>
+<li>X和-X, 那么就是 Prob(X&#x3D;0)&#x3D;1,变成“离散形状”</li>
+<li>X和Y不相关，-1~1 单峰f_0(z)&#x3D;1 左右线性的分布函数</li>
+</ul>
+<p>定义10.1.1 X,Y是定义在R上两个相互独立的连续型随机变量，他们概率密度函数分别是$f_X,f_Y$,卷积记作$f_X\star f_Y$, 表达式为</p>
+<p>$(f_X\star f_Y)(z)&#x3D;\int_{\infty}^{\infty}f_X(t)f_Y(z-t)dt$</p>
+<p>离散型： $(f_X\star f_Y)(z)&#x3D;\sum_n f_X(x_n)f_Y(z-x_n)$</p>
+<p>性质：如果连续+独立，那么有 $f_{X+Y}(z)&#x3D;(f_X\star f_Y)(z)$</p>
+<ul>
+<li>作为学了傅里叶很多次，离散&#x2F;连续</li>
+<li>还学了生成函数，和各种其它卷积（例如狄利克雷卷积，min-max卷积）</li>
+<li>那么卷积的感觉是什么呢， 新函数的 z处的值，是原来两个函数，自变量和&#x3D;z 的值的乘积的和（积分），其中 这里（自变量和&#x3D;z）在不同的 卷积要求下 可能是其它运算不是和</li>
+<li>关于为什么是卷积，考虑二维的X,Y，再做45度 投影到一维还是很显然的</li>
+</ul>
+<p>例子 掷骰子</p>
+<ul>
+<li>卷积的性质，有交换律和结合律（原因主要是 卷积的运算符，是+具有交换性和结合性）</li>
+<li>从而可以有多变量卷积</li>
+</ul>
+<hr>
+<p>10.4.1 变量替换公式，设X是一个概率密度函数为$f_X$的连续型随机变量，并设存在一个区间$I\subset R$使得当$x\in I$时，$f_X(x)&#x3D;0$ 换句话说，X只有在I中取值时，其概率密度函数才能不为0, 其中I可以是整个实直线。设$g:I\to R$是一个可微函数，$h&#x3D;g^{-1}$,除了在有限多个点处的导数值可能为0外，g的导数在I中始终为正或者始终为负，如果令$Y&#x3D;g(X)$ 那么</p>
+<ul>
+<li>$f_Y(y)&#x3D;f_X(h(y)) |h’(y)|$</li>
+<li>I 良好区间</li>
+<li>有一些表达式函数是可微的</li>
+<li>要么严格增加，要么严格减少，希望每个X和唯一Y有关联</li>
+<li>图像或链式求导法 $h’(y)&#x3D;\frac{1}{g’(h(y))}$</li>
+</ul>
+<p>例子： $f_{X}(x)&#x3D;1&#x2F;2,x\in[0,2]$ 其它部分为0, $g(X)&#x3D;X^2$</p>
+<ul>
+<li>$I: [0,2]$</li>
+<li>可微，导数g’&#x3D;2x始终正</li>
+<li>$h(y)&#x3D;\sqrt{y}$,$h’(y)&#x3D;\frac{1}{2}\frac{1}{\sqrt{y}}$</li>
+</ul>
+<p>$f_Y(y)&#x3D;f_X(h(y))|h’(y)|&#x3D;\frac{1}{2}y^{-1&#x2F;2} f_X(\sqrt{y})&#x3D;\frac{1}{4}y^{-1&#x2F;2}$</p>
+<ul>
+<li>$\sqrt{y} \in I &#x3D;[0,2]$ 所以$y\in[0,4]$</li>
+<li>检验可以检验积分为1</li>
+<li>注意 概率密度在0趋于无穷大（但是反常积分 并没有让积分结果有问题）</li>
+</ul>
+<hr>
+<p>证明这个公式： 核心通过累积分布函数来证明的</p>
+<ul>
+<li>注意导数正负 讨论，</li>
+</ul>
+<hr>
+<p>随机变量的乘积与商，</p>
+<ul>
+<li>写成微积分形式，</li>
+<li>也就是中间的运算控制，最终还是落到 结果的z&#x3D;运算(x,y), 那么其中积分的部分就是对应的</li>
+</ul>
+<h3 id="11-工具-微分恒等式"><a href="#11-工具-微分恒等式" class="headerlink" title="11. 工具: 微分恒等式"></a>11. 工具: 微分恒等式</h3><p>$\sum_{0}^\infty nx^{n-1}$ 中学阶段用的差分法，并且没有讨论收敛性</p>
+<ul>
+<li>现在 可以用$\sum x^n$ 的导数，同时注意讨论收敛性</li>
+<li>$d&#x2F;dx (\sum {x^n})&#x3D;d&#x2F;dx(\frac{1}{1-x})$</li>
+</ul>
+<p>微分恒等式: $\sum_{n_{min}}^{n_{max}} f(n;a_1,\cdots,a_w)&#x3D;g(a_1,\cdots,a_w)$ 其中f,g关于a可微，如果f退化到足以保证求和与求微分的次序可以交换，那么左右关于$a_i$ 的偏微分相等</p>
+<ul>
+<li>这里依赖两个分析学结果：<ul>
+<li>交换求和性质</li>
+<li>求导次序性质</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子：在二项分布随机变量上的应用</p>
+<ul>
+<li>Prob(X&#x3D;k)&#x3D;$\binom{n}{k} p^k (1-p)^{n-k}$ 其它为0</li>
+</ul>
+<p>问题一：一阶矩 均值 $E[X]&#x3D;\sum_{k&#x3D;0}^n k\binom{n}{k}p^k(1-p)^{n-k}$</p>
+<p>一个方法（这不就是之前b站和人battle的 二元偏导与1元偏导的东西吗，这还直接用了）</p>
+<ul>
+<li>$p\frac{\partial}{\partial p}(\sum_{k&#x3D;0}^n\binom{n}{k}p^kq^{n-k})&#x3D;p\frac{\partial}{\partial p}((p+q)^n)$, 先二元函数求偏导</li>
+<li>$p\sum_{k&#x3D;0}^n\binom{n}{k}kp^{k-1}q^{n-k})&#x3D;pn(p+q)^{n-1}$</li>
+<li>$\sum_{k&#x3D;0}^n\binom{n}{k}kp^{k}q^{n-k})&#x3D;np(p+q)^{n-1}$</li>
+<li>有限和，可以交换求和顺序和偏导顺序</li>
+<li>带入q&#x3D;1-p</li>
+<li>$E[X]&#x3D;np$ 妙啊</li>
+</ul>
+<p>问题二：二阶中心矩 方差 $Var(X)&#x3D;E[X^2]-E[X]^2$, 那么问题是左边这个</p>
+<ul>
+<li>那就二阶（多次偏导p）</li>
+<li>$E[X^2]&#x3D;np+n(n-1)p^2$</li>
+<li>$Var(X)&#x3D;np(1-p)$</li>
+</ul>
+<hr>
+<p>例子 $X\sim N(\mu,\sigma^2)$ 表示X服从均值$\mu$,方差$\sigma^2$的正态分布（稍后定义？）</p>
+<ul>
+<li>密度函数 $f_X(x)&#x3D;\frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</li>
+<li>具体正态在14章讲</li>
+<li>标准正态分布$N(0,1)$<ul>
+<li>$M(k)&#x3D;\int_{-\infty}^{\infty} x^k \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} dx$</li>
+</ul>
+</li>
+</ul>
+<p>通过 概率密度积分总&#x3D;1,和移动sigma 进行微分恒等</p>
+<hr>
+<p>例子： 指数分布上应用</p>
+<ul>
+<li>$f_X(x)&#x3D;\frac{1}{\lambda}e^{-x&#x2F;\lambda}, x\ge 0$</li>
+</ul>
+<p>我们同样 利用 概率密度积分总&#x3D;1,和移动 lambda,进行微分恒等，来计算<code>E[X]</code></p>
+<h2 id="第三部分-特殊分布"><a href="#第三部分-特殊分布" class="headerlink" title="第三部分 特殊分布"></a>第三部分 特殊分布</h2><p>前面都是理论的框架结构弄好了，然后从这开始，研究特殊的分布，也就是“常见”至少“习题常见”的一些具体例子的性质</p>
+<p>这类分布，要先验证表达式的合法性</p>
+<ul>
+<li>$\in [0,1]$的概率</li>
+<li>总和为1的概率</li>
+</ul>
+<h3 id="12-离散分布"><a href="#12-离散分布" class="headerlink" title="12. 离散分布"></a>12. 离散分布</h3><h4 id="伯努利分布，0-1-分布"><a href="#伯努利分布，0-1-分布" class="headerlink" title="伯努利分布，0-1 分布"></a>伯努利分布，0-1 分布</h4><p>Prob(X&#x3D;1)&#x3D;p, Prob(X&#x3D;0)&#x3D;1-p, $X\sim Bern(p)$</p>
+<p>$E[X]&#x3D;p$</p>
+<p>$Var(X)&#x3D;E[X^2]-E[X]^2&#x3D;p-p^2&#x3D;p(1-p)$</p>
+<h4 id="二项分布，n次独立0-1分布"><a href="#二项分布，n次独立0-1分布" class="headerlink" title="二项分布，n次独立0-1分布"></a>二项分布，n次独立0-1分布</h4><p>$Prob(X&#x3D;k)&#x3D;\binom{n}{k}p^k(1-p)^{n-k}$, $X\sim Bin(n,p)$</p>
+<p>$E[X]&#x3D;np$</p>
+<p>$Var(X)&#x3D;np(1-p)$</p>
+<p>在前面 微分恒等式中给过证明，在不相关变量的线性性质中也能证明E(X) 和 Var(X)</p>
+<h4 id="多项分布"><a href="#多项分布" class="headerlink" title="多项分布"></a>多项分布</h4><p>多项分布与多项式系数, n次选择，每次独立的k选1,每个选中概率$p_i$</p>
+<ul>
+<li>$\sum_i p_i&#x3D;1$, </li>
+<li>概率密度函数的系数 $\frac{n!}{x_1!x_2!\cdots x_k!} \prod p_i^{x_i}$, 也就是n次选择中 选中第i个的次数$x_i$次,其中$\sum x_i&#x3D;n$<ul>
+<li>退化成 只有k&#x3D;2个可选，就是 $\frac{n!}{x_1!x_2!}p_1^{x_1}p_2^{x_2}&#x3D;\frac{n!}{t!(n-t)!}p^tq^{n-t}&#x3D;\binom{n}{t}p^t(1-p)^{n-t}$</li>
+</ul>
+</li>
+</ul>
+<p>记作$X\sim Multinomial(n,k,p_1,\cdots,p_k)$</p>
+<p>那么 对于其中一个 $X_i$ 可以把其余的都看成整体（非$X_i$), 那么有 $X_i\sim Bin(n,p_i)$</p>
+<ul>
+<li>$E[X_i]&#x3D;np_i$</li>
+<li>$Var(X_i)&#x3D;np_i)(1-p_i)$</li>
+</ul>
+<p>那么 $E[X],Var(X)$呢，这里没有指标对于每个X_i, 所以</p>
+<h4 id="几何分布-重复到成功的0-1分布"><a href="#几何分布-重复到成功的0-1分布" class="headerlink" title="几何分布 重复到成功的0-1分布"></a>几何分布 重复到成功的0-1分布</h4><p>也就是 一直重复的独立事件，直到成功为止</p>
+<p>$Prob(X&#x3D;n)&#x3D;p(1-p)^{n-1}$ 其中n是正整数</p>
+<p>$X\sim Geom(p)$</p>
+<p>$E[X]&#x3D;\frac{1}{p}$, 微分恒等式或者，代回法</p>
+<p>$Var(X)&#x3D;\frac{1-p}{p^2}$</p>
+<h4 id="负二项分布"><a href="#负二项分布" class="headerlink" title="负二项分布"></a>负二项分布</h4><p>r是正整数，随机变量X表示，恰好r次失败时，成功的次数</p>
+<p>$Prob(X&#x3D;k)&#x3D;\binom{k+r-1}{k}p^{k}(1-p)^r$ </p>
+<ul>
+<li>这里注意的是“恰好”所以 最后一次一定要失败，那么前面k+r-1次中有k次成功</li>
+<li>$X\sim NegBin(r,p)$</li>
+<li>$E[X]&#x3D;\frac{pr}{1-p}$</li>
+<li>$Var(X)&#x3D;\frac{pr}{(1-p)^2}$</li>
+</ul>
+<h4 id="泊松分布-巨大量实验只知道次数的-伯努利分布"><a href="#泊松分布-巨大量实验只知道次数的-伯努利分布" class="headerlink" title="泊松分布 巨大量实验只知道次数的 伯努利分布"></a>泊松分布 巨大量实验只知道次数的 伯努利分布</h4><p>$Prob(X&#x3D;k)&#x3D;\frac{\lambda^k e^{-\lambda}}{k!}$, n是正整数</p>
+<ul>
+<li>$X\sim Pois(\lambda)$</li>
+<li>$E[X]&#x3D;\lambda$</li>
+<li>$Var(x)&#x3D;\lambda$</li>
+</ul>
+<p>不知道 $p,n$, 但有个 实际成功次数 常数$\lambda &#x3D; pn$</p>
+<p>$Prob(X&#x3D;k)&#x3D;\lim_{n\to \infty} \binom{n}{k}p^k(1-p)^{n-k}$</p>
+<p>$&#x3D;\lim_{n\to \infty} \binom{n}{k}(\frac{\lambda}{n})^k(1-\frac{\lambda}{n})^{n-k}$</p>
+<p>$\displaystyle &#x3D;\frac{\lambda^k}{k!} (\lim_{n\to \infty} \frac{n!}{(n-k)!n^k})(\lim_{n\to \infty} (1-\frac{\lambda}{n})^n) (\lim_{n\to \infty} (1-\frac{\lambda}{n})^{-k})$</p>
+<p>$\displaystyle &#x3D;\frac{\lambda^k}{k!} (1^k)(e^{-\lambda}) (1^{-k})$</p>
+<p>$\displaystyle &#x3D; \frac{\lambda^ke^{-\lambda}}{k!}$</p>
+<h4 id="离散均匀分布"><a href="#离散均匀分布" class="headerlink" title="离散均匀分布"></a>离散均匀分布</h4><p>$Prob(X&#x3D;a)&#x3D;1&#x2F;n$</p>
+<ul>
+<li>如果 离散均匀分布的 特殊变量是 $a,a+1,\cdots, a+n-1$时，<ul>
+<li>$E[X]&#x3D;a+\frac{n-1}{2}$, </li>
+<li>$Var(X)&#x3D;\frac{n^2-1}{12}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-连续型随机变量：均匀分布与指数分布"><a href="#13-连续型随机变量：均匀分布与指数分布" class="headerlink" title="13. 连续型随机变量：均匀分布与指数分布"></a>13. 连续型随机变量：均匀分布与指数分布</h3><h4 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h4><h2 id="f-X-x-frac-1-b-a-x-in-a-b-X-sim-Unif-a-b-标准化-U-sim-Unif-0-1-X-b-a-U-a-E-U-1-2-Var-U-1-12-E-X-frac-a-b-2-E-X-frac-b-a-2-12"><a href="#f-X-x-frac-1-b-a-x-in-a-b-X-sim-Unif-a-b-标准化-U-sim-Unif-0-1-X-b-a-U-a-E-U-1-2-Var-U-1-12-E-X-frac-a-b-2-E-X-frac-b-a-2-12" class="headerlink" title="$f_X(x)&#x3D;\frac{1}{b-a},x\in [a,b]$- $X\sim Unif(a,b)$- 标准化$U\sim Unif(0,1)$    - $X&#x3D;(b-a)U+a$    - $E[U]&#x3D;1&#x2F;2$    - $Var(U)&#x3D;1&#x2F;12$- $E[X]&#x3D;\frac{a+b}{2}$- $E[X]&#x3D;\frac{(b-a)^2}{12}$
+    "></a>$f_X(x)&#x3D;\frac{1}{b-a},x\in [a,b]$<br>- $X\sim Unif(a,b)$<br>- 标准化$U\sim Unif(0,1)$<br>    - $X&#x3D;(b-a)U+a$<br>    - $E[U]&#x3D;1&#x2F;2$<br>    - $Var(U)&#x3D;1&#x2F;12$<br>- $E[X]&#x3D;\frac{a+b}{2}$<br>- $E[X]&#x3D;\frac{(b-a)^2}{12}$
+    </h2><p>复合, $X\sim Unif(0,1),Y\sim Unif(0,1)$ 相互独立</p>
+<p>$Z&#x3D;X+Y$</p>
+<ul>
+<li>$f_Z(z)&#x3D;z,z\in[0,1]$</li>
+<li>$f_Z(z)&#x3D;2-z,z\in[1,2]$</li>
+<li>一个性质 在 $Prob(1&#x2F;2 \le Z \le 3&#x2F;2) &#x3D; 3&#x2F;4$</li>
+</ul>
+<p>概率论的一个核心结果是， “好”的独立的随机变量之和会收敛于正态分布</p>
+<h4 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h4><p>no. of events that occur in an interval of time</p>
+<p>$\lambda &#x3D;$ average no. of events in 1 unit of time</p>
+<p>$\displaystyle f_X(x)&#x3D;\frac{1}{\lambda}e^{\frac{-x}{\lambda}}, x\ge 0$, time taken between 2 events occurring</p>
+<ul>
+<li>$X \sim Exp(\lambda)$</li>
+<li>$E[X]&#x3D;\lambda$</li>
+<li>$Var(X)&#x3D;\lambda^2$</li>
+<li>有些教材会用 $f_X(x)&#x3D;\lambda e^{-\lambda x}$</li>
+</ul>
+<hr>
+<p>n个 独立同分布的指数分布之和: 爱尔朗分布</p>
+<ul>
+<li>广泛运用于排队论中</li>
+<li>$\displaystyle f_X(x)&#x3D;\frac{x^{n-1}e^{-x&#x2F;\lambda}}{\lambda^n(n-1)!}, x\ge 0$</li>
+<li>$E[X]&#x3D;n\lambda$</li>
+<li>$Var(X)&#x3D;n\lambda^2$</li>
+<li>同样的 有些教材会是$\frac{1}{\lambda}$</li>
+<li>这里 用图片说明了，随着n的增大，曲线越来越接近 正态分布</li>
+</ul>
+<hr>
+<p>服从指数分布随机变量 例子与应用</p>
+<p>球队直到下次进球的等待时间可以用指数分布逼近</p>
+<ul>
+<li>参数30分钟(平均30分钟进一次球)的指数分布 $f_X(x)&#x3D;\frac{1}{30}e^{-x&#x2F;30}$, 上半场没进球的概率，也就是等待时间大于45分钟<ul>
+<li>$\int_{45}^\infty f_X(x) dx &#x3D; -e^{-x&#x2F;30}|_{45}^\infty&#x3D;e^{-3&#x2F;2}&#x3D;0.223$ 约为</li>
+</ul>
+</li>
+</ul>
+<p>10个独立神经元，每个神经元12毫秒激活一次动作电位，每一个都激活一次，所需的时间之和，小于100毫秒 概率是？</p>
+<ul>
+<li>$\lambda&#x3D;12,n&#x3D;10$ 爱尔朗分布</li>
+<li>$\int_{0}^{100} \frac{x^{10-1}e^{-x&#x2F;12}}{12^{10} (10-1)!}dx &#x3D; 0.3255$ 约为</li>
+</ul>
+<hr>
+<p>从指数分布中生成随机数</p>
+<p>生成随机数的累积分布法： X随机变量，概率密度函数$f_X$,累积分布函数$F_X$, $Y\sim Unif(0,1)$</p>
+<ul>
+<li>$X&#x3D;F_X^{-1}(Y)$<ul>
+<li>称为逆变换抽样，或者逆变换法</li>
+<li>$F_X$不减少，因此逆函数也是</li>
+</ul>
+</li>
+</ul>
+<p>例如指数分布$F_x(x)&#x3D;1-e^{-x&#x2F;\lambda},x\ge 0$</p>
+<ul>
+<li>$x&#x3D;-\lambda \log(1-y)&#x3D;F^{-1}_X(y)$</li>
+</ul>
+<p>什么用呢？直接的采样一般会希望 样本的均匀，而逆变换采样希望概率的均匀</p>
+<p>知乎上 一个例子是： 圆形内采样 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/622443806">https://zhuanlan.zhihu.com/p/622443806</a></p>
+<ul>
+<li>方案1,包裹的正方形 随机长，随机宽采样，那么会有浪费（不属于圆的点）</li>
+<li>方案2,随机半径，随机角度，会发现 靠近圆心的部分采样密集，远离圆心的部分采样稀疏</li>
+<li>方案3,考虑半径的环分配密度，累积要是1, 且权重和环长有关（面积的导数，保证面积均匀）<ul>
+<li>累积分布函数 $CDF&#x3D;\frac{1}{R^2}x^2$</li>
+<li>$CDF^{-1}(x)&#x3D;R\sqrt{x}$</li>
+</ul>
+</li>
+</ul>
+<h3 id="14-连续型随机变量：正态分布"><a href="#14-连续型随机变量：正态分布" class="headerlink" title="14. 连续型随机变量：正态分布"></a>14. 连续型随机变量：正态分布</h3><p>是最重要的分布之一，对于整个数学和科学领域都非常重要。主要因为中心极限定理（20章）</p>
+<p>很多情况下，相互独立的随机变量之和都会收敛于正态分布，条件弱，许多理论和实际问题中都能得到满足</p>
+<p>正态分布，高斯分布：如果随机变量X的概率密度函数是 $f_X(x)&#x3D;\frac{1}{\sqrt{2\pi \sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</p>
+<ul>
+<li>$E[X]&#x3D;\mu$</li>
+<li>$Var(X)&#x3D;\sigma^2$</li>
+<li>$X\sim N(\mu,\sigma^2)$</li>
+<li>标准正态分布$X\sim N(0,1)$</li>
+<li>图形上， $\mu$控制左右平移,$\sigma^2$控制有多尖锐</li>
+</ul>
+<p>令$I(\mu,\sigma)&#x3D;\int_{-\infty}^{\infty} f_X(x) dx$</p>
+<p>$I(\mu,\sigma)&#x3D;I(0,1)&#x3D;1$</p>
+<ul>
+<li>通过经典的，两个一元不相干积分乘积变成二维</li>
+</ul>
+<hr>
+<p>稳定分布：</p>
+<ul>
+<li>X,Y都是独立同分布，如果X+Y的分布和X形状相同，那么称作稳定分布</li>
+</ul>
+<p>服从正态分布的随机变量和之和：</p>
+<ul>
+<li>$X_i\sim N(\mu_i,\sigma_i^2)$是独立 的n个正态分布</li>
+<li>$X_1+\cdots+X_n\sim N(\mu_1+\cdots+\mu_n,\sigma_1^2+\cdots+\sigma_n^2)$</li>
+<li>这个是个激动的结论，因为以前，只说任意能保证E(X)还是和，而独立能保证Var的和，而现在又多出了一个形状还是正态形状</li>
+<li>记得 均匀分布的和变成三角形的单峰函数</li>
+</ul>
+<hr>
+<p>$\Phi(x)&#x3D;\int_{-\infty}^x \phi(x)&#x3D;\int_{-\infty}^x \frac{1}{\sqrt{2\pi}}e^{-t^2&#x2F;2}dt$</p>
+<p>$\Phi(0)&#x3D;1&#x2F;2$</p>
+<p>$\Phi(x)&#x3D;1&#x2F;2+\int_{0}^x\phi(t)dt$</p>
+<p>$&#x3D;1&#x2F;2+\int_{0}^x\frac{1}{\sqrt{2\pi}}e^{-t^2&#x2F;2}dt$</p>
+<p>$&#x3D;1&#x2F;2+\int_{0}^x\frac{1}{\sqrt{2\pi}}\sum_n \frac{1}{n!}(-\frac{t^2}{2})^n dt$</p>
+<p>$&#x3D;1&#x2F;2+\frac{1}{\sqrt{2\pi}}\sum_n \frac{(-1)^n}{n!2^n} \int_{0}^x t^{2n} dt$</p>
+<p>$&#x3D;1&#x2F;2+\frac{1}{\sqrt{2\pi}}\sum_n \frac{(-1)^n}{n!2^n}\frac{x^{2n+1}}{2n+1}$</p>
+<p>可以近似数值计算</p>
+<ul>
+<li>前10项 误差 只有0.000 018 361</li>
+</ul>
+<p>当数学家遇到一个无法求值的积分时，就会为该积分命名</p>
+<ul>
+<li>误差函数 $Erf(x)&#x3D;\frac{2}{\sqrt{\pi}}\int_{0}^xe^{-t^2}dt$<ul>
+<li>方差为1&#x2F;2 的正态分布的概率密度函数在0到x上的积分</li>
+<li>$Prob(-2\le X\le 2)&#x3D;Erf(\sqrt{2})$</li>
+<li>$\Phi(x)-\Phi(-x)&#x3D;Erf(\frac{x}{\sqrt{2}})$</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>例子与中心极限定理</p>
+<ul>
+<li>通过 $X\to \frac{X-\mu}{\sigma}$ 来完成到$\Phi$的转换<ul>
+<li>$\mu&#x3D;5,\sigma^2&#x3D;16$</li>
+<li>$Prob(2 &lt; X &lt; 7)&#x3D;Prob(\frac{2-5}{4}&lt;\frac{X-5}{4}&lt;\frac{7-5}{4})&#x3D;\Phi(1&#x2F;2)-\Phi(-3&#x2F;4)$</li>
+</ul>
+</li>
+</ul>
+<h3 id="15-伽马函数与相关分布"><a href="#15-伽马函数与相关分布" class="headerlink" title="15. 伽马函数与相关分布"></a>15. 伽马函数与相关分布</h3><p>为什么要研究，很多分布，展开极限中会出现，有些看起来没出现的也要注意到$\Gamma(1&#x2F;2)&#x3D;\sqrt{\pi}$</p>
+<p>若s&gt;0(R(s)&gt;0)那么 伽马函数$\Gamma(s)$</p>
+<p>$\Gamma(s)&#x3D;\int_{0}^{\infty}e^{-x}x^{s-1}dx&#x3D;\int_{0}^{\infty}e^{-x}x^s\frac{dx}{x}$</p>
+<p>通常积分容易出“问题”的是在零点和正负无穷大</p>
+<p>性质证明：</p>
+<ul>
+<li>$\int_1^B e^{-x}x^{s-1}dx \le \int_1^{B} (M!x^{-M})x^{s-1}dx$</li>
+<li>$&#x3D;M!\int_{1}^Bx^{s-M-1}dx$</li>
+<li>$&#x3D;M!\frac{x^{s-M}}{s-M}|_1^B$</li>
+<li>$&#x3D;\frac{M!}{s-M}[\frac{1}{B^{M-s}}-1]$</li>
+</ul>
+<p>$\int_0^1e^{-x}x^{s-1}dx\le \int_{0}^1 1 \cdot x^{s-1}dx&#x3D;\frac{1}{s}$</p>
+<hr>
+<p>$\Gamma(1&#x2F;2)&#x3D;\sqrt{\pi}$</p>
+<ul>
+<li>解析(亚纯)延拓<ul>
+<li>做法要点是，给定定义在某区域上f,并把f的定义推广到更大的区域上，从而新函数g和f在f定义域上是一样的</li>
+<li>例子: 等比数列求和 $\sum_{i&#x3D;0}^{\infty} r^i&#x3D;\frac{1}{1-r}$, 这个左边在$|r|&lt;1$有意义，右边在$r\neq 1$有意义，说明右边定义域比左边更广<ul>
+<li>我们把右边称作左边的解析延拓</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对于$\Gamma$ 可以证明$\Gamma(1)&#x3D;1,\Gamma(n)&#x3D;(n-1)\Gamma(n-1)$ 所以$n! &#x3D; \Gamma(n-1)$,是阶乘的推广<ul>
+<li>除了负整数和0以外，都有定义</li>
+<li>另一方面 可以用分析学研究 阶乘</li>
+</ul>
+</li>
+</ul>
+<p>$\int_{-\infty}^{\infty} e^{-x^2&#x2F;2}dx&#x3D;2\int_{0}^{\infty} e^{-x^2&#x2F;2}dx$</p>
+<ul>
+<li>令u&#x3D;$x^2&#x2F;2$有$x&#x3D;(2u)^{1&#x2F;2}$</li>
+<li>$&#x3D;2\int_0^{\infty} e^{-u}(2u)^{-1&#x2F;2}du$</li>
+<li>$&#x3D;\sqrt{2}\int_0^{\infty} e^{-u}(u)^{1&#x2F;2-1}du$</li>
+<li>$&#x3D;\sqrt{2}\Gamma(1&#x2F;2)$</li>
+</ul>
+<p>余割等式，当s不是整数时 $\Gamma(s)\Gamma(1-s)&#x3D;\pi csc(\pi s)&#x3D;\frac{\pi}{sin(\pi s)}$</p>
+<hr>
+<p>Beta函数与Gamma函数</p>
+<p>$B(a,b)&#x3D;\int_{0}^{1}t^{a-1}(1-t)^{b-1}dt$</p>
+<ul>
+<li>$a&gt;0,b&gt;0$时 $B(a,b)&#x3D;\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}$</li>
+</ul>
+<p>Beta分布 $f_{a,b}&#x3D;\frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)}t^{a-1}(1-t)^{b-1} dt,t\in[0,1]$</p>
+<ul>
+<li>$X\sim B(a,b)$</li>
+<li>一种“更自由”的单峰函数生成器</li>
+</ul>
+<p>$\Gamma(1&#x2F;2)^2&#x3D;\Gamma(1&#x2F;2+1&#x2F;2)\int_{0}^1 t^{1&#x2F;2-1}(1-t)^{1&#x2F;2-1} dt&#x3D;\pi$</p>
+<hr>
+<p>正态分布与Gamma函数</p>
+<p>标准正态分布3个重要积分</p>
+<ul>
+<li>概率积分&#x3D;1</li>
+<li>$E[X] &#x3D; 0$</li>
+<li>$Var(X)&#x3D;1$</li>
+</ul>
+<p>第四有用积分是2m阶矩</p>
+<ul>
+<li>$\mu_{2m}&#x3D;\int_{-\infty}^{\infty} x^{2m}\phi(x)dx&#x3D;(2m-1)!!$ 双阶乘的意思是，保持奇偶性隔一个取一个 <code>5!!=5 * 3 * 1, 6!!=6*4*2</code></li>
+<li>$\mu_{2m}&#x3D;\frac{2^m}{\sqrt{\pi}}\Gamma(m+\frac{1}{2})$</li>
+</ul>
+<hr>
+<p>分布族(通过引入参数的不同，得到不同“形状”的分布)</p>
+<p>伽马分布与韦布尔分布： 如果随机变量X的概率密度函数是</p>
+<ul>
+<li>$f_{k,\sigma}(x)&#x3D;\frac{1}{\Gamma(k)\sigma^k}x^{k-1}e^{-x&#x2F;\sigma} ,x \ge 0$</li>
+<li>X 服从正参数$k,\sigma$ 的伽马分布，k称为形状参数，$\sigma$称为尺度参数，记作$X\sim \Gamma(k,\sigma)$</li>
+</ul>
+<p>韦布尔分布:</p>
+<ul>
+<li>$f_{k,\sigma}(x)&#x3D;(k&#x2F;\sigma)(x&#x2F;\sigma)^{k-1}e^{-(x&#x2F;\sigma)^k}$</li>
+<li>被用在和许多涉及生存分析的问题上</li>
+</ul>
+<hr>
+<p>余割公式</p>
+<p>$\Gamma(s)\Gamma(1-s)&#x3D;\int_{0}^{\infty} e^{-x}x^{s-1}dx \cdot \int_{0}^{\infty} e^{-y}y^{1-s-1} dy$</p>
+<p>通过$x&#x3D;r\cos \theta,y&#x3D;r\sin \theta,dxdy&#x3D;rdrd\theta$</p>
+<p>$&#x3D;\int_{0}^{\pi&#x2F;2} \frac{ctan^{s-1}\theta}{ctan\theta +1} \frac{d\theta}{sin^2\theta}$</p>
+<p>通过 $u&#x3D;ctan\theta&#x3D;\cos\theta&#x2F;\sin\theta$</p>
+<p>$&#x3D;\int_{0}^{\infty}\frac{u^{s-1}}{u+1}dx$</p>
+<hr>
+<p>柯西分布</p>
+<p>上面有 $\Gamma(1&#x2F;2)^2&#x3D;\Gamma(1&#x2F;2+1&#x2F;2)\int_{0}^1 t^{1&#x2F;2-1}(1-t)^{1&#x2F;2-1} dt&#x3D;\pi csc(\pi\cdot 1&#x2F;2)&#x3D;\pi$</p>
+<p>$\pi &#x3D; 2\int_{0}^{\infty} \frac{dz}{1+z^2}$</p>
+<p>这里柯西分布密度函数 $f_X(x)&#x3D;\frac{1}{\pi}\frac{1}{1+x^2}$</p>
+<ul>
+<li>不存在均值 （不同趋近方式得到结果不同）</li>
+<li>方差无穷大</li>
+<li>在一些经济学理论中也起着重要的作用，随机游走假设的一个简单变体断言，</li>
+<li>事实证明，柯西分布和正态分布（高斯分布），可以放在同一个具有不同参数的族中，两者都是 稳定分布(多个无关的随机变量线性组合还是同形状)</li>
+</ul>
+<p>广义柯西分布:</p>
+<ul>
+<li>$\displaystyle f_{X}(x)&#x3D;\frac{1}{b\pi}\frac{1}{1+\frac{(x-a)^2}{b^2}}$</li>
+</ul>
+<h3 id="16-卡方分布"><a href="#16-卡方分布" class="headerlink" title="16. 卡方分布"></a>16. 卡方分布</h3><p>总是在假设检验中出现</p>
+<p>$\displaystyle f(x)&#x3D;\frac{1}{2^{v&#x2F;2}\Gamma(v&#x2F;2)}x^{v&#x2F;2-1}e^{-x&#x2F;2}, x\ge 0$</p>
+<ul>
+<li>记作 $X\sim \chi^2(v)$</li>
+<li>每选择一个$v$ 都会得到一个不同的分布</li>
+<li>随着v正整数增加，突起向右移动</li>
+<li>自由度：v, 正式定义为统计学中可以自由变化的数值个数，N个观测值，那么自由度通常是N-1或N</li>
+<li>很多假设检验的检验统计量在原假设下服从卡方分布，适用于分类数据，</li>
+<li>优点：它是一个非参数检验，意味着对数据总体分布没有任何假设</li>
+<li>缺点：比其它参数检验统计效果差</li>
+<li>卡方分布与正态分布之间的关联：$X\sim N(0,1)$，那么$X^2\sim \chi^2(1)$</li>
+</ul>
+<p><img src="https://bkimg.cdn.bcebos.com/pic/0b7b02087bf40ad11e5f5a4e572c11dfa8eccee0?x-bce-process=image/format,f_auto/watermark,image_d2F0ZXIvYmFpa2UyNzI,g_7,xp_5,yp_5,P_20/resize,m_lfit,limit_1,h_1080" alt="卡方分布"></p>
+<hr>
+<p>特别的对于v&#x3D;1,也就是$X\sim \chi^2(1)$</p>
+<ul>
+<li>$E[X]&#x3D;1$</li>
+<li>$Var(X)&#x3D;2$</li>
+</ul>
+<hr>
+<p>卡方分布 与 服从正态分布的随机变量直和：设k是一个正整数，$X_1,\cdots,X_k$是相互独立且均服从标准正态分布的随机变量，这意味着 $X_i\sim N(0,1)$, 如果$Y_k&#x3D;\sum_{i&#x3D;1}^k {X_i}^2, Y_{k}\sim \chi^2(k)$$</p>
+<ul>
+<li>再换句话说 ，独立的 卡方分布 的 随机变量之和 ，服从 $k&#x3D;\sum k_i$ 的卡方分布</li>
+</ul>
+<p>变量替换定理：V和W是R^k中有界开集，映射$h:V\to W$, 即是一一对应的，又是映上的</p>
+<ul>
+<li>$h(u_1,\cdots,u_k)&#x3D;(h_1(u_1,\cdots,u_k),\cdots,h_k(u_1,\cdots,u_k))$</li>
+<li>设$f: W\to R$ 是一个连续有界的函数<ul>
+<li>$\int\cdots\int_W f(x_1,\cdots,x_k)dx_1\cdots dx_k$</li>
+<li>&#x3D;$\int\cdots\int_V f(h(u_1,\cdots,u_k)) J(u_1,\cdots,u_k) du_1\cdots du_k$<ul>
+<li>其中$J$是雅可比行列式，也就是 $J_{i行,j列}&#x3D;\frac{\partial h_i}{\partial u_j}$ 偏导矩阵的行列式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="第四部分-极限定理"><a href="#第四部分-极限定理" class="headerlink" title="第四部分 极限定理"></a>第四部分 极限定理</h2><h3 id="17-不等式和大数定律"><a href="#17-不等式和大数定律" class="headerlink" title="17. 不等式和大数定律"></a>17. 不等式和大数定律</h3><p>如果 只知道 <code>E[X]</code>,不可能得到$Prob(X\ge a)$ 的 “不平凡”边界</p>
+<p>马尔可夫不等式（基于全正+均值的基础信息），X是一个均值有限的非负随机变量，均值为$E[X]$(意味着 Prob(X&lt; 0)&#x3D;0), 那么对于任意正数a有</p>
+<ul>
+<li>$Prob(X\ge a)\le \frac{E[X]}{a}$</li>
+<li>如果X是一个有单位量，那么左右都是纯数，很好，像概率</li>
+<li>$Prob(X\ge a)&#x3D;\int_{x&#x3D;a}^{\infty} f_X(x)dx$</li>
+<li>$&#x3D;\int_{x&#x3D;a}^{\infty} 1\cdot f_X(x)dx$</li>
+<li>$\le \int_{x&#x3D;a}^{\infty} \frac{x}{a} \cdot f_X(x)dx$</li>
+<li>$&#x3D;\frac{1}{a} \le \int_{x&#x3D;a}^{\infty} x \cdot f_X(x)dx$</li>
+<li>$&#x3D;\frac{1}{a} E[X]$</li>
+</ul>
+<p>变形：X非负随机变量，均值$E[X]$有限,</p>
+<ul>
+<li>$Prob(X\ge lE[X])\le \frac{1}{l}$</li>
+<li>这是我们利用“有限”信息得到的最好结果</li>
+</ul>
+<hr>
+<p>切比雪夫不等式(Chebnyshev)</p>
+<ul>
+<li>马尔可夫不等式，使用了一个输入来限制概率，即随机变量的均值，这是不够的，而且还要求随机变量非负</li>
+<li>本章要一个更好的不等式（通过依靠更多信息）</li>
+<li>根据 对于分布的研究，$E[X]$是一阶矩，Var(X)是二阶中心矩，很自然的希望能把基础信息增加一个 Var(X)</li>
+<li>X是随机变量,$\mu_X&#x3D;E[X],\sigma^2_X&#x3D;Var(X)$都是有限的，对于任意k&gt;0有</li>
+<li>$Prob(|X-\mu_X|\ge k\sigma_{X})\le \frac{1}{k^2}$<ul>
+<li>自然语言，(((随机变量 与 均值)的距离) 超过 (k倍 标准差) )的 概率 不超过$1&#x2F;k^2$</li>
+</ul>
+</li>
+<li>k 越大 ，限制的范围越小</li>
+<li>$&#x3D;\int_{x:|x-\mu_x|\ge k_{\sigma_X}} 1\cdot f_X(x)dx$</li>
+<li>$\le \int_{x:|x-\mu_x|\ge k_{\sigma_X}} (\frac{x-\mu_X}{k\sigma_X})^2\cdot f_X(x)dx$</li>
+<li>$&#x3D;\frac{1}{k^2{\sigma^2_X}} \int_{x:|x-\mu_x|\ge k_{\sigma_X}} (x-\mu_X)^2\cdot f_X(x)dx$</li>
+<li>$&#x3D;\frac{1}{k^2{\sigma^2_X}}\int_{-\infty}^{\infty} (x-\mu_X)^2\cdot f_X(x)dx$</li>
+<li>$&#x3D;\frac{1}{k^2}$</li>
+<li>另一个好处是没有对于X要正的上定义的限制了</li>
+</ul>
+<p>我觉得一点之前我卡住的点现在想通了</p>
+<ul>
+<li>之前以为这个玩意能“消灭可能性”，然而这两个全是模型概率，并不能消灭可能性</li>
+<li>可能之前有些书上写的是“准确度”，但是这个 词的 中文理解 出了 数学偏差</li>
+</ul>
+<hr>
+<p>例子：正态分布上$X\sim N(0,1)$</p>
+<ul>
+<li>$|X|\ge 2,5,10$ 通过切比雪夫的得到的概率是 25%, 4%,1%</li>
+<li>然而 通过积分得到的是 4.55%,0.0000573%,1.52x10^{-21}%<ul>
+<li>注意到差距非常大</li>
+<li>因为 切比雪夫的条件很弱（只用了 EX Var(X)), 可能只是个很远的上界</li>
+</ul>
+</li>
+<li>又举例了$X\sim Unif(0,1),X\sim Exp(1)$<ul>
+<li>都可以看到，马尔可夫更宽松，切比雪夫稍微近了一些，但都和实际的值有着差距</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>布尔Boole不等式，与邦弗伦尼Bonferroni不等式</p>
+<p>把精确的容斥方法，截断：</p>
+<p>布尔不等式：</p>
+<ul>
+<li>$Prob(\cup A_i)\le \sum Prob(A_i)$</li>
+</ul>
+<p>Bonferroni 不等式：</p>
+<ul>
+<li>(截断到偶数个的$\sum$) $\le$ 真实概率 $\le$ 截断到奇数个的$\sum$<ul>
+<li>这里的截断就是按照 容斥原理中，所选性质的个数 为指标</li>
+</ul>
+</li>
+<li>那么 Boole不等式，不过是 截断到1个时候的情况</li>
+<li>用途就是，不需要完全计算，可以大约的得到一个上下界</li>
+</ul>
+<hr>
+<p>弱大数定律和大数定律之前，描述不同的收敛类型</p>
+<p>依分布收敛（弱收敛）： $X_i\cdots$ 是随机变量，对应累积分布函数$F_i\cdots$, C是F的连续点构成的实数集，</p>
+<ul>
+<li>若$\lim_{n\to \infty} F_n(x)&#x3D;F(x)$对于所有$x\in C$均成立，</li>
+<li>那么随机变量序列$X_i\cdots$ 依分布收敛（弱收敛）</li>
+<li>换句话说，如果F在x处是连续的，那么累积分布函数列在x处的极限就等于F(x)<ul>
+<li>结论通常被记作$X_n\xrightarrow[]{d} X$或者$X_n\xrightarrow[]{D} X$</li>
+<li>$X_n\xrightarrow[]{d}N(0,1)$ 表示收敛于一个服从标准正态分布的随机变量</li>
+</ul>
+</li>
+<li>例子：<ul>
+<li>离散的 $f_n(x)&#x3D;1&#x2F;n, x\in${0,1&#x2F;n,2&#x2F;n,…,(n-1)&#x2F;n}</li>
+<li>观察它的 CDF 是阶梯形状的函数</li>
+<li>$\lim_{n\to \infty}F_n(x)&#x3D;x$</li>
+<li>$X_n \xrightarrow[]{d} Unif(0,1)$</li>
+</ul>
+</li>
+<li>感觉是 要点点收敛<ul>
+<li>但是例子 $Prob_n(x&#x3D;1&#x2F;n)&#x3D;1$ 的极限是 $F(x)&#x3D;1, x&gt;0$, 注意这里是&gt;0而不是$\ge 0$,不是一个分布函数？（要求右连续？）</li>
+<li>那么希望的是 $F(x)&#x3D;1,x\ge 0$, 所以这里弱收敛 抛开了间断点，比点点收敛要弱</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>依概率收敛: $X_i\cdots$ 都是随机变量，对于 任意$\epsilon &gt; 0$ 都有</p>
+<ul>
+<li>$\lim_{n\to \infty} Prob(|X_n-X|\ge \epsilon)&#x3D;0$</li>
+<li>那么说依概率收敛到 $X_n\xrightarrow[]{p} X$, 或者 $X_n\xrightarrow[]{P} X$, </li>
+<li>常数分布：$\delta_c:$  Prob(X&#x3D;c)&#x3D;1, </li>
+<li>$X_n\sim N(1234,1&#x2F;n^2)$<ul>
+<li>有结果$X_n\xrightarrow[]{p} \delta_{1234}$</li>
+<li>切比雪夫不等式 上场的时候了</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>需要分析学</p>
+<p>几乎必然收敛：$(\Omega,F,Prob)$是一个概率空间，$X_i,\cdots$ 都是随机变量</p>
+<ul>
+<li>如果 $Prob(\omega \in \Omega: \lim_{n\to \infty} X_n(\omega)&#x3D;X(\omega))&#x3D;1$</li>
+<li>几乎必然收敛（或者几乎处处收敛，或者 以概率1 收敛于X）</li>
+</ul>
+<p>必然收敛：$(\Omega,F,Prob)$是一个概率空间，$X_i,\cdots$ 都是随机变量</p>
+<ul>
+<li>如果 $\lim_{n\to \infty} X_n(\omega)&#x3D;X(\omega)$</li>
+<li>必然收敛</li>
+</ul>
+<hr>
+<p>弱大数定律与强大数定律</p>
+<p>对于 随机变量$X_1\cdots X_n$,令$\bar{X_n}&#x3D;\frac{\sum {X_i}}{n}$</p>
+<ul>
+<li>中心极限定理（20.2.2） 指出， 适当假设下</li>
+<li>$Z_n&#x3D;(\bar{X_n}-E[\bar{X_n}])&#x2F;StDev(\bar{X_n})$ 会收敛于正态分布</li>
+<li>假设 同分布，均值有限</li>
+</ul>
+<p>弱大数定律：</p>
+<ul>
+<li>$X_i\cdots$ 独立同分布随机变量，均值$\mu$, $\bar{X_n}&#x3D;\frac{\sum {X_i}}{n}$<ul>
+<li>那么 $\bar{X_n}\xrightarrow[]{p}\mu$ 依概率收敛于$\mu$</li>
+<li>证明：<ul>
+<li>$E[\bar{X_n}]&#x3D;\mu$</li>
+<li>$Var(\bar{X_n})&#x3D;\frac{\sigma^2}{n}$</li>
+<li>切比雪夫可以控制 到$\mu$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>强大数定律：<ul>
+<li>其它和 弱大数定律一致，前提都一致，</li>
+<li>区别是 弱大数定律是 依概率收敛，而强大数定律是几乎处处收敛</li>
+</ul>
+</li>
+</ul>
+<h3 id="18-斯特林公式"><a href="#18-斯特林公式" class="headerlink" title="18. 斯特林公式"></a>18. 斯特林公式</h3><p>前面研究了 阶乘 与 gamma函数的关系</p>
+<p>当n较大时，$n! \sim n^ne^{-n}\sqrt{2\pi n}$</p>
+<ul>
+<li>或者说$\lim_{n\to \infty} \frac{n!}{n^ne^{-n}\sqrt{2\pi n}}&#x3D;1$</li>
+<li>再准确些 $n!&#x3D;n^ne^{-n}\sqrt{2\pi n} (1+\frac{1}{12n}+\frac{1}{288n^2}\cdots)$</li>
+</ul>
+<p>正反面抛硬币，2n次的期望次数是n,随着n增大也是$E[X]&#x3D;n$ 但是另一方面，Prob(X&#x3D;n) 趋于0</p>
+<ul>
+<li>标准差是 $\sqrt{n&#x2F;2}$ 意味着，均值“窗口”也在增长</li>
+<li>Prob(X&#x3D;n)&#x3D;$\binom{2n}{n}(1&#x2F;2)^n(1&#x2F;2)^n$<ul>
+<li>$约为 \frac{1}{\sqrt{\pi n}}$ 用斯特林公式替换掉前面的binom</li>
+</ul>
+</li>
+</ul>
+<p>引理 18.3.1 对于任意$\epsilon \le 1&#x2F;9$, $|k|\le (2N)^{1&#x2F;2+\epsilon}$ 时，如果$N\to \infty$, 那么有</p>
+<ul>
+<li>$(1+\frac{K}{N})^{N+\frac{1}{2}+k}(1-\frac{K}{N})^{N+\frac{1}{2}-k} \to e^{k^2&#x2F;N}e^{O(N^{-1&#x2F;6})}$</li>
+<li>对 $log(1+x)$的泰勒展开</li>
+<li>$\binom{2N}{N+k}\frac{1}{2^{2N}}$ 约等于 $\frac{2}{\sqrt{2\pi (2N)}} e^{-(2k)^2&#x2F;2(2N)}$<ul>
+<li>独立同分布的泊松分布之和 服从 正态分布</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>较弱斯特林公式, $n\ge 3$</p>
+<ul>
+<li>$n^ne^{-n}e\le n!\le n^ne^{-n}en$<ul>
+<li>证明 log n! 的展开 与 积分上下限</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>静态相位法：</p>
+<ul>
+<li>确定对于 Gamma函数定义，对于被积部分确定最大值，变成基于最大值的展开式</li>
+<li>展开式代换</li>
+</ul>
+<h3 id="19-生成函数与卷积"><a href="#19-生成函数与卷积" class="headerlink" title="19. 生成函数与卷积"></a>19. 生成函数与卷积</h3><p>服从泊松分布的随机变量之和： n个独立随机变量，分别服从泊松分布的系数$\lambda_i$</p>
+<ul>
+<li>它们的和 服从 $\sum \lambda_i$的泊松分布</li>
+</ul>
+<p>定义19.2.1 生成函数, $G_a(s)&#x3D;\sum_{i&#x3D;0}^{\infty} a_is^i$,其中s是使这个和收敛的任意数</p>
+<ul>
+<li>Fib为例:<ul>
+<li>$G_{fib}&#x3D;\sum_{i&#x3D;0}^{\infty} F_is^i$</li>
+<li>$G&#x3D;s+sG+s^2G$</li>
+<li>G&#x3D;$\frac{s}{1-s-s^2}$</li>
+<li>$F_n&#x3D;\frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2})^n-\frac{1}{\sqrt{5}}(\frac{1-\sqrt{5}}{2})^n$ 比内公式</li>
+<li>这里还给了矩阵乘法 特征根的 内容</li>
+</ul>
+</li>
+<li>定理19.3.1 序列生成函数的唯一性<ul>
+<li>在$|s| &lt; \delta$ 使得序列收敛，两个序列系数对应相等 当且仅当 在 收敛范围内生成函数带入后值全部相等</li>
+</ul>
+</li>
+<li>离散型随机变量的卷积：<ul>
+<li>序列卷积</li>
+<li>一个重要结论 生成函数 展开后 互相卷积的结果的生成函数 &#x3D; 两个原函数的乘积<ul>
+<li>这在简化数学运算 很有用，一些算法竞赛里也很有用</li>
+<li>$G(s)&#x3D;G_a(s)G_b(s)$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>注意到之前的 随机变量之和的过程 是卷积</p>
+<ul>
+<li>这里定义概率生成函数, 对于离散型</li>
+<li>$G_X(s)&#x3D;\sum_{m&#x3D;-\infty}^{\infty} s^m Prob(X&#x3D;m)$</li>
+<li>那么有了 结论 针对 独立 离散变量</li>
+<li>$G_{\sum X_i}(s)&#x3D;\prod G_{X_i}(s)$<ul>
+<li>独立离散随机变量，和的概率密度函数 是 各个随机变量概率的卷积</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>连续型</p>
+<p>概率生成函数$G_X(s)&#x3D;\int_{-\infty}^{\infty} s^xf(x)dx$</p>
+<p>例子 指数生成函数 $G_X(s)&#x3D;\int_0^{\infty} s^x \frac{1}{\lambda} e^{-x&#x2F;\lambda} dx&#x3D;\frac{1}{1-\lambda \log s}$</p>
+<p>函数卷积 $f\star g(x)&#x3D;\int_{-\infty}^{\infty} f(t)g(x-t)dt$</p>
+<ul>
+<li>$G_{f\star g}&#x3D;G_{g\star f}&#x3D;G_f\cdot G_g$</li>
+</ul>
+<hr>
+<p>矩母函数的定义与性质</p>
+<p>首先 $G_a(s)&#x3D;\sum_{i&#x3D;0}^{\infty}a_is^i$, 反过去有 $a_t&#x3D;\frac{1}{t!}\frac{d^t}{ds^t}(G_a(s))$</p>
+<ul>
+<li>矩母函数 不含 $\frac{1}{t!}$这样的东西</li>
+</ul>
+<p>定义19.6.1 矩, X是一个概率密度函数为f的随机变量，</p>
+<ul>
+<li>如果X是离散的，并且仅当取$x_m$时概率不为0,那么它的k阶矩$\mu_k’$被定义为<ul>
+<li>$\mu_k’&#x3D;\sum_{i&#x3D;0}^{\infty} x_i^kf(x_i)$</li>
+</ul>
+</li>
+<li>如果X是连续的<ul>
+<li>$\mu_k’&#x3D;\int_{-\infty}^{\infty} x^kf(x)dx$</li>
+</ul>
+</li>
+<li>$\mu_k’&#x3D; E[X^k]$</li>
+<li>k阶中心矩$\mu_k&#x3D;E[(X-\mu_1’)^k]$</li>
+</ul>
+<p>19.6.2 矩母函数:</p>
+<ul>
+<li>$M_X(t)&#x3D;E[e^{tX}]&#x3D;G_X(e^t)$<ul>
+<li>$G_X(s)&#x3D;M_X(\log s)$</li>
+</ul>
+</li>
+<li>离散的 $&#x3D;\sum_{i&#x3D;-\infty}^{\infty} (e^{t})^{x_i}f(x_i)$</li>
+<li>连续的 $&#x3D;\int_{-\infty}^{\infty} e^{tx}f(x)dx$</li>
+<li>也就是 还是卷积的思想，不过 把$s$写作$e^t$</li>
+</ul>
+<p>19.6.3 X随机变量, 矩$\mu_k’$</p>
+<ul>
+<li>$M_X(t)&#x3D;1+\mu_1’t+\frac{\mu_2’t^2}{2!}+\frac{\mu_3’t^3}{3!}+\cdots$<ul>
+<li>$\mu_k’&#x3D;d^k&#x2F;dt^k (M_X(t)) |_{t&#x3D;0}$</li>
+</ul>
+</li>
+<li>a,b是常数<ul>
+<li>$M_{aX+b}(t)&#x3D;e^{bt}M_X(at)$</li>
+</ul>
+</li>
+<li>独立变量:<ul>
+<li>$M_{\sum X_i}(t)&#x3D;\prod M_{X_i}(t)$</li>
+</ul>
+</li>
+</ul>
+<p>19.6.5 离散型随机变量矩母函数唯一性</p>
+<ul>
+<li>X,Y 取非负整数时 概率才不为0,离散型随机变量，矩母函数在 $|t|&lt;\delta$ 时收敛</li>
+<li>X和Y同分布 &lt;&#x3D;&gt; 存在r&gt;0 矩母函数相等</li>
+</ul>
+<p>然而 对于连续型并没有这么美好</p>
+<ul>
+<li>存在不同的概率分布，有相同的矩<ul>
+<li>$f(x)&#x3D;\frac{1}{\sqrt{2\pi x^2}}e^{-(\log^2 x)&#x2F;2}$</li>
+<li>$g(x)&#x3D;f(x)[1+\sin(2\pi \log x)]$</li>
+<li>函数图像明显的差异</li>
+<li>再来 $h(x)&#x3D;e^{-1&#x2F;x^2}$ 它在0的任意阶导数都是0</li>
+</ul>
+</li>
+<li>离散型的生成函数是唯一的，但连续型的不是<ul>
+<li>参阅 复分析与中心极限定理</li>
+</ul>
+</li>
+</ul>
+<h3 id="20-中心极限定理的证明"><a href="#20-中心极限定理的证明" class="headerlink" title="20. 中心极限定理的证明"></a>20. 中心极限定理的证明</h3><p>中心极限定理(CLT) 概率论中真正的瑰宝之一</p>
+<ul>
+<li>假设弱：条件容易满足</li>
+<li>结果普遍性</li>
+</ul>
+<p>如果存在一些独立同分布的“好”随机变量$X_i$ 并且它们的均值是$\mu$ 且标准差是$\sigma$, </p>
+<ul>
+<li>那么标准化随机变量$Z_n&#x3D;\frac{(\sum X-i)-n\mu}{\sigma \sqrt{n}}$, $E[Z_n]&#x3D;0,Var(Z_n)&#x3D;1$</li>
+<li>会收敛于 N(0,1), 如何收敛（会取决于假设）</li>
+<li>$M_X(t)&#x3D;E[e^{tX}]&#x3D;\int_{-\infty}^{\infty} e^{tx}f_X(x)dx&#x3D;\sum_{n&#x3D;0}^{\infty} \frac{\mu_n’t^n}{n!}$</li>
+<li>$M_X(0)&#x3D;1$ <ul>
+<li>大多数时候 0的邻域内存在， $\delta &gt;0, |t| &lt; \delta$时$M_X(t)$收敛，（柯西分布不存在）</li>
+</ul>
+</li>
+<li>f,g连续，对于所有h满足 int hf &#x3D; int hg,那么f,g相等<ul>
+<li>反证 如果某点不等，通过平移切割可以切割出一个邻域相差足够量的值， 对应区间可以取值，其它区间全0，可以使得 左右积分足量不等</li>
+<li>但这个性质使用上难点是如何尽量少和尽量容易计算的h的选取来完成“测试”</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>正态分布 高斯分布：$f(x)&#x3D;\frac{1}{\sqrt{2\pi \sigma^2}}e^{-(x-\mu)^2&#x2F;(2\sigma^2)}$</p>
+<p>CLT中心极限定理： 独立同分布随机变量 $X_i$, 矩母函数$M_X(t)$, 在领域$|t| &lt; \delta$中收敛</p>
+<ul>
+<li>$\bar{X_N}&#x3D;\frac{X_1+\cdots+X_N}{N}$</li>
+<li>$Z_N&#x3D;\frac{\bar{X_N}-\mu}{\sigma &#x2F; \sqrt{N}}$</li>
+<li>那么$N\to \infty$时，$Z_N$收敛于$N(0,1)$<ul>
+<li>基本形状决定了正态分布的收敛速度 贝里-埃森定理</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>E[X] 均值</li>
+<li>Var(X) 越大，概率密度函数分布越分散</li>
+<li>标准差 $StDev(X)&#x3D;\sqrt{Var(X)}$, 对于单位系统 是同单位的</li>
+</ul>
+<p>例子：</p>
+<ul>
+<li>同样学生，同样内容，两个试卷</li>
+<li>试卷1 94分，但是班级 E[X]&#x3D;97 StDev(X)&#x3D;1</li>
+<li>试卷2 84分，但是班级 E[X]&#x3D;64 StDev(X)&#x3D;10</li>
+<li>会认为第二个更优秀</li>
+</ul>
+<p>随机变量标准化 $Z&#x3D;\frac{X-E[X]}{StDev(X)}&#x3D;\frac{X-\mu}{\sigma}$</p>
+<ul>
+<li>从而 $E[Z]&#x3D;0,Var(Z)&#x3D;1,StDev(Z)&#x3D;1$</li>
+</ul>
+<hr>
+<p>矩母函数相关结果</p>
+<ul>
+<li>正态分布$X\sim N(\mu,\sigma), M_X(t)&#x3D;e^{\mu t+\frac{\sigma^2t^2}{2}}$<ul>
+<li>特别的$X\sim N(0,1),M_X(t)&#x3D;e^{t^2&#x2F;2}$</li>
+</ul>
+</li>
+</ul>
+<p>20.5.4 矩母函数收敛 -&gt; CDF 累积分布函数由 矩母函数给出，且 CDF收敛</p>
+<ul>
+<li>建立了 同时收敛的 的关系</li>
+</ul>
+<hr>
+<p>例子： 泊松分布 $Prob(X&#x3D;k)&#x3D;\frac{\lambda^k e^{-\lambda}}{k!}$, n是正整数</p>
+<ul>
+<li>$X\sim Pois(\lambda)$</li>
+<li>$E[X]&#x3D;\lambda$</li>
+<li>$Var(x)&#x3D;\lambda$</li>
+</ul>
+<p>$M_X(t)&#x3D;1+\mu t+\frac{\mu_2’t^2}{2!}+\cdots &#x3D; e^{\lambda(e^t-1)}$</p>
+<ul>
+<li>$\mu&#x3D;\lambda$一阶导,令t&#x3D;0</li>
+<li>$\mu_2’&#x3D;\lambda+\lambda^2$ 2阶导,令t&#x3D;0<ul>
+<li>$\sigma^2&#x3D;E[X^2]-E[X]^2&#x3D;\lambda$</li>
+</ul>
+</li>
+<li>$E[\bar{X}]&#x3D;\lambda$</li>
+<li>$Var(\bar{X})&#x3D;\frac{\sigma^2}{N}&#x3D;\frac{\lambda}{N}$</li>
+<li>$Z_n&#x3D;\frac{\bar{X_N}-E[\bar{X_N}]}{StDev(\bar{X_N})}$<ul>
+<li>$&#x3D;\frac{\sum X_i-N\mu}{\sigma\sqrt{N}}$</li>
+</ul>
+</li>
+<li>$M_{Z_n}(t)&#x3D;M_{\sum \frac{X_i-\mu}{\sigma\sqrt{N}}}(t)$</li>
+<li>$&#x3D;\prod_N M_{\frac{X_i-\mu}{\sigma\sqrt{N}}}(t)$</li>
+<li>$&#x3D;(M_{\frac{X_i-\mu}{\sigma\sqrt{N}}}(t))^N$</li>
+<li>$&#x3D;(e^{\frac{-\mu t}{\sigma \sqrt{N}}} M_X(\frac{t}{\sigma\sqrt{N}}))^N$ 矩母函数 中随机变量线性变换时的性质 19.6.3</li>
+<li>$&#x3D;(e^{\frac{-\mu t}{\sigma \sqrt{N}}} e^{\mu (e^{\frac{t}{\sigma\sqrt{N}}}-1)})^N$ 使用 泊松分布的矩母函数</li>
+<li>$&#x3D;e^{\frac{-\mu t \sqrt{N}}{\sigma}} e^{\mu N (e^{\frac{t}{\sigma\sqrt{N}}}-1)}$ 使用 泊松分布的矩母函数</li>
+<li>$&#x3D;e^{\frac{-\mu t \sqrt{N}}{\sigma}} e^{\mu N (\frac{t}{\sigma\sqrt{N}}+\frac{1}{2}(\frac{t}{\sigma\sqrt{N}})^2+O(\frac{t^3}{N\sqrt{N}}) )}$ 带O的 泰勒展开</li>
+<li>$&#x3D;e^{\mu N (\frac{1}{2}(\frac{t}{\sigma\sqrt{N}})^2+O(\frac{t^3}{N\sqrt{N}}) )}$刚好第一项抵消</li>
+<li>$&#x3D;e^{\frac{\mu t^2}{2\sigma^2}+O(\frac{t^3}{\sqrt{N}} )}$ 展开</li>
+<li>$&#x3D;e^{\frac{t^2}{2}+O(\frac{t^3}{\sqrt{N}} )}$ 带入具体的mu和sigma</li>
+</ul>
+<p>N足够大，那么就是趋于 正态分布的矩母函数，从而CDF趋于正态分布</p>
+<ul>
+<li>其中大O的部分 控制了收敛速度</li>
+</ul>
+<hr>
+<p>更一般的 $\displaystyle M_{Z_N}(t)&#x3D;\prod_{n&#x3D;1}^N e^{-\frac{\mu t}{\sigma \sqrt{N}}} M_X(\frac{t}{\sigma \sqrt{N}}) &#x3D; e^{-\frac{\mu t \sqrt{N}}{\sigma}} (M_X(\frac{t}{\sigma \sqrt{N}}))^N$</p>
+<ul>
+<li>上面的过程在这里 具体带入了$M_X$</li>
+<li>而如果不知道具体的$M_X$呢</li>
+</ul>
+<p>$\displaystyle \log M_{Z_N}(t)&#x3D; -\frac{\mu t \sqrt{N}}{\sigma} + N \log M_X(\frac{t}{\sigma \sqrt{N}})$</p>
+<p>因为 $\log M_X(t)&#x3D; \log (1+\mu t+\frac{\mu_2’t^2}{2!}+\cdots)$</p>
+<ul>
+<li>$&#x3D;\log (1+t(\mu+\frac{\mu_2’t}{2!}+\cdots))$</li>
+<li>$&#x3D;t(\mu+\frac{\mu_2’t}{2!}+\cdots)) - \frac{t(\mu+\frac{\mu_2’t}{2!}+\cdots))^2}{2} + \cdots$, 对于 log(1+x)展开</li>
+<li>$&#x3D;\mu t + \frac{\mu_2’-\mu^2}{2}t^2+ t^3$或更高次项</li>
+<li>$&#x3D;\mu t + \frac{\sigma^2}{2}t^2+ t^3$或更高次项</li>
+</ul>
+<p>所以 $\displaystyle -\frac{\mu t \sqrt{N}}{\sigma} + N \log M_X(\frac{t}{\sigma \sqrt{N}})$</p>
+<p>$\displaystyle &#x3D; -\frac{\mu t \sqrt{N}}{\sigma} + N (\frac{t}{\sigma \sqrt{N}}+\frac{\sigma^2}{2}(\frac{t}{\sigma \sqrt{N}})^2+(\frac{t}{\sigma \sqrt{N}})^3项或N次数更低项)$</p>
+<p>$\displaystyle &#x3D; \frac{t^2}{2} + O(N^{-1&#x2F;2})$</p>
+<p>而什么时候能抛弃O,也就是 在 0的领域内能收敛</p>
+<hr>
+<p>积分学最大的谎言之一就是你可以求出积分，具体说可以找到漂亮表达式</p>
+<p>中心极限定理 重要应用之一：蒙特卡罗法</p>
+<ul>
+<li>以极高精度确定高维积分</li>
+<li>最早用途是试图了解如何制造原子弹</li>
+</ul>
+<p>核心思想：</p>
+<ul>
+<li>面积 约为 $\frac{落在区域内个数}{总次数} * 包裹面积$，包裹可以用长方形正方形方便计算</li>
+<li>概率论性质，随着样本增大$\bar{X_N}$ 趋于 $E[面积]&#x3D;实际面积, Var[面积] &#x3D; \sqrt{面积(1-面积)}&#x2F;\sqrt{N}$ 的正态分布，也就是方差在不断缩小</li>
+</ul>
+<h3 id="21-傅里叶分析与中心极限定理"><a href="#21-傅里叶分析与中心极限定理" class="headerlink" title="21. 傅里叶分析与中心极限定理"></a>21. 傅里叶分析与中心极限定理</h3><p>引子: $f(x)&#x3D;\frac{C}{1+x^8}$,显然 积分有限，选取合适的C可以变成概率密度函数</p>
+<ul>
+<li>但显然&gt;&#x3D;8偶阶矩无穷大，所以矩母函数不存在，原点附近不收敛，所以满足前面中心极限定理的条件</li>
+<li>Mandelbrot关于金融和大宗商品市场分形特性的研究中，柯西分布就会出现</li>
+<li>虽然 独立同分布 柯西分布不会趋于 正态分布</li>
+<li>但是这个f可以</li>
+</ul>
+<p>剧透：核心是 有限的 <code>E[X],Var(X)</code></p>
+<ul>
+<li>方法是研究密度函数的傅里叶变换，概率论中被称为特征函数</li>
+<li>与矩母函数不同，特征函数总是存在（存在性 更好）</li>
+</ul>
+<p>构造函数到函数的映射 $(\mathcal{K}f)(y)&#x3D;\int_I f(x)K(x,y)dx$</p>
+<p>特别的$K(t,s)&#x3D;e^{-ts}$记作拉普拉斯变换</p>
+<ul>
+<li>$(\mathcal{L}f)(x)&#x3D;\int_{0}^{\infty} f(t)e^{-tx}dt$</li>
+<li>逆变换 $(\mathcal{L^{-1}}g)(x)&#x3D;\lim_{T\to \infty}\frac{1}{2\pi i} \int_{c-i T}^{c+i T} e^{tx}g(t)dt$<ul>
+<li>逆变换 $(\mathcal{L^{-1}}g)(x)&#x3D;\lim_{T\to \infty}\frac{1}{2\pi i} \int_{-T}^{T} e^{(c+ti)x}g(c+ti)idt$</li>
+</ul>
+</li>
+</ul>
+<p>特别的$K(t,s)&#x3D;e^{-2\pi i ts}$记作傅里叶变换</p>
+<ul>
+<li>$(\mathcal{F}f)(y)&#x3D;\hat{f}(y)&#x3D;\int_{-\infty}^{\infty} f(x)e^{-2\pi i xy}dx$</li>
+<li>逆变换$(\mathcal{F^{-1}}f)(y)&#x3D;\int_{-\infty}^{\infty} f(x)e^{2\pi i xy}dx$</li>
+</ul>
+<hr>
+<p>定义21.1.3 施瓦兹空间， $\mathcal{S}(\mathbb{R})$ 是全体满足下列条件的 无限可微函数f构成的集合，对于任意的非负整数m,n有</p>
+<ul>
+<li>$\text{sup}_{x\in\mathbb{R}}|(1+x^2)^m \frac{d^n}{dx^n} (f) | &lt; \infty$, 上确界有限</li>
+<li>例如 高斯分布 导数是 $p_n(x)\frac{1}{\sqrt{2\pi}} e^{-x^2&#x2F;2}$, <ul>
+<li>$|x^m e^{-x^2&#x2F;2}|$ 有界 -&gt; 满足要求</li>
+</ul>
+</li>
+</ul>
+<p>复分析结果：当积分变换来自于唯一输入时，其陈述是精确的</p>
+<p>定理21.1.4反演定理， $f\in \mathcal{S}(\mathbb{R})$，那么</p>
+<ul>
+<li>$f(x)&#x3D;\int_{-\infty}^{\infty} \hat{f}(y) e^{2\pi i xy}\text{d}y$<ul>
+<li>这句白话讲就是 在施瓦兹空间中的函数的傅里叶变换的逆变换得到它自己</li>
+<li>特别的 如果f,g都属于 施瓦兹空间，且傅里叶变换相同，那么f&#x3D;g</li>
+</ul>
+</li>
+</ul>
+<p>作为对比</p>
+<ul>
+<li>矩母函数 $M_X(t)&#x3D;E[e^{tX}]$</li>
+<li>特征函数 $\phi_X(t)&#x3D;E[e^{itX}]$<ul>
+<li>如果X的概率密度函数是连续的，那么对于所有的t,特征函数始终存在</li>
+<li>本质上是概率密度的傅里叶变换 $\phi(-2\pi t)$</li>
+</ul>
+</li>
+</ul>
+<p>为什么复分析的结果可以带来这么大的帮助，反演公理告诉我们，如果初始分布很好，那么知道函数的积分变换就等于知道了这个函数，积分变换可以唯一地确定分布</p>
+<p>对于函数: $f: \mathbb{R}\to \mathbb{C}$，如果存在一个有限的闭区间[a,b],使得当$x \not\in [x,y]$时 $f(x)&#x3D;0$,那么我们说f有 紧支集 [a,b].</p>
+<ul>
+<li>定义在有限闭区间[a,b]上的连续函数g, 存在一个具有紧支集的 施瓦兹函数f,使得f与g能够任意的接近(也就是 $x\in[a,b],|f(x)-g(x)|&lt;\epsilon$)</li>
+<li>类似地 任意给定一个这样的连续函数g,按照上述思路可以找到一系列定义在区间上的阶梯函数之和，并且任意接近于g</li>
+<li>施瓦兹函数是无限可微的</li>
+</ul>
+<p>柯西-施瓦兹不等式：对于复值函数f,g:</p>
+<ul>
+<li>$\int_{-\infty}^{\infty} |f(x)g(x)|dx\le (\int_{-\infty}^{\infty} |f(x)|^2dx)^{1&#x2F;2} (\int_{-\infty}^{\infty} |g(x)|^2dx)^{1&#x2F;2}$<ul>
+<li>这要求平方可积，大多数概率密度函数都能满足这一点</li>
+</ul>
+</li>
+</ul>
+<p>21.2.1 卷积与傅里叶变换,f,g都是$\mathbb{R}$上的连续函数， 如果f,g平方积都是有限的，那么$h&#x3D;f \star g$存在，且$\hat{h}&#x3D;\hat{f}\hat{g}$</p>
+<ul>
+<li>卷积结果 的 傅里叶变换 &#x3D; 傅里叶变换 的 对应位置乘积</li>
+</ul>
+<p>引理21.2.2 ,独立 平方可积的和复合结果 为它们的卷积</p>
+<hr>
+<p>基于 傅里叶变换 的 中心极限定理证明</p>
+<p>定理 21.3.1 $X_i$独立同分布，前3阶矩有限，且概率密度函数的衰减速度“足够快”，</p>
+<ul>
+<li>$Z_{N\to infty}&#x3D;\frac{\bar{X_N}-\mu}{\sigma&#x2F;\sqrt{N}}$ 收敛于标准正态分布$N(0,1)$</li>
+</ul>
+<h2 id="第四部分-其它主题"><a href="#第四部分-其它主题" class="headerlink" title="第四部分 其它主题"></a>第四部分 其它主题</h2><h3 id="22-假设检验"><a href="#22-假设检验" class="headerlink" title="22.  假设检验"></a>22.  假设检验</h3><h4 id="z检验-稳定，中心极限定理，-30个样本，-正态分布检验"><a href="#z检验-稳定，中心极限定理，-30个样本，-正态分布检验" class="headerlink" title="z检验 (稳定，中心极限定理， &gt;&#x3D;30个样本， 正态分布检验)"></a>z检验 (稳定，中心极限定理， &gt;&#x3D;30个样本， 正态分布检验)</h4><p>也就是假设模型，检验和模型的契合程度，或者模型的参数</p>
+<p>通常建立 原假设</p>
+<ul>
+<li>通常与 实验员或研究者试图证明的结论相反</li>
+<li>我们希望 假设原假设正确 用数据推翻它 （像一种无罪推断）</li>
+<li>备选假设 与原假设互补</li>
+<li>在原假设下，如果收集到现在数据的概率最够小。拒绝原假设，接受互补假设</li>
+<li>需要指定一个显著水平限度，$\alpha$水平，也就是说，在原假设下， 小于显著水平，那么就拒绝原假设，例如0.05,<ul>
+<li>你应该在看具体数据 之前 设定边界点（显著水平）</li>
+<li>例如 $N(\mu,\sigma)$的0.05显著水平下，范围是$\mu-1.96\sigma,\mu+1.96\sigma$ <ul>
+<li>这是双侧检验<ul>
+<li>产品寿命检验，  寿命+-</li>
+</ul>
+</li>
+<li>单侧检验的变动值是 $\mu + 1.64\sigma$<ul>
+<li>麦当劳配餐速度检验 &lt; t 或者 &gt;&#x3D;t</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>对于更重要的事情可能选择更小的显著性水平</li>
+</ul>
+</li>
+</ul>
+<p>检验统计量，数据越多越好，方差越小，两倍数据方差减半</p>
+<ul>
+<li>之前结论$\bar{X}\sim N(\mu,\sigma^2&#x2F;n)$ 随着n增大</li>
+</ul>
+<p>样本均值的检验统计量——z统计量</p>
+<ul>
+<li>$X$服从方差$\sigma^2$的正态分布，假设其均值为$\mu$,<ul>
+<li>如果$X$是服从某个“良好性质”分布, n&gt;&#x3D;30时，$\bar{X}$会近似于服从正态分布</li>
+</ul>
+</li>
+<li>$x_i$是从该分布中出取出的n个相互独立的观测值。$\bar{x}$为样本均值</li>
+<li>$z&#x3D;\frac{\bar{x}-\mu}{\sigma &#x2F; \sqrt{n}}$ 称作观测到的z检验统计量</li>
+<li>$Z\sim N(0,1)$</li>
+<li>称作z,是因为稳定的</li>
+</ul>
+<h4 id="p检验-（成立指标）"><a href="#p检验-（成立指标）" class="headerlink" title="p检验 （成立指标）"></a>p检验 （成立指标）</h4><p>p值让我们了解到收集的数据远离已有值的概率</p>
+<ul>
+<li>p值是条件概率，原假设成立的前提下，收集到已有数据的概率</li>
+<li>上下文有关</li>
+<li>对于相同数据的不同检验可以产生不同的p值</li>
+<li>p值不是原假设成立的概率</li>
+</ul>
+<p>抛硬币20次，12次正面,</p>
+<ul>
+<li><p>原假设 硬币均匀</p>
+</li>
+<li><p>p值&#x3D; 出现12~20次正面概率和 + 出现0～8次正面概率和 &#x3D; 0.503</p>
+</li>
+<li><p>不接受，只拒绝或者无法拒绝</p>
+</li>
+<li><p>如果原假设成立，收集到已有证据的条件概率</p>
+</li>
+<li><p>而不是在已经收集了数据的前提下，原假设成立的概率</p>
+</li>
+<li><p>样本太小 也不会用正态检验，有的直接二项分布检验</p>
+</li>
+</ul>
+<h4 id="t检验-（量少，不知道方差）"><a href="#t检验-（量少，不知道方差）" class="headerlink" title="t检验 （量少，不知道方差）"></a>t检验 （量少，不知道方差）</h4><ul>
+<li>z检验要我们明确知道方差（模型），但很多时候做不到这一点</li>
+<li>可以从数据中得到方差的估计值，并用它来替代实际方案</li>
+<li>利用样本方差来改变检验统计量的分布</li>
+</ul>
+<p>估计样本方差$s^{2}&#x3D;\frac{1}{n-1}\sum_{i&#x3D;0}^n (x_i-\bar{x})^2$</p>
+<ul>
+<li>这里$n-1$基于统计学的 自由度 概念，对于任意一个给定的估计，自由度是作出该估计需要的独立观测值的个数</li>
+<li>另一个说法 $E[s^2]&#x3D;\sigma^2$ 无偏估计量</li>
+</ul>
+<p>t分布，是一个分布族，参数是自由度，$X_i\sim N(0,1)$相互独立随机变量$S_n^2$是样本方差随机变量</p>
+<ul>
+<li>那么$\bar{X}&#x2F;{S_n&#x2F;\sqrt{n}}$ 称为自由度n-1的t分布，记作$T_{n-1}$</li>
+<li>对于自由度$v$的t分布，概率密度函数的解析表达式$\frac{\Gamma(\frac{v+1}{2})}{\sqrt{v\pi}\Gamma(v&#x2F;2)}(1+\frac{x^2}{v})^{-\frac{v+1}{2}}$</li>
+<li>如果基本分布被推测均值是$\mu$的正态分布,方差未知<ul>
+<li>检验统计量$\frac{\bar{x}-\mu}{s&#x2F;\sqrt{n}}\sim t_{n-1}$</li>
+<li>t分布在n趋于无穷大时，趋于正态分布</li>
+</ul>
+</li>
+<li>因为信息更少（不知道方差，所以比z检验更难拒绝）， 但适用范围更广</li>
+</ul>
+<hr>
+<ul>
+<li>概率论证 从来都不是决定性的</li>
+<li>我们可能会犯两种错误<ul>
+<li>拒绝一个正确的原假设<ul>
+<li>恰好是$\alpha$水平</li>
+</ul>
+</li>
+<li>无法拒绝一个不正确的原假设<ul>
+<li>原假设与事实非常接近</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="检验方差"><a href="#检验方差" class="headerlink" title="检验方差"></a>检验方差</h4><p>目前只检验了均值，接下来如何对方差进行测试</p>
+<ul>
+<li>服从正态分布的随机变量与服从卡方分布的随机变量之间有一定的关联</li>
+<li>这种关联引出了样本方差与t检验</li>
+<li>我们可以利用服从卡方分布的随机变量来检验理论和实验的拟合优度</li>
+</ul>
+<p>卡方分布$X\sim N(0,1),X^2\sim \chi^2(1)$</p>
+<ul>
+<li>概率密度函数 $1&#x2F;\sqrt{2\pi}x^{-1&#x2F;2}e^{-x&#x2F;2}$</li>
+<li>$Y&#x3D;\sum_n X_i^2 \sim \chi^2(n)$<ul>
+<li>概率密度函数 $\frac{1}{2^{k&#x2F;2}\Gamma(k&#x2F;2)}x^{k&#x2F;2-1}e^{-x&#x2F;2}$</li>
+</ul>
+</li>
+<li>服从正态分布的随机变量，其样本方差与$\chi^2$分布密切相关</li>
+</ul>
+<p>$\sum_{i&#x3D;1}^{n}(\frac{x_i-\mu}{\sigma})^2&#x3D;\frac{1}{\sigma^2}\sum_{i&#x3D;1}^n(x_i-\bar{x})^2+(\frac{\bar{x}-\mu}{\sigma&#x2F;\sqrt{n}})^2$</p>
+<p>$\chi^2(n)&#x3D;()+\chi^2(1)$</p>
+<p>$\frac{(n-1)s^2}{\sigma^2}\sim \chi^2_{n-1}$</p>
+<hr>
+<p>用  卡方分布定义 t分布</p>
+<p>自由度为 k的t分布， $X\sim N(0,1)$, $Y_n \sim \chi_n^2$</p>
+<ul>
+<li>$\frac{X}{\sqrt{Y_n&#x2F;n}}\sim t_n$</li>
+<li>$t_{n-1} \sim \frac{\bar{x}-\mu}{s&#x2F;\sqrt{n}}&#x3D;\frac{\bar{x}-\mu}{\sigma&#x2F;\sqrt{n}}\frac{1}{\sqrt{\frac{1}{n-1}\frac{(n-1)s^2}{\sigma^2}}}&#x3D;X\frac{1}{\sqrt{\frac{1}{n-1}Y_{n-1}}}$</li>
+</ul>
+<hr>
+<p>列表数据过拟合，检验</p>
+<p>$\chi^2_{k-1}&#x3D;\sum_{i&#x3D;1}^k \frac{(O_i-E_i)^2}{E_i}$</p>
+<ul>
+<li>第i个结果出现观测次数：$O_i$</li>
+<li>E_i在原假设下 预期观测到次数</li>
+</ul>
+<hr>
+<p>双样本检验</p>
+<ul>
+<li>对两个总体进行检验，它们方差已知但互不相同</li>
+<li>对两个总体进行检验，它们方差未知但是相等，合并（样本）房颤，对未知房颤的加权估计</li>
+<li>对于方差未知，且互不相同的两个总体，我们可以利用近似来处理</li>
+</ul>
+<p>知道方差，构造 $\bar{X}-\bar{Y}$, 如果相互独立</p>
+<ul>
+<li>$Var(\bar{X}-\bar{Y})&#x3D;Var(\bar{X})+Var(\bar{Y})&#x3D;\frac{\sigma_X^2}{n_X}+\frac{\sigma_Y^2}{n_Y}$</li>
+<li>$E(\bar{X}-\bar{Y})&#x3D;\mu_X-\mu_Y$</li>
+<li>$z&#x3D;\frac{(\bar{X}-\bar{Y})-(\mu_X-\mu_Y)}{\sqrt{\frac{\sigma_X^2}{n_X}+\frac{\sigma_Y^2}{n_Y}}} \sim N(0,1)$</li>
+</ul>
+<p>未知方差，但相等</p>
+<ul>
+<li>$s_p^2&#x3D;\frac{(n_x-1)s_x^2+(n_y-1)s_y^2}{n_x-1+n_y-1}$<ul>
+<li>令$r&#x3D;\frac{n_x-1}{n_x-1+n_y-1}$有$s_p^2&#x3D;rs_x^2+(1-r)s_y^2$</li>
+</ul>
+</li>
+<li>$\frac{(\bar{X}-\bar{Y})-(\mu_X-\mu_Y)}{\sqrt{\frac{s_p^2}{n_X}+\frac{s_p^2}{n_Y}}} \sim t_{n_x+n_y-2}$</li>
+</ul>
+<p>未知方差，不相等</p>
+<ul>
+<li>$\frac{(\bar{X}-\bar{Y})-(\mu_X-\mu_Y)}{\sqrt{\frac{s_x^2}{n_X}+\frac{s_y^2}{n_Y}}} 约为 t_v$</li>
+</ul>
+<p>$v&#x3D;\frac{(\frac{s_x^2}{n_x}+\frac{s_y^2}{n_y})^2}{\frac{s_x^4}{n_x^2(n_x-1)}+\frac{s_y^4}{n_y^2(n_y-1)}}$</p>
+<h3 id="23-差分方程、马尔科夫过程和概率论"><a href="#23-差分方程、马尔科夫过程和概率论" class="headerlink" title="23. 差分方程、马尔科夫过程和概率论"></a>23. 差分方程、马尔科夫过程和概率论</h3><p>翻倍加一，看起来“让最终成功”的概率很大，但每次的风险是低收益，高损失可能的</p>
+<ul>
+<li>例如你最多连续下5次</li>
+<li>那么 最终失败的代价是$2^{64}$每次成功的收益是1</li>
+<li>而 实际上你面对的概率是 n次连续操作中，出现连续失败长度 &gt;&#x3D;5的概率<ul>
+<li>100次时 81.01%</li>
+<li>200次时 96.59%</li>
+</ul>
+</li>
+<li>fib数列 趋于 $\frac{1}{\sqrt{5}}(\frac{1+\sqrt{5}}{2})^n$<ul>
+<li>来自递推数列的启发</li>
+<li>上面也可以递推算出</li>
+</ul>
+</li>
+<li>概率 估计 100切成20组每组5个，可以确定一个下界</li>
+</ul>
+<p>线性递推函数</p>
+<ul>
+<li>特征方程的根，特征值</li>
+</ul>
+<hr>
+<p>马尔可夫过程</p>
+<ul>
+<li>群动力学</li>
+<li>莱斯利矩阵</li>
+<li>随机矩阵论</li>
+<li>马尔可夫过程：只需要n时刻状态，已知变化规律（线性？），可以推出n+1时刻状态</li>
+</ul>
+<h3 id="24-最小二乘法"><a href="#24-最小二乘法" class="headerlink" title="24. 最小二乘法"></a>24. 最小二乘法</h3><p>拟合到一条直线上</p>
+<p>我们几乎不可能观察到完美的线性关系</p>
+<p>定义误差函数 E(a,b)&#x3D;$\sum_{i&#x3D;1}^N (y_i-(ax_i+b))^2$</p>
+<p>最值 $\nabla E(a,b)&#x3D;(\frac{\partial E}{\partial a},\frac{\partial E}{\partial b})&#x3D;(0,0)$</p>
+<ul>
+<li>$\sum_{i&#x3D;1}^n (y_i-(ax_i+b))x_i&#x3D;0$</li>
+<li>$\sum_{i&#x3D;1}^n (y_i-(ax_i+b))&#x3D;0$</li>
+</ul>
+<h3 id="25-婚姻秘书问题，蒙提霍尔问题"><a href="#25-婚姻秘书问题，蒙提霍尔问题" class="headerlink" title="25. 婚姻秘书问题，蒙提霍尔问题"></a>25. 婚姻秘书问题，蒙提霍尔问题</h3><p>秘书问题</p>
+<ul>
+<li>n个申请人，每人面试一次，立即决定录用与否，不录用则失去机会，什么策略选到最佳候选人的概率最大</li>
+<li>我们假设所有人有排名（均匀离散）</li>
+<li>要录用排名第一的人的概率最大，而不是我们要录用的人的 排名概率加权的期望最大，数学模型简单，但和现实更不符合</li>
+<li>面试次序等概率。</li>
+</ul>
+<p>Prob(成功)&#x3D;\sum Prob(成功|第i个是最优秀) * Prob(第i个是最优秀的)</p>
+<ul>
+<li>期望 基础&#x3D;前k个人最大值，然后 首次遇到超过这个值得就录用，那么需要 最优的人前面的第二优的人在前k人中</li>
+<li>在这个模型策略下 k 约为 n&#x2F;e</li>
+</ul>
+<hr>
+<p>蒙提霍尔问题</p>
+<ul>
+<li>3门，开一门，是否换门的后验概率问题</li>
+</ul>
+<h2 id="碎片"><a href="#碎片" class="headerlink" title="碎片"></a>碎片</h2><p>随想</p>
+<ol>
+<li>有习题，没习题答案，习题远超课程讲的</li>
+<li>我觉得 这本和之前微积分lifesaver都可以算“导读”类的书，一些细微的，需要教科书，更需要习题册，甚至我觉得带有答案的习题册更重要</li>
+<li>这本书很多专业名词首次出现时没有英文</li>
+<li>这本书还是有不少公式是 drop from sky的</li>
+<li>这书的符号 有的时候还是有些混乱，一会i一会n一会m的</li>
+<li>这里不同分布之间的关联讲得很有用<ol>
+<li>这书的脉络 联系上是真不错，例子还是不够，非数学的外部带入感感觉还有可以加入的东西，例如我有些没理解的知乎搜的一些相关解释</li>
+</ol>
+</li>
+</ol>
+<p>外链</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/23236070">概率论中，「矩」（moment）的实际含义是什么？高阶矩表示数据的哪些状态？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/25344430">随机变量的矩和高阶矩有什么实在的含义？</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19915565">统计学中「矩」这个概念是怎么引入的？它为什么被称为矩？它与物理意义上的矩有什么相同与不同？</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27468615">概率收敛、均方收敛、分布收敛、几乎处处收敛区别与联系的直观解释？</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag"># 概率论</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/the_calculus_lifesaver/" rel="prev" title="普林斯顿 微积分读本">
+                  <i class="fa fa-chevron-left"></i> 普林斯顿 微积分读本
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/A_First_Course_in_Probability/" rel="next" title="概率论基础教程">
+                  概率论基础教程 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

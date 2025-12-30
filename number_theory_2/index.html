@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数论基础 二 数论函数">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/number_theory_2/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.620Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数论基础">
+<meta property="article:tag" content="Dirichlet乘积">
+<meta property="article:tag" content="Dirichlet逆">
+<meta property="article:tag" content="可乘函数">
+<meta property="article:tag" content="完全可乘函数">
+<meta property="article:tag" content="Mobius变换">
+<meta property="article:tag" content="Mobius反演">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/number_theory_2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/number_theory_2/","path":"number_theory_2/","title":"数论基础 二 数论函数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数论基础 二 数论函数 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E8%AE%BA%E5%87%BD%E6%95%B0%E4%B8%BE%E4%BE%8B"><span class="nav-number">1.</span> <span class="nav-text">数论函数举例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dirichlet-%E4%B9%98%E7%A7%AF-%E5%8D%B7%E7%A7%AF"><span class="nav-number">2.</span> <span class="nav-text">Dirichlet 乘积 &#x2F;卷积</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E4%B9%98%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">可乘函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%B6%E7%9A%84%E4%BC%B0%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">阶的估计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B9%BF%E4%B9%89Dirichlet%E4%B9%98%E7%A7%AF"><span class="nav-number">5.</span> <span class="nav-text">广义Dirichlet乘积</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-number">6.</span> <span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-lambda-n-1-Omega-n-%E6%B1%82-sum-d-n-lambda-d-d-s-%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E8%AF%81%E6%98%8E-sum-k-1-x-lambda-k-frac-x-k-sqrt-x"><span class="nav-number">6.1.</span> <span class="nav-text">9. $\lambda(n)&#x3D;(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;[\sqrt{x}]$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E8%AE%BE-displaystyle-s-n-sum-j-in-1-n-gcd-j-n-1-j-2-%E8%AF%81%E6%98%8E-displaystyle-sum-d-n-frac-s-d-d-2-frac-1-n-2-sum-j-1-n-j-2-s-n-n-2-frac-1-3-phi-n-frac-1-2-sum-d-n-mu-d-frac-1-6n-prod-p-n-1-p"><span class="nav-number">6.2.</span> <span class="nav-text">14. 设$\displaystyle s(n)&#x3D;\sum_{j\in[1,n],\gcd(j,n)&#x3D;1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}&#x3D;\frac{1}{n^2}\sum_{j&#x3D;1}^n j^2$,$s(n)&#x3D;n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%B1%82%E6%89%80%E6%9C%89%E4%BD%BF%E5%BE%97-phi-n-24"><span class="nav-number">6.3.</span> <span class="nav-text">16. 求所有使得$\phi(n)&#x3D; 24$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E8%AF%81%E6%98%8E-n-%E4%B8%BA%E5%90%88%E6%95%B0%E6%97%B6-phi-n-le-n-sqrt-n"><span class="nav-number">6.4.</span> <span class="nav-text">17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-d-%E4%B8%BA%E8%87%AA%E7%84%B6%E6%95%B0-x-ge-1-%E5%88%99-displaystyle-sum-m-le-x-gcd-m-d-1-frac-mu-2-m-phi-m-ge-frac-phi-d-d-log-x-1"><span class="nav-number">6.5.</span> <span class="nav-text">25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/number_theory_2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数论基础 二 数论函数 | YeXiaoRain's Math">
+      <meta itemprop="description" content="1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数论基础 二 数论函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-03-16 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-16T00:00:00+08:00">2023-03-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数论基础</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>4.6k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>17 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">1. 数论函数举例 2. Dirichlet 乘积 3. 可乘函数 4. 阶的估计 5. 广义Dirichlet乘积</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="数论函数举例"><a href="#数论函数举例" class="headerlink" title="数论函数举例"></a>数论函数举例</h1><p>定义1: 在全体正整数上定义的函数是数论函数</p>
+<p>$u(n)&#x3D;1 , n\ge 1$, $u\circ U &#x3D; [x]$</p>
+<p>$e(n)&#x3D;n , n\ge 1$</p>
+<p>$\displaystyle I(n)&#x3D;\left\lbrace \begin{array}{lc} 1, n &#x3D; 1\\ 0,n&gt;1 \end{array}\right.$,$I&#x3D;\mu * u$</p>
+<p>$\displaystyle d(n)&#x3D;\sum_{d|n} 1 &#x3D;n$的质数因子的幂次+1的乘积(因子个数函数), $d&#x3D;u * u$, 也就有了$u&#x3D;d * \mu$</p>
+<p>$\Omega(n) &#x3D;$质数因子幂次和(重复的统计质因子个数)</p>
+<p>$\omega(n) &#x3D;$不同质数因子个数</p>
+<p>$\displaystyle \sigma_\lambda(n)&#x3D;\sum_{d|n} d^\lambda$ 正除数的幂和函数$\sigma &#x3D; e * u$</p>
+<p>$\displaystyle \phi(n)&#x3D;\sum_{1\le d \le n,\gcd(d,n)&#x3D;1} 1$ 所有不超过$n$和$n$互素的正整数个数,Euler函数,$\phi&#x3D;\mu * e&#x3D;n\prod_{d|n}(1-\frac{1}{p})$</p>
+<p>$\mathrm{M\ddot{o}bius}$函数 $\mu(n) &#x3D;\left\lbrace \begin{array}{lc}1,&amp; n&#x3D;1 \\ (-1)^s, &amp; n&#x3D;p_1p_2\cdots p_s, p_i&lt;p_{i+1} \\ 0,&amp; \text{others}\end{array}\right.$</p>
+<p>$\mathrm{Mangoldt}$函数$\Lambda(n)&#x3D;\left\lbrace\begin{array}{lc} \log p,&amp;n&#x3D;p^k,k\ge 1 \\ 0, &amp;others\end{array}\right.$</p>
+<p>$\displaystyle \log n&#x3D;\sum_{d|n}\Lambda(d)$, 这样得到另一种表达方式$\displaystyle \Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log{\frac{n}{d}}&#x3D;\mu * \log&#x3D;-\sum_{d|n}\mu(d)\log d$</p>
+<p>$\mathrm{Liouville}$函数$\lambda(n) &#x3D; (-1)^{\Omega(n)}&#x3D; [n\text{ is square}] * \mu$</p>
+<h1 id="Dirichlet-乘积-卷积"><a href="#Dirichlet-乘积-卷积" class="headerlink" title="Dirichlet 乘积 &#x2F;卷积"></a>Dirichlet 乘积 &#x2F;卷积</h1><p>定义2: $f(n),g(n)$是两个数论函数,$h&#x3D;f * g$称作Dirichlet 乘积&#x2F;卷积</p>
+<p>$\displaystyle h(n) &#x3D; \sum_{d|n}f(d)g(\frac{n}{d})$, 从理解上就是f和g中x相乘为n的对应y的乘积的和, 所以也可以写成$(f * g)(n) &#x3D;\sum_{ab &#x3D; n}f(a)g(b)$</p>
+<p>定理1: Dirichlet乘积满足 交换率$f * g &#x3D; g * f$和结合率$(f * g)* h &#x3D; f * (g * h)$</p>
+<p>一个重要的公式(算法竞赛里拆$\gcd(a,b)&#x3D;1$会使用) $I &#x3D; \mu * u &#x3D; \mu * 1 &#x3D; \sum_{d|n} \mu(d) &#x3D; \left\lbrace \begin{array}{lc} 1,&amp;n&#x3D;1\\ 0, &amp; n&gt;1 \end{array}\right.$<br>证明$\sum_{d|n} \mu(d) &#x3D; \mu(1)+\mu(p_1)+\cdots+\mu(p_s)+\cdots+\mu(p_1p_2)+\cdots+\mu(p_1p_2\cdots p_s)$ </p>
+<p>$&#x3D; 1\binom{s}{0}+(-1)^1\binom{s}{1}+\cdots+(-1)^s\binom{s}{s} &#x3D; (1-1)^s$</p>
+<p>定义3: 若 $I &#x3D; f * g$ 则$f$和$g$互为Dirichlet的逆</p>
+<p>定理2: $f * I &#x3D; I * f &#x3D; f$</p>
+<p>定义4: $F&#x3D;f*u$ 则$F$称作$f$的$\mathrm{M\ddot{o}bius}$变换, $F(n) &#x3D; \sum_{d|n} f(d)$, 如$d&#x3D;u * u, I &#x3D; \mu * u$</p>
+<p>定理3(这也就是算法里常见的Mobius反演): $F&#x3D;f * u \Rightarrow f&#x3D;F * \mu$, $F(n) &#x3D; \sum_{d|n} f(d) \Rightarrow f(n)&#x3D;\sum_{d|n} F(d)\mu(\frac{n}{d})$, 反向一样的推法</p>
+<p>证明$F * \mu &#x3D; (f * u) * \mu &#x3D; f * (u * \mu) &#x3D; f * I &#x3D; f$</p>
+<p>例1: 证明$e &#x3D; \phi * u$, 即要证明$n&#x3D;\sum_{d|n}\phi(d)$, 因为根据定义$\phi(n)&#x3D;\sum_{d|n} \mu(d)\frac{n}{d}$即$\phi &#x3D; \mu * e$</p>
+<p>例2: 证明$\log n &#x3D; \Lambda * u$, 即要证明$\log n&#x3D;\sum_{d|n}\Lambda(d)$, 展开$d$即可,这样得到另一种表达方式$\Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log{\frac{n}{d}}$</p>
+<h1 id="可乘函数"><a href="#可乘函数" class="headerlink" title="可乘函数"></a>可乘函数</h1><blockquote>
+<p>可乘的一个好处是只需要计算$f(p^\alpha)$,以后再乘起来,证明时对于可乘函数也只需要证明质数幂次的情况<br>完全可乘的一个好处是能快速得到Dirichlet逆$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
+</blockquote>
+<p>定义5: 定义在全体自然数上，且不恒等于零的数论函数,若$f(mn)&#x3D;f(m)f(n), \gcd(m,n)&#x3D;1$,则称它为可乘&#x2F;积性函数,若没有$\gcd$的限制，全部满足$f(mn)&#x3D;f(m)f(n)$则称作完全&#x2F;绝对 可乘函数</p>
+<p>例3: $\mu(n),d(n)$为可乘函数与,$\mathrm{Liouville}$函数,$e^\lambda(n)&#x3D;n^{\lambda},I(n)$ 为完全可乘函数</p>
+<p>定理4: 可乘函数$f(n)$有如下性质</p>
+<ul>
+<li>$f(1)&#x3D;1$</li>
+<li>$f(n)&#x3D;f(p_1^{\alpha_1})f(p_2^{\alpha_2})\cdots f(p_s^{\alpha_s})$</li>
+<li>$f(n)$完全可乘充要条件$\forall p,k\ge 1, f(p^k)&#x3D;f^k(p)$, 相当于解除了gcd限制</li>
+<li>$f * u$($f$的Mobius变换)依然是可乘函数</li>
+</ul>
+<p>推论1: $f(n)$可乘, $F(n)&#x3D;\sum_{d|n} f(d) &#x3D; \prod_{p_i|n} (1+f(p_i)+\cdots+f(p_i^{\alpha_i}))$</p>
+<p>又此$\sum_{d|n}\mu(d)f(d) &#x3D; \prod_{p_i|n} (1+\mu(p_i)f(p_i)+\cdots+\mu(p_i^{\alpha_i})f(p_i^{\alpha_i})) &#x3D; \prod_{p_i|n} (1-f(p_i))$</p>
+<p>因此$\phi$另一个表达$\displaystyle \phi(n)&#x3D;\sum_{d|n}\mu(d)\frac{n}{d}&#x3D;n\prod_{p|n}(1-\frac{1}{p})$</p>
+<p>类似的 $f(n)$完全可乘, $F(n)&#x3D;\sum_{d|n} f(d) &#x3D; \prod_{p_i|n} (1+f(p_i)+\cdots+f^{\alpha_i}(p_i))$</p>
+<p>例4: $\sigma(n)&#x3D;\sum_{d|n} d&#x3D;\frac{p_1^{a_1+1}-1}{p_1-1}\frac{p_2^{a_2+1}-1}{p_2-1}\cdots \frac{p_s^{a_s+1}-1}{p_s-1}$, 也就是$\sigma &#x3D; e * u$</p>
+<p>定理5: $f(n)$为可乘函数,则$f(\gcd(m,n))f(\mathrm{lcm}(m,n))&#x3D;f(m)f(n)$, 也就是不同p之间互不影响，相同p相当于min和max了</p>
+<p>定理6: 若$f,g$可乘,则$f * g$可乘,若$f,f * g$可乘,则$g$可乘</p>
+<p>正向的，相当于上面Mobius保持可乘性只是$g &#x3D; u$的特例， 即证明$(f * g)(mn)&#x3D;(f * g)(m)(f * g)(n), \gcd(m,n) &#x3D; 1$, 同样拆$d&#x3D;d_1d_2$即可</p>
+<p>对于后面的,用反证法, 若$f$不可乘 &#x3D;&gt; 存在$f(mn)\ne f(n)f(m),\gcd(m,n)&#x3D;1$, 选最小mn, 即$&lt;mn$时还是可乘，这样同样做拆解，会唯一多出$f(mn)-f(n)f(m)$导致而不等</p>
+<p>推论2: $F&#x3D;f * \mu$, 根据上面$F$可乘,则$f$也可乘</p>
+<p>定理7: $f$为$f(1)\ne 0$的数论函数, 一定存在唯一的DIrichlet逆$f^{-1}$</p>
+<p>并且由$f^{-1}(1) &#x3D; \frac{1}{f(1)},f^{-1}(n) &#x3D; \frac{-1}{f(1)}\sum_{d|n,d&lt;n} f(\frac{n}{d})f^{-1}(d),n &gt; 1$得出</p>
+<p>也就是要证明$f * f^{-1} &#x3D; I$只有唯一解, 直接归纳从n&#x3D;1向上($1&#x3D;I(1)&#x3D;f(1)f^{-1}(1)&#x3D;1,0&#x3D;I(n)&#x3D;\sum_{d|n}f(\frac{n}{d})f^{-1}(d),n&gt;1$)</p>
+<p>推论3: 可乘函数必定有Dirichlet逆存在,且也是可乘函数</p>
+<p>定理8: $f(1) \ne 0,g(1)\ne 0$, $(f * g)^{-1} &#x3D; f^{-1} * g^{-1}$</p>
+<p>$h &#x3D; f*g$可乘</p>
+<p>$h * h^{-1} &#x3D; I$</p>
+<p>$g^{-1} * f^{-1} &#x3D; h^{-1} * h * f^{-1} * g^{-1} &#x3D; h^{-1} * (g * f) * f^{-1} * g^{-1} &#x3D; h^{-1}$</p>
+<p>定理9: $f$可乘, 若$f$完全可乘的充要条件是$f^{-1}(n)&#x3D;\mu(n)f(n)$</p>
+<p>因为$f$可乘$f(1)&#x3D;1$</p>
+<p>必要性: 若$f$完全可乘,令$g(n)&#x3D;\mu(n)f(n)$,有$(g * f)(n)&#x3D;\sum_{d|n}\mu(d)f(d)f(\frac{n}{d})&#x3D;f(n) \sum_{d|n}\mu(d)&#x3D;f(n)I(n)&#x3D;I(n)$, 即$g&#x3D;f^{-1}$ </p>
+<p>充分性:若$f^{-1}(n)&#x3D;\mu(n)f(n)$, 那么要证明的就是$\forall p,\alpha, f(p^\alpha)&#x3D;f^\alpha(p)$</p>
+<p>$I&#x3D;\sum_{d|n}\mu(d)f(d)f(\frac{n}{d})$</p>
+<p>任取$n&#x3D;p^\alpha, \alpha &gt; 0$</p>
+<p>$0&#x3D;\mu(1)f(1)f(p^\alpha)+\mu(p)f(p)f(p^{\alpha-1})$</p>
+<p>即 $f(p^\alpha)&#x3D;f(p)f(p^{\alpha-1})$</p>
+<p>例5: $\sigma_\lambda^{-1} &#x3D; (e^{\lambda})^{-1} * u^{-1} &#x3D; \mu e^{\lambda} * \mu$, </p>
+<p>$\phi^{-1}&#x3D;\mu^{-1} * e^{-1}&#x3D;u * \mu e$</p>
+<p>$d^{-1} &#x3D; u^{-1} * u^{-1} &#x3D; \mu * \mu$</p>
+<p>例6: $g&#x3D;\lambda * u &#x3D;\left\lbrace \begin{array}{lc}1,&amp;n&#x3D;k^2\\ 0,&amp; others\end{array}\right.$<br>$g^{-1}&#x3D;\sum_{d|n}\mu(d)\lambda(d)\mu(\frac{n}{d})$</p>
+<p>可乘函数对于每个质数因子处理后再乘起来, 可以证明1</p>
+<h1 id="阶的估计"><a href="#阶的估计" class="headerlink" title="阶的估计"></a>阶的估计</h1><blockquote>
+<p>有了阶的估计，可以方便于一些函数分布的研究</p>
+</blockquote>
+<p>$f$任意函数,$g$正值函数,若存在与$x$无关的常数$A$,使$|f(x)|\le Ag(x)$对于充分大$x$都成立,则$f(x)&#x3D;O(g(x))$或$f(x) \ll g(x)$</p>
+<p>如$\sin(x)\ll 1,x\cos x\ll x^2,\sqrt{3x^2+7}\ll x$</p>
+<p>定理, 对任意正整数$n$有$x^n &#x3D; O(e^x)$, 因为$x^n \le n! e^x$</p>
+<p>若$\lim_{x\to +\infty} \frac{f(x)}{g(x)} &#x3D; 1$, 则称作当$x\to +\infty$时$f(x)\sim g(x)$</p>
+<p>定理11: 对于任何正数$\alpha$不可能有$d(n) &#x3D; O(\log ^\alpha n)$</p>
+<p>核心思想就是构建 $A\log^\alpha n &gt; d(n) &gt; c_{\alpha}\log^{&gt;\alpha} n$, 因为构建出来的话意味着右边幂次更大，随着n无限增长总会超过左边, 所以就是考虑如何造出 $d(n) &gt; c_{\alpha}\log^{&gt;\alpha} n$， 取$n&#x3D;(p_1p_2\cdots p_l)^m$</p>
+<p>定理12: 对于任意$\epsilon &gt; 0$一定有$d(n) &#x3D; O(n^\epsilon)$</p>
+<p>$\displaystyle \frac{d(n)}{n^{\epsilon}}&#x3D;\prod \frac{\alpha_i+1}{p^{\alpha_i\epsilon}} \le (\frac{2}{\epsilon \log 2})^{2^{\frac{1}{\epsilon}}}$, (讨论$p^\alpha$与2的关系，和个数，</p>
+<p>由于数论函数数值的不规则性，我们经常去研究它的算术平均值$\displaystyle \bar{f}(n)&#x3D;\frac{\sum_{m\le n}f(m)}{n}$</p>
+<p>$\bar{d}(n) &#x3D;\frac{1}{n}\sum_{m\le n} d(m) \sim \log n$, 称作$d$的平均阶为$\log n$ (稍后证明)</p>
+<p>引理1: 当$x$充分大时 $\sum_{n\le x}\frac{1}{n} &#x3D; \log x + \gamma + O(\frac{1}{x})$, 其中$\gamma$是Euler常数</p>
+<blockquote>
+<p>这里的想法就是2次方的和是收敛的所以拆出二次方就好了</p>
+</blockquote>
+<p>$\displaystyle \sum_{n\le x}\frac{1}{n}&#x3D;\sum_{n\le x}\frac{\int_{n}^{n+1}dt}{n}$</p>
+<p>$&#x3D;(\sum_{n\le x}\int_{n}^{n+1}(\frac{1}{n}-\frac{1}{t})dt)+\int_{1}^{[x]+1}(\frac{1}{t})dt$</p>
+<p>$&#x3D;(\sum_{n\le x}\int_{n}^{n+1}(\frac{1}{n}-\frac{1}{t})dt)+\log([x]+1)$</p>
+<p>$&#x3D;\gamma+O(\frac{1}{x})+\log([x]+1)$</p>
+<p>当$x$充分大时</p>
+<p>$\displaystyle \sum_{n\le x} d(n) &#x3D; \sum_{n\le x}\sum_{d|n} 1$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}\sum_{d|n,n\le x} 1$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}[\frac{x}{d}]$</p>
+<p>$\displaystyle &#x3D; \sum_{d \le x}\frac{x}{d} - \lbrace\sum_{d \le x}\frac{x}{d}\rbrace$</p>
+<p>$\displaystyle &#x3D; x\sum_{d \le x}\frac{1}{d} +O(x)$</p>
+<p>$\displaystyle &#x3D; x(\log x+\gamma +O(\frac{1}{x}))+O(x)$</p>
+<p>$\displaystyle &#x3D; x\log x+\gamma x+O(1)+O(x)$</p>
+<p>$\displaystyle &#x3D; x\log x+O(x)$ (这里的估计还是很粗糙,见定理18)</p>
+<p>因此$\bar{d}(n) \sim \log n$得证</p>
+<h1 id="广义Dirichlet乘积"><a href="#广义Dirichlet乘积" class="headerlink" title="广义Dirichlet乘积"></a>广义Dirichlet乘积</h1><blockquote>
+<p>看起来这里用例不少是为了简化阶的估计</p>
+</blockquote>
+<p>研究$\sum f(n)H(\frac{x}{n})$, 有什么不同,一个例子是上面的$f(2)$不会对$(f * g)(3)$贡献,而这里会,并且非整数的地方也有值, 记作$f \circ H$</p>
+<p>$f$为数论函数,$H$为定义在$(0,+\infty)$上的函数,$H(x)&#x3D;0,x\in(0,1)$</p>
+<p>$G(x) &#x3D; (f\circ H)(x) &#x3D; \sum_{n\le x} f(n)H(\frac{x}{n})$</p>
+<p>若$H(x) &#x3D; 0,x$不是整数时,则</p>
+<p>$(f\circ H)(x) &#x3D; \left\lbrace \begin{array}{lc}0,&amp;x\not\in \mathbb{Z}\\ (f * H)(x),&amp; x\in \mathbb{Z} \end{array}\right.$</p>
+<p>$I\circ H &#x3D; H$</p>
+<p>定理14: $f \circ (g\circ H) &#x3D; (f * g)\circ H$</p>
+<p>取$f&#x3D;g&#x3D;u,H(x)&#x3D;U(x)&#x3D;\left\lbrace \begin{array}{lc}0,&amp; 0&lt;x&lt;1\\ 1,&amp;x\ge 1\end{array}\right.$</p>
+<p>有$g \circ H &#x3D; \sum_{n\le x}1 &#x3D; [x]$</p>
+<p>$f\circ(g \circ H) &#x3D; \sum_{n\le x} [\frac{x}{n}]$</p>
+<p>因为$d&#x3D;u * u$, $d\circ H &#x3D; \sum_{n\le x}d(n)$</p>
+<p>即$\sum_{n\le x}d(n) &#x3D; \sum_{n\le x} [\frac{x}{n}]$</p>
+<p>定理15, 设f有Dirichlet逆$f^{-1}$， $G&#x3D;f\circ H$, 则$H&#x3D;f^{-1}\circ G$</p>
+<p>推论4: 若$f$完全可乘,$G&#x3D;f\circ H,H&#x3D;(\mu(n)f(n))\circ G$</p>
+<p>定理16: $h&#x3D;f * g, H&#x3D;h\circ U,F&#x3D;f\circ U,G&#x3D;g\circ U$, 则$H(x)&#x3D;f \circ G &#x3D; g \circ F$</p>
+<p>推论5: $F&#x3D;f\circ U$,则$\displaystyle \sum_{n\le x}\sum_{d|n} f(d) &#x3D; \sum_{n\le x}F(\frac{x}{n})$, 就是$(u * f) \circ U&#x3D;u \circ ( f \circ U)$<br>例7: $\sum_{n\le x}\mu(n)[\frac{x}{n}]&#x3D;1$,即$\mu \circ(u\circ U) &#x3D; I \circ U &#x3D; U$</p>
+<p>定理17(在用于估计时做区间切割很有用): 设$h&#x3D;f * g,F&#x3D;f\circ U,G&#x3D;g\circ U,H&#x3D;h\circ U$, 对任意$ab&#x3D;x$的正数$a,b$恒有</p>
+<p>$H(x)&#x3D;\sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>$\displaystyle H(x)&#x3D;\sum_{n\le x}(\sum_{d_1d_2&#x3D;n}f(d_1)g(d_2))$</p>
+<p>$\displaystyle &#x3D;\sum_{d_1d_2\le x} f(d_1)g(d_2)$</p>
+<p>$\displaystyle &#x3D;\sum_{d_1\le a} (\sum_{d_2\le\frac{x}{d_1}} f(d_1)g(d_2)) + \sum_{d_2\le b} (\sum_{d_1\le\frac{x}{d_2}} f(d_1)g(d_2)) -\sum_{d_1\le a,d_2\le b} f(d_1)g(d_2)$, 容斥原理</p>
+<p>$&#x3D;\sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>定理18: 我们可以用这个对$d(n)$重新估计</p>
+<p>$f&#x3D;g&#x3D;u$因此$h&#x3D;f * g &#x3D;u * u&#x3D;d$,取$a&#x3D;b&#x3D;\sqrt{x}$</p>
+<p>$\sum_{n\le x}d(n) &#x3D; H(x) &#x3D; \sum_{n\le a}f(n)G(\frac{x}{n})+\sum_{n\le b}g(n)F(\frac{x}{n})-F(a)G(b)$</p>
+<p>$&#x3D;2\sum_{n\le \sqrt{x}}[\frac{x}{n}] - [\sqrt{x}]^2$</p>
+<p>$&#x3D;2\sum_{n\le \sqrt{x}}(\frac{x}{n} - \lbrace \frac{x}{n} \rbrace) - (\sqrt{x}-\lbrace\sqrt{x}\rbrace)^2$</p>
+<p>$&#x3D;x\log x+(2\gamma -1)x + O(\sqrt{x})$</p>
+<p>定理19: $\sum_{n\le x} \sigma(n) &#x3D; \frac{\pi^2}{12} x^2 + O(x\log x)$</p>
+<p>$\sigma &#x3D; e * u$</p>
+<p>$\displaystyle \sigma \circ U &#x3D; u\circ(e\circ U) &#x3D;\sum_{n\le x}\sum_{m\le \frac{x}{n}} m&#x3D;\sum_{n\le x} \frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$</p>
+<p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}(\frac{x}{n}+O(1))(\frac{x}{n}+O(1))$</p>
+<p>$\displaystyle &#x3D;\frac{1}{2}\sum_{n\le x}\frac{x^2}{n^2}+O(\sum_{n\le x}\frac{x}{n})+O(x)$</p>
+<p>$\displaystyle &#x3D;\frac{x^2}{2}\sum_{n}\frac{x^2}{n^2}-\frac{x^2}{2}\sum_{n &gt; x}\frac{x^2}{n^2}+O(x\log x)$</p>
+<p>$&#x3D; \frac{\pi^2}{12} x^2+O(\frac{1}{[x]})+O(x\log x)$</p>
+<p>$&#x3D; \frac{\pi^2}{12} x^2+O(x\log x)$</p>
+<p>定理20: $\sum_{n\le x}\phi(x)&#x3D;\frac{3}{\pi^2}x^2+O(x\log x)$</p>
+<p>$\phi &#x3D; \mu * e$</p>
+<p>$\displaystyle \sum_{n\le x}\phi(x)&#x3D;\sum_{n\le x}\mu(n)\sum_{m\le \frac{x}{n}} m$</p>
+<p>$\displaystyle &#x3D;\sum_{n\le x}\mu(n)\frac{1}{2}\lbrack \frac{x}{n}\rbrack([\frac{x}{n}]+1)$</p>
+<p>$\displaystyle&#x3D;\frac{1}{2}\sum_{n\le x}\mu(n)(\frac{x}{n}+O(1))^2$</p>
+<p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n\le x}\frac{\mu(n)}{n^2}+O(x\log x)$</p>
+<p>$\displaystyle&#x3D;\frac{x^2}{2}\sum_{n&#x3D;1}^\infty \frac{\mu(n)}{n^2}+O(x\log x)$</p>
+<p>$\frac{\pi^2}{6}\sum_{d&#x3D;1}^\infty \frac{\mu(d)}{d^2}&#x3D;\sum_{a&#x3D;1}^\infty \frac{1}{a^2} \sum_{d&#x3D;1}^\infty \frac{\mu(d)}{d^2}&#x3D;\sum_{n&#x3D;1}^{\infty} \frac{\sum_{d|n} \mu(d)}{n^2} &#x3D;\sum_{n&#x3D;1}^{\infty} \frac{I(n)}{n^2} &#x3D; 1$, 考虑$n&#x3D;ad$</p>
+<p>原式 $\displaystyle&#x3D;\frac{3}{\pi^2}x^2+O(x\log x)$</p>
+<p>定理21: $Q(x)&#x3D;$不超过$x$的无平方因子的正整数的个数, $\sum_{Q(x)}&#x3D;\frac{6}{\pi^2}x+O(\sqrt x)$</p>
+<p>不大于$x$且最大平方因子为$k^2$的数个数为$Q(\frac{x}{k^2})$,相当于$v &#x3D; mk^2 \le x,m$中没有平方因子,所以和求$\le \frac{x}{k^2}$的无平方因子的正整数是一样的子问题</p>
+<p>$\sum_{k\le \sqrt{x}}Q(\frac{x}{k^2}) &#x3D; [x]$</p>
+<p>$\displaystyle Q(x)&#x3D;\sum_{n\le \sqrt{x}}Q(\frac{x}{d^2})I(d)&#x3D;\sum_{n\le \sqrt{x}}Q(\frac{x}{d^2})\sum_{d|n}\mu(d)$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) \sum_{d|n,n\le \sqrt{x}} Q(\frac{x}{d^2})$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) \sum_{k\le \sqrt{\frac{x}{d^2}}} Q(\frac{x}{d^2k^2})$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) [\frac{x}{d^2}]$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\mu(d) (\frac{x}{d^2}+O(1))$</p>
+<p>$\displaystyle &#x3D;\sum_{d \le \sqrt{x}}\frac{x\mu(d)}{d^2}+O(\sqrt{x})$</p>
+<p>$\displaystyle &#x3D;\frac{6}{\pi^2}x+O(\sqrt{x})$</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="9-lambda-n-1-Omega-n-求-sum-d-n-lambda-d-d-s-的表达式-证明-sum-k-1-x-lambda-k-frac-x-k-sqrt-x"><a href="#9-lambda-n-1-Omega-n-求-sum-d-n-lambda-d-d-s-的表达式-证明-sum-k-1-x-lambda-k-frac-x-k-sqrt-x" class="headerlink" title="9. $\lambda(n)&#x3D;(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;[\sqrt{x}]$"></a>9. $\lambda(n)&#x3D;(-1)^{\Omega(n)}$,求$\sum_{d|n}\lambda(d)d^s$的表达式,证明$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;[\sqrt{x}]$</h2><p>$\sum_{d|n}\lambda(d)d^s &#x3D; \sum_{d|n,d&#x3D;\prod p_i^{\beta_i}} (-1)^{\sum \beta_i}(\prod {p_i}^{\beta_i})^s$</p>
+<p>$&#x3D; \sum_{n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \prod (-p_i^s)^{\beta_i }$</p>
+<p>$&#x3D; \prod_{i,n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \sum_{j&#x3D;0}^{\alpha_i} (-p_i^s)^{j}$</p>
+<p>$&#x3D; \prod_{i,n&#x3D;\prod p_i^{\alpha_i},\beta_i\le \alpha_i} \frac{1-(-p_i^s)^{\alpha_i+1}}{1+p_i^s}$</p>
+<p>$\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{x}{k}]&#x3D;\sum_{k&#x3D;1}^{[x]}\lambda(k)[\frac{[x]}{k}] &#x3D; (\lambda \circ (u\circ U))([x])$</p>
+<p>$&#x3D;((\lambda * u)\circ U)([x])$</p>
+<p>$(\lambda * u)(n) &#x3D; \left\lbrace\begin{array}{lc} 1,&amp; n&#x3D;k^2 \\ 0,&amp; \text{others}\end{array}\right.$</p>
+<h2 id="14-设-displaystyle-s-n-sum-j-in-1-n-gcd-j-n-1-j-2-证明-displaystyle-sum-d-n-frac-s-d-d-2-frac-1-n-2-sum-j-1-n-j-2-s-n-n-2-frac-1-3-phi-n-frac-1-2-sum-d-n-mu-d-frac-1-6n-prod-p-n-1-p"><a href="#14-设-displaystyle-s-n-sum-j-in-1-n-gcd-j-n-1-j-2-证明-displaystyle-sum-d-n-frac-s-d-d-2-frac-1-n-2-sum-j-1-n-j-2-s-n-n-2-frac-1-3-phi-n-frac-1-2-sum-d-n-mu-d-frac-1-6n-prod-p-n-1-p" class="headerlink" title="14. 设$\displaystyle s(n)&#x3D;\sum_{j\in[1,n],\gcd(j,n)&#x3D;1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}&#x3D;\frac{1}{n^2}\sum_{j&#x3D;1}^n j^2$,$s(n)&#x3D;n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$"></a>14. 设$\displaystyle s(n)&#x3D;\sum_{j\in[1,n],\gcd(j,n)&#x3D;1} j^2$证明$\displaystyle \sum_{d|n}\frac{s(d)}{d^2}&#x3D;\frac{1}{n^2}\sum_{j&#x3D;1}^n j^2$,$s(n)&#x3D;n^2(\frac{1}{3}\phi(n)+\frac{1}{2}\sum_{d|n}\mu(d)+\frac{1}{6n}\prod_{p|n}(1-p))$</h2><p>通过和n的gcd来分类</p>
+<p>$\frac{1}{n^2}\sum_{j&#x3D;1}^nj^2$</p>
+<p>$&#x3D;\frac{1}{n^2}\sum_{d|n}\sum_{j\in[1,n],\gcd(j,n)&#x3D;d} j^2$</p>
+<p>$&#x3D;\frac{1}{n^2}\sum_{d|n}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})&#x3D;1} (id)^2$</p>
+<p>$&#x3D;\sum_{d|n}\frac{d^2}{n^2}\sum_{i \in[1,\frac{n}{d}],\gcd(i,\frac{n}{d})&#x3D;1} i^2$</p>
+<p>$&#x3D;\sum_{d|n}\frac{s(\frac{n}{d})}{(\frac{n}{d})^2}$</p>
+<p>$&#x3D;\sum_{d|n}\frac{s(d)}{d^2}$</p>
+<p>$s * e_2 &#x3D; \sum_{j&#x3D;1}^n j^2 &#x3D; \frac{n(n+1)(2n+1)}{6}&#x3D;\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}$</p>
+<p>$e_2$完全可乘</p>
+<p>$e_2^{-1} &#x3D; \mu e_2$</p>
+<p>$s &#x3D; s * e_2 * e_2^{-1} &#x3D; (\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}) * (\mu e_2)$</p>
+<p>$&#x3D;\sum_{d|n} (\frac{n^3}{3d^3}\mu(d)d^2+\frac{n^2}{2d^2}\mu(d)d^2+\frac{n}{6d}\mu(d)d^2)$</p>
+<p>$&#x3D;\frac{n^2}{3} (\mu * e) +\frac{n^2}{2}(\sum_{d|n}\mu(d))+\frac{n}{6}\sum_{d|n}\mu(d)d$</p>
+<h2 id="16-求所有使得-phi-n-24"><a href="#16-求所有使得-phi-n-24" class="headerlink" title="16. 求所有使得$\phi(n)&#x3D; 24$"></a>16. 求所有使得$\phi(n)&#x3D; 24$</h2><p>$\phi(n)&#x3D;n\prod_{p|n}\frac{p-1}{p}$</p>
+<p>所以考察所有$24$的因数+1的质因子$2,3,5,7,13$的组合情况</p>
+<p>又注意到$\phi$是可乘函数$24&#x3D;2^33$</p>
+<p>$\phi(2)&#x3D;1,\phi(2^2)&#x3D;2,\phi(2^3)&#x3D;4,\phi(2^4)&#x3D;8$</p>
+<p>$\phi(3)&#x3D;2,\phi(3^2)&#x3D;6,\phi(3^3)&#x3D;4$</p>
+<p>$\phi(5)&#x3D;4$</p>
+<p>$\phi(7)&#x3D;6$</p>
+<p>$\phi(13)&#x3D;12$</p>
+<p>所以有$13\cdot 3,13\cdot 3\cdot 2,13\cdot 2^2\cdots$</p>
+<h2 id="17-证明-n-为合数时-phi-n-le-n-sqrt-n"><a href="#17-证明-n-为合数时-phi-n-le-n-sqrt-n" class="headerlink" title="17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$"></a>17. 证明$n$为合数时$\phi(n)\le n-\sqrt{n}$</h2><p>$\phi(n)&#x3D;n\prod_{p|n}(1-\frac{1}{p}) \le n(1-\frac{1}{p}) \le n(1-\frac{1}{\sqrt{n}}) &#x3D; n-\sqrt{n}$</p>
+<h2 id="25-d-为自然数-x-ge-1-则-displaystyle-sum-m-le-x-gcd-m-d-1-frac-mu-2-m-phi-m-ge-frac-phi-d-d-log-x-1"><a href="#25-d-为自然数-x-ge-1-则-displaystyle-sum-m-le-x-gcd-m-d-1-frac-mu-2-m-phi-m-ge-frac-phi-d-d-log-x-1" class="headerlink" title="25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$"></a>25. $d$为自然数,$x\ge 1$,则$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}\ge \frac{\phi(d)}{d} \log([x]+1)$</h2><p>定义函数$\mathrm{rad}(n) &#x3D; \prod_{p|n} p$相当于$n$中所有质因子的乘积</p>
+<p>$\displaystyle \sum_{m\le x,\gcd(m,d)&#x3D;1} \frac{\mu^2(m)}{\phi(m)}$</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,\mathrm{rad}(m)&#x3D;m} \prod_{p|m} \frac{1}{p-1}$, $m$中所有质数幂次不大于1</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,\mathrm{rad}(m)&#x3D;m} \prod_{p|m} \frac{\frac{1}{p}}{1-\frac{1}{p}}$, 变成等比数列和的形式</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,\mathrm{rad}(m)&#x3D;m} \prod_{p|m} \sum_{k\ge 1}\frac{1}{p^k}$, 等比数列</p>
+<p>$\displaystyle &#x3D;\sum_{m\le x,\gcd(m,d)&#x3D;1,\mathrm{rad}(m)&#x3D;m} \sum_{\mathrm{rad}(n)&#x3D;m}\frac{1}{n}$, 后面的乘法展开</p>
+<p>$\displaystyle \ge \sum_{m\le x,\gcd(m,d)&#x3D;1,\mathrm{rad}(m)&#x3D;m} \sum_{\mathrm{rad}(n)&#x3D;m,n\le y}\frac{1}{n}$, 控制范围, 暂时不知道$y$取多少合适</p>
+<p>$\displaystyle &#x3D; \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n} \sum_{m&#x3D;\mathrm{rad}(m)&#x3D;\mathrm{rad}(n),m\le x} 1$, 交换顺序</p>
+<p>$\displaystyle &#x3D; \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 右侧只有唯一$m$,这里看出需要保证$y\le x$才能保证右侧都是1</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}\prod_{p|d}\frac{1}{1-\frac{1}{p}}\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 向要证明的靠拢,拆1</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}(\prod_{p|d}\sum_{k\ge 0} \frac{1}{p^k})\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 同样等比数列求和</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d}(\sum_{\mathrm{rad}(q) | \mathrm{rad}(d) } \frac{1}{q})\sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{n}$, 同样等比数列求和</p>
+<p>$\displaystyle &#x3D; \frac{\phi(d)}{d} \sum_{\mathrm{rad}(q) | \mathrm{rad}(d) } \sum_{n \le y,\gcd(n,d)&#x3D;1} \frac{1}{nq}$, 乘开</p>
+<p>$\displaystyle \ge \frac{\phi(d)}{d} \sum_{t\le x}\frac{1}{t}$, 这里看出,任何一个$\le x$的有且只有唯一的拆解,拆解成是$d$的质因子的幂次的乘积(q贡献) 和 其余部分(n贡献), 而大于$x$的直接舍去, 所以取$y&#x3D;x$, 而上面其实需要$y\le x$所以范围还算很紧</p>
+<p>$\displaystyle \ge \frac{\phi(d)}{d} \log([x]+1)$</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="tag"># 数论基础</a>
+              <a href="/Math/tags/Dirichlet%E4%B9%98%E7%A7%AF/" rel="tag"># Dirichlet乘积</a>
+              <a href="/Math/tags/Dirichlet%E9%80%86/" rel="tag"># Dirichlet逆</a>
+              <a href="/Math/tags/%E5%8F%AF%E4%B9%98%E5%87%BD%E6%95%B0/" rel="tag"># 可乘函数</a>
+              <a href="/Math/tags/%E5%AE%8C%E5%85%A8%E5%8F%AF%E4%B9%98%E5%87%BD%E6%95%B0/" rel="tag"># 完全可乘函数</a>
+              <a href="/Math/tags/Mobius%E5%8F%98%E6%8D%A2/" rel="tag"># Mobius变换</a>
+              <a href="/Math/tags/Mobius%E5%8F%8D%E6%BC%94/" rel="tag"># Mobius反演</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/number_theory_1/" rel="prev" title="数论基础 一 整数的可除性">
+                  <i class="fa fa-chevron-left"></i> 数论基础 一 整数的可除性
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/number_theory_3/" rel="next" title="数论基础 三 素数分布的一些初等结果">
+                  数论基础 三 素数分布的一些初等结果 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

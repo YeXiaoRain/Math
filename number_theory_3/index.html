@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/Math/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Math/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Math/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/Math/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/Math/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yexiaorain.github.io","root":"/Math/","images":"/Math/images","scheme":"Muse","darkmode":false,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/Math/js/config.js"></script>
+
+    <meta name="description" content="1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数论基础 三 素数分布的一些初等结果">
+<meta property="og:url" content="https://yexiaorain.github.io/Math/number_theory_3/index.html">
+<meta property="og:site_name" content="YeXiaoRain&#39;s Math">
+<meta property="og:description" content="1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2023-03-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-12-30T16:35:40.621Z">
+<meta property="article:author" content="YeXiaoRain">
+<meta property="article:tag" content="数论基础">
+<meta property="article:tag" content="$\pi(x)$">
+<meta property="article:tag" content="Chebyshev定理">
+<meta property="article:tag" content="$\Omega(n)$">
+<meta property="article:tag" content="$\omega(n)$">
+<meta property="article:tag" content="Bertrand 假设">
+<meta property="article:tag" content="M(x)">
+<meta property="article:tag" content="L(x)">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://yexiaorain.github.io/Math/number_theory_3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://yexiaorain.github.io/Math/number_theory_3/","path":"number_theory_3/","title":"数论基础 三 素数分布的一些初等结果"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数论基础 三 素数分布的一些初等结果 | YeXiaoRain's Math</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/Math/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/Math/atom.xml" title="YeXiaoRain's Math" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/Math/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">YeXiaoRain's Math</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-pi-x"><span class="nav-number">1.</span> <span class="nav-text">函数$\pi(x)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chebyshev%E5%AE%9A%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">Chebyshev定理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-omega-n-%E4%B8%8E-Omega-n"><span class="nav-number">3.</span> <span class="nav-text">函数$\omega(n)$与$\Omega(n)$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bertrand-%E5%81%87%E8%AE%BE-1845%E6%8F%90%E5%87%BA"><span class="nav-number">4.</span> <span class="nav-text">Bertrand 假设 (1845提出)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-M-x-mu-circ-U"><span class="nav-number">5.</span> <span class="nav-text">函数$M(x)&#x3D;\mu \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0-L-x-lambda-circ-U"><span class="nav-number">6.</span> <span class="nav-text">函数$L(x)&#x3D;\lambda \circ U$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%A0%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">习题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-sum-p-frac-1-p-%E5%8F%91%E6%95%A3"><span class="nav-number">7.1.</span> <span class="nav-text">2. $\sum_{p} \frac{1}{p}$发散</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-f-x-%E4%B8%BA%E6%95%B4%E7%B3%BB%E6%95%B0%E5%A4%9A%E9%A1%B9%E5%BC%8F-lbrace-f-n-rbrace-%E6%9C%89%E6%97%A0%E9%99%90%E4%B8%AA%E7%B4%A0%E5%9B%A0%E5%AD%90"><span class="nav-number">7.2.</span> <span class="nav-text">4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-x-ge-2-%E8%AF%81-sum-d-le-x-d-2-n-O-x-log-3-x"><span class="nav-number">7.3.</span> <span class="nav-text">8. $x\ge 2$证$\sum_{d\le x} d^2(n)&#x3D;O(x\log^3 x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-x-ge-1-%E5%88%99-sum-n-le-x-frac-phi-n-n-frac-6-pi-2-x-O-log-x"><span class="nav-number">7.4.</span> <span class="nav-text">9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\frac{6}{\pi^2}x+O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E4%BD%BF%E7%94%A8-frac-n-phi-n-prod-p-n-1-frac-1-p-1-sum-d-n-frac-mu-2-d-phi-d-1-%E8%AF%81%E6%98%8E-sum-n-le-x-frac-n-phi-n-O-x-sum-n-le-x-frac-1-phi-n-O-log-x"><span class="nav-number">7.5.</span> <span class="nav-text">10. 使用$\frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}&#x3D;O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}&#x3D;O(\log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-sum-p-x-frac-log-p-p-O-log-log-x"><span class="nav-number">7.6.</span> <span class="nav-text">15. $\sum_{p|x}\frac{\log p}{p}&#x3D;O(\log \log x)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-n-ge-3-sum-d-n-frac-mu-d-log-d-d-O-log-log-n"><span class="nav-number">7.7.</span> <span class="nav-text">16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;O(\log \log n)$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E8%AF%95%E8%AF%81%E5%AD%98%E5%9C%A8%E5%B8%B8%E6%95%B0-C-n-ge-3-%E6%97%B6-phi-n-C-frac-n-log-log-n"><span class="nav-number">7.8.</span> <span class="nav-text">17. 试证存在常数$C$,$n\ge 3$时$\phi(n)&gt;C\frac{n}{\log \log n}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-displaystyle-sum-n-1-infty-frac-mu-n-n-s-frac-1-zeta-s-displaystyle-sum-n-1-infty-frac-d-n-n-s-zeta-2-s-displaystyle-sum-n-1-infty-frac-Lambda-n-n-s-frac-zeta%E2%80%99-s-zeta-s"><span class="nav-number">7.9.</span> <span class="nav-text">18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-sum-n-1-infty-frac-mu-n-n-0-%E4%B8%8E-M-x-o-x-%E7%AD%89%E4%BB%B7"><span class="nav-number">7.10.</span> <span class="nav-text">19. $\sum_{n&#x3D;1}^{\infty} \frac{\mu(n)}{n}&#x3D;0$ 与$M(x)&#x3D;o(x)$等价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-sum-n-le-x-frac-1-Lambda-n-n-2-gamma-o-1-%E5%92%8C%E7%B4%A0%E6%95%B0%E5%AE%9A%E7%90%86%E7%AD%89%E4%BB%B7"><span class="nav-number">7.11.</span> <span class="nav-text">20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}&#x3D;2\gamma +o(1)$和素数定理等价</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YeXiaoRain</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/Math/archives/">
+          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/Math/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/Math/tags/">
+        <span class="site-state-item-count">85</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://yexiaorain.github.io/Math/number_theory_3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/Math/images/avatar.gif">
+      <meta itemprop="name" content="YeXiaoRain">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YeXiaoRain's Math">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数论基础 三 素数分布的一些初等结果 | YeXiaoRain's Math">
+      <meta itemprop="description" content="1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数论基础 三 素数分布的一些初等结果
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2023-03-17 00:00:00" itemprop="dateCreated datePublished" datetime="2023-03-17T00:00:00+08:00">2023-03-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2025-12-31 00:35:40" itemprop="dateModified" datetime="2025-12-31T00:35:40+08:00">2025-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/" itemprop="url" rel="index"><span itemprop="name">数论</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/Math/categories/%E6%95%B0%E8%AE%BA/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数论基础</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>6.8k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>25 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">1.函数$\pi(x)$ 2.Chebyshev定理 3.函数$\omega(n)$与$\Omega(n)$ 4.Bertrand 假设 5.函数M(x) 6.函数L(x)</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>ISBN 9787040364729</p>
+<span id="more"></span>
+
+<h1 id="函数-pi-x"><a href="#函数-pi-x" class="headerlink" title="函数$\pi(x)$"></a>函数$\pi(x)$</h1><p>$\pi(x) &#x3D;$ 不超过$x$的素数的个数</p>
+<p>引理1: $x &gt; 0$,$p_1,p_2,\cdots,p_s$为前$s$个素数,$\phi(x,s)$表示不超过$x$,且不被$p_i(i\in[1,s])$整除的自然数个数,则$\displaystyle \phi(x,s)&#x3D;\sum_{d|\prod_{i&#x3D;1}^s p_i} \mu(d)[\frac{x}{d}]$, 其实就是容斥原理,可以拆$I(\gcd)$来做</p>
+<p>引理2: $x &gt; s$则$\displaystyle \pi(x) &lt; x\prod_{i&#x3D;1}^s(1-\frac{1}{p_i})+2^{s+1}$</p>
+<p>显然$\pi(x) \le s+\phi(x,s)$</p>
+<p>所以$\displaystyle \pi(x) \le s+\sum_{d|\prod_{i&#x3D;1}^s p_i} \mu(d)[\frac{x}{d}]$</p>
+<p>$\displaystyle &#x3D; s+\sum_{d|\prod_{i&#x3D;1}^s p_i} \mu(d)\frac{x}{d}+\sum_{d|\prod_{i&#x3D;1}^s p_i} \mu(d)\lbrace\frac{x}{d}\rbrace$</p>
+<p>$\displaystyle &lt; s+\sum_{d|\prod_{i&#x3D;1}^s p_i} \mu(d)\frac{x}{d}+\sum_{d|\prod_{i&#x3D;1}^s p_i} 1$</p>
+<p>$\displaystyle &#x3D; s+x\prod_{i&#x3D;1}^{s} (1-\frac{1}{p_i}) + (1+1)^s$</p>
+<p>$\displaystyle \le x\prod_{i&#x3D;1}^{s} (1-\frac{1}{p_i}) + 2^{s+1}$</p>
+<p>引理3: $\prod_{p} (1-\frac{1}{p})&#x3D;0$, 正如第二章里的证明一样，拆成等比数列和的形式再展开乘法，就显然了</p>
+<p>定理1: $\lim_{x\to \infty} \frac{\pi(x)}{x}&#x3D;0$</p>
+<p>取$s+1&#x3D;[\frac{\log_2 x}{2}]$</p>
+<p>$\displaystyle 0 &lt; \lim_{x\to \infty} \frac{\pi(x)}{x} &lt; \lim_{x\to \infty} \prod_{i&#x3D;1}^{[\frac{\log_2 x}{2}]-1} (1-\frac{1}{p_i}) + \frac{2^{[\frac{\log_2 x}{2}]}}{x}$</p>
+<p>得证， 即$\pi(x) &#x3D; o(x), x\to \infty$</p>
+<h1 id="Chebyshev定理"><a href="#Chebyshev定理" class="headerlink" title="Chebyshev定理"></a>Chebyshev定理</h1><p>大量的尝试,Legendre和Gauss都猜测(素数定理)$\pi(x)\sim \frac{x}{\log x}$ (第三章没有证明到系数在极限下是1，只证明了下面这个更弱的形式)</p>
+<blockquote>
+<p>1896年，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%BF%E8%BE%BE%E9%A9%AC/400373?fromModule=lemma_inlink">阿达马</a>（即雅克·所罗门·阿达马，Jacques Solomon Hadamard，1865年－1963年）和德·拉·瓦莱布桑（Charles-Jean de la Vallée Poussin）按照<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B3%A2%E6%81%A9%E5%93%88%E5%BE%B7%C2%B7%E9%BB%8E%E6%9B%BC/1693983?fromModule=lemma_inlink">波恩哈德·黎曼</a>（B. Riemann）的思路，各自独立地利用高深的整函数理论证明了素数定理。</p>
+</blockquote>
+<blockquote>
+<p>1949年，塞尔伯格（即<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%98%BF%E7%89%B9%E5%8B%92%C2%B7%E5%A1%9E%E5%B0%94%E4%BC%AF%E6%A0%BC/9243382?fromModule=lemma_inlink">阿特勒·塞尔伯格</a>，Atle Selberg）和埃尔德什（即<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%BF%9D%E7%BD%97%C2%B7%E5%9F%83%E5%B0%94%E5%BE%B7%E4%BB%80/6265074?fromModule=lemma_inlink">保罗·埃尔德什</a>，Paul Erdős）分别独立地证明了素数定理。塞尔伯格由于这项成就及其他工作而获得了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8F%B2%E5%B0%94%E5%85%B9%E5%A5%96/186887?fromModule=lemma_inlink">菲尔兹奖</a>，埃尔德什则与陈省身一起获得了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%B2%83%E5%B0%94%E5%A4%AB%E6%95%B0%E5%AD%A6%E5%A5%96?fromModule=lemma_inlink">沃尔夫数学奖</a>。</p>
+</blockquote>
+<p>Chebyshev 1850证明了存在两个正常数使得$C_1\frac{x}{\log x}&lt; \pi(x) &lt; C_2\frac{x}{\log x}$ </p>
+<p>引理4(重要,这个公式用于$C_n$去转换做阶的估计很有用): 设$x &gt; 1$,$f(t)\in C’[1,x],S(x)&#x3D;\sum_{n\le x}C_n$ 则</p>
+<p>$\sum_{n\le x}C_nf(n)&#x3D;S(x)f(x)-\int_1^xS(t)f’(t)dt$</p>
+<blockquote>
+<p>这里是$f$在$[1,x]$的积分连续</p>
+</blockquote>
+<p>证明: $S(x)f(x)-\sum_{n\le x}C_nf(n)&#x3D;\sum_{n\le x}C_n(f(x)-f(n))$</p>
+<p>$&#x3D;\sum_{n\le x}C_n \int_{n}^x f’(t) dt$</p>
+<p>$&#x3D;\sum_{n\le x}C_n \int_{1}^x [t\ge n]f’(t) dt$</p>
+<p>$&#x3D;\int_{1}^x \sum_{n\le x}C_n [t\ge n]f’(t) dt$</p>
+<p>$&#x3D;\int_{1}^x (\sum_{n\le x}C_n [t\ge n])f’(t) dt$</p>
+<p>$&#x3D;\int_{1}^x (\sum_{n\le t}C_n)f’(t) dt$</p>
+<p>$&#x3D;\int_{1}^x S(t)f’(t) dt$</p>
+<p>定理2(欧拉求和公式): $a&gt;0,f(x)\in C’[a,b]$则</p>
+<p>$\sum_{a&lt;n\le b}f(n)&#x3D;\int_{a}^b f(t)dt+\int_{a}^b \psi_1(t)f’(t)dt+\psi_1(a)f(a)-\psi_1(b)f(b)$ 其中$\psi_1(x)&#x3D;x-[x]-\frac{1}{2}, |\psi_1(x)|\le \frac{1}{2}$($\frac{1}{2}$到小数部分的有向距离)</p>
+<p>证明: 由引理4,取$C_n&#x3D;1$,则</p>
+<p>$\sum_{n\le a}f(n)&#x3D;[a]f(a)-\int_{1}^a [t]f’(t)dt$</p>
+<p>$\sum_{n\le b}f(n)&#x3D;[b]f(b)-\int_{1}^b [t]f’(t)dt$</p>
+<p>相减</p>
+<p>$\sum_{a &lt; n\le b}f(n)&#x3D;[b]f(b)-[a]f(a)-\int_{a}^b [t]f’(t)dt$</p>
+<p>$&#x3D;[b]f(b)-[a]f(a)-\int_{a}^b [t]f’(t)dt-(\int_a^b(t-\frac{1}{2})f’(t)dt-(b-\frac{1}{2})f(b)+(a-\frac{1}{2})f(a)+\int_a^bf(t)dt)$</p>
+<p>得证</p>
+<p>引理5: $x&gt;1$则$\sum_{n\le x}\log n&#x3D;x \log x - x + O(\log x)$</p>
+<p>证明: $\sum_{n\le x} \log n&#x3D;\int_{1}^x \log t dt+\int_{1}^x \psi_1(t)\frac{1}{t} dt -\psi_1(x)\log x \le (x\log x - x)+\frac{1}{2}O(\log x)+\frac{1}{2}O(\log x)$</p>
+<hr>
+<p>Chebyshev在研究素数定理时,引入了两个新函数</p>
+<p>first Chebyshev function $\theta(x)&#x3D;\sum_{p\le x} \log p\le x\log x$</p>
+<p>second Chebyshev function $\displaystyle \psi(x) &#x3D; \Lambda \circ U&#x3D;\sum_{n\le x} \Lambda (n)$, (单调递增)</p>
+<p>$&#x3D;\sum_{m&#x3D;1}^{\infty} \sum_{p,{p^m}\le x} \Lambda(p^m)$</p>
+<p>$&#x3D;\sum_{m\le \log_2 x}\sum_{p\le x^{\frac{1}{m}}}\log p$</p>
+<p>$&#x3D;\sum_{m\le \log_2 x}\theta(x^{\frac{1}{m}})$</p>
+<p>$&#x3D;\theta(x)+\sum_{m\in[2,\log_2 x]}\theta(x^{\frac{1}{m}})$</p>
+<p>$&#x3D;\theta(x) +O(x^{\frac{1}{2}}\log^2 x)$</p>
+<p>定理3: 几个式子等价</p>
+<p>$\pi(x) \sim \frac{x}{\log x} ,x \to \infty$</p>
+<p>$\psi(x) \sim x,x \to \infty$</p>
+<p>$\theta(x) \sim x,x \to \infty$</p>
+<p>根据上面的结果,只需要证明 第1和第3个式子等价(即相互可以推，但是具体等不等还不知道)</p>
+<p>在引理4中,取 $C_n&#x3D;\left\lbrace\begin{array}{lc}1,&amp; n \text{ is prime}\\ 0,&amp; \text{others} \end{array}\right.$,$f(n)&#x3D;\log n$</p>
+<p>则$\pi(x)&#x3D;\sum_{n\le x} C_n$,$\theta(x)&#x3D;\sum_{n\le x} C_n\log n$</p>
+<p>即$\theta(n)&#x3D;\pi(x)0\log x-\int_{1}^x\frac{\pi(t)}{t}dt$</p>
+<p>因为$\frac{\pi(t)}{t}&#x3D;o(1),t\ge \sqrt{x}$</p>
+<p>$\theta(n)&#x3D;\pi(x)\log x-\int_{1}^{\sqrt{x}}\frac{\pi(t)}{t}dt-\int_{\sqrt{x}}^x\frac{\pi(t)}{t}dt$</p>
+<p>$\theta(n)&#x3D;\pi(x)\log x+O(\sqrt{x})+o(x-\sqrt{x})$</p>
+<p>$\theta(n)&#x3D;\pi(x)\log x+o(x)$</p>
+<p>$\frac{\theta(n)}{x}&#x3D;\frac{\pi(x)}{\frac{x}{\log x}}+o(1)$</p>
+<p>等价性证明了</p>
+<p>定理4: $x &gt; 1$则有$\sum_{n\le x}\psi(\frac{x}{n}) &#x3D; \sum_{n\le x}\Lambda(n)[\frac{x}{n}]&#x3D;x\log x-x+O(\log x)$</p>
+<p>证: 由于$\log n &#x3D;\sum_{d|n} \Lambda(d)$</p>
+<p>所以$\sum_{n\le x}\log n &#x3D; (\Lambda * u)\circ U &#x3D; \Lambda \circ ( u\circ U)&#x3D; \sum_{n\le x}\Lambda(n)[\frac{x}{n}] &#x3D; u\circ (\Lambda \circ U) &#x3D; \sum_{n\le x}\psi(\frac{x}{n})$ 由 引理5 得证</p>
+<hr>
+<p>$x \log 2+O(\log x)$</p>
+<p>$&#x3D;\sum_{n\le x}\log n - 2\sum_{n\le \frac{x}{2}}\log n$,引理5</p>
+<p>$&#x3D;\sum_{n\le x}\psi(\frac{x}{n}) - 2\sum_{n\le \frac{x}{2}} \psi(\frac{x}{2n})$,定理4</p>
+<p>$&#x3D;\sum_{n\le x}(-1)^{n-1}\psi(\frac{x}{n}) &lt; \psi(x)$, 这里用到了$\psi$单调递增</p>
+<p>即存在$A_1 x &lt; \psi(x)$</p>
+<p>引理6: $x\ge 1$,则有 $|\sum_{n\le x}\frac{\mu(n)}{n}|\le 1$</p>
+<p>证明: 因为(第二章例7) $1&#x3D;\sum_{n\le x}\mu(n)[\frac{x}{n}]&#x3D;\sum_{n\le x}\mu(n)\frac{x}{n}-\sum_{n\le x}\mu(n)\lbrace\frac{x}{n}\rbrace$</p>
+<p>$|\sum_{n\le x}\frac{\mu(n)}{n}|&#x3D;\frac{1}{x}|1+\lbrace x\rbrace+\sum_{2\le n\le x}\mu(n)\lbrace\frac{x}{n}\rbrace| \le \frac{1}{x}(1+\lbrace x\rbrace+([x]-1)) &#x3D; 1$</p>
+<p>引理7: $x&gt;1$则 $\sum_{n\le x}\frac{\mu(n)}{n}\log \frac{x}{n}&#x3D;O(1)$</p>
+<p>证明: $\sum_{k\le \frac{x}{n}}\frac{1}{k}&#x3D;\log \frac{x}{n}+\gamma+O(\frac{n}{x})$</p>
+<p>$\sum_{n\le x}\frac{\mu(n)}{n}\log \frac{x}{n}&#x3D;\sum_{n\le x}\frac{\mu(n)}{n}(\sum_{k\le \frac{x}{n}}\frac{1}{k}-\gamma+O(\frac{n}{x}))$</p>
+<p>$&#x3D;\sum_{n\le x}\frac{\mu(n)}{n} \sum_{k\le \frac{x}{n}}\frac{1}{k} - \gamma \sum_{n\le x}\frac{\mu(n)}{n}+ O(\frac{1}{x})\sum_{n\le x}\mu(n)$</p>
+<p>$&#x3D;\sum_{d\le x}\frac{1}{d} \sum_{n|d} \mu(n) + O(1)+O(1)$, 通过令$d&#x3D;kn$</p>
+<p>$&#x3D;\sum_{d\le x}\frac{1}{d} I(d) + O(1)&#x3D;1+O(1)&#x3D;O(1)$</p>
+<hr>
+<p>$\displaystyle \Lambda(n)&#x3D;\sum_{d|n}\mu(d)\log \frac{n}{d}$</p>
+<p>$\displaystyle \psi(x)&#x3D;\Lambda\circ U&#x3D;(\mu * \log)\circ U&#x3D;\mu \circ (\log \circ U)&#x3D;\sum_{n\le x}\mu(n)\sum_{m\le \frac{x}{n}}\log m&#x3D;\sum_{n\le [x]-1}\mu(n)\sum_{m\le \frac{x}{n}}\log m$</p>
+<p>$\displaystyle&#x3D;\sum_{n\le [x]-1}\mu(n)(\frac{x}{n}\log \frac{x}{n}-\frac{x}{n}+O(\log \frac{x}{n}))$,根据引理4</p>
+<p>$\displaystyle&#x3D;x\sum_{n\le [x]-1}\frac{\mu(n)}{n}\log \frac{x}{n}-x\sum_{n\le [x]-1}\frac{\mu(n)}{n}+\sum_{n\le [x]-1}\mu(n)O(\log \frac{x}{n})$<br>$&#x3D;xO(1)+xO(1)+O(\sum_{n\le x}\log \frac{x}{n}) &#x3D; O(x)$</p>
+<p>即存在$A_2 x &gt; \psi(x)$</p>
+<p>定理5(Chebyshev定理):  根据定理3和 $A_1x &lt; \psi(x) &lt; A_2x$最初的猜想$C_1\frac{x}{\log x}&lt; \pi(x) &lt; C_2\frac{x}{\log x}$得证</p>
+<blockquote>
+<p>教材的顺序并不是“正常的研究顺序”，正常的研究顺序这些之间也应该是由表达式知道需要再去求那些引理的估计，引理先行在这里不少是有点先知的感觉</p>
+</blockquote>
+<p>Chebyshev不等式的应用</p>
+<p>定理6: 设$x&gt;1$则$\displaystyle \sum_{n\le x}\frac{\Lambda(n)}{n}&#x3D;\log x+O(1)$,$\displaystyle \sum_{p\le x}\frac{\log p}{p}&#x3D;\log x+O(1)$</p>
+<p>$\displaystyle x\sum_{n\le x}\frac{\Lambda(n)}{n}-\sum_{n\le x}\Lambda(n)\lbrace\frac{x}{n}\rbrace&#x3D;\sum_{n\le x}\Lambda(n)[\frac{x}{n}]&#x3D;x\log x+O(x)$</p>
+<p>即$\displaystyle \sum_{n\le x}\frac{\Lambda(n)}{n}&#x3D;\frac{1}{x}\sum_{n\le x}\Lambda(n)\lbrace\frac{x}{n}\rbrace + \log x+O(1)\le \frac{1}{x}\sum_{n\le x}\Lambda(n) + \log x+O(1)&#x3D;\log x+O(1)$</p>
+<p>$\displaystyle \sum_{n\le x}\frac{\Lambda(n)}{n}&#x3D;\sum_{p\le x}\frac{\log p}{p}+\sum_{p^m\le x,m\ge 2}\frac{\log p}{p^m}$</p>
+<p>$\displaystyle \sum_{p^m\le x,m\ge 2}\frac{\log p}{p^m}\le \sum_{p\le x}\log p\sum_{m\ge 2}\frac{1}{p^m}&#x3D;O(\sum_{p\le x}\frac{\log p}{p^2})&#x3D;O(1)$ 得证</p>
+<p>定理7: 设$x\ge 2$则存在常数$C_3$使得$\displaystyle \sum_{p\le x}\frac{1}{p}&#x3D;\log \log x+C_3+O(\frac{1}{\log x})$</p>
+<p>使用引理4，令: $C_n&#x3D;\frac{[n \text{ is prime}]\log n}{n},f(n)&#x3D;\frac{1}{\log n}$, 因此$\displaystyle S(x)&#x3D;\sum_{n\le x}C_n&#x3D;\sum_{p\le x}\frac{\log p}{p}$</p>
+<p>$\displaystyle \sum_{p\le x}\frac{1}{p}&#x3D;\sum_{p\le x}\frac{\log p}{p}\frac{1}{\log p}&#x3D;\frac{S(x)}{\log x}+\int_{2}^x\frac{S(t)}{t\log^2 t}dt$</p>
+<p>$&#x3D;\frac{\log x+ O(1)}{\log x}+\int_{2}^x\frac{\log t+ O(1)}{t\log^2 t}dt$</p>
+<p>$&#x3D;1+O(\frac{1}{\log x})+\int_{2}^x\frac{1}{t\log  t}dt+\int_{2}^x\frac{ O(1)}{t\log^2 t}dt$</p>
+<p>$&#x3D;1+O(\frac{1}{\log x})+(\log \log x - \log \log 2)+(\int_{2}^{\infty} \frac{ O(1)}{t\log^2 t}dt-\int_{x}^{\infty}\frac{ O(1)}{t\log^2 t}dt)$</p>
+<p>$&#x3D;1+O(\frac{1}{\log x})+(\log \log x - \log \log 2)+(O(1)+O(\frac{1}{log x}))$</p>
+<p>得证</p>
+<p>定理8: $x \ge 2$ 则存在常数$C_4$使得$\prod_{p\le x}(1-\frac{1}{p})&#x3D;\frac{C_4}{\log x}+O(\frac{1}{\log ^2 x})$</p>
+<p>令$y&#x3D;\prod_{p\le x}(1-\frac{1}{p})$</p>
+<p>$\log y&#x3D;\log \prod_{p\le x}(1-\frac{1}{p})&#x3D;\sum_{p\le x}\log(1-\frac{1}{p})$</p>
+<p>$&#x3D;\sum_{p\le x}(-\frac{1}{p})+\sum_{p\le x}(\log(1-\frac{1}{p})+\frac{1}{p})$</p>
+<p>$&#x3D;-\sum_{p\le x} \frac{1}{p}+\sum_{p}(\log(1-\frac{1}{p})+\frac{1}{p})-\sum_{p &gt; x}(\log(1-\frac{1}{p})+\frac{1}{p})$</p>
+<p>$&#x3D;-(\log \log x+C_3+O(\frac{1}{\log x}))+C_5+\sum_{p&gt;x}O(\frac{1}{p^2})$,这里用了$\log x &#x3D; x-\frac{1}{2}x^2+o(x^3)$</p>
+<p>$y&#x3D;e^{-\log \log x+C_6+O(\frac{1}{\log x})}&#x3D;\frac{C_4}{\log x}e^{O(\frac{1}{\log x})}&#x3D;\frac{C_4}{\log x}(1+O(\frac{1}{\log x}))&#x3D;\frac{C_4}{\log x}+O(\frac{1}{\log^2 x})$</p>
+<h1 id="函数-omega-n-与-Omega-n"><a href="#函数-omega-n-与-Omega-n" class="headerlink" title="函数$\omega(n)$与$\Omega(n)$"></a>函数$\omega(n)$与$\Omega(n)$</h1><p>定理9: $\displaystyle \sum_{n\le x}\omega(n)&#x3D;x\log \log x+C_7 x+O(\frac{x}{\log x})$,$\sum_{n\le x}\Omega(n)&#x3D;x\log \log x+C_8 x+O(\frac{x}{\log x})$</p>
+<p>$\displaystyle \sum_{n\le x}\omega(n)&#x3D;\sum_{n\le x}\sum_{p|n}1 &#x3D;\sum_{p\le x}[\frac{x}{p}]&#x3D;x\sum_{p\le x}\frac{1}{p}+O(\pi(x))$</p>
+<p>$&#x3D;x(\log \log x+C_3+O(\frac{1}{\log x}))+O(\frac{x}{log x})$</p>
+<p>$&#x3D;x\log \log x+C_3x+O(\frac{x}{log x})$</p>
+<p>$\displaystyle \sum_{n\le x}\Omega(n) &#x3D; \sum_{n\le x}\sum_{p^k | n}1&#x3D;\sum_{p^k\le x}&#x3D;\sum_{p\le x}[\frac{x}{p}]+\sum_{p^k\le x,k\ge 2}[\frac{x}{p^k}]&#x3D;\sum_{n\le x}\omega(n)+(\sum_{p^k\le x,k\ge 2}\frac{x}{p^k}-\sum_{p^k\le x,k\ge 2}\lbrace\frac{x}{p^k}\rbrace)$</p>
+<p>$\displaystyle \sum_{p^k\le x,k\ge 2}\frac{x}{p^k} &#x3D; x\sum_{k&#x3D;2}^{\infty}\sum_{p}\frac{1}{p^k}+O(x\sum_{p&gt;\sqrt{x}}\frac{1}{p^2})&#x3D;C_9x+O(\sqrt{x})$</p>
+<p>$\displaystyle \sum_{p^k\le x,k\ge 2}\lbrace\frac{x}{p^k}\rbrace\le  \sum_{p^k\le x,k\ge 2}1 \le \log x \sum_{p &lt; \sqrt{x}}1&#x3D;O(\frac{x}{\log x})$</p>
+<p>得证</p>
+<p>定理10: $\sum_{n\le x}\omega^2(n)&#x3D;x(\log \log x)^2+O(x\log \log x)$</p>
+<p>$\sum_{n\le x}\omega^2(n)$&#x3D;$\sum_{n\le x}\omega(n)+\sum_{n\le x}\omega(n)(\omega(n)-1)$</p>
+<p>$&#x3D;O(x\log \log x)+\sum_{n\le x}\sum_{p_1p_2|n,p_1\ne p_2}1$</p>
+<p>$&#x3D;O(x\log \log x)+\sum_{n\le x}(\sum_{p_1p_2|n}1-\sum_{p^2|n}1)$</p>
+<p>$&#x3D;O(x\log \log x)+\sum_{p_1p_2\le x}[\frac{x}{p_1p_2}]-\sum_{p^2\le x}[\frac{x}{p^2}]$</p>
+<p>$&#x3D;O(x\log \log x)+(x\sum_{p_1p_2\le x}\frac{1}{p_1p_2}+O(\sum_{p_1p_2\le x}1))+O(x)$, $(\sum_{p\le \sqrt{x}}\frac{1}{p})^2 \le \sum_{p_1p_2\le x} \le (\sum_{p\le x}\frac{1}{p})^2$</p>
+<p>$&#x3D;O(x\log \log x)+x(\log \log x + O(1))^2+O(\sum_{p\le x}\pi(\frac{x}{p}))+O(x)$</p>
+<p>$&#x3D;O(x\log \log x)+x((\log \log x)^2 + O(\log \log x))+O(x\log \log x)+O(x)$</p>
+<p>$&#x3D;x(\log \log x)^2 + O(x\log \log x)$</p>
+<p>定理11(TODO): 任给$\epsilon &gt; 0$,则在区间$[1,x]$中使得$|\omega(n)-\log \log n|&gt; (\log \log n)^{\frac{1}{2}+\epsilon}$ 的个数为$o(x)$</p>
+<p>$[1,x]&#x3D;[1,x^{\frac{1}{e}}]+(x^{\frac{1}{e}},x]$, 左侧显然是$o(x)$</p>
+<p>$n\in(x^{\frac{1}{e}},x]$时有$\log \log x - 1 &lt; \log \log n \le \log \log x$</p>
+<p>注意到$\omega(n)$是整数,所以只用证明$|\omega(n)-\log \log x| \ge (\log \log x)^{\frac{1}{2}+\epsilon}$ 的$n\le x$个数为$o(x)$即可(????$w(n)$不会有覆盖不到边界整数的情况导致n增长质数间距个吗?,但是因为$\sum_{p_i,i\le s}1 \sim \sum_{p_i,i+1\le s}1$所以不担心多一个少一个在均值下量级不变?)</p>
+<p>$\sum_{n\le x}(\omega(n)-\log \log x)^2 &#x3D; \sum_{n\le x}\omega^2(n)-2\log \log x\sum_{n\le x}\omega(n)+[x](\log \log x)^2&#x3D;O(x\log \log x)$</p>
+<p>若$[1,x]$有$M$个$n$让不等式成立,$M(\log \log x)^{1+2\epsilon} &lt; M(\omega(n)-\log \log x)^2 &#x3D; MO(x\log \log x)&#x3D;O(x\log \log x)$</p>
+<p>$M&#x3D;O(\frac{x}{(\log \log x)^{2\epsilon}})$, 得证(??? 大小O 靠epsilon?)</p>
+<p>换句话说，在区间$[1,x]$内, 对几乎所有($o(x)$)的$n$恒有$\omega&#x2F;\Omega(n)\sim \log \log n$, 因为上面公式描述的是远离的情况, 而远离的个数是$o(x)$的</p>
+<h1 id="Bertrand-假设-1845提出"><a href="#Bertrand-假设-1845提出" class="headerlink" title="Bertrand 假设 (1845提出)"></a>Bertrand 假设 (1845提出)</h1><p>主要内容是$[x,2x]$之间必有素数,被Chebyshev首先证明(1850),<a target="_blank" rel="noopener" href="http://math.stanford.edu/~ksound/Math155Spr12/Bertrand.pdf">最简单的证明是由Erdős在1932年发表的</a></p>
+<p>引理8: 设$x\ge 2$则$\prod_{p\le x}p &lt; 4^x$</p>
+<p>只需要证明$x\text{ is prime}$时成立</p>
+<p>归纳法,$x&#x3D;2,3$时成立,若$x &lt; n$的所有奇数都成立</p>
+<p>$K&#x3D;\frac{n\pm 1}{2}$(让$K$为奇数), 则$n-K$为偶数,且$n-K &#x3D;2K\pm 1-K \le K+1$</p>
+<p>对于$p\in (K,n]$有$p|n!,p\nmid K!,p\nmid (n-K)!$即$p|\frac{n!}{K!(n-K)!}$即$\prod_{K&lt;p\le n}p\le \binom{n}{K} &#x3D; \frac{\binom{n}{K}+\binom{n}{n-K}}{2} &lt; \frac{(1+1)^n}{2} &#x3D; 2^{n-1}$</p>
+<p>$\prod_{p\le x}p &#x3D;\prod_{p\le K} p\prod_{K&lt;p\le n}p &lt; 4^K2^{n-1}&#x3D;2^{n+2K-1} \le 4^n$</p>
+<p>定理12: $n &gt; 1$则在$[n,2n]$中必有素数</p>
+<p>对于$n\le 128$可以枚举证明,对于$n\ge 128$用反证法</p>
+<p>若存在$n\ge 128$不成立,因为(Legendre’s formula)</p>
+<p>$\displaystyle \binom{2n}{n}&#x3D;\frac{2n!}{n!n!}&#x3D;\prod_{p\le 2n}p^{\alpha_p&#x3D;\sum_{j\ge 1}([\frac{2n}{p^j}]-2[\frac{n}{p^j}])}&#x3D;\prod_{p\le n}p^{\alpha_p}&#x3D;\prod_{p\le \sqrt{2n}}p^{\alpha_p}\prod_{p\in (\sqrt{2n},\frac{2}{3}p]}p^{\alpha_p}\prod_{p\in (\frac{2}{3}n,n]}p^{\alpha_p}$</p>
+<p>对于第一个因为$\sum_{j\ge 1}([\frac{2n}{p^j}]-2[\frac{n}{p^j}])$ 中对于每个$j$,括号内为0或1, 且$p^j\le 2n$,所以$\alpha_p\le \log_p 2n$即$\prod_{p\le \sqrt{2n}}p^{\alpha_p} \le \prod_{p\le \sqrt{2n}}2n$</p>
+<p>对于第二个,$p^2\ge 2n$同理$\alpha_p \le 1$,$\prod_{p\in (\sqrt{2n},\frac{2}{3}p]}p^{\alpha_p}\le \prod_{p\in (\sqrt{2n},\frac{2}{3}p]}p$</p>
+<p>对于第三部分$p^2&gt;2n,1\ &lt; \frac{n}{p} &lt; \frac{3}{2}, 2\le \frac{2n}{p} &lt; 3$同理$\alpha_p&#x3D;[\frac{2n}{p}]-2[\frac{n}{p}]&#x3D;0$</p>
+<p>$n\ge 128$时$\sqrt{2n} \ge 16$, 所以有$\pi(\sqrt{2n}) &lt;$ 奇数个数-(9和15) $&#x3D;\frac{\sqrt{2n}+2}{2}-2$</p>
+<p>由上$\displaystyle \binom{2n}{n}\le\prod_{p\le \sqrt{2n}}2n\prod_{\sqrt{2n} &lt; p\le\frac{2}{3}n} p &lt; \prod_{p\le \sqrt{2n}}2n\prod_{ &lt; p\le\frac{2}{3}n} p &lt; (2n)^{\sqrt{\frac{n}{2}}-1}4^{\frac{2n}{3}}$<br>又$\binom{2n}{n}$是$(1+1)^{2n}$展开的$2n+1$系数中最大的(注意首尾都是1),因此$2n\binom{2n}{n} &gt; (1+1)^{2n}$</p>
+<p>由此有$\frac{2^{2n}}{2n} &lt; \binom{2n}{n} &lt; (2n)^{\sqrt{\frac{n}{2}}-1}4^{\frac{2n}{3}}$, 感觉顺序上是前面的导致了后面的拆分的想法,比如这里的<code>-1</code>什么的</p>
+<p>即$2^{\frac{2}{3}n} &lt; (2n)^{\sqrt{\frac{n}{2}}}$</p>
+<p>直接取对数建立函数 求导 可证矛盾,得证</p>
+<h1 id="函数-M-x-mu-circ-U"><a href="#函数-M-x-mu-circ-U" class="headerlink" title="函数$M(x)&#x3D;\mu \circ U$"></a>函数$M(x)&#x3D;\mu \circ U$</h1><p>$M(x)&#x3D;\sum_{n\le x}\mu(n)$, Mertens function</p>
+<p>本节主要证明的是$\lim_{x\to\infty}\frac{M(x)}{x}&#x3D;0$ 与$\lim_{x\to \infty}\frac{\pi(x)}{\frac{x}{\log x}}&#x3D;1$ 等价</p>
+<p>定理13: $\lim_{x\to\infty}\frac{M(x)}{x}&#x3D;0$ 与$\lim_{x\to \infty}\frac{\sum_{n\le x}\mu(n)\log n}{x\log x}&#x3D;0$ 等价</p>
+<p>根据引理4,令$C_n&#x3D;\mu(n),f(n)&#x3D;\log n$, 有</p>
+<p>$\displaystyle \sum_{n\le x}\mu(n)\log n &#x3D; M(x)\log x-\int_{1}^x\frac{M(t)}{t}dt&#x3D;M(x)\log x + O(x)$</p>
+<p>同时除以$x\log x$即$\frac{M(x)}{x} -\frac{\sum_{n\le x}\mu(n)\log n}{x\log x}&#x3D;O(\frac{1}{\log x})$得证</p>
+<p>定理14: 若$\psi(x)\sim x,x\to \infty$则$M(x) &#x3D; o(x),x \to \infty$</p>
+<p>因为 $\Lambda(n)&#x3D;-\sum_{d|n}\mu(d)\log d$所以 $-\mu(n)\log n&#x3D;\sum_{d|n}\mu(d)\Lambda(\frac{n}{d})&#x3D;\mu * \Lambda$</p>
+<p>根据 二章的 定理17: $-\sum_{n\le x}\mu(n)\log n&#x3D;\sum_{n\le a}\mu(n)\psi(\frac{x}{n})+\sum_{n\le b}\Lambda(n)M(\frac{x}{n})-M(a)\psi(b)$</p>
+<p>取$a&#x3D;xe^{-\sqrt{\log x}},b&#x3D;e^{\sqrt{\log x}}$</p>
+<p>$n\le a,x\to \infty$时有$\psi(\frac{x}{n})&#x3D;\frac{x}{n}+o(\frac{x}{n})$</p>
+<p>$\sum_{n\le a}\mu(n)\psi(\frac{x}{n})&#x3D;x\sum_{x\le a}\frac{\mu(n)}{n}+o(x\sum_{n\le x}\frac{1}{n})&#x3D;O(x)+o(x\log x)&#x3D;o(x\log x)$</p>
+<p>$\sum_{n\le b}\Lambda(n)M(\frac{x}{n})&#x3D;O(x\sum_{n\le b}\frac{\Lambda(n)}{n})&#x3D;O(x\log b)+O(x)$ &#x3D;$O(x\sqrt{\log x})+O(x)&#x3D;o(x\log x)$</p>
+<p>$M(a)\psi(b)&#x3D;O(a)O(b)&#x3D;O(ab)&#x3D;O(x)&#x3D;o(x\log x)$</p>
+<p>即$\psi \sim x\Rightarrow \sum_{n\le x}\mu(n)\log n &#x3D; o(x\log x)\Rightarrow M(x)&#x3D;o(x)$</p>
+<p>得证</p>
+<p>定理15: $M(x)&#x3D;o(x),x\to \infty$ 包含$\psi(x)\sim x,x\to \infty$, </p>
+<blockquote>
+<p>这里后面的是上面我们和素数定理等价的定理，上面并没有证明其正确性（上面只有等价关系），这里要证明的是$M(x)&#x3D;o(x)$和素数定理之间的等价关系，所以就要证明互相可以推</p>
+</blockquote>
+<p>先证明 $\psi(x)&#x3D;x-\sum_{lk\le x}\mu(l)f(k)+O(1)$, 其中$f(n)&#x3D;d(n)-\log n-2\gamma$</p>
+<p>首先 $[x]&#x3D;u\circ U,\psi&#x3D;\Lambda \circ U,1&#x3D;I\circ U$,$d(n)&#x3D;\sum_{l|n}1&#x3D;1 * u$,$1&#x3D;\mu * d$,$\Lambda &#x3D; \mu * \log$,$I&#x3D;\mu * u$</p>
+<p>$[x]-\psi(x)-2\gamma&#x3D;\sum_{n\le x}(1-\Lambda(n)-2\gamma I(n))$</p>
+<p>$&#x3D;\sum_{n\le x} \sum_{l|n} \mu(l)(d(\frac{n}{l})-\log \frac{n}{l}-2\gamma)$</p>
+<p>$&#x3D;\sum_{lk\le x}\mu(l)(d(k)-\log k - 2\gamma)$</p>
+<p>第一部分得证, 那么剩下的就是要证明$\sum_{lk \le x}\mu(l)f(k) &#x3D; o(x),x\to \infty$</p>
+<p>再用第二章定理17:$\sum_{lk \le x}\mu(l)f(k)&#x3D;\sum_{n\le a}\mu(n)F(\frac{x}{n})+\sum_{n\le b}f(n)M(\frac{x}{n})-M(a)F(b)$,其中$F&#x3D;f\circ U,ab&#x3D;x,a&gt;0$</p>
+<p>$\forall \epsilon &gt; 0$存在$x_0&#x3D;x_0(\epsilon)$,使$x&gt;x_0$时$|\sum_{lk\le x}\mu(l)f(k)|&lt;\epsilon x$</p>
+<p>$F(x)&#x3D;\sum_{n\le x}d(n)-\sum_{n\le x}\log n-2\gamma\sum_{n\le x}1$</p>
+<p>$&#x3D;(x\log x+(2\gamma -1)x + O(\sqrt{x}))-(x \log x - x + O(\log x))-2\gamma x&#x3D;O(\sqrt{x})$, (二章定理18+本章引理5)</p>
+<p>$\sum_{n\le a}\mu(n)F(\frac{x}{n})\le \sum_{n\le a} 1\cdot (A\sqrt{\frac{x}{n}})\le 2A\sqrt{xa}&#x3D;\frac{2Ax}{\sqrt{b}}$</p>
+<p>因为存在常数$B$,$|f(n)|\le B \sqrt{n}$,$M(x)&#x3D;o(x)$存在$x_1&#x3D;x_1(\epsilon)$,当$x&gt;x_1$时$|M(x)|\le \frac{1}{36AB}\epsilon^2 x$</p>
+<p>取$a&#x3D;\frac{x}{b},b&#x3D;\frac{36A^2}{\epsilon^2},x_0&#x3D;x_1b$,$x&gt;x_0$时</p>
+<p>$|\sum_{n\le b}f(n)M(\frac{x}{n})|\le \sum_{n\le b} |f(n)||M(\frac{x}{n})|$</p>
+<p>$\le \frac{\epsilon^2}{36AB}x\sum_{n\le b}\frac{|f(n)|}{n}$</p>
+<p>$\le \frac{\epsilon^2}{36A}x\sum_{n\le b}\frac{1}{\sqrt{n}}$</p>
+<p>$\le \frac{\epsilon^2}{36A}x\cdot 2\sqrt{b}&#x3D;\frac{\epsilon }{3}x$</p>
+<p>综上$|\sum_{lk\le x}\mu(l)f(k)|&lt; \frac{2Ax}{\sqrt{b}} + \frac{\epsilon}{3} x+aA\sqrt{b}&#x3D;\frac{\epsilon}{3} x+\frac{\epsilon}{3} x+\frac{\epsilon}{6} x$得证</p>
+<h1 id="函数-L-x-lambda-circ-U"><a href="#函数-L-x-lambda-circ-U" class="headerlink" title="函数$L(x)&#x3D;\lambda \circ U$"></a>函数$L(x)&#x3D;\lambda \circ U$</h1><p>定理16: $L(x)&#x3D;\sum_{n\le x}\lambda(n)&#x3D;o(x)$ 与$\sum_{n\le x}\mu(n)&#x3D;o(x)$等价</p>
+<p>$\Leftarrow :$</p>
+<p>继续第二章定理17:因为$\lambda &#x3D; \mu *[n\text{ is square}]$,令$g(n)&#x3D;n\text{ is square},G&#x3D;g\circ U$</p>
+<p>$\displaystyle \sum_{n\le x}\lambda(n)&#x3D;\sum_{n\le x^{\frac{2}{3}}}g(n)M(\frac{x}{n})+\sum_{n\le x^{\frac{1}{3}}}\mu(n)G(\frac{x}{n})-G(x^{\frac{2}{3}})M(x^{\frac{1}{3}})$</p>
+<p>$\displaystyle &#x3D;o(x\sum_{n\le x^{\frac{2}{3}}}\frac{g(n)}{n})+O(\sum_{n\le x^{\frac{1}{3}}}G(\frac{x}{n}))+o(x)$</p>
+<p>$\displaystyle &#x3D;o(x\sum_{n&#x3D;1}^{\infty} \frac{1}{n^2})+O(\sqrt{x}\sum_{n\le x^{\frac{1}{3}}}\frac{1}{\sqrt{n}})+o(x) &#x3D; o(x)$</p>
+<p>$\Rightarrow :$</p>
+<p>(二章习题6:) 因为$\mu(n)&#x3D;\sum_{d^2|n}\mu(d)\lambda(\frac{n}{d^2})&#x3D;\sum_{n&#x3D;d^2k}\mu(d)\lambda(k)$</p>
+<p>$\displaystyle \sum_{n\le x}\mu(n)&#x3D;\sum_{n\le x}\sum_{n&#x3D;d^2k}\mu(d)\lambda(k)&#x3D;\sum_{d^2k\le x}\mu(d)\lambda(k)&#x3D;\sum_{d\le \sqrt{x}}\mu(d)\sum_{k\le\frac{x}{d^2}}\lambda(k)$</p>
+<p>$\displaystyle &#x3D;\sum_{d\le x^{\frac{1}{3}}}\mu(d)\sum_{k\le \frac{x}{d^2}}\lambda(k)+O(\sum_{k\le x^{\frac{1}{3}}}\sum_{d\le \sqrt{\frac{x}{k}}}1)&#x3D;o(x)+o(x)&#x3D;o(x)$</p>
+<h1 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h1><h2 id="2-sum-p-frac-1-p-发散"><a href="#2-sum-p-frac-1-p-发散" class="headerlink" title="2. $\sum_{p} \frac{1}{p}$发散"></a>2. $\sum_{p} \frac{1}{p}$发散</h2><p>我想的通过足够大$x$,$C_1\frac{x}{\log x}&lt;\pi(x)&lt;C_2\frac{x}{\log x}$</p>
+<p>去考虑足够大$M$对应$\displaystyle \sum_{t&#x3D;1}^{\infty} \sum_{x\in[M(\frac{4C_2}{C_1})^t,M(\frac{4C_2}{C_1})^{t+1}],x\text{ is prime}} \frac{1}{x} \ge$ 分母等差数列求和</p>
+<hr>
+<p>另一个方法: Cauchy准则 尾段和$s&#x3D;\sum_{p_i,i\ge t}\le \frac{1}{2}$</p>
+<p>与前面互质的等差和$\displaystyle \sum_{t&#x3D;1}^{\infty} \frac{1}{1+\prod_{p_i,i&lt;t}} \le$乘法表示$\sum_{t&#x3D;1}^{\infty}s^t\le\sum_{t&#x3D;1}^{\infty} (\frac{1}{2})^t&#x3D;1$ 矛盾</p>
+<h2 id="4-f-x-为整系数多项式-lbrace-f-n-rbrace-有无限个素因子"><a href="#4-f-x-为整系数多项式-lbrace-f-n-rbrace-有无限个素因子" class="headerlink" title="4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子"></a>4. $f(x)$为整系数多项式,$\lbrace f(n)\rbrace$有无限个素因子</h2><p>若$a_0&#x3D;0,p|f(p)$</p>
+<p>若$a_0\ne 0$,反证法,若有限$f(a_0\prod_{p_i})&#x3D;a_0(k\prod_{p_i}+1)$, 右侧会出现新质因子</p>
+<h2 id="8-x-ge-2-证-sum-d-le-x-d-2-n-O-x-log-3-x"><a href="#8-x-ge-2-证-sum-d-le-x-d-2-n-O-x-log-3-x" class="headerlink" title="8. $x\ge 2$证$\sum_{d\le x} d^2(n)&#x3D;O(x\log^3 x)$"></a>8. $x\ge 2$证$\sum_{d\le x} d^2(n)&#x3D;O(x\log^3 x)$</h2><p>因为$\alpha_1+\alpha_2+1 \le (\alpha_1+1)(\alpha_2+1)$,所以$d(a)d(b) \ge d(ab)$</p>
+<p>$\displaystyle \sum_{d\le x}d^2(n)&#x3D;\sum_{d\le x}d(n)\sum_{u|d}1$</p>
+<p>$\displaystyle &#x3D;\sum_{u\le x}\sum_{l\le\frac{x}{u}}d(ul)$</p>
+<p>$\displaystyle \le \sum_{u\le x}\sum_{l\le\frac{x}{u}}d(u)d(l)$</p>
+<p>$\displaystyle &#x3D; \sum_{u\le x}d(u)\sum_{l\le\frac{x}{u}}d(l)$</p>
+<p>$\displaystyle &#x3D; O(\sum_{u\le x}d(u)\frac{x}{u}\log \frac{x}{u})$</p>
+<p>$\displaystyle &#x3D; O(x\log x)O(\sum_{u\le x}\frac{d(u)}{u})$,习题7证明了后面一半是$O(\frac{1}{2}\log^2 x)$</p>
+<h2 id="9-x-ge-1-则-sum-n-le-x-frac-phi-n-n-frac-6-pi-2-x-O-log-x"><a href="#9-x-ge-1-则-sum-n-le-x-frac-phi-n-n-frac-6-pi-2-x-O-log-x" class="headerlink" title="9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\frac{6}{\pi^2}x+O(\log x)$"></a>9. $x\ge 1$则$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\frac{6}{\pi^2}x+O(\log x)$</h2><p>直接上引理4,但是得到的是$\frac{6}{\pi^2}x+O((\log x)^2)$,大了 也就是$\phi(n)$的估计到这里还不够紧凑</p>
+<p>$\sum_{n\le x}\frac{\phi(n)}{n}&#x3D;\sum_{n\le x}\frac{1}{n}\sum_{d|n}\mu(d)\frac{n}{d}$, 因为$\phi &#x3D;\mu * e$</p>
+<p>$&#x3D;\sum_{n\le x}\sum_{d|n}\frac{\mu(d)}{d}$</p>
+<p>$&#x3D;\sum_{d\le x}\frac{\mu(d)}{d} [\frac{x}{d}]$</p>
+<p>$&#x3D;\sum_{d\le x}\frac{\mu(d)}{d} \frac{x}{d}-\sum_{d\le x}\frac{\mu(d)}{d}\lbrace \frac{x}{d}\rbrace$</p>
+<p>$&#x3D;x\sum_{d\le x}\frac{\mu(d)}{d^2}+O(\sum_{d\le x}\frac{1}{d})$</p>
+<p>$&#x3D;\frac{6}{\pi^2}x+O(\log x)$</p>
+<h2 id="10-使用-frac-n-phi-n-prod-p-n-1-frac-1-p-1-sum-d-n-frac-mu-2-d-phi-d-1-证明-sum-n-le-x-frac-n-phi-n-O-x-sum-n-le-x-frac-1-phi-n-O-log-x"><a href="#10-使用-frac-n-phi-n-prod-p-n-1-frac-1-p-1-sum-d-n-frac-mu-2-d-phi-d-1-证明-sum-n-le-x-frac-n-phi-n-O-x-sum-n-le-x-frac-1-phi-n-O-log-x" class="headerlink" title="10. 使用$\frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}&#x3D;O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}&#x3D;O(\log x)$"></a>10. 使用$\frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;(\sum_{d|n}\frac{\mu^2(d)}{\phi(d)})^{-1}$,证明$\sum_{n\le x} \frac{n}{\phi(n)}&#x3D;O(x)$,$\sum_{n\le x}\frac{1}{\phi(n)}&#x3D;O(\log x)$</h2><p>$\displaystyle \frac{n}{\phi(n)}&#x3D;\prod_{p|n}(1-\frac{1}{p})^{-1}&#x3D;\prod_{p|n}(\frac{p}{p-1})&#x3D;\prod_{p|n}(\frac{p^{\alpha_p+1}-1}{p-1}\frac{p^{\alpha_p+1}}{p^{\alpha_p+1}-1}\frac{1}{p^{\alpha_p}})$</p>
+<p>$\displaystyle &#x3D;\sigma(n) (\prod_{p|n}\frac{1}{1-\frac{1}{p^{\alpha_p+1}}}) \frac{1}{n}$</p>
+<p>$\displaystyle \le \frac{\sigma(n)}{n} (\prod_{p|n}\sum_{i&#x3D;0}^{\infty} \frac{1}{p^{2i}})$</p>
+<p>$\displaystyle \le \frac{\sigma(n)}{n} (\sum_{j&#x3D;1}^{\infty}  \frac{1}{p^{2j}}) &#x3D; \frac{\pi^2}{6}\frac{\sigma(n)}{n}$</p>
+<p>$\displaystyle \sum_{n\le x}\frac{n}{\phi(n)}\le \frac{\pi^2}{6} \sum_{n\le x}\frac{\sigma(n)}{n}$</p>
+<p>$\displaystyle \sum_{n\le x}\frac{\sigma(n)}{n}&#x3D;\frac{1}{x}(\frac{\pi^2}{12} x^2 + O(x\log x))+\int_{1}^{x}\frac{\frac{\pi^2}{12} t^2 + O(t\log t)}{t^2}dt$, (第二章定理19)</p>
+<p>$&#x3D;O(x)$</p>
+<p>后面直接同样 引理4就好了</p>
+<h2 id="15-sum-p-x-frac-log-p-p-O-log-log-x"><a href="#15-sum-p-x-frac-log-p-p-O-log-log-x" class="headerlink" title="15. $\sum_{p|x}\frac{\log p}{p}&#x3D;O(\log \log x)$"></a>15. $\sum_{p|x}\frac{\log p}{p}&#x3D;O(\log \log x)$</h2><blockquote>
+<p>教材这里写错了,同时用了n和x</p>
+</blockquote>
+<p>$\sum_{p|x}\frac{\log p}{p} &#x3D; \sum_{p|x,p \le \log x}\frac{\log p}{p} + \sum_{p|x,p &gt; \log x}\frac{\log p}{p}$</p>
+<p>$\le \sum_{p \le \log x}\frac{\log p}{p} + \sum_{p|x,p &gt; \log x}\frac{\log \log x}{\log x}$, 用到$\frac{\log x}{x}$的增减区间,上面也是根据增减区间切割的</p>
+<p>$\le (\log \log x+O(1))+\log_{\log x} x\cdot \frac{\log \log x}{\log x}$,定理6</p>
+<p>$&#x3D;O(\log \log x)$</p>
+<h2 id="16-n-ge-3-sum-d-n-frac-mu-d-log-d-d-O-log-log-n"><a href="#16-n-ge-3-sum-d-n-frac-mu-d-log-d-d-O-log-log-n" class="headerlink" title="16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;O(\log \log n)$"></a>16. $n\ge 3$,$\sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;O(\log \log n)$</h2><p>$\displaystyle \sum_{d|n}\frac{\mu(d)\log d}{d}&#x3D;\sum_{d|n}\frac{\mu(d)}{d}\sum_{p|d}\log p$</p>
+<p>$\displaystyle &#x3D;\sum_{p|n} \log p \sum_{p|d,d|n}\frac{\mu(d)}{d}$</p>
+<p>$\displaystyle &#x3D;\sum_{p|n} \frac{\log p}{p} (-\sum_{t|\frac{n}{p^{\alpha_p}}}\frac{\mu(t)}{t})$</p>
+<p>$\displaystyle &#x3D;O(\sum_{p|n} \frac{\log p}{p})$, 因为$\displaystyle \sum_{t|n}\frac{\mu(t)}{t} &#x3D; \frac{1}{n}\sum_{t|n}\mu(t)\frac{n}{t}&#x3D;\frac{(\mu * e)(n)}{n}&#x3D;\frac{\phi(n)}{n} \le 1$</p>
+<p>由题目15可证</p>
+<blockquote>
+<p>还是觉得好怪啊, 这样看的话，当给定了$p$的集合以后 左边因为$\mu(d)$ 只有一次方以内的组合才不是$0$,就是一个定值了,而$\log \log n$是无限增长的,不过一个无限增长的当然是可以框住有限的,但实际上是从n的增长来看的,那么左侧就会忽大忽小</p>
+</blockquote>
+<h2 id="17-试证存在常数-C-n-ge-3-时-phi-n-C-frac-n-log-log-n"><a href="#17-试证存在常数-C-n-ge-3-时-phi-n-C-frac-n-log-log-n" class="headerlink" title="17. 试证存在常数$C$,$n\ge 3$时$\phi(n)&gt;C\frac{n}{\log \log n}$"></a>17. 试证存在常数$C$,$n\ge 3$时$\phi(n)&gt;C\frac{n}{\log \log n}$</h2><p>取$q&#x3D;A\omega(n)\log(3\omega(n))$<br>$\pi(q)\ge C_1\frac{q}{\log q}&#x3D;C_1\frac{A\omega(n)\log(3\omega(n))}{\log (A\omega(n)\log(3\omega(n)))}&#x3D;\omega(n) \frac{AC_1}{\frac{\log (A\omega(n))}{\log(3\omega(n))}+\frac{\log\log(3\omega(n))}{\log(3\omega(n))}}$<br>分母大于 1+0, 所以A取足够大时, 右边有正的下界</p>
+<p>$\pi(q) \ge \omega(n)$</p>
+<p>$q&#x3D;A\omega(n)\log 3\omega(n)\le A\log_2n\log(3\log_2n)\le C_2\log n\log \log n$</p>
+<p>$\frac{\phi(n)}{n}&#x3D;\prod_{p|n}(1-\frac{1}{p})\ge\prod_{p\le q}(1-\frac{1}{p})$</p>
+<p>$&#x3D;\frac{C_4}{\log q}+O(\frac{1}{\log^2 q})$, 根据定理8</p>
+<p>$\ge \frac{C_5}{\log q}$</p>
+<p>$\ge \frac{C_6}{\log(C_2\log n\log \log n)}$</p>
+<p>$\ge \frac{C_7}{\log\log n}$</p>
+<h2 id="18-displaystyle-sum-n-1-infty-frac-mu-n-n-s-frac-1-zeta-s-displaystyle-sum-n-1-infty-frac-d-n-n-s-zeta-2-s-displaystyle-sum-n-1-infty-frac-Lambda-n-n-s-frac-zeta’-s-zeta-s"><a href="#18-displaystyle-sum-n-1-infty-frac-mu-n-n-s-frac-1-zeta-s-displaystyle-sum-n-1-infty-frac-d-n-n-s-zeta-2-s-displaystyle-sum-n-1-infty-frac-Lambda-n-n-s-frac-zeta’-s-zeta-s" class="headerlink" title="18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$"></a>18.  $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\mu(n)}{n^s}&#x3D;\frac{1}{\zeta(s)}$ ,$\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{d(n)}{n^s}&#x3D;\zeta^2(s)$, $\displaystyle \sum_{n&#x3D;1}^{\infty}\frac{\Lambda(n)}{n^s}&#x3D;-\frac{\zeta’ (s)}{\zeta(s)}$</h2><p>$\zeta(s)&#x3D;\sum_{n&#x3D;1}^{\infty} \frac{1}{x^s}$ Riemann函数</p>
+<p>(1) $\displaystyle &#x3D;\frac{1}{\prod_{p}\sum_{j&#x3D;0}^{\infty} \frac{1}{p^{sj}}}&#x3D;$</p>
+<p>(2) $\displaystyle &#x3D;\prod_{p}\sum_{i&#x3D;0}^{\infty}\frac{i+1}{(p^s)^i}&#x3D;$</p>
+<p>(3) $\displaystyle &#x3D;\sum_{p}\log p\sum_{i&#x3D;1}^{\infty}\frac{1}{(p^s)^i}&#x3D;\sum_{p}\log p\frac{\frac{1}{p^s}}{1-\frac{1}{p^s}}$</p>
+<p>$&#x3D;(\int_{0}^s \sum_{p}\log p\frac{\frac{1}{p^t}}{1-\frac{1}{p^t}} dt)’$</p>
+<p>$&#x3D;(\sum_{p} \int_{0}^s \frac{d(1-\frac{1}{p^t})}{1-\frac{1}{p^t}})’$</p>
+<p>$&#x3D;(\sum_{p} \log (1-\frac{1}{p^s}))’$</p>
+<p>$&#x3D;(-\sum_{p} \log \frac{1}{1-\frac{1}{p^s}})’$</p>
+<p>$&#x3D;(-\zeta(s))’$</p>
+<p>得证</p>
+<h2 id="19-sum-n-1-infty-frac-mu-n-n-0-与-M-x-o-x-等价"><a href="#19-sum-n-1-infty-frac-mu-n-n-0-与-M-x-o-x-等价" class="headerlink" title="19. $\sum_{n&#x3D;1}^{\infty} \frac{\mu(n)}{n}&#x3D;0$ 与$M(x)&#x3D;o(x)$等价"></a>19. $\sum_{n&#x3D;1}^{\infty} \frac{\mu(n)}{n}&#x3D;0$ 与$M(x)&#x3D;o(x)$等价</h2><p>$\Rightarrow$:</p>
+<p>$M(x)&#x3D;\sum_{n\le x}\mu(n)$</p>
+<p>$&#x3D;\sum_{n\le x}\frac{\mu(n)}{n}n$</p>
+<p>$&#x3D;x o(1)-\int_{1}^{x} o(1) dt &#x3D;o(x)$</p>
+<p>$\Leftarrow$ :</p>
+<blockquote>
+<p>$\sum_{n&#x3D;1}^{\infty}\mu(n)\frac{1}{n}&#x3D;\frac{1}{x} o(x)+\int_{1}^{x}\frac{o(t)}{t^2}dt$ 太大不行</p>
+</blockquote>
+<p>TODO</p>
+<h2 id="20-sum-n-le-x-frac-1-Lambda-n-n-2-gamma-o-1-和素数定理等价"><a href="#20-sum-n-le-x-frac-1-Lambda-n-n-2-gamma-o-1-和素数定理等价" class="headerlink" title="20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}&#x3D;2\gamma +o(1)$和素数定理等价"></a>20. $\sum_{n\le x}\frac{1-\Lambda(n)}{n}&#x3D;2\gamma +o(1)$和素数定理等价</h2><p>$\Rightarrow$: $\sum_{n\le x}\frac{1}{n}&#x3D;\log x+\gamma+O(\frac{1}{x})$ 和 定理4 有$\psi(x)&#x3D;x+o(x)$</p>
+<p>$\Leftarrow$:</p>
+<p>TODO</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本章的核心是 Cheybyshev定理 存在两个正常数使得$C_1\frac{x}{\log x}&lt; \pi(x) &lt; C_2\frac{x}{\log x}$  , 以及围绕着 素数定理 $\pi(x) \sim \frac{x}{\log x} ,x \to \infty$ 有关的几个等价的定理 </p>
+<p>first Chebyshev function: $\theta(x) &#x3D;\sum_{p\le x} \log p\sim x,x \to \infty$ </p>
+<p>second Chebyshev function: $\displaystyle \psi(x) &#x3D; \Lambda \circ U \sim x,x\to \infty$,</p>
+<p>Mertens function:$M(x)&#x3D; \mu \circ U&#x3D;o(x),x\to \infty$ </p>
+<p>$L(x)&#x3D;\lambda \circ U&#x3D;o(x),x\to \infty$</p>
+<p>以及</p>
+<p>定理9: $\displaystyle \sum_{n\le x}\omega(n)&#x3D;x\log \log x+C_7 x+O(\frac{x}{\log x})$,$\sum_{n\le x}\Omega(n)&#x3D;x\log \log x+C_8 x+O(\frac{x}{\log x})$</p>
+<p>Bertrand假设: 主要内容是$[x,2x]$之间必有素数</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/Math/tags/%E6%95%B0%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="tag"># 数论基础</a>
+              <a href="/Math/tags/pi-x/" rel="tag"># $\pi(x)$</a>
+              <a href="/Math/tags/Chebyshev%E5%AE%9A%E7%90%86/" rel="tag"># Chebyshev定理</a>
+              <a href="/Math/tags/Omega-n/" rel="tag"># $\Omega(n)$</a>
+              <a href="/Math/tags/omega-n/" rel="tag"># $\omega(n)$</a>
+              <a href="/Math/tags/Bertrand-%E5%81%87%E8%AE%BE/" rel="tag"># Bertrand 假设</a>
+              <a href="/Math/tags/M-x/" rel="tag"># M(x)</a>
+              <a href="/Math/tags/L-x/" rel="tag"># L(x)</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/Math/number_theory_2/" rel="prev" title="数论基础 二 数论函数">
+                  <i class="fa fa-chevron-left"></i> 数论基础 二 数论函数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Math/number_theory_4/" rel="next" title="数论基础 四 同余">
+                  数论基础 四 同余 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YeXiaoRain</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="總字數">328k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="所需總閱讀時間">19:53</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="回到頂端">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/Math/js/comments.js"></script><script src="/Math/js/utils.js"></script><script src="/Math/js/motion.js"></script><script src="/Math/js/schemes/muse.js"></script><script src="/Math/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
